@@ -36,7 +36,7 @@ author:
  -
     fullname: Samier Barguil
     organization: Nokia
-    email: tsamir.barguil@gmail.com
+    email: samier.barguil_giraldo@nokia.com
  -
     fullname: Carlos Pignataro
     organization: North Carolina State University
