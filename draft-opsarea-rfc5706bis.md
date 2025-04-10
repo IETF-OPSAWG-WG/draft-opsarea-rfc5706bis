@@ -51,17 +51,6 @@ author:
     fullname: Ran Chen
     organization: ZTE
     email: chen.ran@zte.com.cn
-
-
-informative:
-
-   W3C.REC-xmlschema-0-20041028:
-              title: "XML Schema Part 0: Primer Second Edition"
-              date: 28 October 2004
-              target: https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/
-              author:
-              -
-                org: World Wide Web Consortium FirstEdition REC-xmlschema-0-20041028
         
 --- abstract
 
