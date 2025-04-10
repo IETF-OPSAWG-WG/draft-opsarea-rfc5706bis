@@ -1,58 +1,29 @@
----
-title: Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions
-abbrev: Operations & Management Guidelines
-docname: draft-opsarea-rfc5706bis-00
 
 
-stand_alone: true
-ipr: trust200902
-area: "Operations and Management"
-wg: opsarea
-kw:
-  - Internet-Draft
-  - management
-  - operations
-  - operations and management
-  - ops guidelines
-cat: bcp
-obsoletes: 5706
-submissiontype: IETF
 
-coding: utf-8
-pi: [toc, sortrefs, symrefs]
 
-author:
- -
-    fullname: Benoit Claise
-    organization: Huawei
-    email: benoit.claise@huawei.com
- -
-    fullname: Joe Clarke
-    organization: Cisco
-    email: jclarke@cisco.com
- -
-    fullname: Adrian Farrel
-    organization: Old Dog Consulting
-    email: adrian@olddog.co.uk
- -
-    fullname: Thomas Graf
-    organization: Swisscom
-    email: thomas.graf@swisscom.com
- -
-    fullname: Samier Barguil
-    organization: Nokia
-    email: samier.barguil_giraldo@nokia.com
- -
-    fullname: Carlos Pignataro
-    organization: Blue Fern Consulting
-    email: cpignata@gmail.com, carlos@bluefern.consulting
-    uri: https://bluefern.consulting
- -
-    fullname: Ran Chen
-    organization: ZTE
-    email: chen.ran@zte.com.cn
-        
---- abstract
+opsarea                                                        B. Claise
+Internet-Draft                                                    Huawei
+Obsoletes: 5706 (if approved)                                  J. Clarke
+Intended status: Best Current Practice                             Cisco
+Expires: 11 October 2025                                       A. Farrel
+                                                      Old Dog Consulting
+                                                                 T. Graf
+                                                                Swisscom
+                                                              S. Barguil
+                                                                   Nokia
+                                                            C. Pignataro
+                                                    Blue Fern Consulting
+                                                                 R. Chen
+                                                                     ZTE
+                                                            9 April 2025
+
+
+ Guidelines for Considering Operations and Management of New Protocols
+                        and Protocol Extensions
+                      draft-opsarea-rfc5706bis-00
+
+Abstract
 
    New protocols or protocol extensions are best designed with due
    consideration of the functionality needed to operate and manage the
@@ -64,9 +35,107 @@ author:
 
    This document obsoletes RFC 5706.
 
---- middle
+Status of This Memo
 
-#  Introduction
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 1]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+   This Internet-Draft will expire on 11 October 2025.
+
+Copyright Notice
+
+   Copyright (c) 2025 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
+     1.1.  Designing for Operations and Management . . . . . . . . .   3
+     1.2.  This Document . . . . . . . . . . . . . . . . . . . . . .   4
+     1.3.  Motivation  . . . . . . . . . . . . . . . . . . . . . . .   5
+     1.4.  Background  . . . . . . . . . . . . . . . . . . . . . . .   6
+     1.5.  Available Management Technologies . . . . . . . . . . . .   7
+     1.6.  Terminology . . . . . . . . . . . . . . . . . . . . . . .   7
+     1.7.  Changes Since RFC 5706  . . . . . . . . . . . . . . . . .   8
+   2.  Operational Considerations - How Will the New Protocol Fit into
+           the Current Environment?  . . . . . . . . . . . . . . . .   8
+     2.1.  Operations  . . . . . . . . . . . . . . . . . . . . . . .   9
+     2.2.  Installation and Initial Setup  . . . . . . . . . . . . .   9
+     2.3.  Migration Path  . . . . . . . . . . . . . . . . . . . . .  10
+     2.4.  Requirements on Other Protocols and Functional
+           Components  . . . . . . . . . . . . . . . . . . . . . . .  10
+     2.5.  Impact on Network Operation . . . . . . . . . . . . . . .  11
+     2.6.  Verifying Correct Operation . . . . . . . . . . . . . . .  12
+   3.  Management Considerations - How Will the Protocol Be
+           Managed?  . . . . . . . . . . . . . . . . . . . . . . . .  12
+     3.1.  Interoperability  . . . . . . . . . . . . . . . . . . . .  14
+     3.2.  Management Information  . . . . . . . . . . . . . . . . .  17
+       3.2.1.  Information Model Design  . . . . . . . . . . . . . .  18
+     3.3.  Fault Management  . . . . . . . . . . . . . . . . . . . .  18
+       3.3.1.  Liveness Detection and Monitoring . . . . . . . . . .  19
+       3.3.2.  Fault Determination . . . . . . . . . . . . . . . . .  19
+       3.3.3.  Root Cause Analysis . . . . . . . . . . . . . . . . .  19
+       3.3.4.  Fault Isolation . . . . . . . . . . . . . . . . . . .  20
+     3.4.  Configuration Management  . . . . . . . . . . . . . . . .  20
+       3.4.1.  Verifying Correct Operation . . . . . . . . . . . . .  22
+     3.5.  Accounting Management . . . . . . . . . . . . . . . . . .  22
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 2]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+     3.6.  Performance Management  . . . . . . . . . . . . . . . . .  22
+       3.6.1.  Monitoring the Protocol . . . . . . . . . . . . . . .  23
+       3.6.2.  Monitoring the Device . . . . . . . . . . . . . . . .  24
+       3.6.3.  Monitoring the Network  . . . . . . . . . . . . . . .  24
+       3.6.4.  Monitoring the Service  . . . . . . . . . . . . . . .  25
+     3.7.  Security Management . . . . . . . . . . . . . . . . . . .  25
+   4.  Documentation Guidelines  . . . . . . . . . . . . . . . . . .  26
+     4.1.  Recommended Discussions . . . . . . . . . . . . . . . . .  27
+     4.2.  Null Manageability Considerations Sections  . . . . . . .  27
+     4.3.  Placement of Operations and Manageability Considerations
+           Sections  . . . . . . . . . . . . . . . . . . . . . . . .  28
+   5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  28
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .  28
+   7.  Informative References  . . . . . . . . . . . . . . . . . . .  28
+   Appendix A.  Operations and Management Review Checklist . . . . .  32
+     A.1.  Operational Considerations  . . . . . . . . . . . . . . .  32
+     A.2.  Management Considerations . . . . . . . . . . . . . . . .  34
+     A.3.  Documentation . . . . . . . . . . . . . . . . . . . . . .  35
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  35
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  36
+
+1.  Introduction
 
    Often when new protocols or protocol extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
@@ -80,10 +149,26 @@ author:
 
    This document obsoletes RFC 5706.
 
-##  Designing for Operations and Management
+1.1.  Designing for Operations and Management
 
    The operational environment and manageability of the protocol should
    be considered from the start when new protocols are designed.
+
+
+
+
+
+
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 3]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
 
    Most of the existing IETF management standards are focused on using
    Structure of Management Information (SMI)-based data models (MIB
@@ -112,7 +197,7 @@ author:
    need to be updated in the future, after further operational
    experience has been gained.
 
-##  This Document
+1.2.  This Document
 
    This document makes a distinction between "Operational
    Considerations" and "Management Considerations", although the two are
@@ -130,6 +215,16 @@ author:
    documentation.  Separate manageability and operational considerations
    sections are desirable in many cases, but their structure and
    location are a decision that can be made from case to case.
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 4]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
 
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
@@ -150,11 +245,11 @@ author:
    Operations and management are highly dependent on their environment,
    so most guidelines are subjective rather than objective.
 
-##  Motivation
+1.3.  Motivation
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
+   [RFC3410], the Structure of Management Information [RFC2578], and MIB
    data models for managing new protocols.  As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate.  The
@@ -179,13 +274,21 @@ author:
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols.  However, these aspects should be
    considered for any IETF protocol because we develop technologies and
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 5]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    protocols to be deployed and operated in the real-world Internet.  It
    is fine if a WG decides that its protocol does not need interoperable
    management or no standardized data model, but this should be a
    deliberate decision, not the result of omission.  This document
    provides some guidelines for those considerations.
 
-##  Background
+1.4.  Background
 
    There have been a significant number of efforts, meetings, and
    documents that are related to Internet operations and management.
@@ -195,7 +298,7 @@ author:
    reinventing old solutions.
 
    In 1988, the IAB published "IAB Recommendations for the Development
-   of Internet Network Management Standards" {{?RFC1052}}, which
+   of Internet Network Management Standards" [RFC1052], which
    recommended a solution that, where possible, deliberately separates
    modeling languages, data models, and the protocols that carry data.
    The goal is to allow standardized information and data models to be
@@ -204,16 +307,16 @@ author:
    In 2001, Operations and Management Area design teams were created to
    document requirements related to the configuration of IP-based
    networks.  One output was "Requirements for Configuration Management
-   of IP-based Networks" {{?RFC3139}}.
+   of IP-based Networks" [RFC3139].
 
    In 2003, the Internet Architecture Board (IAB) held a workshop on
-   Network Management {{?RFC3535}} that discussed the strengths and
+   Network Management [RFC3535] that discussed the strengths and
    weaknesses of some IETF network management protocols and compared
    them to operational needs, especially configuration.
 
    One issue discussed was the user-unfriendliness of the binary format
-   of SNMP {{?RFC3410}} and Common Open Policy Service (COPS) Usage for
-   Policy Provisioning (COPS-PR) {{?RFC3084}}, and it was recommended that
+   of SNMP [RFC3410] and Common Open Policy Service (COPS) Usage for
+   Policy Provisioning (COPS-PR) [RFC3084], and it was recommended that
    the IETF explore an XML-based Structure of Management Information and
    an XML-based protocol for configuration.
 
@@ -227,62 +330,79 @@ author:
    be updated to accommodate multiple IETF schema languages for
    describing the structure of management information and multiple IETF
    standard protocols for performing management tasks.  The IESG asked
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 6]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    that a document be written to discuss how protocol designers and
    working groups should address management in this emerging multi-
    protocol environment.  This document and some planned companion
    documents attempt to provide some guidelines for navigating the
    rapidly shifting operating and management environments.
 
-##  Available Management Technologies
+1.5.  Available Management Technologies
 
    The IETF has a number of standard management protocols available that
    are suitable for different purposes.  These include:
 
-   *  Simple Network Management Protocol - SNMP {{?RFC3410}}
+   *  Simple Network Management Protocol - SNMP [RFC3410]
 
-   *  Syslog {{?RFC5424}}
+   *  Syslog [RFC5424]
 
-   *  Remote Authentication Dial-In User Service - RADIUS {{?RFC2865}}
+   *  Remote Authentication Dial-In User Service - RADIUS [RFC2865]
 
-   *  DIAMETER {{?RFC6733}}
+   *  DIAMETER [RFC6733]
 
-   *  Network Configuration Protocol - NETCONF {{?RFC6241}}
+   *  Network Configuration Protocol - NETCONF [RFC6241]
 
-   *  IP Flow Information Export - IPFIX {{?RFC7011}}
+   *  IP Flow Information Export - IPFIX [RFC7011]
 
    A planned supplement to this document will discuss these protocol
    standards, discuss some standard information and data models for
    specific functionality, and provide pointers to the documents that
    define them.
 
-##  Terminology
+1.6.  Terminology
 
    This document deliberately does not use the (capitalized) keywords
-   described in RFC 2119 {{?RFC2119}}.  RFC 2119 states the keywords must
+   described in RFC 2119 [RFC2119].  RFC 2119 states the keywords must
    only be used where it is actually required for interoperation or to
    limit behavior which has potential for causing harm (e.g., limiting
    retransmissions).  For example, they must not be used to try to
    impose a particular method on implementers where the method is not
    required for interoperability.  This informational document is a set
-   of guidelines based on current practices of \*\*some\*\* protocol
+   of guidelines based on current practices of **some** protocol
    designers and operators.  This document is biased toward router
    operations and management and some advice may not be directly
    applicable to protocols with a different purpose, such as application
-   server protocols.  This document \*\*does not\*\* describe
+   server protocols.  This document **does not** describe
    interoperability requirements, so the capitalized keywords from RFC
    2119 do not apply here.
 
    *  CLI: Command Line Interface
 
+
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 7]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    *  Data model: a mapping of the contents of an information model into
       a form that is specific to a particular type of data store or
-      repository {{?RFC3444}}.
+      repository [RFC3444].
 
    *  Information model: an abstraction and representation of the
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other.  It is
       independent of any specific repository, software usage, protocol,
-      or platform {{?RFC3444}}.
+      or platform [RFC3444].
 
    *  New protocol: includes new protocols, protocol extensions, data
       models, or other functionality being designed.
@@ -290,15 +410,17 @@ author:
    *  Protocol designer: represents individuals and working groups
       involved in the development of new protocols or extensions.
 
-## Changes Since RFC 5706
+1.7.  Changes Since RFC 5706
 
-   The following changes have been made to the guidelines published in  {{?RFC5706}}:
+   The following changes have been made to the guidelines published in
+   [RFC5706]:
 
-   * TBC
+   *  TBC
 
-   * TBC
+   *  TBC
 
-# Operational Considerations - How Will the New Protocol Fit into the Current Environment?
+2.  Operational Considerations - How Will the New Protocol Fit into the
+    Current Environment?
 
    Designers of a new protocol should carefully consider the operational
    aspects.  To ensure that a protocol will be practical to deploy in
@@ -310,20 +432,31 @@ author:
    central database, or a complicated state diagram that operations
    staff will find difficult to understand.
 
-   BGP flap damping {{?RFC2439}} is an example.  It was designed to block
+   BGP flap damping [RFC2439] is an example.  It was designed to block
    high-frequency route flaps; however, the design did not consider the
    existence of BGP path exploration / slow convergence.  In real
    operations, path exploration caused false flap damping, resulting in
    loss of reachability.  As a result, many networks turned flap damping
    off.
 
-##  Operations {#sec-ops}
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 8]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+2.1.  Operations
 
    Protocol designers can analyze the operational environment and mode
    of work in which the new protocol or extension will work.  Such an
-   exercise need not be reflected directly by text in their document
-   but could help in visualizing how to apply the protocol in the
-   Internet environments where it will be deployed.
+   exercise need not be reflected directly by text in their document but
+   could help in visualizing how to apply the protocol in the Internet
+   environments where it will be deployed.
 
    A key question is how the protocol can operate "out of the box".  If
    implementers are free to select their own defaults, the protocol
@@ -345,10 +478,10 @@ author:
    routers and on hosts, or whether notifications for alarms or other
    events will be expected.
 
-##  Installation and Initial Setup {#sec-install}
+2.2.  Installation and Initial Setup
 
    Anything that can be configured can be misconfigured.  "Architectural
-   Principles of the Internet" {{?RFC1958}}, Section 3.8, states: "Avoid
+   Principles of the Internet" [RFC1958], Section 3.8, states: "Avoid
    options and parameters whenever possible.  Any options and parameters
    should be configured or negotiated dynamically rather than manually."
 
@@ -364,6 +497,14 @@ author:
    concentrate on the configuration of the network as a whole rather
    than on individual devices.  Of course, how one accomplishes this is
    the hard part.
+
+
+
+
+Claise, et al.           Expires 11 October 2025                [Page 9]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
 
    It is desirable to discuss the background of chosen default values,
    or perhaps why a range of values makes sense.  In many cases, as
@@ -388,7 +529,7 @@ author:
    speed or some other relevant factors.  This would help reduce the
    chance of problems caused by technology advancement.
 
-##  Migration Path {#sec-migration}
+2.3.  Migration Path
 
    If the new protocol is a new version of an existing one, or if it is
    replacing another technology, the protocol designer should consider
@@ -403,13 +544,23 @@ author:
    operators may deploy aspects of a protocol before deploying the
    protocol fully.
 
-##  Requirements on Other Protocols and Functional Components {#sec-other}
+2.4.  Requirements on Other Protocols and Functional Components
 
    Protocol designers should consider the requirements that the new
    protocol might put on other protocols and functional components and
    should also document the requirements from other protocols and
    functional elements that have been considered in designing the new
    protocol.
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 10]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
 
    These considerations should generally remain illustrative to avoid
    creating restrictions or dependencies, or potentially impacting the
@@ -419,19 +570,19 @@ author:
    stated.
 
    For example, the design of the Resource ReSerVation Protocol (RSVP)
-   {{?RFC2205}} required each router to look at the RSVP PATH message and,
+   [RFC2205] required each router to look at the RSVP PATH message and,
    if the router understood RSVP, add its own address to the message to
    enable automatic tunneling through non-RSVP routers.  But in reality,
    routers cannot look at an otherwise normal IP packet and potentially
    take it off the fast path!  The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router.  The "router alert" option
-   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem
+   ([RFC2113], [RFC2711]) was finally developed to solve this problem
    for RSVP and other protocols that require the router to take some
    packets off the fast-forwarding path.  Yet, router alert has its own
    problems in impacting router performance.
 
-##  Impact on Network Operation {#sec-impact}
+2.5.  Impact on Network Operation
 
    The introduction of a new protocol or extensions to an existing
    protocol may have an impact on the operation of existing networks.
@@ -454,10 +605,23 @@ author:
    the configuration, such as servers performing auto-configuration
    operations.
 
+
+
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 11]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    The protocol designer should consider also the impact on
-   infrastructure applications like DNS {{?RFC1034}}, the registries, or
+   infrastructure applications like DNS [RFC1034], the registries, or
    the size of routing tables.  For example, Simple Mail Transfer
-   Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
+   Protocol (SMTP) [RFC5321] servers use a reverse DNS lookup to filter
    out incoming connection requests.  When Berkeley installed a new spam
    filter, their mail server stopped functioning because of overload of
    the DNS cache resolver.
@@ -472,7 +636,7 @@ author:
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-##  Verifying Correct Operation {#sec-verify}
+2.6.  Verifying Correct Operation
 
    The protocol designer should consider techniques for testing the
    effect that the protocol has had on the network by sending data
@@ -486,7 +650,7 @@ author:
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
-# Management Considerations - How Will the Protocol Be Managed? {#sec-proto}
+3.  Management Considerations - How Will the Protocol Be Managed?
 
    The considerations of manageability should start from identifying the
    entities to be managed, as well as how the managed protocol is
@@ -499,11 +663,19 @@ author:
    considering management often focuses on monitoring a protocol
    endpoint on a single device.  A MIB module document typically only
    considers monitoring properties observable at one end, while the
-   document does not really cover managing the \*protocol\* (the
+   document does not really cover managing the *protocol* (the
    coordination of multiple ends) and does not even come near managing
-   the \*service\* (which includes a lot of stuff that is very far away
+   the *service* (which includes a lot of stuff that is very far away
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 12]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    from the box).  This is exactly what operators hate -- you need to be
-   able to manage both ends.  As {{?RFC3535}} says, "MIB modules can often
+   able to manage both ends.  As [RFC3535] says, "MIB modules can often
    be characterized as a list of ingredients without a recipe".
 
    The management model should take into account factors such as:
@@ -540,7 +712,7 @@ author:
 
    WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble.  NETCONF {{?RFC6241}} addresses this in a generic manner
+   causes trouble.  NETCONF [RFC6241] addresses this in a generic manner
    by allowing an operator to lock the configuration on multiple
    devices, perform the configuration settings/changes, check that they
    are OK (undo if not), and then unlock the devices.
@@ -550,6 +722,14 @@ author:
    code should be debugged before ever being added to a network, so
    asserts and memory dumps do not normally belong in management data
    models.  However, debugging on-the-wire interactions is a protocol
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 13]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    issue: while the messages can be seen by sniffing, it is enormously
    helpful if a protocol specification supports features that make
    debugging of network interactions and behaviors easier.  There could
@@ -565,7 +745,7 @@ author:
    performance of the server might impact more nodes than the
    performance of a specific client.
 
-##  Interoperability {#sec-interop}
+3.1.  Interoperability
 
    Just as when deploying protocols that will inter-connect devices,
    management interoperability should be considered -- whether across
@@ -596,14 +776,24 @@ author:
    where one understands the network impact (as part of the total cost
    of operations) of that service.
 
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 14]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    Getting everybody to agree on a single syntax and an associated
    protocol to do all management has proven to be difficult.  So,
    management systems tend to speak whatever the boxes support, whether
    or not the IETF likes this.  The IETF is moving from support for one
    schema language for modeling the structure of management information
-   (Structure of Management Information Version 2 (SMIv2) {{?RFC2578}}) and
+   (Structure of Management Information Version 2 (SMIv2) [RFC2578]) and
    one simple network management protocol (Simple Network Management
-   Protocol (SNMP) {{?RFC3410}}) towards support for additional schema
+   Protocol (SNMP) [RFC3410]) towards support for additional schema
    languages and additional management protocols suited to different
    purposes.  Other Standard Development Organizations (e.g., the
    Distributed Management Task Force - DMTF, the Tele-Management Forum -
@@ -611,16 +801,16 @@ author:
    be more suitable than IETF schemas and protocols in some cases.  Some
    of the alternatives being considered include:
 
-   *  XML Schema Definition {{?W3C.REC-xmlschema-0-20041028}}
+   *  XML Schema Definition [W3C.REC-xmlschema-0-20041028]
 
    and
 
-   *  NETCONF Configuration Protocol {{?RFC6241}}
+   *  NETCONF Configuration Protocol [RFC6241]
 
-   *  the IP Flow Information Export (IPFIX) Protocol {{?RFC7011}}) for
+   *  the IP Flow Information Export (IPFIX) Protocol [RFC7011]) for
       usage accounting
 
-   *  the syslog protocol {{?RFC5424}} for logging
+   *  the syslog protocol [RFC5424] for logging
 
    Interoperability needs to be considered on the syntactic level and
    the semantic level.  While it can be irritating and time-consuming,
@@ -645,27 +835,33 @@ author:
    counter.  Then, whether the counter is gathered via SNMP, a CLI
    command, or a syslog message, the counter will have the same meaning.
 
+
+
+Claise, et al.           Expires 11 October 2025               [Page 15]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    Protocol designers should consider which information might be useful
    for managing the new protocol or protocol extensions.
 
-~~~~ aasvg
-             IM                --> conceptual/abstract model
-              |                    for designers and operators
-   +----------+---------+
-   |          |         |
-   DM        DM         DM     --> concrete/detailed model
-                                      for implementers
+                   IM                --> conceptual/abstract model
+                    |                    for designers and operators
+         +----------+---------+
+         |          |         |
+         DM        DM         DM     --> concrete/detailed model
+                                            for implementers
 
-Information Models and Data Models
-~~~~
-{: #fig-im-dm title="IMs and DMs" artwork-align="center"}
+      Information Models and Data Models
+
+                           Figure 1: IMs and DMs
 
    Protocol designers may decide an information model or data model
    would be appropriate for managing the new protocol or protocol
    extensions.
 
    "On the Difference between Information Models and Data Models"
-   {{?RFC3444}} can be helpful in determining what information to consider
+   [RFC3444] can be helpful in determining what information to consider
    regarding information models (IMs), as compared to data models (DMs).
 
    Information models should come from the protocol WGs and include
@@ -673,27 +869,36 @@ Information Models and Data Models
    relevant.  There are a number of information models contained in
    protocol WG RFCs.  Some examples:
 
-   *  {{?RFC3060}} - Policy Core Information Model version 1
+   *  [RFC3060] - Policy Core Information Model version 1
 
-   *  {{?RFC3290}} - An Informal Management Model for Diffserv Routers
+   *  [RFC3290] - An Informal Management Model for Diffserv Routers
 
-   *  {{?RFC3460}} - Policy Core Information Model Extensions
+   *  [RFC3460] - Policy Core Information Model Extensions
 
-   *  {{?RFC3585}} - IPsec Configuration Policy Information Model
+   *  [RFC3585] - IPsec Configuration Policy Information Model
 
-   *  {{?RFC3644}} - Policy Quality of Service Information Model
+   *  [RFC3644] - Policy Quality of Service Information Model
 
-   *  {{?RFC3670}} - Information Model for Describing Network Device QoS
+   *  [RFC3670] - Information Model for Describing Network Device QoS
       Datapath Mechanisms
 
-   *  {{?RFC3805}} - Printer MIB v2 (contains both an IM and a DM)
+   *  [RFC3805] - Printer MIB v2 (contains both an IM and a DM)
 
    Management protocol standards and management data model standards
    often contain compliance clauses to ensure interoperability.
    Manageability considerations should include discussion of which level
    of compliance is expected to be supported for interoperability.
 
-##  Management Information {#sec-mgt-info}
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 16]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+3.2.  Management Information
 
    Languages used to describe an information model can influence the
    nature of the model.  Using a particular data-modeling language, such
@@ -729,8 +934,8 @@ Information Models and Data Models
 
    Is there always just one instance of this object or can there be
    multiple instances?  Does this object relate to exactly one other
-   object, or may it relate to multiple?  When is it possible to change a
-   relationship?
+   object, or may it relate to multiple?  When is it possible to change
+   a relationship?
 
    Do objects (such as rows in tables) share fate?  For example, if a
    row in table A must exist before a related row in table B can be
@@ -738,7 +943,18 @@ Information Models and Data Models
    table A is deleted?  Does the existence of relationships between
    objects have an impact on fate sharing?
 
-###  Information Model Design {#sec-im-design}
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 17]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+3.2.1.  Information Model Design
 
    This document recommends keeping the information model as simple as
    possible by applying the following criteria:
@@ -758,7 +974,7 @@ Information Models and Data Models
    6.  Avoid causing critical sections to be heavily instrumented.  A
        guideline is one counter per critical section per layer.
 
-## Fault Management {#sec-fm-mgt}
+3.3.  Fault Management
 
    The protocol designer should document the basic faults and health
    indicators that need to be instrumented for the new protocol, as well
@@ -785,7 +1001,16 @@ Information Models and Data Models
    the event information within a given (high) margin of confidence?
    Can we poll the latest events in the box?
 
-###  Liveness Detection and Monitoring
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 18]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+3.3.1.  Liveness Detection and Monitoring
 
    Protocol designers should always build in basic testing features
    (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
@@ -805,7 +1030,7 @@ Information Models and Data Models
    through management applications or at least to record the fact in an
    event log.
 
-### Fault Determination
+3.3.2.  Fault Determination
 
    It can be helpful to describe how faults can be pinpointed using
    management information.  For example, counters might record instances
@@ -826,14 +1051,22 @@ Information Models and Data Models
    are there some "standard" notifications that could be used?  Or can
    relevant counters be polled as needed?
 
-###  Root Cause Analysis
+3.3.3.  Root Cause Analysis
 
    Root cause analysis is about working out where in the network the
    fault is.  For example, if end-to-end data delivery is failing
    (reported by a notification), root cause analysis can help find the
    failed link or node in the end-to-end path.
 
-###  Fault Isolation
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 19]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+3.3.4.  Fault Isolation
 
    It might be useful to isolate or quarantine faults, such as isolating
    a device that emits malformed messages that are necessary to
@@ -841,7 +1074,7 @@ Information Models and Data Models
    configuring next-hop devices to drop the faulty messages to prevent
    them from entering the rest of the network.
 
-##  Configuration Management {#sec-config-mgt}
+3.4.  Configuration Management
 
    A protocol designer should document the basic configuration
    parameters that need to be instrumented for a new protocol, as well
@@ -851,7 +1084,7 @@ Information Models and Data Models
    or restarts of the management system?
 
    "Requirements for Configuration Management of IP-based Networks"
-   {{?RFC3139}} discusses requirements for configuration management,
+   [RFC3139] discusses requirements for configuration management,
    including discussion of different levels of management, high-level
    policies, network-wide configuration data, and device-local
    configuration.  Network configuration is not just multi-device push
@@ -862,7 +1095,7 @@ Information Models and Data Models
 
    A number of efforts have existed in the IETF to develop policy-based
    configuration management.  "Terminology for Policy-Based Management"
-   {{?RFC3198}} was written to standardize the terminology across these
+   [RFC3198] was written to standardize the terminology across these
    efforts.
 
    Implementations should not arbitrarily modify configuration data.  In
@@ -880,6 +1113,14 @@ Information Models and Data Models
 
    2.  Unless the device/NMS systems have correct rules / a lot of
        experience, reordering ACLs can lead to a huge security issue.
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 20]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
 
    Network-wide configurations may be stored in central master databases
    and transformed into formats that can be pushed to devices, either by
@@ -904,7 +1145,7 @@ Information Models and Data Models
    protocol to be configured across multiple devices.  Configuration
    templates might also be helpful.
 
-   Consensus of the 2002 IAB Workshop {{?RFC3535}} was that textual
+   Consensus of the 2002 IAB Workshop [RFC3535] was that textual
    configuration files should be able to contain international
    characters.  Human-readable strings should utilize UTF-8, and
    protocol elements should be in case-insensitive ASCII.
@@ -926,7 +1167,18 @@ Information Models and Data Models
    should have default values suggested in the protocol specification
    and may not need to be otherwise configurable.
 
-###  Verifying Correct Operation
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 21]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+3.4.1.  Verifying Correct Operation
 
    An important function that should be provided is guidance on how to
    verify the correct operation of a protocol.  A protocol designer
@@ -942,13 +1194,13 @@ Information Models and Data Models
    each network element.  This may be achieved through status and
    statistical information gathered from devices.
 
-##  Accounting Management {#sec-acc-mgt}
+3.5.  Accounting Management
 
    A protocol designer should consider whether it would be appropriate
    to collect usage information related to this protocol and, if so,
    what usage information would be appropriate to collect.
 
-   "Introduction to Accounting Management" {{?RFC2975}} discusses a number
+   "Introduction to Accounting Management" [RFC2975] discusses a number
    of factors relevant to monitoring usage of protocols for purposes of
    capacity and trend analysis, cost allocation, auditing, and billing.
    The document also discusses how some existing protocols can be used
@@ -956,7 +1208,7 @@ Information Models and Data Models
    designing a protocol whose usage might need to be monitored or when
    recommending a protocol to do usage accounting.
 
-##  Performance Management {#sec-perf-mgt}
+3.6.  Performance Management
 
    From a manageability point of view, it is important to determine how
    well a network deploying the protocol or technology defined in the
@@ -974,6 +1226,14 @@ Information Models and Data Models
    discusses the performance characteristics that are pertinent to that
    class; clearly identifies a set of metrics that aid in the
    description of those characteristics; specifies the methodologies
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 22]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    required to collect said metrics; and lastly, presents the
    requirements for the common, unambiguous reporting of benchmarking
    results.  Search for "benchmark" in the RFC search tool.
@@ -997,7 +1257,7 @@ Information Models and Data Models
    protocol / service activation on the device), network monitoring, and
    service monitoring (the impact of service activation on the network).
 
-###  Monitoring the Protocol
+3.6.1.  Monitoring the Protocol
 
    Certain properties of protocols are useful to monitor.  The number of
    protocol packets received, the number of packets sent, and the number
@@ -1020,6 +1280,16 @@ Information Models and Data Models
    counter; if so, then no one management application should be allowed
    to reset the value to zero since this will impact other applications.
 
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 23]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    Could events, such as hot-swapping a blade in a chassis, cause
    discontinuities in counter?  Does this make any difference in
    evaluating the performance of a protocol?
@@ -1034,7 +1304,7 @@ Information Models and Data Models
    VLAN standards.  A MIB implementing a VLAN table should be able to
    support 4096 entries because the content being modeled requires it.
 
-###  Monitoring the Device
+3.6.2.  Monitoring the Device
 
    Consider whether device performance will be affected by the number of
    protocol entities being instantiated on the device.  Designers of an
@@ -1050,7 +1320,7 @@ Information Models and Data Models
    number of instances, and the expected behavior when the current
    instances exceed the capacity of the device.
 
-###  Monitoring the Network
+3.6.3.  Monitoring the Network
 
    Consider whether network performance will be affected by the number
    of protocol entities being deployed.
@@ -1065,7 +1335,18 @@ Information Models and Data Models
    the protocol?  Is it important to measure setup times?  End-to-end
    connectivity?  Hop-to-hop connectivity?  Network throughput?
 
-###  Monitoring the Service
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 24]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+3.6.4.  Monitoring the Service
 
    What are the principal performance factors that need to be looked at
    when measuring the performance of a service using the protocol?  Is
@@ -1073,7 +1354,7 @@ Information Models and Data Models
    server associations?  End-to-end application quality?  Service
    interruptions?  User experience?
 
-##  Security Management {#sec-secuity-mgt}
+3.7.  Security Management
 
    Protocol designers should consider how to monitor and manage security
    aspects and vulnerabilities of the new protocol.
@@ -1109,6 +1390,18 @@ Information Models and Data Models
    management applications and may become a source of potential security
    threats.
 
+
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 25]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    The granularity of access control needed on management interfaces
    needs to match operational needs.  Typical requirements are a role-
    based access control model and the principle of least privilege,
@@ -1129,7 +1422,7 @@ Information Models and Data Models
    Protocol designers should consider how access control lists are
    maintained and updated.
 
-   Standard SNMP notifications or syslog messages {{?RFC5424}} might
+   Standard SNMP notifications or syslog messages [RFC5424] might
    already exist, or can be defined, to alert operators to the
    conditions identified in the security considerations for the new
    protocol.  For example, you can log all the commands entered by the
@@ -1152,19 +1445,27 @@ Information Models and Data Models
    Protocol designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
-#  Documentation Guidelines
+4.  Documentation Guidelines
 
    This document is focused on what a protocol designer should think
    about and how those considerations might be documented.
 
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 26]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
    This document does not describe interoperability requirements but
    rather describes practices that are useful to follow when dealing
    with manageability aspects in IETF documents, so the capitalized
-   keywords from {{?RFC2119}} do not apply here.  Any occurrence of words
+   keywords from [RFC2119] do not apply here.  Any occurrence of words
    like 'must' or 'should' needs to be interpreted only in the context
    of their natural, English-language meaning.
 
-##  Recommended Discussions
+4.1.  Recommended Discussions
 
    A Manageability Considerations section should include discussion of
    the management and operations topics raised in this document, and
@@ -1178,7 +1479,7 @@ Information Models and Data Models
    should consider how using existing protocols and data models might
    impact network operations.
 
-##  Null Manageability Considerations Sections
+4.2.  Null Manageability Considerations Sections
 
    A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
@@ -1201,7 +1502,19 @@ Information Models and Data Models
    considerations, it would be helpful to point out the considerations
    section in the base document.
 
-##  Placement of Operations and Manageability Considerations Sections
+
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 27]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+4.3.  Placement of Operations and Manageability Considerations Sections
 
    If a protocol designer develops a Manageability Considerations
    section for a new protocol, it is recommended that the section be
@@ -1210,11 +1523,11 @@ Information Models and Data Models
    placement could simplify the development of tools to detect the
    presence of such a section.
 
-#  IANA Considerations
+5.  IANA Considerations
 
    This document does not have any IANA actions required.
 
-#  Security Considerations
+6.  Security Considerations
 
    This document is informational and provides guidelines for
    considering manageability and operations.  It introduces no new
@@ -1242,20 +1555,205 @@ Information Models and Data Models
    concerted attack might be able to be mounted by causing an excess of
    these events.  In other words, the security-management mechanisms
    could constitute a security vulnerability.  The management of
-   security aspects is important (see {{sec-secuity-mgt}}).
+   security aspects is important (see Section 3.7).
 
---- back
+7.  Informative References
 
-#  Operations and Management Review Checklist
+   [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
+              STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
+              <https://www.rfc-editor.org/rfc/rfc1034>.
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 28]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+   [RFC1052]  Cerf, V., "IAB recommendations for the development of
+              Internet network management standards", RFC 1052,
+              DOI 10.17487/RFC1052, April 1988,
+              <https://www.rfc-editor.org/rfc/rfc1052>.
+
+   [RFC1958]  Carpenter, B., Ed., "Architectural Principles of the
+              Internet", RFC 1958, DOI 10.17487/RFC1958, June 1996,
+              <https://www.rfc-editor.org/rfc/rfc1958>.
+
+   [RFC2113]  Katz, D., "IP Router Alert Option", RFC 2113,
+              DOI 10.17487/RFC2113, February 1997,
+              <https://www.rfc-editor.org/rfc/rfc2113>.
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC2205]  Braden, R., Ed., Zhang, L., Berson, S., Herzog, S., and S.
+              Jamin, "Resource ReSerVation Protocol (RSVP) -- Version 1
+              Functional Specification", RFC 2205, DOI 10.17487/RFC2205,
+              September 1997, <https://www.rfc-editor.org/rfc/rfc2205>.
+
+   [RFC2439]  Villamizar, C., Chandra, R., and R. Govindan, "BGP Route
+              Flap Damping", RFC 2439, DOI 10.17487/RFC2439, November
+              1998, <https://www.rfc-editor.org/rfc/rfc2439>.
+
+   [RFC2578]  McCloghrie, K., Ed., Perkins, D., Ed., and J.
+              Schoenwaelder, Ed., "Structure of Management Information
+              Version 2 (SMIv2)", STD 58, RFC 2578,
+              DOI 10.17487/RFC2578, April 1999,
+              <https://www.rfc-editor.org/rfc/rfc2578>.
+
+   [RFC2711]  Partridge, C. and A. Jackson, "IPv6 Router Alert Option",
+              RFC 2711, DOI 10.17487/RFC2711, October 1999,
+              <https://www.rfc-editor.org/rfc/rfc2711>.
+
+   [RFC2865]  Rigney, C., Willens, S., Rubens, A., and W. Simpson,
+              "Remote Authentication Dial In User Service (RADIUS)",
+              RFC 2865, DOI 10.17487/RFC2865, June 2000,
+              <https://www.rfc-editor.org/rfc/rfc2865>.
+
+   [RFC2975]  Aboba, B., Arkko, J., and D. Harrington, "Introduction to
+              Accounting Management", RFC 2975, DOI 10.17487/RFC2975,
+              October 2000, <https://www.rfc-editor.org/rfc/rfc2975>.
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 29]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+   [RFC3060]  Moore, B., Ellesson, E., Strassner, J., and A. Westerinen,
+              "Policy Core Information Model -- Version 1
+              Specification", RFC 3060, DOI 10.17487/RFC3060, February
+              2001, <https://www.rfc-editor.org/rfc/rfc3060>.
+
+   [RFC3084]  Chan, K., Seligson, J., Durham, D., Gai, S., McCloghrie,
+              K., Herzog, S., Reichmeyer, F., Yavatkar, R., and A.
+              Smith, "COPS Usage for Policy Provisioning (COPS-PR)",
+              RFC 3084, DOI 10.17487/RFC3084, March 2001,
+              <https://www.rfc-editor.org/rfc/rfc3084>.
+
+   [RFC3139]  Sanchez, L., McCloghrie, K., and J. Saperia, "Requirements
+              for Configuration Management of IP-based Networks",
+              RFC 3139, DOI 10.17487/RFC3139, June 2001,
+              <https://www.rfc-editor.org/rfc/rfc3139>.
+
+   [RFC3198]  Westerinen, A., Schnizlein, J., Strassner, J., Scherling,
+              M., Quinn, B., Herzog, S., Huynh, A., Carlson, M., Perry,
+              J., and S. Waldbusser, "Terminology for Policy-Based
+              Management", RFC 3198, DOI 10.17487/RFC3198, November
+              2001, <https://www.rfc-editor.org/rfc/rfc3198>.
+
+   [RFC3290]  Bernet, Y., Blake, S., Grossman, D., and A. Smith, "An
+              Informal Management Model for Diffserv Routers", RFC 3290,
+              DOI 10.17487/RFC3290, May 2002,
+              <https://www.rfc-editor.org/rfc/rfc3290>.
+
+   [RFC3410]  Case, J., Mundy, R., Partain, D., and B. Stewart,
+              "Introduction and Applicability Statements for Internet-
+              Standard Management Framework", RFC 3410,
+              DOI 10.17487/RFC3410, December 2002,
+              <https://www.rfc-editor.org/rfc/rfc3410>.
+
+   [RFC3444]  Pras, A. and J. Schoenwaelder, "On the Difference between
+              Information Models and Data Models", RFC 3444,
+              DOI 10.17487/RFC3444, January 2003,
+              <https://www.rfc-editor.org/rfc/rfc3444>.
+
+   [RFC3460]  Moore, B., Ed., "Policy Core Information Model (PCIM)
+              Extensions", RFC 3460, DOI 10.17487/RFC3460, January 2003,
+              <https://www.rfc-editor.org/rfc/rfc3460>.
+
+   [RFC3535]  Schoenwaelder, J., "Overview of the 2002 IAB Network
+              Management Workshop", RFC 3535, DOI 10.17487/RFC3535, May
+              2003, <https://www.rfc-editor.org/rfc/rfc3535>.
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 30]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+   [RFC3585]  Jason, J., Rafalow, L., and E. Vyncke, "IPsec
+              Configuration Policy Information Model", RFC 3585,
+              DOI 10.17487/RFC3585, August 2003,
+              <https://www.rfc-editor.org/rfc/rfc3585>.
+
+   [RFC3644]  Snir, Y., Ramberg, Y., Strassner, J., Cohen, R., and B.
+              Moore, "Policy Quality of Service (QoS) Information
+              Model", RFC 3644, DOI 10.17487/RFC3644, November 2003,
+              <https://www.rfc-editor.org/rfc/rfc3644>.
+
+   [RFC3670]  Moore, B., Durham, D., Strassner, J., Westerinen, A., and
+              W. Weiss, "Information Model for Describing Network Device
+              QoS Datapath Mechanisms", RFC 3670, DOI 10.17487/RFC3670,
+              January 2004, <https://www.rfc-editor.org/rfc/rfc3670>.
+
+   [RFC3805]  Bergman, R., Lewis, H., and I. McDonald, "Printer MIB v2",
+              RFC 3805, DOI 10.17487/RFC3805, June 2004,
+              <https://www.rfc-editor.org/rfc/rfc3805>.
+
+   [RFC5321]  Klensin, J., "Simple Mail Transfer Protocol", RFC 5321,
+              DOI 10.17487/RFC5321, October 2008,
+              <https://www.rfc-editor.org/rfc/rfc5321>.
+
+   [RFC5424]  Gerhards, R., "The Syslog Protocol", RFC 5424,
+              DOI 10.17487/RFC5424, March 2009,
+              <https://www.rfc-editor.org/rfc/rfc5424>.
+
+   [RFC5706]  Harrington, D., "Guidelines for Considering Operations and
+              Management of New Protocols and Protocol Extensions",
+              RFC 5706, DOI 10.17487/RFC5706, November 2009,
+              <https://www.rfc-editor.org/rfc/rfc5706>.
+
+   [RFC6241]  Enns, R., Ed., Bjorklund, M., Ed., Schoenwaelder, J., Ed.,
+              and A. Bierman, Ed., "Network Configuration Protocol
+              (NETCONF)", RFC 6241, DOI 10.17487/RFC6241, June 2011,
+              <https://www.rfc-editor.org/rfc/rfc6241>.
+
+   [RFC6733]  Fajardo, V., Ed., Arkko, J., Loughney, J., and G. Zorn,
+              Ed., "Diameter Base Protocol", RFC 6733,
+              DOI 10.17487/RFC6733, October 2012,
+              <https://www.rfc-editor.org/rfc/rfc6733>.
+
+   [RFC7011]  Claise, B., Ed., Trammell, B., Ed., and P. Aitken,
+              "Specification of the IP Flow Information Export (IPFIX)
+              Protocol for the Exchange of Flow Information", STD 77,
+              RFC 7011, DOI 10.17487/RFC7011, September 2013,
+              <https://www.rfc-editor.org/rfc/rfc7011>.
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 31]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+   [W3C.REC-xmlschema-0-20041028]
+              Fallside, D., Ed. and P. Walmsley, Ed., "XML Schema Part
+              0: Primer Second Edition", W3C REC REC-xmlschema-
+              0-20041028, W3C REC-xmlschema-0-20041028, 28 October 2004,
+              <https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/>.
+
+Appendix A.  Operations and Management Review Checklist
 
    This appendix provides a quick checklist of issues that protocol
    designers should expect operations and management expert reviewers to
    look for when reviewing a document being proposed for consideration
    as a protocol standard.
 
-##  Operational Considerations
+A.1.  Operational Considerations
 
-   1.  Has deployment been discussed?  See {{sec-ops}}.
+   1.  Has deployment been discussed?  See Section 2.1.
 
        *  Does the document include a description of how this protocol
           or technology is going to be deployed and managed?
@@ -1271,7 +1769,7 @@ Information Models and Data Models
        *  Are there any coexistence issues?
 
    2.  Has installation and initial setup been discussed?  See
-       {{sec-install}}.
+       Section 2.2.
 
        *  Is the solution sufficiently configurable?
 
@@ -1288,12 +1786,20 @@ Information Models and Data Models
        *  How will the devices and managers find and authenticate each
           other?
 
-   3.  Has the migration path been discussed?  See {{sec-migration}}.
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 32]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+   3.  Has the migration path been discussed?  See Section 2.3.
 
        *  Are there any backward compatibility issues?
 
    4.  Have the Requirements on other protocols and functional
-       components been discussed?  See {{sec-other}}.
+       components been discussed?  See Section 2.4.
 
        *  What protocol operations are expected to be performed relative
           to the new protocol or technology, and what protocols and data
@@ -1301,7 +1807,7 @@ Information Models and Data Models
           for interoperable management?
 
    5.  Has the impact on network operation been discussed?  See
-       {{sec-impact}}.
+       Section 2.5.
 
        *  Will the new protocol significantly increase traffic load on
           existing networks?
@@ -1319,7 +1825,7 @@ Information Models and Data Models
           an existing network?
 
    6.  Have suggestions for verifying correct operation been discussed?
-       See {{sec-proto}}.
+       See Section 3.
 
        *  How can one test end-to-end connectivity and throughput?
 
@@ -1327,7 +1833,7 @@ Information Models and Data Models
 
        *  Will testing have an impact on the protocol or the network?
 
-   7.  Has management interoperability been discussed?  See {{sec-interop}}.
+   7.  Has management interoperability been discussed?  See Section 3.1.
 
        *  Is a standard protocol needed for interoperable management?
 
@@ -1335,7 +1841,14 @@ Information Models and Data Models
           properties comparable across devices from different vendors?
 
    8.  Are there fault or threshold conditions that should be reported?
-       See {{sec-fm-mgt}}.
+       See Section 3.3.
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 33]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
 
        *  Does specific management information have time utility?
 
@@ -1347,7 +1860,7 @@ Information Models and Data Models
        *  Is there support for saving state that could be used for root
           cause analysis?
 
-   9.  Is configuration discussed?  See {{sec-config-mgt}}.
+   9.  Is configuration discussed?  See Section 3.4.
 
        *  Are configuration defaults and default modes of operation
           considered?
@@ -1358,11 +1871,11 @@ Information Models and Data Models
           reboots where physical configuration might change (e.g., cards
           might be swapped while a chassis is powered down)?
 
-##  Management Considerations
+A.2.  Management Considerations
 
    Do you anticipate any manageability issues with the specification?
 
-   1.  Is management interoperability discussed?  See {{sec-interop}}.
+   1.  Is management interoperability discussed?  See Section 3.1.
 
        *  Will it use centralized or distributed management?
 
@@ -1373,41 +1886,51 @@ Information Models and Data Models
        *  Is textual or binary format for management information
           preferred?
 
-   2.  Is management information discussed?  See {{sec-mgt-info}}.
+   2.  Is management information discussed?  See Section 3.2.
 
        *  What is the minimal set of management (configuration, faults,
           performance monitoring) objects that need to be instrumented
           in order to manage the new protocol?
 
-   3.  Is fault management discussed?  See {{sec-fm-mgt}}.
+   3.  Is fault management discussed?  See Section 3.3.
 
        *  Is Liveness Detection and Monitoring discussed?
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 34]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
 
        *  Does the solution have failure modes that are difficult to
           diagnose or correct?  Are faults and alarms reported and
           logged?
 
-   4.  Is configuration management discussed?  See {{sec-config-mgt}}.
+   4.  Is configuration management discussed?  See Section 3.4.
 
        *  Is protocol state information exposed to the user?  How?  Are
           significant state transitions logged?
 
-   5.  Is accounting management discussed?  See {{sec-acc-mgt}}.
+   5.  Is accounting management discussed?  See Section 3.5.
 
-   6.  Is performance management discussed?  See {{sec-perf-mgt}}.
+   6.  Is performance management discussed?  See Section 3.6.
 
        *  Does the protocol have an impact on network traffic and
           network devices?  Can performance be measured?
 
        *  Is protocol performance information exposed to the user?
 
-   7.  Is security management discussed?  See {{sec-secuity-mgt}}.
+   7.  Is security management discussed?  See Section 3.7.
 
        *  Does the specification discuss how to manage aspects of
           security, such as access controls, managing key distribution,
           etc.
 
-##  Documentation
+A.3.  Documentation
 
    Is an operational considerations and/or manageability section part of
    the document?
@@ -1417,28 +1940,77 @@ Information Models and Data Models
 
    Is there proof of implementation and/or operational experience?
 
-
-#  Acknowledgements
-{:numbered="false"}
+Acknowledgements
 
    TBC.
 
+   The author of RFC 5706:  David Harrington
 
-The author of RFC 5706:
-: David Harrington
+   Acknowledgments from RFC 5706:  This document started from an earlier
+      document edited by Adrian Farrel, which itself was based on work
+      exploring the need for Manageability Considerations sections in
+      all Internet-Drafts produced within the Routing Area of the IETF.
+      That earlier work was produced by Avri Doria, Loa Andersson, and
+      Adrian Farrel, with valuable feedback provided by Pekka Savola and
+      Bert Wijnen.
 
-Acknowledgments from RFC 5706:
 
-   : This document started from an earlier document edited by Adrian
-     Farrel, which itself was based on work exploring the need for
-     Manageability Considerations sections in all Internet-Drafts produced
-     within the Routing Area of the IETF.  That earlier work was produced
-     by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable
-     feedback provided by Pekka Savola and Bert Wijnen.
 
-   : Some of the discussion about designing for manageability came from
-     private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.
 
-   : Thanks to reviewers who helped fashion this document, including
-     Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
-     Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
+Claise, et al.           Expires 11 October 2025               [Page 35]
+
+Internet-Draft     Operations & Management Guidelines         April 2025
+
+
+      Some of the discussion about designing for manageability came from
+      private discussions between Dan Romascanu, Bert Wijnen, Jürgen
+      Schönwälder, Andy Bierman, and David Harrington.
+
+      Thanks to reviewers who helped fashion this document, including
+      Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise,
+      Adrian Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen
+      Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
+
+Authors' Addresses
+
+   Benoit Claise
+   Huawei
+   Email: benoit.claise@huawei.com
+
+
+   Joe Clarke
+   Cisco
+   Email: jclarke@cisco.com
+
+
+   Adrian Farrel
+   Old Dog Consulting
+   Email: adrian@olddog.co.uk
+
+
+   Thomas Graf
+   Swisscom
+   Email: thomas.graf@swisscom.com
+
+
+   Samier Barguil
+   Nokia
+   Email: samier.barguil_giraldo@nokia.com
+
+
+   Carlos Pignataro
+   Blue Fern Consulting
+   Email: cpignata@gmail.com, carlos@bluefern.consulting
+   URI:   https://bluefern.consulting
+
+
+   Ran Chen
+   ZTE
+   Email: chen.ran@zte.com.cn
+
+
+
+
+
+
+Claise, et al.           Expires 11 October 2025               [Page 36]
