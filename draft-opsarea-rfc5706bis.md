@@ -1,7 +1,7 @@
 ---
 title: Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions
 abbrev: Operations & Management Guidelines
-docname: draft-opsarea-rfc5706bis-00
+docname: draft-opsarea-rfc5706bis-latest
 
 
 stand_alone: true

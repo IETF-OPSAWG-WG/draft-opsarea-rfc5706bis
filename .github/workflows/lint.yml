@@ -1,0 +1,33 @@
+name: "Check Syntax of YANG Modules"
+
+on:
+  push:
+    paths:
+    - '**.yang'
+    - '**.json'
+  pull_request:
+    paths:
+    - '**.yang'
+    - '**.json'
+
+jobs:
+  build:
+    name: "Check Syntax of YANG Modules & JSON Examples"
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Checkout"
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    - name: "Install pyang"
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyang
+   
+    - name: "Lint using pyang"
+      run: |
+        make pyang-lint
