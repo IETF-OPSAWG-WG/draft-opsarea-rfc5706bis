@@ -51,7 +51,6 @@ author:
     fullname: Ran Chen
     organization: ZTE
     email: chen.ran@zte.com.cn
-        
 --- abstract
 
    New protocols or protocol extensions are best designed with due
