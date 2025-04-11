@@ -45,7 +45,7 @@ author:
  -
     fullname: Carlos Pignataro
     organization: Blue Fern Consulting
-    email: 
+    email:
      - carlos@bluefern.consulting
      - cpignata@gmail.com
     uri: https://bluefern.consulting
