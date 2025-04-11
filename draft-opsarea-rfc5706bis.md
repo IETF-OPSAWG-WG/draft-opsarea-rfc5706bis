@@ -45,7 +45,7 @@ author:
  -
     fullname: Carlos Pignataro
     organization: Blue Fern Consulting
-    email: cpignata@gmail.com, carlos@bluefern.consulting
+    email: carlos@bluefern.consulting
     uri: https://bluefern.consulting
  -
     fullname: Ran Chen
