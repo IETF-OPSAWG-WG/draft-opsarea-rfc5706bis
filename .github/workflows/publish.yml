@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - "draft-*"
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       email:
