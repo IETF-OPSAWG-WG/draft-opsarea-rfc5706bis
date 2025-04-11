@@ -1,4 +1,4 @@
 # License
 
 See the
-[guidelines for contributions](https://github.com/boucadair/secure-tacacs-yang/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/blob/main/CONTRIBUTING.md).

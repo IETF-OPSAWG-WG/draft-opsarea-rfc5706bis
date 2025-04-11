@@ -1,11 +1,13 @@
+<!-- regenerate: on (set to off if you edit this file) -->
+
 # Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions
 
-This is the working area for the AD-sponsored document, "Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions".
+This is the working area for the individual Internet-Draft, "Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions".
 
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-opsawg-secure-tacacs-yang)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-secure-tacacs-yang)
-* [Compare Editor's Copy to Individual Draft](https://boucadair.github.io/secure-tacacs-yang/#go.draft-ietf-opsawg-secure-tacacs-yang.diff)
-* [Diff vs RFC9105](https://author-tools.ietf.org/diff?doc_1=RFC9105&url_2=https://boucadair.github.io/secure-tacacs-yang/draft-ietf-opsawg-secure-tacacs-yang.txt)
+* [Editor's Copy](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-opsarea-rfc5706bis.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-opsarea-rfc5706bis)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis)
+* [Compare Editor's Copy to Individual Draft](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-opsarea-rfc5706bis.diff)
 
 
 ## Contributing
