@@ -7,8 +7,6 @@ on:
     - CONTRIBUTING.md
     - LICENSE.md
     - .gitignore
-    branches:
-    - main
   pull_request:
     paths-ignore:
     - README.md
