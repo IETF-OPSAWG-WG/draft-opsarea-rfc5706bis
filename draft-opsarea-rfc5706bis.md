@@ -1,7 +1,7 @@
 ---
 title: Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions
 abbrev: Operations & Management Guidelines
-docname: draft-opsarea-rfc5706bis-00
+docname: draft-opsarea-rfc5706bis-latest
 
 
 stand_alone: true
@@ -45,13 +45,14 @@ author:
  -
     fullname: Carlos Pignataro
     organization: Blue Fern Consulting
-    email: cpignata@gmail.com, carlos@bluefern.consulting
+    email:
+     - carlos@bluefern.consulting
+     - cpignata@gmail.com
     uri: https://bluefern.consulting
  -
     fullname: Ran Chen
     organization: ZTE
     email: chen.ran@zte.com.cn
-        
 --- abstract
 
    New protocols or protocol extensions are best designed with due
