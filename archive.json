@@ -1,0 +1,375 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2025-04-13T02:11:56.458823+00:00",
+  "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOOWPBqs6xqZST",
+      "title": "More clarity on the terminology and leverage the work led by Adrian in NMOP",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/1",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-04-08T18:48:58Z",
+      "updatedAt": "2025-04-10T15:16:08Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Leverage https://datatracker.ietf.org/doc/draft-ietf-nmop-terminology/, from the terminology fairy",
+          "createdAt": "2025-04-10T15:16:07Z",
+          "updatedAt": "2025-04-10T15:16:07Z"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOOWPBqs6xqZcC",
+      "title": "Create a section on information models",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/2",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-04-08T18:49:15Z",
+      "updatedAt": "2025-04-08T18:49:15Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOOWPBqs6xqZiZ",
+      "title": "More guidance on the importance of data models",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/3",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-04-08T18:49:28Z",
+      "updatedAt": "2025-04-08T18:49:28Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOOWPBqs6xqZnv",
+      "title": "Soften the MIB part + IESG statement in MIBs",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/4",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-04-08T18:49:39Z",
+      "updatedAt": "2025-04-09T12:50:21Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It's time to update this document, as it mainly focuses on MIB developments\nExample 1:\n\n   Most of the existing IETF management standards are focused on using\n   Structure of Management Information (SMI)-based data models (MIB\n   modules) to monitor and manage networking devices. \n\n   ...\n\n   For years the IETF community has used the IETF Standard Management\n   Framework, including the Simple Network Management Protocol\n   [[RFC3410](https://www.rfc-editor.org/rfc/rfc3410)], the Structure of Management Information [[RFC2578](https://www.rfc-editor.org/rfc/rfc2578)], and MIB\n   data models for managing new protocols.\n\nExample 2: https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/ has been written 5 years after this document, and should be integrated in a new version.",
+          "createdAt": "2025-04-09T12:50:20Z",
+          "updatedAt": "2025-04-09T12:50:20Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOOWPBqs6xqZyH",
+      "title": "Add more guidance around YANG",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/5",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Do not conflict with 8407, though",
+      "createdAt": "2025-04-08T18:49:59Z",
+      "updatedAt": "2025-04-09T09:02:51Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I believe it\u2019s important to incorporate modern modeling practices and operational realities, especially with the increasing adoption of YANG. Below are some key areas I suggest we consider:\n\n**Use of YANG Data Models**: Address how the use of standardized YANG models affects the manageability aspects defined in RFC 5706, including alignment with existing operational and configuration workflows.\n\n**Impact of NMDA**: Clarify how the transition to the NMDA approach\u2014where intended configuration, applied configuration, and operational state are clearly separated\u2014impacts the way we define and assess manageability requirements.\n\n**State and Operational Data**: Emphasize the need to define how both state and operational data should be exposed and validated within the scope of manageability, especially for troubleshooting and monitoring purposes.\n\n**Reflection of Actual Network State**: Ensure that manageability definitions consider whether the data models accurately reflect the live state of the network, enabling better diagnostics and real-time visibility.",
+          "createdAt": "2025-04-09T09:02:50Z",
+          "updatedAt": "2025-04-09T09:02:50Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOOWPBqs6xqZ2-",
+      "title": "Generalize the approach in RFC6123/ Manageability Considerations Section in all IETF Specs",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/6",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-04-08T18:50:09Z",
+      "updatedAt": "2025-04-09T10:02:06Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "For this one, I suggest we explore \"Operations & Manageability Section\". Whether this is one or two sections is something we can tune as we progress in the discussion.",
+          "createdAt": "2025-04-09T03:13:37Z",
+          "updatedAt": "2025-04-09T03:13:37Z"
+        },
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Adding the comment Sent by @adrianFarrel in the mailling list: \"\"\"-\tSection 4 gives guidance, but it does not lead document authors by the nose. I think that people who understand the need will know what to do, but this document (our bis) needs to give far more explicit instructions about what to write. By giving strong suggestions of what subsections to include in a Manageability Considerations section (and probably pointing to some example RFCs) we can offer much more help to draft authors.\"\"\"",
+          "createdAt": "2025-04-09T10:02:04Z",
+          "updatedAt": "2025-04-09T10:02:04Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOOWPBqs6xyNza",
+      "title": "New OPS-related technologies",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/7",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Because this documents was produced in 2009, it missed some new OPS-related technologies (protocols and data models): BMP, Alt Mark, NETCONF/RESTCONF, YANG",
+      "createdAt": "2025-04-09T12:51:05Z",
+      "updatedAt": "2025-04-09T12:51:05Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOOWPBqs6xyQnW",
+      "title": "Update the \"Appendix A.  Operations and Management Review Checklist\"",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/8",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This should be done in collaboration with the OPS-DIR.\nFinally, this appendix should be part of the core document.",
+      "createdAt": "2025-04-09T12:55:19Z",
+      "updatedAt": "2025-04-09T12:55:19Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOOWPBqs6xyldP",
+      "title": "Operations and Manageability Consideration Section",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/9",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The ideal end goal to have \"Operations and Manageability Considerations\" section(s) all IETF drafts. As Med mentioned on the OPSAWG mailing list: \"We need to find the right balance between providing clear guidance while avoiding some rigidity. We will explore that path together with other areas.\"\n",
+      "createdAt": "2025-04-09T13:25:38Z",
+      "updatedAt": "2025-04-09T13:25:38Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 12,
+      "id": "I_kwDOOWPBqs6yEmVG",
+      "title": "(Logistic) folder organization",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/12",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The organization of the folder may not be friendly for contributors/reviewers as you have a bunch of files. You may consider keeping only the md file and follow the template at https://github.com/martinthomson/internet-draft-template to automatically build/validate the draft, including httml/txt/xml/rendering. \n\n",
+      "createdAt": "2025-04-11T04:58:22Z",
+      "updatedAt": "2025-04-11T18:55:59Z",
+      "closedAt": "2025-04-11T18:55:59Z",
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 10,
+      "id": "PR_kwDOOWPBqs6R9QWB",
+      "title": "update email address",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/10",
+      "state": "MERGED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-04-09T14:17:33Z",
+      "updatedAt": "2025-04-09T14:23:15Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "a9a9878ede8b4d4e0f882e026662b03eee017cda",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "update-email-address-samier",
+      "headRefOid": "b868632d0a803388714f85f4d18507618626316f",
+      "closedAt": "2025-04-09T14:23:10Z",
+      "mergedAt": "2025-04-09T14:23:10Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "efb71190a2d137503a46436659cd34041e9c6be2"
+      },
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "LGTM",
+          "createdAt": "2025-04-09T14:23:14Z",
+          "updatedAt": "2025-04-09T14:23:14Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOOWPBqs6SBp4m",
+      "title": "Carlos edits 1",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/11",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "First pass of updates, including editorials and various fixes.\r\n* Updated Carlos' contact\r\n* Updated the abbreviated title and keywords\r\n* Updated references that were outdated, including W3C's\r\n* Corrected several bulleted lists and **bold**\r\n* Fixed a few grammos\r\n* Fixed figure alignment\r\n* Added an IANA Considerations section\r\n* Fixed reference in the Acks.\r\n* Removed W3C's reference in YAML header and leave the one inline.\r\n* Added text and html targets to the repo.",
+      "createdAt": "2025-04-10T02:22:53Z",
+      "updatedAt": "2025-04-10T15:14:58Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "efb71190a2d137503a46436659cd34041e9c6be2",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-edits-1",
+      "headRefOid": "f7e33f473a9ce19499363590e6e8c11e9e1c2731",
+      "closedAt": "2025-04-10T15:14:57Z",
+      "mergedAt": "2025-04-10T15:14:57Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "67bc7e7304b9bca67e77eed44cce7aff52ba0cbf"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6kSo_f",
+          "commit": {
+            "abbreviatedOid": "f7e33f4"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "lgtm",
+          "createdAt": "2025-04-10T11:32:23Z",
+          "updatedAt": "2025-04-10T11:32:23Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOOWPBqs6SRt0L",
+      "title": "Adapt work from Med to add automated builds",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/13",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "This leverages Martin Thomson's Kramdown work to build artifacts from the markdown copy of the draft.  This is wrapped with GitHub Actions to automatically publish new draft revisions and keep a running \"editor's copy\".",
+      "createdAt": "2025-04-11T15:29:55Z",
+      "updatedAt": "2025-04-11T18:56:07Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "67bc7e7304b9bca67e77eed44cce7aff52ba0cbf",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "cicd",
+      "headRefOid": "7b45533ec4c7b21f8ac68c26331d4aa9b7043c64",
+      "closedAt": "2025-04-11T18:55:58Z",
+      "mergedAt": "2025-04-11T18:55:58Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6kj9Qu",
+          "commit": {
+            "abbreviatedOid": "7b45533"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Thanks, Joe",
+          "createdAt": "2025-04-11T16:21:51Z",
+          "updatedAt": "2025-04-11T16:21:51Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
