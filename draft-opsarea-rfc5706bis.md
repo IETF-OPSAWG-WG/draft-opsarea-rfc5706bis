@@ -1,5 +1,5 @@
 ---
-title: Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions
+title: Guidelines for Considering Operations and Management in IETF Specifications
 abbrev: Operations & Management Guidelines
 docname: draft-opsarea-rfc5706bis-latest
 
