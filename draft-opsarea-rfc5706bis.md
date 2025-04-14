@@ -21,6 +21,15 @@ submissiontype: IETF
 coding: utf-8
 pi: [toc, sortrefs, symrefs]
 
+informative:
+  NEMOPS:
+    target: https://datatracker.ietf.org/group/nemopsws/about/
+    title:  IAB workshop on the Next Era of Network Management Operations (nemopsws)
+    date: December, 2024
+  HACKATHONS:
+    target: https://www.ietf.org/meeting/hackathons/
+    title: IETF Hackathons
+
 author:
  -
     fullname: Benoit Claise
@@ -1152,6 +1161,64 @@ Information Models and Data Models
    sometimes data-oriented or task-oriented approaches make more sense.
    Protocol designers should consider both data-oriented and task-
    oriented authority levels and policy.
+
+## Tooling Considerations {#sec-tooling}
+
+   The operational community's ability to effectively adopt and
+   use new specifications is significantly influenced by the availability
+   and adaptability of appropriate tooling. While the introduction of a
+   new specification does not automatically mandate the development of entirely
+   new tools, careful consideration must be given to how existing tools can
+   be leveraged or extended to support the management and operation of these
+   new specifications.
+
+   The {{NEMOPS}} workshop highlighted a consistent theme applicable beyond
+   network management protocols: the "ease of use" and adaptability of existing
+   tools are critical factors for successful adoption. Therefore, a new
+   specification should provide examples using existing, common tooling,
+   or running code that demonstrate how to perform key operational tasks.
+
+   Specifically, the following tooling-related aspects should be considered,
+   prioritizing the adaptation of existing tools:
+
+   *  Leveraging Existing Tooling: Before considering new tools, assess whether
+      existing tooling, such as monitoring systems, logging platforms,
+      configuration management systems, and orchestration frameworks, can be
+      adapted to support the new specification. This may involve developing
+      plugins, modules, or drivers that enable these tools to interact with with
+      the new specification.
+
+  *  Extending Existing Tools: Identify areas where existing tools can be
+     extended to provide the necessary visibility and control over the new
+     specification. For example, if a new transport protocol is introduced,
+     consider whether existing network monitoring tools can be extended to
+     track its performance metrics or whether existing security tools can be
+     adapted to analyze its traffic patterns.
+
+  *  New Tools as a Last Resort: Only when existing tools are demonstrably
+     inadequate for managing and operating the new protocol should the development
+     of new tools be considered. In such cases, carefully define the specific
+     requirements for these new tools, focusing on the functionalities that cannot
+     be achieved through adaptation or extension of existing solutions.
+
+  *  IETF {{HACKATHONS}} for Manageability Testing: IETF {{HACKATHONS}}, held before each
+     IETF meeting, provide an opportunity to test the functionality,
+     interoperability, and manageability of new protocols. These events can be
+     specifically leveraged to assess the manageability implications of a new
+     protocol by focusing tasks on:
+
+     *  Adapting existing tools to interact with the new specification.
+     *  Developing example management scripts or modules for existing management
+        platforms.
+     *  Testing the specification's behavior under various operational conditions.
+     *  Identifying potential tooling gaps and areas for improvement.
+     *  Creating example flows and use cases for manageability.
+
+  *  Open-Source for Tooling: If new tools are deemed necessary, or if significant
+     adaptations to existing tools are required, prioritize open-source development
+     with community involvement. Open-source tools lower the barrier to entry,
+     encourage collaboration, and provide operators with the flexibility to customize
+     and extend the tools to meet their specific needs.
 
 #  Documentation Guidelines
 
