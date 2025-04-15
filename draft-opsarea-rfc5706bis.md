@@ -22,10 +22,6 @@ coding: utf-8
 pi: [toc, sortrefs, symrefs]
 
 informative:
-  NEMOPS:
-    target: https://datatracker.ietf.org/group/nemopsws/about/
-    title:  IAB workshop on the Next Era of Network Management Operations (nemopsws)
-    date: December, 2024
   HACKATHONS:
     target: https://www.ietf.org/meeting/hackathons/
     title: IETF Hackathons
@@ -1172,11 +1168,12 @@ Information Models and Data Models
    be leveraged or extended to support the management and operation of these
    new specifications.
 
-   The {{NEMOPS}} workshop highlighted a consistent theme applicable beyond
-   network management protocols: the "ease of use" and adaptability of existing
-   tools are critical factors for successful adoption. Therefore, a new
-   specification should provide examples using existing, common tooling,
-   or running code that demonstrate how to perform key operational tasks.
+   The {{?NEMOPS=I-D.iab-nemops-workshop-report}} workshop highlighted a
+   consistent theme applicable beyond network management protocols: the
+   "ease of use" and adaptability of existing tools are critical factors
+   for successful adoption. Therefore, a new specification should provide
+   examples using existing, common tooling, or running code that demonstrate
+   how to perform key operational tasks.
 
    Specifically, the following tooling-related aspects should be considered,
    prioritizing the adaptation of existing tools:
@@ -1201,11 +1198,11 @@ Information Models and Data Models
      requirements for these new tools, focusing on the functionalities that cannot
      be achieved through adaptation or extension of existing solutions.
 
-  *  IETF {{HACKATHONS}} for Manageability Testing: IETF {{HACKATHONS}}, held before each
-     IETF meeting, provide an opportunity to test the functionality,
-     interoperability, and manageability of new protocols. These events can be
-     specifically leveraged to assess the manageability implications of a new
-     protocol by focusing tasks on:
+  *  IETF {{HACKATHONS}} for Manageability Testing: IETF {{HACKATHONS}}
+     provide an opportunity to test the functionality, interoperability,
+     and manageability of new protocols. These events can be specifically
+     leveraged to assess the operational (including manageability) implications
+     of a new protocol by focusing tasks on:
 
      *  Adapting existing tools to interact with the new specification.
      *  Developing example management scripts or modules for existing management
