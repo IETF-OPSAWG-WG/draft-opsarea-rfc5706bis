@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-13T02:11:56.458823+00:00",
+  "timestamp": "2025-04-15T00:46:37.914065+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -248,6 +248,38 @@
       "updatedAt": "2025-04-11T18:55:59Z",
       "closedAt": "2025-04-11T18:55:59Z",
       "comments": []
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOOWPBqs6ySKnX",
+      "title": "Update Title to better reflect the intent/scope",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/14",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Will suggest a PR to for discussion/further tweaking/etc.",
+      "createdAt": "2025-04-13T07:39:19Z",
+      "updatedAt": "2025-04-13T07:39:19Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 16,
+      "id": "I_kwDOOWPBqs6ycYrr",
+      "title": "Reword based on recent erratum",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/16",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "This paragraph was flagged (albeit incorrectly) for errata (Section 3.6.1):\n\n\"The protocol document should make clear the limitations implicit\nwithin the protocol and the behavior when limits are exceeded.  This\nshould be considered in a data-modeling-independent manner -- what\nmakes managed-protocol sense, not what makes management-protocol-\nsense.\"\n\nIf this is left in the final document, differentiating between the protocol or specification to be managed and the protocol doing the management should be clearer.",
+      "createdAt": "2025-04-14T18:06:44Z",
+      "updatedAt": "2025-04-14T18:07:08Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -370,6 +402,87 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 15,
+      "id": "PR_kwDOOWPBqs6SYvls",
+      "title": "Update draft-opsarea-rfc5706bis.md",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/15",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-04-13T07:40:09Z",
+      "updatedAt": "2025-04-14T13:33:12Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "new-scope-new-title",
+      "headRefOid": "64649bad1ff4cbea115768ec6cde9845757e42b5",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'm not sure this was used outside the IETF. \r\n\r\nThe issue with the OLD title is that it is interpreted as specific to protocol work. For example, this may exclude BCPs where ops guidance would be key. \r\n\r\nAs indicated in #14, this PR is for \"discussion/further tweaking/etc.\" ;-)",
+          "createdAt": "2025-04-14T06:08:18Z",
+          "updatedAt": "2025-04-14T06:08:18Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I understand your desire to broaden the scope outside of protocol work.  And I don't know if other SDOs or organizations referenced this previously.  My point was that it might further dissuade such groups from considering these guidelines.",
+          "createdAt": "2025-04-14T13:33:11Z",
+          "updatedAt": "2025-04-14T13:33:11Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6krJQT",
+          "commit": {
+            "abbreviatedOid": "64649ba"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "This can be bikeshedded to death, and I do like the proposed change.  It raised a question, though.  Yes, we are the IETF, and we can only \"control\" our own work.  But we do liaise with other groups where these guidelines might be useful.  The previous title didn't preclude them whereas this change _might_.",
+          "createdAt": "2025-04-13T14:37:15Z",
+          "updatedAt": "2025-04-13T14:37:15Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "PR_kwDOOWPBqs6Sib9N",
+      "title": "WIP: Add a section on tooling.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/17",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Highlight areas where existing tooling might need to be enhanced or new tooling might need to be introduced to facilitate the management and operations of new specifications.",
+      "createdAt": "2025-04-14T19:23:39Z",
+      "updatedAt": "2025-04-14T19:23:39Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "tooling-text",
+      "headRefOid": "2c4865829cf394aac60aa0280b67ca3116229f60",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
