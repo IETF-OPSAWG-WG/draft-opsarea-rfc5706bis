@@ -6,7 +6,7 @@ opsarea                                                        B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 16 October 2025                                       A. Farrel
+Expires: 17 October 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 16 October 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           14 April 2025
+                                                           15 April 2025
 
 
  Guidelines for Considering Operations and Management of New Protocols
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 October 2025.
+   This Internet-Draft will expire on 17 October 2025.
 
 Copyright Notice
 
@@ -1247,12 +1247,12 @@ Table of Contents
       new tools, focusing on the functionalities that cannot be achieved
       through adaptation or extension of existing solutions.
 
-   *  IETF [HACKATHONS] for Manageability Testing: IETF [HACKATHONS],
-      held before each IETF meeting, provide an opportunity to test the
-      functionality, interoperability, and manageability of new
-      protocols.  These events can be specifically leveraged to assess
-      the manageability implications of a new protocol by focusing tasks
-      on:
+   *  IETF [HACKATHONS] for Manageability Testing: IETF [HACKATHONS]
+      provide an opportunity to test the functionality,
+      interoperability, and manageability of new protocols.  These
+      events can be specifically leveraged to assess the operational
+      (including manageability) implications of a new protocol by
+      focusing tasks on:
 
       -  Adapting existing tools to interact with the new specification.
 
@@ -1371,9 +1371,12 @@ Table of Contents
               "IETF Hackathons", n.d.,
               <https://www.ietf.org/meeting/hackathons/>.
 
-   [NEMOPS]   "IAB workshop on the Next Era of Network Management
-              Operations (nemopsws)", December 2024,
-              <https://datatracker.ietf.org/group/nemopsws/about/>.
+   [NEMOPS]   Hardaker, W. and D. Dhody, "Report from the IAB Workshop
+              on the Next Era of Network Management Operations
+              (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
+              nemops-workshop-report-01, 18 February 2025,
+              <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
+              workshop-report-01>.
 
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
