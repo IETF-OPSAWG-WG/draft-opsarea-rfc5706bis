@@ -1180,9 +1180,9 @@ Information Models and Data Models
 
    *  Leveraging Existing Tooling: Before considering new tools, assess whether
       existing tooling, such as monitoring systems, logging platforms,
-      configuration management systems, and orchestration frameworks, can be
+      configuration management systems, and/or orchestration frameworks, can be
       adapted to support the new specification. This may involve developing
-      plugins, modules, or drivers that enable these tools to interact with with
+      plugins, modules, or drivers that enable these tools to interact with
       the new specification.
 
   *  Extending Existing Tools: Identify areas where existing tools can be
