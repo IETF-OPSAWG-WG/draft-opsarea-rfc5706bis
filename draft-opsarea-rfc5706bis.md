@@ -1030,15 +1030,18 @@ Information Models and Data Models
    discontinuities in counter?  Does this make any difference in
    evaluating the performance of a protocol?
 
-   The protocol document should make clear the limitations implicit
-   within the protocol and the behavior when limits are exceeded.  This
-   should be considered in a data-modeling-independent manner -- what
-   makes managed-protocol sense, not what makes management-protocol-
-   sense.  If constraints are not managed-protocol-dependent, then it
-   should be left for the management-protocol data modelers to decide.
-   For example, VLAN identifiers have a range of 1..4095 because of the
-   VLAN standards.  A MIB implementing a VLAN table should be able to
-   support 4096 entries because the content being modeled requires it.
+   The protocol specification should clearly define any inherent 
+   limitations and describe expected behavior when those limits 
+   are exceeded. These considerations should be made independently
+   of any specific management protocol or data modeling language. 
+   In other words, focus on what makes sense for the protocol being 
+   managed, not the protocol used for management.  If a constraint 
+   is not specific to a management protocol, then it should be left 
+   to data modelers of that protocol to determine how to handle it. 
+   For example, VLAN identifiers are defined by standard to range 
+   from 1 to 4095. Therefore, a MIB representing a VLAN table should 
+   accommodate 4096 entries to align with the semantics of the 
+   protocol being modeled.
 
 ###  Monitoring the Device
 
