@@ -22,7 +22,7 @@ coding: utf-8
 pi: [toc, sortrefs, symrefs]
 
 informative:
-  HACKATHONS:
+  IETF-HACKATHONS:
     target: https://www.ietf.org/meeting/hackathons/
     title: IETF Hackathons
 
@@ -1198,7 +1198,7 @@ Information Models and Data Models
      requirements for these new tools, focusing on the functionalities that cannot
      be achieved through adaptation or extension of existing solutions.
 
-  *  IETF {{HACKATHONS}} for Manageability Testing: IETF {{HACKATHONS}}
+  *  {{IETF-HACKATHONS}} for Manageability Testing: {{IETF-HACKATHONS}}
      provide an opportunity to test the functionality, interoperability,
      and manageability of new protocols. These events can be specifically
      leveraged to assess the operational (including manageability) implications
