@@ -6,7 +6,7 @@ opsarea                                                        B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 18 October 2025                                       A. Farrel
+Expires: 19 October 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 18 October 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           16 April 2025
+                                                           17 April 2025
 
 
  Guidelines for Considering Operations and Management of New Protocols
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 October 2025.
+   This Internet-Draft will expire on 19 October 2025.
 
 Copyright Notice
 
@@ -1209,11 +1209,14 @@ Table of Contents
 
    The operational community's ability to effectively adopt and use new
    specifications is significantly influenced by the availability and
-   adaptability of appropriate tooling.  While the introduction of a new
-   specification does not automatically mandate the development of
-   entirely new tools, careful consideration must be given to how
-   existing tools can be leveraged or extended to support the management
-   and operation of these new specifications.
+   adaptability of appropriate tooling.  In this context, "tools" refers
+   to software systems or utilities used by network operators to deploy,
+   configure, monitor, troubleshoot, and manage networks or network
+   protocols in real-world operational environments.  While the
+   introduction of a new specification does not automatically mandate
+   the development of entirely new tools, careful consideration must be
+   given to how existing tools can be leveraged or extended to support
+   the management and operation of these new specifications.
 
    The [NEMOPS] workshop highlighted a consistent theme applicable
    beyond network management protocols: the "ease of use" and
@@ -1247,7 +1250,7 @@ Table of Contents
       new tools, focusing on the functionalities that cannot be achieved
       through adaptation or extension of existing solutions.
 
-   *  IETF [HACKATHONS] for Manageability Testing: IETF [HACKATHONS]
+   *  [IETF-HACKATHONS] for Manageability Testing: [IETF-HACKATHONS]
       provide an opportunity to test the functionality,
       interoperability, and manageability of new protocols.  These
       events can be specifically leveraged to assess the operational
@@ -1367,7 +1370,7 @@ Table of Contents
 
 7.  Informative References
 
-   [HACKATHONS]
+   [IETF-HACKATHONS]
               "IETF Hackathons", n.d.,
               <https://www.ietf.org/meeting/hackathons/>.
 
