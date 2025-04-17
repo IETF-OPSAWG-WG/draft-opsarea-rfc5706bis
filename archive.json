@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-15T00:46:37.914065+00:00",
+  "timestamp": "2025-04-17T00:45:22.819103+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -415,7 +415,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-13T07:40:09Z",
-      "updatedAt": "2025-04-14T13:33:12Z",
+      "updatedAt": "2025-04-16T22:17:07Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
@@ -440,6 +440,13 @@
           "body": "I understand your desire to broaden the scope outside of protocol work.  And I don't know if other SDOs or organizations referenced this previously.  My point was that it might further dissuade such groups from considering these guidelines.",
           "createdAt": "2025-04-14T13:33:11Z",
           "updatedAt": "2025-04-14T13:33:11Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I like and support this change. Might expand IETF to \"Internet Engineering Task Force\", see BCP61",
+          "createdAt": "2025-04-16T22:17:06Z",
+          "updatedAt": "2025-04-16T22:17:06Z"
         }
       ],
       "reviews": [
@@ -470,13 +477,155 @@
       "labels": [],
       "body": "Highlight areas where existing tooling might need to be enhanced or new tooling might need to be introduced to facilitate the management and operations of new specifications.",
       "createdAt": "2025-04-14T19:23:39Z",
-      "updatedAt": "2025-04-14T19:23:39Z",
+      "updatedAt": "2025-04-16T22:40:48Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "tooling-text",
-      "headRefOid": "2c4865829cf394aac60aa0280b67ca3116229f60",
+      "headRefOid": "9d24518674a67639565fed6c9b9be2416c579f68",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6k6nLB",
+          "commit": {
+            "abbreviatedOid": "2c48658"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thanks, Joe. Please find some few comments.",
+          "createdAt": "2025-04-15T05:33:04Z",
+          "updatedAt": "2025-04-15T05:39:27Z",
+          "comments": [
+            {
+              "originalPosition": 59,
+              "body": "```suggestion\r\n  *  IETF {{HACKATHONS}} for Manageability Testing: IETF {{HACKATHONS}}\r\n```",
+              "createdAt": "2025-04-15T05:33:04Z",
+              "updatedAt": "2025-04-15T05:39:27Z"
+            },
+            {
+              "originalPosition": 60,
+              "body": "```suggestion\r\n     provide an opportunity to test the functionality,\r\n```\r\n\r\nMay not age well if we decide in the future to hold hackathon following another time plan (including seperate from week meetings)",
+              "createdAt": "2025-04-15T05:34:15Z",
+              "updatedAt": "2025-04-15T05:39:27Z"
+            },
+            {
+              "originalPosition": 62,
+              "body": "```suggestion\r\n     specifically leveraged to assess the operational (including manageability) implications of a new\r\n```",
+              "createdAt": "2025-04-15T05:34:54Z",
+              "updatedAt": "2025-04-15T05:39:27Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "Maybe cite draft-iab-nemops-workshop-report, instead",
+              "createdAt": "2025-04-15T05:38:20Z",
+              "updatedAt": "2025-04-15T05:39:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6lBvx5",
+          "commit": {
+            "abbreviatedOid": "93e5509"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-04-15T14:42:40Z",
+          "updatedAt": "2025-04-15T14:42:40Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6lO2Uc",
+          "commit": {
+            "abbreviatedOid": "93e5509"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-16T11:12:00Z",
+          "updatedAt": "2025-04-16T11:15:58Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "```suggestion\r\n      plugins, modules, or drivers that enable these tools to interact with\r\n```",
+              "createdAt": "2025-04-16T11:12:00Z",
+              "updatedAt": "2025-04-16T11:15:58Z"
+            },
+            {
+              "originalPosition": 38,
+              "body": "```suggestion\r\n      configuration management systems, and/or orchestration frameworks, can be\r\n```",
+              "createdAt": "2025-04-16T11:15:09Z",
+              "updatedAt": "2025-04-16T11:15:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6lWDnw",
+          "commit": {
+            "abbreviatedOid": "9d24518"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Please find some review change requests.",
+          "createdAt": "2025-04-16T22:37:22Z",
+          "updatedAt": "2025-04-16T22:40:48Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "These should be [IETF-HACKATHONS]",
+              "createdAt": "2025-04-16T22:37:22Z",
+              "updatedAt": "2025-04-16T22:40:48Z"
+            },
+            {
+              "originalPosition": 16,
+              "body": "This should be Operational Tooling. Not generically tools.\r\n```\r\n## Operational Tooling Considerations {#sec-tooling}",
+              "createdAt": "2025-04-16T22:38:01Z",
+              "updatedAt": "2025-04-16T22:40:48Z"
+            },
+            {
+              "originalPosition": 17,
+              "body": "Need to define tools.\r\n\r\n\"Tools refers to software systems or utilities used by network operators to deploy, configure, monitor, troubleshoot, and manage networks or network protocols in real-world operational environments.\"\r\n\r\nfor example.",
+              "createdAt": "2025-04-16T22:38:36Z",
+              "updatedAt": "2025-04-16T22:40:48Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "I disagree this is a \"last resort\" only.\r\nSometimes a new tool makes more sense that keep extending \ud83d\udca9.\r\nI would define \"when appropriate\" as a superset of when existing tools are inadequate, etc.",
+              "createdAt": "2025-04-16T22:40:33Z",
+              "updatedAt": "2025-04-16T22:40:48Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "id": "PR_kwDOOWPBqs6S58y-",
+      "title": "Reword based on recent erratum #16",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/18",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Reword for clarity.",
+      "createdAt": "2025-04-16T22:27:09Z",
+      "updatedAt": "2025-04-16T22:29:28Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-issue-16",
+      "headRefOid": "7c40fa514b86bca2a039d0efeb900003d2ffd5aa",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
