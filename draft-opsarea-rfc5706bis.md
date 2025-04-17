@@ -1162,11 +1162,14 @@ Information Models and Data Models
 
    The operational community's ability to effectively adopt and
    use new specifications is significantly influenced by the availability
-   and adaptability of appropriate tooling. While the introduction of a
-   new specification does not automatically mandate the development of entirely
-   new tools, careful consideration must be given to how existing tools can
-   be leveraged or extended to support the management and operation of these
-   new specifications.
+   and adaptability of appropriate tooling. In this context, "tools" refers
+   to software systems or utilities used by network operators to deploy,
+   configure, monitor, troubleshoot, and manage networks or network protocols
+   in real-world operational environments. While the introduction of a new
+   specification does not automatically mandate the development of entirely
+   new tools, careful consideration must be given to how existing tools can be
+   leveraged or extended to support the management and operation of these new
+   specifications.
 
    The {{?NEMOPS=I-D.iab-nemops-workshop-report}} workshop highlighted a
    consistent theme applicable beyond network management protocols: the
