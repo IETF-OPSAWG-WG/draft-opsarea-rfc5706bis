@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-17T00:45:22.819103+00:00",
+  "timestamp": "2025-04-20T00:50:57.235178+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -477,13 +477,13 @@
       "labels": [],
       "body": "Highlight areas where existing tooling might need to be enhanced or new tooling might need to be introduced to facilitate the management and operations of new specifications.",
       "createdAt": "2025-04-14T19:23:39Z",
-      "updatedAt": "2025-04-16T22:40:48Z",
+      "updatedAt": "2025-04-17T15:55:18Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "tooling-text",
-      "headRefOid": "9d24518674a67639565fed6c9b9be2416c579f68",
+      "headRefOid": "8c8b2309b105211294a56da4150e8fd9087ec5c9",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -604,6 +604,46 @@
               "updatedAt": "2025-04-16T22:40:48Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6lejMY",
+          "commit": {
+            "abbreviatedOid": "9d24518"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-17T15:53:58Z",
+          "updatedAt": "2025-04-17T15:53:58Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "This section is already under the \"management\" section (i.e., Section 3).  But to your point, perhaps this should be its own peer section and be renamed \"Operational and Management Tooling Considerations\"",
+              "createdAt": "2025-04-17T15:53:58Z",
+              "updatedAt": "2025-04-17T15:53:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6lej_V",
+          "commit": {
+            "abbreviatedOid": "9d24518"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-17T15:55:18Z",
+          "updatedAt": "2025-04-17T15:55:18Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "My point here was to avoid a proliferation of tools and to some extent so many choices no one knows what to do.  Maybe text such as, \"When existing tools are wholly inadequate...\"",
+              "createdAt": "2025-04-17T15:55:18Z",
+              "updatedAt": "2025-04-17T15:55:18Z"
+            }
+          ]
         }
       ]
     },
@@ -619,7 +659,7 @@
       "labels": [],
       "body": "Reword for clarity.",
       "createdAt": "2025-04-16T22:27:09Z",
-      "updatedAt": "2025-04-16T22:29:28Z",
+      "updatedAt": "2025-04-17T15:56:52Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
@@ -631,7 +671,21 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6lek9u",
+          "commit": {
+            "abbreviatedOid": "7c40fa5"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "This is fine, and similar to what I was thinking.  That said, I wasn't sure if this whole section might get rewritten.  I'm okay dropping this in now or waiting to see how this evolves.",
+          "createdAt": "2025-04-17T15:56:52Z",
+          "updatedAt": "2025-04-17T15:56:52Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
