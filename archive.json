@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-20T00:50:57.235178+00:00",
+  "timestamp": "2025-04-22T00:46:25.278437+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -659,7 +659,7 @@
       "labels": [],
       "body": "Reword for clarity.",
       "createdAt": "2025-04-16T22:27:09Z",
-      "updatedAt": "2025-04-17T15:56:52Z",
+      "updatedAt": "2025-04-21T08:40:17Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
@@ -684,6 +684,32 @@
           "createdAt": "2025-04-17T15:56:52Z",
           "updatedAt": "2025-04-17T15:56:52Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6lwCWL",
+          "commit": {
+            "abbreviatedOid": "7c40fa5"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-21T08:39:02Z",
+          "updatedAt": "2025-04-21T08:40:17Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "Since the new document reduces MIB coverage, it could be helpful to update the example by incorporating relevant YANG conditions. For instance, the VLAN definitions from standard Ethernet models could be reused.",
+              "createdAt": "2025-04-21T08:39:02Z",
+              "updatedAt": "2025-04-21T08:40:17Z"
+            },
+            {
+              "originalPosition": 18,
+              "body": "\"protocol used for management\" could be confusing at first. Maybe specify (e.g., SNMP, NETCONF/YANG)",
+              "createdAt": "2025-04-21T08:40:09Z",
+              "updatedAt": "2025-04-21T08:40:17Z"
+            }
+          ]
         }
       ]
     }
