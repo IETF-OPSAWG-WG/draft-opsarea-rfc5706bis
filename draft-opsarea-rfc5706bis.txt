@@ -6,7 +6,7 @@ opsarea                                                        B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 13 October 2025                                       A. Farrel
+Expires: 24 October 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 13 October 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           11 April 2025
+                                                           22 April 2025
 
 
  Guidelines for Considering Operations and Management of New Protocols
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 October 2025.
+   This Internet-Draft will expire on 24 October 2025.
 
 Copyright Notice
 
@@ -1076,15 +1076,17 @@ Table of Contents
    discontinuities in counter?  Does this make any difference in
    evaluating the performance of a protocol?
 
-   The protocol document should make clear the limitations implicit
-   within the protocol and the behavior when limits are exceeded.  This
-   should be considered in a data-modeling-independent manner -- what
-   makes managed-protocol sense, not what makes management-protocol-
-   sense.  If constraints are not managed-protocol-dependent, then it
-   should be left for the management-protocol data modelers to decide.
-   For example, VLAN identifiers have a range of 1..4095 because of the
-   VLAN standards.  A MIB implementing a VLAN table should be able to
-   support 4096 entries because the content being modeled requires it.
+   The protocol specification should clearly define any inherent
+   limitations and describe expected behavior when those limits are
+   exceeded.  These considerations should be made independently of any
+   specific management protocol or data modeling language.  In other
+   words, focus on what makes sense for the protocol being managed, not
+   the protocol used for management.  If a constraint is not specific to
+   a management protocol, then it should be left to data modelers of
+   that protocol to determine how to handle it.  For example, VLAN
+   identifiers are defined by standard to range from 1 to 4094.
+   Therefore, a YANG vlanid definition representing the 12-bit VLAN-ID
+   used in the VLAN Tag header uses a range of "1..4094".
 
 3.6.2.  Monitoring the Device
 
