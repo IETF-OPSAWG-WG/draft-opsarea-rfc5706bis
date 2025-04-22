@@ -1034,7 +1034,7 @@ Information Models and Data Models
    is not specific to a management protocol, then it should be left
    to data modelers of that protocol to determine how to handle it.
    For example, VLAN identifiers are defined by standard to range
-   from 1 to 4094. Therefore, a YANG vlanid definition representing the 
+   from 1 to 4094. Therefore, a YANG vlanid definition representing the
    12-bit VLAN-ID used in the VLAN Tag header uses a range of "1..4094".
 
 ###  Monitoring the Device
