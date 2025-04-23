@@ -63,7 +63,8 @@ author:
    extensions regarding aspects of operations and management that should
    be considered.
 
-   This document obsoletes RFC 5706.
+   This document obsoletes RFC 5706, replacing it completely and updating
+   it to reflect up-to-date operational and management tools.
 
 --- middle
 
@@ -79,7 +80,11 @@ author:
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
-   This document obsoletes RFC 5706.
+   This document obsoletes RFC 5706 and fully updates its content to
+   reflect current operational and management tools. It removes outdated
+   references and aligns with current practices, protocols, and
+   technologies used in operating and managing network devices and
+   services. See Section 1.5.
 
 ##  Designing for Operations and Management
 
@@ -234,27 +239,15 @@ author:
    documents attempt to provide some guidelines for navigating the
    rapidly shifting operating and management environments.
 
-##  Available Management Technologies
+## Changes Since RFC 5706
 
-   The IETF has a number of standard management protocols available that
-   are suitable for different purposes.  These include:
+   The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
-   *  Simple Network Management Protocol - SNMP {{?RFC3410}}
+   * TBC
 
-   *  Syslog {{?RFC5424}}
+   * TBC
 
-   *  Remote Authentication Dial-In User Service - RADIUS {{?RFC2865}}
-
-   *  DIAMETER {{?RFC6733}}
-
-   *  Network Configuration Protocol - NETCONF {{?RFC6241}}
-
-   *  IP Flow Information Export - IPFIX {{?RFC7011}}
-
-   A planned supplement to this document will discuss these protocol
-   standards, discuss some standard information and data models for
-   specific functionality, and provide pointers to the documents that
-   define them.
+# Key Concepts, Terminology, and Technological Landscape
 
 ##  Terminology
 
@@ -285,19 +278,35 @@ author:
       independent of any specific repository, software usage, protocol,
       or platform {{?RFC3444}}.
 
+   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}} {{?I-D.ietf-opsawg-oam-characterization}}.
+
    *  New protocol: includes new protocols, protocol extensions, data
       models, or other functionality being designed.
 
    *  Protocol designer: represents individuals and working groups
       involved in the development of new protocols or extensions.
 
-## Changes Since RFC 5706
+##  Available Management Technologies
 
-   The following changes have been made to the guidelines published in  {{?RFC5706}}:
+   The IETF has a number of standard management protocols available that
+   are suitable for different purposes.  These include:
 
-   * TBC
+   *  Simple Network Management Protocol - SNMP {{?RFC3410}}
 
-   * TBC
+   *  Syslog {{?RFC5424}}
+
+   *  Remote Authentication Dial-In User Service - RADIUS {{?RFC2865}}
+
+   *  DIAMETER {{?RFC6733}}
+
+   *  Network Configuration Protocol - NETCONF {{?RFC6241}}
+
+   *  IP Flow Information Export - IPFIX {{?RFC7011}}
+
+   A planned supplement to this document will discuss these protocol
+   standards, discuss some standard information and data models for
+   specific functionality, and provide pointers to the documents that
+   define them.
 
 # Operational Considerations - How Will the New Protocol Fit into the Current Environment?
 
