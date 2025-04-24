@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-22T00:46:25.278437+00:00",
+  "timestamp": "2025-04-24T00:46:06.720927+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -58,19 +58,49 @@
       "state": "OPEN",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
-      "assignees": [],
+      "assignees": [
+        "AdrianFarrel"
+      ],
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:48:58Z",
-      "updatedAt": "2025-04-10T15:16:08Z",
+      "updatedAt": "2025-04-22T13:58:13Z",
       "closedAt": null,
       "comments": [
         {
           "author": "bclaise",
           "authorAssociation": "COLLABORATOR",
-          "body": "Leverage https://datatracker.ietf.org/doc/draft-ietf-nmop-terminology/, from the terminology fairy",
+          "body": "Leverage https://datatracker.ietf.org/doc/draft-ietf-nmop-terminology/, from the terminology fairy. At least in section 3.3.  Fault Management",
           "createdAt": "2025-04-10T15:16:07Z",
-          "updatedAt": "2025-04-10T15:16:07Z"
+          "updatedAt": "2025-04-22T13:23:50Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Think about OAM...",
+          "createdAt": "2025-04-22T13:20:38Z",
+          "updatedAt": "2025-04-22T13:20:38Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "References...\n9232\nNMOP-terminology I-D\n7276\n6291\ndraft-ietf-opsawg-oam-characterization",
+          "createdAt": "2025-04-22T13:28:50Z",
+          "updatedAt": "2025-04-22T13:28:50Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Consider making this a new section on \"Concepts and Terminology\"",
+          "createdAt": "2025-04-22T13:29:22Z",
+          "updatedAt": "2025-04-22T13:29:22Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Possibly this is the place to explain the different types of YANG models (8199 and 8309)",
+          "createdAt": "2025-04-22T13:30:37Z",
+          "updatedAt": "2025-04-22T13:30:37Z"
         }
       ]
     },
@@ -98,13 +128,23 @@
       "state": "OPEN",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
-      "assignees": [],
+      "assignees": [
+        "xorrkaz"
+      ],
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:28Z",
-      "updatedAt": "2025-04-08T18:49:28Z",
+      "updatedAt": "2025-04-22T14:00:12Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Section 3.2 management of information. (and 3.2.1)\nDiscuss the service models\nhttps://datatracker.ietf.org/doc/rfc8309/\nhttps://datatracker.ietf.org/doc/rfc8199/",
+          "createdAt": "2025-04-22T13:28:17Z",
+          "updatedAt": "2025-04-22T13:28:17Z"
+        }
+      ]
     },
     {
       "number": 4,
@@ -114,11 +154,13 @@
       "state": "OPEN",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
-      "assignees": [],
+      "assignees": [
+        "bclaise"
+      ],
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:39Z",
-      "updatedAt": "2025-04-09T12:50:21Z",
+      "updatedAt": "2025-04-22T13:58:24Z",
       "closedAt": null,
       "comments": [
         {
@@ -138,11 +180,13 @@
       "state": "OPEN",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
-      "assignees": [],
+      "assignees": [
+        "sbarguil"
+      ],
       "labels": [],
-      "body": "Do not conflict with 8407, though",
+      "body": "Do not overlap with 8407, though",
       "createdAt": "2025-04-08T18:49:59Z",
-      "updatedAt": "2025-04-09T09:02:51Z",
+      "updatedAt": "2025-04-22T15:57:47Z",
       "closedAt": null,
       "comments": [
         {
@@ -151,6 +195,27 @@
           "body": "I believe it\u2019s important to incorporate modern modeling practices and operational realities, especially with the increasing adoption of YANG. Below are some key areas I suggest we consider:\n\n**Use of YANG Data Models**: Address how the use of standardized YANG models affects the manageability aspects defined in RFC 5706, including alignment with existing operational and configuration workflows.\n\n**Impact of NMDA**: Clarify how the transition to the NMDA approach\u2014where intended configuration, applied configuration, and operational state are clearly separated\u2014impacts the way we define and assess manageability requirements.\n\n**State and Operational Data**: Emphasize the need to define how both state and operational data should be exposed and validated within the scope of manageability, especially for troubleshooting and monitoring purposes.\n\n**Reflection of Actual Network State**: Ensure that manageability definitions consider whether the data models accurately reflect the live state of the network, enabling better diagnostics and real-time visibility.",
           "createdAt": "2025-04-09T09:02:50Z",
           "updatedAt": "2025-04-09T09:02:50Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree Joe with everything except the transition in \"Impact of NMDA: Clarify how the transition to the NMDA approach\u2014where intended configuration, applied configuration, and operational state are clearly separated\u2014impacts the way we define and assess manageability requirements.\". I don't believe this document should cover technology transitions. Let's discuss",
+          "createdAt": "2025-04-22T12:47:44Z",
+          "updatedAt": "2025-04-22T12:47:44Z"
+        },
+        {
+          "author": "graf3net",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Combining Operational State and Configuration Data\nhttps://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-22#section-4.23.1\n\nRepresenting Operational Values of Configuration Data\nhttps://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-22#section-4.23.2",
+          "createdAt": "2025-04-22T13:35:18Z",
+          "updatedAt": "2025-04-22T13:35:18Z"
+        },
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "We have [RFC\u00a06020](https://datatracker.ietf.org/doc/html/rfc6020)/[RFC\u00a07950](https://datatracker.ietf.org/doc/html/rfc7950) that define the YANG language syntax. However, we also need operational and management guidelines\u2014as set out in RFC\u00a05706 and RFC\u00a08407\u2014to govern how a YANG model will run in practice. \n\nFor example, if an asynchronous server implements the model, how does a client determine whether a request has completed or is still in progress? RFC\u00a05706\u2019s review checklist (Appendix\u00a0A.2) suggests using notifications in the context of alarms and faults. But this is not clearly described for the Service/Network models used for provision.  \n\nThe aim is not to duplicate YANG syntax RFCs but to extend them with clear operational requirements once the YANG model is deployed.",
+          "createdAt": "2025-04-22T15:57:46Z",
+          "updatedAt": "2025-04-22T15:57:46Z"
         }
       ]
     },
@@ -166,7 +231,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:50:09Z",
-      "updatedAt": "2025-04-09T10:02:06Z",
+      "updatedAt": "2025-04-22T13:41:26Z",
       "closedAt": null,
       "comments": [
         {
@@ -182,6 +247,13 @@
           "body": "Adding the comment Sent by @adrianFarrel in the mailling list: \"\"\"-\tSection 4 gives guidance, but it does not lead document authors by the nose. I think that people who understand the need will know what to do, but this document (our bis) needs to give far more explicit instructions about what to write. By giving strong suggestions of what subsections to include in a Manageability Considerations section (and probably pointing to some example RFCs) we can offer much more help to draft authors.\"\"\"",
           "createdAt": "2025-04-09T10:02:04Z",
           "updatedAt": "2025-04-09T10:02:04Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Changing the writing style of the document, with better requirements on what to include, and shortening the text. ",
+          "createdAt": "2025-04-22T13:41:25Z",
+          "updatedAt": "2025-04-22T13:41:25Z"
         }
       ]
     },
@@ -193,13 +265,37 @@
       "state": "OPEN",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "graf3net"
+      ],
       "labels": [],
       "body": "Because this documents was produced in 2009, it missed some new OPS-related technologies (protocols and data models): BMP, Alt Mark, NETCONF/RESTCONF, YANG",
       "createdAt": "2025-04-09T12:51:05Z",
-      "updatedAt": "2025-04-09T12:51:05Z",
+      "updatedAt": "2025-04-23T16:38:38Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "graf3net",
+          "authorAssociation": "COLLABORATOR",
+          "body": "A good example would be\n\nhttps://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis#section-2\nBGP flap damping [RFC2439] is an example. It was designed to block high-frequency route flaps; however, the design did not consider the existence of BGP path exploration / slow convergence. In real operations, path exploration caused false flap damping, resulting in loss of reachability. As a result, many networks turned flap damping off.\n\n\nhttps://datatracker.ietf.org/doc/html/draft-ietf-grow-bmp-path-marking-tlv-02#section-2.1\nReason Code (2 Octets, optional): indicates the reason of the path status indicated in the Path Status field. The reason code field is optional. If no reason code is carried, this field is empty. If a reason code is carried, the reason code is indicated by a 2-byte value, which is defined in Table 2.\n\n+------------+-----------------------------+\n| Value      | Path type                   |\n+------------------------------------------+\n| 0x00001000 | Suppressed                  |\n+------------+-----------------------------+\n\nSuppressed refers to a path which has been declared suppressed by the BGP Route Flap Damping mechanism as described in Section 2.2 of [RFC2439].",
+          "createdAt": "2025-04-22T13:11:27Z",
+          "updatedAt": "2025-04-22T13:16:07Z"
+        },
+        {
+          "author": "graf3net",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Update the following sections\n\nManagement Considerations - How Will the Protocol Be Managed?\nhttps://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis#section-3\n\nInteroperability\nhttps://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis#section-3.1\n\nPerformance Management\nhttps://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis#section-3.6\n\n\nConsider starting from\n\nNetwork Telemetry Framework\nhttps://datatracker.ietf.org/doc/html/rfc9232",
+          "createdAt": "2025-04-22T13:21:39Z",
+          "updatedAt": "2025-04-22T13:44:38Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See PR #20 as it creates a more sensible and clear room for the listing of technologies.\n\n   2.  Key Concepts, Terminology, and Technological Landscape\n     2.1.  Terminology\n     2.2.  Available Management Technologies\n",
+          "createdAt": "2025-04-23T16:38:38Z",
+          "updatedAt": "2025-04-23T16:38:38Z"
+        }
+      ]
     },
     {
       "number": 8,
@@ -213,9 +309,52 @@
       "labels": [],
       "body": "This should be done in collaboration with the OPS-DIR.\nFinally, this appendix should be part of the core document.",
       "createdAt": "2025-04-09T12:55:19Z",
-      "updatedAt": "2025-04-09T12:55:19Z",
+      "updatedAt": "2025-04-23T19:45:56Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Questions:\n1. Is the appendix A complete? Do we need more advice? Do we reduce/refine the list (more actionable)? \n    AI: let's ask the OPS-DIR mailing, as input. Alternative: interim meeting? \n    The appendix will be moved to a new draft or OPS-DIR web site (See Med). \n2. If complete, is it just a question of documenting the subsection guidelines from \"[2.2](https://datatracker.ietf.org/doc/html/rfc6123#section-2.2).  Recommended Subsections\"",
+          "createdAt": "2025-04-22T13:57:11Z",
+          "updatedAt": "2025-04-22T13:57:11Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> 1. The appendix will be moved to a new draft or OPS-DIR web site (See Med).\n\nThe appendix is for now hosted at https://github.com/IETF-OPS-DIR/Review-Template/tree/main.\n",
+          "createdAt": "2025-04-23T07:54:54Z",
+          "updatedAt": "2025-04-23T07:54:54Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "This is great.\n1.The content of Appendix A is especially valuable for OPS-DIR reviewers, as it provides a clear and structured checklist on operations and management considerations.\n2.I suggest adding the stabilized document link to the ops-wiki, as it would serve as a convenient and accessible reference for both new and existing reviewers. This can help guide the review process and be especially valuable for new reviewers as a point of reference.",
+          "createdAt": "2025-04-23T10:28:14Z",
+          "updatedAt": "2025-04-23T10:28:14Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I like moving Appendix A to a wiki, more practical.\nHowever, how can it be normatively referenced by this updated RFC? Take a snapshot at publication time? ",
+          "createdAt": "2025-04-23T16:53:20Z",
+          "updatedAt": "2025-04-23T16:53:20Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think the point is that it would not be normatively referenced. The discussion we had on the call (yeah, I know you weren't there) was that *this* document is about advice to authors: advice for reviewers (chiefly the OPS-Dir) would move on to a wiki specifically for them.",
+          "createdAt": "2025-04-23T17:30:21Z",
+          "updatedAt": "2025-04-23T17:30:21Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thank you @AdrianFarrel !",
+          "createdAt": "2025-04-23T19:45:56Z",
+          "updatedAt": "2025-04-23T19:45:56Z"
+        }
+      ]
     },
     {
       "number": 9,
@@ -229,9 +368,17 @@
       "labels": [],
       "body": "The ideal end goal to have \"Operations and Manageability Considerations\" section(s) all IETF drafts. As Med mentioned on the OPSAWG mailing list: \"We need to find the right balance between providing clear guidance while avoiding some rigidity. We will explore that path together with other areas.\"\n",
       "createdAt": "2025-04-09T13:25:38Z",
-      "updatedAt": "2025-04-09T13:25:38Z",
+      "updatedAt": "2025-04-22T13:12:50Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "graf3net",
+          "authorAssociation": "COLLABORATOR",
+          "body": "How about Service Models?\n\nhttps://datatracker.ietf.org/doc/html/rfc8199\nhttps://datatracker.ietf.org/doc/html/rfc8309",
+          "createdAt": "2025-04-22T13:12:49Z",
+          "updatedAt": "2025-04-22T13:12:49Z"
+        }
+      ]
     },
     {
       "number": 12,
@@ -270,14 +417,30 @@
       "id": "I_kwDOOWPBqs6ycYrr",
       "title": "Reword based on recent erratum",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/16",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "This paragraph was flagged (albeit incorrectly) for errata (Section 3.6.1):\n\n\"The protocol document should make clear the limitations implicit\nwithin the protocol and the behavior when limits are exceeded.  This\nshould be considered in a data-modeling-independent manner -- what\nmakes managed-protocol sense, not what makes management-protocol-\nsense.\"\n\nIf this is left in the final document, differentiating between the protocol or specification to be managed and the protocol doing the management should be clearer.",
       "createdAt": "2025-04-14T18:06:44Z",
-      "updatedAt": "2025-04-14T18:07:08Z",
+      "updatedAt": "2025-04-22T19:02:09Z",
+      "closedAt": "2025-04-22T19:02:09Z",
+      "comments": []
+    },
+    {
+      "number": 19,
+      "id": "I_kwDOOWPBqs6zeSnD",
+      "title": "Clarify the obsoleting of RFC 5706",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/19",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The Abstract needs to add a few more words to the bold statement:\n   This document obsoletes RFC 5706.\nSomething like:\n   This document obsoletes RFC 5706, replacing it completely and updating it to reflect up-to-date management and operational tools.\n\nThe Introduction (i.e., the text in section 1, not the subsections) needs to contain similar text although it can have more words and a pointer to section 1.7",
+      "createdAt": "2025-04-22T13:14:55Z",
+      "updatedAt": "2025-04-22T13:14:55Z",
       "closedAt": null,
       "comments": []
     }
@@ -415,7 +578,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-13T07:40:09Z",
-      "updatedAt": "2025-04-16T22:17:07Z",
+      "updatedAt": "2025-04-22T19:03:48Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
@@ -447,6 +610,13 @@
           "body": "I like and support this change. Might expand IETF to \"Internet Engineering Task Force\", see BCP61",
           "createdAt": "2025-04-16T22:17:06Z",
           "updatedAt": "2025-04-16T22:17:06Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I support this change. Yes, \"it might be bikeshedded to death\", as Joe mentioned. First off, I am not too worried about that, as it was clarified on the OPSAWG mailing list. See https://mailarchive.ietf.org/arch/msg/opsawg/C6yqf73MHxkm1LhbX9vBfaA3hDM/\r\nAnd if there is a disagreement on the title, which means a disagreement on the goals, I would prefer to know it now.",
+          "createdAt": "2025-04-22T12:34:39Z",
+          "updatedAt": "2025-04-22T12:34:39Z"
         }
       ],
       "reviews": [
@@ -462,6 +632,26 @@
           "createdAt": "2025-04-13T14:37:15Z",
           "updatedAt": "2025-04-13T14:37:15Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6mAOyD",
+          "commit": {
+            "abbreviatedOid": "64649ba"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-22T19:03:42Z",
+          "updatedAt": "2025-04-22T19:03:48Z",
+          "comments": [
+            {
+              "originalPosition": 3,
+              "body": "Expand \"Internet Engineering Task Force\"",
+              "createdAt": "2025-04-22T19:03:42Z",
+              "updatedAt": "2025-04-22T19:03:48Z"
+            }
+          ]
         }
       ]
     },
@@ -652,24 +842,26 @@
       "id": "PR_kwDOOWPBqs6S58y-",
       "title": "Reword based on recent erratum #16",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/18",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Reword for clarity.",
       "createdAt": "2025-04-16T22:27:09Z",
-      "updatedAt": "2025-04-21T08:40:17Z",
+      "updatedAt": "2025-04-22T19:02:08Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-issue-16",
-      "headRefOid": "7c40fa514b86bca2a039d0efeb900003d2ffd5aa",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "4c659abb68cf3581974e3bd01a2c41b12436c80d",
+      "closedAt": "2025-04-22T19:02:08Z",
+      "mergedAt": "2025-04-22T19:02:08Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "457cbe0c80b9fa96a053304ff450d65301beeb49"
+      },
       "comments": [],
       "reviews": [
         {
@@ -710,8 +902,67 @@
               "updatedAt": "2025-04-21T08:40:17Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6l2x9l",
+          "commit": {
+            "abbreviatedOid": "7c40fa5"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-22T02:26:09Z",
+          "updatedAt": "2025-04-22T02:26:09Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "I do not see how \"protocol used for management\" can be confusing, particularly c.f. \"protocol being managed\".",
+              "createdAt": "2025-04-22T02:26:09Z",
+              "updatedAt": "2025-04-22T02:26:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6l8X4Y",
+          "commit": {
+            "abbreviatedOid": "4c659ab"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "LGTM",
+          "createdAt": "2025-04-22T13:13:15Z",
+          "updatedAt": "2025-04-22T13:13:15Z",
+          "comments": []
         }
       ]
+    },
+    {
+      "number": 20,
+      "id": "PR_kwDOOWPBqs6ToKNS",
+      "title": "Various Introduction and Terminology updates, #19 and moved Terms and Tech sub-sections",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/20",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "* Take care of Issue #19 , by adding more text about obsoletion in the Abstract and Introduction\r\n* Build a framework for issue #1 by moving the Terminology (and Tech) to a different section. These are not introduction.\r\n* Add definition of OAM.",
+      "createdAt": "2025-04-23T16:36:55Z",
+      "updatedAt": "2025-04-23T16:37:01Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-intro-and-terms",
+      "headRefOid": "0a8c1b7ab1e524fa2f1e4bb3e7f24a28d39620cf",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
