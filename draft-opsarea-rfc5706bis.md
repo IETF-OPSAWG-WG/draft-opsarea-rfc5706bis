@@ -702,12 +702,22 @@ Information Models and Data Models
 ##  Management Information {#sec-mgt-info}
 
    Languages used to describe an information model can influence the
-   nature of the model.  Using a particular data-modeling language, such
-   as the SMIv2, influences the model to use certain types of
-   structures, such as two-dimensional tables.  This document recommends
-   using English text (the official language for IETF specifications) to
-   describe an information model.  A sample data model could be
-   developed to demonstrate the information model.
+   nature of the model. Using a particular data-modeling language, such
+   as YANG, influences the model to use certain types of structures, for
+   example hierarchical trees, groupings, and reusable types.
+   YANG, as described in {{?RFC6020}} and {{?RFC7950}}, provides advantages
+   for expressing network information, including clear separation of
+   configuration data and operational state, support for constraints and
+   dependencies, and extensibility for evolving requirements. Its ability
+   to represent relationships and dependencies in a structured and modular
+   way makes it an effective choice for defining management information
+   models.
+
+   Although this document recommends using English text (the official
+   language of IETF specifications) to describe an information model,
+   including a complementary YANG module helps translate abstract concepts
+   into implementation-specific data models. This ensures consistency between
+   the high-level design and practical deployment.
 
    A management information model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
@@ -738,11 +748,12 @@ Information Models and Data Models
    object, or may it relate to multiple?  When is it possible to change a
    relationship?
 
-   Do objects (such as rows in tables) share fate?  For example, if a
-   row in table A must exist before a related row in table B can be
-   created, what happens to the row in table B if the related row in
-   table A is deleted?  Does the existence of relationships between
-   objects have an impact on fate sharing?
+   Do objects (such as instances in lists) share fate?  For example, if a
+   instance in list A must exist before a related instance in list B can be
+   created, what happens to the instance in list B if the related instance in
+   list A is deleted?  Does the existence of relationships between
+   objects have an impact on fate sharing?  YANG's relationships and
+   constraints can help express and enforce these relationships.
 
 ###  Information Model Design {#sec-im-design}
 
@@ -763,6 +774,46 @@ Information Models and Data Models
 
    6.  Avoid causing critical sections to be heavily instrumented.  A
        guideline is one counter per critical section per layer.
+
+   7.  When using YANG to complement or define an information model,
+       ensure that the model maintains simplicity, modularity, and
+       clarity.  Specific guidelines to consider when authoring YANG
+       modules are described in {{?RFC8407}}.
+
+### YANG Data Model Considerations {#sec-yang-dm}
+
+  When considering YANG data models for a new specification, there
+  are multiple types of data models that may be applicable.  The
+  hierarchy and relationship between these types is described in
+  {{?RFC8309}}.  A new specification may require or benefit from
+  one or more of these YANG model types.
+
+  *  Network Element Models - Network element models represent the
+     configuration, operational state, and notifications of
+     individual devices.  These models are designed to distinguish
+     between these types of data and support querying and updating
+     device-specific parameters.  Consideration should be given to
+     how device-level models might fit with broader network and
+     service data models.
+
+  *  Network Service Models - Network service models define abstractions
+     for managing the behavior and relationships of multiple devices
+     and device subsystems within a network.  As described in {{?RFC8199}},
+     these models are used to manage network-wide services such VPNs and
+     tunnels.  These abstractions are useful to network operators and
+     network controller applications.
+
+  *  Service-Level Models - Service-level models (also called customer
+     service or business models) as defined in {{?RFC8309}} are designed
+     to abstract the customer interface into a service.  They
+     consider customer-centric metrics such as Service Level Agreement
+     (SLA) and high-level policy.  Given that different operators and
+     different customers may have widely-varying business processes,
+     these models should focus on common aspects of a service with
+     strong multi-party consensus.
+
+  When developing any YANG data models regardless of the model type,
+  authors should consult with {{?RFC8407}}.
 
 ## Fault Management {#sec-fm-mgt}
 
