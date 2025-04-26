@@ -1195,11 +1195,12 @@ Information Models and Data Models
      track its performance metrics or whether existing security tools can be
      adapted to analyze its traffic patterns.
 
-  *  New Tools as a Last Resort: Only when existing tools are demonstrably
-     inadequate for managing and operating the new protocol should the development
-     of new tools be considered. In such cases, carefully define the specific
-     requirements for these new tools, focusing on the functionalities that cannot
-     be achieved through adaptation or extension of existing solutions.
+  *  New Tools: Only when existing tools are demonstrably
+     inadequate for managing and operating the elements of the new specification
+     should the development of new tools be considered. In such cases,
+     carefully define the specific requirements for these new tools, focusing
+     on the functionalities that cannot be achieved through adaptation or
+     extension of existing solutions.
 
   *  {{IETF-HACKATHONS}} for Manageability Testing: {{IETF-HACKATHONS}}
      provide an opportunity to test the functionality, interoperability,
