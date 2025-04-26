@@ -6,7 +6,7 @@ opsarea                                                        B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 27 October 2025                                       A. Farrel
+Expires: 28 October 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 27 October 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           25 April 2025
+                                                           26 April 2025
 
 
  Guidelines for Considering Operations and Management of New Protocols
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 October 2025.
+   This Internet-Draft will expire on 28 October 2025.
 
 Copyright Notice
 
@@ -761,7 +761,7 @@ Table of Contents
    information models.
 
    Although this document recommends using English text (the official
-   language of IETF specifications) to describe an information model,
+   language for IETF specifications) to describe an information model,
    including a complementary YANG module helps translate abstract
    concepts into implementation-specific data models.  This ensures
    consistency between the high-level design and practical deployment.
