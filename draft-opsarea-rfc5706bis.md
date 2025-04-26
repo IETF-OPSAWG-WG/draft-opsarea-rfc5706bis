@@ -709,7 +709,7 @@ Information Models and Data Models
    models.
 
    Although this document recommends using English text (the official
-   language of IETF specifications) to describe an information model,
+   language for IETF specifications) to describe an information model,
    including a complementary YANG module helps translate abstract concepts
    into implementation-specific data models. This ensures consistency between
    the high-level design and practical deployment.
