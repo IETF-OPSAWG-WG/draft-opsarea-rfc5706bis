@@ -6,7 +6,7 @@ opsarea                                                        B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 19 October 2025                                       A. Farrel
+Expires: 28 October 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 19 October 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           17 April 2025
+                                                           26 April 2025
 
 
  Guidelines for Considering Operations and Management of New Protocols
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 October 2025.
+   This Internet-Draft will expire on 28 October 2025.
 
 Copyright Notice
 
@@ -102,15 +102,15 @@ Table of Contents
        3.6.3.  Monitoring the Network
        3.6.4.  Monitoring the Service
      3.7.  Security Management
-     3.8.  Tooling Considerations
-   4.  Documentation Guidelines
-     4.1.  Recommended Discussions
-     4.2.  Null Manageability Considerations Sections
-     4.3.  Placement of Operations and Manageability Considerations
+   4.  Operational and Management Tooling Considerations
+   5.  Documentation Guidelines
+     5.1.  Recommended Discussions
+     5.2.  Null Manageability Considerations Sections
+     5.3.  Placement of Operations and Manageability Considerations
            Sections
-   5.  IANA Considerations
-   6.  Security Considerations
-   7.  Informative References
+   6.  IANA Considerations
+   7.  Security Considerations
+   8.  Informative References
    Appendix A.  Operations and Management Review Checklist
      A.1.  Operational Considerations
      A.2.  Management Considerations
@@ -1205,7 +1205,7 @@ Table of Contents
    Protocol designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
-3.8.  Tooling Considerations
+4.  Operational and Management Tooling Considerations
 
    The operational community's ability to effectively adopt and use new
    specifications is significantly influenced by the availability and
@@ -1243,12 +1243,12 @@ Table of Contents
       existing security tools can be adapted to analyze its traffic
       patterns.
 
-   *  New Tools as a Last Resort: Only when existing tools are
-      demonstrably inadequate for managing and operating the new
-      protocol should the development of new tools be considered.  In
-      such cases, carefully define the specific requirements for these
-      new tools, focusing on the functionalities that cannot be achieved
-      through adaptation or extension of existing solutions.
+   *  New Tools: Only when existing tools are demonstrably inadequate
+      for managing and operating the elements of the new specification
+      should the development of new tools be considered.  In such cases,
+      carefully define the specific requirements for these new tools,
+      focusing on the functionalities that cannot be achieved through
+      adaptation or extension of existing solutions.
 
    *  [IETF-HACKATHONS] for Manageability Testing: [IETF-HACKATHONS]
       provide an opportunity to test the functionality,
@@ -1276,7 +1276,7 @@ Table of Contents
       provide operators with the flexibility to customize and extend the
       tools to meet their specific needs.
 
-4.  Documentation Guidelines
+5.  Documentation Guidelines
 
    This document is focused on what a protocol designer should think
    about and how those considerations might be documented.
@@ -1288,7 +1288,7 @@ Table of Contents
    like 'must' or 'should' needs to be interpreted only in the context
    of their natural, English-language meaning.
 
-4.1.  Recommended Discussions
+5.1.  Recommended Discussions
 
    A Manageability Considerations section should include discussion of
    the management and operations topics raised in this document, and
@@ -1302,7 +1302,7 @@ Table of Contents
    should consider how using existing protocols and data models might
    impact network operations.
 
-4.2.  Null Manageability Considerations Sections
+5.2.  Null Manageability Considerations Sections
 
    A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
@@ -1325,7 +1325,7 @@ Table of Contents
    considerations, it would be helpful to point out the considerations
    section in the base document.
 
-4.3.  Placement of Operations and Manageability Considerations Sections
+5.3.  Placement of Operations and Manageability Considerations Sections
 
    If a protocol designer develops a Manageability Considerations
    section for a new protocol, it is recommended that the section be
@@ -1334,11 +1334,11 @@ Table of Contents
    placement could simplify the development of tools to detect the
    presence of such a section.
 
-5.  IANA Considerations
+6.  IANA Considerations
 
    This document does not have any IANA actions required.
 
-6.  Security Considerations
+7.  Security Considerations
 
    This document is informational and provides guidelines for
    considering manageability and operations.  It introduces no new
@@ -1368,7 +1368,7 @@ Table of Contents
    could constitute a security vulnerability.  The management of
    security aspects is important (see Section 3.7).
 
-7.  Informative References
+8.  Informative References
 
    [IETF-HACKATHONS]
               "IETF Hackathons", n.d.,
