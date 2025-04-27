@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-24T00:46:06.720927+00:00",
+  "timestamp": "2025-04-27T00:50:57.233331+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -116,9 +116,17 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:15Z",
-      "updatedAt": "2025-04-08T18:49:15Z",
+      "updatedAt": "2025-04-24T03:10:26Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "References...\nRFC3444\nRFC6123 section 3.2 \nAre there any other documents\uff1f",
+          "createdAt": "2025-04-24T03:10:25Z",
+          "updatedAt": "2025-04-24T03:10:25Z"
+        }
+      ]
     },
     {
       "number": 3,
@@ -231,7 +239,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:50:09Z",
-      "updatedAt": "2025-04-22T13:41:26Z",
+      "updatedAt": "2025-04-24T02:39:21Z",
       "closedAt": null,
       "comments": [
         {
@@ -254,6 +262,13 @@
           "body": "Changing the writing style of the document, with better requirements on what to include, and shortening the text. ",
           "createdAt": "2025-04-22T13:41:25Z",
           "updatedAt": "2025-04-22T13:41:25Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "In addition to exploring  \"Operations & Manageability Section\", I suggest including a concise checklist at the end of the guidance document \u2014 similar in spirit to Appendix A \u2014 which can serve as a quick reference for authors. This could help ensure key operational and manageability aspects are not overlooked, while still allowing flexibility in how each point is addressed based on the protocol\u2019s context.",
+          "createdAt": "2025-04-24T02:39:21Z",
+          "updatedAt": "2025-04-24T02:39:21Z"
         }
       ]
     },
@@ -441,6 +456,22 @@
       "body": "The Abstract needs to add a few more words to the bold statement:\n   This document obsoletes RFC 5706.\nSomething like:\n   This document obsoletes RFC 5706, replacing it completely and updating it to reflect up-to-date management and operational tools.\n\nThe Introduction (i.e., the text in section 1, not the subsections) needs to contain similar text although it can have more words and a pointer to section 1.7",
       "createdAt": "2025-04-22T13:14:55Z",
       "updatedAt": "2025-04-22T13:14:55Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 21,
+      "id": "I_kwDOOWPBqs6zw9J5",
+      "title": "Background material vs. Guidance for authors",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/21",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is not a tutorial on ops/management, but a tool for authors to help them identify what needs to be supplied in a spec for mgt/ops purposes.\n\nPointers to documents such as [RFC 6632](https://datatracker.ietf.org/doc/rfc6632/) may be considered.\n\nWe need to Identify at least what belongs to background and decide how to structure that (e.g., move to an appendix, offload, etc.)\n",
+      "createdAt": "2025-04-24T04:27:24Z",
+      "updatedAt": "2025-04-24T04:27:24Z",
       "closedAt": null,
       "comments": []
     }
@@ -667,13 +698,13 @@
       "labels": [],
       "body": "Highlight areas where existing tooling might need to be enhanced or new tooling might need to be introduced to facilitate the management and operations of new specifications.",
       "createdAt": "2025-04-14T19:23:39Z",
-      "updatedAt": "2025-04-17T15:55:18Z",
+      "updatedAt": "2025-04-26T19:09:16Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "tooling-text",
-      "headRefOid": "8c8b2309b105211294a56da4150e8fd9087ec5c9",
+      "headRefOid": "be20a3e84023c6cd4e8ffddd9a2531e718ea6c18",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -834,6 +865,26 @@
               "updatedAt": "2025-04-17T15:55:18Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6mrRMa",
+          "commit": {
+            "abbreviatedOid": "9d24518"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-26T19:09:16Z",
+          "updatedAt": "2025-04-26T19:09:16Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "Okay, I modified this text a bit differently.  Hopefully this is sufficient.",
+              "createdAt": "2025-04-26T19:09:16Z",
+              "updatedAt": "2025-04-26T19:09:16Z"
+            }
+          ]
         }
       ]
     },
@@ -963,6 +1014,61 @@
       "mergeCommit": null,
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 22,
+      "id": "PR_kwDOOWPBqs6T9H80",
+      "title": "WIP: Add text on YANG for IM and importance of YANG data models",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/22",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Address #3 \r\n\r\n* Spell out that YANG is a recommendation for IMs\r\n* Describe the use of different types of YANG data models\r\n* Add references to RFCs 8199, 8309, and 8407",
+      "createdAt": "2025-04-25T19:09:02Z",
+      "updatedAt": "2025-04-26T14:59:00Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "importance-of-data-models",
+      "headRefOid": "fdb8588688a3e6dfa5c9bd85838fa6c1a2e4bd44",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I debated about how much text to add about the different model types.  I figured this would be a decent balance to give people context and point them to associated RFCs.",
+          "createdAt": "2025-04-25T19:09:43Z",
+          "updatedAt": "2025-04-25T19:09:43Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6mqD7V",
+          "commit": {
+            "abbreviatedOid": "29d85a0"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-04-26T14:13:24Z",
+          "updatedAt": "2025-04-26T14:18:48Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "\"language of IETF specifications\" -> \"language for IETF specifications\".",
+              "createdAt": "2025-04-26T14:13:24Z",
+              "updatedAt": "2025-04-26T14:18:48Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
