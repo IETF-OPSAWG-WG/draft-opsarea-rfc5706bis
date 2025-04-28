@@ -783,7 +783,7 @@ Information Models and Data Models
   {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}.  A new specification
   may require or benefit from one or more of these YANG model types.
 
-  *  Device Models - Device models (also called network element models)
+  *  Device Models - Also called Network Element Models,
      represent the configuration, operational state, and notifications of
      individual devices.  These models are designed to distinguish
      between these types of data and support querying and updating
@@ -798,17 +798,18 @@ Information Models and Data Models
      tunnels.  These abstractions are useful to network operators and
      network controller applications.
 
-  *  Service Models - Service models (also called customer
-     service or business models) defined in {{?RFC8309}}, are designed
-     to abstract the customer interface into a service.  They
-     consider customer-centric parameters such as Service Level Agreement
-     (SLA) and high-level policy.  Given that different operators and
-     different customers may have widely-varying business processes,
-     these models should focus on common aspects of a service with
-     strong multi-party consensus.
+  *  Service Models - Also called Customer Service Models,
+     defined in {{?RFC8309}}, are designed to abstract the customer interface
+     into a service.  They consider customer-centric parameters such as
+     Service Level Agreement (SLA) and high-level policy. Given that different
+     operators and different customers may have widely-varying business
+     processes, these models should focus on common aspects of a service
+     with strong multi-party consensus.  Examples of service models include
+     L3VPN Service Model (L3SM) {{?RFC8299}} and L2VPN Service Model (L2SM)
+     {{?RFC8499}}).
 
-  When developing any YANG data models regardless of the model type,
-  authors should consult with {{?I-D.ietf-netmod-rfc8407bis}}.
+  Specific guidelines to consider when authoring any type of YANG
+  modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
 
 ## Fault Management {#sec-fm-mgt}
 
