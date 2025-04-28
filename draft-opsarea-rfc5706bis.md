@@ -166,7 +166,7 @@ author:
 
    This document provides some initial guidelines for considering
    operations and management in an IETF Management Framework that
-   consists of multiple protocols and multiple data-modeling languages,
+   consists of multiple protocols and multiple data modeling languages,
    with an eye toward being flexible while also striving for
    interoperability.
 
@@ -699,7 +699,7 @@ Information Models and Data Models
    Languages used to describe an information model can influence the
    nature of the model. Using a particular data-modeling language, such
    as YANG, influences the model to use certain types of structures, for
-   example hierarchical trees, groupings, and reusable types.
+   example, hierarchical trees, groupings, and reusable types.
    YANG, as described in {{?RFC6020}} and {{?RFC7950}}, provides advantages
    for expressing network information, including clear separation of
    configuration data and operational state, support for constraints and
@@ -743,7 +743,7 @@ Information Models and Data Models
    object, or may it relate to multiple?  When is it possible to change a
    relationship?
 
-   Do objects (such as instances in lists) share fate?  For example, if a
+   Do objects (such as instances in lists) share fate?  For example, if an
    instance in list A must exist before a related instance in list B can be
    created, what happens to the instance in list B if the related instance in
    list A is deleted?  Does the existence of relationships between
@@ -773,18 +773,18 @@ Information Models and Data Models
    7.  When using YANG to complement or define an information model,
        ensure that the model maintains simplicity, modularity, and
        clarity.  Specific guidelines to consider when authoring YANG
-       modules are described in {{?RFC8407}}.
+       modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
   When considering YANG data models for a new specification, there
   are multiple types of data models that may be applicable.  The
   hierarchy and relationship between these types is described in
-  {{?RFC8309}}.  A new specification may require or benefit from
-  one or more of these YANG model types.
+  {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}.  A new specification
+  may require or benefit from one or more of these YANG model types.
 
-  *  Network Element Models - Network element models represent the
-     configuration, operational state, and notifications of
+  *  Device Models - Device models (also called network element models)
+     represent the configuration, operational state, and notifications of
      individual devices.  These models are designed to distinguish
      between these types of data and support querying and updating
      device-specific parameters.  Consideration should be given to
@@ -798,17 +798,17 @@ Information Models and Data Models
      tunnels.  These abstractions are useful to network operators and
      network controller applications.
 
-  *  Service-Level Models - Service-level models (also called customer
-     service or business models) as defined in {{?RFC8309}} are designed
+  *  Service Models - Service models (also called customer
+     service or business models) defined in {{?RFC8309}}, are designed
      to abstract the customer interface into a service.  They
-     consider customer-centric metrics such as Service Level Agreement
+     consider customer-centric parameters such as Service Level Agreement
      (SLA) and high-level policy.  Given that different operators and
      different customers may have widely-varying business processes,
      these models should focus on common aspects of a service with
      strong multi-party consensus.
 
   When developing any YANG data models regardless of the model type,
-  authors should consult with {{?RFC8407}}.
+  authors should consult with {{?I-D.ietf-netmod-rfc8407bis}}.
 
 ## Fault Management {#sec-fm-mgt}
 
