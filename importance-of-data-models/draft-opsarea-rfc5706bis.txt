@@ -842,12 +842,14 @@ Table of Contents
       parameters.  Consideration should be given to how device-level
       models might fit with broader network and service data models.
 
-   *  Network Service Models - Network service models define
+   *  Network Models - Also called Network Service Models, define
       abstractions for managing the behavior and relationships of
       multiple devices and device subsystems within a network.  As
       described in [RFC8199], these models are used to manage network-
       wide services such VPNs and tunnels.  These abstractions are
       useful to network operators and network controller applications.
+      Examples of network models include the L3VPN Network Model (L3NM)
+      [RFC9182] and the L2VPN Network Model (L2VPN) [RFC9291].
 
    *  Service Models - Also called Customer Service Models, defined in
       [RFC8309], are designed to abstract the customer interface into a
@@ -1529,6 +1531,16 @@ Table of Contents
    [RFC8499]  Hoffman, P., Sullivan, A., and K. Fujiwara, "DNS
               Terminology", RFC 8499, DOI 10.17487/RFC8499, January
               2019, <https://www.rfc-editor.org/rfc/rfc8499>.
+
+   [RFC9182]  Barguil, S., Gonzalez de Dios, O., Ed., Boucadair, M.,
+              Ed., Munoz, L., and A. Aguado, "A YANG Network Data Model
+              for Layer 3 VPNs", RFC 9182, DOI 10.17487/RFC9182,
+              February 2022, <https://www.rfc-editor.org/rfc/rfc9182>.
+
+   [RFC9291]  Boucadair, M., Ed., Gonzalez de Dios, O., Ed., Barguil,
+              S., and L. Munoz, "A YANG Network Data Model for Layer 2
+              VPNs", RFC 9291, DOI 10.17487/RFC9291, September 2022,
+              <https://www.rfc-editor.org/rfc/rfc9291>.
 
    [W3C.REC-xmlschema-0-20041028]
               Fallside, D., Ed. and P. Walmsley, Ed., "XML Schema Part
