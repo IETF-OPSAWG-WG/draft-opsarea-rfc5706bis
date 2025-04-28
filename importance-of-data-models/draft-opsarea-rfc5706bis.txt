@@ -835,13 +835,12 @@ Table of Contents
    [I-D.ietf-netmod-rfc8407bis].  A new specification may require or
    benefit from one or more of these YANG model types.
 
-   *  Device Models - Device models (also called network element models)
-      represent the configuration, operational state, and notifications
-      of individual devices.  These models are designed to distinguish
-      between these types of data and support querying and updating
-      device-specific parameters.  Consideration should be given to how
-      device-level models might fit with broader network and service
-      data models.
+   *  Device Models - Also called Network Element Models, represent the
+      configuration, operational state, and notifications of individual
+      devices.  These models are designed to distinguish between these
+      types of data and support querying and updating device-specific
+      parameters.  Consideration should be given to how device-level
+      models might fit with broader network and service data models.
 
    *  Network Service Models - Network service models define
       abstractions for managing the behavior and relationships of
@@ -850,17 +849,18 @@ Table of Contents
       wide services such VPNs and tunnels.  These abstractions are
       useful to network operators and network controller applications.
 
-   *  Service Models - Service models (also called customer service or
-      business models) defined in [RFC8309], are designed to abstract
-      the customer interface into a service.  They consider customer-
-      centric parameters such as Service Level Agreement (SLA) and high-
-      level policy.  Given that different operators and different
-      customers may have widely-varying business processes, these models
-      should focus on common aspects of a service with strong multi-
-      party consensus.
+   *  Service Models - Also called Customer Service Models, defined in
+      [RFC8309], are designed to abstract the customer interface into a
+      service.  They consider customer-centric parameters such as
+      Service Level Agreement (SLA) and high-level policy.  Given that
+      different operators and different customers may have widely-
+      varying business processes, these models should focus on common
+      aspects of a service with strong multi-party consensus.  Examples
+      of service models include L3VPN Service Model (L3SM) [RFC8299] and
+      L2VPN Service Model (L2SM) [RFC8499]).
 
-   When developing any YANG data models regardless of the model type,
-   authors should consult with [I-D.ietf-netmod-rfc8407bis].
+   Specific guidelines to consider when authoring any type of YANG
+   modules are described in [I-D.ietf-netmod-rfc8407bis].
 
 3.3.  Fault Management
 
@@ -1517,9 +1517,18 @@ Table of Contents
               Classification", RFC 8199, DOI 10.17487/RFC8199, July
               2017, <https://www.rfc-editor.org/rfc/rfc8199>.
 
+   [RFC8299]  Wu, Q., Ed., Litkowski, S., Tomotaki, L., and K. Ogaki,
+              "YANG Data Model for L3VPN Service Delivery", RFC 8299,
+              DOI 10.17487/RFC8299, January 2018,
+              <https://www.rfc-editor.org/rfc/rfc8299>.
+
    [RFC8309]  Wu, Q., Liu, W., and A. Farrel, "Service Models
               Explained", RFC 8309, DOI 10.17487/RFC8309, January 2018,
               <https://www.rfc-editor.org/rfc/rfc8309>.
+
+   [RFC8499]  Hoffman, P., Sullivan, A., and K. Fujiwara, "DNS
+              Terminology", RFC 8499, DOI 10.17487/RFC8499, January
+              2019, <https://www.rfc-editor.org/rfc/rfc8499>.
 
    [W3C.REC-xmlschema-0-20041028]
               Fallside, D., Ed. and P. Walmsley, Ed., "XML Schema Part
