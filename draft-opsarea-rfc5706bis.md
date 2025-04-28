@@ -796,12 +796,14 @@ Information Models and Data Models
      how device-level models might fit with broader network and
      service data models.
 
-  *  Network Service Models - Network service models define abstractions
+  *  Network Models - Also called Network Service Models, define abstractions
      for managing the behavior and relationships of multiple devices
      and device subsystems within a network.  As described in {{?RFC8199}},
      these models are used to manage network-wide services such VPNs and
      tunnels.  These abstractions are useful to network operators and
-     network controller applications.
+     network controller applications.  Examples of network models include
+     the L3VPN Network Model (L3NM) {{?RFC9182}} and the L2VPN Network
+     Model (L2VPN) {{?RFC9291}}.
 
   *  Service Models - Also called Customer Service Models,
      defined in {{?RFC8309}}, are designed to abstract the customer interface
