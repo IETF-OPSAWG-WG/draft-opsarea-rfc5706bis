@@ -749,7 +749,7 @@ Table of Contents
 3.2.  Management Information
 
    Languages used to describe an information model can influence the
-   nature of the model.  Using a particular data-modeling language, such
+   nature of the model.  Using a particular data modeling language, such
    as YANG, influences the model to use certain types of structures, for
    example, hierarchical trees, groupings, and reusable types.  YANG, as
    described in [RFC6020] and [RFC7950], provides advantages for
