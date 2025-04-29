@@ -781,7 +781,7 @@ Information Models and Data Models
   are multiple types of data models that may be applicable.  The
   hierarchy and relationship between these types is described in
   {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}.  A new specification
-  may require or benefit from one or more of these YANG model types.
+  may require or benefit from one or more of these YANG data model types.
 
   *  Device Models - Also called Network Element Models,
      represent the configuration, operational state, and notifications of
@@ -794,20 +794,19 @@ Information Models and Data Models
   *  Network Models - Also called Network Service Models, define abstractions
      for managing the behavior and relationships of multiple devices
      and device subsystems within a network.  As described in {{?RFC8199}},
-     these models are used to manage network-wide services such VPNs and
-     tunnels.  These abstractions are useful to network operators and
-     network controller applications.  Examples of network models include
-     the L3VPN Network Model (L3NM) {{?RFC9182}} and the L2VPN Network
-     Model (L2VPN) {{?RFC9291}}.
+     these models are used to manage network-wide.  These abstractions are
+     useful to network operators and applications that interface with network
+     controllers.  Examples of network models include the L3VPN Network Model
+     (L3NM) {{?RFC9182}} and the L2VPN Network Model (L2VPN) {{?RFC9291}}.
 
   *  Service Models - Also called Customer Service Models,
      defined in {{?RFC8309}}, are designed to abstract the customer interface
      into a service.  They consider customer-centric parameters such as
-     Service Level Agreement (SLA) and high-level policy. Given that different
-     operators and different customers may have widely-varying business
-     processes, these models should focus on common aspects of a service
+     Service Level Agreement (SLA) and high-level policy (e.g., network intent).
+     Given that different operators and different customers may have widely-varying
+     business processes, these models should focus on common aspects of a service
      with strong multi-party consensus.  Examples of service models include
-     L3VPN Service Model (L3SM) {{?RFC8299}} and L2VPN Service Model (L2SM)
+     the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)
      {{?RFC8499}}.
 
   Specific guidelines to consider when authoring any type of YANG
