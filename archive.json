@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-27T00:50:57.233331+00:00",
+  "timestamp": "2025-04-29T00:46:24.531223+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1027,13 +1027,13 @@
       "labels": [],
       "body": "Address #3 \r\n\r\n* Spell out that YANG is a recommendation for IMs\r\n* Describe the use of different types of YANG data models\r\n* Add references to RFCs 8199, 8309, and 8407",
       "createdAt": "2025-04-25T19:09:02Z",
-      "updatedAt": "2025-04-26T14:59:00Z",
+      "updatedAt": "2025-04-28T19:48:11Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "importance-of-data-models",
-      "headRefOid": "fdb8588688a3e6dfa5c9bd85838fa6c1a2e4bd44",
+      "headRefOid": "e9a7f78ccaac9b43b72308762df41a9320fe8508",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1065,6 +1065,156 @@
               "body": "\"language of IETF specifications\" -> \"language for IETF specifications\".",
               "createdAt": "2025-04-26T14:13:24Z",
               "updatedAt": "2025-04-26T14:18:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6myg5A",
+          "commit": {
+            "abbreviatedOid": "fdb8588"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-04-28T07:35:14Z",
+          "updatedAt": "2025-04-28T07:47:12Z",
+          "comments": [
+            {
+              "originalPosition": 54,
+              "body": "```suggestion\r\n       modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.\r\n```",
+              "createdAt": "2025-04-28T07:35:15Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 10,
+              "body": "```suggestion\r\n   nature of the model. Using a particular data modeling language, such\r\n```",
+              "createdAt": "2025-04-28T07:35:32Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\r\n   example, hierarchical trees, groupings, and reusable types.\r\n```",
+              "createdAt": "2025-04-28T07:36:02Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 38,
+              "body": "```suggestion\r\n   Do objects (such as instances in lists) share fate?  For example, if an\r\n```",
+              "createdAt": "2025-04-28T07:37:21Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 61,
+              "body": "```suggestion\r\n  {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}.  A new specification may require or benefit from\r\n```",
+              "createdAt": "2025-04-28T07:40:19Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 61,
+              "body": "as that reference groups all related RFCs where modules classification is discussed.",
+              "createdAt": "2025-04-28T07:40:48Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 64,
+              "body": "```suggestion\r\n  *  Device Models: Network element models represent the\r\n```",
+              "createdAt": "2025-04-28T07:41:14Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 64,
+              "body": "be consistent with the use in ietf-netmod-rfc8407bis",
+              "createdAt": "2025-04-28T07:41:28Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 72,
+              "body": "```suggestion\r\n  *  Network Models:  Network service models define abstractions\r\n```",
+              "createdAt": "2025-04-28T07:41:43Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 72,
+              "body": "be consistent with the use in ietf-netmod-rfc8407bis",
+              "createdAt": "2025-04-28T07:41:54Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 75,
+              "body": "```suggestion\r\n     these models are used to manage network-wide services such VPNs and\r\n```\r\n\r\nI would cite L2NM/L3NM as example here. Ideally, I would echo the same wording as in ietf-netmod-rfc8407bis#3.5.1\r\n",
+              "createdAt": "2025-04-28T07:43:27Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 79,
+              "body": "```suggestion\r\n  *  Service Models: Also called Customer Service Models,\r\n```",
+              "createdAt": "2025-04-28T07:45:41Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 80,
+              "body": "```suggestion\r\n     defined in {{?RFC8309}}, are designed\r\n```",
+              "createdAt": "2025-04-28T07:45:55Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 82,
+              "body": "```suggestion\r\n     consider customer-centric parameters such as Service Level Agreement\r\n```",
+              "createdAt": "2025-04-28T07:46:14Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 86,
+              "body": "I would echo the examples from 3.5.1 of 8407bis.",
+              "createdAt": "2025-04-28T07:46:39Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            },
+            {
+              "originalPosition": 89,
+              "body": "```suggestion\r\n  authors should consult with {{?I-D.ietf-netmod-rfc8407bis}}.\r\n```",
+              "createdAt": "2025-04-28T07:47:02Z",
+              "updatedAt": "2025-04-28T07:47:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6m2qFw",
+          "commit": {
+            "abbreviatedOid": "fdb8588"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-28T13:40:57Z",
+          "updatedAt": "2025-04-28T13:40:57Z",
+          "comments": [
+            {
+              "originalPosition": 54,
+              "body": "The muscle memory is strong in me.  When can this by published? :-)",
+              "createdAt": "2025-04-28T13:40:57Z",
+              "updatedAt": "2025-04-28T13:40:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6m2vkx",
+          "commit": {
+            "abbreviatedOid": "fdb8588"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-28T13:47:04Z",
+          "updatedAt": "2025-04-28T13:47:05Z",
+          "comments": [
+            {
+              "originalPosition": 54,
+              "body": "It is in the IETF LC. I think this can be published before the refresh work ;-)",
+              "createdAt": "2025-04-28T13:47:04Z",
+              "updatedAt": "2025-04-28T13:47:05Z"
             }
           ]
         }
