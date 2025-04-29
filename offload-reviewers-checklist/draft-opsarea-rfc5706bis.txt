@@ -1295,8 +1295,8 @@ Table of Contents
 
    [CHECKLIST]
               "Operations and Management Review Checklist", 2025,
-              <https://raw.githubusercontent.com/IETF-OPS-DIR/Review-
-              Template/refs/heads/main/review-checklist.md>.
+              <https://github.com/IETF-OPS-DIR/Review-Template/tree/
+              main>.
 
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
