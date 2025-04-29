@@ -61,7 +61,7 @@ informative:
   CHECKLIST:
     title: Operations and Management Review Checklist
     date: 2025
-    target: https://raw.githubusercontent.com/IETF-OPS-DIR/Review-Template/refs/heads/main/review-checklist.md
+    target: https://github.com/IETF-OPS-DIR/Review-Template/tree/main
 
 --- abstract
 
