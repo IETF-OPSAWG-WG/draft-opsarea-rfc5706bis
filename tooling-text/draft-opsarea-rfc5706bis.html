@@ -1065,7 +1065,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 28 October 2025</td>
+<td class="center">Expires 31 October 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1081,12 +1081,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-26" class="published">26 April 2025</time>
+<time datetime="2025-04-29" class="published">29 April 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-28">28 October 2025</time></dd>
+<dd class="expires"><time datetime="2025-10-31">31 October 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1151,7 +1151,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 28 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 31 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1240,6 +1240,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2.2.1">
                     <p id="section-toc.1-1.3.2.2.2.1.1"><a href="#section-3.2.1" class="auto internal xref">3.2.1</a>.  <a href="#name-information-model-design" class="internal xref">Information Model Design</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2.2.2">
+                    <p id="section-toc.1-1.3.2.2.2.2.1"><a href="#section-3.2.2" class="auto internal xref">3.2.2</a>.  <a href="#name-yang-data-model-considerati" class="internal xref">YANG Data Model Considerations</a></p>
 </li>
                 </ul>
 </li>
@@ -1447,7 +1450,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    models designed to achieve different goals.<a href="#section-1.3-1" class="pilcrow">¶</a></p>
 <p id="section-1.3-2">This document provides some initial guidelines for considering
    operations and management in an IETF Management Framework that
-   consists of multiple protocols and multiple data-modeling languages,
+   consists of multiple protocols and multiple data modeling languages,
    with an eye toward being flexible while also striving for
    interoperability.<a href="#section-1.3-2" class="pilcrow">¶</a></p>
 <p id="section-1.3-3">Fully new protocols may require significant consideration of expected
@@ -2058,18 +2061,27 @@ Datapath Mechanisms<a href="#section-3.1-16.6.1" class="pilcrow">¶</a></p>
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-management-information" class="section-name selfRef">Management Information</a>
         </h3>
 <p id="section-3.2-1">Languages used to describe an information model can influence the
-   nature of the model.  Using a particular data-modeling language, such
-   as the SMIv2, influences the model to use certain types of
-   structures, such as two-dimensional tables.  This document recommends
-   using English text (the official language for IETF specifications) to
-   describe an information model.  A sample data model could be
-   developed to demonstrate the information model.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.2-2">A management information model should include a discussion of what is
+   nature of the model. Using a particular data modeling language, such
+   as YANG, influences the model to use certain types of structures, for
+   example, hierarchical trees, groupings, and reusable types.
+   YANG, as described in <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> and <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>, provides advantages
+   for expressing network information, including clear separation of
+   configuration data and operational state, support for constraints and
+   dependencies, and extensibility for evolving requirements. Its ability
+   to represent relationships and dependencies in a structured and modular
+   way makes it an effective choice for defining management information
+   models.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-2">Although this document recommends using English text (the official
+   language for IETF specifications) to describe an information model,
+   including a complementary YANG module helps translate abstract concepts
+   into implementation-specific data models. This ensures consistency between
+   the high-level design and practical deployment.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+<p id="section-3.2-3">A management information model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
    types of operations are allowed, what protocol-specific events might
    occur, which events can be counted, and for which events an operator
-   should be notified.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
-<p id="section-3.2-3">Operators find it important to be able to make a clear distinction
+   should be notified.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
+<p id="section-3.2-4">Operators find it important to be able to make a clear distinction
    between configuration data, operational state, and statistics.  They
    need to determine which parameters were administratively configured
    and which parameters have changed since configuration as the result
@@ -2080,20 +2092,21 @@ Datapath Mechanisms<a href="#section-3.1-16.6.1" class="pilcrow">¶</a></p>
    able to compare current state to initial state; and to compare
    information between devices.  So, when deciding what information
    should exist, do not conflate multiple information elements into a
-   single element.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
-<p id="section-3.2-4">What is typically difficult to work through are relationships between
+   single element.<a href="#section-3.2-4" class="pilcrow">¶</a></p>
+<p id="section-3.2-5">What is typically difficult to work through are relationships between
    abstract objects.  Ideally, an information model would describe the
    relationships between the objects and concepts in the information
-   model.<a href="#section-3.2-4" class="pilcrow">¶</a></p>
-<p id="section-3.2-5">Is there always just one instance of this object or can there be
+   model.<a href="#section-3.2-5" class="pilcrow">¶</a></p>
+<p id="section-3.2-6">Is there always just one instance of this object or can there be
    multiple instances?  Does this object relate to exactly one other
    object, or may it relate to multiple?  When is it possible to change a
-   relationship?<a href="#section-3.2-5" class="pilcrow">¶</a></p>
-<p id="section-3.2-6">Do objects (such as rows in tables) share fate?  For example, if a
-   row in table A must exist before a related row in table B can be
-   created, what happens to the row in table B if the related row in
-   table A is deleted?  Does the existence of relationships between
-   objects have an impact on fate sharing?<a href="#section-3.2-6" class="pilcrow">¶</a></p>
+   relationship?<a href="#section-3.2-6" class="pilcrow">¶</a></p>
+<p id="section-3.2-7">Do objects (such as instances in lists) share fate?  For example, if an
+   instance in list A must exist before a related instance in list B can be
+   created, what happens to the instance in list B if the related instance in
+   list A is deleted?  Does the existence of relationships between
+   objects have an impact on fate sharing?  YANG's relationships and
+   constraints can help express and enforce these relationships.<a href="#section-3.2-7" class="pilcrow">¶</a></p>
 <div id="sec-im-design">
 <section id="section-3.2.1">
           <h4 id="name-information-model-design">
@@ -2123,7 +2136,58 @@ other information models.<a href="#section-3.2.1-2.5.1" class="pilcrow">¶</a></
               <p id="section-3.2.1-2.6.1">Avoid causing critical sections to be heavily instrumented.  A
 guideline is one counter per critical section per layer.<a href="#section-3.2.1-2.6.1" class="pilcrow">¶</a></p>
 </li>
+            <li id="section-3.2.1-2.7">
+              <p id="section-3.2.1-2.7.1">When using YANG to complement or define an information model,
+ensure that the model maintains simplicity, modularity, and
+clarity.  Specific guidelines to consider when authoring YANG
+modules are described in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-3.2.1-2.7.1" class="pilcrow">¶</a></p>
+</li>
           </ol>
+</section>
+</div>
+<div id="sec-yang-dm">
+<section id="section-3.2.2">
+          <h4 id="name-yang-data-model-considerati">
+<a href="#section-3.2.2" class="section-number selfRef">3.2.2. </a><a href="#name-yang-data-model-considerati" class="section-name selfRef">YANG Data Model Considerations</a>
+          </h4>
+<p id="section-3.2.2-1">When considering YANG data models for a new specification, there
+  are multiple types of data models that may be applicable.  The
+  hierarchy and relationship between these types is described in
+  <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-24#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.  A new specification
+  may require or benefit from one or more of these YANG data model types.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.2.2-2.1">
+              <p id="section-3.2.2-2.1.1">Device Models - Also called Network Element Models,
+represent the configuration, operational state, and notifications of
+individual devices.  These models are designed to distinguish
+between these types of data and support querying and updating
+device-specific parameters.  Consideration should be given to
+how device-level models might fit with broader network and
+service data models.<a href="#section-3.2.2-2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3.2.2-2.2">
+              <p id="section-3.2.2-2.2.1">Network Models - Also called Network Service Models, define abstractions
+for managing the behavior and relationships of multiple devices
+and device subsystems within a network.  As described in <span>[<a href="#RFC8199" class="cite xref">RFC8199</a>]</span>,
+these models are used to manage network-wide.  These abstractions are
+useful to network operators and applications that interface with network
+controllers.  Examples of network models include the L3VPN Network Model
+(L3NM) <span>[<a href="#RFC9182" class="cite xref">RFC9182</a>]</span> and the L2VPN Network Model (L2VPN) <span>[<a href="#RFC9291" class="cite xref">RFC9291</a>]</span>.<a href="#section-3.2.2-2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3.2.2-2.3">
+              <p id="section-3.2.2-2.3.1">Service Models - Also called Customer Service Models,
+defined in <span>[<a href="#RFC8309" class="cite xref">RFC8309</a>]</span>, are designed to abstract the customer interface
+into a service.  They consider customer-centric parameters such as
+Service Level Agreement (SLA) and high-level policy (e.g., network intent).
+Given that different operators and different customers may have widely-varying
+business processes, these models should focus on common aspects of a service
+with strong multi-party consensus.  Examples of service models include
+the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC8299</a>]</span> and the L2VPN Service Model (L2SM)
+<span>[<a href="#RFC8499" class="cite xref">RFC8499</a>]</span>.<a href="#section-3.2.2-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-3.2.2-3">Specific guidelines to consider when authoring any type of YANG
+  modules are described in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-3.2.2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2406,15 +2470,17 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
 <p id="section-3.6.1-6">Could events, such as hot-swapping a blade in a chassis, cause
    discontinuities in counter?  Does this make any difference in
    evaluating the performance of a protocol?<a href="#section-3.6.1-6" class="pilcrow">¶</a></p>
-<p id="section-3.6.1-7">The protocol document should make clear the limitations implicit
-   within the protocol and the behavior when limits are exceeded.  This
-   should be considered in a data-modeling-independent manner -- what
-   makes managed-protocol sense, not what makes management-protocol-
-   sense.  If constraints are not managed-protocol-dependent, then it
-   should be left for the management-protocol data modelers to decide.
-   For example, VLAN identifiers have a range of 1..4095 because of the
-   VLAN standards.  A MIB implementing a VLAN table should be able to
-   support 4096 entries because the content being modeled requires it.<a href="#section-3.6.1-7" class="pilcrow">¶</a></p>
+<p id="section-3.6.1-7">The protocol specification should clearly define any inherent
+   limitations and describe expected behavior when those limits
+   are exceeded. These considerations should be made independently
+   of any specific management protocol or data modeling language.
+   In other words, focus on what makes sense for the protocol being
+   managed, not the protocol used for management.  If a constraint
+   is not specific to a management protocol, then it should be left
+   to data modelers of that protocol to determine how to handle it.
+   For example, VLAN identifiers are defined by standard to range
+   from 1 to 4094. Therefore, a YANG vlanid definition representing the
+   12-bit VLAN-ID used in the VLAN Tag header uses a range of "1..4094".<a href="#section-3.6.1-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="monitoring-the-device">
@@ -2737,6 +2803,10 @@ and extend the tools to meet their specific needs.<a href="#section-4-4.5.1" cla
 <a href="#section-8" class="section-number selfRef">8. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
       </h2>
 <dl class="references">
+<dt id="I-D.ietf-netmod-rfc8407bis">[I-D.ietf-netmod-rfc8407bis]</dt>
+      <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Boucadair, M.</span>, and <span class="refAuthor">Q. Wu</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of Documents Containing YANG Data Models"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-netmod-rfc8407bis-24</span>, <time datetime="2025-04-18" class="refDate">18 April 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-24">https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-24</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="IETF-HACKATHONS">[IETF-HACKATHONS]</dt>
       <dd>
 <span class="refTitle">"IETF Hackathons"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.ietf.org/meeting/hackathons/">https://www.ietf.org/meeting/hackathons/</a>&gt;</span>. </dd>
@@ -2853,6 +2923,10 @@ and extend the tools to meet their specific needs.<a href="#section-4-4.5.1" cla
       <dd>
 <span class="refAuthor">Harrington, D.</span>, <span class="refTitle">"Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions"</span>, <span class="seriesInfo">RFC 5706</span>, <span class="seriesInfo">DOI 10.17487/RFC5706</span>, <time datetime="2009-11" class="refDate">November 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5706">https://www.rfc-editor.org/rfc/rfc5706</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC6020">[RFC6020]</dt>
+      <dd>
+<span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"YANG - A Data Modeling Language for the Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6020</span>, <span class="seriesInfo">DOI 10.17487/RFC6020</span>, <time datetime="2010-10" class="refDate">October 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6020">https://www.rfc-editor.org/rfc/rfc6020</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC6241">[RFC6241]</dt>
       <dd>
 <span class="refAuthor">Enns, R., Ed.</span>, <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refAuthor">Schoenwaelder, J., Ed.</span>, and <span class="refAuthor">A. Bierman, Ed.</span>, <span class="refTitle">"Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6241</span>, <span class="seriesInfo">DOI 10.17487/RFC6241</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6241">https://www.rfc-editor.org/rfc/rfc6241</a>&gt;</span>. </dd>
@@ -2864,6 +2938,34 @@ and extend the tools to meet their specific needs.<a href="#section-4-4.5.1" cla
 <dt id="RFC7011">[RFC7011]</dt>
       <dd>
 <span class="refAuthor">Claise, B., Ed.</span>, <span class="refAuthor">Trammell, B., Ed.</span>, and <span class="refAuthor">P. Aitken</span>, <span class="refTitle">"Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information"</span>, <span class="seriesInfo">STD 77</span>, <span class="seriesInfo">RFC 7011</span>, <span class="seriesInfo">DOI 10.17487/RFC7011</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7011">https://www.rfc-editor.org/rfc/rfc7011</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7950">[RFC7950]</dt>
+      <dd>
+<span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"The YANG 1.1 Data Modeling Language"</span>, <span class="seriesInfo">RFC 7950</span>, <span class="seriesInfo">DOI 10.17487/RFC7950</span>, <time datetime="2016-08" class="refDate">August 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7950">https://www.rfc-editor.org/rfc/rfc7950</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8199">[RFC8199]</dt>
+      <dd>
+<span class="refAuthor">Bogdanovic, D.</span>, <span class="refAuthor">Claise, B.</span>, and <span class="refAuthor">C. Moberg</span>, <span class="refTitle">"YANG Module Classification"</span>, <span class="seriesInfo">RFC 8199</span>, <span class="seriesInfo">DOI 10.17487/RFC8199</span>, <time datetime="2017-07" class="refDate">July 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8199">https://www.rfc-editor.org/rfc/rfc8199</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8299">[RFC8299]</dt>
+      <dd>
+<span class="refAuthor">Wu, Q., Ed.</span>, <span class="refAuthor">Litkowski, S.</span>, <span class="refAuthor">Tomotaki, L.</span>, and <span class="refAuthor">K. Ogaki</span>, <span class="refTitle">"YANG Data Model for L3VPN Service Delivery"</span>, <span class="seriesInfo">RFC 8299</span>, <span class="seriesInfo">DOI 10.17487/RFC8299</span>, <time datetime="2018-01" class="refDate">January 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8299">https://www.rfc-editor.org/rfc/rfc8299</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8309">[RFC8309]</dt>
+      <dd>
+<span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Liu, W.</span>, and <span class="refAuthor">A. Farrel</span>, <span class="refTitle">"Service Models Explained"</span>, <span class="seriesInfo">RFC 8309</span>, <span class="seriesInfo">DOI 10.17487/RFC8309</span>, <time datetime="2018-01" class="refDate">January 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8309">https://www.rfc-editor.org/rfc/rfc8309</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8499">[RFC8499]</dt>
+      <dd>
+<span class="refAuthor">Hoffman, P.</span>, <span class="refAuthor">Sullivan, A.</span>, and <span class="refAuthor">K. Fujiwara</span>, <span class="refTitle">"DNS Terminology"</span>, <span class="seriesInfo">RFC 8499</span>, <span class="seriesInfo">DOI 10.17487/RFC8499</span>, <time datetime="2019-01" class="refDate">January 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8499">https://www.rfc-editor.org/rfc/rfc8499</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9182">[RFC9182]</dt>
+      <dd>
+<span class="refAuthor">Barguil, S.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Munoz, L.</span>, and <span class="refAuthor">A. Aguado</span>, <span class="refTitle">"A YANG Network Data Model for Layer 3 VPNs"</span>, <span class="seriesInfo">RFC 9182</span>, <span class="seriesInfo">DOI 10.17487/RFC9182</span>, <time datetime="2022-02" class="refDate">February 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9182">https://www.rfc-editor.org/rfc/rfc9182</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9291">[RFC9291]</dt>
+      <dd>
+<span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Barguil, S.</span>, and <span class="refAuthor">L. Munoz</span>, <span class="refTitle">"A YANG Network Data Model for Layer 2 VPNs"</span>, <span class="seriesInfo">RFC 9291</span>, <span class="seriesInfo">DOI 10.17487/RFC9291</span>, <time datetime="2022-09" class="refDate">September 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9291">https://www.rfc-editor.org/rfc/rfc9291</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="W3C.REC-xmlschema-0-20041028">[W3C.REC-xmlschema-0-20041028]</dt>
     <dd>
