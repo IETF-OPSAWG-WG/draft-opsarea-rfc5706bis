@@ -8,8 +8,8 @@
 *~
 /.*.mk
 /.gems/
+/.idea/
 /.refcache
-/.targets.mk
 /.venv/
 /.vscode/
 /*-[0-9][0-9].xml
