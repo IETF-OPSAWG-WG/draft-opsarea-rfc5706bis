@@ -6,7 +6,7 @@ opsarea                                                        B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 31 October 2025                                       A. Farrel
+Expires: 1 November 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,11 +16,11 @@ Expires: 31 October 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           29 April 2025
+                                                           30 April 2025
 
 
- Guidelines for Considering Operations and Management of New Protocols
-                        and Protocol Extensions
+      Guidelines for Considering Operations and Management in IETF
+                             Specifications
                     draft-opsarea-rfc5706bis-latest
 
 Abstract
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 October 2025.
+   This Internet-Draft will expire on 1 November 2025.
 
 Copyright Notice
 
