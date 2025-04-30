@@ -8,7 +8,7 @@ This is the working area for the individual Internet-Draft, "Guidelines for Cons
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-opsarea-rfc5706bis)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis)
 * [Compare Editor's Copy to Individual Draft](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-opsarea-rfc5706bis.diff)
-
+* [Compare I-D to RFC5706](https://author-tools.ietf.org/diff?doc_1=rfc5706&doc_2=draft-opsarea-rfc5706bis)
 
 ## Contributing
 
