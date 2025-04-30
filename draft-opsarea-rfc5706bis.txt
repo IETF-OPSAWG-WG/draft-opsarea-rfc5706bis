@@ -103,14 +103,15 @@ Table of Contents
        3.6.3.  Monitoring the Network
        3.6.4.  Monitoring the Service
      3.7.  Security Management
-   4.  Documentation Guidelines
-     4.1.  Recommended Discussions
-     4.2.  Null Manageability Considerations Sections
-     4.3.  Placement of Operations and Manageability Considerations
+   4.  Operational and Management Tooling Considerations
+   5.  Documentation Guidelines
+     5.1.  Recommended Discussions
+     5.2.  Null Manageability Considerations Sections
+     5.3.  Placement of Operations and Manageability Considerations
            Sections
-   5.  IANA Considerations
-   6.  Security Considerations
-   7.  Informative References
+   6.  IANA Considerations
+   7.  Security Considerations
+   8.  Informative References
    Appendix A.  Operations and Management Review Checklist
      A.1.  Operational Considerations
      A.2.  Management Considerations
@@ -1261,7 +1262,78 @@ Table of Contents
    Protocol designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
-4.  Documentation Guidelines
+4.  Operational and Management Tooling Considerations
+
+   The operational community's ability to effectively adopt and use new
+   specifications is significantly influenced by the availability and
+   adaptability of appropriate tooling.  In this context, "tools" refers
+   to software systems or utilities used by network operators to deploy,
+   configure, monitor, troubleshoot, and manage networks or network
+   protocols in real-world operational environments.  While the
+   introduction of a new specification does not automatically mandate
+   the development of entirely new tools, careful consideration must be
+   given to how existing tools can be leveraged or extended to support
+   the management and operation of these new specifications.
+
+   The [NEMOPS] workshop highlighted a consistent theme applicable
+   beyond network management protocols: the "ease of use" and
+   adaptability of existing tools are critical factors for successful
+   adoption.  Therefore, a new specification should provide examples
+   using existing, common tooling, or running code that demonstrate how
+   to perform key operational tasks.
+
+   Specifically, the following tooling-related aspects should be
+   considered, prioritizing the adaptation of existing tools:
+
+   *  Leveraging Existing Tooling: Before considering new tools, assess
+      whether existing tooling, such as monitoring systems, logging
+      platforms, configuration management systems, and/or orchestration
+      frameworks, can be adapted to support the new specification.  This
+      may involve developing plugins, modules, or drivers that enable
+      these tools to interact with the new specification.
+
+   *  Extending Existing Tools: Identify areas where existing tools can
+      be extended to provide the necessary visibility and control over
+      the new specification.  For example, if a new transport protocol
+      is introduced, consider whether existing network monitoring tools
+      can be extended to track its performance metrics or whether
+      existing security tools can be adapted to analyze its traffic
+      patterns.
+
+   *  New Tools: Only when existing tools are demonstrably inadequate
+      for managing and operating the elements of the new specification
+      should the development of new tools be considered.  In such cases,
+      carefully define the specific requirements for these new tools,
+      focusing on the functionalities that cannot be achieved through
+      adaptation or extension of existing solutions.
+
+   *  [IETF-HACKATHONS] for Manageability Testing: [IETF-HACKATHONS]
+      provide an opportunity to test the functionality,
+      interoperability, and manageability of new protocols.  These
+      events can be specifically leveraged to assess the operational
+      (including manageability) implications of a new protocol by
+      focusing tasks on:
+
+      -  Adapting existing tools to interact with the new specification.
+
+      -  Developing example management scripts or modules for existing
+         management platforms.
+
+      -  Testing the specification's behavior under various operational
+         conditions.
+
+      -  Identifying potential tooling gaps and areas for improvement.
+
+      -  Creating example flows and use cases for manageability.
+
+   *  Open-Source for Tooling: If new tools are deemed necessary, or if
+      significant adaptations to existing tools are required, prioritize
+      open-source development with community involvement.  Open-source
+      tools lower the barrier to entry, encourage collaboration, and
+      provide operators with the flexibility to customize and extend the
+      tools to meet their specific needs.
+
+5.  Documentation Guidelines
 
    This document is focused on what a protocol designer should think
    about and how those considerations might be documented.
@@ -1273,7 +1345,7 @@ Table of Contents
    like 'must' or 'should' needs to be interpreted only in the context
    of their natural, English-language meaning.
 
-4.1.  Recommended Discussions
+5.1.  Recommended Discussions
 
    A Manageability Considerations section should include discussion of
    the management and operations topics raised in this document, and
@@ -1287,7 +1359,7 @@ Table of Contents
    should consider how using existing protocols and data models might
    impact network operations.
 
-4.2.  Null Manageability Considerations Sections
+5.2.  Null Manageability Considerations Sections
 
    A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
@@ -1310,7 +1382,7 @@ Table of Contents
    considerations, it would be helpful to point out the considerations
    section in the base document.
 
-4.3.  Placement of Operations and Manageability Considerations Sections
+5.3.  Placement of Operations and Manageability Considerations Sections
 
    If a protocol designer develops a Manageability Considerations
    section for a new protocol, it is recommended that the section be
@@ -1319,11 +1391,11 @@ Table of Contents
    placement could simplify the development of tools to detect the
    presence of such a section.
 
-5.  IANA Considerations
+6.  IANA Considerations
 
    This document does not have any IANA actions required.
 
-6.  Security Considerations
+7.  Security Considerations
 
    This document is informational and provides guidelines for
    considering manageability and operations.  It introduces no new
@@ -1353,7 +1425,7 @@ Table of Contents
    could constitute a security vulnerability.  The management of
    security aspects is important (see Section 3.7).
 
-7.  Informative References
+8.  Informative References
 
    [I-D.ietf-netmod-rfc8407bis]
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
@@ -1362,6 +1434,17 @@ Table of Contents
               netmod-rfc8407bis-24, 18 April 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
               rfc8407bis-24>.
+
+   [IETF-HACKATHONS]
+              "IETF Hackathons", n.d.,
+              <https://www.ietf.org/meeting/hackathons/>.
+
+   [NEMOPS]   Hardaker, W. and D. Dhody, "Report from the IAB Workshop
+              on the Next Era of Network Management Operations
+              (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
+              nemops-workshop-report-01, 18 February 2025,
+              <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
+              workshop-report-01>.
 
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
