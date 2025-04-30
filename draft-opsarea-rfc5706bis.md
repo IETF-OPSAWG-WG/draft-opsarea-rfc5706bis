@@ -64,7 +64,7 @@ author:
    be considered.
 
    This document obsoletes RFC 5706, replacing it completely and updating
-   it to reflect up-to-date operational and management tools.
+   it to reflect up-to-date operational and management considerations.
 
 --- middle
 
@@ -81,7 +81,7 @@ author:
    extension at an earlier phase.
 
    This document obsoletes RFC 5706 and fully updates its content to
-   reflect current operational and management tools. It removes outdated
+   reflect current operational and management considerations. It removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing network devices and
    services. See Section 1.5.
