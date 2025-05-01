@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-29T00:46:24.531223+00:00",
+  "timestamp": "2025-05-01T00:53:21.260166+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -133,7 +133,7 @@
       "id": "I_kwDOOWPBqs6xqZiZ",
       "title": "More guidance on the importance of data models",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/3",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -142,8 +142,8 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:28Z",
-      "updatedAt": "2025-04-22T14:00:12Z",
-      "closedAt": null,
+      "updatedAt": "2025-04-30T20:20:43Z",
+      "closedAt": "2025-04-30T20:20:43Z",
       "comments": [
         {
           "author": "bclaise",
@@ -151,6 +151,13 @@
           "body": "Section 3.2 management of information. (and 3.2.1)\nDiscuss the service models\nhttps://datatracker.ietf.org/doc/rfc8309/\nhttps://datatracker.ietf.org/doc/rfc8199/",
           "createdAt": "2025-04-22T13:28:17Z",
           "updatedAt": "2025-04-22T13:28:17Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Author-reviewed text has been merged into main.",
+          "createdAt": "2025-04-30T20:20:43Z",
+          "updatedAt": "2025-04-30T20:20:43Z"
         }
       ]
     },
@@ -416,15 +423,15 @@
       "id": "I_kwDOOWPBqs6ySKnX",
       "title": "Update Title to better reflect the intent/scope",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/14",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Will suggest a PR to for discussion/further tweaking/etc.",
       "createdAt": "2025-04-13T07:39:19Z",
-      "updatedAt": "2025-04-13T07:39:19Z",
-      "closedAt": null,
+      "updatedAt": "2025-04-30T15:29:04Z",
+      "closedAt": "2025-04-30T15:29:04Z",
       "comments": []
     },
     {
@@ -474,6 +481,30 @@
       "updatedAt": "2025-04-24T04:27:24Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 25,
+      "id": "I_kwDOOWPBqs60tP0R",
+      "title": "To do list pointing to https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/25",
+      "state": "CLOSED",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "To do list pointing to https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues\nAnd, at the same time, taking care of the resolution in https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/23, which we will not close. ",
+      "createdAt": "2025-04-30T16:06:43Z",
+      "updatedAt": "2025-04-30T20:19:19Z",
+      "closedAt": "2025-04-30T20:19:19Z",
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Added in the draft with the following (Made the mistake to update directly the main .md)\n\nTO DO LIST\n\nSee the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues",
+          "createdAt": "2025-04-30T20:05:15Z",
+          "updatedAt": "2025-04-30T20:05:15Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -602,24 +633,26 @@
       "id": "PR_kwDOOWPBqs6SYvls",
       "title": "Update draft-opsarea-rfc5706bis.md",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/15",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-04-13T07:40:09Z",
-      "updatedAt": "2025-04-22T19:03:48Z",
+      "updatedAt": "2025-04-30T15:29:03Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "new-scope-new-title",
       "headRefOid": "64649bad1ff4cbea115768ec6cde9845757e42b5",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-04-30T15:29:03Z",
+      "mergedAt": "2025-04-30T15:29:03Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "6b691e68e519d6b20aa73966d56a90148b0d7043"
+      },
       "comments": [
         {
           "author": "boucadair",
@@ -691,24 +724,26 @@
       "id": "PR_kwDOOWPBqs6Sib9N",
       "title": "WIP: Add a section on tooling.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/17",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Highlight areas where existing tooling might need to be enhanced or new tooling might need to be introduced to facilitate the management and operations of new specifications.",
       "createdAt": "2025-04-14T19:23:39Z",
-      "updatedAt": "2025-04-26T19:09:16Z",
+      "updatedAt": "2025-04-30T15:57:47Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "tooling-text",
-      "headRefOid": "be20a3e84023c6cd4e8ffddd9a2531e718ea6c18",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "c815873982a9a5284fc46d3dc4ed55f9cbefac8d",
+      "closedAt": "2025-04-30T15:57:47Z",
+      "mergedAt": "2025-04-30T15:57:47Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "e99e6d792a45a9f5fdd2340c02be6acbdf6d0073"
+      },
       "comments": [],
       "reviews": [
         {
@@ -885,6 +920,26 @@
               "updatedAt": "2025-04-26T19:09:16Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6nV4BX",
+          "commit": {
+            "abbreviatedOid": "9d24518"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-30T15:38:06Z",
+          "updatedAt": "2025-04-30T15:38:07Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "All looks good to me. I believe it's good to merge.",
+              "createdAt": "2025-04-30T15:38:06Z",
+              "updatedAt": "2025-04-30T15:38:07Z"
+            }
+          ]
         }
       ]
     },
@@ -1001,18 +1056,26 @@
       "labels": [],
       "body": "* Take care of Issue #19 , by adding more text about obsoletion in the Abstract and Introduction\r\n* Build a framework for issue #1 by moving the Terminology (and Tech) to a different section. These are not introduction.\r\n* Add definition of OAM.",
       "createdAt": "2025-04-23T16:36:55Z",
-      "updatedAt": "2025-04-23T16:37:01Z",
+      "updatedAt": "2025-04-30T15:42:49Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-intro-and-terms",
-      "headRefOid": "0a8c1b7ab1e524fa2f1e4bb3e7f24a28d39620cf",
+      "headRefOid": "58838a429585cc46a3cc4df79aa0a900a46ac9a9",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "You mentioned twice \"operational and management tools\", like in \"replacing it completely and updating it to reflect up-to-date operational and management tools\"\r\nWhy tools? This seems confusing to me.\r\nCandidate \"operational and management considerations\"",
+          "createdAt": "2025-04-30T15:40:53Z",
+          "updatedAt": "2025-04-30T15:40:53Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -1020,24 +1083,26 @@
       "id": "PR_kwDOOWPBqs6T9H80",
       "title": "WIP: Add text on YANG for IM and importance of YANG data models",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/22",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Address #3 \r\n\r\n* Spell out that YANG is a recommendation for IMs\r\n* Describe the use of different types of YANG data models\r\n* Add references to RFCs 8199, 8309, and 8407",
       "createdAt": "2025-04-25T19:09:02Z",
-      "updatedAt": "2025-04-28T19:48:11Z",
+      "updatedAt": "2025-04-29T16:09:20Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "importance-of-data-models",
-      "headRefOid": "e9a7f78ccaac9b43b72308762df41a9320fe8508",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "ede49bf924a0339ba1eec98db1de2ed47a0ddfaa",
+      "closedAt": "2025-04-29T16:09:20Z",
+      "mergedAt": "2025-04-29T16:09:20Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "424a262459b7a87f2aa7458152bc0d90d55d9fe0"
+      },
       "comments": [
         {
           "author": "xorrkaz",
@@ -1217,6 +1282,264 @@
               "updatedAt": "2025-04-28T13:47:05Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6nDuMf",
+          "commit": {
+            "abbreviatedOid": "e9a7f78"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Please find some minor edits to the new version. Thanks, Joe. ",
+          "createdAt": "2025-04-29T09:42:42Z",
+          "updatedAt": "2025-04-29T09:48:54Z",
+          "comments": [
+            {
+              "originalPosition": 71,
+              "body": "```suggestion\r\n  may require or benefit from one or more of these YANG data model types.\r\n```",
+              "createdAt": "2025-04-29T09:42:42Z",
+              "updatedAt": "2025-04-29T09:48:54Z"
+            },
+            {
+              "originalPosition": 84,
+              "body": "```suggestion\r\n     these models are used to manage network-wide services such as VPNs and\r\n```\r\n\r\nor simply delete \"such VPN...\" as we provide examples right after.",
+              "createdAt": "2025-04-29T09:44:33Z",
+              "updatedAt": "2025-04-29T09:48:54Z"
+            },
+            {
+              "originalPosition": 86,
+              "body": "Not sure everyone will get what we mean by \"network controller applications\". Maybe a more verbose version: \"applications that interface with network controllers\" or similar.",
+              "createdAt": "2025-04-29T09:46:58Z",
+              "updatedAt": "2025-04-29T09:48:54Z"
+            },
+            {
+              "originalPosition": 93,
+              "body": "```suggestion\r\n     Service Level Agreement (SLA) and high-level policy (e.g., intents). Given that different\r\n```",
+              "createdAt": "2025-04-29T09:47:48Z",
+              "updatedAt": "2025-04-29T09:48:54Z"
+            },
+            {
+              "originalPosition": 97,
+              "body": "```suggestion\r\n     the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)\r\n```",
+              "createdAt": "2025-04-29T09:48:12Z",
+              "updatedAt": "2025-04-29T09:48:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6nH1ik",
+          "commit": {
+            "abbreviatedOid": "e9a7f78"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-29T14:18:38Z",
+          "updatedAt": "2025-04-29T14:18:38Z",
+          "comments": [
+            {
+              "originalPosition": 93,
+              "body": "I expanded this to \"network intent\".",
+              "createdAt": "2025-04-29T14:18:38Z",
+              "updatedAt": "2025-04-29T14:18:38Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6nH2fG",
+          "commit": {
+            "abbreviatedOid": "e9a7f78"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-29T14:19:08Z",
+          "updatedAt": "2025-04-29T14:19:09Z",
+          "comments": [
+            {
+              "originalPosition": 97,
+              "body": "Heh.  I always read these as L3SM and L2SM, which makes the article less needed.  But I agree with the overall improved readability.",
+              "createdAt": "2025-04-29T14:19:08Z",
+              "updatedAt": "2025-04-29T14:19:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6nIRbj",
+          "commit": {
+            "abbreviatedOid": "ede49bf"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-04-29T14:42:13Z",
+          "updatedAt": "2025-04-29T14:42:13Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "id": "PR_kwDOOWPBqs6UU-W1",
+      "title": "Offload appendix A to OPS-DIR",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/23",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-04-29T11:20:06Z",
+      "updatedAt": "2025-04-30T20:21:28Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "offload-reviewers-checklist",
+      "headRefOid": "fca98916ec7750913d52453f1c5ac71898fce585",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6nEx7r",
+          "commit": {
+            "abbreviatedOid": "2249f80"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-29T11:22:50Z",
+          "updatedAt": "2025-04-29T11:22:50Z",
+          "comments": [
+            {
+              "originalPosition": 31,
+              "body": "We may decide in the future if we live this mention or remove it completely. ",
+              "createdAt": "2025-04-29T11:22:50Z",
+              "updatedAt": "2025-04-29T11:22:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6nH9DS",
+          "commit": {
+            "abbreviatedOid": "2249f80"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-29T14:23:36Z",
+          "updatedAt": "2025-04-29T14:25:58Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Heh.  This will conflict with my tooling text.  Note to resolve.",
+              "createdAt": "2025-04-29T14:23:36Z",
+              "updatedAt": "2025-04-29T14:25:58Z"
+            },
+            {
+              "originalPosition": 12,
+              "body": "Rather than the raw, would it be better to publish this to a gist or a GitHub Page so it can be viewed with formatting?",
+              "createdAt": "2025-04-29T14:24:48Z",
+              "updatedAt": "2025-04-29T14:25:58Z"
+            },
+            {
+              "originalPosition": 31,
+              "body": "For now, it's probably good to leave it and perhaps a comment to review this checklist in the light of the final 5607bis text to ensure it is up-to-date.",
+              "createdAt": "2025-04-29T14:25:53Z",
+              "updatedAt": "2025-04-29T14:25:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6nIHEz",
+          "commit": {
+            "abbreviatedOid": "2249f80"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-29T14:31:00Z",
+          "updatedAt": "2025-04-29T14:31:00Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "You will see when you will merge :-)",
+              "createdAt": "2025-04-29T14:31:00Z",
+              "updatedAt": "2025-04-29T14:31:00Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6nZBO-",
+          "commit": {
+            "abbreviatedOid": "2249f80"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-04-30T20:21:27Z",
+          "updatedAt": "2025-04-30T20:21:28Z",
+          "comments": [
+            {
+              "originalPosition": 209,
+              "body": " I would re-insert this text above, for completeness, for now.",
+              "createdAt": "2025-04-30T20:21:28Z",
+              "updatedAt": "2025-04-30T20:21:28Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "id": "PR_kwDOOWPBqs6UckZB",
+      "title": "Diff to track changes vs RFC5706",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/24",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "a readily available link to track the changes",
+      "createdAt": "2025-04-30T05:41:27Z",
+      "updatedAt": "2025-04-30T15:53:42Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "424a262459b7a87f2aa7458152bc0d90d55d9fe0",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Diff-to-track-changes-vs-RFC5706",
+      "headRefOid": "6cb5aa9b6179f7f8a1dcd00ff308072276f541c5",
+      "closedAt": "2025-04-30T15:53:42Z",
+      "mergedAt": "2025-04-30T15:53:42Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "8dd41f739362ebc920c589f05cc064828042778b"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6nT7CN",
+          "commit": {
+            "abbreviatedOid": "6cb5aa9"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "I think you should set:\r\n\r\n`<!-- regenerate: off -->`\r\n\r\nIn the header to prevent this from being overwritten.",
+          "createdAt": "2025-04-30T13:14:48Z",
+          "updatedAt": "2025-04-30T13:14:48Z",
+          "comments": []
         }
       ]
     }
