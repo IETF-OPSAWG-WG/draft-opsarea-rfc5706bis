@@ -147,7 +147,7 @@ Table of Contents
    Considerations” section in new Internet-Drafts.  It removes outdated
    eferences and aligns with current practices, protocols, and
    technologies used in operating and managing network devices and
-   services.  See Section 1.5.
+   services.  See Section 2.5.
 
 2.1.  Designing for Operations and Management
 
