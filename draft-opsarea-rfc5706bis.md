@@ -4,7 +4,7 @@ abbrev: Operations & Management Guidelines
 docname: draft-opsarea-rfc5706bis-latest
 
 
-stand_alone: true
+stand_alone: trueFer
 ipr: trust200902
 area: "Operations and Management"
 wg: opsarea
@@ -95,7 +95,7 @@ author:
    with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
    Considerations” section in new Internet-Drafts. It removes outdated
-   eferences and aligns with current practices, protocols, and
+   references and aligns with current practices, protocols, and
    technologies used in operating and managing network devices and
    services. See {{changes-since-5706}}.
 
@@ -304,17 +304,21 @@ author:
    The IETF has a number of standard management protocols available that
    are suitable for different purposes.  These include:
 
+   *  Syslog {{?RFC5424}}
+
    *  Simple Network Management Protocol - SNMP {{?RFC3410}}
 
-   *  Syslog {{?RFC5424}}
+   *  Network Configuration Protocol - NETCONF {{?RFC6241}}
+
+   *  RESTCONF {{?RFC8040}}
 
    *  Remote Authentication Dial-In User Service - RADIUS {{?RFC2865}}
 
    *  DIAMETER {{?RFC6733}}
 
-   *  Network Configuration Protocol - NETCONF {{?RFC6241}}
-
    *  IP Flow Information Export - IPFIX {{?RFC7011}}
+
+   *  BGP Monitoring Protocol - BMP {{?RFC7854}}
 
    A planned supplement to this document will discuss these protocol
    standards, discuss some standard information and data models for
