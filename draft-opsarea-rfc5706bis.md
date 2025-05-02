@@ -1,19 +1,18 @@
 ---
 title: Guidelines for Considering Operations and Management in IETF Specifications
-abbrev: Operations & Management Guidelines
+abbrev: Operations & Management Considerations
 docname: draft-opsarea-rfc5706bis-latest
 
 
 stand_alone: true
 ipr: trust200902
 area: "Operations and Management"
-wg: opsarea
+wg:
 kw:
-  - Internet-Draft
   - management
   - operations
   - operations and management
-  - ops guidelines
+  - ops considerations
 cat: bcp
 obsoletes: 5706
 submissiontype: IETF
@@ -25,6 +24,9 @@ informative:
   IETF-HACKATHONS:
     target: https://www.ietf.org/meeting/hackathons/
     title: IETF Hackathons
+    author:
+    - org: IETF
+    date: 2025-05-01
 
 author:
  -
@@ -75,7 +77,7 @@ author:
 #  TO DO LIST
 
    See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
-   
+
 #  Introduction
 
    Often when new protocols or protocol extensions are developed, not
@@ -1261,7 +1263,8 @@ Information Models and Data Models
      on the functionalities that cannot be achieved through adaptation or
      extension of existing solutions.
 
-  *  {{IETF-HACKATHONS}} for Manageability Testing: {{IETF-HACKATHONS}}
+  *  IETF Hackathons for Manageability Testing:
+     IETF Hackathons {{IETF-HACKATHONS}}
      provide an opportunity to test the functionality, interoperability,
      and manageability of new protocols. These events can be specifically
      leveraged to assess the operational (including manageability) implications
