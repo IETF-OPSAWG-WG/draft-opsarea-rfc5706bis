@@ -4,7 +4,7 @@ abbrev: Operations & Management Guidelines
 docname: draft-opsarea-rfc5706bis-latest
 
 
-stand_alone: trueFer
+stand_alone: true
 ipr: trust200902
 area: "Operations and Management"
 wg: opsarea
