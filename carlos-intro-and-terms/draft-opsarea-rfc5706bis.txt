@@ -6,7 +6,7 @@ opsarea                                                        B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 1 November 2025                                       A. Farrel
+Expires: 3 November 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 1 November 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           30 April 2025
+                                                              2 May 2025
 
 
  Guidelines for Considering Operations and Management of New Protocols
@@ -34,8 +34,9 @@ Abstract
    be considered.
 
    This document obsoletes RFC 5706, replacing it completely and
-   updating it to reflect up-to-date operational and management
-   considerations.
+   updating it with new operational and management techniques and
+   mechanisms, and introduces a requirement for an “Operational and
+   Management Considerations” section in new Internet-Drafts.
 
 Status of This Memo
 
@@ -52,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 November 2025.
+   This Internet-Draft will expire on 3 November 2025.
 
 Copyright Notice
 
@@ -132,11 +133,13 @@ Table of Contents
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
-   This document obsoletes RFC 5706 and fully updates its content to
-   reflect current operational and management considerations.  It
-   removes outdated references and aligns with current practices,
-   protocols, and technologies used in operating and managing network
-   devices and services.  See Section 1.5.
+   This document obsoletes RFC 5706 and fully updates its content with
+   new operational and management techniques and mechanisms, and
+   introduces a requirement for an “Operational and Management
+   Considerations” section in new Internet-Drafts.  It removes outdated
+   eferences and aligns with current practices, protocols, and
+   technologies used in operating and managing network devices and
+   services.  See Section 1.5.
 
 1.1.  Designing for Operations and Management
 
