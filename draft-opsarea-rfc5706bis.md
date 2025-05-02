@@ -97,7 +97,7 @@ author:
    Considerations” section in new Internet-Drafts. It removes outdated
    eferences and aligns with current practices, protocols, and
    technologies used in operating and managing network devices and
-   services. See Section 1.5.
+   services. See {{changes-since-5706}}.
 
 ##  Designing for Operations and Management
 
@@ -252,7 +252,7 @@ author:
    documents attempt to provide some guidelines for navigating the
    rapidly shifting operating and management environments.
 
-## Changes Since RFC 5706
+## Changes Since RFC 5706 {#changes-since-5706}
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
