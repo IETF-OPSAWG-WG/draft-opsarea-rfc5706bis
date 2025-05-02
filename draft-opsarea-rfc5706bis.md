@@ -1,5 +1,5 @@
 ---
-title: Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions
+title: Guidelines for Considering Operations and Management in IETF Specifications
 abbrev: Operations & Management Guidelines
 docname: draft-opsarea-rfc5706bis-latest
 
@@ -20,6 +20,11 @@ submissiontype: IETF
 
 coding: utf-8
 pi: [toc, sortrefs, symrefs]
+
+informative:
+  IETF-HACKATHONS:
+    target: https://www.ietf.org/meeting/hackathons/
+    title: IETF Hackathons
 
 author:
  -
@@ -70,6 +75,10 @@ author:
 
 --- middle
 
+#  TO DO LIST
+
+   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
+   
 #  Introduction
 
    Often when new protocols or protocol extensions are developed, not
@@ -175,7 +184,7 @@ author:
 
    This document provides some initial guidelines for considering
    operations and management in an IETF Management Framework that
-   consists of multiple protocols and multiple data-modeling languages,
+   consists of multiple protocols and multiple data modeling languages,
    with an eye toward being flexible while also striving for
    interoperability.
 
@@ -710,12 +719,22 @@ Information Models and Data Models
 ##  Management Information {#sec-mgt-info}
 
    Languages used to describe an information model can influence the
-   nature of the model.  Using a particular data-modeling language, such
-   as the SMIv2, influences the model to use certain types of
-   structures, such as two-dimensional tables.  This document recommends
-   using English text (the official language for IETF specifications) to
-   describe an information model.  A sample data model could be
-   developed to demonstrate the information model.
+   nature of the model. Using a particular data modeling language, such
+   as YANG, influences the model to use certain types of structures, for
+   example, hierarchical trees, groupings, and reusable types.
+   YANG, as described in {{?RFC6020}} and {{?RFC7950}}, provides advantages
+   for expressing network information, including clear separation of
+   configuration data and operational state, support for constraints and
+   dependencies, and extensibility for evolving requirements. Its ability
+   to represent relationships and dependencies in a structured and modular
+   way makes it an effective choice for defining management information
+   models.
+
+   Although this document recommends using English text (the official
+   language for IETF specifications) to describe an information model,
+   including a complementary YANG module helps translate abstract concepts
+   into implementation-specific data models. This ensures consistency between
+   the high-level design and practical deployment.
 
    A management information model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
@@ -746,11 +765,12 @@ Information Models and Data Models
    object, or may it relate to multiple?  When is it possible to change a
    relationship?
 
-   Do objects (such as rows in tables) share fate?  For example, if a
-   row in table A must exist before a related row in table B can be
-   created, what happens to the row in table B if the related row in
-   table A is deleted?  Does the existence of relationships between
-   objects have an impact on fate sharing?
+   Do objects (such as instances in lists) share fate?  For example, if an
+   instance in list A must exist before a related instance in list B can be
+   created, what happens to the instance in list B if the related instance in
+   list A is deleted?  Does the existence of relationships between
+   objects have an impact on fate sharing?  YANG's relationships and
+   constraints can help express and enforce these relationships.
 
 ###  Information Model Design {#sec-im-design}
 
@@ -771,6 +791,48 @@ Information Models and Data Models
 
    6.  Avoid causing critical sections to be heavily instrumented.  A
        guideline is one counter per critical section per layer.
+
+   7.  When using YANG to complement or define an information model,
+       ensure that the model maintains simplicity, modularity, and
+       clarity.  Specific guidelines to consider when authoring YANG
+       modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
+
+### YANG Data Model Considerations {#sec-yang-dm}
+
+  When considering YANG data models for a new specification, there
+  are multiple types of data models that may be applicable.  The
+  hierarchy and relationship between these types is described in
+  {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}.  A new specification
+  may require or benefit from one or more of these YANG data model types.
+
+  *  Device Models - Also called Network Element Models,
+     represent the configuration, operational state, and notifications of
+     individual devices.  These models are designed to distinguish
+     between these types of data and support querying and updating
+     device-specific parameters.  Consideration should be given to
+     how device-level models might fit with broader network and
+     service data models.
+
+  *  Network Models - Also called Network Service Models, define abstractions
+     for managing the behavior and relationships of multiple devices
+     and device subsystems within a network.  As described in {{?RFC8199}},
+     these models are used to manage network-wide.  These abstractions are
+     useful to network operators and applications that interface with network
+     controllers.  Examples of network models include the L3VPN Network Model
+     (L3NM) {{?RFC9182}} and the L2VPN Network Model (L2VPN) {{?RFC9291}}.
+
+  *  Service Models - Also called Customer Service Models,
+     defined in {{?RFC8309}}, are designed to abstract the customer interface
+     into a service.  They consider customer-centric parameters such as
+     Service Level Agreement (SLA) and high-level policy (e.g., network intent).
+     Given that different operators and different customers may have widely-varying
+     business processes, these models should focus on common aspects of a service
+     with strong multi-party consensus.  Examples of service models include
+     the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)
+     {{?RFC8499}}.
+
+  Specific guidelines to consider when authoring any type of YANG
+  modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
 
 ## Fault Management {#sec-fm-mgt}
 
@@ -1167,6 +1229,69 @@ Information Models and Data Models
    sometimes data-oriented or task-oriented approaches make more sense.
    Protocol designers should consider both data-oriented and task-
    oriented authority levels and policy.
+
+# Operational and Management Tooling Considerations {#sec-oandm-tooling}
+
+   The operational community's ability to effectively adopt and
+   use new specifications is significantly influenced by the availability
+   and adaptability of appropriate tooling. In this context, "tools" refers
+   to software systems or utilities used by network operators to deploy,
+   configure, monitor, troubleshoot, and manage networks or network protocols
+   in real-world operational environments. While the introduction of a new
+   specification does not automatically mandate the development of entirely
+   new tools, careful consideration must be given to how existing tools can be
+   leveraged or extended to support the management and operation of these new
+   specifications.
+
+   The {{?NEMOPS=I-D.iab-nemops-workshop-report}} workshop highlighted a
+   consistent theme applicable beyond network management protocols: the
+   "ease of use" and adaptability of existing tools are critical factors
+   for successful adoption. Therefore, a new specification should provide
+   examples using existing, common tooling, or running code that demonstrate
+   how to perform key operational tasks.
+
+   Specifically, the following tooling-related aspects should be considered,
+   prioritizing the adaptation of existing tools:
+
+   *  Leveraging Existing Tooling: Before considering new tools, assess whether
+      existing tooling, such as monitoring systems, logging platforms,
+      configuration management systems, and/or orchestration frameworks, can be
+      adapted to support the new specification. This may involve developing
+      plugins, modules, or drivers that enable these tools to interact with
+      the new specification.
+
+  *  Extending Existing Tools: Identify areas where existing tools can be
+     extended to provide the necessary visibility and control over the new
+     specification. For example, if a new transport protocol is introduced,
+     consider whether existing network monitoring tools can be extended to
+     track its performance metrics or whether existing security tools can be
+     adapted to analyze its traffic patterns.
+
+  *  New Tools: Only when existing tools are demonstrably
+     inadequate for managing and operating the elements of the new specification
+     should the development of new tools be considered. In such cases,
+     carefully define the specific requirements for these new tools, focusing
+     on the functionalities that cannot be achieved through adaptation or
+     extension of existing solutions.
+
+  *  {{IETF-HACKATHONS}} for Manageability Testing: {{IETF-HACKATHONS}}
+     provide an opportunity to test the functionality, interoperability,
+     and manageability of new protocols. These events can be specifically
+     leveraged to assess the operational (including manageability) implications
+     of a new protocol by focusing tasks on:
+
+     *  Adapting existing tools to interact with the new specification.
+     *  Developing example management scripts or modules for existing management
+        platforms.
+     *  Testing the specification's behavior under various operational conditions.
+     *  Identifying potential tooling gaps and areas for improvement.
+     *  Creating example flows and use cases for manageability.
+
+  *  Open-Source for Tooling: If new tools are deemed necessary, or if significant
+     adaptations to existing tools are required, prioritize open-source development
+     with community involvement. Open-source tools lower the barrier to entry,
+     encourage collaboration, and provide operators with the flexibility to customize
+     and extend the tools to meet their specific needs.
 
 #  Documentation Guidelines
 
