@@ -78,7 +78,7 @@ author:
 #  TO DO LIST
 
    See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
-   
+
 #  Introduction
 
    Often when new protocols or protocol extensions are developed, not
