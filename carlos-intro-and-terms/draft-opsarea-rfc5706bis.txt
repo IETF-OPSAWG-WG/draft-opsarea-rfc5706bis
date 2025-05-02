@@ -145,7 +145,7 @@ Table of Contents
    new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
    Considerations” section in new Internet-Drafts.  It removes outdated
-   eferences and aligns with current practices, protocols, and
+   references and aligns with current practices, protocols, and
    technologies used in operating and managing network devices and
    services.  See Section 2.5.
 
@@ -356,17 +356,21 @@ Table of Contents
    The IETF has a number of standard management protocols available that
    are suitable for different purposes.  These include:
 
+   *  Syslog [RFC5424]
+
    *  Simple Network Management Protocol - SNMP [RFC3410]
 
-   *  Syslog [RFC5424]
+   *  Network Configuration Protocol - NETCONF [RFC6241]
+
+   *  RESTCONF [RFC8040]
 
    *  Remote Authentication Dial-In User Service - RADIUS [RFC2865]
 
    *  DIAMETER [RFC6733]
 
-   *  Network Configuration Protocol - NETCONF [RFC6241]
-
    *  IP Flow Information Export - IPFIX [RFC7011]
+
+   *  BGP Monitoring Protocol - BMP [RFC7854]
 
    A planned supplement to this document will discuss these protocol
    standards, discuss some standard information and data models for
@@ -1629,9 +1633,18 @@ Table of Contents
               RFC 7011, DOI 10.17487/RFC7011, September 2013,
               <https://www.rfc-editor.org/rfc/rfc7011>.
 
+   [RFC7854]  Scudder, J., Ed., Fernando, R., and S. Stuart, "BGP
+              Monitoring Protocol (BMP)", RFC 7854,
+              DOI 10.17487/RFC7854, June 2016,
+              <https://www.rfc-editor.org/rfc/rfc7854>.
+
    [RFC7950]  Bjorklund, M., Ed., "The YANG 1.1 Data Modeling Language",
               RFC 7950, DOI 10.17487/RFC7950, August 2016,
               <https://www.rfc-editor.org/rfc/rfc7950>.
+
+   [RFC8040]  Bierman, A., Bjorklund, M., and K. Watsen, "RESTCONF
+              Protocol", RFC 8040, DOI 10.17487/RFC8040, January 2017,
+              <https://www.rfc-editor.org/rfc/rfc8040>.
 
    [RFC8199]  Bogdanovic, D., Claise, B., and C. Moberg, "YANG Module
               Classification", RFC 8199, DOI 10.17487/RFC8199, July

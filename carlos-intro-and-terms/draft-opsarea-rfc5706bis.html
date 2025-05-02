@@ -1386,7 +1386,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
    Considerations” section in new Internet-Drafts. It removes outdated
-   eferences and aligns with current practices, protocols, and
+   references and aligns with current practices, protocols, and
    technologies used in operating and managing network devices and
    services. See <a href="#changes-since-5706" class="auto internal xref">Section 2.5</a>.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <div id="designing-for-operations-and-management">
@@ -1624,22 +1624,28 @@ involved in the development of new protocols or extensions.<a href="#section-3.1
    are suitable for different purposes.  These include:<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.2-2.1">
-            <p id="section-3.2-2.1.1">Simple Network Management Protocol - SNMP <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span><a href="#section-3.2-2.1.1" class="pilcrow">¶</a></p>
+            <p id="section-3.2-2.1.1">Syslog <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span><a href="#section-3.2-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-2.2">
-            <p id="section-3.2-2.2.1">Syslog <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span><a href="#section-3.2-2.2.1" class="pilcrow">¶</a></p>
+            <p id="section-3.2-2.2.1">Simple Network Management Protocol - SNMP <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span><a href="#section-3.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-2.3">
-            <p id="section-3.2-2.3.1">Remote Authentication Dial-In User Service - RADIUS <span>[<a href="#RFC2865" class="cite xref">RFC2865</a>]</span><a href="#section-3.2-2.3.1" class="pilcrow">¶</a></p>
+            <p id="section-3.2-2.3.1">Network Configuration Protocol - NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span><a href="#section-3.2-2.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-2.4">
-            <p id="section-3.2-2.4.1">DIAMETER <span>[<a href="#RFC6733" class="cite xref">RFC6733</a>]</span><a href="#section-3.2-2.4.1" class="pilcrow">¶</a></p>
+            <p id="section-3.2-2.4.1">RESTCONF <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span><a href="#section-3.2-2.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-2.5">
-            <p id="section-3.2-2.5.1">Network Configuration Protocol - NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span><a href="#section-3.2-2.5.1" class="pilcrow">¶</a></p>
+            <p id="section-3.2-2.5.1">Remote Authentication Dial-In User Service - RADIUS <span>[<a href="#RFC2865" class="cite xref">RFC2865</a>]</span><a href="#section-3.2-2.5.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-2.6">
-            <p id="section-3.2-2.6.1">IP Flow Information Export - IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span><a href="#section-3.2-2.6.1" class="pilcrow">¶</a></p>
+            <p id="section-3.2-2.6.1">DIAMETER <span>[<a href="#RFC6733" class="cite xref">RFC6733</a>]</span><a href="#section-3.2-2.6.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.7">
+            <p id="section-3.2-2.7.1">IP Flow Information Export - IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span><a href="#section-3.2-2.7.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.8">
+            <p id="section-3.2-2.8.1">BGP Monitoring Protocol - BMP <span>[<a href="#RFC7854" class="cite xref">RFC7854</a>]</span><a href="#section-3.2-2.8.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-3.2-3">A planned supplement to this document will discuss these protocol
@@ -2985,9 +2991,17 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
       <dd>
 <span class="refAuthor">Claise, B., Ed.</span>, <span class="refAuthor">Trammell, B., Ed.</span>, and <span class="refAuthor">P. Aitken</span>, <span class="refTitle">"Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information"</span>, <span class="seriesInfo">STD 77</span>, <span class="seriesInfo">RFC 7011</span>, <span class="seriesInfo">DOI 10.17487/RFC7011</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7011">https://www.rfc-editor.org/rfc/rfc7011</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC7854">[RFC7854]</dt>
+      <dd>
+<span class="refAuthor">Scudder, J., Ed.</span>, <span class="refAuthor">Fernando, R.</span>, and <span class="refAuthor">S. Stuart</span>, <span class="refTitle">"BGP Monitoring Protocol (BMP)"</span>, <span class="seriesInfo">RFC 7854</span>, <span class="seriesInfo">DOI 10.17487/RFC7854</span>, <time datetime="2016-06" class="refDate">June 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7854">https://www.rfc-editor.org/rfc/rfc7854</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC7950">[RFC7950]</dt>
       <dd>
 <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"The YANG 1.1 Data Modeling Language"</span>, <span class="seriesInfo">RFC 7950</span>, <span class="seriesInfo">DOI 10.17487/RFC7950</span>, <time datetime="2016-08" class="refDate">August 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7950">https://www.rfc-editor.org/rfc/rfc7950</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8040">[RFC8040]</dt>
+      <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Bjorklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"RESTCONF Protocol"</span>, <span class="seriesInfo">RFC 8040</span>, <span class="seriesInfo">DOI 10.17487/RFC8040</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8040">https://www.rfc-editor.org/rfc/rfc8040</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8199">[RFC8199]</dt>
       <dd>
