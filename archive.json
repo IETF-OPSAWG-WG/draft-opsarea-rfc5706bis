@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-01T00:53:21.260166+00:00",
+  "timestamp": "2025-05-04T00:53:16.747409+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -112,11 +112,13 @@
       "state": "OPEN",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
-      "assignees": [],
+      "assignees": [
+        "Ranchen666"
+      ],
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:15Z",
-      "updatedAt": "2025-04-24T03:10:26Z",
+      "updatedAt": "2025-05-01T07:59:58Z",
       "closedAt": null,
       "comments": [
         {
@@ -386,11 +388,13 @@
       "state": "OPEN",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "cpignata"
+      ],
       "labels": [],
       "body": "The ideal end goal to have \"Operations and Manageability Considerations\" section(s) all IETF drafts. As Med mentioned on the OPSAWG mailing list: \"We need to find the right balance between providing clear guidance while avoiding some rigidity. We will explore that path together with other areas.\"\n",
       "createdAt": "2025-04-09T13:25:38Z",
-      "updatedAt": "2025-04-22T13:12:50Z",
+      "updatedAt": "2025-05-02T02:27:53Z",
       "closedAt": null,
       "comments": [
         {
@@ -410,11 +414,13 @@
       "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "boucadair"
+      ],
       "labels": [],
       "body": "The organization of the folder may not be friendly for contributors/reviewers as you have a bunch of files. You may consider keeping only the md file and follow the template at https://github.com/martinthomson/internet-draft-template to automatically build/validate the draft, including httml/txt/xml/rendering. \n\n",
       "createdAt": "2025-04-11T04:58:22Z",
-      "updatedAt": "2025-04-11T18:55:59Z",
+      "updatedAt": "2025-05-01T08:03:06Z",
       "closedAt": "2025-04-11T18:55:59Z",
       "comments": []
     },
@@ -426,11 +432,13 @@
       "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "boucadair"
+      ],
       "labels": [],
       "body": "Will suggest a PR to for discussion/further tweaking/etc.",
       "createdAt": "2025-04-13T07:39:19Z",
-      "updatedAt": "2025-04-30T15:29:04Z",
+      "updatedAt": "2025-05-01T08:02:48Z",
       "closedAt": "2025-04-30T15:29:04Z",
       "comments": []
     },
@@ -442,11 +450,14 @@
       "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
-      "assignees": [],
+      "assignees": [
+        "cpignata",
+        "xorrkaz"
+      ],
       "labels": [],
       "body": "This paragraph was flagged (albeit incorrectly) for errata (Section 3.6.1):\n\n\"The protocol document should make clear the limitations implicit\nwithin the protocol and the behavior when limits are exceeded.  This\nshould be considered in a data-modeling-independent manner -- what\nmakes managed-protocol sense, not what makes management-protocol-\nsense.\"\n\nIf this is left in the final document, differentiating between the protocol or specification to be managed and the protocol doing the management should be clearer.",
       "createdAt": "2025-04-14T18:06:44Z",
-      "updatedAt": "2025-04-22T19:02:09Z",
+      "updatedAt": "2025-05-02T00:45:17Z",
       "closedAt": "2025-04-22T19:02:09Z",
       "comments": []
     },
@@ -458,11 +469,13 @@
       "state": "OPEN",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "cpignata"
+      ],
       "labels": [],
       "body": "The Abstract needs to add a few more words to the bold statement:\n   This document obsoletes RFC 5706.\nSomething like:\n   This document obsoletes RFC 5706, replacing it completely and updating it to reflect up-to-date management and operational tools.\n\nThe Introduction (i.e., the text in section 1, not the subsections) needs to contain similar text although it can have more words and a pointer to section 1.7",
       "createdAt": "2025-04-22T13:14:55Z",
-      "updatedAt": "2025-04-22T13:14:55Z",
+      "updatedAt": "2025-05-02T00:36:18Z",
       "closedAt": null,
       "comments": []
     },
@@ -490,11 +503,13 @@
       "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "bclaise"
+      ],
       "labels": [],
       "body": "To do list pointing to https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues\nAnd, at the same time, taking care of the resolution in https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/23, which we will not close. ",
       "createdAt": "2025-04-30T16:06:43Z",
-      "updatedAt": "2025-04-30T20:19:19Z",
+      "updatedAt": "2025-05-01T08:02:31Z",
       "closedAt": "2025-04-30T20:19:19Z",
       "comments": [
         {
@@ -505,6 +520,50 @@
           "updatedAt": "2025-04-30T20:05:15Z"
         }
       ]
+    },
+    {
+      "number": 26,
+      "id": "I_kwDOOWPBqs605hUT",
+      "title": "Perform an end-to-end editorial and RFC-style review and update",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/26",
+      "state": "CLOSED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Perform an end-to-end editorial and RFC-style review and update ",
+      "createdAt": "2025-05-02T00:58:06Z",
+      "updatedAt": "2025-05-02T00:59:08Z",
+      "closedAt": "2025-05-02T00:59:07Z",
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closed with #11 ",
+          "createdAt": "2025-05-02T00:59:07Z",
+          "updatedAt": "2025-05-02T00:59:07Z"
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "id": "I_kwDOOWPBqs605hqK",
+      "title": "Update the abbreviated Title and review the md header",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/27",
+      "state": "CLOSED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Check abbreviated title, wg, area, keywords, etc.",
+      "createdAt": "2025-05-02T01:00:01Z",
+      "updatedAt": "2025-05-02T13:56:13Z",
+      "closedAt": "2025-05-02T13:56:13Z",
+      "comments": []
     }
   ],
   "pulls": [
@@ -552,11 +611,13 @@
       "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "cpignata"
+      ],
       "labels": [],
       "body": "First pass of updates, including editorials and various fixes.\r\n* Updated Carlos' contact\r\n* Updated the abbreviated title and keywords\r\n* Updated references that were outdated, including W3C's\r\n* Corrected several bulleted lists and **bold**\r\n* Fixed a few grammos\r\n* Fixed figure alignment\r\n* Added an IANA Considerations section\r\n* Fixed reference in the Acks.\r\n* Removed W3C's reference in YAML header and leave the one inline.\r\n* Added text and html targets to the repo.",
       "createdAt": "2025-04-10T02:22:53Z",
-      "updatedAt": "2025-04-10T15:14:58Z",
+      "updatedAt": "2025-05-02T00:53:36Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "efb71190a2d137503a46436659cd34041e9c6be2",
@@ -1056,13 +1117,13 @@
       "labels": [],
       "body": "* Take care of Issue #19 , by adding more text about obsoletion in the Abstract and Introduction\r\n* Build a framework for issue #1 by moving the Terminology (and Tech) to a different section. These are not introduction.\r\n* Add definition of OAM.",
       "createdAt": "2025-04-23T16:36:55Z",
-      "updatedAt": "2025-04-30T15:42:49Z",
+      "updatedAt": "2025-05-02T10:01:29Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
+      "baseRefOid": "8d4cb736b0eaf5f57eaddf3bdef67f0b863593d5",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-intro-and-terms",
-      "headRefOid": "58838a429585cc46a3cc4df79aa0a900a46ac9a9",
+      "headRefOid": "b6a2db83756c941ce4bc72b2f71efdffe2f52cb0",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1074,9 +1135,37 @@
           "body": "You mentioned twice \"operational and management tools\", like in \"replacing it completely and updating it to reflect up-to-date operational and management tools\"\r\nWhy tools? This seems confusing to me.\r\nCandidate \"operational and management considerations\"",
           "createdAt": "2025-04-30T15:40:53Z",
           "updatedAt": "2025-04-30T15:40:53Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "How do we want to call that new mandatory section? From https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/9,  I thought we agreed on \"Operations and Manageability Consideration\" section.\r\nSo we might want to distinguish the section name from its content. To me, \"techniques and mechanisms\" is more the content of the section.\r\n\r\nWe might want to make it clear.\r\nFrom: \"This document obsoletes RFC 5706, replacing it completely and updating it to reflect up-to-date operational and management considerations.\"\r\n\r\nTo: \"This document obsoletes RFC 5706, replacing it completely and updating it with new operational & management techniques and mechanism, in order to mandate a \"operational and management considerations\" section in new IETF draft. ",
+          "createdAt": "2025-05-01T09:46:43Z",
+          "updatedAt": "2025-05-01T09:46:43Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@bclaise , how about now?",
+          "createdAt": "2025-05-02T00:19:44Z",
+          "updatedAt": "2025-05-02T00:19:44Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6nc2Gk",
+          "commit": {
+            "abbreviatedOid": "58838a4"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Sorry I suggested \"tools\".\r\n\"Considerations\" is too weak. It means nothing!\r\nHow about \"techniques and mechanisms\"?",
+          "createdAt": "2025-05-01T08:30:10Z",
+          "updatedAt": "2025-05-01T08:30:10Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 22,
@@ -1394,7 +1483,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-29T11:20:06Z",
-      "updatedAt": "2025-04-30T20:21:28Z",
+      "updatedAt": "2025-05-01T23:40:06Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
@@ -1498,6 +1587,19 @@
               "updatedAt": "2025-04-30T20:21:28Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6ni4aZ",
+          "commit": {
+            "abbreviatedOid": "fca9891"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "The changes look good.\r\nI do have a general question, and bringing it up here before proposing text.\r\nAn important aspect is the ownership and editoriability of CHECKLIST. It's moving from RFC process to OpsDir ownership. \r\nWe should mention that, and link to https://datatracker.ietf.org/group/opsdir/about/\r\nI think. Thoughts?",
+          "createdAt": "2025-05-01T23:40:06Z",
+          "updatedAt": "2025-05-01T23:40:06Z",
+          "comments": []
         }
       ]
     },
@@ -1542,6 +1644,44 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 28,
+      "id": "PR_kwDOOWPBqs6Us_zF",
+      "title": "abbrev, wg, kw, and hackathon mods",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/28",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Fixes #27 ",
+      "createdAt": "2025-05-02T02:22:02Z",
+      "updatedAt": "2025-05-02T13:56:12Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "8d4cb736b0eaf5f57eaddf3bdef67f0b863593d5",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-header",
+      "headRefOid": "cfad79c1387d108d826afec69f3bfa8d833ab76a",
+      "closedAt": "2025-05-02T13:56:12Z",
+      "mergedAt": "2025-05-02T13:56:12Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "efee0f44d12aab4199ffd200d7a80b67de98b1cf"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This looks good to me. Thanks",
+          "createdAt": "2025-05-02T09:49:33Z",
+          "updatedAt": "2025-05-02T09:49:33Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
