@@ -75,6 +75,9 @@ author:
 #  TO DO LIST
 
    See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
+
+   On top of that:
+      - update the link to the NEMOPS report
    
 #  Introduction
 
@@ -95,14 +98,16 @@ author:
    The operational environment and manageability of the protocol should
    be considered from the start when new protocols are designed.
 
-   Most of the existing IETF management standards are focused on using
-   Structure of Management Information (SMI)-based data models (MIB
-   modules) to monitor and manage networking devices.  As the Internet
-   has grown, IETF protocols have addressed a constantly growing set of
+   As the Internet has grown, IETF protocols have addressed a constantly growing set of
    needs, such as web servers, collaboration services, and applications.
    The number of IETF management technologies has been expanding and the
    IETF management strategy has been changing to address the emerging
-   management requirements.  The discussion of emerging sets of
+   management requirements.  In the past, most of the existing IETF management 
+   standards are focused on using Structure of Management Information (SMI)-based 
+   data models (MIB modules) to monitor and manage networking devices.  
+   These days, the YANG data modeling language {!RFC7950}} is recommended to
+   monitor and manage the IETF protocols and the networking devices. 
+   The discussion of emerging sets of
    management requirements has a long history in the IETF.  The set of
    management protocols you should use depends on what you are managing.
 
@@ -171,7 +176,22 @@ author:
    IESG policy to require working groups to write a MIB module to
    provide manageability for new protocols is being replaced by a policy
    that is more open to using a variety of management protocols and data
-   models designed to achieve different goals.
+   models designed to achieve different goals.  In 2014, the IESG wrote a 
+   statement about "Writable MIB Module" 
+   [https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/] :
+   "The IESG is aware of discussions in the OPS area and in a number of working 
+   groups about the current practice for standards-based approaches to configuration.
+
+   The OPS area has shown strong support for the use of NETCONF/YANG while many 
+   working groups continue to specify MIB modules for this purpose. The IESG 
+   wishes to clarify this situation with this statement:
+
+   - IETF working groups are therefore encouraged to use the NETCONF/YANG 
+   standards for configuration, especially in new charters.
+   - SNMP MIB modules creating and modifying configuration state should only 
+   be produced by working groups in cases of clear utility and consensus to 
+   use SNMP write operations for configuration, and in consultation with the 
+   OPS ADs/MIB doctors."
 
    This document provides some initial guidelines for considering
    operations and management in an IETF Management Framework that
@@ -216,7 +236,7 @@ author:
    networks.  One output was "Requirements for Configuration Management
    of IP-based Networks" {{?RFC3139}}.
 
-   In 2003, the Internet Architecture Board (IAB) held a workshop on
+   In 2002, the Internet Architecture Board (IAB) held a workshop on
    Network Management {{?RFC3535}} that discussed the strengths and
    weaknesses of some IETF network management protocols and compared
    them to operational needs, especially configuration.
@@ -242,6 +262,22 @@ author:
    protocol environment.  This document and some planned companion
    documents attempt to provide some guidelines for navigating the
    rapidly shifting operating and management environments.
+
+   In 2014, the IESG wrote its statement on "Writable MIB Module", as
+   mentioned above.
+
+   In 2024, the IAB hold the "Next Era of Network Management Operations (NEMOPS)" 
+   workshop, building on the previous 2002 worshop. Since much has changed 
+   in the Internet’s operation and technological foundations since the first
+   worshop, the NEMOPS workshop reviewed the past outcomes and discussed any 
+   operational barriers that prevented these technologies from being widely 
+   implemented. With the industry, network operators and protocol engineers 
+   working in collaboration, the workshop developed a suggested plan of 
+   action and network management recommendations for the IETF and IRTF. 
+   The NEMOPS report is currently be created, with the latest version being 
+   at https://intarchboard.github.io/draft-iab-nemops-workshop-report/draft-iab-nemops-workshop-report.html
+   (TO DO: update with the RFC, once published by the IAB)
+
 
 ##  Available Management Technologies
 
