@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-04T00:53:16.747409+00:00",
+  "timestamp": "2025-05-06T00:47:58.233183+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -177,7 +177,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:39Z",
-      "updatedAt": "2025-04-22T13:58:24Z",
+      "updatedAt": "2025-05-05T16:46:35Z",
       "closedAt": null,
       "comments": [
         {
@@ -186,6 +186,13 @@
           "body": "It's time to update this document, as it mainly focuses on MIB developments\nExample 1:\n\n   Most of the existing IETF management standards are focused on using\n   Structure of Management Information (SMI)-based data models (MIB\n   modules) to monitor and manage networking devices. \n\n   ...\n\n   For years the IETF community has used the IETF Standard Management\n   Framework, including the Simple Network Management Protocol\n   [[RFC3410](https://www.rfc-editor.org/rfc/rfc3410)], the Structure of Management Information [[RFC2578](https://www.rfc-editor.org/rfc/rfc2578)], and MIB\n   data models for managing new protocols.\n\nExample 2: https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/ has been written 5 years after this document, and should be integrated in a new version.",
           "createdAt": "2025-04-09T12:50:20Z",
           "updatedAt": "2025-04-09T12:50:20Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/29\n",
+          "createdAt": "2025-05-05T16:43:19Z",
+          "updatedAt": "2025-05-05T16:46:34Z"
         }
       ]
     },
@@ -394,7 +401,7 @@
       "labels": [],
       "body": "The ideal end goal to have \"Operations and Manageability Considerations\" section(s) all IETF drafts. As Med mentioned on the OPSAWG mailing list: \"We need to find the right balance between providing clear guidance while avoiding some rigidity. We will explore that path together with other areas.\"\n",
       "createdAt": "2025-04-09T13:25:38Z",
-      "updatedAt": "2025-05-02T02:27:53Z",
+      "updatedAt": "2025-05-05T16:23:55Z",
       "closedAt": null,
       "comments": [
         {
@@ -1483,7 +1490,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-29T11:20:06Z",
-      "updatedAt": "2025-05-01T23:40:06Z",
+      "updatedAt": "2025-05-05T09:04:01Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
@@ -1494,7 +1501,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> An important aspect is the ownership and editoriability of CHECKLIST. It's moving from RFC process to OpsDir ownership.\r\n> We should mention that, and link to https://datatracker.ietf.org/group/opsdir/about/\r\n> I think. Thoughts?\r\n\r\nthis can be listed under [Changes Since RFC 5706](https://ietf-opsawg-wg.github.io/draft-opsarea-rfc5706bis/draft-opsarea-rfc5706bis.html#section-2.7). ",
+          "createdAt": "2025-05-05T09:04:00Z",
+          "updatedAt": "2025-05-05T09:04:00Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs6nEx7r",
@@ -1681,6 +1696,32 @@
           "updatedAt": "2025-05-02T09:49:33Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 29,
+      "id": "PR_kwDOOWPBqs6U92kP",
+      "title": "Writable MIB IESG statement + NEMOPS",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/29",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-05-05T16:40:26Z",
+      "updatedAt": "2025-05-05T16:40:26Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "efee0f44d12aab4199ffd200d7a80b67de98b1cf",
+      "headRepository": "bclaise/draft-opsarea-rfc5706bis",
+      "headRefName": "main",
+      "headRefOid": "e52a47570587fb813eb1746f9d0ac3ed02e5f4ef",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
