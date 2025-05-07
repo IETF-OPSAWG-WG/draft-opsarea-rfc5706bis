@@ -183,7 +183,7 @@ author:
    provide manageability for new protocols is being replaced by a policy
    that is more open to using a variety of management protocols and data
    models designed to achieve different goals. In 2014, the IESG wrote a
-   statement about "Writable MIB Module" [IESG-statement].
+   statement about "Writable MIB Module" {{IESG-STATEMENT}}.
    This statement stresses that IETF working groups are encouraged to use the NETCONF/YANG
    standards for configuration, especially in new charters.
 
