@@ -175,14 +175,14 @@ author:
    IESG policy to require working groups to write a MIB module to
    provide manageability for new protocols is being replaced by a policy
    that is more open to using a variety of management protocols and data
-   models designed to achieve different goals. In 2014, the IESG wrote a 
-   statement about "Writable MIB Module" 
+   models designed to achieve different goals. In 2014, the IESG wrote a
+   statement about "Writable MIB Module"
    [https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/] :
-   "The IESG is aware of discussions in the OPS area and in a number of working 
+   "The IESG is aware of discussions in the OPS area and in a number of working
    groups about the current practice for standards-based approaches to configuration.
 
-   The OPS area has shown strong support for the use of NETCONF/YANG while many 
-   working groups continue to specify MIB modules for this purpose. The IESG 
+   The OPS area has shown strong support for the use of NETCONF/YANG while many
+   working groups continue to specify MIB modules for this purpose. The IESG
    wishes to clarify this situation with this statement:
 
    - IETF working groups are therefore encouraged to use the NETCONF/YANG
