@@ -40,7 +40,7 @@ informative:
     title: IAB workshop on the Next Era of Network Management Operations
     author:
     - org: IAB
-    date: 2024-12=05
+    date: 2024-12
     
 author:
  -
