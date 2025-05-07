@@ -2,7 +2,7 @@
 
 
 
-opsarea                                                        B. Claise
+Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
@@ -118,10 +118,6 @@ Table of Contents
    8.  IANA Considerations
    9.  Security Considerations
    10. Informative References
-   Appendix A.  Operations and Management Review Checklist
-     A.1.  Operational Considerations
-     A.2.  Management Considerations
-     A.3.  Documentation
    Acknowledgements
    Authors' Addresses
 
@@ -156,16 +152,19 @@ Table of Contents
    The operational environment and manageability of the protocol should
    be considered from the start when new protocols are designed.
 
-   Most of the existing IETF management standards are focused on using
+   As the Internet has grown, IETF protocols have addressed a constantly
+   growing set of needs, such as web servers, collaboration services,
+   and applications.  The number of IETF management technologies has
+   been expanding and the IETF management strategy has been changing to
+   address the emerging management requirements.  In the past, most of
+   the existing IETF management standards were focused on using
    Structure of Management Information (SMI)-based data models (MIB
-   modules) to monitor and manage networking devices.  As the Internet
-   has grown, IETF protocols have addressed a constantly growing set of
-   needs, such as web servers, collaboration services, and applications.
-   The number of IETF management technologies has been expanding and the
-   IETF management strategy has been changing to address the emerging
-   management requirements.  The discussion of emerging sets of
-   management requirements has a long history in the IETF.  The set of
-   management protocols you should use depends on what you are managing.
+   modules) to monitor and manage networking devices.  Currently, the
+   YANG data modeling language [RFC7950] is recommended to monitor and
+   manage the IETF protocols and the networking devices.  The discussion
+   of emerging sets of management requirements has a long history in the
+   IETF.  The set of management protocols you should use depends on what
+   you are managing.
 
    Protocol designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -213,13 +212,10 @@ Table of Contents
    should avoid having manageability pushed for a later phase of the
    development of the standard.
 
-   In discussing the importance of considering operations and
-   management, this document sets forth a list of guidelines and a
-   checklist of questions to consider (see Appendix A), which a protocol
-   designer or reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs.
-   Operations and management are highly dependent on their environment,
-   so most guidelines are subjective rather than objective.
+   A list of guidelines and a checklist of questions to consider, which
+   a reviewer can use to evaluate whether the protocol and documentation
+   address common operations and management needs, is provided in
+   [CHECKLIST].
 
 2.3.  Motivation
 
@@ -232,7 +228,10 @@ Table of Contents
    IESG policy to require working groups to write a MIB module to
    provide manageability for new protocols is being replaced by a policy
    that is more open to using a variety of management protocols and data
-   models designed to achieve different goals.
+   models designed to achieve different goals.  In 2014, the IESG wrote
+   a statement about "Writable MIB Module" [IESG-STATEMENT].  This
+   statement stresses that IETF working groups are encouraged to use the
+   NETCONF/YANG standards for configuration, especially in new charters.
 
    This document provides some initial guidelines for considering
    operations and management in an IETF Management Framework that
@@ -277,7 +276,7 @@ Table of Contents
    networks.  One output was "Requirements for Configuration Management
    of IP-based Networks" [RFC3139].
 
-   In 2003, the Internet Architecture Board (IAB) held a workshop on
+   In 2002, the Internet Architecture Board (IAB) held a workshop on
    Network Management [RFC3535] that discussed the strengths and
    weaknesses of some IETF network management protocols and compared
    them to operational needs, especially configuration.
@@ -303,6 +302,20 @@ Table of Contents
    protocol environment.  This document and some planned companion
    documents attempt to provide some guidelines for navigating the
    rapidly shifting operating and management environments.
+
+   In 2014, the IESG wrote its statement on "Writable MIB Module"
+   [IESG-STATEMENT], as mentioned above.
+
+   In 2024, the IAB hold the "Next Era of Network Management Operations
+   (NEMOPS)" workshop [NEMOPS-WORKSHOP], building on the previous 2002
+   IAB workshop.  Given that much has changed in the Internet’s
+   operation and technological foundations since the first worshop, the
+   NEMOPS workshop reviewed the past outcomes and discussed any
+   operational barriers that prevented these technologies from being
+   widely implemented.  With the industry, network operators, and
+   protocol engineers working in collaboration, the workshop developed a
+   proposed plan of action and provided network management
+   recommendations for both the IETF and IRTF.
 
 2.5.  Changes Since RFC 5706
 
@@ -992,7 +1005,7 @@ Table of Contents
    configuration.  Network configuration is not just multi-device push
    or pull.  It is knowing that the configurations being pushed are
    semantically compatible.  Is the circuit between them configured
-   compatibly on both ends?  Is the IS-IS metric the same? ...  Now
+   compatibly on both ends?  Is the IS-IS metric the same? ... Now
    answer those questions for 1,000 devices.
 
    A number of efforts have existed in the IETF to develop policy-based
@@ -1334,12 +1347,12 @@ Table of Contents
       focusing on the functionalities that cannot be achieved through
       adaptation or extension of existing solutions.
 
-   *  [IETF-HACKATHONS] for Manageability Testing: [IETF-HACKATHONS]
-      provide an opportunity to test the functionality,
-      interoperability, and manageability of new protocols.  These
-      events can be specifically leveraged to assess the operational
-      (including manageability) implications of a new protocol by
-      focusing tasks on:
+   *  IETF Hackathons for Manageability Testing: IETF Hackathons
+      [IETF-HACKATHONS] provide an opportunity to test the
+      functionality, interoperability, and manageability of new
+      protocols.  These events can be specifically leveraged to assess
+      the operational (including manageability) implications of a new
+      protocol by focusing tasks on:
 
       -  Adapting existing tools to interact with the new specification.
 
@@ -1454,6 +1467,11 @@ Table of Contents
 
 10.  Informative References
 
+   [CHECKLIST]
+              "Operations and Management Review Checklist", 2025,
+              <https://github.com/IETF-OPS-DIR/Review-Template/tree/
+              main>.
+
    [I-D.ietf-netmod-rfc8407bis]
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
               Authors and Reviewers of Documents Containing YANG Data
@@ -1469,8 +1487,13 @@ Table of Contents
               2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
               opsawg-oam-characterization-04>.
 
+   [IESG-STATEMENT]
+              IESG, "Writable MIB Module IESG Statement", 2 March 2014,
+              <https://datatracker.ietf.org/doc/statement-iesg-writable-
+              mib-module-iesg-statement-20140302/>.
+
    [IETF-HACKATHONS]
-              "IETF Hackathons", n.d.,
+              IETF, "IETF Hackathons", 1 May 2025,
               <https://www.ietf.org/meeting/hackathons/>.
 
    [NEMOPS]   Hardaker, W. and D. Dhody, "Report from the IAB Workshop
@@ -1479,6 +1502,11 @@ Table of Contents
               nemops-workshop-report-01, 18 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
               workshop-report-01>.
+
+   [NEMOPS-WORKSHOP]
+              IAB, "IAB workshop on the Next Era of Network Management
+              Operations", December 2024,
+              <https://datatracker.ietf.org/group/nemopsws/about/>.
 
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
@@ -1680,177 +1708,6 @@ Table of Contents
               0: Primer Second Edition", W3C REC REC-xmlschema-
               0-20041028, W3C REC-xmlschema-0-20041028, 28 October 2004,
               <https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/>.
-
-Appendix A.  Operations and Management Review Checklist
-
-   This appendix provides a quick checklist of issues that protocol
-   designers should expect operations and management expert reviewers to
-   look for when reviewing a document being proposed for consideration
-   as a protocol standard.
-
-A.1.  Operational Considerations
-
-   1.  Has deployment been discussed?  See Section 4.1.
-
-       *  Does the document include a description of how this protocol
-          or technology is going to be deployed and managed?
-
-       *  Is the proposed specification deployable?  If not, how could
-          it be improved?
-
-       *  Does the solution scale well from the operational and
-          management perspective?  Does the proposed approach have any
-          scaling issues that could affect usability for large-scale
-          operation?
-
-       *  Are there any coexistence issues?
-
-   2.  Has installation and initial setup been discussed?  See
-       Section 4.2.
-
-       *  Is the solution sufficiently configurable?
-
-       *  Are configuration parameters clearly identified?
-
-       *  Are configuration parameters normalized?
-
-       *  Does each configuration parameter have a reasonable default
-          value?
-
-       *  Will configuration be pushed to a device by a configuration
-          manager, or pulled by a device from a configuration server?
-
-       *  How will the devices and managers find and authenticate each
-          other?
-
-   3.  Has the migration path been discussed?  See Section 4.3.
-
-       *  Are there any backward compatibility issues?
-
-   4.  Have the Requirements on other protocols and functional
-       components been discussed?  See Section 4.4.
-
-       *  What protocol operations are expected to be performed relative
-          to the new protocol or technology, and what protocols and data
-          models are expected to be in place or recommended to ensure
-          for interoperable management?
-
-   5.  Has the impact on network operation been discussed?  See
-       Section 4.5.
-
-       *  Will the new protocol significantly increase traffic load on
-          existing networks?
-
-       *  Will the proposed management for the new protocol
-          significantly increase traffic load on existing networks?
-
-       *  How will the new protocol impact the behavior of other
-          protocols in the network?  Will it impact performance (e.g.,
-          jitter) of certain types of applications running in the same
-          network?
-
-       *  Does the new protocol need supporting services (e.g., DNS or
-          Authentication, Authorization, and Accounting - AAA) added to
-          an existing network?
-
-   6.  Have suggestions for verifying correct operation been discussed?
-       See Section 5.
-
-       *  How can one test end-to-end connectivity and throughput?
-
-       *  Which metrics are of interest?
-
-       *  Will testing have an impact on the protocol or the network?
-
-   7.  Has management interoperability been discussed?  See Section 5.1.
-
-       *  Is a standard protocol needed for interoperable management?
-
-       *  Is a standard information or data model needed to make
-          properties comparable across devices from different vendors?
-
-   8.  Are there fault or threshold conditions that should be reported?
-       See Section 5.3.
-
-       *  Does specific management information have time utility?
-
-       *  Should the information be reported by notifications?  Polling?
-          Event-driven polling?
-
-       *  Is notification throttling discussed?
-
-       *  Is there support for saving state that could be used for root
-          cause analysis?
-
-   9.  Is configuration discussed?  See Section 5.4.
-
-       *  Are configuration defaults and default modes of operation
-          considered?
-
-       *  Is there discussion of what information should be preserved
-          across reboots of the device or the management system?  Can
-          devices realistically preserve this information through hard
-          reboots where physical configuration might change (e.g., cards
-          might be swapped while a chassis is powered down)?
-
-A.2.  Management Considerations
-
-   Do you anticipate any manageability issues with the specification?
-
-   1.  Is management interoperability discussed?  See Section 5.1.
-
-       *  Will it use centralized or distributed management?
-
-       *  Will it require remote and/or local management applications?
-
-       *  Are textual or graphical user interfaces required?
-
-       *  Is textual or binary format for management information
-          preferred?
-
-   2.  Is management information discussed?  See Section 5.2.
-
-       *  What is the minimal set of management (configuration, faults,
-          performance monitoring) objects that need to be instrumented
-          in order to manage the new protocol?
-
-   3.  Is fault management discussed?  See Section 5.3.
-
-       *  Is Liveness Detection and Monitoring discussed?
-
-       *  Does the solution have failure modes that are difficult to
-          diagnose or correct?  Are faults and alarms reported and
-          logged?
-
-   4.  Is configuration management discussed?  See Section 5.4.
-
-       *  Is protocol state information exposed to the user?  How?  Are
-          significant state transitions logged?
-
-   5.  Is accounting management discussed?  See Section 5.5.
-
-   6.  Is performance management discussed?  See Section 5.6.
-
-       *  Does the protocol have an impact on network traffic and
-          network devices?  Can performance be measured?
-
-       *  Is protocol performance information exposed to the user?
-
-   7.  Is security management discussed?  See Section 5.7.
-
-       *  Does the specification discuss how to manage aspects of
-          security, such as access controls, managing key distribution,
-          etc.
-
-A.3.  Documentation
-
-   Is an operational considerations and/or manageability section part of
-   the document?
-
-   Does the proposed protocol have a significant operational impact on
-   the Internet?
-
-   Is there proof of implementation and/or operational experience?
 
 Acknowledgements
 
