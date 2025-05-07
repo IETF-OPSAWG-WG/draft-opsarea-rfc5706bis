@@ -185,11 +185,11 @@ author:
    working groups continue to specify MIB modules for this purpose. The IESG 
    wishes to clarify this situation with this statement:
 
-   - IETF working groups are therefore encouraged to use the NETCONF/YANG 
+   - IETF working groups are therefore encouraged to use the NETCONF/YANG
    standards for configuration, especially in new charters.
-   - SNMP MIB modules creating and modifying configuration state should only 
-   be produced by working groups in cases of clear utility and consensus to 
-   use SNMP write operations for configuration, and in consultation with the 
+   - SNMP MIB modules creating and modifying configuration state should only
+   be produced by working groups in cases of clear utility and consensus to
+   use SNMP write operations for configuration, and in consultation with the
    OPS ADs/MIB doctors."
 
    This document provides some initial guidelines for considering
