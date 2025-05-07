@@ -36,7 +36,7 @@ informative:
     date: 2014-03-02
 
   NEMOPS-WORKSHOP:
-    target:[https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/](https://datatracker.ietf.org/group/nemopsws/about/
+    target: https://datatracker.ietf.org/group/nemopsws/about/
     title: IAB workshop on the Next Era of Network Management Operations
     author:
     - org: IAB
