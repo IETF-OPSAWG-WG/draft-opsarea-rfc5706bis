@@ -35,6 +35,13 @@ informative:
     - org: IESG
     date: 2014-03-02
 
+  NEMOPS-WORKSHOP:
+    target:[https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/](https://datatracker.ietf.org/group/nemopsws/about/
+    title: IAB workshop on the Next Era of Network Management Operations
+    author:
+    - org: IAB
+    date: 2024-12=05
+    
 author:
  -
     fullname: Benoit Claise
@@ -261,7 +268,7 @@ author:
    mentioned above.
 
    In 2024, the IAB hold the "Next Era of Network Management Operations (NEMOPS)"
-   workshop, building on the previous 2002 IAB workshop. Given that much has changed
+   workshop {{NEMOPS-WORKSHOP}}, building on the previous 2002 IAB workshop. Given that much has changed
    in the Internet’s operation and technological foundations since the first
    worshop, the NEMOPS workshop reviewed the past outcomes and discussed any
    operational barriers that prevented these technologies from being widely
