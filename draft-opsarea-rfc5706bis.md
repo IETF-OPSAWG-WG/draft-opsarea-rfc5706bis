@@ -257,7 +257,7 @@ author:
    documents attempt to provide some guidelines for navigating the
    rapidly shifting operating and management environments.
 
-   In 2014, the IESG wrote its statement on "Writable MIB Module", as
+   In 2014, the IESG wrote its statement on "Writable MIB Module" {{IESG-STATEMENT}}, as
    mentioned above.
 
    In 2024, the IAB hold the "Next Era of Network Management Operations (NEMOPS)"
