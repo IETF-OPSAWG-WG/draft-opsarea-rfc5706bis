@@ -272,9 +272,7 @@ author:
    operational barriers that prevented these technologies from being widely 
    implemented. With the industry, network operators, and protocol engineers 
    working in collaboration, the workshop developed a proposed plan of action
-   and provided network management recommendations for both the IETF and IRTF. 
-   The {{?NEMOPS=I-D.iab-nemops-workshop-report}} report
-
+   and provided network management recommendations for both the IETF and IRTF.
 
 ##  Available Management Technologies
 
