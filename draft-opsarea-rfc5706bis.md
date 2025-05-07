@@ -270,7 +270,7 @@ author:
    worshop, the NEMOPS workshop reviewed the past outcomes and discussed any 
    operational barriers that prevented these technologies from being widely 
    implemented. With the industry, network operators, and protocol engineers 
-   working in collaboration, the workshop developed a suggested plan of 
+   working in collaboration, the workshop developed a proposed plan of action
    action and network management recommendations for the IETF and IRTF. 
    The {{?NEMOPS=I-D.iab-nemops-workshop-report}} report
 
