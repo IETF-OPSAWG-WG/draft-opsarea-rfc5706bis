@@ -273,7 +273,6 @@ author:
    working in collaboration, the workshop developed a suggested plan of 
    action and network management recommendations for the IETF and IRTF. 
    The {{?NEMOPS=I-D.iab-nemops-workshop-report}} report
-   (TO DO: update with the RFC, once published by the IAB)
 
 
 ##  Available Management Technologies
