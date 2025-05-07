@@ -71,7 +71,8 @@ author:
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
-   Considerations” section in new Internet-Drafts.
+   Considerations” section in Internet-Drafts, before they are progressed
+   as publication as an RFC.
 
 --- middle
 
@@ -94,7 +95,8 @@ author:
    This document obsoletes RFC 5706 and fully updates its content
    with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
-   Considerations” section in new Internet-Drafts. It removes outdated
+   Considerations” section in Internet-Drafts, before they are progressed
+   for publication as an RFC. It removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing network devices and
    services. See {{changes-since-5706}}.
