@@ -76,7 +76,6 @@ author:
 
    See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
-      - update the link to the NEMOPS report
    
 #  Introduction
 
