@@ -41,7 +41,7 @@ informative:
     author:
     - org: IAB
     date: 2024-12
-    
+
 author:
  -
     fullname: Benoit Claise
