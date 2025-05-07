@@ -111,7 +111,7 @@ author:
    management requirements. In the past, most of the existing IETF management
    standards were focused on using Structure of Management Information (SMI)-based
    data models (MIB modules) to monitor and manage networking devices.
-   These days, the YANG data modeling language {?RFC7950}} is recommended to
+   These days, the YANG data modeling language {{?RFC7950}} is recommended to
    monitor and manage the IETF protocols and the networking devices.
    The discussion of emerging sets of management requirements has a long
    history in the IETF. The set of management protocols you should use depends
