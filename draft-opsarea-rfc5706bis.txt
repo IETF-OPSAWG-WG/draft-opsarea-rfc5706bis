@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 3 November 2025                                       A. Farrel
+Expires: 8 November 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 3 November 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                              2 May 2025
+                                                              7 May 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 November 2025.
+   This Internet-Draft will expire on 8 November 2025.
 
 Copyright Notice
 
@@ -144,16 +144,19 @@ Table of Contents
    The operational environment and manageability of the protocol should
    be considered from the start when new protocols are designed.
 
-   Most of the existing IETF management standards are focused on using
+   As the Internet has grown, IETF protocols have addressed a constantly
+   growing set of needs, such as web servers, collaboration services,
+   and applications.  The number of IETF management technologies has
+   been expanding and the IETF management strategy has been changing to
+   address the emerging management requirements.  In the past, most of
+   the existing IETF management standards were focused on using
    Structure of Management Information (SMI)-based data models (MIB
-   modules) to monitor and manage networking devices.  As the Internet
-   has grown, IETF protocols have addressed a constantly growing set of
-   needs, such as web servers, collaboration services, and applications.
-   The number of IETF management technologies has been expanding and the
-   IETF management strategy has been changing to address the emerging
-   management requirements.  The discussion of emerging sets of
-   management requirements has a long history in the IETF.  The set of
-   management protocols you should use depends on what you are managing.
+   modules) to monitor and manage networking devices.  Currently, the
+   YANG data modeling language [RFC7950] is recommended to monitor and
+   manage the IETF protocols and the networking devices.  The discussion
+   of emerging sets of management requirements has a long history in the
+   IETF.  The set of management protocols you should use depends on what
+   you are managing.
 
    Protocol designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -220,7 +223,10 @@ Table of Contents
    IESG policy to require working groups to write a MIB module to
    provide manageability for new protocols is being replaced by a policy
    that is more open to using a variety of management protocols and data
-   models designed to achieve different goals.
+   models designed to achieve different goals.  In 2014, the IESG wrote
+   a statement about "Writable MIB Module" [IESG-STATEMENT].  This
+   statement stresses that IETF working groups are encouraged to use the
+   NETCONF/YANG standards for configuration, especially in new charters.
 
    This document provides some initial guidelines for considering
    operations and management in an IETF Management Framework that
@@ -265,7 +271,7 @@ Table of Contents
    networks.  One output was "Requirements for Configuration Management
    of IP-based Networks" [RFC3139].
 
-   In 2003, the Internet Architecture Board (IAB) held a workshop on
+   In 2002, the Internet Architecture Board (IAB) held a workshop on
    Network Management [RFC3535] that discussed the strengths and
    weaknesses of some IETF network management protocols and compared
    them to operational needs, especially configuration.
@@ -291,6 +297,20 @@ Table of Contents
    protocol environment.  This document and some planned companion
    documents attempt to provide some guidelines for navigating the
    rapidly shifting operating and management environments.
+
+   In 2014, the IESG wrote its statement on "Writable MIB Module"
+   [IESG-STATEMENT], as mentioned above.
+
+   In 2024, the IAB hold the "Next Era of Network Management Operations
+   (NEMOPS)" workshop [NEMOPS-WORKSHOP], building on the previous 2002
+   IAB workshop.  Given that much has changed in the Internet’s
+   operation and technological foundations since the first worshop, the
+   NEMOPS workshop reviewed the past outcomes and discussed any
+   operational barriers that prevented these technologies from being
+   widely implemented.  With the industry, network operators, and
+   protocol engineers working in collaboration, the workshop developed a
+   proposed plan of action and provided network management
+   recommendations for both the IETF and IRTF.
 
 2.5.  Available Management Technologies
 
@@ -971,7 +991,7 @@ Table of Contents
    configuration.  Network configuration is not just multi-device push
    or pull.  It is knowing that the configurations being pushed are
    semantically compatible.  Is the circuit between them configured
-   compatibly on both ends?  Is the IS-IS metric the same? ...  Now
+   compatibly on both ends?  Is the IS-IS metric the same? ... Now
    answer those questions for 1,000 devices.
 
    A number of efforts have existed in the IETF to develop policy-based
@@ -1437,9 +1457,14 @@ Table of Contents
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
               Authors and Reviewers of Documents Containing YANG Data
               Models", Work in Progress, Internet-Draft, draft-ietf-
-              netmod-rfc8407bis-24, 18 April 2025,
+              netmod-rfc8407bis-25, 5 May 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc8407bis-24>.
+              rfc8407bis-25>.
+
+   [IESG-STATEMENT]
+              IESG, "Writable MIB Module IESG Statement", 2 March 2014,
+              <https://datatracker.ietf.org/doc/statement-iesg-writable-
+              mib-module-iesg-statement-20140302/>.
 
    [IETF-HACKATHONS]
               IETF, "IETF Hackathons", 1 May 2025,
@@ -1451,6 +1476,11 @@ Table of Contents
               nemops-workshop-report-01, 18 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
               workshop-report-01>.
+
+   [NEMOPS-WORKSHOP]
+              IAB, "IAB workshop on the Next Era of Network Management
+              Operations", December 2024,
+              <https://datatracker.ietf.org/group/nemopsws/about/>.
 
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
