@@ -113,10 +113,6 @@ Table of Contents
    7.  IANA Considerations
    8.  Security Considerations
    9.  Informative References
-   Appendix A.  Operations and Management Review Checklist
-     A.1.  Operational Considerations
-     A.2.  Management Considerations
-     A.3.  Documentation
    Acknowledgements
    Authors' Addresses
 
@@ -204,13 +200,10 @@ Table of Contents
    should avoid having manageability pushed for a later phase of the
    development of the standard.
 
-   In discussing the importance of considering operations and
-   management, this document sets forth a list of guidelines and a
-   checklist of questions to consider (see Appendix A), which a protocol
-   designer or reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs.
-   Operations and management are highly dependent on their environment,
-   so most guidelines are subjective rather than objective.
+   A list of guidelines and a checklist of questions to consider, which
+   a reviewer can use to evaluate whether the protocol and documentation
+   address common operations and management needs, is provided in
+   [CHECKLIST].
 
 2.3.  Motivation
 
@@ -1453,6 +1446,11 @@ Table of Contents
 
 9.  Informative References
 
+   [CHECKLIST]
+              "Operations and Management Review Checklist", 2025,
+              <https://github.com/IETF-OPS-DIR/Review-Template/tree/
+              main>.
+
    [I-D.ietf-netmod-rfc8407bis]
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
               Authors and Reviewers of Documents Containing YANG Data
@@ -1667,177 +1665,6 @@ Table of Contents
               0: Primer Second Edition", W3C REC REC-xmlschema-
               0-20041028, W3C REC-xmlschema-0-20041028, 28 October 2004,
               <https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/>.
-
-Appendix A.  Operations and Management Review Checklist
-
-   This appendix provides a quick checklist of issues that protocol
-   designers should expect operations and management expert reviewers to
-   look for when reviewing a document being proposed for consideration
-   as a protocol standard.
-
-A.1.  Operational Considerations
-
-   1.  Has deployment been discussed?  See Section 3.1.
-
-       *  Does the document include a description of how this protocol
-          or technology is going to be deployed and managed?
-
-       *  Is the proposed specification deployable?  If not, how could
-          it be improved?
-
-       *  Does the solution scale well from the operational and
-          management perspective?  Does the proposed approach have any
-          scaling issues that could affect usability for large-scale
-          operation?
-
-       *  Are there any coexistence issues?
-
-   2.  Has installation and initial setup been discussed?  See
-       Section 3.2.
-
-       *  Is the solution sufficiently configurable?
-
-       *  Are configuration parameters clearly identified?
-
-       *  Are configuration parameters normalized?
-
-       *  Does each configuration parameter have a reasonable default
-          value?
-
-       *  Will configuration be pushed to a device by a configuration
-          manager, or pulled by a device from a configuration server?
-
-       *  How will the devices and managers find and authenticate each
-          other?
-
-   3.  Has the migration path been discussed?  See Section 3.3.
-
-       *  Are there any backward compatibility issues?
-
-   4.  Have the Requirements on other protocols and functional
-       components been discussed?  See Section 3.4.
-
-       *  What protocol operations are expected to be performed relative
-          to the new protocol or technology, and what protocols and data
-          models are expected to be in place or recommended to ensure
-          for interoperable management?
-
-   5.  Has the impact on network operation been discussed?  See
-       Section 3.5.
-
-       *  Will the new protocol significantly increase traffic load on
-          existing networks?
-
-       *  Will the proposed management for the new protocol
-          significantly increase traffic load on existing networks?
-
-       *  How will the new protocol impact the behavior of other
-          protocols in the network?  Will it impact performance (e.g.,
-          jitter) of certain types of applications running in the same
-          network?
-
-       *  Does the new protocol need supporting services (e.g., DNS or
-          Authentication, Authorization, and Accounting - AAA) added to
-          an existing network?
-
-   6.  Have suggestions for verifying correct operation been discussed?
-       See Section 4.
-
-       *  How can one test end-to-end connectivity and throughput?
-
-       *  Which metrics are of interest?
-
-       *  Will testing have an impact on the protocol or the network?
-
-   7.  Has management interoperability been discussed?  See Section 4.1.
-
-       *  Is a standard protocol needed for interoperable management?
-
-       *  Is a standard information or data model needed to make
-          properties comparable across devices from different vendors?
-
-   8.  Are there fault or threshold conditions that should be reported?
-       See Section 4.3.
-
-       *  Does specific management information have time utility?
-
-       *  Should the information be reported by notifications?  Polling?
-          Event-driven polling?
-
-       *  Is notification throttling discussed?
-
-       *  Is there support for saving state that could be used for root
-          cause analysis?
-
-   9.  Is configuration discussed?  See Section 4.4.
-
-       *  Are configuration defaults and default modes of operation
-          considered?
-
-       *  Is there discussion of what information should be preserved
-          across reboots of the device or the management system?  Can
-          devices realistically preserve this information through hard
-          reboots where physical configuration might change (e.g., cards
-          might be swapped while a chassis is powered down)?
-
-A.2.  Management Considerations
-
-   Do you anticipate any manageability issues with the specification?
-
-   1.  Is management interoperability discussed?  See Section 4.1.
-
-       *  Will it use centralized or distributed management?
-
-       *  Will it require remote and/or local management applications?
-
-       *  Are textual or graphical user interfaces required?
-
-       *  Is textual or binary format for management information
-          preferred?
-
-   2.  Is management information discussed?  See Section 4.2.
-
-       *  What is the minimal set of management (configuration, faults,
-          performance monitoring) objects that need to be instrumented
-          in order to manage the new protocol?
-
-   3.  Is fault management discussed?  See Section 4.3.
-
-       *  Is Liveness Detection and Monitoring discussed?
-
-       *  Does the solution have failure modes that are difficult to
-          diagnose or correct?  Are faults and alarms reported and
-          logged?
-
-   4.  Is configuration management discussed?  See Section 4.4.
-
-       *  Is protocol state information exposed to the user?  How?  Are
-          significant state transitions logged?
-
-   5.  Is accounting management discussed?  See Section 4.5.
-
-   6.  Is performance management discussed?  See Section 4.6.
-
-       *  Does the protocol have an impact on network traffic and
-          network devices?  Can performance be measured?
-
-       *  Is protocol performance information exposed to the user?
-
-   7.  Is security management discussed?  See Section 4.7.
-
-       *  Does the specification discuss how to manage aspects of
-          security, such as access controls, managing key distribution,
-          etc.
-
-A.3.  Documentation
-
-   Is an operational considerations and/or manageability section part of
-   the document?
-
-   Does the proposed protocol have a significant operational impact on
-   the Internet?
-
-   Is there proof of implementation and/or operational experience?
 
 Acknowledgements
 
