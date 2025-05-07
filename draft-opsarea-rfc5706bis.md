@@ -273,7 +273,6 @@ author:
    working in collaboration, the workshop developed a suggested plan of 
    action and network management recommendations for the IETF and IRTF. 
    The NEMOPS report is currently be created, with the latest version being 
-   at https://intarchboard.github.io/draft-iab-nemops-workshop-report/draft-iab-nemops-workshop-report.html
    (TO DO: update with the RFC, once published by the IAB)
 
 
