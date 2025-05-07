@@ -21,6 +21,11 @@ coding: utf-8
 pi: [toc, sortrefs, symrefs]
 
 informative:
+  CHECKLIST:
+    title: Operations and Management Review Checklist
+    date: 2025
+    target: https://github.com/IETF-OPS-DIR/Review-Template/tree/main
+
   IETF-HACKATHONS:
     target: https://www.ietf.org/meeting/hackathons/
     title: IETF Hackathons
@@ -74,16 +79,6 @@ author:
     fullname: Ran Chen
     organization: ZTE
     email: chen.ran@zte.com.cn
-
-normative:
-
-informative:
-
-  CHECKLIST:
-    title: Operations and Management Review Checklist
-    date: 2025
-    target: https://github.com/IETF-OPS-DIR/Review-Template/tree/main
-
 --- abstract
 
    New protocols or protocol extensions are best designed with due
@@ -1413,7 +1408,6 @@ Information Models and Data Models
    security aspects is important (see {{sec-secuity-mgt}}).
 
 --- back
-
 
 
 #  Acknowledgements
