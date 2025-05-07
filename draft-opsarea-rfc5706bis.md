@@ -265,11 +265,11 @@ author:
    In 2014, the IESG wrote its statement on "Writable MIB Module", as
    mentioned above.
 
-   In 2024, the IAB hold the "Next Era of Network Management Operations (NEMOPS)" 
-   workshop, building on the previous 2002 IAB workshop. Given that much has changed 
+   In 2024, the IAB hold the "Next Era of Network Management Operations (NEMOPS)"
+   workshop, building on the previous 2002 IAB workshop. Given that much has changed
    in the Internet’s operation and technological foundations since the first
-   worshop, the NEMOPS workshop reviewed the past outcomes and discussed any 
-   operational barriers that prevented these technologies from being widely 
+   worshop, the NEMOPS workshop reviewed the past outcomes and discussed any
+   operational barriers that prevented these technologies from being widely
    implemented. With the industry, network operators, and protocol engineers
    working in collaboration, the workshop developed a proposed plan of action
    and provided network management recommendations for both the IETF and IRTF.
