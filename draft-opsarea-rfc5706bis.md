@@ -270,7 +270,7 @@ author:
    in the Internet’s operation and technological foundations since the first
    worshop, the NEMOPS workshop reviewed the past outcomes and discussed any 
    operational barriers that prevented these technologies from being widely 
-   implemented. With the industry, network operators, and protocol engineers 
+   implemented. With the industry, network operators, and protocol engineers
    working in collaboration, the workshop developed a proposed plan of action
    and provided network management recommendations for both the IETF and IRTF.
 
