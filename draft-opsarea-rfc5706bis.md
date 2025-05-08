@@ -93,7 +93,7 @@ author:
    it with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
    Considerations” section in Internet-Drafts, before they are progressed
-   as publication as an RFC.
+   as publication as RFCs.
 
 --- middle
 
@@ -136,9 +136,9 @@ author:
    data models (MIB modules) to monitor and manage networking devices.
    Currently, the YANG data modeling language {{?RFC7950}} is recommended to
    monitor and manage the IETF protocols and the networking devices.
-   The discussion of emerging sets of management requirements has a long
-   history in the IETF. The set of management protocols you should use depends
-   on what you are managing.
+   Management requirements continually evolve in the IETF. Therefore,
+   the management protocols used should track with current IETF
+   recommendations.
 
    Protocol designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -222,9 +222,9 @@ author:
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
    considered for any IETF protocol because we develop technologies and
-   protocols to be deployed and operated in the real-world Internet. It
-   is fine if a WG decides that its protocol does not need interoperable
-   management or no standardized data model, but this should be a
+   protocols to be deployed and operated in the real-world Internet. A WG
+   may decide that its protocol does not need interoperable
+   management or a standardized data model, but this should be a
    deliberate decision, not the result of omission. This document
    provides some guidelines for those considerations.
 
