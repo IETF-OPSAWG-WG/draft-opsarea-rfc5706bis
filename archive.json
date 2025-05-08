@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-06T00:47:58.233183+00:00",
+  "timestamp": "2025-05-08T00:48:31.019866+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -64,7 +64,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:48:58Z",
-      "updatedAt": "2025-04-22T13:58:13Z",
+      "updatedAt": "2025-05-07T13:51:48Z",
       "closedAt": null,
       "comments": [
         {
@@ -101,6 +101,13 @@
           "body": "Possibly this is the place to explain the different types of YANG models (8199 and 8309)",
           "createdAt": "2025-04-22T13:30:37Z",
           "updatedAt": "2025-04-22T13:30:37Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Terminology in there? https://datatracker.ietf.org/doc/rfc6632/, to be checked. At least FCAPS is there.",
+          "createdAt": "2025-05-07T13:51:23Z",
+          "updatedAt": "2025-05-07T13:51:48Z"
         }
       ]
     },
@@ -118,7 +125,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:15Z",
-      "updatedAt": "2025-05-01T07:59:58Z",
+      "updatedAt": "2025-05-07T13:39:57Z",
       "closedAt": null,
       "comments": [
         {
@@ -127,6 +134,27 @@
           "body": "References...\nRFC3444\nRFC6123 section 3.2 \nAre there any other documents\uff1f",
           "createdAt": "2025-04-24T03:10:25Z",
           "updatedAt": "2025-04-24T03:10:25Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "Information models are not frequently written in the IETF. The most foundational reference appears to be RFC 3444, which clearly distinguishes between information and data models. Another relevant reference is RFC 6123 Section 3.2, it appears outdated due to its MIB/SNMP focus. \n\nBenoit kindly pointed out two recent drafts discussed in OPSAWG that may serve as relevant examples:\ndraft-ietf-opsawg-discardmodel \u2013 first attempt to use YANG as an information model language\ndraft-evans-opsawg-ipfix-discard-class-ie\nBelow is my initial proposed structure for the section, and I\u2019d very much appreciate feedback or suggestions from the group before proceeding to draft actual text:\n\nInformation Model\n1\uff09Brief explanation of what an Information Model (IM) is\uff0creferencing RFC 3444\n2\uff09Clarification of the difference between IM and Data Model (DM), referencing RFC 3444\n3\uff09As described in draft-ietf-opsawg-discardmodel, the information model is defined using YANG [RFC7950], with Data\n Structure Extensions [RFC8791]\uff0cfollowing the guidance of [RFC3444] to remain abstract and decoupled from specific implementations.  This abstraction supports different data model implementations\u2014such as YANG, IPFIX [RFC7011], gMNI, or SNMPv3 [RFC3411]\u2014while maintaining semantic consistency across them. Using YANG for the information model enables this abstraction, leverages the community's familiarity with its syntax, and ensures a lossless and consistent mapping to its corresponding YANG data model. \n4\uff09Structure\nTo make the abstract information model clearer, it is recommended to use the YANG Tree Diagram defined in RFC 8340. It provides a simple and standardized way to show the structure of the model without being tied to any specific implementation. Furthermore, to ensure alignment between the abstract model and its concrete realizations.\nThe information model draft should include at least one corresponding data model (see draft-ietf-opsawg-discardmodel for the IM writing method). If there are additional implementations, such as IPFIX, it should be included in the same document to maintain consistency and provide a complete reference for implementers.",
+          "createdAt": "2025-05-07T11:31:50Z",
+          "updatedAt": "2025-05-07T11:31:50Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "RFC 5706 provides a useful comparison of info and data models.",
+          "createdAt": "2025-05-07T13:33:42Z",
+          "updatedAt": "2025-05-07T13:33:42Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Requesting an Information Model in an IETF document is only required IF there are multiple data models representations of it (ex: YANG, IPFIX, etc.), for lossless mapping. \nIf you create an Information Model, you can think of YANG as language to do so\n\nSection 4.2 might elaborate on those points.",
+          "createdAt": "2025-05-07T13:39:56Z",
+          "updatedAt": "2025-05-07T13:39:56Z"
         }
       ]
     },
@@ -168,7 +196,7 @@
       "id": "I_kwDOOWPBqs6xqZnv",
       "title": "Soften the MIB part + IESG statement in MIBs",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/4",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -177,8 +205,8 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:39Z",
-      "updatedAt": "2025-05-05T16:46:35Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-07T13:06:37Z",
+      "closedAt": "2025-05-07T13:06:37Z",
       "comments": [
         {
           "author": "bclaise",
@@ -333,15 +361,15 @@
       "id": "I_kwDOOWPBqs6xyQnW",
       "title": "Update the \"Appendix A.  Operations and Management Review Checklist\"",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/8",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "This should be done in collaboration with the OPS-DIR.\nFinally, this appendix should be part of the core document.",
       "createdAt": "2025-04-09T12:55:19Z",
-      "updatedAt": "2025-04-23T19:45:56Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-07T13:23:25Z",
+      "closedAt": "2025-05-07T13:23:25Z",
       "comments": [
         {
           "author": "bclaise",
@@ -473,7 +501,7 @@
       "id": "I_kwDOOWPBqs6zeSnD",
       "title": "Clarify the obsoleting of RFC 5706",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/19",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -482,8 +510,8 @@
       "labels": [],
       "body": "The Abstract needs to add a few more words to the bold statement:\n   This document obsoletes RFC 5706.\nSomething like:\n   This document obsoletes RFC 5706, replacing it completely and updating it to reflect up-to-date management and operational tools.\n\nThe Introduction (i.e., the text in section 1, not the subsections) needs to contain similar text although it can have more words and a pointer to section 1.7",
       "createdAt": "2025-04-22T13:14:55Z",
-      "updatedAt": "2025-05-02T00:36:18Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-07T14:56:39Z",
+      "closedAt": "2025-05-07T14:56:39Z",
       "comments": []
     },
     {
@@ -1117,24 +1145,26 @@
       "id": "PR_kwDOOWPBqs6ToKNS",
       "title": "Various Introduction and Terminology updates, #19 and moved Terms and Tech sub-sections",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/20",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "* Take care of Issue #19 , by adding more text about obsoletion in the Abstract and Introduction\r\n* Build a framework for issue #1 by moving the Terminology (and Tech) to a different section. These are not introduction.\r\n* Add definition of OAM.",
       "createdAt": "2025-04-23T16:36:55Z",
-      "updatedAt": "2025-05-02T10:01:29Z",
+      "updatedAt": "2025-05-07T14:56:51Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "8d4cb736b0eaf5f57eaddf3bdef67f0b863593d5",
+      "baseRefOid": "66f5fb6ed4b280e5caabf99226536b5bbed48e78",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-intro-and-terms",
-      "headRefOid": "b6a2db83756c941ce4bc72b2f71efdffe2f52cb0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "6f51cf4b676de55f8c338012c30c340c73aa8ff1",
+      "closedAt": "2025-05-07T14:56:38Z",
+      "mergedAt": "2025-05-07T14:56:38Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "1c45c6a4157bf8da72f20dfb607ff720cc32625a"
+      },
       "comments": [
         {
           "author": "bclaise",
@@ -1156,6 +1186,20 @@
           "body": "@bclaise , how about now?",
           "createdAt": "2025-05-02T00:19:44Z",
           "updatedAt": "2025-05-02T00:19:44Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> @bclaise , how about now?\r\nThat works for me. I would like to discuss the \"mandate\" with Med in the call tonight.\r\nBasically this sentence: \"This document obsoletes RFC 5706 and fully updates its content\r\n   with new operational and management techniques and mechanisms, and\r\n   introduces a requirement for an \u201cOperational and Management\r\n   Considerations\u201d section in new Internet-Drafts.\"\r\n\r\n",
+          "createdAt": "2025-05-07T09:19:49Z",
+          "updatedAt": "2025-05-07T09:19:49Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Meeting conclusion: we merge. Note: we still need to solve https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/9\r\n",
+          "createdAt": "2025-05-07T13:17:12Z",
+          "updatedAt": "2025-05-07T13:17:12Z"
         }
       ],
       "reviews": [
@@ -1483,24 +1527,26 @@
       "id": "PR_kwDOOWPBqs6UU-W1",
       "title": "Offload appendix A to OPS-DIR",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/23",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-04-29T11:20:06Z",
-      "updatedAt": "2025-05-05T09:04:01Z",
+      "updatedAt": "2025-05-07T13:23:25Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
+      "baseRefOid": "4dcece065ccf1dbcd93d6e299d10872717b0a0b1",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "offload-reviewers-checklist",
-      "headRefOid": "fca98916ec7750913d52453f1c5ac71898fce585",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "3e79b440d506fb37e8262efac0a6708c441cbe4a",
+      "closedAt": "2025-05-07T13:23:24Z",
+      "mergedAt": "2025-05-07T13:23:24Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "3e6209075a18b378cc6a0d4961a4e39bdc09ffdc"
+      },
       "comments": [
         {
           "author": "boucadair",
@@ -1508,6 +1554,13 @@
           "body": "> An important aspect is the ownership and editoriability of CHECKLIST. It's moving from RFC process to OpsDir ownership.\r\n> We should mention that, and link to https://datatracker.ietf.org/group/opsdir/about/\r\n> I think. Thoughts?\r\n\r\nthis can be listed under [Changes Since RFC 5706](https://ietf-opsawg-wg.github.io/draft-opsarea-rfc5706bis/draft-opsarea-rfc5706bis.html#section-2.7). ",
           "createdAt": "2025-05-05T09:04:00Z",
           "updatedAt": "2025-05-05T09:04:00Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Meeting conclusion: we will merge, once we resolve the conflict.",
+          "createdAt": "2025-05-07T13:12:04Z",
+          "updatedAt": "2025-05-07T13:12:04Z"
         }
       ],
       "reviews": [
@@ -1703,26 +1756,267 @@
       "id": "PR_kwDOOWPBqs6U92kP",
       "title": "Writable MIB IESG statement + NEMOPS",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/29",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-05-05T16:40:26Z",
-      "updatedAt": "2025-05-05T16:40:26Z",
+      "updatedAt": "2025-05-07T13:06:36Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "efee0f44d12aab4199ffd200d7a80b67de98b1cf",
       "headRepository": "bclaise/draft-opsarea-rfc5706bis",
       "headRefName": "main",
-      "headRefOid": "e52a47570587fb813eb1746f9d0ac3ed02e5f4ef",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "headRefOid": "7baef940214514200ae2060538904b57b89b5fd7",
+      "closedAt": "2025-05-07T13:06:36Z",
+      "mergedAt": "2025-05-07T13:06:36Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "4dcece065ccf1dbcd93d6e299d10872717b0a0b1"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Med, Samier, all applied. If fine with you, I'll merge.",
+          "createdAt": "2025-05-07T09:14:46Z",
+          "updatedAt": "2025-05-07T09:14:46Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Joe: you wrote \"This reads odd. Maybe, management requirements have evolved over the history of the IETF?\" \r\nI deleted this comment by mistake.\r\n\r\nIs this what you propose (not too sure what you want to change)?\r\nAs the Internet has grown, IETF protocols have addressed a constantly growing set of\r\nneeds, such as web servers, collaboration services, and applications.\r\nThe number of IETF management technologies has been expanding and\r\nmanagement requirements have evolved over the history of the IETF. In the past,\r\nmost of the existing IETF management standards were focused on using Structure of\r\nManagement Information (SMI)-based data models (MIB modules) to monitor and manage\r\nnetworking devices.\r\nCurrently, the YANG data modeling language {{?RFC7950}} is recommended to\r\nmonitor and manage the IETF protocols and the networking devices.\r\n\r\nWith the following sentences to be placed somewhere else?\r\nThe discussion of emerging sets of management requirements has a long history\r\nin the IETF. The set of management protocols you should use depends\r\non what you are managing.\r\n",
+          "createdAt": "2025-05-07T10:58:12Z",
+          "updatedAt": "2025-05-07T10:58:12Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Joe, one remaining editorial issue, which you can solving at any time. In the mean time, we merge this one (based on our meeting today)",
+          "createdAt": "2025-05-07T13:06:22Z",
+          "updatedAt": "2025-05-07T13:06:22Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6n5n1L",
+          "commit": {
+            "abbreviatedOid": "e52a475"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thanks, Beno\u00eet.",
+          "createdAt": "2025-05-06T05:20:23Z",
+          "updatedAt": "2025-05-06T05:30:12Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\r\n   These days, the YANG data modeling language {?RFC7950}} is recommended to\r\n```",
+              "createdAt": "2025-05-06T05:20:23Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-05-06T05:23:32Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-05-06T05:23:42Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 81,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-05-06T05:24:02Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 80,
+              "body": "```suggestion\r\n   The {{?NEMOPS=I-D.iab-nemops-workshop-report}} report\r\n```",
+              "createdAt": "2025-05-06T05:24:31Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 82,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-05-06T05:24:45Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\n   management requirements.  In the past, most of the IETF management \r\n```",
+              "createdAt": "2025-05-06T05:25:11Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 24,
+              "body": "```suggestion\r\n   standards were focused on using Structure of Management Information (SMI)-based \r\n```",
+              "createdAt": "2025-05-06T05:25:26Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 39,
+              "body": "Please transform into a reference:\r\n\r\n  IESG-STATEMENT:\r\n    target: https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/\r\n    title: Writable MIB Module IESG Statement\r\n    author:\r\n    - org: IETF\r\n    date: 2014-03-02",
+              "createdAt": "2025-05-06T05:27:39Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 52,
+              "body": "Maybe summarize the main message rather than quoting text?",
+              "createdAt": "2025-05-06T05:28:33Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 73,
+              "body": "```suggestion\r\n   workshop, building on the previous 2002 IAB workshop. Given that much has changed \r\n```",
+              "createdAt": "2025-05-06T05:29:26Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            },
+            {
+              "originalPosition": 77,
+              "body": "```suggestion\r\n   implemented. With the industry, network operators, and protocol engineers \r\n```",
+              "createdAt": "2025-05-06T05:29:42Z",
+              "updatedAt": "2025-05-06T05:30:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6oF7we",
+          "commit": {
+            "abbreviatedOid": "e52a475"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-07T01:59:50Z",
+          "updatedAt": "2025-05-07T02:08:03Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\n   management requirements. In the past, most of the existing IETF management \r\n```",
+              "createdAt": "2025-05-07T01:59:50Z",
+              "updatedAt": "2025-05-07T02:08:03Z"
+            },
+            {
+              "originalPosition": 78,
+              "body": "```suggestion\r\n   working in collaboration, the workshop developed a proposed plan of action\r\n```",
+              "createdAt": "2025-05-07T02:06:48Z",
+              "updatedAt": "2025-05-07T02:08:03Z"
+            },
+            {
+              "originalPosition": 79,
+              "body": "```suggestion\r\n   and provided network management recommendations for both the IETF and IRTF. \r\n```",
+              "createdAt": "2025-05-07T02:07:21Z",
+              "updatedAt": "2025-05-07T02:08:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6oJXeO",
+          "commit": {
+            "abbreviatedOid": "e52a475"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-07T09:13:51Z",
+          "updatedAt": "2025-05-07T09:13:51Z",
+          "comments": [
+            {
+              "originalPosition": 39,
+              "body": "Done.",
+              "createdAt": "2025-05-07T09:13:51Z",
+              "updatedAt": "2025-05-07T09:13:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6oJXtC",
+          "commit": {
+            "abbreviatedOid": "e52a475"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-07T09:14:11Z",
+          "updatedAt": "2025-05-07T09:14:12Z",
+          "comments": [
+            {
+              "originalPosition": 52,
+              "body": "Done. See the proposal",
+              "createdAt": "2025-05-07T09:14:11Z",
+              "updatedAt": "2025-05-07T09:14:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6oJbKs",
+          "commit": {
+            "abbreviatedOid": "48d6a9d"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Thanks, Beno\u00eet. Two minor fixes.\r\n\r\nFor the \"double space\" changes, these are not needed as md to xml/txt will automatically take care of this.",
+          "createdAt": "2025-05-07T09:18:43Z",
+          "updatedAt": "2025-05-07T09:23:48Z",
+          "comments": [
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\r\n   These days, the YANG data modeling language {{?RFC7950}} is recommended to\r\n```\r\n\r\nbroken ref",
+              "createdAt": "2025-05-07T09:18:43Z",
+              "updatedAt": "2025-05-07T09:23:48Z"
+            },
+            {
+              "originalPosition": 118,
+              "body": "```suggestion\r\n   statement about \"Writable MIB Module\" {{IESG-STATEMENT}}.\r\n```",
+              "createdAt": "2025-05-07T09:20:08Z",
+              "updatedAt": "2025-05-07T09:23:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6oJv5q",
+          "commit": {
+            "abbreviatedOid": "48d6a9d"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-07T09:45:02Z",
+          "updatedAt": "2025-05-07T09:53:13Z",
+          "comments": [
+            {
+              "originalPosition": 45,
+              "body": "Maybe \"Currently\" instead of \"These days\"",
+              "createdAt": "2025-05-07T09:45:02Z",
+              "updatedAt": "2025-05-07T09:53:13Z"
+            },
+            {
+              "originalPosition": 178,
+              "body": "Why not just re-reference (i.e., \"{{}}\") the workshop?",
+              "createdAt": "2025-05-07T09:50:50Z",
+              "updatedAt": "2025-05-07T09:53:13Z"
+            },
+            {
+              "originalPosition": 181,
+              "body": "I've added a NEMOPS xref.  Maybe link to the readout here, too?",
+              "createdAt": "2025-05-07T09:51:15Z",
+              "updatedAt": "2025-05-07T09:53:13Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
