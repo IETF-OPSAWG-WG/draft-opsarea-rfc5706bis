@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-08T00:48:31.019866+00:00",
+  "timestamp": "2025-05-11T00:52:23.295585+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -330,7 +330,7 @@
       "labels": [],
       "body": "Because this documents was produced in 2009, it missed some new OPS-related technologies (protocols and data models): BMP, Alt Mark, NETCONF/RESTCONF, YANG",
       "createdAt": "2025-04-09T12:51:05Z",
-      "updatedAt": "2025-04-23T16:38:38Z",
+      "updatedAt": "2025-05-08T08:27:27Z",
       "closedAt": null,
       "comments": [
         {
@@ -353,6 +353,13 @@
           "body": "See PR #20 as it creates a more sensible and clear room for the listing of technologies.\n\n   2.  Key Concepts, Terminology, and Technological Landscape\n     2.1.  Terminology\n     2.2.  Available Management Technologies\n",
           "createdAt": "2025-04-23T16:38:38Z",
           "updatedAt": "2025-04-23T16:38:38Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "While this started as issue 7 [New OPS-related technologies](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/7) , this might be more appropriate for [Background material vs. Guidance for author](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/21)\n    Once completed, we can complete [Operations and Manageability Consideration Section](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/9)",
+          "createdAt": "2025-05-08T08:27:26Z",
+          "updatedAt": "2025-05-08T08:27:26Z"
         }
       ]
     },
@@ -614,7 +621,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-09T14:17:33Z",
-      "updatedAt": "2025-04-09T14:23:15Z",
+      "updatedAt": "2025-05-08T12:01:35Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "a9a9878ede8b4d4e0f882e026662b03eee017cda",
@@ -736,7 +743,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-13T07:40:09Z",
-      "updatedAt": "2025-04-30T15:29:03Z",
+      "updatedAt": "2025-05-08T12:01:47Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
@@ -1534,7 +1541,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-29T11:20:06Z",
-      "updatedAt": "2025-05-07T13:23:25Z",
+      "updatedAt": "2025-05-08T11:59:06Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "4dcece065ccf1dbcd93d6e299d10872717b0a0b1",
@@ -1683,7 +1690,7 @@
       "labels": [],
       "body": "a readily available link to track the changes",
       "createdAt": "2025-04-30T05:41:27Z",
-      "updatedAt": "2025-04-30T15:53:42Z",
+      "updatedAt": "2025-05-08T12:00:02Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "424a262459b7a87f2aa7458152bc0d90d55d9fe0",
@@ -2017,6 +2024,42 @@
           ]
         }
       ]
+    },
+    {
+      "number": 30,
+      "id": "PR_kwDOOWPBqs6VZIbD",
+      "title": "Add some editorial changes.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/30",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "One possibly larger change is rewording the new text around the evolution of management protocols.",
+      "createdAt": "2025-05-08T08:19:59Z",
+      "updatedAt": "2025-05-08T08:25:29Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "1c45c6a4157bf8da72f20dfb607ff720cc32625a",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "jclarke-editorial-changes",
+      "headRefOid": "06285a170c33914a3d42d9fc73c64037c6714f1c",
+      "closedAt": "2025-05-08T08:25:21Z",
+      "mergedAt": "2025-05-08T08:25:21Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "93fbb5872163b459b20084cbdd558f96f8807617"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "All perfect. Merged",
+          "createdAt": "2025-05-08T08:25:28Z",
+          "updatedAt": "2025-05-08T08:25:28Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
