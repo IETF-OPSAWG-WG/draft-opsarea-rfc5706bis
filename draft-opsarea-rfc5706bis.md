@@ -3,7 +3,6 @@ title: Guidelines for Considering Operations and Management in IETF Specificatio
 abbrev: Operations & Management Considerations
 docname: draft-opsarea-rfc5706bis-latest
 
-
 stand_alone: true
 ipr: trust200902
 area: "Operations and Management"
