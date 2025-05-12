@@ -10,6 +10,7 @@ This is the working area for the individual Internet-Draft, "Guidelines for Cons
 * [Compare Editor's Copy to Individual Draft](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-opsarea-rfc5706bis.diff)
 * [Compare PRs to Datatracker Page](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/)
 * [Compare I-D to RFC5706](https://author-tools.ietf.org/diff?doc_1=rfc5706&doc_2=draft-opsarea-rfc5706bis)
+* [Submit a new revision](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/releases/new)
 
 ## Contributing
 
