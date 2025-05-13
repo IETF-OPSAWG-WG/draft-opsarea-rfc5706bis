@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-11T00:52:23.295585+00:00",
+  "timestamp": "2025-05-13T00:48:45.719770+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1155,11 +1155,13 @@
       "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "cpignata"
+      ],
       "labels": [],
       "body": "* Take care of Issue #19 , by adding more text about obsoletion in the Abstract and Introduction\r\n* Build a framework for issue #1 by moving the Terminology (and Tech) to a different section. These are not introduction.\r\n* Add definition of OAM.",
       "createdAt": "2025-04-23T16:36:55Z",
-      "updatedAt": "2025-05-07T14:56:51Z",
+      "updatedAt": "2025-05-12T16:09:07Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "66f5fb6ed4b280e5caabf99226536b5bbed48e78",
