@@ -1347,8 +1347,9 @@ Information Models and Data Models
 
 ##  Recommended Discussions
 
-   After evaluating the operational and manageability aspects of a new protocol
-   or feature, the resulting practices and requirements should be documented
+   After evaluating the operational and manageability aspects of a new
+   protocol or protocol extension, the resulting practices and
+   requirements should be documented
    in an “Operations and Manageability Considerations” section within a
    specification. Since protocols are intended for operational deployment and
    management within real networks, it is expected that such considerations
