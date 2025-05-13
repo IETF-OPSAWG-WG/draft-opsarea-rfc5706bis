@@ -1335,23 +1335,39 @@ Information Models and Data Models
 
 #  Documentation Guidelines
 
-   This document is focused on what a protocol designer should think
-   about and how those considerations might be documented.
+   This document outlines key considerations for protocol designers and
+   provides guidance on how these considerations ought to be documented.
 
    This document does not describe interoperability requirements but
    rather describes practices that are useful to follow when dealing
-   with manageability aspects in IETF documents, so the capitalized
+   with operational and manageability aspects in IETF documents, so the capitalized
    keywords from {{?RFC2119}} do not apply here. Any occurrence of words
    like 'must' or 'should' needs to be interpreted only in the context
    of their natural, English-language meaning.
 
 ##  Recommended Discussions
 
-   A Manageability Considerations section should include discussion of
+   After evaluating the operational and manageability aspects of a new protocol
+   or feature, the resulting practices and requirements should be documented
+   in an “Operations and Manageability Considerations” section within a
+   specification. Since protocols are intended for operational deployment and
+   management within real networks, it is expected that such considerations
+   will be present.
+
+   It is also recommended that operational and manageability considerations
+   be addressed early in the protocol design process. Consequently, early
+   revisions of Internet-Drafts are expected to include an “Operations and
+   Manageability Considerations” section.
+
+   It is also recommended to begin considering operational and manageability
+   considerations early within the protocol design, and consequently it is expected that early revisions of Internet-Drafts will contain such section.
+
+   An Operations and Manageability Considerations section should include discussion of
    the management and operations topics raised in this document, and
    when one or more of these topics is not relevant, it would be useful
    to contain a simple statement explaining why the topic is not
-   relevant for the new protocol. Of course, additional relevant topics
+   relevant or applicable for the new protocol or feature.
+   Of course, additional relevant operational and manageability topics
    should be included as well.
 
    Existing protocols and data models can provide the management
@@ -1363,18 +1379,20 @@ Information Models and Data Models
 
    A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
-   functionality is needed by the new protocol. It would be helpful to
+   functionality or operatinal best-practice clarifications are
+   needed by the new protocol. It would be helpful to
    those who may update or write extensions to the protocol in the
-   future or to those deploying the new protocol to know the thinking of
-   the working group regarding the manageability of the protocol at the
+   future, or to those deploying the new protocol, to know the rationale
+   regarding the decisions on manageability of the protocol at the
    time of its design.
 
    If there are no new manageability or deployment considerations, it is
-   recommended that a Manageability Considerations section contain a
-   simple statement such as, "There are no new manageability
-   requirements introduced by this document," and a brief explanation of
-   why that is the case. The presence of such a Manageability
-   Considerations section would indicate to the reader that due
+   recommended that an Operations and Manageability Considerations section
+   contain a
+   simple statement such as, "There are no new operations or manageability
+   requirements introduced by this document," followed by a brief explanation of
+   why that is the case. The presence of such a
+   section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
    In the case where the new protocol is an extension and the base
@@ -1384,7 +1402,7 @@ Information Models and Data Models
 
 ##  Placement of Operations and Manageability Considerations Sections
 
-   If a protocol designer develops a Manageability Considerations
+   If a protocol designer develops an Operations and Manageability Considerations
    section for a new protocol, it is recommended that the section be
    placed immediately before the Security Considerations section.
    Reviewers interested in such sections could find it easily, and this
