@@ -1,0 +1,3178 @@
+<!DOCTYPE html>
+<html lang="en" class="Internet-Draft">
+<head>
+<meta charset="utf-8">
+<meta content="Common,Latin" name="scripts">
+<meta content="initial-scale=1.0" name="viewport">
+<title>Guidelines for Considering Operations and Management in IETF Specifications</title>
+<meta content="Benoit Claise" name="author">
+<meta content="Joe Clarke" name="author">
+<meta content="Adrian Farrel" name="author">
+<meta content="Thomas Graf" name="author">
+<meta content="Samier Barguil" name="author">
+<meta content="Carlos Pignataro" name="author">
+<meta content="Ran Chen" name="author">
+<meta content="
+       New protocols or protocol extensions are best designed with due
+   consideration of the functionality needed to operate and manage the
+   protocols.  Retrofitting operations and management is sub-optimal.
+   The purpose of this document is to provide guidance to authors and
+   reviewers of documents that define new protocols or protocol
+   extensions regarding aspects of operations and management that should
+   be considered. 
+       This document obsoletes RFC 5706, replacing it completely and updating
+   it with new operational and management techniques and mechanisms, and
+   introduces a requirement for an “Operational and Management
+   Considerations” section in Internet-Drafts, before they are progressed
+   as publication as RFCs. 
+    " name="description">
+<meta content="xml2rfc 3.28.1" name="generator">
+<meta content="management" name="keyword">
+<meta content="operations" name="keyword">
+<meta content="operations and management" name="keyword">
+<meta content="ops considerations" name="keyword">
+<meta content="draft-opsarea-rfc5706bis-latest" name="ietf.draft">
+<!-- Generator version information:
+  xml2rfc 3.28.1
+    Python 3.12.10
+    ConfigArgParse 1.7
+    google-i18n-address 3.1.1
+    intervaltree 3.1.0
+    Jinja2 3.1.6
+    lxml 5.3.0
+    platformdirs 4.3.7
+    pycountry 24.6.1
+    PyYAML 6.0.2
+    requests 2.32.3
+    setuptools 70.3.0
+    wcwidth 0.2.13
+-->
+<link href="draft-opsarea-rfc5706bis.xml" rel="alternate" type="application/rfc+xml">
+<link href="#copyright" rel="license">
+<style type="text/css">@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-cyrillic.woff2') format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-cyrillic.woff2') format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Lora SemiBold'), local('Lora-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-semibold-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-greek.woff2') format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-greek.woff2') format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  color-scheme: light dark;
+  --background-color: #fff;
+  --text-color: #222;
+  --title-color: #191919;
+  --link-color: #2a6496;
+  --highlight-color: #f9f9f9;
+  --line-color: #eee;
+  --pilcrow-weak: #ddd;
+  --pilcrow-strong: #bbb;
+  --small-font-size: 14.5px;
+  --font-mono: 'Oxygen Mono', monospace;
+  --font-title: "Sofia Sans Semi Condensed", sans-serif;
+  scrollbar-color: #bbb #eee;
+}
+body {
+  max-width: 600px;
+  margin: 75px auto;
+  padding: 0 5px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font: 16px/22px "Lora", serif;
+  scroll-behavior: smooth;
+}
+
+.ears {
+  display: none;
+}
+
+/* headings */
+section {
+  clear: both;
+}
+.section-number {
+  padding-right: 0.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 680;
+  margin: 0.8em 0 0.3em;
+  font-size-adjust: 0.5;
+  color: var(--title-color);
+}
+h1#title {
+  font-size: 32px;
+  line-height: 40px;
+  clear: both;
+}
+h1#title, h1#rfcnum {
+  margin: 1.5em 0 0.2em;
+}
+h1#rfcnum + h1#title {
+  margin: 0.2em 0;
+}
+
+h1, h2, h3 {
+  font-size: 22px;
+  line-height: 27px;
+}
+h4, h5, h6 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* general structure */
+.author {
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+#abstract+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+#abstract+p code, #abstract+p samp, #abstract+p tt {
+  font-size: 16px;
+  line-height: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0.5em 0;
+  text-align: left;
+}
+div {
+  margin: 0;
+}
+.alignRight.art-text {
+  background-color: var(--highlight-color);
+  border: 1px solid var(--line-color);
+  border-radius: 3px;
+  padding: 0.5em 1em 0;
+  margin-bottom: 0.5em;
+}
+.alignRight.art-text pre {
+  padding: 0;
+  width: auto;
+}
+.alignRight {
+  margin: 1em 0;
+}
+.alignRight > *:first-child {
+  border: none;
+  margin: 0;
+  float: right;
+  clear: both;
+}
+.alignRight > *:nth-child(2) {
+  clear: both;
+  display: block;
+  border: none;
+}
+svg {
+  display: block;
+}
+/* font-family isn't space-separated, but =~ will have to do */
+svg[font-family~="monospace" i], svg [font-family~="monospace" i] {
+  font-family: var(--font-mono);
+}
+.alignCenter.art-text {
+  background-color: var(--highlight-color);
+  border: 1px solid var(--line-color);
+  border-radius: 3px;
+  padding: 0.5em 1em 0;
+  margin-bottom: 0.5em;
+}
+.alignCenter.art-text pre {
+  padding: 0;
+  width: auto;
+}
+.alignCenter {
+  margin: 1em 0;
+}
+.alignCenter > *:first-child {
+  border: none;
+  /* this isn't optimal, but it's an existence proof.  PrinceXML doesn't
+     support flexbox yet.
+  */
+  display: table;
+  margin: 0 auto;
+}
+
+/* lists */
+ol, ul {
+  padding: 0;
+  margin: 0 0 0.5em 2em;
+  & :is(ol, ul) {
+    margin-left: 1em;
+  }
+}
+li {
+  margin: 0 0 0.25em 0;
+}
+ul.empty, .ulEmpty {
+  list-style-type: none;
+  & li {
+    margin-top: 0.5em;
+  }
+}
+:is(ul, ol).compact, .ulCompact, .olCompact {
+  margin: 0 0 0 2em;
+  & li {
+    margin: 0;
+    & :first-child { margin-top: 0; }
+    & :last-child { margin-bottom: 0; }
+  }
+}
+
+/* definition lists */
+dl {
+  clear: left;
+  --indent: 3ch;
+  /* --indent: attr(indent ch); not supported in any browser, but we can dream */
+  &.olPercent {
+    --indent: 5ch;
+    & > dt {
+      min-width: calc(var(--indent) - 2ch);
+    }
+  }
+  &.olPercent > dt {
+    float: none;
+  }
+
+  dl > dd > & {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+}
+dl:not(.dlNewline) > dt {
+  float: left;
+  margin-right: 2ch;
+  min-width: 8ch;
+}
+dl > dd {
+  margin-bottom: .8em;
+  margin-left: var(--indent) !important; /* stupid element overrides */
+  min-height: 2ex;
+}
+:is(dl.compact, .dlCompact) > dd {
+  margin-bottom: 0;
+  & > :is(:first-child, .break:first-child + *) {
+    margin-top: 0;
+  }
+  & > :is(:last-child) {
+    margin-bottom: 0;
+  }
+}
+:is(dd, span).break {
+  display: none;
+}
+
+/* links */
+a, a[href].selfRef:hover {
+  text-decoration: none;
+}
+a[href] {
+  color: var(--link-color);
+}
+a[href].selfRef, .iref + a[href].internal {
+  color: var(--text-color);
+}
+a[href]:hover {
+  text-decoration: underline;
+}
+a[href].selfRef:hover {
+  background-color: var(--highlight-color);
+}
+a.xref:is(.cite, .auto), :is(#status-of-memo, #copyright) a {
+  white-space: nowrap;
+}
+
+/* Figures */
+tt, code, pre {
+  background-color: var(--highlight-color);
+  font: 14px/22px var(--font-mono);
+}
+tt, code {
+  /* changing the font for inline elements leads to different ascender
+     and descender heights; as we want to retain baseline alignment,
+     remove leading to avoid altering the final height of lines
+     note: this fails if these blocks take an entire line,
+     a different solution would be great */
+  line-height: 0;
+}
+:is(h1, h2, h3, h4, h5, h6) :is(tt, code) {
+  font-size: 84%;
+}
+pre {
+  border: 1px solid var(--line-color);
+  font-size: 13.5px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  margin: 5px;
+  padding: 5px;
+}
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0.5em 0;
+  padding: 0;
+}
+figure blockquote {
+  margin: 0.8em 0.4em 0.4em;
+}
+figcaption, caption {
+  font-style: italic;
+  margin: 0.5em 1.5em;
+  text-align: left;
+  caption-side: bottom;
+}
+@media screen {
+  /* Auto-collapse boilerplate. */
+  :is(#status-of-memo, #copyright) p {
+    margin: -2px 0;
+    max-height: 0;
+    transition: max-height 2s ease, margin 0.5s ease 0.5s;
+    overflow: hidden;
+  }
+  :is(#status-of-memo, #copyright):hover p,
+  :is(#status-of-memo, #copyright) h2:target ~ p {
+    margin: 0.5em 0;
+    max-height: 500px;
+    overflow: auto;
+  }
+  pre, svg {
+    display: inline-block;
+    /* In the horizontal direction, sometimes people make over-sized figures.
+       Scrollbars for those is therefore necessary: auto adds them as necessary..
+       In the vertical direction, the line-height can combine with the font
+       asender/descender height to produce scrollbars: hidden avoids that. */
+    overflow: auto hidden;
+  }
+  pre {
+    max-width: 100%;
+    width: calc(100% - 22px - 1em);
+  }
+  svg {
+    max-width: calc(100% - 22px - 1em);
+  }
+  figure pre {
+    display: block;
+    width: calc(100% - 25px);
+  }
+  :is(pre, svg) + .pilcrow {
+    display: inline-block;
+    vertical-align: text-bottom;
+    padding-bottom: 8px;
+  }
+}
+
+/* aside, blockquote */
+aside, blockquote {
+  margin-left: 0;
+  padding: 0 2em;
+  font-style: italic;
+}
+blockquote {
+  margin: 1em 0;
+}
+cite {
+  display: block;
+  text-align: right;
+  font-style: italic;
+}
+
+/* tables */
+table {
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 1em;
+  border-collapse: collapse;
+}
+table.right {
+  margin-left: auto;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+table.left {
+  margin-right: auto;
+}
+table .text-left {
+  text-align: left;
+}
+table .text-center {
+  text-align: center;
+}
+table .text-right {
+  text-align: right;
+}
+
+thead, tbody {
+  border: 1px solid var(--line-color);
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 5px 10px;
+}
+th {
+  background-color: var(--line-color);
+}
+:is(tr:nth-child(2n), thead+tbody > tr:nth-child(2n+1)) > td {
+  background-color: var(--background-color);
+}
+:is(tr:nth-child(2n+1), thead+tbody > tr:nth-child(2n)) > td {
+  background-color: var(--highlight-color);
+}
+table caption {
+  margin: 0;
+  padding: 3px 0 3px 1em;
+}
+table p {
+  margin: 0;
+}
+
+/* pilcrow */
+a.pilcrow {
+  margin-left: 3px;
+  opacity: 0.2;
+  user-select: none;
+  &[href] {
+    color: var(--pilcrow-weak);
+    &:hover { text-decoration: none; }
+  }
+}
+@media not print {
+  :hover > a.pilcrow {
+    opacity: 1;
+  }
+  a.pilcrow[href]:hover {
+    color: var(--pilcrow-strong);
+    background-color: transparent;
+  }
+}
+@media print {
+  a.pilcrow {
+    display: none;
+  }
+}
+
+/* misc */
+hr {
+  border: 0;
+  border-top: 1px solid var(--line-color);
+}
+.bcp14 {
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: var(--small-font-size);
+}
+.role {
+  font-variant: all-small-caps;
+}
+sub, sup {
+  line-height: 1;
+  font-size: 80%;
+}
+
+/* info block */
+#identifiers {
+  margin: 0;
+  font-size: var(--small-font-size);
+  line-height: 18px;
+  --identifier-width: 15ch;
+  & dt {
+    width: var(--identifier-width);
+    min-width: var(--identifier-width);
+    clear: left;
+    float: left;
+    text-align: right;
+    margin-right: 1ch;
+  }
+  & dd {
+    margin: 0;
+    margin-left: calc(1em + var(--identifier-width)) !important;
+    min-width: 5em;
+  }
+  & .authors {
+    & .author {
+      display: inline-block;
+      margin-right: 1.5em;
+    }
+    & .org {
+      font-style: italic;
+    }
+  }
+}
+
+/* The prepared/rendered info at the very bottom of the page */
+.docInfo {
+  color: #999;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 2em;
+}
+.docInfo .prepared {
+  float: right;
+}
+
+/* table of contents */
+#toc {
+  padding: 0.75em 0 2em 0;
+  margin-bottom: 1em;
+
+  & nav {
+    & ul {
+      margin: 0 0.5em 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    & li {
+      line-height: 1.3em;
+      margin: 2px 0;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+  }
+  & a.xref {
+    white-space: normal;
+  }
+}
+
+.references {
+  & > dt {
+    text-align: right;
+    font-weight: bold;
+    min-width: 10ch;
+    margin-right: 1.5ch;
+    &:target::before {
+      content: "⇒";
+      margin: 0 10px 0 -25px;
+    }
+  }
+  & > dd {
+    margin-left: 12ch !important;
+    overflow: visible;
+    & .refInstance {
+      margin-bottom: 0.8em;
+    }
+    & .ascii {
+      margin-bottom: 0.25em;
+    }
+  }
+}
+
+#rfc\.index\.index + ul {
+  margin-left: 0;
+}
+
+/* authors */
+address.vcard {
+  font-style: normal;
+  max-width: 20em;
+  margin: 1em auto 1em 0;
+
+  & .nameRole {
+    font-weight: 700;
+    margin-left: 0;
+  }
+  & .label {
+    margin: 0.5em 0;
+  }
+  & .type {
+    display: none;
+  }
+  & .alternative-contact {
+    margin: 0.5em 0 0.25em 0;
+  }
+  & .non-ascii {
+    margin: 0 0 0 2em;
+  }
+  & div.left {
+    text-align: left;
+  }
+  & div.right {
+    text-align: right;
+  }
+}
+
+hr.addr {
+  border-top: 1px dashed;
+  margin: 0;
+  color: #ddd;
+  max-width: calc(100% - 16px);
+}
+@media (min-width: 500px) {
+  #authors-addresses > section {
+    column-count: 2;
+    column-gap: 20px;
+  }
+  #authors-addresses > section > h2 {
+    column-span: all;
+  }
+  /* hack for break-inside: avoid-column */
+  #authors-addresses address {
+    display: inline-block;
+    break-inside: avoid-column;
+  }
+}
+
+/* Comments */
+.rfcEditorRemove p:first-of-type {
+  font-style: italic;
+}
+.cref {
+  background-color: rgba(249, 232, 105, 0.3);
+  padding: 2px 4px;
+}
+.crefSource {
+  font-style: italic;
+}
+
+@media screen {
+  #toc nav {
+    font-family: var(--font-title);
+    font-weight: 360;
+    & > ul { margin-bottom: 2em; }
+    & ul {
+      margin: 0 0 0 4px;
+      & :is(p, li) {
+        margin: 2px 0;
+      }
+    }
+  }
+  #toc a.toplink {
+    float: right;
+  }
+}
+@media not screen {
+  #toc a.toplink {
+    display: none;
+  }
+}
+
+
+/* TOC layout for smaller screens */
+@media screen and (max-width: 929px) {
+  #toc {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    padding: 1px 0 0 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    opacity: 0.6;
+  }
+  #toc h2 {
+    margin: 0;
+    padding: 2px 0 2px 6px;
+    padding-right: 1em;
+    font-size: 18px;
+    line-height: 24px;
+    min-width: 190px;
+    text-align: right;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    &::before { /* css hamburger */
+      float: right;
+      position: relative;
+      width: 1em;
+      height: 1px;
+      left: -164px;
+      margin: 8px 0 0 0;
+      background: white none repeat scroll 0 0;
+      box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
+      content: "";
+    }
+  }
+  #toc nav {
+    display: none;
+    background-color: var(--background-color);
+    padding: 0.5em 1em 1em;
+    overflow: auto;
+    overscroll-behavior: contain;
+    height: calc(100vh - 48px);
+    border-left: 1px solid #ddd;
+  }
+  #toc.active {
+    opacity: 1;
+    & nav { display: block; }
+  }
+  /* Make the collapsed ToC header render white on gray also when it's a link */
+  #toc h2 a,
+  #toc h2 a:is(:link, :focus, :hover),
+  #toc a.toplink,
+  #toc a.toplink:hover {
+    color: white;
+    background-color: #444;
+    text-decoration: none;
+  }
+  #toc a.toplink {
+    margin: 2px 0.5em 0;
+  }
+}
+
+/* TOC layout for wide screens */
+@media screen and (min-width: 930px) {
+  body {
+    padding-right: 360px;
+    padding-right: calc(min(180px + 20%, 500px));
+  }
+  #toc {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    right: calc(50vw - 480px);
+    width: 312px;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  #toc h2 {
+    margin: 0;
+    padding: 0.25em 1em 1em 0;
+  }
+  #toc nav {
+    display: block;
+    height: calc(90vh - 84px);
+    bottom: 0;
+    padding: 0.5em 0 2em;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+  img { /* future proofing */
+    max-width: 100%;
+    height: auto;
+  }
+  #toc a.toplink {
+    margin: 8px 0.5em 0;
+  }
+}
+
+/* pagination */
+@media print {
+  body {
+    width: 100%;
+  }
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  #n-copyright-notice {
+    border-bottom: none;
+  }
+  #toc, #n-introduction {
+    page-break-before: always;
+  }
+  #toc {
+    border-top: none;
+    padding-top: 0;
+  }
+  figure, pre, .vcard {
+    page-break-inside: avoid;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  :is(h2, h3, h4, h5, h6)+*, dd {
+    page-break-before: avoid;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 10pt;
+  }
+  table {
+    border: 1px solid #ddd;
+  }
+  td {
+    border-top: 1px solid #ddd;
+  }
+}
+
+@page :first {
+  padding-top: 0;
+  @top-left {
+    content: normal;
+    border: none;
+  }
+  @top-center {
+    content: normal;
+    border: none;
+  }
+  @top-right {
+    content: normal;
+    border: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin-bottom: 45mm;
+  padding-top: 20px;
+}
+
+/* Dark mode. */
+@media (prefers-color-scheme: dark) {
+:root {
+  --background-color: #121212;
+  --text-color: #f0f0f0;
+  --title-color: #fff;
+  --link-color: #4da4f0;
+  --highlight-color: #282828;
+  --line-color: #444;
+  --pilcrow-weak: #444;
+  --pilcrow-strong: #666;
+  scrollbar-color: #777 #333;
+}
+}
+
+/* SVG Trick: a prefix match works because only black and white are allowed */
+svg :is([stroke="black"], [stroke^="#000"]) {
+  stroke: var(--text-color);
+}
+svg :is([stroke="white"], [stroke^="#fff"]) {
+  stroke: var(--background-color);
+}
+svg :is([fill="black"], [fill^="#000"], :not([fill])) {
+  fill: var(--text-color);
+}
+svg :is([fill="white"], [fill^="#fff"]) {
+  fill: var(--background-color);
+}
+</style>
+
+</head>
+<body class="xml2rfc">
+<table class="ears">
+<thead><tr>
+<td class="left">Internet-Draft</td>
+<td class="center">Operations &amp; Management Considerations</td>
+<td class="right">May 2025</td>
+</tr></thead>
+<tfoot><tr>
+<td class="left">Claise, et al.</td>
+<td class="center">Expires 14 November 2025</td>
+<td class="right">[Page]</td>
+</tr></tfoot>
+</table>
+<div id="external-metadata" class="document-information"></div>
+<div id="internal-metadata" class="document-information">
+<dl id="identifiers">
+<dt class="label-workgroup">Workgroup:</dt>
+<dd class="workgroup">Network Working Group</dd>
+<dt class="label-internet-draft">Internet-Draft:</dt>
+<dd class="internet-draft">draft-opsarea-rfc5706bis-latest</dd>
+<dt class="label-obsoletes">Obsoletes:</dt>
+<dd class="obsoletes">
+<a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
+<dt class="label-published">Published:</dt>
+<dd class="published">
+<time datetime="2025-05-13" class="published">13 May 2025</time>
+    </dd>
+<dt class="label-intended-status">Intended Status:</dt>
+<dd class="intended-status">Best Current Practice</dd>
+<dt class="label-expires">Expires:</dt>
+<dd class="expires"><time datetime="2025-11-14">14 November 2025</time></dd>
+<dt class="label-authors">Authors:</dt>
+<dd class="authors">
+<div class="author">
+      <div class="author-name">B. Claise</div>
+<div class="org">Huawei</div>
+</div>
+<div class="author">
+      <div class="author-name">J. Clarke</div>
+<div class="org">Cisco</div>
+</div>
+<div class="author">
+      <div class="author-name">A. Farrel</div>
+<div class="org">Old Dog Consulting</div>
+</div>
+<div class="author">
+      <div class="author-name">T. Graf</div>
+<div class="org">Swisscom</div>
+</div>
+<div class="author">
+      <div class="author-name">S. Barguil</div>
+<div class="org">Nokia</div>
+</div>
+<div class="author">
+      <div class="author-name">C. Pignataro</div>
+<div class="org">Blue Fern Consulting</div>
+</div>
+<div class="author">
+      <div class="author-name">R. Chen</div>
+<div class="org">ZTE</div>
+</div>
+</dd>
+</dl>
+</div>
+<h1 id="title">Guidelines for Considering Operations and Management in IETF Specifications</h1>
+<section id="section-abstract">
+      <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
+<p id="section-abstract-1">New protocols or protocol extensions are best designed with due
+   consideration of the functionality needed to operate and manage the
+   protocols.  Retrofitting operations and management is sub-optimal.
+   The purpose of this document is to provide guidance to authors and
+   reviewers of documents that define new protocols or protocol
+   extensions regarding aspects of operations and management that should
+   be considered.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-2">This document obsoletes RFC 5706, replacing it completely and updating
+   it with new operational and management techniques and mechanisms, and
+   introduces a requirement for an “Operational and Management
+   Considerations” section in Internet-Drafts, before they are progressed
+   as publication as RFCs.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+</section>
+<div id="status-of-memo">
+<section id="section-boilerplate.1">
+        <h2 id="name-status-of-this-memo">
+<a href="#name-status-of-this-memo" class="section-name selfRef">Status of This Memo</a>
+        </h2>
+<p id="section-boilerplate.1-1">
+        This Internet-Draft is submitted in full conformance with the
+        provisions of BCP 78 and BCP 79.<a href="#section-boilerplate.1-1" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-2">
+        Internet-Drafts are working documents of the Internet Engineering Task
+        Force (IETF). Note that other groups may also distribute working
+        documents as Internet-Drafts. The list of current Internet-Drafts is
+        at <span><a href="https://datatracker.ietf.org/drafts/current/">https://datatracker.ietf.org/drafts/current/</a></span>.<a href="#section-boilerplate.1-2" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-3">
+        Internet-Drafts are draft documents valid for a maximum of six months
+        and may be updated, replaced, or obsoleted by other documents at any
+        time. It is inappropriate to use Internet-Drafts as reference
+        material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-4">
+        This Internet-Draft will expire on 14 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="copyright">
+<section id="section-boilerplate.2">
+        <h2 id="name-copyright-notice">
+<a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
+        </h2>
+<p id="section-boilerplate.2-1">
+            Copyright (c) 2025 IETF Trust and the persons identified as the
+            document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.2-2">
+            This document is subject to BCP 78 and the IETF Trust's Legal
+            Provisions Relating to IETF Documents
+            (<span><a href="https://trustee.ietf.org/license-info">https://trustee.ietf.org/license-info</a></span>) in effect on the date of
+            publication of this document. Please review these documents
+            carefully, as they describe your rights and restrictions with
+            respect to this document. Code Components extracted from this
+            document must include Revised BSD License text as described in
+            Section 4.e of the Trust Legal Provisions and are provided without
+            warranty as described in the Revised BSD License.<a href="#section-boilerplate.2-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="toc">
+<section id="section-toc.1">
+        <a href="#" onclick="scroll(0,0)" class="toplink">▲</a><h2 id="name-table-of-contents">
+<a href="#name-table-of-contents" class="section-name selfRef">Table of Contents</a>
+        </h2>
+<nav class="toc"><ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
+            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-to-do-list" class="internal xref">TO DO LIST</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
+            <p id="section-toc.1-1.2.1"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.1">
+                <p id="section-toc.1-1.2.2.1.1" class="keepWithNext"><a href="#section-2.1" class="auto internal xref">2.1</a>.  <a href="#name-designing-for-operations-an" class="internal xref">Designing for Operations and Management</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.2">
+                <p id="section-toc.1-1.2.2.2.1" class="keepWithNext"><a href="#section-2.2" class="auto internal xref">2.2</a>.  <a href="#name-this-document" class="internal xref">This Document</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.3">
+                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="auto internal xref">2.3</a>.  <a href="#name-motivation" class="internal xref">Motivation</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.4">
+                <p id="section-toc.1-1.2.2.4.1"><a href="#section-2.4" class="auto internal xref">2.4</a>.  <a href="#name-background" class="internal xref">Background</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.5">
+                <p id="section-toc.1-1.2.2.5.1"><a href="#section-2.5" class="auto internal xref">2.5</a>.  <a href="#name-changes-since-rfc-5706" class="internal xref">Changes Since RFC 5706</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-key-concepts-terminology-an" class="internal xref">Key Concepts, Terminology, and Technological Landscape</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
+                <p id="section-toc.1-1.3.2.1.1"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-terminology" class="internal xref">Terminology</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2">
+                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-available-management-techno" class="internal xref">Available Management Technologies</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-operational-considerations-" class="internal xref">Operational Considerations - How Will the New Protocol Fit into the Current Environment?</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-operations" class="internal xref">Operations</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-installation-and-initial-se" class="internal xref">Installation and Initial Setup</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-migration-path" class="internal xref">Migration Path</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.4">
+                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-requirements-on-other-proto" class="internal xref">Requirements on Other Protocols and Functional Components</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.5">
+                <p id="section-toc.1-1.4.2.5.1"><a href="#section-4.5" class="auto internal xref">4.5</a>.  <a href="#name-impact-on-network-operation" class="internal xref">Impact on Network Operation</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.6">
+                <p id="section-toc.1-1.4.2.6.1"><a href="#section-4.6" class="auto internal xref">4.6</a>.  <a href="#name-verifying-correct-operation" class="internal xref">Verifying Correct Operation</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-management-considerations-h" class="internal xref">Management Considerations - How Will the Protocol Be Managed?</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-interoperability" class="internal xref">Interoperability</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-management-information" class="internal xref">Management Information</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2.2.1">
+                    <p id="section-toc.1-1.5.2.2.2.1.1"><a href="#section-5.2.1" class="auto internal xref">5.2.1</a>.  <a href="#name-information-model-design" class="internal xref">Information Model Design</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2.2.2">
+                    <p id="section-toc.1-1.5.2.2.2.2.1"><a href="#section-5.2.2" class="auto internal xref">5.2.2</a>.  <a href="#name-yang-data-model-considerati" class="internal xref">YANG Data Model Considerations</a></p>
+</li>
+                </ul>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3">
+                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-fault-management" class="internal xref">Fault Management</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3.2.1">
+                    <p id="section-toc.1-1.5.2.3.2.1.1"><a href="#section-5.3.1" class="auto internal xref">5.3.1</a>.  <a href="#name-liveness-detection-and-moni" class="internal xref">Liveness Detection and Monitoring</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3.2.2">
+                    <p id="section-toc.1-1.5.2.3.2.2.1"><a href="#section-5.3.2" class="auto internal xref">5.3.2</a>.  <a href="#name-fault-determination" class="internal xref">Fault Determination</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3.2.3">
+                    <p id="section-toc.1-1.5.2.3.2.3.1"><a href="#section-5.3.3" class="auto internal xref">5.3.3</a>.  <a href="#name-root-cause-analysis" class="internal xref">Root Cause Analysis</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3.2.4">
+                    <p id="section-toc.1-1.5.2.3.2.4.1"><a href="#section-5.3.4" class="auto internal xref">5.3.4</a>.  <a href="#name-fault-isolation" class="internal xref">Fault Isolation</a></p>
+</li>
+                </ul>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.4">
+                <p id="section-toc.1-1.5.2.4.1"><a href="#section-5.4" class="auto internal xref">5.4</a>.  <a href="#name-configuration-management" class="internal xref">Configuration Management</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.4.2.1">
+                    <p id="section-toc.1-1.5.2.4.2.1.1"><a href="#section-5.4.1" class="auto internal xref">5.4.1</a>.  <a href="#name-verifying-correct-operation-2" class="internal xref">Verifying Correct Operation</a></p>
+</li>
+                </ul>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.5">
+                <p id="section-toc.1-1.5.2.5.1"><a href="#section-5.5" class="auto internal xref">5.5</a>.  <a href="#name-accounting-management" class="internal xref">Accounting Management</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.6">
+                <p id="section-toc.1-1.5.2.6.1"><a href="#section-5.6" class="auto internal xref">5.6</a>.  <a href="#name-performance-management" class="internal xref">Performance Management</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.6.2.1">
+                    <p id="section-toc.1-1.5.2.6.2.1.1"><a href="#section-5.6.1" class="auto internal xref">5.6.1</a>.  <a href="#name-monitoring-the-protocol" class="internal xref">Monitoring the Protocol</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.6.2.2">
+                    <p id="section-toc.1-1.5.2.6.2.2.1"><a href="#section-5.6.2" class="auto internal xref">5.6.2</a>.  <a href="#name-monitoring-the-device" class="internal xref">Monitoring the Device</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.6.2.3">
+                    <p id="section-toc.1-1.5.2.6.2.3.1"><a href="#section-5.6.3" class="auto internal xref">5.6.3</a>.  <a href="#name-monitoring-the-network" class="internal xref">Monitoring the Network</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.6.2.4">
+                    <p id="section-toc.1-1.5.2.6.2.4.1"><a href="#section-5.6.4" class="auto internal xref">5.6.4</a>.  <a href="#name-monitoring-the-service" class="internal xref">Monitoring the Service</a></p>
+</li>
+                </ul>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.7">
+                <p id="section-toc.1-1.5.2.7.1"><a href="#section-5.7" class="auto internal xref">5.7</a>.  <a href="#name-security-management" class="internal xref">Security Management</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-operational-and-management-" class="internal xref">Operational and Management Tooling Considerations</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-documentation-guidelines" class="internal xref">Documentation Guidelines</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
+                <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="auto internal xref">7.1</a>.  <a href="#name-recommended-discussions" class="internal xref">Recommended Discussions</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2">
+                <p id="section-toc.1-1.7.2.2.1"><a href="#section-7.2" class="auto internal xref">7.2</a>.  <a href="#name-null-manageability-consider" class="internal xref">Null Manageability Considerations Sections</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.3">
+                <p id="section-toc.1-1.7.2.3.1"><a href="#section-7.3" class="auto internal xref">7.3</a>.  <a href="#name-placement-of-operations-and" class="internal xref">Placement of Operations and Manageability Considerations Sections</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
+            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
+            <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgements" class="internal xref">Acknowledgements</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
+            <p id="section-toc.1-1.12.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+</li>
+        </ul>
+</nav>
+</section>
+</div>
+<div id="to-do-list">
+<section id="section-1">
+      <h2 id="name-to-do-list">
+<a href="#section-1" class="section-number selfRef">1. </a><a href="#name-to-do-list" class="section-name selfRef">TO DO LIST</a>
+      </h2>
+<p id="section-1-1">See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues<a href="#section-1-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="introduction">
+<section id="section-2">
+      <h2 id="name-introduction">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
+      </h2>
+<p id="section-2-1">Often when new protocols or protocol extensions are developed, not
+   enough consideration is given to how the protocol will be deployed,
+   operated, and managed. Retrofitting operations and management
+   mechanisms is often hard and architecturally unpleasant, and certain
+   protocol design choices may make deployment, operations, and
+   management particularly hard. This document provides guidelines to
+   help protocol designers and working groups consider the operations
+   and management functionality for their new IETF protocol or protocol
+   extension at an earlier phase.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-2">This document obsoletes RFC 5706 and fully updates its content
+   with new operational and management techniques and mechanisms, and
+   introduces a requirement for an “Operational and Management
+   Considerations” section in Internet-Drafts, before they are progressed
+   for publication as an RFC. It removes outdated
+   references and aligns with current practices, protocols, and
+   technologies used in operating and managing network devices and
+   services. See <a href="#changes-since-5706" class="auto internal xref">Section 2.5</a>.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<div id="designing-for-operations-and-management">
+<section id="section-2.1">
+        <h3 id="name-designing-for-operations-an">
+<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-designing-for-operations-an" class="section-name selfRef">Designing for Operations and Management</a>
+        </h3>
+<p id="section-2.1-1">The operational environment and manageability of the protocol should
+   be considered from the start when new protocols are designed.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+<p id="section-2.1-2">As the Internet has grown, IETF protocols have addressed a constantly growing set of
+   needs, such as web servers, collaboration services, and applications.
+   The number of IETF management technologies has been expanding and the
+   IETF management strategy has been changing to address the emerging
+   management requirements. In the past, most of the existing IETF management
+   standards were focused on using Structure of Management Information (SMI)-based
+   data models (MIB modules) to monitor and manage networking devices.
+   Currently, the YANG data modeling language <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> is recommended to
+   monitor and manage the IETF protocols and the networking devices.
+   Management requirements continually evolve in the IETF. Therefore,
+   the management protocols used should track with current IETF
+   recommendations.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
+<p id="section-2.1-3">Protocol designers should consider which operations and management
+   needs are relevant to their protocol, document how those needs could
+   be addressed, and suggest (preferably standard) management protocols
+   and data models that could be used to address those needs. This is
+   similar to a working group (WG) that considers which security threats
+   are relevant to their protocol, documents how threats should be
+   mitigated, and then suggests appropriate standard protocols that
+   could mitigate the threats.<a href="#section-2.1-3" class="pilcrow">¶</a></p>
+<p id="section-2.1-4">When a WG considers operation and management functionality for a
+   protocol, the document should contain enough information for readers
+   to understand how the protocol will be deployed and managed. The WG
+   should expect that considerations for operations and management may
+   need to be updated in the future, after further operational
+   experience has been gained.<a href="#section-2.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="this-document">
+<section id="section-2.2">
+        <h3 id="name-this-document">
+<a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-this-document" class="section-name selfRef">This Document</a>
+        </h3>
+<p id="section-2.2-1">This document makes a distinction between "Operational
+   Considerations" and "Management Considerations", although the two are
+   closely related. The section on manageability is focused on
+   management technology, such as how to utilize management protocols
+   and how to design management data models. The operational
+   considerations apply to operating the protocol within a network, even
+   if there were no management protocol actively being used.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.2-2">The purpose of this document is to provide guidance about what to
+   consider when thinking about the management and deployment of a new
+   protocol, and to provide guidance about documenting the
+   considerations. The following guidelines are designed to help
+   writers provide a reasonably consistent format for such
+   documentation. Separate manageability and operational considerations
+   sections are desirable in many cases, but their structure and
+   location are a decision that can be made from case to case.<a href="#section-2.2-2" class="pilcrow">¶</a></p>
+<p id="section-2.2-3">This document does not impose a solution, imply that a formal data
+   model is needed, or imply that using a specific management protocol
+   is mandatory. If protocol designers conclude that the technology can
+   be managed solely by using proprietary command line interfaces (CLIs)
+   and that no structured or standardized data model needs to be in
+   place, this might be fine, but it is a decision that should be
+   explicit in a manageability discussion -- that this is how the
+   protocol will need to be operated and managed. Protocol designers
+   should avoid having manageability pushed for a later phase of the
+   development of the standard.<a href="#section-2.2-3" class="pilcrow">¶</a></p>
+<p id="section-2.2-4">A list of guidelines and a
+   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
+   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-2.2-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="motivation">
+<section id="section-2.3">
+        <h3 id="name-motivation">
+<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-motivation" class="section-name selfRef">Motivation</a>
+        </h3>
+<p id="section-2.3-1">For years the IETF community has used the IETF Standard Management
+   Framework, including the Simple Network Management Protocol
+   <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span>, the Structure of Management Information <span>[<a href="#RFC2578" class="cite xref">RFC2578</a>]</span>, and MIB
+   data models for managing new protocols. As the Internet has evolved,
+   operators have found the reliance on one protocol and one schema
+   language for managing all aspects of the Internet inadequate. The
+   IESG policy to require working groups to write a MIB module to
+   provide manageability for new protocols is being replaced by a policy
+   that is more open to using a variety of management protocols and data
+   models designed to achieve different goals. In 2014, the IESG wrote a
+   statement about "Writable MIB Module" <span>[<a href="#IESG-STATEMENT" class="cite xref">IESG-STATEMENT</a>]</span>.
+   This statement stresses that IETF working groups are encouraged to use the NETCONF/YANG
+   standards for configuration, especially in new charters.<a href="#section-2.3-1" class="pilcrow">¶</a></p>
+<p id="section-2.3-2">This document provides some initial guidelines for considering
+   operations and management in an IETF Management Framework that
+   consists of multiple protocols and multiple data modeling languages,
+   with an eye toward being flexible while also striving for
+   interoperability.<a href="#section-2.3-2" class="pilcrow">¶</a></p>
+<p id="section-2.3-3">Fully new protocols may require significant consideration of expected
+   operations and management, while extensions to existing, widely
+   deployed protocols may have established de facto operations and
+   management practices that are already well understood.<a href="#section-2.3-3" class="pilcrow">¶</a></p>
+<p id="section-2.3-4">Suitable management approaches may vary for different areas, working
+   groups, and protocols in the IETF. This document does not prescribe
+   a fixed solution or format in dealing with operational and management
+   aspects of IETF protocols. However, these aspects should be
+   considered for any IETF protocol because we develop technologies and
+   protocols to be deployed and operated in the real-world Internet. A WG
+   may decide that its protocol does not need interoperable
+   management or a standardized data model, but this should be a
+   deliberate decision, not the result of omission. This document
+   provides some guidelines for those considerations.<a href="#section-2.3-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="background">
+<section id="section-2.4">
+        <h3 id="name-background">
+<a href="#section-2.4" class="section-number selfRef">2.4. </a><a href="#name-background" class="section-name selfRef">Background</a>
+        </h3>
+<p id="section-2.4-1">There have been a significant number of efforts, meetings, and
+   documents that are related to Internet operations and management.
+   Some of them are mentioned here to help protocol designers find
+   documentation of previous efforts. Hopefully, providing these
+   references will help the IETF avoid rehashing old discussions and
+   reinventing old solutions.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
+<p id="section-2.4-2">In 1988, the IAB published "IAB Recommendations for the Development
+   of Internet Network Management Standards" <span>[<a href="#RFC1052" class="cite xref">RFC1052</a>]</span>, which
+   recommended a solution that, where possible, deliberately separates
+   modeling languages, data models, and the protocols that carry data.
+   The goal is to allow standardized information and data models to be
+   used by different protocols.<a href="#section-2.4-2" class="pilcrow">¶</a></p>
+<p id="section-2.4-3">In 2001, Operations and Management Area design teams were created to
+   document requirements related to the configuration of IP-based
+   networks. One output was "Requirements for Configuration Management
+   of IP-based Networks" <span>[<a href="#RFC3139" class="cite xref">RFC3139</a>]</span>.<a href="#section-2.4-3" class="pilcrow">¶</a></p>
+<p id="section-2.4-4">In 2002, the Internet Architecture Board (IAB) held a workshop on
+   Network Management <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span> that discussed the strengths and
+   weaknesses of some IETF network management protocols and compared
+   them to operational needs, especially configuration.<a href="#section-2.4-4" class="pilcrow">¶</a></p>
+<p id="section-2.4-5">One issue discussed was the user-unfriendliness of the binary format
+   of SNMP <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span> and Common Open Policy Service (COPS) Usage for
+   Policy Provisioning (COPS-PR) <span>[<a href="#RFC3084" class="cite xref">RFC3084</a>]</span>, and it was recommended that
+   the IETF explore an XML-based Structure of Management Information and
+   an XML-based protocol for configuration.<a href="#section-2.4-5" class="pilcrow">¶</a></p>
+<p id="section-2.4-6">Another conclusion was that the tools for event/alarm correlation and
+   for root cause analysis and logging are not sufficient and that there
+   is a need to support a human interface and a programmatic interface.
+   The IETF decided to standardize aspects of the de facto standard for
+   system-logging security and programmatic support.<a href="#section-2.4-6" class="pilcrow">¶</a></p>
+<p id="section-2.4-7">In 2006, the IETF discussed whether the Management Framework should
+   be updated to accommodate multiple IETF schema languages for
+   describing the structure of management information and multiple IETF
+   standard protocols for performing management tasks. The IESG asked
+   that a document be written to discuss how protocol designers and
+   working groups should address management in this emerging multi-
+   protocol environment. This document and some planned companion
+   documents attempt to provide some guidelines for navigating the
+   rapidly shifting operating and management environments.<a href="#section-2.4-7" class="pilcrow">¶</a></p>
+<p id="section-2.4-8">In 2014, the IESG wrote its statement on "Writable MIB Module" <span>[<a href="#IESG-STATEMENT" class="cite xref">IESG-STATEMENT</a>]</span>, as
+   mentioned above.<a href="#section-2.4-8" class="pilcrow">¶</a></p>
+<p id="section-2.4-9">In 2024, the IAB hold the "Next Era of Network Management Operations (NEMOPS)"
+   workshop <span>[<a href="#NEMOPS-WORKSHOP" class="cite xref">NEMOPS-WORKSHOP</a>]</span>, building on the previous 2002 IAB workshop. Given that much has changed
+   in the Internet’s operation and technological foundations since the first
+   worshop, the NEMOPS workshop reviewed the past outcomes and discussed any
+   operational barriers that prevented these technologies from being widely
+   implemented. With the industry, network operators, and protocol engineers
+   working in collaboration, the workshop developed a proposed plan of action
+   and provided network management recommendations for both the IETF and IRTF.<a href="#section-2.4-9" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="changes-since-5706">
+<section id="section-2.5">
+        <h3 id="name-changes-since-rfc-5706">
+<a href="#section-2.5" class="section-number selfRef">2.5. </a><a href="#name-changes-since-rfc-5706" class="section-name selfRef">Changes Since RFC 5706</a>
+        </h3>
+<p id="section-2.5-1">The following changes have been made to the guidelines published in  <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span>:<a href="#section-2.5-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2.5-2.1">
+            <p id="section-2.5-2.1.1">TBC<a href="#section-2.5-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.5-2.2">
+            <p id="section-2.5-2.2.1">TBC<a href="#section-2.5-2.2.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+</section>
+</div>
+</section>
+</div>
+<div id="key-concepts-terminology-and-technological-landscape">
+<section id="section-3">
+      <h2 id="name-key-concepts-terminology-an">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-key-concepts-terminology-an" class="section-name selfRef">Key Concepts, Terminology, and Technological Landscape</a>
+      </h2>
+<div id="terminology">
+<section id="section-3.1">
+        <h3 id="name-terminology">
+<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-terminology" class="section-name selfRef">Terminology</a>
+        </h3>
+<p id="section-3.1-1">This document deliberately does not use the (capitalized) keywords
+   described in RFC 2119 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span>. RFC 2119 states the keywords must
+   only be used where it is actually required for interoperation or to
+   limit behavior which has potential for causing harm (e.g., limiting
+   retransmissions). For example, they must not be used to try to
+   impose a particular method on implementers where the method is not
+   required for interoperability. This informational document is a set
+   of guidelines based on current practices of **some** protocol
+   designers and operators. This document is biased toward router
+   operations and management and some advice may not be directly
+   applicable to protocols with a different purpose, such as application
+   server protocols. This document **does not** describe
+   interoperability requirements, so the capitalized keywords from RFC
+   2119 do not apply here.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.1-2.1">
+            <p id="section-3.1-2.1.1">CLI: Command Line Interface<a href="#section-3.1-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-2.2">
+            <p id="section-3.1-2.2.1">Data model: a mapping of the contents of an information model into
+a form that is specific to a particular type of data store or
+repository <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>.<a href="#section-3.1-2.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-2.3">
+            <p id="section-3.1-2.3.1">Information model: an abstraction and representation of the
+entities in a managed environment, their properties, attributes
+and operations, and the way that they relate to each other. It is
+independent of any specific repository, software usage, protocol,
+or platform <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>.<a href="#section-3.1-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-2.4">
+            <p id="section-3.1-2.4.1">OAM: Operations, Administration, and Maintenance <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span> <span>[<a href="#I-D.ietf-opsawg-oam-characterization" class="cite xref">I-D.ietf-opsawg-oam-characterization</a>]</span>.<a href="#section-3.1-2.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-2.5">
+            <p id="section-3.1-2.5.1">New protocol: includes new protocols, protocol extensions, data
+models, or other functionality being designed.<a href="#section-3.1-2.5.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-2.6">
+            <p id="section-3.1-2.6.1">Protocol designer: represents individuals and working groups
+involved in the development of new protocols or extensions.<a href="#section-3.1-2.6.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+</section>
+</div>
+<div id="available-management-technologies">
+<section id="section-3.2">
+        <h3 id="name-available-management-techno">
+<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-available-management-techno" class="section-name selfRef">Available Management Technologies</a>
+        </h3>
+<p id="section-3.2-1">The IETF has a number of standard management protocols available that
+   are suitable for different purposes.  These include:<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.2-2.1">
+            <p id="section-3.2-2.1.1">Syslog <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span><a href="#section-3.2-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.2">
+            <p id="section-3.2-2.2.1">Simple Network Management Protocol - SNMP <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span><a href="#section-3.2-2.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.3">
+            <p id="section-3.2-2.3.1">Network Configuration Protocol - NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span><a href="#section-3.2-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.4">
+            <p id="section-3.2-2.4.1">RESTCONF <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span><a href="#section-3.2-2.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.5">
+            <p id="section-3.2-2.5.1">Remote Authentication Dial-In User Service - RADIUS <span>[<a href="#RFC2865" class="cite xref">RFC2865</a>]</span><a href="#section-3.2-2.5.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.6">
+            <p id="section-3.2-2.6.1">DIAMETER <span>[<a href="#RFC6733" class="cite xref">RFC6733</a>]</span><a href="#section-3.2-2.6.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.7">
+            <p id="section-3.2-2.7.1">IP Flow Information Export - IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span><a href="#section-3.2-2.7.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-2.8">
+            <p id="section-3.2-2.8.1">BGP Monitoring Protocol - BMP <span>[<a href="#RFC7854" class="cite xref">RFC7854</a>]</span><a href="#section-3.2-2.8.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-3.2-3">A planned supplement to this document will discuss these protocol
+   standards, discuss some standard information and data models for
+   specific functionality, and provide pointers to the documents that
+   define them.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="operational-considerations-how-will-the-new-protocol-fit-into-the-current-environment">
+<section id="section-4">
+      <h2 id="name-operational-considerations-">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-operational-considerations-" class="section-name selfRef">Operational Considerations - How Will the New Protocol Fit into the Current Environment?</a>
+      </h2>
+<p id="section-4-1">Designers of a new protocol should carefully consider the operational
+   aspects. To ensure that a protocol will be practical to deploy in
+   the real world, it is not enough to merely define it very precisely
+   in a well-written document. Operational aspects will have a serious
+   impact on the actual success of a protocol. Such aspects include bad
+   interactions with existing solutions, a difficult upgrade path,
+   difficulty of debugging problems, difficulty configuring from a
+   central database, or a complicated state diagram that operations
+   staff will find difficult to understand.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">BGP flap damping <span>[<a href="#RFC2439" class="cite xref">RFC2439</a>]</span> is an example. It was designed to block
+   high-frequency route flaps; however, the design did not consider the
+   existence of BGP path exploration / slow convergence. In real
+   operations, path exploration caused false flap damping, resulting in
+   loss of reachability. As a result, many networks turned flap damping
+   off.<a href="#section-4-2" class="pilcrow">¶</a></p>
+<div id="sec-ops">
+<section id="section-4.1">
+        <h3 id="name-operations">
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-operations" class="section-name selfRef">Operations</a>
+        </h3>
+<p id="section-4.1-1">Protocol designers can analyze the operational environment and mode
+   of work in which the new protocol or extension will work. Such an
+   exercise need not be reflected directly by text in their document
+   but could help in visualizing how to apply the protocol in the
+   Internet environments where it will be deployed.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-2">A key question is how the protocol can operate "out of the box". If
+   implementers are free to select their own defaults, the protocol
+   needs to operate well with any choice of values. If there are
+   sensible defaults, these need to be stated.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+<p id="section-4.1-3">There may be a need to support a human interface, e.g., for
+   troubleshooting, and a programmatic interface, e.g., for automated
+   monitoring and root cause analysis. The application programming
+   interfaces and the human interfaces might benefit from being similar
+   to ensure that the information exposed by these two interfaces is
+   consistent when presented to an operator. Identifying consistent
+   methods of determining information, such as what gets counted in a
+   specific counter, is relevant.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.1-4">Protocol designers should consider what management operations are
+   expected to be performed as a result of the deployment of the
+   protocol -- such as whether write operations will be allowed on
+   routers and on hosts, or whether notifications for alarms or other
+   events will be expected.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-install">
+<section id="section-4.2">
+        <h3 id="name-installation-and-initial-se">
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-installation-and-initial-se" class="section-name selfRef">Installation and Initial Setup</a>
+        </h3>
+<p id="section-4.2-1">Anything that can be configured can be misconfigured. "Architectural
+   Principles of the Internet" <span>[<a href="#RFC1958" class="cite xref">RFC1958</a>]</span>, Section 3.8, states: "Avoid
+   options and parameters whenever possible. Any options and parameters
+   should be configured or negotiated dynamically rather than manually."<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">To simplify configuration, protocol designers should consider
+   specifying reasonable defaults, including default modes and
+   parameters. For example, it could be helpful or necessary to specify
+   default values for modes, timers, default state of logical control
+   variables, default transports, and so on. Even if default values are
+   used, it must be possible to retrieve all the actual values or at
+   least an indication that known default values are being used.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
+<p id="section-4.2-3">Protocol designers should consider how to enable operators to
+   concentrate on the configuration of the network as a whole rather
+   than on individual devices. Of course, how one accomplishes this is
+   the hard part.<a href="#section-4.2-3" class="pilcrow">¶</a></p>
+<p id="section-4.2-4">It is desirable to discuss the background of chosen default values,
+   or perhaps why a range of values makes sense. In many cases, as
+   technology changes, the values in an RFC might make less and less
+   sense. It is very useful to understand whether defaults are based on
+   best current practice and are expected to change as technologies
+   advance or whether they have a more universal value that should not
+   be changed lightly. For example, the default interface speed might
+   be expected to change over time due to increased speeds in the
+   network, and cryptographical algorithms might be expected to change
+   over time as older algorithms are "broken".<a href="#section-4.2-4" class="pilcrow">¶</a></p>
+<p id="section-4.2-5">It is extremely important to set a sensible default value for all
+   parameters.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
+<p id="section-4.2-6">The default value should stay on the conservative side rather than on
+   the "optimizing performance" side (example: the initial RTT and
+   RTTvar values of a TCP connection).<a href="#section-4.2-6" class="pilcrow">¶</a></p>
+<p id="section-4.2-7">For those parameters that are speed-dependent, instead of using a
+   constant, try to set the default value as a function of the link
+   speed or some other relevant factors. This would help reduce the
+   chance of problems caused by technology advancement.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-migration">
+<section id="section-4.3">
+        <h3 id="name-migration-path">
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-migration-path" class="section-name selfRef">Migration Path</a>
+        </h3>
+<p id="section-4.3-1">If the new protocol is a new version of an existing one, or if it is
+   replacing another technology, the protocol designer should consider
+   how deployments should transition to the new protocol. This should
+   include coexistence with previously deployed protocols and/or
+   previous versions of the same protocol, incompatibilities between
+   versions, translation between versions, and side effects that might
+   occur. Are older protocols or versions disabled, or do they coexist
+   in the network with the new protocol?<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+<p id="section-4.3-2">Many protocols benefit from being incrementally deployable --
+   operators may deploy aspects of a protocol before deploying the
+   protocol fully.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-other">
+<section id="section-4.4">
+        <h3 id="name-requirements-on-other-proto">
+<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-requirements-on-other-proto" class="section-name selfRef">Requirements on Other Protocols and Functional Components</a>
+        </h3>
+<p id="section-4.4-1">Protocol designers should consider the requirements that the new
+   protocol might put on other protocols and functional components and
+   should also document the requirements from other protocols and
+   functional elements that have been considered in designing the new
+   protocol.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.4-2">These considerations should generally remain illustrative to avoid
+   creating restrictions or dependencies, or potentially impacting the
+   behavior of existing protocols, or restricting the extensibility of
+   other protocols, or assuming other protocols will not be extended in
+   certain ways. If restrictions or dependencies exist, they should be
+   stated.<a href="#section-4.4-2" class="pilcrow">¶</a></p>
+<p id="section-4.4-3">For example, the design of the Resource ReSerVation Protocol (RSVP)
+   <span>[<a href="#RFC2205" class="cite xref">RFC2205</a>]</span> required each router to look at the RSVP PATH message and,
+   if the router understood RSVP, add its own address to the message to
+   enable automatic tunneling through non-RSVP routers. But in reality,
+   routers cannot look at an otherwise normal IP packet and potentially
+   take it off the fast path! The initial designers overlooked that a
+   new "deep packet inspection" requirement was being put on the
+   functional components of a router. The "router alert" option
+   (<span>[<a href="#RFC2113" class="cite xref">RFC2113</a>]</span>, <span>[<a href="#RFC2711" class="cite xref">RFC2711</a>]</span>) was finally developed to solve this problem
+   for RSVP and other protocols that require the router to take some
+   packets off the fast-forwarding path. Yet, router alert has its own
+   problems in impacting router performance.<a href="#section-4.4-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-impact">
+<section id="section-4.5">
+        <h3 id="name-impact-on-network-operation">
+<a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-impact-on-network-operation" class="section-name selfRef">Impact on Network Operation</a>
+        </h3>
+<p id="section-4.5-1">The introduction of a new protocol or extensions to an existing
+   protocol may have an impact on the operation of existing networks.
+   Protocol designers should outline such impacts (which may be
+   positive), including scaling concerns and interactions with other
+   protocols. For example, a new protocol that doubles the number of
+   active, reachable addresses in use within a network might need to be
+   considered in the light of the impact on the scalability of the
+   interior gateway protocols operating within the network.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.5-2">A protocol could send active monitoring packets on the wire. If we
+   don't pay attention, we might get very good accuracy but could send
+   too many active monitoring packets.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.5-3">The protocol designer should consider the potential impact on the
+   behavior of other protocols in the network and on the traffic levels
+   and traffic patterns that might change, including specific types of
+   traffic, such as multicast. Also, consider the need to install new
+   components that are added to the network as a result of changes in
+   the configuration, such as servers performing auto-configuration
+   operations.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
+<p id="section-4.5-4">The protocol designer should consider also the impact on
+   infrastructure applications like DNS <span>[<a href="#RFC1034" class="cite xref">RFC1034</a>]</span>, the registries, or
+   the size of routing tables. For example, Simple Mail Transfer
+   Protocol (SMTP) <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
+   out incoming connection requests. When Berkeley installed a new spam
+   filter, their mail server stopped functioning because of overload of
+   the DNS cache resolver.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
+<p id="section-4.5-5">The impact on performance may also be noted -- increased delay or
+   jitter in real-time traffic applications, or increased response time
+   in client-server applications when encryption or filtering are
+   applied.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
+<p id="section-4.5-6">It is important to minimize the impact caused by configuration
+   changes. Given configuration A and configuration B, it should be
+   possible to generate the operations necessary to get from A to B with
+   minimal state changes and effects on network and systems.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-verify">
+<section id="section-4.6">
+        <h3 id="name-verifying-correct-operation">
+<a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-verifying-correct-operation" class="section-name selfRef">Verifying Correct Operation</a>
+        </h3>
+<p id="section-4.6-1">The protocol designer should consider techniques for testing the
+   effect that the protocol has had on the network by sending data
+   through the network and observing its behavior (aka active
+   monitoring). Protocol designers should consider how the correct end-
+   to-end operation of the new protocol in the network can be tested
+   actively and passively, and how the correct data or forwarding plane
+   function of each network element can be verified to be working
+   properly with the new protocol. Which metrics are of interest?<a href="#section-4.6-1" class="pilcrow">¶</a></p>
+<p id="section-4.6-2">Having simple protocol status and health indicators on network
+   devices is a recommended means to check correct operation.<a href="#section-4.6-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="sec-proto">
+<section id="section-5">
+      <h2 id="name-management-considerations-h">
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-management-considerations-h" class="section-name selfRef">Management Considerations - How Will the Protocol Be Managed?</a>
+      </h2>
+<p id="section-5-1">The considerations of manageability should start from identifying the
+   entities to be managed, as well as how the managed protocol is
+   supposed to be installed, configured, and monitored.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2">Considerations for management should include a discussion of what
+   needs to be managed, and how to achieve various management tasks.
+   Where are the managers and what type of management interfaces and
+   protocols will they need? The "write a MIB module" approach to
+   considering management often focuses on monitoring a protocol
+   endpoint on a single device. A MIB module document typically only
+   considers monitoring properties observable at one end, while the
+   document does not really cover managing the *protocol* (the
+   coordination of multiple ends) and does not even come near managing
+   the *service* (which includes a lot of stuff that is very far away
+   from the box). This is exactly what operators hate -- you need to be
+   able to manage both ends. As <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span> says, "MIB modules can often
+   be characterized as a list of ingredients without a recipe".<a href="#section-5-2" class="pilcrow">¶</a></p>
+<p id="section-5-3">The management model should take into account factors such as:<a href="#section-5-3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5-4.1">
+          <p id="section-5-4.1.1">What type of management entities will be involved (agents, network
+management systems)?<a href="#section-5-4.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-5-4.2">
+          <p id="section-5-4.2.1">What is the possible architecture (client-server, manager-agent,
+poll-driven or event-driven, auto-configuration, two levels or
+hierarchical)?<a href="#section-5-4.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-5-4.3">
+          <p id="section-5-4.3.1">What are the management operations (initial configuration, dynamic
+configuration, alarm and exception reporting, logging, performance
+monitoring, performance reporting, debugging)?<a href="#section-5-4.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-5-4.4">
+          <p id="section-5-4.4.1">How are these operations performed (locally, remotely, atomic
+operation, scripts)? Are they performed immediately or are they
+time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="section-5-5">Protocol designers should consider how the new protocol will be
+   managed in different deployment scales. It might be sensible to use
+   a local management interface to manage the new protocol on a single
+   device, but in a large network, remote management using a centralized
+   server and/or using distributed management functionality might make
+   more sense. Auto-configuration and default parameters might be
+   possible for some new protocols.<a href="#section-5-5" class="pilcrow">¶</a></p>
+<p id="section-5-6">Management needs to be considered not only from the perspective of a
+   device, but also from the perspective of network and service
+   management. A service might be network and operational functionality
+   derived from the implementation and deployment of a new protocol.
+   Often an individual network element is not aware of the service being
+   delivered.<a href="#section-5-6" class="pilcrow">¶</a></p>
+<p id="section-5-7">WGs should consider how to configure multiple related/co-operating
+   devices and how to back off if one of those configurations fails or
+   causes trouble. NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> addresses this in a generic manner
+   by allowing an operator to lock the configuration on multiple
+   devices, perform the configuration settings/changes, check that they
+   are OK (undo if not), and then unlock the devices.<a href="#section-5-7" class="pilcrow">¶</a></p>
+<p id="section-5-8">Techniques for debugging protocol interactions in a network must be
+   part of the network-management discussion. Implementation source
+   code should be debugged before ever being added to a network, so
+   asserts and memory dumps do not normally belong in management data
+   models. However, debugging on-the-wire interactions is a protocol
+   issue: while the messages can be seen by sniffing, it is enormously
+   helpful if a protocol specification supports features that make
+   debugging of network interactions and behaviors easier. There could
+   be alerts issued when messages are received or when there are state
+   transitions in the protocol state machine. However, the state
+   machine is often not part of the on-the-wire protocol; the state
+   machine explains how the protocol works so that an implementer can
+   decide, in an implementation-specific manner, how to react to a
+   received event.<a href="#section-5-8" class="pilcrow">¶</a></p>
+<p id="section-5-9">In a client/server protocol, it may be more important to instrument
+   the server end of a protocol than the client end, since the
+   performance of the server might impact more nodes than the
+   performance of a specific client.<a href="#section-5-9" class="pilcrow">¶</a></p>
+<div id="sec-interop">
+<section id="section-5.1">
+        <h3 id="name-interoperability">
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-interoperability" class="section-name selfRef">Interoperability</a>
+        </h3>
+<p id="section-5.1-1">Just as when deploying protocols that will inter-connect devices,
+   management interoperability should be considered -- whether across
+   devices from different vendors, across models from the same vendor,
+   or across different releases of the same product. Management
+   interoperability refers to allowing information sharing and
+   operations between multiple devices and multiple management
+   applications, often from different vendors. Interoperability allows
+   for the use of third-party applications and the outsourcing of
+   management services.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.1-2">Some product designers and protocol designers assume that if a device
+   can be managed individually using a command line interface or a web
+   page interface, that such a solution is enough. But when equipment
+   from multiple vendors is combined into a large network, scalability
+   of management may become a problem. It may be important to have
+   consistency in the management interfaces so network-wide operational
+   processes can be automated. For example, a single switch might be
+   easily managed using an interactive web interface when installed in a
+   single-office small business, but when, say, a fast-food company
+   installs similar switches from multiple vendors in hundreds or
+   thousands of individual branches and wants to automate monitoring
+   them from a central location, monitoring vendor- and model-specific
+   web pages would be difficult to automate.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
+<p id="section-5.1-3">The primary goal is the ability to roll out new useful functions and
+   services in a way in which they can be managed in a scalable manner,
+   where one understands the network impact (as part of the total cost
+   of operations) of that service.<a href="#section-5.1-3" class="pilcrow">¶</a></p>
+<p id="section-5.1-4">Getting everybody to agree on a single syntax and an associated
+   protocol to do all management has proven to be difficult. So,
+   management systems tend to speak whatever the boxes support, whether
+   or not the IETF likes this. The IETF is moving from support for one
+   schema language for modeling the structure of management information
+   (Structure of Management Information Version 2 (SMIv2) <span>[<a href="#RFC2578" class="cite xref">RFC2578</a>]</span>) and
+   one simple network management protocol (Simple Network Management
+   Protocol (SNMP) <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span>) towards support for additional schema
+   languages and additional management protocols suited to different
+   purposes. Other Standard Development Organizations (e.g., the
+   Distributed Management Task Force - DMTF, the Tele-Management Forum -
+   TMF) also define schemas and protocols for management and these may
+   be more suitable than IETF schemas and protocols in some cases. Some
+   of the alternatives being considered include:<a href="#section-5.1-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.1-5.1">
+            <p id="section-5.1-5.1.1">XML Schema Definition <span>[<a href="#W3C.REC-xmlschema-0-20041028" class="cite xref">W3C.REC-xmlschema-0-20041028</a>]</span><a href="#section-5.1-5.1.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-5.1-6">and<a href="#section-5.1-6" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.1-7.1">
+            <p id="section-5.1-7.1.1">NETCONF Configuration Protocol <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span><a href="#section-5.1-7.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.1-7.2">
+            <p id="section-5.1-7.2.1">the IP Flow Information Export (IPFIX) Protocol <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) for
+usage accounting<a href="#section-5.1-7.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.1-7.3">
+            <p id="section-5.1-7.3.1">the syslog protocol <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span> for logging<a href="#section-5.1-7.3.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-5.1-8">Interoperability needs to be considered on the syntactic level and
+   the semantic level. While it can be irritating and time-consuming,
+   application designers, including operators who write their own
+   scripts, can make their processing conditional to accommodate
+   syntactic differences across vendors, models, or releases of product.<a href="#section-5.1-8" class="pilcrow">¶</a></p>
+<p id="section-5.1-9">Semantic differences are much harder to deal with on the manager side
+   -- once you have the data, its meaning is a function of the managed
+   entity.<a href="#section-5.1-9" class="pilcrow">¶</a></p>
+<p id="section-5.1-10">Information models are helpful to try to focus interoperability on
+   the semantic level -- they establish standards for what information
+   should be gathered and how gathered information might be used,
+   regardless of which management interface carries the data or which
+   vendor produces the product. The use of an information model might
+   help improve the ability of operators to correlate messages in
+   different protocols where the data overlaps, such as a syslog message
+   and an SNMP notification about the same event. An information model
+   might identify which error conditions should be counted separately,
+   and which error conditions can be counted together in a single
+   counter. Then, whether the counter is gathered via SNMP, a CLI
+   command, or a syslog message, the counter will have the same meaning.<a href="#section-5.1-10" class="pilcrow">¶</a></p>
+<p id="section-5.1-11">Protocol designers should consider which information might be useful
+   for managing the new protocol or protocol extensions.<a href="#section-5.1-11" class="pilcrow">¶</a></p>
+<span id="name-ims-and-dms"></span><div id="fig-im-dm">
+<figure id="figure-1">
+          <div id="section-5.1-12.1">
+            <div class="alignCenter art-svg artwork" id="section-5.1-12.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="160" width="504" viewBox="0 0 504 160" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+                <path d="M 32,64 L 32,80" fill="none" stroke="black"></path>
+                <path d="M 120,48 L 120,80" fill="none" stroke="black"></path>
+                <path d="M 200,64 L 200,80" fill="none" stroke="black"></path>
+                <path d="M 256,32 L 272,32" fill="none" stroke="black"></path>
+                <path d="M 32,64 L 200,64" fill="none" stroke="black"></path>
+                <path d="M 256,96 L 272,96" fill="none" stroke="black"></path>
+                <polygon class="arrowhead" points="280,96 268,90.4 268,101.6" fill="black" transform="rotate(0,272,96)"></polygon>
+                <polygon class="arrowhead" points="280,32 268,26.4 268,37.6" fill="black" transform="rotate(0,272,32)"></polygon>
+                <g class="text">
+                  <text x="116" y="36">IM</text>
+                  <text x="360" y="36">conceptual/abstract</text>
+                  <text x="464" y="36">model</text>
+                  <text x="296" y="52">for</text>
+                  <text x="352" y="52">designers</text>
+                  <text x="408" y="52">and</text>
+                  <text x="464" y="52">operators</text>
+                  <text x="36" y="100">DM</text>
+                  <text x="116" y="100">DM</text>
+                  <text x="204" y="100">DM</text>
+                  <text x="352" y="100">concrete/detailed</text>
+                  <text x="448" y="100">model</text>
+                  <text x="320" y="116">for</text>
+                  <text x="388" y="116">implementers</text>
+                  <text x="48" y="148">Information</text>
+                  <text x="124" y="148">Models</text>
+                  <text x="168" y="148">and</text>
+                  <text x="204" y="148">Data</text>
+                  <text x="252" y="148">Models</text>
+                </g>
+              </svg><a href="#section-5.1-12.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<a href="#name-ims-and-dms" class="selfRef">IMs and DMs</a>
+          </figcaption></figure>
+</div>
+<p id="section-5.1-13">Protocol designers may decide an information model or data model
+   would be appropriate for managing the new protocol or protocol
+   extensions.<a href="#section-5.1-13" class="pilcrow">¶</a></p>
+<p id="section-5.1-14">"On the Difference between Information Models and Data Models"
+   <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span> can be helpful in determining what information to consider
+   regarding information models (IMs), as compared to data models (DMs).<a href="#section-5.1-14" class="pilcrow">¶</a></p>
+<p id="section-5.1-15">Information models should come from the protocol WGs and include
+   lists of events, counters, and configuration parameters that are
+   relevant. There are a number of information models contained in
+   protocol WG RFCs. Some examples:<a href="#section-5.1-15" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.1-16.1">
+            <p id="section-5.1-16.1.1"><span>[<a href="#RFC3060" class="cite xref">RFC3060</a>]</span> - Policy Core Information Model version 1<a href="#section-5.1-16.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.1-16.2">
+            <p id="section-5.1-16.2.1"><span>[<a href="#RFC3290" class="cite xref">RFC3290</a>]</span> - An Informal Management Model for Diffserv Routers<a href="#section-5.1-16.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.1-16.3">
+            <p id="section-5.1-16.3.1"><span>[<a href="#RFC3460" class="cite xref">RFC3460</a>]</span> - Policy Core Information Model Extensions<a href="#section-5.1-16.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.1-16.4">
+            <p id="section-5.1-16.4.1"><span>[<a href="#RFC3585" class="cite xref">RFC3585</a>]</span> - IPsec Configuration Policy Information Model<a href="#section-5.1-16.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.1-16.5">
+            <p id="section-5.1-16.5.1"><span>[<a href="#RFC3644" class="cite xref">RFC3644</a>]</span> - Policy Quality of Service Information Model<a href="#section-5.1-16.5.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.1-16.6">
+            <p id="section-5.1-16.6.1"><span>[<a href="#RFC3670" class="cite xref">RFC3670</a>]</span> - Information Model for Describing Network Device QoS
+Datapath Mechanisms<a href="#section-5.1-16.6.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.1-16.7">
+            <p id="section-5.1-16.7.1"><span>[<a href="#RFC3805" class="cite xref">RFC3805</a>]</span> - Printer MIB v2 (contains both an IM and a DM)<a href="#section-5.1-16.7.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-5.1-17">Management protocol standards and management data model standards
+   often contain compliance clauses to ensure interoperability.
+   Manageability considerations should include discussion of which level
+   of compliance is expected to be supported for interoperability.<a href="#section-5.1-17" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-mgt-info">
+<section id="section-5.2">
+        <h3 id="name-management-information">
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-management-information" class="section-name selfRef">Management Information</a>
+        </h3>
+<p id="section-5.2-1">Languages used to describe an information model can influence the
+   nature of the model. Using a particular data modeling language, such
+   as YANG, influences the model to use certain types of structures, for
+   example, hierarchical trees, groupings, and reusable types.
+   YANG, as described in <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> and <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>, provides advantages
+   for expressing network information, including clear separation of
+   configuration data and operational state, support for constraints and
+   dependencies, and extensibility for evolving requirements. Its ability
+   to represent relationships and dependencies in a structured and modular
+   way makes it an effective choice for defining management information
+   models.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.2-2">Although this document recommends using English text (the official
+   language for IETF specifications) to describe an information model,
+   including a complementary YANG module helps translate abstract concepts
+   into implementation-specific data models. This ensures consistency between
+   the high-level design and practical deployment.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
+<p id="section-5.2-3">A management information model should include a discussion of what is
+   manageable, which aspects of the protocol need to be configured, what
+   types of operations are allowed, what protocol-specific events might
+   occur, which events can be counted, and for which events an operator
+   should be notified.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
+<p id="section-5.2-4">Operators find it important to be able to make a clear distinction
+   between configuration data, operational state, and statistics. They
+   need to determine which parameters were administratively configured
+   and which parameters have changed since configuration as the result
+   of mechanisms such as routing protocols or network management
+   protocols. It is important to be able to separately fetch current
+   configuration information, initial configuration information,
+   operational state information, and statistics from devices; to be
+   able to compare current state to initial state; and to compare
+   information between devices. So, when deciding what information
+   should exist, do not conflate multiple information elements into a
+   single element.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
+<p id="section-5.2-5">What is typically difficult to work through are relationships between
+   abstract objects. Ideally, an information model would describe the
+   relationships between the objects and concepts in the information
+   model.<a href="#section-5.2-5" class="pilcrow">¶</a></p>
+<p id="section-5.2-6">Is there always just one instance of this object or can there be
+   multiple instances? Does this object relate to exactly one other
+   object, or may it relate to multiple? When is it possible to change a
+   relationship?<a href="#section-5.2-6" class="pilcrow">¶</a></p>
+<p id="section-5.2-7">Do objects (such as instances in lists) share fate? For example, if an
+   instance in list A must exist before a related instance in list B can be
+   created, what happens to the instance in list B if the related instance in
+   list A is deleted? Does the existence of relationships between
+   objects have an impact on fate sharing? YANG's relationships and
+   constraints can help express and enforce these relationships.<a href="#section-5.2-7" class="pilcrow">¶</a></p>
+<div id="sec-im-design">
+<section id="section-5.2.1">
+          <h4 id="name-information-model-design">
+<a href="#section-5.2.1" class="section-number selfRef">5.2.1. </a><a href="#name-information-model-design" class="section-name selfRef">Information Model Design</a>
+          </h4>
+<p id="section-5.2.1-1">This document recommends keeping the information model as simple as
+   possible by applying the following criteria:<a href="#section-5.2.1-1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-5.2.1-2">
+<li id="section-5.2.1-2.1">
+              <p id="section-5.2.1-2.1.1">Start with a small set of essential objects and add only as
+further objects are needed.<a href="#section-5.2.1-2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-5.2.1-2.2">
+              <p id="section-5.2.1-2.2.1">Require that objects be essential for management.<a href="#section-5.2.1-2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-5.2.1-2.3">
+              <p id="section-5.2.1-2.3.1">Consider evidence of current use and/or utility.<a href="#section-5.2.1-2.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-5.2.1-2.4">
+              <p id="section-5.2.1-2.4.1">Limit the total number of objects.<a href="#section-5.2.1-2.4.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-5.2.1-2.5">
+              <p id="section-5.2.1-2.5.1">Exclude objects that are simply derivable from others in this or
+other information models.<a href="#section-5.2.1-2.5.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-5.2.1-2.6">
+              <p id="section-5.2.1-2.6.1">Avoid causing critical sections to be heavily instrumented. A
+guideline is one counter per critical section per layer.<a href="#section-5.2.1-2.6.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-5.2.1-2.7">
+              <p id="section-5.2.1-2.7.1">When using YANG to complement or define an information model,
+ensure that the model maintains simplicity, modularity, and
+clarity.  Specific guidelines to consider when authoring YANG
+modules are described in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-5.2.1-2.7.1" class="pilcrow">¶</a></p>
+</li>
+          </ol>
+</section>
+</div>
+<div id="sec-yang-dm">
+<section id="section-5.2.2">
+          <h4 id="name-yang-data-model-considerati">
+<a href="#section-5.2.2" class="section-number selfRef">5.2.2. </a><a href="#name-yang-data-model-considerati" class="section-name selfRef">YANG Data Model Considerations</a>
+          </h4>
+<p id="section-5.2.2-1">When considering YANG data models for a new specification, there
+  are multiple types of data models that may be applicable. The
+  hierarchy and relationship between these types is described in
+  <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-25#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>. A new specification
+  may require or benefit from one or more of these YANG data model types.<a href="#section-5.2.2-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2.2-2.1">
+              <p id="section-5.2.2-2.1.1">Device Models - Also called Network Element Models,
+represent the configuration, operational state, and notifications of
+individual devices. These models are designed to distinguish
+between these types of data and support querying and updating
+device-specific parameters. Consideration should be given to
+how device-level models might fit with broader network and
+service data models.<a href="#section-5.2.2-2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.2-2.2">
+              <p id="section-5.2.2-2.2.1">Network Models - Also called Network Service Models, define abstractions
+for managing the behavior and relationships of multiple devices
+and device subsystems within a network. As described in <span>[<a href="#RFC8199" class="cite xref">RFC8199</a>]</span>,
+these models are used to manage network-wide. These abstractions are
+useful to network operators and applications that interface with network
+controllers. Examples of network models include the L3VPN Network Model
+(L3NM) <span>[<a href="#RFC9182" class="cite xref">RFC9182</a>]</span> and the L2VPN Network Model (L2VPN) <span>[<a href="#RFC9291" class="cite xref">RFC9291</a>]</span>.<a href="#section-5.2.2-2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-5.2.2-2.3">
+              <p id="section-5.2.2-2.3.1">Service Models - Also called Customer Service Models,
+defined in <span>[<a href="#RFC8309" class="cite xref">RFC8309</a>]</span>, are designed to abstract the customer interface
+into a service. They consider customer-centric parameters such as
+Service Level Agreement (SLA) and high-level policy (e.g., network intent).
+Given that different operators and different customers may have widely-varying
+business processes, these models should focus on common aspects of a service
+with strong multi-party consensus. Examples of service models include
+the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC8299</a>]</span> and the L2VPN Service Model (L2SM)
+<span>[<a href="#RFC8499" class="cite xref">RFC8499</a>]</span>.<a href="#section-5.2.2-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-5.2.2-3">Specific guidelines to consider when authoring any type of YANG
+  modules are described in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-5.2.2-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="sec-fm-mgt">
+<section id="section-5.3">
+        <h3 id="name-fault-management">
+<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-fault-management" class="section-name selfRef">Fault Management</a>
+        </h3>
+<p id="section-5.3-1">The protocol designer should document the basic faults and health
+   indicators that need to be instrumented for the new protocol, as well
+   as the alarms and events that must be propagated to management
+   applications or exposed through a data model.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-2">The protocol designer should consider how fault information will be
+   propagated. Will it be done using asynchronous notifications or
+   polling of health indicators?<a href="#section-5.3-2" class="pilcrow">¶</a></p>
+<p id="section-5.3-3">If notifications are used to alert operators to certain conditions,
+   then the protocol designer should discuss mechanisms to throttle
+   notifications to prevent congestion and duplications of event
+   notifications. Will there be a hierarchy of faults, and will the
+   fault reporting be done by each fault in the hierarchy, or will only
+   the lowest fault be reported and the higher levels be suppressed?
+   Should there be aggregated status indicators based on concatenation
+   of propagated faults from a given domain or device?<a href="#section-5.3-3" class="pilcrow">¶</a></p>
+<p id="section-5.3-4">SNMP notifications and syslog messages can alert an operator when an
+   aspect of the new protocol fails or encounters an error or failure
+   condition, and SNMP is frequently used as a heartbeat monitor.
+   Should the event reporting provide guaranteed accurate delivery of
+   the event information within a given (high) margin of confidence?
+   Can we poll the latest events in the box?<a href="#section-5.3-4" class="pilcrow">¶</a></p>
+<div id="liveness-detection-and-monitoring">
+<section id="section-5.3.1">
+          <h4 id="name-liveness-detection-and-moni">
+<a href="#section-5.3.1" class="section-number selfRef">5.3.1. </a><a href="#name-liveness-detection-and-moni" class="section-name selfRef">Liveness Detection and Monitoring</a>
+          </h4>
+<p id="section-5.3.1-1">Protocol designers should always build in basic testing features
+   (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
+   calls)) that can be used to test for liveness, with an option to
+   enable and disable them.<a href="#section-5.3.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.3.1-2">Mechanisms for monitoring the liveness of the protocol and for
+   detecting faults in protocol connectivity are usually built into
+   protocols. In some cases, mechanisms already exist within other
+   protocols responsible for maintaining lower-layer connectivity (e.g.,
+   ICMP echo), but often new procedures are required to detect failures
+   and to report rapidly, allowing remedial action to be taken.<a href="#section-5.3.1-2" class="pilcrow">¶</a></p>
+<p id="section-5.3.1-3">These liveness monitoring mechanisms do not typically require
+   additional management capabilities. However, when a system detects a
+   fault, there is often a requirement to coordinate recovery action
+   through management applications or at least to record the fact in an
+   event log.<a href="#section-5.3.1-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="fault-determination">
+<section id="section-5.3.2">
+          <h4 id="name-fault-determination">
+<a href="#section-5.3.2" class="section-number selfRef">5.3.2. </a><a href="#name-fault-determination" class="section-name selfRef">Fault Determination</a>
+          </h4>
+<p id="section-5.3.2-1">It can be helpful to describe how faults can be pinpointed using
+   management information. For example, counters might record instances
+   of error conditions. Some faults might be able to be pinpointed by
+   comparing the outputs of one device and the inputs of another device,
+   looking for anomalies. Protocol designers should consider what
+   counters should count. If a single counter provided by vendor A
+   counts three types of error conditions, while the corresponding
+   counter provided by vendor B counts seven types of error conditions,
+   these counters cannot be compared effectively -- they are not
+   interoperable counters.<a href="#section-5.3.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.3.2-2">How do you distinguish between faulty messages and good messages?<a href="#section-5.3.2-2" class="pilcrow">¶</a></p>
+<p id="section-5.3.2-3">Would some threshold-based mechanisms, such as Remote Monitoring
+   (RMON) events/alarms or the EVENT-MIB, be usable to help determine
+   error conditions? Are SNMP notifications for all events needed, or
+   are there some "standard" notifications that could be used? Or can
+   relevant counters be polled as needed?<a href="#section-5.3.2-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="root-cause-analysis">
+<section id="section-5.3.3">
+          <h4 id="name-root-cause-analysis">
+<a href="#section-5.3.3" class="section-number selfRef">5.3.3. </a><a href="#name-root-cause-analysis" class="section-name selfRef">Root Cause Analysis</a>
+          </h4>
+<p id="section-5.3.3-1">Root cause analysis is about working out where in the network the
+   fault is. For example, if end-to-end data delivery is failing
+   (reported by a notification), root cause analysis can help find the
+   failed link or node in the end-to-end path.<a href="#section-5.3.3-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="fault-isolation">
+<section id="section-5.3.4">
+          <h4 id="name-fault-isolation">
+<a href="#section-5.3.4" class="section-number selfRef">5.3.4. </a><a href="#name-fault-isolation" class="section-name selfRef">Fault Isolation</a>
+          </h4>
+<p id="section-5.3.4-1">It might be useful to isolate or quarantine faults, such as isolating
+   a device that emits malformed messages that are necessary to
+   coordinate connections properly. This might be able to be done by
+   configuring next-hop devices to drop the faulty messages to prevent
+   them from entering the rest of the network.<a href="#section-5.3.4-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="sec-config-mgt">
+<section id="section-5.4">
+        <h3 id="name-configuration-management">
+<a href="#section-5.4" class="section-number selfRef">5.4. </a><a href="#name-configuration-management" class="section-name selfRef">Configuration Management</a>
+        </h3>
+<p id="section-5.4-1">A protocol designer should document the basic configuration
+   parameters that need to be instrumented for a new protocol, as well
+   as default values and modes of operation.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
+<p id="section-5.4-2">What information should be maintained across reboots of the device,
+   or restarts of the management system?<a href="#section-5.4-2" class="pilcrow">¶</a></p>
+<p id="section-5.4-3">"Requirements for Configuration Management of IP-based Networks"
+   <span>[<a href="#RFC3139" class="cite xref">RFC3139</a>]</span> discusses requirements for configuration management,
+   including discussion of different levels of management, high-level
+   policies, network-wide configuration data, and device-local
+   configuration. Network configuration is not just multi-device push
+   or pull. It is knowing that the configurations being pushed are
+   semantically compatible. Is the circuit between them configured
+   compatibly on both ends? Is the IS-IS metric the same? ... Now
+   answer those questions for 1,000 devices.<a href="#section-5.4-3" class="pilcrow">¶</a></p>
+<p id="section-5.4-4">A number of efforts have existed in the IETF to develop policy-based
+   configuration management. "Terminology for Policy-Based Management"
+   <span>[<a href="#RFC3198" class="cite xref">RFC3198</a>]</span> was written to standardize the terminology across these
+   efforts.<a href="#section-5.4-4" class="pilcrow">¶</a></p>
+<p id="section-5.4-5">Implementations should not arbitrarily modify configuration data. In
+   some cases (such as access control lists (ACLs)), the order of data
+   items is significant and comprises part of the configured data. If a
+   protocol designer defines mechanisms for configuration, it would be
+   desirable to standardize the order of elements for consistency of
+   configuration and of reporting across vendors and across releases
+   from vendors.<a href="#section-5.4-5" class="pilcrow">¶</a></p>
+<p id="section-5.4-6">There are two parts to this:<a href="#section-5.4-6" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-5.4-7">
+<li id="section-5.4-7.1">
+            <p id="section-5.4-7.1.1">A Network Management System (NMS) could optimize ACLs for
+performance reasons.<a href="#section-5.4-7.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li id="section-5.4-7.2">
+            <p id="section-5.4-7.2.1">Unless the device/NMS systems have correct rules / a lot of
+experience, reordering ACLs can lead to a huge security issue.<a href="#section-5.4-7.2.1" class="pilcrow">¶</a></p>
+</li>
+        </ol>
+<p id="section-5.4-8">Network-wide configurations may be stored in central master databases
+   and transformed into formats that can be pushed to devices, either by
+   generating sequences of CLI commands or complete configuration files
+   that are pushed to devices. There is no common database schema for
+   network configuration, although the models used by various operators
+   are probably very similar. Many operators consider it desirable to
+   extract, document, and standardize the common parts of these network-
+   wide configuration database schemas. A protocol designer should
+   consider how to standardize the common parts of configuring the new
+   protocol, while recognizing that vendors may also have proprietary
+   aspects of their configurations.<a href="#section-5.4-8" class="pilcrow">¶</a></p>
+<p id="section-5.4-9">It is important to enable operators to concentrate on the
+   configuration of the network as a whole, rather than individual
+   devices. Support for configuration transactions across a number of
+   devices could significantly simplify network configuration
+   management. The ability to distribute configurations to multiple
+   devices, or to modify candidate configurations on multiple devices,
+   and then activate them in a near-simultaneous manner might help.
+   Protocol designers can consider how it would make sense for their
+   protocol to be configured across multiple devices. Configuration
+   templates might also be helpful.<a href="#section-5.4-9" class="pilcrow">¶</a></p>
+<p id="section-5.4-10">Consensus of the 2002 IAB Workshop <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span> was that textual
+   configuration files should be able to contain international
+   characters. Human-readable strings should utilize UTF-8, and
+   protocol elements should be in case-insensitive ASCII.<a href="#section-5.4-10" class="pilcrow">¶</a></p>
+<p id="section-5.4-11">A mechanism to dump and restore configurations is a primitive
+   operation needed by operators. Standards for pulling and pushing
+   configurations from/to devices are desirable.<a href="#section-5.4-11" class="pilcrow">¶</a></p>
+<p id="section-5.4-12">Given configuration A and configuration B, it should be possible to
+   generate the operations necessary to get from A to B with minimal
+   state changes and effects on network and systems. It is important to
+   minimize the impact caused by configuration changes.<a href="#section-5.4-12" class="pilcrow">¶</a></p>
+<p id="section-5.4-13">A protocol designer should consider the configurable items that exist
+   for the control of function via the protocol elements described in
+   the protocol specification. For example, sometimes the protocol
+   requires that timers can be configured by the operator to ensure
+   specific policy-based behavior by the implementation. These timers
+   should have default values suggested in the protocol specification
+   and may not need to be otherwise configurable.<a href="#section-5.4-13" class="pilcrow">¶</a></p>
+<div id="verifying-correct-operation">
+<section id="section-5.4.1">
+          <h4 id="name-verifying-correct-operation-2">
+<a href="#section-5.4.1" class="section-number selfRef">5.4.1. </a><a href="#name-verifying-correct-operation-2" class="section-name selfRef">Verifying Correct Operation</a>
+          </h4>
+<p id="section-5.4.1-1">An important function that should be provided is guidance on how to
+   verify the correct operation of a protocol. A protocol designer
+   could suggest techniques for testing the impact of the protocol on
+   the network before it is deployed as well as techniques for testing
+   the effect that the protocol has had on the network after being
+   deployed.<a href="#section-5.4.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.4.1-2">Protocol designers should consider how to test the correct end-to-end
+   operation of the service or network, how to verify the correct
+   functioning of the protocol, and whether that is verified by testing
+   the service function and/or by testing the forwarding function of
+   each network element. This may be achieved through status and
+   statistical information gathered from devices.<a href="#section-5.4.1-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="sec-acc-mgt">
+<section id="section-5.5">
+        <h3 id="name-accounting-management">
+<a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-accounting-management" class="section-name selfRef">Accounting Management</a>
+        </h3>
+<p id="section-5.5-1">A protocol designer should consider whether it would be appropriate
+   to collect usage information related to this protocol and, if so,
+   what usage information would be appropriate to collect.<a href="#section-5.5-1" class="pilcrow">¶</a></p>
+<p id="section-5.5-2">"Introduction to Accounting Management" <span>[<a href="#RFC2975" class="cite xref">RFC2975</a>]</span> discusses a number
+   of factors relevant to monitoring usage of protocols for purposes of
+   capacity and trend analysis, cost allocation, auditing, and billing.
+   The document also discusses how some existing protocols can be used
+   for these purposes. These factors should be considered when
+   designing a protocol whose usage might need to be monitored or when
+   recommending a protocol to do usage accounting.<a href="#section-5.5-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-perf-mgt">
+<section id="section-5.6">
+        <h3 id="name-performance-management">
+<a href="#section-5.6" class="section-number selfRef">5.6. </a><a href="#name-performance-management" class="section-name selfRef">Performance Management</a>
+        </h3>
+<p id="section-5.6-1">From a manageability point of view, it is important to determine how
+   well a network deploying the protocol or technology defined in the
+   document is doing. In order to do this, the network operators need
+   to consider information that would be useful to determine the
+   performance characteristics of a deployed system using the target
+   protocol.<a href="#section-5.6-1" class="pilcrow">¶</a></p>
+<p id="section-5.6-2">The IETF, via the Benchmarking Methodology WG (BMWG), has defined
+   recommendations for the measurement of the performance
+   characteristics of various internetworking technologies in a
+   laboratory environment, including the systems or services that are
+   built from these technologies. Each benchmarking recommendation
+   describes the class of equipment, system, or service being addressed;
+   discusses the performance characteristics that are pertinent to that
+   class; clearly identifies a set of metrics that aid in the
+   description of those characteristics; specifies the methodologies
+   required to collect said metrics; and lastly, presents the
+   requirements for the common, unambiguous reporting of benchmarking
+   results. Search for "benchmark" in the RFC search tool.<a href="#section-5.6-2" class="pilcrow">¶</a></p>
+<p id="section-5.6-3">Performance metrics may be useful in multiple environments and for
+   different protocols. The IETF, via the IP Performance Monitoring
+   (IPPM) WG, has developed a set of standard metrics that can be
+   applied to the quality, performance, and reliability of Internet data
+   delivery services. These metrics are designed such that they can be
+   performed by network operators, end users, or independent testing
+   groups. The existing metrics might be applicable to the new
+   protocol. Search for "metric" in the RFC search tool. In some
+   cases, new metrics need to be defined. It would be useful if the
+   protocol documentation identified the need for such new metrics. For
+   performance monitoring, it is often important to report the time
+   spent in a state, rather than reporting the current state. Snapshots
+   are of less value for performance monitoring.<a href="#section-5.6-3" class="pilcrow">¶</a></p>
+<p id="section-5.6-4">There are several parts to performance management to be considered:
+   protocol monitoring, device monitoring (the impact of the new
+   protocol / service activation on the device), network monitoring, and
+   service monitoring (the impact of service activation on the network).<a href="#section-5.6-4" class="pilcrow">¶</a></p>
+<div id="monitoring-the-protocol">
+<section id="section-5.6.1">
+          <h4 id="name-monitoring-the-protocol">
+<a href="#section-5.6.1" class="section-number selfRef">5.6.1. </a><a href="#name-monitoring-the-protocol" class="section-name selfRef">Monitoring the Protocol</a>
+          </h4>
+<p id="section-5.6.1-1">Certain properties of protocols are useful to monitor. The number of
+   protocol packets received, the number of packets sent, and the number
+   of packets dropped are usually very helpful to operators.<a href="#section-5.6.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.6.1-2">Packet drops should be reflected in counter variable(s) somewhere
+   that can be inspected -- both from the security point of view and
+   from the troubleshooting point of view.<a href="#section-5.6.1-2" class="pilcrow">¶</a></p>
+<p id="section-5.6.1-3">Counter definitions should be unambiguous about what is included in
+   the count and what is not included in the count.<a href="#section-5.6.1-3" class="pilcrow">¶</a></p>
+<p id="section-5.6.1-4">Consider the expected behaviors for counters -- what is a reasonable
+   maximum value for expected usage? Should they stop counting at the
+   maximum value and retain the maximum value, or should they rollover?
+   How can users determine if a rollover has occurred, and how can users
+   determine if more than one rollover has occurred?<a href="#section-5.6.1-4" class="pilcrow">¶</a></p>
+<p id="section-5.6.1-5">Consider whether multiple management applications will share a
+   counter; if so, then no one management application should be allowed
+   to reset the value to zero since this will impact other applications.<a href="#section-5.6.1-5" class="pilcrow">¶</a></p>
+<p id="section-5.6.1-6">Could events, such as hot-swapping a blade in a chassis, cause
+   discontinuities in counter? Does this make any difference in
+   evaluating the performance of a protocol?<a href="#section-5.6.1-6" class="pilcrow">¶</a></p>
+<p id="section-5.6.1-7">The protocol specification should clearly define any inherent
+   limitations and describe expected behavior when those limits
+   are exceeded. These considerations should be made independently
+   of any specific management protocol or data modeling language.
+   In other words, focus on what makes sense for the protocol being
+   managed, not the protocol used for management. If a constraint
+   is not specific to a management protocol, then it should be left
+   to data modelers of that protocol to determine how to handle it.
+   For example, VLAN identifiers are defined by standard to range
+   from 1 to 4094. Therefore, a YANG vlanid definition representing the
+   12-bit VLAN-ID used in the VLAN Tag header uses a range of "1..4094".<a href="#section-5.6.1-7" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="monitoring-the-device">
+<section id="section-5.6.2">
+          <h4 id="name-monitoring-the-device">
+<a href="#section-5.6.2" class="section-number selfRef">5.6.2. </a><a href="#name-monitoring-the-device" class="section-name selfRef">Monitoring the Device</a>
+          </h4>
+<p id="section-5.6.2-1">Consider whether device performance will be affected by the number of
+   protocol entities being instantiated on the device. Designers of an
+   information model should include information, accessible at runtime,
+   about the maximum number of instances an implementation can support,
+   the current number of instances, and the expected behavior when the
+   current instances exceed the capacity of the implementation or the
+   capacity of the device.<a href="#section-5.6.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.6.2-2">Designers of an information model should model information,
+   accessible at runtime, about the maximum number of protocol entity
+   instances an implementation can support on a device, the current
+   number of instances, and the expected behavior when the current
+   instances exceed the capacity of the device.<a href="#section-5.6.2-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="monitoring-the-network">
+<section id="section-5.6.3">
+          <h4 id="name-monitoring-the-network">
+<a href="#section-5.6.3" class="section-number selfRef">5.6.3. </a><a href="#name-monitoring-the-network" class="section-name selfRef">Monitoring the Network</a>
+          </h4>
+<p id="section-5.6.3-1">Consider whether network performance will be affected by the number
+   of protocol entities being deployed.<a href="#section-5.6.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.6.3-2">Consider the capability of determining the operational activity, such
+   as the number of messages in and the messages out, the number of
+   received messages rejected due to format problems, and the expected
+   behaviors when a malformed message is received.<a href="#section-5.6.3-2" class="pilcrow">¶</a></p>
+<p id="section-5.6.3-3">What are the principal performance factors that need to be looked at
+   when measuring the operational performance of the network built using
+   the protocol? Is it important to measure setup times? End-to-end
+   connectivity? Hop-to-hop connectivity? Network throughput?<a href="#section-5.6.3-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="monitoring-the-service">
+<section id="section-5.6.4">
+          <h4 id="name-monitoring-the-service">
+<a href="#section-5.6.4" class="section-number selfRef">5.6.4. </a><a href="#name-monitoring-the-service" class="section-name selfRef">Monitoring the Service</a>
+          </h4>
+<p id="section-5.6.4-1">What are the principal performance factors that need to be looked at
+   when measuring the performance of a service using the protocol? Is
+   it important to measure application-specific throughput? Client-
+   server associations? End-to-end application quality? Service
+   interruptions? User experience?<a href="#section-5.6.4-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="sec-secuity-mgt">
+<section id="section-5.7">
+        <h3 id="name-security-management">
+<a href="#section-5.7" class="section-number selfRef">5.7. </a><a href="#name-security-management" class="section-name selfRef">Security Management</a>
+        </h3>
+<p id="section-5.7-1">Protocol designers should consider how to monitor and manage security
+   aspects and vulnerabilities of the new protocol.<a href="#section-5.7-1" class="pilcrow">¶</a></p>
+<p id="section-5.7-2">There will be security considerations related to the new protocol.
+   To make it possible for operators to be aware of security-related
+   events, it is recommended that system logs should record events, such
+   as failed logins, but the logs must be secured.<a href="#section-5.7-2" class="pilcrow">¶</a></p>
+<p id="section-5.7-3">Should a system automatically notify operators of every event
+   occurrence, or should an operator-defined threshold control when a
+   notification is sent to an operator?<a href="#section-5.7-3" class="pilcrow">¶</a></p>
+<p id="section-5.7-4">Should certain statistics be collected about the operation of the new
+   protocol that might be useful for detecting attacks, such as the
+   receipt of malformed messages, messages out of order, or messages
+   with invalid timestamps? If such statistics are collected, is it
+   important to count them separately for each sender to help identify
+   the source of attacks?<a href="#section-5.7-4" class="pilcrow">¶</a></p>
+<p id="section-5.7-5">Manageability considerations that are security-oriented might include
+   discussion of the security implications when no monitoring is in
+   place, the regulatory implications of absence of audit-trail or logs
+   in enterprises, exceeding the capacity of logs, and security
+   exposures present in chosen/recommended management mechanisms.<a href="#section-5.7-5" class="pilcrow">¶</a></p>
+<p id="section-5.7-6">Consider security threats that may be introduced by management
+   operations. For example, Control and Provisioning of Wireless Access
+   Points (CAPWAP) breaks the structure of monolithic Access Points
+   (APs) into Access Controllers and Wireless Termination Points (WTPs).
+   By using a management interface, internal information that was
+   previously not accessible is now exposed over the network and to
+   management applications and may become a source of potential security
+   threats.<a href="#section-5.7-6" class="pilcrow">¶</a></p>
+<p id="section-5.7-7">The granularity of access control needed on management interfaces
+   needs to match operational needs. Typical requirements are a role-
+   based access control model and the principle of least privilege,
+   where a user can be given only the minimum access necessary to
+   perform a required task.<a href="#section-5.7-7" class="pilcrow">¶</a></p>
+<p id="section-5.7-8">Some operators wish to do consistency checks of access control lists
+   across devices. Protocol designers should consider information
+   models to promote comparisons across devices and across vendors to
+   permit checking the consistency of security configurations.<a href="#section-5.7-8" class="pilcrow">¶</a></p>
+<p id="section-5.7-9">Protocol designers should consider how to provide a secure transport,
+   authentication, identity, and access control that integrates well
+   with existing key and credential management infrastructure. It is a
+   good idea to start with defining the threat model for the protocol,
+   and from that deducing what is required.<a href="#section-5.7-9" class="pilcrow">¶</a></p>
+<p id="section-5.7-10">Protocol designers should consider how access control lists are
+   maintained and updated.<a href="#section-5.7-10" class="pilcrow">¶</a></p>
+<p id="section-5.7-11">Standard SNMP notifications or syslog messages <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span> might
+   already exist, or can be defined, to alert operators to the
+   conditions identified in the security considerations for the new
+   protocol. For example, you can log all the commands entered by the
+   operator using syslog (giving you some degree of audit trail), or you
+   can see who has logged on/off using the Secure SHell Protocol (SSH)
+   and from where; failed SSH logins can be logged using syslog, etc.<a href="#section-5.7-11" class="pilcrow">¶</a></p>
+<p id="section-5.7-12">An analysis of existing counters might help operators recognize the
+   conditions identified in the security considerations for the new
+   protocol before they can impact the network.<a href="#section-5.7-12" class="pilcrow">¶</a></p>
+<p id="section-5.7-13">Different management protocols use different assumptions about
+   message security and data-access controls. A protocol designer that
+   recommends using different protocols should consider how security
+   will be applied in a balanced manner across multiple management
+   interfaces. SNMP authority levels and policy are data-oriented,
+   while CLI authority levels and policy are usually command-oriented
+   (i.e., task-oriented). Depending on the management function,
+   sometimes data-oriented or task-oriented approaches make more sense.
+   Protocol designers should consider both data-oriented and task-
+   oriented authority levels and policy.<a href="#section-5.7-13" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="sec-oandm-tooling">
+<section id="section-6">
+      <h2 id="name-operational-and-management-">
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-operational-and-management-" class="section-name selfRef">Operational and Management Tooling Considerations</a>
+      </h2>
+<p id="section-6-1">The operational community's ability to effectively adopt and
+   use new specifications is significantly influenced by the availability
+   and adaptability of appropriate tooling. In this context, "tools" refers
+   to software systems or utilities used by network operators to deploy,
+   configure, monitor, troubleshoot, and manage networks or network protocols
+   in real-world operational environments. While the introduction of a new
+   specification does not automatically mandate the development of entirely
+   new tools, careful consideration must be given to how existing tools can be
+   leveraged or extended to support the management and operation of these new
+   specifications.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">The <span>[<a href="#NEMOPS" class="cite xref">NEMOPS</a>]</span> workshop highlighted a
+   consistent theme applicable beyond network management protocols: the
+   "ease of use" and adaptability of existing tools are critical factors
+   for successful adoption. Therefore, a new specification should provide
+   examples using existing, common tooling, or running code that demonstrate
+   how to perform key operational tasks.<a href="#section-6-2" class="pilcrow">¶</a></p>
+<p id="section-6-3">Specifically, the following tooling-related aspects should be considered,
+   prioritizing the adaptation of existing tools:<a href="#section-6-3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6-4.1">
+          <p id="section-6-4.1.1">Leveraging Existing Tooling: Before considering new tools, assess whether
+existing tooling, such as monitoring systems, logging platforms,
+configuration management systems, and/or orchestration frameworks, can be
+adapted to support the new specification. This may involve developing
+plugins, modules, or drivers that enable these tools to interact with
+the new specification.<a href="#section-6-4.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-6-4.2">
+          <p id="section-6-4.2.1">Extending Existing Tools: Identify areas where existing tools can be
+extended to provide the necessary visibility and control over the new
+specification. For example, if a new transport protocol is introduced,
+consider whether existing network monitoring tools can be extended to
+track its performance metrics or whether existing security tools can be
+adapted to analyze its traffic patterns.<a href="#section-6-4.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-6-4.3">
+          <p id="section-6-4.3.1">New Tools: Only when existing tools are demonstrably
+inadequate for managing and operating the elements of the new specification
+should the development of new tools be considered. In such cases,
+carefully define the specific requirements for these new tools, focusing
+on the functionalities that cannot be achieved through adaptation or
+extension of existing solutions.<a href="#section-6-4.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-6-4.4">
+          <p id="section-6-4.4.1">IETF Hackathons for Manageability Testing:
+IETF Hackathons <span>[<a href="#IETF-HACKATHONS" class="cite xref">IETF-HACKATHONS</a>]</span>
+provide an opportunity to test the functionality, interoperability,
+and manageability of new protocols. These events can be specifically
+leveraged to assess the operational (including manageability) implications
+of a new protocol by focusing tasks on:<a href="#section-6-4.4.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6-4.4.2.1">
+              <p id="section-6-4.4.2.1.1">Adapting existing tools to interact with the new specification.<a href="#section-6-4.4.2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6-4.4.2.2">
+              <p id="section-6-4.4.2.2.1">Developing example management scripts or modules for existing management
+platforms.<a href="#section-6-4.4.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6-4.4.2.3">
+              <p id="section-6-4.4.2.3.1">Testing the specification's behavior under various operational conditions.<a href="#section-6-4.4.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6-4.4.2.4">
+              <p id="section-6-4.4.2.4.1">Identifying potential tooling gaps and areas for improvement.<a href="#section-6-4.4.2.4.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6-4.4.2.5">
+              <p id="section-6-4.4.2.5.1">Creating example flows and use cases for manageability.<a href="#section-6-4.4.2.5.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+</li>
+        <li class="normal" id="section-6-4.5">
+          <p id="section-6-4.5.1">Open-Source for Tooling: If new tools are deemed necessary, or if significant
+adaptations to existing tools are required, prioritize open-source development
+with community involvement. Open-source tools lower the barrier to entry,
+encourage collaboration, and provide operators with the flexibility to customize
+and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+</section>
+</div>
+<div id="documentation-guidelines">
+<section id="section-7">
+      <h2 id="name-documentation-guidelines">
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-documentation-guidelines" class="section-name selfRef">Documentation Guidelines</a>
+      </h2>
+<p id="section-7-1">This document outlines key considerations for protocol designers and
+   provides guidance on how these considerations ought to be documented.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-7-2">This document does not describe interoperability requirements but
+   rather describes practices that are useful to follow when dealing
+   with operational and manageability aspects in IETF documents, so the capitalized
+   keywords from <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> do not apply here. Any occurrence of words
+   like 'must' or 'should' needs to be interpreted only in the context
+   of their natural, English-language meaning.<a href="#section-7-2" class="pilcrow">¶</a></p>
+<div id="recommended-discussions">
+<section id="section-7.1">
+        <h3 id="name-recommended-discussions">
+<a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-recommended-discussions" class="section-name selfRef">Recommended Discussions</a>
+        </h3>
+<p id="section-7.1-1">After evaluating the operational and manageability aspects of a new protocol
+   or feature, the resulting practices and requirements should be documented
+   in an “Operations and Manageability Considerations” section within a
+   specification. Since protocols are intended for operational deployment and
+   management within real networks, it is expected that such considerations
+   will be present.<a href="#section-7.1-1" class="pilcrow">¶</a></p>
+<p id="section-7.1-2">It is also recommended that operational and manageability considerations
+   be addressed early in the protocol design process. Consequently, early
+   revisions of Internet-Drafts are expected to include an “Operations and
+   Manageability Considerations” section.<a href="#section-7.1-2" class="pilcrow">¶</a></p>
+<p id="section-7.1-3">It is also recommended to begin considering operational and manageability
+   considerations early within the protocol design, and consequently it is expected that early revisions of Internet-Drafts will contain such section.<a href="#section-7.1-3" class="pilcrow">¶</a></p>
+<p id="section-7.1-4">An Operations and Manageability Considerations section should include discussion of
+   the management and operations topics raised in this document, and
+   when one or more of these topics is not relevant, it would be useful
+   to contain a simple statement explaining why the topic is not
+   relevant or applicable for the new protocol or feature.
+   Of course, additional relevant operational and manageability topics
+   should be included as well.<a href="#section-7.1-4" class="pilcrow">¶</a></p>
+<p id="section-7.1-5">Existing protocols and data models can provide the management
+   functions identified in the previous section. Protocol designers
+   should consider how using existing protocols and data models might
+   impact network operations.<a href="#section-7.1-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="null-manageability-considerations-sections">
+<section id="section-7.2">
+        <h3 id="name-null-manageability-consider">
+<a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-null-manageability-consider" class="section-name selfRef">Null Manageability Considerations Sections</a>
+        </h3>
+<p id="section-7.2-1">A protocol designer may seriously consider the manageability
+   requirements of a new protocol and determine that no management
+   functionality or operatinal best-practice clarifications are
+   needed by the new protocol. It would be helpful to
+   those who may update or write extensions to the protocol in the
+   future, or to those deploying the new protocol, to know the rationale
+   regarding the decisions on manageability of the protocol at the
+   time of its design.<a href="#section-7.2-1" class="pilcrow">¶</a></p>
+<p id="section-7.2-2">If there are no new manageability or deployment considerations, it is
+   recommended that an Operations and Manageability Considerations section
+   contain a
+   simple statement such as, "There are no new operations or manageability
+   requirements introduced by this document," followed by a brief explanation of
+   why that is the case. The presence of such a
+   section would indicate to the reader that due
+   consideration has been given to manageability and operations.<a href="#section-7.2-2" class="pilcrow">¶</a></p>
+<p id="section-7.2-3">In the case where the new protocol is an extension and the base
+   protocol discusses all the relevant operational and manageability
+   considerations, it would be helpful to point out the considerations
+   section in the base document.<a href="#section-7.2-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="placement-of-operations-and-manageability-considerations-sections">
+<section id="section-7.3">
+        <h3 id="name-placement-of-operations-and">
+<a href="#section-7.3" class="section-number selfRef">7.3. </a><a href="#name-placement-of-operations-and" class="section-name selfRef">Placement of Operations and Manageability Considerations Sections</a>
+        </h3>
+<p id="section-7.3-1">If a protocol designer develops an Operations and Manageability Considerations
+   section for a new protocol, it is recommended that the section be
+   placed immediately before the Security Considerations section.
+   Reviewers interested in such sections could find it easily, and this
+   placement could simplify the development of tools to detect the
+   presence of such a section.<a href="#section-7.3-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="iana-considerations">
+<section id="section-8">
+      <h2 id="name-iana-considerations">
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+      </h2>
+<p id="section-8-1">This document does not have any IANA actions required.<a href="#section-8-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="security-considerations">
+<section id="section-9">
+      <h2 id="name-security-considerations">
+<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      </h2>
+<p id="section-9-1">This document is informational and provides guidelines for
+   considering manageability and operations. It introduces no new
+   security concerns.<a href="#section-9-1" class="pilcrow">¶</a></p>
+<p id="section-9-2">The provision of a management portal to a network device provides a
+   doorway through which an attack on the device may be launched.
+   Making the protocol under development be manageable through a
+   management protocol creates a vulnerability to a new source of
+   attacks. Only management protocols with adequate security apparatus,
+   such as authentication, message integrity checking, and
+   authorization, should be used.<a href="#section-9-2" class="pilcrow">¶</a></p>
+<p id="section-9-3">A standard description of the manageable knobs and whistles on a
+   protocol makes it easier for an attacker to understand what they may
+   try to control and how to tweak it.<a href="#section-9-3" class="pilcrow">¶</a></p>
+<p id="section-9-4">A well-designed protocol is usually more stable and secure. A
+   protocol that can be managed and inspected offers the operator a
+   better chance of spotting and quarantining any attacks. Conversely,
+   making a protocol easy to inspect is a risk if the wrong person
+   inspects it.<a href="#section-9-4" class="pilcrow">¶</a></p>
+<p id="section-9-5">If security events cause logs and/or notifications/alerts, a
+   concerted attack might be able to be mounted by causing an excess of
+   these events. In other words, the security-management mechanisms
+   could constitute a security vulnerability. The management of
+   security aspects is important (see <a href="#sec-secuity-mgt" class="auto internal xref">Section 5.7</a>).<a href="#section-9-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-informative-references">
+<section id="section-10">
+      <h2 id="name-informative-references">
+<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+      </h2>
+<dl class="references">
+<dt id="CHECKLIST">[CHECKLIST]</dt>
+      <dd>
+<span class="refTitle">"Operations and Management Review Checklist"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://github.com/IETF-OPS-DIR/Review-Template/tree/main">https://github.com/IETF-OPS-DIR/Review-Template/tree/main</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-netmod-rfc8407bis">[I-D.ietf-netmod-rfc8407bis]</dt>
+      <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Boucadair, M.</span>, and <span class="refAuthor">Q. Wu</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of Documents Containing YANG Data Models"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-netmod-rfc8407bis-25</span>, <time datetime="2025-05-05" class="refDate">5 May 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-25">https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-25</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-opsawg-oam-characterization">[I-D.ietf-opsawg-oam-characterization]</dt>
+      <dd>
+<span class="refAuthor">Pignataro, C.</span> and <span class="refAuthor">A. Farrel</span>, <span class="refTitle">"Guidelines for Characterizing "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-04</span>, <time datetime="2024-11-11" class="refDate">11 November 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-04">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-04</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="IESG-STATEMENT">[IESG-STATEMENT]</dt>
+      <dd>
+<span class="refAuthor">IESG</span>, <span class="refTitle">"Writable MIB Module IESG Statement"</span>, <time datetime="2014-03-02" class="refDate">2 March 2014</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/">https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="IETF-HACKATHONS">[IETF-HACKATHONS]</dt>
+      <dd>
+<span class="refAuthor">IETF</span>, <span class="refTitle">"IETF Hackathons"</span>, <time datetime="2025-05-01" class="refDate">1 May 2025</time>, <span>&lt;<a href="https://www.ietf.org/meeting/hackathons/">https://www.ietf.org/meeting/hackathons/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="NEMOPS">[NEMOPS]</dt>
+      <dd>
+<span class="refAuthor">Hardaker, W.</span> and <span class="refAuthor">D. Dhody</span>, <span class="refTitle">"Report from the IAB Workshop on the Next Era of Network Management Operations (NEMOPS)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-iab-nemops-workshop-report-01</span>, <time datetime="2025-02-18" class="refDate">18 February 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-iab-nemops-workshop-report-01">https://datatracker.ietf.org/doc/html/draft-iab-nemops-workshop-report-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="NEMOPS-WORKSHOP">[NEMOPS-WORKSHOP]</dt>
+      <dd>
+<span class="refAuthor">IAB</span>, <span class="refTitle">"IAB workshop on the Next Era of Network Management Operations"</span>, <time datetime="2024-12" class="refDate">December 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/group/nemopsws/about/">https://datatracker.ietf.org/group/nemopsws/about/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC1034">[RFC1034]</dt>
+      <dd>
+<span class="refAuthor">Mockapetris, P.</span>, <span class="refTitle">"Domain names - concepts and facilities"</span>, <span class="seriesInfo">STD 13</span>, <span class="seriesInfo">RFC 1034</span>, <span class="seriesInfo">DOI 10.17487/RFC1034</span>, <time datetime="1987-11" class="refDate">November 1987</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1034">https://www.rfc-editor.org/rfc/rfc1034</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC1052">[RFC1052]</dt>
+      <dd>
+<span class="refAuthor">Cerf, V.</span>, <span class="refTitle">"IAB recommendations for the development of Internet network management standards"</span>, <span class="seriesInfo">RFC 1052</span>, <span class="seriesInfo">DOI 10.17487/RFC1052</span>, <time datetime="1988-04" class="refDate">April 1988</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1052">https://www.rfc-editor.org/rfc/rfc1052</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC1958">[RFC1958]</dt>
+      <dd>
+<span class="refAuthor">Carpenter, B., Ed.</span>, <span class="refTitle">"Architectural Principles of the Internet"</span>, <span class="seriesInfo">RFC 1958</span>, <span class="seriesInfo">DOI 10.17487/RFC1958</span>, <time datetime="1996-06" class="refDate">June 1996</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1958">https://www.rfc-editor.org/rfc/rfc1958</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2113">[RFC2113]</dt>
+      <dd>
+<span class="refAuthor">Katz, D.</span>, <span class="refTitle">"IP Router Alert Option"</span>, <span class="seriesInfo">RFC 2113</span>, <span class="seriesInfo">DOI 10.17487/RFC2113</span>, <time datetime="1997-02" class="refDate">February 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2113">https://www.rfc-editor.org/rfc/rfc2113</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2119">[RFC2119]</dt>
+      <dd>
+<span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2205">[RFC2205]</dt>
+      <dd>
+<span class="refAuthor">Braden, R., Ed.</span>, <span class="refAuthor">Zhang, L.</span>, <span class="refAuthor">Berson, S.</span>, <span class="refAuthor">Herzog, S.</span>, and <span class="refAuthor">S. Jamin</span>, <span class="refTitle">"Resource ReSerVation Protocol (RSVP) -- Version 1 Functional Specification"</span>, <span class="seriesInfo">RFC 2205</span>, <span class="seriesInfo">DOI 10.17487/RFC2205</span>, <time datetime="1997-09" class="refDate">September 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2205">https://www.rfc-editor.org/rfc/rfc2205</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2439">[RFC2439]</dt>
+      <dd>
+<span class="refAuthor">Villamizar, C.</span>, <span class="refAuthor">Chandra, R.</span>, and <span class="refAuthor">R. Govindan</span>, <span class="refTitle">"BGP Route Flap Damping"</span>, <span class="seriesInfo">RFC 2439</span>, <span class="seriesInfo">DOI 10.17487/RFC2439</span>, <time datetime="1998-11" class="refDate">November 1998</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2439">https://www.rfc-editor.org/rfc/rfc2439</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2578">[RFC2578]</dt>
+      <dd>
+<span class="refAuthor">McCloghrie, K., Ed.</span>, <span class="refAuthor">Perkins, D., Ed.</span>, and <span class="refAuthor">J. Schoenwaelder, Ed.</span>, <span class="refTitle">"Structure of Management Information Version 2 (SMIv2)"</span>, <span class="seriesInfo">STD 58</span>, <span class="seriesInfo">RFC 2578</span>, <span class="seriesInfo">DOI 10.17487/RFC2578</span>, <time datetime="1999-04" class="refDate">April 1999</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2578">https://www.rfc-editor.org/rfc/rfc2578</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2711">[RFC2711]</dt>
+      <dd>
+<span class="refAuthor">Partridge, C.</span> and <span class="refAuthor">A. Jackson</span>, <span class="refTitle">"IPv6 Router Alert Option"</span>, <span class="seriesInfo">RFC 2711</span>, <span class="seriesInfo">DOI 10.17487/RFC2711</span>, <time datetime="1999-10" class="refDate">October 1999</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2711">https://www.rfc-editor.org/rfc/rfc2711</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2865">[RFC2865]</dt>
+      <dd>
+<span class="refAuthor">Rigney, C.</span>, <span class="refAuthor">Willens, S.</span>, <span class="refAuthor">Rubens, A.</span>, and <span class="refAuthor">W. Simpson</span>, <span class="refTitle">"Remote Authentication Dial In User Service (RADIUS)"</span>, <span class="seriesInfo">RFC 2865</span>, <span class="seriesInfo">DOI 10.17487/RFC2865</span>, <time datetime="2000-06" class="refDate">June 2000</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2865">https://www.rfc-editor.org/rfc/rfc2865</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2975">[RFC2975]</dt>
+      <dd>
+<span class="refAuthor">Aboba, B.</span>, <span class="refAuthor">Arkko, J.</span>, and <span class="refAuthor">D. Harrington</span>, <span class="refTitle">"Introduction to Accounting Management"</span>, <span class="seriesInfo">RFC 2975</span>, <span class="seriesInfo">DOI 10.17487/RFC2975</span>, <time datetime="2000-10" class="refDate">October 2000</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2975">https://www.rfc-editor.org/rfc/rfc2975</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3060">[RFC3060]</dt>
+      <dd>
+<span class="refAuthor">Moore, B.</span>, <span class="refAuthor">Ellesson, E.</span>, <span class="refAuthor">Strassner, J.</span>, and <span class="refAuthor">A. Westerinen</span>, <span class="refTitle">"Policy Core Information Model -- Version 1 Specification"</span>, <span class="seriesInfo">RFC 3060</span>, <span class="seriesInfo">DOI 10.17487/RFC3060</span>, <time datetime="2001-02" class="refDate">February 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3060">https://www.rfc-editor.org/rfc/rfc3060</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3084">[RFC3084]</dt>
+      <dd>
+<span class="refAuthor">Chan, K.</span>, <span class="refAuthor">Seligson, J.</span>, <span class="refAuthor">Durham, D.</span>, <span class="refAuthor">Gai, S.</span>, <span class="refAuthor">McCloghrie, K.</span>, <span class="refAuthor">Herzog, S.</span>, <span class="refAuthor">Reichmeyer, F.</span>, <span class="refAuthor">Yavatkar, R.</span>, and <span class="refAuthor">A. Smith</span>, <span class="refTitle">"COPS Usage for Policy Provisioning (COPS-PR)"</span>, <span class="seriesInfo">RFC 3084</span>, <span class="seriesInfo">DOI 10.17487/RFC3084</span>, <time datetime="2001-03" class="refDate">March 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3084">https://www.rfc-editor.org/rfc/rfc3084</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3139">[RFC3139]</dt>
+      <dd>
+<span class="refAuthor">Sanchez, L.</span>, <span class="refAuthor">McCloghrie, K.</span>, and <span class="refAuthor">J. Saperia</span>, <span class="refTitle">"Requirements for Configuration Management of IP-based Networks"</span>, <span class="seriesInfo">RFC 3139</span>, <span class="seriesInfo">DOI 10.17487/RFC3139</span>, <time datetime="2001-06" class="refDate">June 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3139">https://www.rfc-editor.org/rfc/rfc3139</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3198">[RFC3198]</dt>
+      <dd>
+<span class="refAuthor">Westerinen, A.</span>, <span class="refAuthor">Schnizlein, J.</span>, <span class="refAuthor">Strassner, J.</span>, <span class="refAuthor">Scherling, M.</span>, <span class="refAuthor">Quinn, B.</span>, <span class="refAuthor">Herzog, S.</span>, <span class="refAuthor">Huynh, A.</span>, <span class="refAuthor">Carlson, M.</span>, <span class="refAuthor">Perry, J.</span>, and <span class="refAuthor">S. Waldbusser</span>, <span class="refTitle">"Terminology for Policy-Based Management"</span>, <span class="seriesInfo">RFC 3198</span>, <span class="seriesInfo">DOI 10.17487/RFC3198</span>, <time datetime="2001-11" class="refDate">November 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3198">https://www.rfc-editor.org/rfc/rfc3198</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3290">[RFC3290]</dt>
+      <dd>
+<span class="refAuthor">Bernet, Y.</span>, <span class="refAuthor">Blake, S.</span>, <span class="refAuthor">Grossman, D.</span>, and <span class="refAuthor">A. Smith</span>, <span class="refTitle">"An Informal Management Model for Diffserv Routers"</span>, <span class="seriesInfo">RFC 3290</span>, <span class="seriesInfo">DOI 10.17487/RFC3290</span>, <time datetime="2002-05" class="refDate">May 2002</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3290">https://www.rfc-editor.org/rfc/rfc3290</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3410">[RFC3410]</dt>
+      <dd>
+<span class="refAuthor">Case, J.</span>, <span class="refAuthor">Mundy, R.</span>, <span class="refAuthor">Partain, D.</span>, and <span class="refAuthor">B. Stewart</span>, <span class="refTitle">"Introduction and Applicability Statements for Internet-Standard Management Framework"</span>, <span class="seriesInfo">RFC 3410</span>, <span class="seriesInfo">DOI 10.17487/RFC3410</span>, <time datetime="2002-12" class="refDate">December 2002</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3410">https://www.rfc-editor.org/rfc/rfc3410</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3444">[RFC3444]</dt>
+      <dd>
+<span class="refAuthor">Pras, A.</span> and <span class="refAuthor">J. Schoenwaelder</span>, <span class="refTitle">"On the Difference between Information Models and Data Models"</span>, <span class="seriesInfo">RFC 3444</span>, <span class="seriesInfo">DOI 10.17487/RFC3444</span>, <time datetime="2003-01" class="refDate">January 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3444">https://www.rfc-editor.org/rfc/rfc3444</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3460">[RFC3460]</dt>
+      <dd>
+<span class="refAuthor">Moore, B., Ed.</span>, <span class="refTitle">"Policy Core Information Model (PCIM) Extensions"</span>, <span class="seriesInfo">RFC 3460</span>, <span class="seriesInfo">DOI 10.17487/RFC3460</span>, <time datetime="2003-01" class="refDate">January 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3460">https://www.rfc-editor.org/rfc/rfc3460</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3535">[RFC3535]</dt>
+      <dd>
+<span class="refAuthor">Schoenwaelder, J.</span>, <span class="refTitle">"Overview of the 2002 IAB Network Management Workshop"</span>, <span class="seriesInfo">RFC 3535</span>, <span class="seriesInfo">DOI 10.17487/RFC3535</span>, <time datetime="2003-05" class="refDate">May 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3535">https://www.rfc-editor.org/rfc/rfc3535</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3585">[RFC3585]</dt>
+      <dd>
+<span class="refAuthor">Jason, J.</span>, <span class="refAuthor">Rafalow, L.</span>, and <span class="refAuthor">E. Vyncke</span>, <span class="refTitle">"IPsec Configuration Policy Information Model"</span>, <span class="seriesInfo">RFC 3585</span>, <span class="seriesInfo">DOI 10.17487/RFC3585</span>, <time datetime="2003-08" class="refDate">August 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3585">https://www.rfc-editor.org/rfc/rfc3585</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3644">[RFC3644]</dt>
+      <dd>
+<span class="refAuthor">Snir, Y.</span>, <span class="refAuthor">Ramberg, Y.</span>, <span class="refAuthor">Strassner, J.</span>, <span class="refAuthor">Cohen, R.</span>, and <span class="refAuthor">B. Moore</span>, <span class="refTitle">"Policy Quality of Service (QoS) Information Model"</span>, <span class="seriesInfo">RFC 3644</span>, <span class="seriesInfo">DOI 10.17487/RFC3644</span>, <time datetime="2003-11" class="refDate">November 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3644">https://www.rfc-editor.org/rfc/rfc3644</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3670">[RFC3670]</dt>
+      <dd>
+<span class="refAuthor">Moore, B.</span>, <span class="refAuthor">Durham, D.</span>, <span class="refAuthor">Strassner, J.</span>, <span class="refAuthor">Westerinen, A.</span>, and <span class="refAuthor">W. Weiss</span>, <span class="refTitle">"Information Model for Describing Network Device QoS Datapath Mechanisms"</span>, <span class="seriesInfo">RFC 3670</span>, <span class="seriesInfo">DOI 10.17487/RFC3670</span>, <time datetime="2004-01" class="refDate">January 2004</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3670">https://www.rfc-editor.org/rfc/rfc3670</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3805">[RFC3805]</dt>
+      <dd>
+<span class="refAuthor">Bergman, R.</span>, <span class="refAuthor">Lewis, H.</span>, and <span class="refAuthor">I. McDonald</span>, <span class="refTitle">"Printer MIB v2"</span>, <span class="seriesInfo">RFC 3805</span>, <span class="seriesInfo">DOI 10.17487/RFC3805</span>, <time datetime="2004-06" class="refDate">June 2004</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3805">https://www.rfc-editor.org/rfc/rfc3805</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC5321">[RFC5321]</dt>
+      <dd>
+<span class="refAuthor">Klensin, J.</span>, <span class="refTitle">"Simple Mail Transfer Protocol"</span>, <span class="seriesInfo">RFC 5321</span>, <span class="seriesInfo">DOI 10.17487/RFC5321</span>, <time datetime="2008-10" class="refDate">October 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5321">https://www.rfc-editor.org/rfc/rfc5321</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC5424">[RFC5424]</dt>
+      <dd>
+<span class="refAuthor">Gerhards, R.</span>, <span class="refTitle">"The Syslog Protocol"</span>, <span class="seriesInfo">RFC 5424</span>, <span class="seriesInfo">DOI 10.17487/RFC5424</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5424">https://www.rfc-editor.org/rfc/rfc5424</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC5706">[RFC5706]</dt>
+      <dd>
+<span class="refAuthor">Harrington, D.</span>, <span class="refTitle">"Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions"</span>, <span class="seriesInfo">RFC 5706</span>, <span class="seriesInfo">DOI 10.17487/RFC5706</span>, <time datetime="2009-11" class="refDate">November 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5706">https://www.rfc-editor.org/rfc/rfc5706</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6020">[RFC6020]</dt>
+      <dd>
+<span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"YANG - A Data Modeling Language for the Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6020</span>, <span class="seriesInfo">DOI 10.17487/RFC6020</span>, <time datetime="2010-10" class="refDate">October 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6020">https://www.rfc-editor.org/rfc/rfc6020</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6241">[RFC6241]</dt>
+      <dd>
+<span class="refAuthor">Enns, R., Ed.</span>, <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refAuthor">Schoenwaelder, J., Ed.</span>, and <span class="refAuthor">A. Bierman, Ed.</span>, <span class="refTitle">"Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6241</span>, <span class="seriesInfo">DOI 10.17487/RFC6241</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6241">https://www.rfc-editor.org/rfc/rfc6241</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6291">[RFC6291]</dt>
+      <dd>
+<span class="refAuthor">Andersson, L.</span>, <span class="refAuthor">van Helvoort, H.</span>, <span class="refAuthor">Bonica, R.</span>, <span class="refAuthor">Romascanu, D.</span>, and <span class="refAuthor">S. Mansfield</span>, <span class="refTitle">"Guidelines for the Use of the "OAM" Acronym in the IETF"</span>, <span class="seriesInfo">BCP 161</span>, <span class="seriesInfo">RFC 6291</span>, <span class="seriesInfo">DOI 10.17487/RFC6291</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6291">https://www.rfc-editor.org/rfc/rfc6291</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6733">[RFC6733]</dt>
+      <dd>
+<span class="refAuthor">Fajardo, V., Ed.</span>, <span class="refAuthor">Arkko, J.</span>, <span class="refAuthor">Loughney, J.</span>, and <span class="refAuthor">G. Zorn, Ed.</span>, <span class="refTitle">"Diameter Base Protocol"</span>, <span class="seriesInfo">RFC 6733</span>, <span class="seriesInfo">DOI 10.17487/RFC6733</span>, <time datetime="2012-10" class="refDate">October 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6733">https://www.rfc-editor.org/rfc/rfc6733</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7011">[RFC7011]</dt>
+      <dd>
+<span class="refAuthor">Claise, B., Ed.</span>, <span class="refAuthor">Trammell, B., Ed.</span>, and <span class="refAuthor">P. Aitken</span>, <span class="refTitle">"Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information"</span>, <span class="seriesInfo">STD 77</span>, <span class="seriesInfo">RFC 7011</span>, <span class="seriesInfo">DOI 10.17487/RFC7011</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7011">https://www.rfc-editor.org/rfc/rfc7011</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7854">[RFC7854]</dt>
+      <dd>
+<span class="refAuthor">Scudder, J., Ed.</span>, <span class="refAuthor">Fernando, R.</span>, and <span class="refAuthor">S. Stuart</span>, <span class="refTitle">"BGP Monitoring Protocol (BMP)"</span>, <span class="seriesInfo">RFC 7854</span>, <span class="seriesInfo">DOI 10.17487/RFC7854</span>, <time datetime="2016-06" class="refDate">June 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7854">https://www.rfc-editor.org/rfc/rfc7854</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7950">[RFC7950]</dt>
+      <dd>
+<span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"The YANG 1.1 Data Modeling Language"</span>, <span class="seriesInfo">RFC 7950</span>, <span class="seriesInfo">DOI 10.17487/RFC7950</span>, <time datetime="2016-08" class="refDate">August 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7950">https://www.rfc-editor.org/rfc/rfc7950</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8040">[RFC8040]</dt>
+      <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Bjorklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"RESTCONF Protocol"</span>, <span class="seriesInfo">RFC 8040</span>, <span class="seriesInfo">DOI 10.17487/RFC8040</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8040">https://www.rfc-editor.org/rfc/rfc8040</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8199">[RFC8199]</dt>
+      <dd>
+<span class="refAuthor">Bogdanovic, D.</span>, <span class="refAuthor">Claise, B.</span>, and <span class="refAuthor">C. Moberg</span>, <span class="refTitle">"YANG Module Classification"</span>, <span class="seriesInfo">RFC 8199</span>, <span class="seriesInfo">DOI 10.17487/RFC8199</span>, <time datetime="2017-07" class="refDate">July 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8199">https://www.rfc-editor.org/rfc/rfc8199</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8299">[RFC8299]</dt>
+      <dd>
+<span class="refAuthor">Wu, Q., Ed.</span>, <span class="refAuthor">Litkowski, S.</span>, <span class="refAuthor">Tomotaki, L.</span>, and <span class="refAuthor">K. Ogaki</span>, <span class="refTitle">"YANG Data Model for L3VPN Service Delivery"</span>, <span class="seriesInfo">RFC 8299</span>, <span class="seriesInfo">DOI 10.17487/RFC8299</span>, <time datetime="2018-01" class="refDate">January 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8299">https://www.rfc-editor.org/rfc/rfc8299</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8309">[RFC8309]</dt>
+      <dd>
+<span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Liu, W.</span>, and <span class="refAuthor">A. Farrel</span>, <span class="refTitle">"Service Models Explained"</span>, <span class="seriesInfo">RFC 8309</span>, <span class="seriesInfo">DOI 10.17487/RFC8309</span>, <time datetime="2018-01" class="refDate">January 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8309">https://www.rfc-editor.org/rfc/rfc8309</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8499">[RFC8499]</dt>
+      <dd>
+<span class="refAuthor">Hoffman, P.</span>, <span class="refAuthor">Sullivan, A.</span>, and <span class="refAuthor">K. Fujiwara</span>, <span class="refTitle">"DNS Terminology"</span>, <span class="seriesInfo">RFC 8499</span>, <span class="seriesInfo">DOI 10.17487/RFC8499</span>, <time datetime="2019-01" class="refDate">January 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8499">https://www.rfc-editor.org/rfc/rfc8499</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9182">[RFC9182]</dt>
+      <dd>
+<span class="refAuthor">Barguil, S.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Munoz, L.</span>, and <span class="refAuthor">A. Aguado</span>, <span class="refTitle">"A YANG Network Data Model for Layer 3 VPNs"</span>, <span class="seriesInfo">RFC 9182</span>, <span class="seriesInfo">DOI 10.17487/RFC9182</span>, <time datetime="2022-02" class="refDate">February 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9182">https://www.rfc-editor.org/rfc/rfc9182</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9291">[RFC9291]</dt>
+      <dd>
+<span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Barguil, S.</span>, and <span class="refAuthor">L. Munoz</span>, <span class="refTitle">"A YANG Network Data Model for Layer 2 VPNs"</span>, <span class="seriesInfo">RFC 9291</span>, <span class="seriesInfo">DOI 10.17487/RFC9291</span>, <time datetime="2022-09" class="refDate">September 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9291">https://www.rfc-editor.org/rfc/rfc9291</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="W3C.REC-xmlschema-0-20041028">[W3C.REC-xmlschema-0-20041028]</dt>
+    <dd>
+<span class="refAuthor">Fallside, D., Ed.</span> and <span class="refAuthor">P. Walmsley, Ed.</span>, <span class="refTitle">"XML Schema Part 0: Primer Second Edition"</span>, <span class="seriesInfo">W3C REC REC-xmlschema-0-20041028</span>, <span class="seriesInfo">W3C REC-xmlschema-0-20041028</span>, <time datetime="2004-10-28" class="refDate">28 October 2004</time>, <span>&lt;<a href="https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/">https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
+<div id="acknowledgements">
+<section id="appendix-A">
+      <h2 id="name-acknowledgements">
+<a href="#name-acknowledgements" class="section-name selfRef">Acknowledgements</a>
+      </h2>
+<p id="appendix-A-1">TBC.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="appendix-A-2">
+        <dt id="appendix-A-2.1">The author of RFC 5706:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-A-2.2">
+          <p id="appendix-A-2.2.1">David Harrington<a href="#appendix-A-2.2.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="appendix-A-2.3">Acknowledgments from RFC 5706:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-A-2.4">
+          <p id="appendix-A-2.4.1">This document started from an earlier document edited by Adrian
+Farrel, which itself was based on work exploring the need for
+Manageability Considerations sections in all Internet-Drafts produced
+within the Routing Area of the IETF. That earlier work was produced
+by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable
+feedback provided by Pekka Savola and Bert Wijnen.<a href="#appendix-A-2.4.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="appendix-A-2.5"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-A-2.6">
+          <p id="appendix-A-2.6.1">Some of the discussion about designing for manageability came from
+private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.<a href="#appendix-A-2.6.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="appendix-A-2.7"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-A-2.8">
+          <p id="appendix-A-2.8.1">Thanks to reviewers who helped fashion this document, including
+Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
+Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.<a href="#appendix-A-2.8.1" class="pilcrow">¶</a></p>
+</dd>
+      <dd class="break"></dd>
+</dl>
+</section>
+</div>
+<div id="authors-addresses">
+<section id="appendix-B">
+      <h2 id="name-authors-addresses">
+<a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
+      </h2>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Benoit Claise</span></div>
+<div dir="auto" class="left"><span class="org">Huawei</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:benoit.claise@huawei.com" class="email">benoit.claise@huawei.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Joe Clarke</span></div>
+<div dir="auto" class="left"><span class="org">Cisco</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:jclarke@cisco.com" class="email">jclarke@cisco.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Adrian Farrel</span></div>
+<div dir="auto" class="left"><span class="org">Old Dog Consulting</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:adrian@olddog.co.uk" class="email">adrian@olddog.co.uk</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Thomas Graf</span></div>
+<div dir="auto" class="left"><span class="org">Swisscom</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:thomas.graf@swisscom.com" class="email">thomas.graf@swisscom.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Samier Barguil</span></div>
+<div dir="auto" class="left"><span class="org">Nokia</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:samier.barguil_giraldo@nokia.com" class="email">samier.barguil_giraldo@nokia.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Carlos Pignataro</span></div>
+<div dir="auto" class="left"><span class="org">Blue Fern Consulting</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:carlos@bluefern.consulting" class="email">carlos@bluefern.consulting</a>, <a href="mailto:cpignata@gmail.com" class="email">cpignata@gmail.com</a>
+</div>
+<div class="url">
+<span>URI:</span>
+<a href="https://bluefern.consulting" class="url">https://bluefern.consulting</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Ran Chen</span></div>
+<div dir="auto" class="left"><span class="org">ZTE</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:chen.ran@zte.com.cn" class="email">chen.ran@zte.com.cn</a>
+</div>
+</address>
+</section>
+</div>
+<script>const toc = document.getElementById("toc");
+toc.querySelector("h2").addEventListener("click", e => {
+  toc.classList.toggle("active");
+});
+toc.querySelector("nav").addEventListener("click", e => {
+  toc.classList.remove("active");
+});
+</script>
+</body>
+</html>
