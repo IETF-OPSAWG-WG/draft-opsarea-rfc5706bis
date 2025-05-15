@@ -870,6 +870,25 @@ Information Models and Data Models
      the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)
      {{?RFC8499}}.
 
+  A common challenge in YANG model development lies in defining the
+  relationships between abstract service or network constructs and the
+  underlying device models. Therefore, when designing YANG modules, it
+  is important to go beyond simply modeling configuration and
+  operational data (i.e., leaf nodes), and also consider how the
+  status and relationships of abstract or distributed constructs can
+  be reflected based on parameters available in the network.
+
+  For example, the status of a service may depend on the operational state
+  of multiple network elements to which the service is attached. In such
+  cases, the YANG model (and its accompanying documentation) should
+  clearly describe how service-level status is derived from underlying
+  device-level information. Similarly, it is beneficial to define
+  notifications or events that signal changes in these underlying states,
+  enabling reliable detection and correlation of service-affecting
+  conditions. Including such mechanisms improves the robustness of
+  integrations and helps ensure consistent behavior across
+  implementations.
+
   Specific guidelines to consider when authoring any type of YANG
   modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
 
