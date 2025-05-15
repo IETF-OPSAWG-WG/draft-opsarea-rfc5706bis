@@ -112,7 +112,7 @@ Table of Contents
    6.  Operational and Management Tooling Considerations
    7.  Documentation Guidelines
      7.1.  Recommended Discussions
-     7.2.  Null Manageability Considerations Sections
+     7.2.  Null Operations and Manageability Considerations Section
      7.3.  Placement of Operations and Manageability Considerations
            Sections
    8.  IANA Considerations
@@ -1419,7 +1419,7 @@ Table of Contents
    should consider how using existing protocols and data models might
    impact network operations.
 
-7.2.  Null Manageability Considerations Sections
+7.2.  Null Operations and Manageability Considerations Section
 
    A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
