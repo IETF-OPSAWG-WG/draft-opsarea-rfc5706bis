@@ -1514,11 +1514,11 @@ Table of Contents
               rfc8407bis-25>.
 
    [I-D.ietf-opsawg-oam-characterization]
-              Pignataro, C. and A. Farrel, "Guidelines for
+              Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-04, 11 November
-              2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              opsawg-oam-characterization-04>.
+              draft-ietf-opsawg-oam-characterization-06, 15 May 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
+              oam-characterization-06>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
@@ -1752,7 +1752,7 @@ Acknowledgements
 
    The IETF Ops Directorate:  The IETF Ops Directorate [IETF-OPS-Dir]
       reviewer team, which has been providing document reviews for over
-      a devade, and its Chairs, Gunter Van de Velde, Carlos Pignataro,
+      a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro,
       and Bo Wu.
 
    The AD championing the update:  Med Boucadair initiated the effort to
