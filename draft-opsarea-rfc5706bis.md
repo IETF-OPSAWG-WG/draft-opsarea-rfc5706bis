@@ -1472,7 +1472,7 @@ The authors wish to thank the following individuals and groups.
 
 
 The IETF Ops Directorate:
-   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, which has been providing document reviews for over a devade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.
+   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, which has been providing document reviews for over a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.
 
 
 The AD championing the update:
