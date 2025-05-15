@@ -295,7 +295,7 @@ author:
 
    * Change intended status from Informational to Best Current Practice
 
-   * Moved the "Operational Considerations" Appendix A to a Checklist maintained in Github
+   * Move the "Operational Considerations" Appendix A to a Checklist maintained in Github
 
    * Add a structured framing for the requirement of an "Operational and
       Management Considerations" section in Internet-Drafts
