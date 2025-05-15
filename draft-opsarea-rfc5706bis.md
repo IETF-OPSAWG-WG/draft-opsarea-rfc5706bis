@@ -304,7 +304,7 @@ author:
 
       * Add a YANG Data Model Considerations section
 
-      * Updated the Available Management Technologies landscape
+  * Update the Available Management Technologies landscape
 
    * Added an "Operational and Management Tooling Considerations" section
 
