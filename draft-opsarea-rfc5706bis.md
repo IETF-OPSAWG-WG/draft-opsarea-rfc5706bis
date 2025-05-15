@@ -568,12 +568,13 @@ author:
    considering management often focuses on monitoring a protocol
    endpoint on a single device. A MIB module document typically only
    considers monitoring properties observable at one end, while the
-   document does not really cover managing the \*protocol\* (the
-   coordination of multiple ends) and does not even come near managing
-   the \*service\* (which includes a lot of stuff that is very far away
-   from the box). This is exactly what operators hate -- you need to be
-   able to manage both ends. As {{?RFC3535}} says, "MIB modules can often
-   be characterized as a list of ingredients without a recipe".
+   document does not really cover managing the \*protocol\*
+   (the coordination of multiple ends) and does not even come near
+   managing the \*service\* (which includes a lot of stuff that is very
+   far away from the box). This scenario reflects a common operational
+   concern: the inability to manage both ends of a connection
+   effectively. As noted in [RFC3535], "MIB modules can often be
+   characterized as a list of ingredients without a recipe".
 
    The management model should take into account factors such as:
 
