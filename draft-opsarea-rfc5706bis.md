@@ -297,7 +297,7 @@ author:
 
    * Moved the "Operational Considerations" Appendix A to a Checklist maintained in Github
 
-   * Added a structured framing for the requirement of an "Operational and
+   * Add a structured framing for the requirement of an "Operational and
       Management Considerations" section in Internet-Drafts
 
    * Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
