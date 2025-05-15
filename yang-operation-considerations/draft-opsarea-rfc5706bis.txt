@@ -916,11 +916,11 @@ Table of Contents
    In such cases, the YANG data model (and its accompanying
    documentation) should clearly describe how service-level status is
    derived from underlying device-level information.  Similarly, it is
-   beneficial to define notifications or events that signal changes in
-   these underlying states, enabling reliable detection and correlation
-   of service-affecting conditions.  Including such mechanisms improves
-   the robustness of integrations and helps ensure consistent behavior
-   across implementations.
+   beneficial to define events (and relevant triggered notifications)
+   that indicate changes in an underlying state, enabling reliable
+   detection and correlation of service-affecting conditions.  Including
+   such mechanisms improves the robustness of integrations and helps
+   ensure consistent behavior across implementations.
 
    Specific guidelines to consider when authoring any type of YANG
    modules are described in [I-D.ietf-netmod-rfc8407bis].
