@@ -708,8 +708,12 @@ author:
    counter. Then, whether the counter is gathered via SNMP, a CLI
    command, or a syslog message, the counter will have the same meaning.
 
-   Protocol designers should consider which information might be useful
-   for managing the new protocol or protocol extensions.
+   Protocol designers should consider what operational, configuration,
+   state, or statistical information will be relevant for effectively
+   monitoring, controlling, or troubleshooting the new protocol or its
+   extensions. This includes identifying key parameters that reflect the
+   protocol’s behavior, performance metrics, error indicators, and any
+   contextual data that would aid in diagnostics or lifecycle management.
 
 ~~~~ aasvg
              IM                --> conceptual/abstract model
