@@ -870,7 +870,7 @@ Information Models and Data Models
      the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)
      {{?RFC8499}}.
 
-  A common challenge in YANG model development lies in defining the
+  A common challenge in YANG data model development lies in defining the
   relationships between abstract service or network constructs and the
   underlying device models. Therefore, when designing YANG modules, it
   is important to go beyond simply modeling configuration and
