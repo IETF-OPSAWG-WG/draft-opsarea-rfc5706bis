@@ -308,7 +308,7 @@ author:
 
 ##  Terminology
 
-   These terms are
+   These terms are:
 
    *  CLI: Command Line Interface. Typically a proprietary interface to
       hardware devices (such as routers) for use by human operators
@@ -332,7 +332,7 @@ author:
       structures such as retrieval, update, summation, etc., and a collection of
       integrity rules that define the legal states (set of values) or changes of
       state (operations on values). A data model may be derived by mapping the
-      contents of an information model or may be developed ab initio. Further 
+      contents of an information model or may be developed ab initio. Further
       discussion of data models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgt-info}}.
 
@@ -359,8 +359,8 @@ author:
       to identify entirely new Internet protocols, new versions of existing Internet
       protocols, and extensions to Internet protocols. 
 
-   *  Protocol designer: This term is used to refer to an individual, a group of 
-      people, or an IETF Working Group involved in the development and specification 
+   *  Protocol designer: This term is used to refer to an individual, a group of
+      people, or an IETF Working Group involved in the development and specification
       of new protocols or protocol extensions.
 
 ##  Available Management Technologies
@@ -384,7 +384,7 @@ author:
 
    The IETF previously also worked on the Simple Network Management Protocol
    (SNMP) {{?RFC3410}} and the Structure of management Information (SMI) {{?STD58}},
-   but further use of this management protocol in new IETF documents has been constrained 
+   but further use of this management protocol in new IETF documents has been constrained
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
    that do not support more resent management protocols <<insert reference>>.
 
