@@ -335,8 +335,8 @@ Table of Contents
    consult the referenced materials.
 
    This document does not describe interoperability requirements.  As
-   such, it does not use the capitalized keywords defined in RFC 2119
-   [RFC2119] and RFC 8174 [RFC8174].
+   such, it does not use the capitalized keywords defined in [RFC2119]
+   and [RFC8174].
 
 3.1.  Terminology
 
@@ -1538,11 +1538,11 @@ Table of Contents
               rfc8407bis-25>.
 
    [I-D.ietf-opsawg-oam-characterization]
-              Pignataro, C. and A. Farrel, "Guidelines for
+              Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-04, 11 November
-              2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              opsawg-oam-characterization-04>.
+              draft-ietf-opsawg-oam-characterization-06, 15 May 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
+              oam-characterization-06>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
