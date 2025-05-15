@@ -1377,7 +1377,7 @@ Information Models and Data Models
    should consider how using existing protocols and data models might
    impact network operations.
 
-##  Null Manageability Considerations Sections
+##  Null Operations and Manageability Considerations Section
 
    A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
