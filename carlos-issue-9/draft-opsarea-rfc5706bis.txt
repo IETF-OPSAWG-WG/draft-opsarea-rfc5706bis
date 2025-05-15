@@ -1405,10 +1405,10 @@ Table of Contents
    consequently it is expected that early revisions of Internet-Drafts
    will contain such section.
 
-   An Operations and Manageability Considerations section should include
-   discussion of the management and operations topics raised in this
-   document, and when one or more of these topics is not relevant, it
-   would be useful to contain a simple statement explaining why the
+   An "Operations and Manageability Considerations" section should
+   include discussion of the management and operations topics raised in
+   this document, and when one or more of these topics is not relevant,
+   it would be useful to contain a simple statement explaining why the
    topic is not relevant or applicable for the new protocol or feature.
    Of course, additional relevant operational and manageability topics
    should be included as well.
