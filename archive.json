@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-13T00:48:45.719770+00:00",
+  "timestamp": "2025-05-15T00:46:59.956027+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -125,7 +125,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:15Z",
-      "updatedAt": "2025-05-07T13:39:57Z",
+      "updatedAt": "2025-05-13T03:27:03Z",
       "closedAt": null,
       "comments": [
         {
@@ -155,6 +155,13 @@
           "body": "Requesting an Information Model in an IETF document is only required IF there are multiple data models representations of it (ex: YANG, IPFIX, etc.), for lossless mapping. \nIf you create an Information Model, you can think of YANG as language to do so\n\nSection 4.2 might elaborate on those points.",
           "createdAt": "2025-05-07T13:39:56Z",
           "updatedAt": "2025-05-07T13:39:56Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "In terms section\uff1a\nInformation model: an abstraction and representation of the entities in a managed environment, their properties, attributes and operations, and the way that they relate to each other. It is independent of any specific repository, software usage, protocol, or platform [RFC3444].      \n\u2014 Defined in RFC 5706, referencing RFC 3444 \n\nInformation model section\uff1a\n\nInformation models are helpful to try to focus interoperability on the semantic level -- they define what information should be gathered and how that information might be used, regardless of which management interface carries the data or which vendor product produces the data.  The use of an information model might help improve the ability of operators to correlate messages in different protocols where the data overlaps, such as a syslog message and a YANG notification about the same event.  An information model might identify which error conditions should be counted separately and which error conditions can be recorded together in a single counter.  Then, whether the counter is gathered via Netconf/YANG, a CLI command, or a syslog message, the counter will have the same meaning.\n                      IM                        --> conceptual/abstract model\n                        |                             for designers and operators\n      +----------+---------+\n      |                 |               |\n      DM          DM         DM       --> concrete/detailed model\n                                                      for implementers\n\n   Figure **  Information Models\uff08IMs\uff09 and Data Models\uff08DMs\uff09 \n \nProtocol designers may decide to use an informational model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols.   Alternatively, the protocol designers may directly develop data models without first producing an information model.\n\n\"On the Difference between Information Models and Data Models\"[RFC3444] is helpful in determining what information to consider regarding information models (IMs), as compared to data models (DMs).\n\nProtocol designers should develop an information model if multiple data model representations (e.g. YANG [RFC7950], IPFIX [RFC7011], gMNI [gMNI], etc.) are to be produced, to ensure lossless semantic mapping. Protocol designers may also make an information model if the consequent data models will be complex or many.\n\nInformation Model Design\n\nThis document recommends keeping the information model as simple as possible by applying the following criteria:\n1.  Start with a small set of essential objects and make additions only as further objects are needed with the objective of keeping the total number of objects as small as possible.\n2.  Require that all objects be essential for management.\n3. Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.\n4.  Exclude objects that can be derived from others in this or other information models.\n5.  Avoid causing critical sections to be heavily instrumented.  A\nguideline is one counter per critical section per layer.\n6. When defining an information model in YANG [RFC7950] with Data Structure Extensions [RFC8791] (thereby keeping it abstract and implementation-agnostic per [RFC3444]) ensure that the module remains simple, modular, and clear by following the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].\n7. When illustrating the abstract information model, use the YANG tree diagram from RFC 8340 to provide a simple, standardized, and implementation-neutral model structure.\n\n[draft-opsarea-rfc5706bis-00--IM related content.docx](https://github.com/user-attachments/files/20180701/draft-opsarea-rfc5706bis-00--IM.related.content.docx)",
+          "createdAt": "2025-05-13T03:27:02Z",
+          "updatedAt": "2025-05-13T03:27:02Z"
         }
       ]
     },
@@ -605,6 +612,22 @@
       "createdAt": "2025-05-02T01:00:01Z",
       "updatedAt": "2025-05-02T13:56:13Z",
       "closedAt": "2025-05-02T13:56:13Z",
+      "comments": []
+    },
+    {
+      "number": 32,
+      "id": "I_kwDOOWPBqs62UnT7",
+      "title": "Reference some guidance in RFC6709/RFC5218/RFC8170",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/32",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Check if we can back some of the text with more more references such as these RFCs.\n\nExamples of relevant parts that we may refer to in rfc6709:\n\n> However, at the\n>    same time, experience has shown that extensions carry the risk of\n>    unintended consequences, such as interoperability issues, operational\n>    problems, or security vulnerabilities. \n\n> As a result, it is highly desirable for the original\n>    designers to articulate the design constraints and assumptions, so as\n>    to enable extensions to be done carefully and with a full\n>    understanding of the base protocol, existing implementations, and\n>    current operational practice.\n\n>    To assist extension designers and reviewers, protocol documents\n>    should provide guidelines explaining how extensions should be\n>    performed, and guidance on how protocol extension mechanisms should\n>    be used.\n> \n\n>    Major extensions may have characteristics leading to a risk of\n>    interoperability failures, security vulnerabilities, or operational\n>    problems.  Where these characteristics are present, it is necessary\n>    to pay close attention to backward compatibility with implementations\n>    and deployments of the unextended protocol and to the potential for\n>    inadvertent introduction of security or operational exposures.\n\n>    Extension designers should examine their design for the following\n>    issues:\n>    3.  New usage scenarios not originally intended or investigated.\n>        This can potentially lead to operational difficulties when\n>        deployed, even in cases where the \"on-the-wire\" format has not\n>        changed.\n\n>    7.  Changes to the security model.  Changes to the protocol security\n>        model (or even addition of new security mechanisms within an\n>        existing framework) can introduce security vulnerabilities or\n>        adversely impact operations.  Consequently, it is important that\n>        such proposals undergo security as well as operational review.\n\n\n>    Since protocol extension mechanisms may impact interoperability, it\n>    is important that they be architecturally compatible with the base\n>    protocol.\n> \n>    This includes understanding what current implementations do and how a\n>    proposed extension will interact with deployed systems.  Is it clear\n>    when a proposed extension (or its proposed usage), if widely\n>    deployed, will operationally stress existing implementations or the\n>    underlying protocol itself? If this is not explained in the base\n>    protocol specification, is this covered in an extension design\n>    guidelines document?\n\n>    Documents relying on extension mechanisms need to explicitly identify\n>    the mechanisms being relied upon.  For example, a document defining\n>    new data elements should not implicitly define new data types or\n>    protocol operations without explicitly describing those dependencies\n>    and discussing their impact.  Where extension guidelines are\n>    available, mechanisms need to indicate whether they are compliant\n>    with those guidelines and offer an explanation if they are not.",
+      "createdAt": "2025-05-13T06:02:27Z",
+      "updatedAt": "2025-05-13T06:02:27Z",
+      "closedAt": null,
       "comments": []
     }
   ],
@@ -2061,6 +2084,34 @@
           "updatedAt": "2025-05-08T08:25:28Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 31,
+      "id": "PR_kwDOOWPBqs6V65yP",
+      "title": "\u201cOperations and Manageability Considerations\u201d section. #9",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/31",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Clarifying the \u201cOperations and Manageability Considerations\u201d section as per @boucadair 's guidance to the mailing list.",
+      "createdAt": "2025-05-13T01:26:40Z",
+      "updatedAt": "2025-05-14T23:03:43Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "add26aada2a4872254c6c36ee4b5a46129d200ff",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-issue-9",
+      "headRefOid": "971ebd14e7dc32be0af69751bd07308a1700ac81",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
