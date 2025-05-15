@@ -1383,7 +1383,7 @@ Information Models and Data Models
    functionality or operatinal best-practice clarifications are
    needed by the protocol. It would be helpful to
    those who may update or write extensions to the protocol in the
-   future, or to those deploying the new protocol, to know the rationale
+   future, or to those deploying the protocol, to know the rationale
    regarding the decisions on manageability of the protocol at the
    time of its design.
 
