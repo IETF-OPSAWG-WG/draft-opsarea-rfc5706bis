@@ -300,7 +300,7 @@ author:
    * Added a structured framing for the requirement of an "Operational and
       Management Considerations" section in Internet-Drafts
 
-   * Provides focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
+   * Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
 
       * Added a YANG Data Model Considerations section
 
