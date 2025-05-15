@@ -302,7 +302,7 @@ author:
 
    * Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
 
-      * Added a YANG Data Model Considerations section
+      * Add a YANG Data Model Considerations section
 
       * Updated the Available Management Technologies landscape
 
