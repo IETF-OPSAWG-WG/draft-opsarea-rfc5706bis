@@ -306,7 +306,7 @@ author:
 
   * Update the Available Management Technologies landscape
 
-   * Added an "Operational and Management Tooling Considerations" section
+   * Add an "Operational and Management Tooling Considerations" section
 
 
 ##  TO DO LIST
