@@ -381,7 +381,7 @@ author:
    (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
    but further use of this management protocol in new IETF documents has been constrained
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
-   that do not support more resent management protocols <<insert reference>>.
+   that do not support more resent management protocols {{IESG-STATEMENT}}.
 
    A planned supplement to this document will discuss these protocol
    standards, discuss some standard information and data models for
