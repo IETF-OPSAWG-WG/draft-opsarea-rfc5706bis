@@ -357,7 +357,7 @@ author:
 
    *  New protocol and protocol extension: These terms are used in this document
       to identify entirely new Internet protocols, new versions of existing Internet
-      protocols, and extensions to Internet protocols. 
+      protocols, and extensions to Internet protocols.
 
    *  Protocol designer: This term is used to refer to an individual, a group of
       people, or an IETF Working Group involved in the development and specification
