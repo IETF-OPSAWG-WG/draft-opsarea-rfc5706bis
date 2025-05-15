@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 14 November 2025                                      A. Farrel
+Expires: 16 November 2025                                      A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 14 November 2025                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             13 May 2025
+                                                             15 May 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 November 2025.
+   This Internet-Draft will expire on 16 November 2025.
 
 Copyright Notice
 
@@ -1387,12 +1387,13 @@ Table of Contents
 
 7.1.  Recommended Discussions
 
-   After evaluating the operational and manageability aspects of a new
-   protocol or protocol extension, the resulting practices and
-   requirements should be documented in an “Operations and Manageability
-   Considerations” section within a specification.  Since protocols are
-   intended for operational deployment and management within real
-   networks, it is expected that such considerations will be present.
+   After evaluating the operational and manageability aspects of a
+   protocol, a protocol extension, or an architecture, the resulting
+   practices and requirements should be documented in an “Operations and
+   Manageability Considerations” section within a specification.  Since
+   protocols are intended for operational deployment and management
+   within real networks, it is expected that such considerations will be
+   present.
 
    It is also recommended that operational and manageability
    considerations be addressed early in the protocol design process.
