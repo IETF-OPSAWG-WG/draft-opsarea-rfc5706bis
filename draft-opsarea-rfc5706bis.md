@@ -112,7 +112,7 @@ author:
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
-   This document obsoletes RFC 5706 {{?RFC5706}} and fully updates its content
+   This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
    Considerations” section in Internet-Drafts, before they are progressed
