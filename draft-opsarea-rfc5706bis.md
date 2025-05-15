@@ -193,7 +193,7 @@ author:
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
+   {{?RFC3410}}, the Structure of Management Information [RFC2578], and MIB
    data models for managing new protocols. As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate. The
