@@ -713,7 +713,7 @@ author:
    monitoring, controlling, or troubleshooting a protocol or its
    extensions. This includes identifying key parameters that reflect the
    protocol’s behavior, performance metrics, error indicators, and any
-   contextual data that would aid in diagnostics or lifecycle management.
+   contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
 
 ~~~~ aasvg
              IM                --> conceptual/abstract model
