@@ -112,7 +112,7 @@ author:
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
-   This document obsoletes RFC 5706 and fully updates its content
+   This document obsoletes RFC 5706 {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
    Considerations” section in Internet-Drafts, before they are progressed
@@ -193,7 +193,7 @@ author:
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
+   {{?RFC3410}}, the Structure of Management Information (SMI) {{?STD58}}, and MIB
    data models for managing new protocols. As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate. The
@@ -378,7 +378,7 @@ author:
    *  BGP Monitoring Protocol - BMP {{?RFC7854}}
 
    The IETF previously also worked on the Simple Network Management Protocol
-   (SNMP) {{?RFC3410}} and the Structure of management Information (SMI) {{?STD58}},
+   (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
    but further use of this management protocol in new IETF documents has been constrained
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
    that do not support more resent management protocols <<insert reference>>.
