@@ -2739,11 +2739,11 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
       <h2 id="name-documentation-guidelines">
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-documentation-guidelines" class="section-name selfRef">Documentation Guidelines</a>
       </h2>
-<p id="section-7-1">This document is focused on what a protocol designer should think
-   about and how those considerations might be documented.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-7-1">This document outlines key considerations for protocol designers and
+   provides guidance on how these considerations ought to be documented.<a href="#section-7-1" class="pilcrow">¶</a></p>
 <p id="section-7-2">This document does not describe interoperability requirements but
    rather describes practices that are useful to follow when dealing
-   with manageability aspects in IETF documents, so the capitalized
+   with operational and manageability aspects in IETF documents, so the capitalized
    keywords from <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> do not apply here. Any occurrence of words
    like 'must' or 'should' needs to be interpreted only in the context
    of their natural, English-language meaning.<a href="#section-7-2" class="pilcrow">¶</a></p>
@@ -2752,16 +2752,30 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
         <h3 id="name-recommended-discussions">
 <a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-recommended-discussions" class="section-name selfRef">Recommended Discussions</a>
         </h3>
-<p id="section-7.1-1">A Manageability Considerations section should include discussion of
+<p id="section-7.1-1">After evaluating the operational and manageability aspects of a
+   protocol, a protocol extension, or an architecture, the resulting practices and
+   requirements should be documented
+   in an "Operations and Manageability Considerations" section within a
+   specification. Since protocols are intended for operational deployment and
+   management within real networks, it is expected that such considerations
+   will be present.<a href="#section-7.1-1" class="pilcrow">¶</a></p>
+<p id="section-7.1-2">It is also recommended that operational and manageability considerations
+   be addressed early in the protocol design process. Consequently, early
+   revisions of Internet-Drafts are expected to include an "Operations and
+   Manageability Considerations" section.<a href="#section-7.1-2" class="pilcrow">¶</a></p>
+<p id="section-7.1-3">It is also recommended to begin considering operational and manageability
+   considerations early within the protocol design, and consequently it is expected that early revisions of Internet-Drafts will contain such section.<a href="#section-7.1-3" class="pilcrow">¶</a></p>
+<p id="section-7.1-4">An "Operations and Manageability Considerations" section should include discussion of
    the management and operations topics raised in this document, and
    when one or more of these topics is not relevant, it would be useful
    to contain a simple statement explaining why the topic is not
-   relevant for the new protocol. Of course, additional relevant topics
-   should be included as well.<a href="#section-7.1-1" class="pilcrow">¶</a></p>
-<p id="section-7.1-2">Existing protocols and data models can provide the management
+   relevant or applicable for the new protocol or feature.
+   Of course, additional relevant operational and manageability topics
+   should be included as well.<a href="#section-7.1-4" class="pilcrow">¶</a></p>
+<p id="section-7.1-5">Existing protocols and data models can provide the management
    functions identified in the previous section. Protocol designers
    should consider how using existing protocols and data models might
-   impact network operations.<a href="#section-7.1-2" class="pilcrow">¶</a></p>
+   impact network operations.<a href="#section-7.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="null-manageability-considerations-sections">
@@ -2771,17 +2785,18 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
         </h3>
 <p id="section-7.2-1">A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
-   functionality is needed by the new protocol. It would be helpful to
+   functionality or operatinal best-practice clarifications are
+   needed by the protocol. It would be helpful to
    those who may update or write extensions to the protocol in the
-   future or to those deploying the new protocol to know the thinking of
-   the working group regarding the manageability of the protocol at the
+   future, or to those deploying the protocol, to know the rationale
+   regarding the decisions on manageability of the protocol at the
    time of its design.<a href="#section-7.2-1" class="pilcrow">¶</a></p>
 <p id="section-7.2-2">If there are no new manageability or deployment considerations, it is
-   recommended that a Manageability Considerations section contain a
-   simple statement such as, "There are no new manageability
-   requirements introduced by this document", and a brief explanation of
-   why that is the case. The presence of such a Manageability
-   Considerations section would indicate to the reader that due
+   recommended that an "Operations and Manageability Considerations" section
+   contain a simple statement such as, "There are no new operations or manageability
+   requirements introduced by this document," followed by a brief explanation of
+   why that is the case. The presence of such a
+   section would indicate to the reader that due
    consideration has been given to manageability and operations.<a href="#section-7.2-2" class="pilcrow">¶</a></p>
 <p id="section-7.2-3">In the case where the new protocol is an extension and the base
    protocol discusses all the relevant operational and manageability
@@ -2794,8 +2809,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
         <h3 id="name-placement-of-operations-and">
 <a href="#section-7.3" class="section-number selfRef">7.3. </a><a href="#name-placement-of-operations-and" class="section-name selfRef">Placement of Operations and Manageability Considerations Sections</a>
         </h3>
-<p id="section-7.3-1">If a protocol designer develops a Manageability Considerations
-   section for a new protocol, it is recommended that the section be
+<p id="section-7.3-1">section for a new protocol, it is recommended that the section be
    placed immediately before the Security Considerations section.
    Reviewers interested in such sections could find it easily, and this
    placement could simplify the development of tools to detect the
