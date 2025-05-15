@@ -1350,7 +1350,7 @@ Information Models and Data Models
    After evaluating the operational and manageability aspects of a
    protocol, a protocol extension, or an architecture, the resulting practices and
    requirements should be documented
-   in an “Operations and Manageability Considerations” section within a
+   in an "Operations and Manageability Considerations" section within a
    specification. Since protocols are intended for operational deployment and
    management within real networks, it is expected that such considerations
    will be present.
