@@ -346,7 +346,7 @@ author:
    The IETF has a number of standard management protocols available that
    are suitable for different purposes.  These include:
 
-   *  Syslog {{?RFC5424}}
+   *  System Logging Protocol - Syslog {{?RFC5424}}
 
    *  Simple Network Management Protocol - SNMP {{?RFC3410}}
 
