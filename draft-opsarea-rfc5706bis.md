@@ -193,7 +193,7 @@ author:
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   {{?RFC3410}}, the Structure of Management Information [RFC2578], and MIB
+   {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
    data models for managing new protocols. As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate. The
@@ -297,14 +297,9 @@ author:
 
 # Key Concepts, Terminology, and Technological Landscape
 
-   This section introduces the concepts and terms used in the document
-   as well as describing the technological landscape. It is not intended
-   to provide in-depth definitions or explanations. For more information
-   the reader should pursue the references.
+   This section introduces the key concepts and terminology used throughout the document, and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
 
-   This document does not describe interoperability requirements, so this
-   document does not use the capitalized keywords described in RFC 2119
-   {{?RFC2119}}.
+   This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in RFC 2119 {{?RFC2119}} and RFC 8174 {{?RFC8174}}.
 
 ##  Terminology
 
@@ -316,7 +311,7 @@ author:
       and the precise semantics of the parameters may vary considerably
       between different equipment vendors, between products from the same
       vendor, and even between different versions or releases of a single
-      product. No attempt at standardising CLIs has been made by the IETF.
+      product. No attempt at standardizing CLIs has been made by the IETF.
 
    *  Information model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
