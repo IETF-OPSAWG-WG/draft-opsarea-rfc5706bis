@@ -903,12 +903,12 @@ Table of Contents
       Model (L3SM) [RFC8299] and the L2VPN Service Model (L2SM)
       [RFC8499].
 
-   A common challenge in YANG model development lies in defining the
-   relationships between abstract service or network constructs and the
-   underlying device models.  Therefore, when designing YANG modules, it
-   is important to go beyond simply modeling configuration and
-   operational data (i.e., leaf nodes), and also consider how the status
-   and relationships of abstract or distributed constructs can be
+   A common challenge in YANG data model development lies in defining
+   the relationships between abstract service or network constructs and
+   the underlying device models.  Therefore, when designing YANG
+   modules, it is important to go beyond simply modeling configuration
+   and operational data (i.e., leaf nodes), and also consider how the
+   status and relationships of abstract or distributed constructs can be
    reflected based on parameters available in the network.
 
    For example, the status of a service may depend on the operational
