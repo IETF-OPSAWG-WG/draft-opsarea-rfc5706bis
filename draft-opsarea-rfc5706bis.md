@@ -880,7 +880,7 @@ Information Models and Data Models
 
   For example, the status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
-  cases, the YANG model (and its accompanying documentation) should
+  cases, the YANG data model (and its accompanying documentation) should
   clearly describe how service-level status is derived from underlying
   device-level information. Similarly, it is beneficial to define
   notifications or events that signal changes in these underlying states,
