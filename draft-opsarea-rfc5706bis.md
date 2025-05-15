@@ -1388,7 +1388,7 @@ Information Models and Data Models
    time of its design.
 
    If there are no new manageability or deployment considerations, it is
-   recommended that an Operations and Manageability Considerations section
+   recommended that an "Operations and Manageability Considerations" section
    contain a
    simple statement such as, "There are no new operations or manageability
    requirements introduced by this document," followed by a brief explanation of
