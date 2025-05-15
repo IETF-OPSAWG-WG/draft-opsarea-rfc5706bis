@@ -1358,7 +1358,7 @@ Information Models and Data Models
    It is also recommended that operational and manageability considerations
    be addressed early in the protocol design process. Consequently, early
    revisions of Internet-Drafts are expected to include an "Operations and
-   Manageability Considerations” section.
+   Manageability Considerations" section.
 
    It is also recommended to begin considering operational and manageability
    considerations early within the protocol design, and consequently it is expected that early revisions of Internet-Drafts will contain such section.
