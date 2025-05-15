@@ -710,7 +710,7 @@ author:
 
    Protocol designers should consider what operational, configuration,
    state, or statistical information will be relevant for effectively
-   monitoring, controlling, or troubleshooting a protocol or its
+   monitoring, controlling, or troubleshooting a protocol and its
    extensions. This includes identifying key parameters that reflect the
    protocol’s behavior, performance metrics, error indicators, and any
    contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
