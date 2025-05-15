@@ -293,7 +293,7 @@ author:
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
-   * Status change from Informational to Best Current Practice
+   * Change intended status from Informational to Best Current Practice
 
    * Moved the "Operational Considerations" Appendix A to a Checklist maintained in Github
 
