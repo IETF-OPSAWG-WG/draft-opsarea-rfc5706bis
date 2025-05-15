@@ -25,6 +25,11 @@ informative:
     date: 2025
     target: https://github.com/IETF-OPS-DIR/Review-Template/tree/main
 
+  IETF-OPS-Dir:
+    title: Ops Directorate (opsdir)
+    date: 2025
+    target: https://datatracker.ietf.org/group/opsdir/about/
+
   IETF-HACKATHONS:
     target: https://www.ietf.org/meeting/hackathons/
     title: IETF Hackathons
@@ -96,9 +101,6 @@ author:
 
 --- middle
 
-#  TO DO LIST
-
-   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 #  Introduction
 
@@ -291,9 +293,26 @@ author:
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
-   * TBC
+   * Status change from Informational to Best Current Practice
 
-   * TBC
+   * Moved the "Operational Considerations" Appendix A to a Checklist maintained in Github
+
+   * Added a structured framing for the requirement of an "Operational and
+      Management Considerations" section in Internet-Drafts
+
+   * Provides focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
+
+      * Added a YANG Data Model Considerations section
+
+      * Updated the Available Management Technologies landscape
+
+   * Added an "Operational and Management Tooling Considerations" section
+
+
+##  TO DO LIST
+
+   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
+
 
 # Key Concepts, Terminology, and Technological Landscape
 
@@ -1449,7 +1468,15 @@ Information Models and Data Models
 #  Acknowledgements
 {:numbered="false"}
 
-   TBC.
+The authors wish to thank the following individuals and groups.
+
+
+The IETF Ops Directorate:
+   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, which has been providing document reviews for over a devade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.
+
+
+The AD championing the update:
+   : Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 
 The author of RFC 5706:
