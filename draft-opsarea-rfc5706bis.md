@@ -545,7 +545,7 @@ author:
 
    The protocol designer should consider techniques for testing the
    effect that the protocol has had on the network by sending data
-   through the network and observing its behavior (aka active
+   through the network and observing its behavior (a.k.a. active
    monitoring). Protocol designers should consider how the correct end-
    to-end operation of the new protocol in the network can be tested
    actively and passively, and how the correct data or forwarding plane
@@ -671,7 +671,7 @@ author:
    or not the IETF likes this. The IETF is moving from support for one
    schema language for modeling the structure of management information
    (Structure of Management Information Version 2 (SMIv2) {{?RFC2578}}) and
-   one Simple Network Management
+   one one simple network management protocol (Simple Network Management
    Protocol (SNMP) {{?RFC3410}}) towards support for additional schema
    languages and additional management protocols suited to different
    purposes. Other Standard Development Organizations (e.g., the
