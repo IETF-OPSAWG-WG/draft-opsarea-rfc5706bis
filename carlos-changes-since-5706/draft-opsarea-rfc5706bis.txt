@@ -332,8 +332,7 @@ Table of Contents
 
    *  Update the Available Management Technologies landscape
 
-   *  Added an "Operational and Management Tooling Considerations"
-      section
+   *  Add an "Operational and Management Tooling Considerations" section
 
 1.6.  TO DO LIST
 
