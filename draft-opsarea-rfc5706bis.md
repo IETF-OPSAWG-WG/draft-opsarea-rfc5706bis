@@ -1403,7 +1403,6 @@ Information Models and Data Models
 
 ##  Placement of Operations and Manageability Considerations Sections
 
-   If a protocol designer develops an Operations and Manageability Considerations
    section for a new protocol, it is recommended that the section be
    placed immediately before the Security Considerations section.
    Reviewers interested in such sections could find it easily, and this
