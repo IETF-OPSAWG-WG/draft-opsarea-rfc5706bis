@@ -126,14 +126,15 @@ author:
    The operational environment and manageability of the protocol should
    be considered from the start when new protocols are designed.
 
-   As the Internet has grown, IETF protocols have addressed a constantly growing set of
-   needs, such as web servers, collaboration services, and applications.
-   The number of IETF management technologies has been expanding and the
-   IETF management strategy has been changing to address the emerging
-   management requirements. In the past, most of the existing IETF management
-   standards were focused on using Structure of Management Information (SMI)-based
-   data models (MIB modules) to monitor and manage networking devices.
-   Currently, the YANG data modeling language {{?RFC7950}} is recommended to
+   As the Internet has grown, IETF protocols have addressed a constantly
+   growing set of needs, such as web servers, collaboration services,
+   and applications. The number of IETF management technologies has
+   been expanding and the IETF management strategy has been changing to
+   address the emerging management requirements. In the past, most of
+   the existing IETF management standards were focused on using
+   Structure of Management Information (SMI)-based data models
+   (MIB modules) to monitor and manage networking devices. Currently,
+   the YANG data modeling language {{?RFC7950}} is recommended to
    monitor and manage the IETF protocols and the networking devices.
    Management requirements continually evolve in the IETF. Therefore,
    the management protocols used should track with current IETF
@@ -185,25 +186,27 @@ author:
    should avoid having manageability pushed for a later phase of the
    development of the standard.
 
-   A list of guidelines and a
-   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
+   A list of guidelines and a checklist of questions to consider, which
+   a reviewer can use to evaluate whether the protocol and
+   documentation address common operations and management needs, is
+   provided in {{CHECKLIST}}.
 
 ##  Motivation
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
-   data models for managing new protocols. As the Internet has evolved,
-   operators have found the reliance on one protocol and one schema
-   language for managing all aspects of the Internet inadequate. The
-   IESG policy to require working groups to write a MIB module to
-   provide manageability for new protocols is being replaced by a policy
-   that is more open to using a variety of management protocols and data
-   models designed to achieve different goals. In 2014, the IESG wrote a
-   statement about "Writable MIB Module" {{IESG-STATEMENT}}.
-   This statement stresses that IETF working groups are encouraged to use the NETCONF/YANG
-   standards for configuration, especially in new charters.
+   {{?RFC3410}}, the Structure of Management Information
+   {{?RFC2578}}, and MIB data models for managing new protocols. As the
+   Internet has evolved, operators have found the reliance on one
+   protocol and one schema language for managing all aspects of the
+   Internet inadequate. The IESG policy to require working groups to
+   write a MIB module to provide manageability for new protocols is
+   being replaced by a policy that is more open to using a variety of
+   management protocols and data models designed to achieve different
+   goals. In 2014, the IESG wrote a statement about "Writable MIB
+   Module" {{IESG-STATEMENT}}. This statement stresses that IETF
+   working groups are encouraged to use the NETCONF/YANG standards for
+   configuration, especially in new charters.
 
    This document provides some initial guidelines for considering
    operations and management in an IETF Management Framework that
@@ -236,10 +239,11 @@ author:
    references will help the IETF avoid rehashing old discussions and
    reinventing old solutions.
 
-   In 1988, the IAB published "IAB Recommendations for the Development
-   of Internet Network Management Standards" {{?RFC1052}}, which
-   recommended a solution that, where possible, deliberately separates
-   modeling languages, data models, and the protocols that carry data.
+   In 1988, the Internet Architecture Board (IAB) published "IAB 
+   Recommendations for the Development of Internet Network Management 
+   Standards" {{?RFC1052}}, which recommended a solution that, where 
+   possible, deliberately separates modeling languages, data models, 
+   and the protocols that carry data.
    The goal is to allow standardized information and data models to be
    used by different protocols.
 
@@ -248,10 +252,10 @@ author:
    networks. One output was "Requirements for Configuration Management
    of IP-based Networks" {{?RFC3139}}.
 
-   In 2002, the Internet Architecture Board (IAB) held a workshop on
-   Network Management {{?RFC3535}} that discussed the strengths and
-   weaknesses of some IETF network management protocols and compared
-   them to operational needs, especially configuration.
+   In 2002, the IAB held a workshop on Network Management {{?RFC3535}}
+   that discussed the strengths and weaknesses of some IETF
+   network management protocols and compared them to operational needs,
+   especially configuration.
 
    One issue discussed was the user-unfriendliness of the binary format
    of SNMP {{?RFC3410}} and Common Open Policy Service (COPS) Usage for
@@ -275,17 +279,19 @@ author:
    documents attempt to provide some guidelines for navigating the
    rapidly shifting operating and management environments.
 
-   In 2014, the IESG wrote its statement on "Writable MIB Module" {{IESG-STATEMENT}}, as
-   mentioned above.
+   In 2014, the IESG wrote its statement on "Writable MIB Module"
+   {{IESG-STATEMENT}}, as mentioned above.
 
-   In 2024, the IAB hold the "Next Era of Network Management Operations (NEMOPS)"
-   workshop {{NEMOPS-WORKSHOP}}, building on the previous 2002 IAB workshop. Given that much has changed
-   in the Internet’s operation and technological foundations since the first
-   worshop, the NEMOPS workshop reviewed the past outcomes and discussed any
-   operational barriers that prevented these technologies from being widely
-   implemented. With the industry, network operators, and protocol engineers
-   working in collaboration, the workshop developed a proposed plan of action
-   and provided network management recommendations for both the IETF and IRTF.
+   In 2024, the IAB hold the "Next Era of Network Management Operations
+   (NEMOPS)" workshop {{NEMOPS-WORKSHOP}}, building on the previous
+   2002 IAB workshop. Given that much has changed in the Internet’s
+   operation and technological foundations since the first worshop, the
+   NEMOPS workshop reviewed the past outcomes and discussed any
+   operational barriers that prevented these technologies from being
+   widely implemented. With the industry, network operators, and
+   protocol engineers working in collaboration, the workshop developed
+   a proposed plan of action and provided network management
+   recommendations for both the IETF and IRTF.
 
 ## Changes Since RFC 5706 {#changes-since-5706}
 
@@ -326,7 +332,8 @@ author:
       independent of any specific repository, software usage, protocol,
       or platform {{?RFC3444}}.
 
-   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}} {{?I-D.ietf-opsawg-oam-characterization}}.
+   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
+      {{?I-D.ietf-opsawg-oam-characterization}}.
 
    *  New protocol: includes new protocols, protocol extensions, data
       models, or other functionality being designed.
@@ -412,7 +419,7 @@ author:
    Anything that can be configured can be misconfigured. "Architectural
    Principles of the Internet" {{?RFC1958}}, Section 3.8, states: "Avoid
    options and parameters whenever possible. Any options and parameters
-   should be configured or negotiated dynamically rather than manually."
+   should be configured or negotiated dynamically rather than manually".
 
    To simplify configuration, protocol designers should consider
    specifying reasonable defaults, including default modes and
@@ -664,7 +671,7 @@ author:
    or not the IETF likes this. The IETF is moving from support for one
    schema language for modeling the structure of management information
    (Structure of Management Information Version 2 (SMIv2) {{?RFC2578}}) and
-   one simple network management protocol (Simple Network Management
+   one Simple Network Management
    Protocol (SNMP) {{?RFC3410}}) towards support for additional schema
    languages and additional management protocols suited to different
    purposes. Other Standard Development Organizations (e.g., the
@@ -1372,7 +1379,7 @@ Information Models and Data Models
    If there are no new manageability or deployment considerations, it is
    recommended that a Manageability Considerations section contain a
    simple statement such as, "There are no new manageability
-   requirements introduced by this document," and a brief explanation of
+   requirements introduced by this document", and a brief explanation of
    why that is the case. The presence of such a Manageability
    Considerations section would indicate to the reader that due
    consideration has been given to manageability and operations.
@@ -1441,14 +1448,16 @@ Acknowledgments from RFC 5706:
 
    : This document started from an earlier document edited by Adrian
      Farrel, which itself was based on work exploring the need for
-     Manageability Considerations sections in all Internet-Drafts produced
-     within the Routing Area of the IETF. That earlier work was produced
-     by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable
-     feedback provided by Pekka Savola and Bert Wijnen.
+     Manageability Considerations sections in all Internet-Drafts
+     produced within the Routing Area of the IETF. That earlier work
+     was produced by Avri Doria, Loa Andersson, and Adrian Farrel, with
+     valuable feedback provided by Pekka Savola and Bert Wijnen.
 
    : Some of the discussion about designing for manageability came from
-     private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.
+     private discussions between Dan Romascanu, Bert Wijnen, Jürgen
+     Schönwälder, Andy Bierman, and David Harrington.
 
    : Thanks to reviewers who helped fashion this document, including
-     Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
-     Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
+     Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise,
+     Adrian Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen
+     Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
