@@ -138,14 +138,14 @@ Table of Contents
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
-   This document obsoletes RFC 5706 and fully updates its content with
-   new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are
-   progressed for publication as an RFC.  It removes outdated references
-   and aligns with current practices, protocols, and technologies used
-   in operating and managing network devices and services.  See
-   Section 2.5.
+   This document obsoletes RFC 5706 [RFC5706] and fully updates its
+   content with new operational and management techniques and
+   mechanisms, and introduces a requirement for an “Operational and
+   Management Considerations” section in Internet-Drafts, before they
+   are progressed for publication as an RFC.  It removes outdated
+   references and aligns with current practices, protocols, and
+   technologies used in operating and managing network devices and
+   services.  See Section 2.5.
 
 2.1.  Designing for Operations and Management
 
@@ -221,11 +221,11 @@ Table of Contents
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   [RFC3410], the Structure of Management Information [RFC2578], and MIB
-   data models for managing new protocols.  As the Internet has evolved,
-   operators have found the reliance on one protocol and one schema
-   language for managing all aspects of the Internet inadequate.  The
-   IESG policy to require working groups to write a MIB module to
+   [RFC3410], the Structure of Management Information (SMI) [STD58], and
+   MIB data models for managing new protocols.  As the Internet has
+   evolved, operators have found the reliance on one protocol and one
+   schema language for managing all aspects of the Internet inadequate.
+   The IESG policy to require working groups to write a MIB module to
    provide manageability for new protocols is being replaced by a policy
    that is more open to using a variety of management protocols and data
    models designed to achieve different goals.  In 2014, the IESG wrote
@@ -328,14 +328,15 @@ Table of Contents
 
 3.  Key Concepts, Terminology, and Technological Landscape
 
-   This section introduces the concepts and terms used in the document
-   as well as describing the technological landscape.  It is not
-   intended to provide in-depth definitions or explanations.  For more
-   information the reader should pursue the references.
+   This section introduces the key concepts and terminology used
+   throughout the document, and provides an overview of the relevant
+   technological landscape.  It is not intended to offer in-depth
+   definitions or explanations; readers seeking more detail should
+   consult the referenced materials.
 
-   This document does not describe interoperability requirements, so
-   this document does not use the capitalized keywords described in RFC
-   2119 [RFC2119].
+   This document does not describe interoperability requirements.  As
+   such, it does not use the capitalized keywords defined in RFC 2119
+   [RFC2119] and RFC 8174 [RFC8174].
 
 3.1.  Terminology
 
@@ -347,7 +348,7 @@ Table of Contents
       syntax, and the precise semantics of the parameters may vary
       considerably between different equipment vendors, between products
       from the same vendor, and even between different versions or
-      releases of a single product.  No attempt at standardising CLIs
+      releases of a single product.  No attempt at standardizing CLIs
       has been made by the IETF.
 
    *  Information model: An abstraction and representation of the
@@ -418,7 +419,7 @@ Table of Contents
    *  BGP Monitoring Protocol - BMP [RFC7854]
 
    The IETF previously also worked on the Simple Network Management
-   Protocol (SNMP) [RFC3410] and the Structure of management Information
+   Protocol (SNMP) [RFC3410] and the Structure of Management Information
    (SMI) [STD58], but further use of this management protocol in new
    IETF documents has been constrained to maintenance of existing MIB
    modules and development of MIB modules for legacy devices that do not
@@ -1725,6 +1726,10 @@ Table of Contents
    [RFC8040]  Bierman, A., Bjorklund, M., and K. Watsen, "RESTCONF
               Protocol", RFC 8040, DOI 10.17487/RFC8040, January 2017,
               <https://www.rfc-editor.org/rfc/rfc8040>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
    [RFC8199]  Bogdanovic, D., Claise, B., and C. Moberg, "YANG Module
               Classification", RFC 8199, DOI 10.17487/RFC8199, July

@@ -1369,7 +1369,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    help protocol designers and working groups consider the operations
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">This document obsoletes RFC 5706 and fully updates its content
+<p id="section-2-2">This document obsoletes RFC 5706 <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> and fully updates its content
    with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
    Considerations” section in Internet-Drafts, before they are progressed
@@ -1454,7 +1454,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h3>
 <p id="section-2.3-1">For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span>, the Structure of Management Information [RFC2578], and MIB
+   <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span>, the Structure of Management Information (SMI) <span>[<a href="#STD58" class="cite xref">STD58</a>]</span>, and MIB
    data models for managing new protocols. As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate. The
@@ -1565,13 +1565,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-key-concepts-terminology-an">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-key-concepts-terminology-an" class="section-name selfRef">Key Concepts, Terminology, and Technological Landscape</a>
       </h2>
-<p id="section-3-1">This section introduces the concepts and terms used in the document
-   as well as describing the technological landscape. It is not intended
-   to provide in-depth definitions or explanations. For more information
-   the reader should pursue the references.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">This document does not describe interoperability requirements, so this
-   document does not use the capitalized keywords described in RFC 2119
-   <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span>.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-1">This section introduces the key concepts and terminology used throughout the document, and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in RFC 2119 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> and RFC 8174 <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span>.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <div id="terminology">
 <section id="section-3.1">
         <h3 id="name-terminology">
@@ -1586,7 +1581,7 @@ directly at a terminal or via scripts. The commands, their syntax,
 and the precise semantics of the parameters may vary considerably
 between different equipment vendors, between products from the same
 vendor, and even between different versions or releases of a single
-product. No attempt at standardising CLIs has been made by the IETF.<a href="#section-3.1-2.1.1" class="pilcrow">¶</a></p>
+product. No attempt at standardizing CLIs has been made by the IETF.<a href="#section-3.1-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.1-2.2">
             <p id="section-3.1-2.2.1">Information model: An abstraction and representation of the
@@ -1677,7 +1672,7 @@ of new protocols or protocol extensions.<a href="#section-3.1-2.6.1" class="pilc
 </li>
         </ul>
 <p id="section-3.2-3">The IETF previously also worked on the Simple Network Management Protocol
-   (SNMP) <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span> and the Structure of management Information (SMI) <span>[<a href="#STD58" class="cite xref">STD58</a>]</span>,
+   (SNMP) <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span> and the Structure of Management Information (SMI) <span>[<a href="#STD58" class="cite xref">STD58</a>]</span>,
    but further use of this management protocol in new IETF documents has been constrained
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
    that do not support more resent management protocols &lt;&lt;insert reference&gt;&gt;.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
@@ -3059,6 +3054,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC8040">[RFC8040]</dt>
       <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Bjorklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"RESTCONF Protocol"</span>, <span class="seriesInfo">RFC 8040</span>, <span class="seriesInfo">DOI 10.17487/RFC8040</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8040">https://www.rfc-editor.org/rfc/rfc8040</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8174">[RFC8174]</dt>
+      <dd>
+<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8199">[RFC8199]</dt>
       <dd>
