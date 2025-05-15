@@ -883,7 +883,7 @@ Information Models and Data Models
   cases, the YANG data model (and its accompanying documentation) should
   clearly describe how service-level status is derived from underlying
   device-level information. Similarly, it is beneficial to define
-  notifications or events that signal changes in these underlying states,
+  events (and relevant triggered notifications) that indicate changes in an underlying state,
   enabling reliable detection and correlation of service-affecting
   conditions. Including such mechanisms improves the robustness of
   integrations and helps ensure consistent behavior across
