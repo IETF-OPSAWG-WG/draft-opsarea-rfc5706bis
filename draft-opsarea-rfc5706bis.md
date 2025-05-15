@@ -236,7 +236,7 @@ author:
    references will help the IETF avoid rehashing old discussions and
    reinventing old solutions.
 
-   In 1988, the IAB published "IAB Recommendations for the Development
+   In 1988, the Internet Architecture Board (IAB) published "IAB Recommendations for the Development
    of Internet Network Management Standards" {{?RFC1052}}, which
    recommended a solution that, where possible, deliberately separates
    modeling languages, data models, and the protocols that carry data.
@@ -248,7 +248,7 @@ author:
    networks. One output was "Requirements for Configuration Management
    of IP-based Networks" {{?RFC3139}}.
 
-   In 2002, the Internet Architecture Board (IAB) held a workshop on
+   In 2002, the IAB held a workshop on
    Network Management {{?RFC3535}} that discussed the strengths and
    weaknesses of some IETF network management protocols and compared
    them to operational needs, especially configuration.
@@ -412,7 +412,7 @@ author:
    Anything that can be configured can be misconfigured. "Architectural
    Principles of the Internet" {{?RFC1958}}, Section 3.8, states: "Avoid
    options and parameters whenever possible. Any options and parameters
-   should be configured or negotiated dynamically rather than manually."
+   should be configured or negotiated dynamically rather than manually".
 
    To simplify configuration, protocol designers should consider
    specifying reasonable defaults, including default modes and
@@ -538,7 +538,7 @@ author:
 
    The protocol designer should consider techniques for testing the
    effect that the protocol has had on the network by sending data
-   through the network and observing its behavior (aka active
+   through the network and observing its behavior (a.k.a., active
    monitoring). Protocol designers should consider how the correct end-
    to-end operation of the new protocol in the network can be tested
    actively and passively, and how the correct data or forwarding plane
@@ -564,9 +564,10 @@ author:
    document does not really cover managing the \*protocol\* (the
    coordination of multiple ends) and does not even come near managing
    the \*service\* (which includes a lot of stuff that is very far away
-   from the box). This is exactly what operators hate -- you need to be
-   able to manage both ends. As {{?RFC3535}} says, "MIB modules can often
-   be characterized as a list of ingredients without a recipe".
+   from the box). This scenario reflects a common operational
+   concern: the inability to manage both ends of a connection
+   effectively. As noted in [RFC3535], "MIB modules can often be
+   characterized as a list of ingredients without a recipe".
 
    The management model should take into account factors such as:
 
@@ -1389,8 +1390,7 @@ Information Models and Data Models
 
    If there are no new manageability or deployment considerations, it is
    recommended that an "Operations and Manageability Considerations" section
-   contain a
-   simple statement such as, "There are no new operations or manageability
+   contain a simple statement such as, "There are no new operations or manageability
    requirements introduced by this document," followed by a brief explanation of
    why that is the case. The presence of such a
    section would indicate to the reader that due
