@@ -708,7 +708,7 @@ author:
    counter. Then, whether the counter is gathered via SNMP, a CLI
    command, or a syslog message, the counter will have the same meaning.
 
-   Protocol designers should consider what operational, configuration,
+   Protocol designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
    monitoring, controlling, or troubleshooting a new protocol and its
    extensions. This includes identifying key parameters that reflect the
