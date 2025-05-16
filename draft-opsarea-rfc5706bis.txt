@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 16 November 2025                                      A. Farrel
+Expires: 17 November 2025                                      A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 16 November 2025                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             15 May 2025
+                                                             16 May 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 November 2025.
+   This Internet-Draft will expire on 17 November 2025.
 
 Copyright Notice
 
@@ -754,8 +754,13 @@ Table of Contents
    counter.  Then, whether the counter is gathered via SNMP, a CLI
    command, or a syslog message, the counter will have the same meaning.
 
-   Protocol designers should consider which information might be useful
-   for managing the new protocol or protocol extensions.
+   Protocol designers must consider what operational, configuration,
+   state, or statistical information will be relevant for effectively
+   monitoring, controlling, or troubleshooting a new protocol and its
+   extensions.  This includes identifying key parameters that reflect
+   the protocol’s behavior, performance metrics, error indicators, and
+   any contextual data that would aid in diagnostic, troubleshooting, or
+   lifecycle management.
 
                    IM                --> conceptual/abstract model
                     |                    for designers and operators
