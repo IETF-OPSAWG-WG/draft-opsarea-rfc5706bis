@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-15T00:46:59.956027+00:00",
+  "timestamp": "2025-05-18T00:52:52.542853+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -47,6 +47,16 @@
       "name": "wontfix",
       "description": "This will not be worked on",
       "color": "ffffff"
+    },
+    {
+      "name": "nits",
+      "description": "",
+      "color": "d4c5f9"
+    },
+    {
+      "name": "text-needed",
+      "description": "",
+      "color": "f9d0c4"
     }
   ],
   "issues": [
@@ -125,7 +135,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:49:15Z",
-      "updatedAt": "2025-05-13T03:27:03Z",
+      "updatedAt": "2025-05-16T02:44:00Z",
       "closedAt": null,
       "comments": [
         {
@@ -159,9 +169,23 @@
         {
           "author": "Ranchen666",
           "authorAssociation": "NONE",
-          "body": "In terms section\uff1a\nInformation model: an abstraction and representation of the entities in a managed environment, their properties, attributes and operations, and the way that they relate to each other. It is independent of any specific repository, software usage, protocol, or platform [RFC3444].      \n\u2014 Defined in RFC 5706, referencing RFC 3444 \n\nInformation model section\uff1a\n\nInformation models are helpful to try to focus interoperability on the semantic level -- they define what information should be gathered and how that information might be used, regardless of which management interface carries the data or which vendor product produces the data.  The use of an information model might help improve the ability of operators to correlate messages in different protocols where the data overlaps, such as a syslog message and a YANG notification about the same event.  An information model might identify which error conditions should be counted separately and which error conditions can be recorded together in a single counter.  Then, whether the counter is gathered via Netconf/YANG, a CLI command, or a syslog message, the counter will have the same meaning.\n                      IM                        --> conceptual/abstract model\n                        |                             for designers and operators\n      +----------+---------+\n      |                 |               |\n      DM          DM         DM       --> concrete/detailed model\n                                                      for implementers\n\n   Figure **  Information Models\uff08IMs\uff09 and Data Models\uff08DMs\uff09 \n \nProtocol designers may decide to use an informational model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols.   Alternatively, the protocol designers may directly develop data models without first producing an information model.\n\n\"On the Difference between Information Models and Data Models\"[RFC3444] is helpful in determining what information to consider regarding information models (IMs), as compared to data models (DMs).\n\nProtocol designers should develop an information model if multiple data model representations (e.g. YANG [RFC7950], IPFIX [RFC7011], gMNI [gMNI], etc.) are to be produced, to ensure lossless semantic mapping. Protocol designers may also make an information model if the consequent data models will be complex or many.\n\nInformation Model Design\n\nThis document recommends keeping the information model as simple as possible by applying the following criteria:\n1.  Start with a small set of essential objects and make additions only as further objects are needed with the objective of keeping the total number of objects as small as possible.\n2.  Require that all objects be essential for management.\n3. Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.\n4.  Exclude objects that can be derived from others in this or other information models.\n5.  Avoid causing critical sections to be heavily instrumented.  A\nguideline is one counter per critical section per layer.\n6. When defining an information model in YANG [RFC7950] with Data Structure Extensions [RFC8791] (thereby keeping it abstract and implementation-agnostic per [RFC3444]) ensure that the module remains simple, modular, and clear by following the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].\n7. When illustrating the abstract information model, use the YANG tree diagram from RFC 8340 to provide a simple, standardized, and implementation-neutral model structure.\n\n[draft-opsarea-rfc5706bis-00--IM related content.docx](https://github.com/user-attachments/files/20180701/draft-opsarea-rfc5706bis-00--IM.related.content.docx)",
+          "body": "In terms section\uff1a\nInformation model: an abstraction and representation of the entities in a managed environment, their properties, attributes and operations, and the way that they relate to each other. It is independent of any specific repository, software usage, protocol, or platform [RFC3444].      \n\u2014 Defined in RFC 5706, referencing RFC 3444 \n\nInformation model section\uff1a\n\nInformation models are helpful to try to focus interoperability on the semantic level -- they define what information should be gathered and how that information might be used, regardless of which management interface carries the data or which vendor product produces the data.  The use of an information model might help improve the ability of operators to correlate messages in different protocols where the data overlaps, such as a syslog message and a YANG notification about the same event.  An information model might identify which error conditions should be counted separately and which error conditions can be recorded together in a single counter.  Then, whether the counter is gathered via Netconf/YANG, a CLI command, or a syslog message, the counter will have the same meaning.\n    \n \n![Image](https://github.com/user-attachments/assets/32c56343-0bce-4621-b559-0958120e4139)\n\nProtocol designers may decide to use an informational model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols.   Alternatively, the protocol designers may directly develop data models without first producing an information model.\n\n\"On the Difference between Information Models and Data Models\"[RFC3444] is helpful in determining what information to consider regarding information models (IMs), as compared to data models (DMs).\n\nProtocol designers should develop an information model if multiple data model representations (e.g. YANG [RFC7950], IPFIX [RFC7011], gMNI [gMNI], etc.) are to be produced, to ensure lossless semantic mapping. Protocol designers may also make an information model if the consequent data models will be complex or many.\n\nInformation Model Design\n\nThis document recommends keeping the information model as simple as possible by applying the following criteria:\n1.  Start with a small set of essential objects and make additions only as further objects are needed with the objective of keeping the total number of objects as small as possible.\n2.  Require that all objects be essential for management.\n3. Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.\n4.  Exclude objects that can be derived from others in this or other information models.\n5.  Avoid causing critical sections to be heavily instrumented.  A\nguideline is one counter per critical section per layer.\n6. When defining an information model in YANG [RFC7950] with Data Structure Extensions [RFC8791] (thereby keeping it abstract and implementation-agnostic per [RFC3444]) ensure that the module remains simple, modular, and clear by following the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].\n7. When illustrating the abstract information model, use the YANG tree diagram from RFC 8340 to provide a simple, standardized, and implementation-neutral model structure.\n\n[draft-opsarea-rfc5706bis-00--IM related content.docx](https://github.com/user-attachments/files/20180701/draft-opsarea-rfc5706bis-00--IM.related.content.docx)",
           "createdAt": "2025-05-13T03:27:02Z",
-          "updatedAt": "2025-05-13T03:27:02Z"
+          "updatedAt": "2025-05-16T02:21:26Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "Thanks Med\uff0cThe relevant content of this section has been synchronized to the issue https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/33 . It is recommended to discuss based on the newly updated content.",
+          "createdAt": "2025-05-16T01:46:24Z",
+          "updatedAt": "2025-05-16T01:46:24Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "Based on the comments from Benoit and the discussion in issue #33, the Informational section has been updated as follows:\nIn terms section\uff1a\nInformation model: an abstraction and representation of the entities in a managed environment, their properties, attributes and operations, and the way that they relate to each other. It is independent of any specific repository, software usage, protocol, or platform [RFC3444].\n\u2014 Defined in RFC 5706, referencing RFC 3444\n\nInformation model section\uff1a\n\nInformation models are helpful to try to focus interoperability on the semantic level -- they define what information should be gathered and how that information might be used, regardless of which management interface carries the data or which vendor product produces the data. The use of an information model might help improve the ability of operators to correlate messages in different protocols where the data overlaps, such as YANG data model and IPFIX Information Elements about the same event. An information model might identify which error conditions should be counted separately and which error conditions can be recorded together in a single counter. Then, whether the counter is gathered via Netconf/YANG, the counter will have the same meaning.\nProtocol designers should consider which information might be useful for managing the new protocol or protocol extensions._\uff08what is needed\uff09_\n![Image](https://github.com/user-attachments/assets/135f5b6f-e549-4464-b704-1c796a5c878c)\n\nProtocol designers may decide to use an informational model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols. Alternatively, the protocol designers may directly develop data models without first producing an information model. _\uff08 how to organize/structure it (IM, DM, or both).\uff09_\n\n\"On the Difference between Information Models and Data Models\"[RFC3444] is helpful in determining what information to consider regarding information models (IMs), as compared to data models (DMs). _\uff08It highlights the selection and structuring of relevant management information at an abstract level, before moving to concrete data models.\uff09_\n\nProtocol designers should develop an information model if multiple data model representations (e.g. YANG [RFC7950], IPFIX [RFC7011], gMNI [gMNI], etc.) are to be produced, to ensure lossless semantic mapping. Protocol designers may also make an information model if the consequent data models will be complex or many.  _\uff08Emphasize when an information model is needed\uff09_\n\nInformation Model Design\n\nThis document recommends keeping the information model as simple as possible by applying the following criteria:\n\n1.Start with a small set of essential objects and make additions only as further objects are needed with the objective of keeping the total number of objects as small as possible.\n2.Require that all objects be essential for management.\n3.Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.\n4.Exclude objects that can be derived from others in this or other information models.\n5.Avoid causing critical sections to be heavily instrumented. A guideline is one counter per critical section per layer.\n6.When defining an information model in YANG [RFC7950] with Data Structure Extensions [RFC8791] (thereby keeping it abstract and implementation-agnostic per [RFC3444]) ensure that the module remains simple, modular, and clear by following the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].\n7.When illustrating the abstract information model, use the YANG tree diagram from RFC 8340 to provide a simple, standardized, and implementation-neutral model structure.",
+          "createdAt": "2025-05-16T02:20:39Z",
+          "updatedAt": "2025-05-16T02:43:59Z"
         }
       ]
     },
@@ -236,7 +260,7 @@
       "id": "I_kwDOOWPBqs6xqZyH",
       "title": "Add more guidance around YANG",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/5",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -245,8 +269,8 @@
       "labels": [],
       "body": "Do not overlap with 8407, though",
       "createdAt": "2025-04-08T18:49:59Z",
-      "updatedAt": "2025-04-22T15:57:47Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-16T07:33:31Z",
+      "closedAt": "2025-05-16T07:33:31Z",
       "comments": [
         {
           "author": "sbarguil",
@@ -283,15 +307,15 @@
       "id": "I_kwDOOWPBqs6xqZ2-",
       "title": "Generalize the approach in RFC6123/ Manageability Considerations Section in all IETF Specs",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/6",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:50:09Z",
-      "updatedAt": "2025-04-24T02:39:21Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-15T13:48:00Z",
+      "closedAt": "2025-05-15T13:47:59Z",
       "comments": [
         {
           "author": "boucadair",
@@ -320,6 +344,13 @@
           "body": "In addition to exploring  \"Operations & Manageability Section\", I suggest including a concise checklist at the end of the guidance document \u2014 similar in spirit to Appendix A \u2014 which can serve as a quick reference for authors. This could help ensure key operational and manageability aspects are not overlooked, while still allowing flexibility in how each point is addressed based on the protocol\u2019s context.",
           "createdAt": "2025-04-24T02:39:21Z",
           "updatedAt": "2025-04-24T02:39:21Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/9",
+          "createdAt": "2025-05-15T13:47:59Z",
+          "updatedAt": "2025-05-15T13:47:59Z"
         }
       ]
     },
@@ -629,6 +660,195 @@
       "updatedAt": "2025-05-13T06:02:27Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 33,
+      "id": "I_kwDOOWPBqs62sI4e",
+      "title": "Should or May decide",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/33",
+      "state": "CLOSED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I have found these two sentences in the 01 release:\n\n \"\"\"Protocol designers should consider which information might be useful\n   for managing the new protocol or protocol extensions.\"\"\" \n\nand \n\n\"\"Protocol designers may decide an information model or data model\n   would be appropriate for managing the new protocol or protocol\n   extensions.\"\" \n\nwhat is the correct one?",
+      "createdAt": "2025-05-15T05:47:34Z",
+      "updatedAt": "2025-05-17T12:39:15Z",
+      "closedAt": "2025-05-16T07:32:58Z",
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "These are not conflicting as these cover distinct aspects of the considerations: that is, what is needed  vs how to organize/structure it (IM, DM, or both).\n\nThat' said, the \"may\" in the second sentence can be impacted by the outcome of https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/2",
+          "createdAt": "2025-05-15T07:02:10Z",
+          "updatedAt": "2025-05-15T07:02:10Z"
+        },
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> These are not conflicting as these cover distinct aspects of the considerations: that is, what is needed vs how to organize/structure it (IM, DM, or both).\n> \n> That' said, the \"may\" in the second sentence can be impacted by the outcome of [#2](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/2)\n\nI agree do not conflict, but it was one after the other.\n\n![Image](https://github.com/user-attachments/assets/39047ee8-9158-4710-bbc2-a4aa31e8f3ef)\n\nLooks like a duplication. Can we remove one of the two?",
+          "createdAt": "2025-05-15T10:22:54Z",
+          "updatedAt": "2025-05-15T10:22:54Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Still not sure this is a duplication. May be better to discuss this in the catch up session today.",
+          "createdAt": "2025-05-15T12:07:41Z",
+          "updatedAt": "2025-05-15T12:07:41Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "confusion: one sentence with should/information. second sentence with may/information model.\nSamier, make a proposal to improve the first \"information\"",
+          "createdAt": "2025-05-15T13:40:26Z",
+          "updatedAt": "2025-05-15T13:40:26Z"
+        },
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "#42 to solve confusion",
+          "createdAt": "2025-05-15T13:58:40Z",
+          "updatedAt": "2025-05-15T13:58:40Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I don't want to rake over old discussion, but I think this needs to be \"must consider\". That is:\n   _Protocol designers must consider which information might be useful\n   for managing the new protocol or protocol extensions._\nThe consideration is imperative. The resultant actions could be \"should.\"\n\nI agree that the \"may\" is fine, but there is a wrinkle. Because an information model is not used for managing anything. Don't you think it should be:\n   _Protocol designers may decide to use an information model to\n   guide the development of a data model for managing the new\n   protocol or protocol extensions, or may move direct to the data\n   model._\n",
+          "createdAt": "2025-05-15T18:50:39Z",
+          "updatedAt": "2025-05-15T18:50:39Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "> > These are not conflicting as these cover distinct aspects of the considerations: that is, what is needed vs how to organize/structure it (IM, DM, or both).\n> > That' said, the \"may\" in the second sentence can be impacted by the outcome of [#2](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/2)\n> \n> I agree do not conflict, but it was one after the other.\n> \n> ![Image](https://github.com/user-attachments/assets/39047ee8-9158-4710-bbc2-a4aa31e8f3ef)\n> \n> Looks like a duplication. Can we remove one of the two?\n\nThere has been a recent update to the Informational section \u2014 please see https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/2.  The first part has been removed, and the second part has been revised as follows::\nProtocol designers may decide to use an informational model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols. Alternatively, the protocol designers may directly develop data models without first producing an information model. \n\nAfter further discussion, I feel that the first part should actually be included as well, as these cover distinct aspects of the considerations.\nI\u2019m thinking of updating the section to include both parts\uff1a\nProtocol designers should consider which information might be useful for managing the new protocol or protocol extensions.\nProtocol designers may decide to use an informational model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols. Alternatively, the protocol designers may directly develop data models without first producing an information model. \nPlease see if it is suitable\uff1f",
+          "createdAt": "2025-05-16T01:35:09Z",
+          "updatedAt": "2025-05-16T01:35:09Z"
+        },
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> > > These are not conflicting as these cover distinct aspects of the considerations: that is, what is needed vs how to organize/structure it (IM, DM, or both).\n> > > That' said, the \"may\" in the second sentence can be impacted by the outcome of [#2](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/2)\n> > \n> > \n> > I agree do not conflict, but it was one after the other.\n> > ![Image](https://github.com/user-attachments/assets/39047ee8-9158-4710-bbc2-a4aa31e8f3ef)\n> > Looks like a duplication. Can we remove one of the two?\n> \n> There has been a recent update to the Informational section \u2014 please see [#2](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/2). The first part has been removed, and the second part has been revised as follows:: Protocol designers may decide to use an informational model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols. Alternatively, the protocol designers may directly develop data models without first producing an information model.\n> \n> After further discussion, I feel that the first part should actually be included as well, as these cover distinct aspects of the considerations. I\u2019m thinking of updating the section to include both parts\uff1a Protocol designers should consider which information might be useful for managing the new protocol or protocol extensions. Protocol designers may decide to use an informational model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols. Alternatively, the protocol designers may directly develop data models without first producing an information model. Please see if it is suitable\uff1f\n\nHi Ran, please check the changes on #42, current status is:\n\n   Protocol designers must consider what operational, configuration,\n   state, or statistical information will be relevant for effectively\n   monitoring, controlling, or troubleshooting a new protocol and its\n   extensions. This includes identifying key parameters that reflect the\n   protocol\u2019s behavior, performance metrics, error indicators, and any\n   contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.",
+          "createdAt": "2025-05-16T06:56:01Z",
+          "updatedAt": "2025-05-16T06:56:01Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "body": "Hi Samier\uff0c\nThank you for the update and for pointing me to the changes in #42. I\u2019ve reviewed the latest changes in #42, and I like the updated content .",
+          "createdAt": "2025-05-17T12:39:14Z",
+          "updatedAt": "2025-05-17T12:39:14Z"
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "id": "I_kwDOOWPBqs62wOiv",
+      "title": "RFC 5706 versus RFC5706bis different audiences",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/37",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "bclaise"
+      ],
+      "labels": [
+        "text-needed"
+      ],
+      "body": "RFC 5706 mentioned\nAppendix A.  Operations and Management Review Checklist\n\n   This appendix provides a quick checklist of issues that protocol\n   designers should expect operations and management expert reviewers to\n   look for when reviewing a document being proposed for consideration\n   as a protocol standard.\n\nRFC 5706 audience was primarily for OPS-DIR (but also for authors writing an Operational Section.\n\nRFC 5706bis audience is wider, because the scope is wider: all draft authors, WG chairs, IESG",
+      "createdAt": "2025-05-15T12:33:41Z",
+      "updatedAt": "2025-05-16T09:56:00Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I see now that Carlos addresses the protocol designer audience in https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/31/files\n",
+          "createdAt": "2025-05-15T12:46:39Z",
+          "updatedAt": "2025-05-15T12:46:39Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hey, @bclaise , do you think further expansion or clarification is needed? If so, I @cpignata am happy to take this on. Just let me know your thoughts.",
+          "createdAt": "2025-05-15T13:37:01Z",
+          "updatedAt": "2025-05-15T13:37:01Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Adrian: a new section about...\nIf you are OPS-DIR, do this ...\nIf you are author, do this ...\nIf you are \"general participant\", do this ...\nNote: specifically, since we obsolete 5706.",
+          "createdAt": "2025-05-15T13:56:45Z",
+          "updatedAt": "2025-05-15T13:56:45Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "To be clear: I think it is probably a new sub-section \"How to use this document.\"\nThis would explain those three categories with, probably,\n- Use this to help guide your review, but refer to the Directorate wiki for detailed instructions\n- Use this guidance to help you build valuable Operational Considerations sections in your drafts\n- Use this document to help you understand, contribute to, and review drafts",
+          "createdAt": "2025-05-15T18:34:45Z",
+          "updatedAt": "2025-05-15T18:34:45Z"
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "id": "I_kwDOOWPBqs62xCer",
+      "title": "7.2.  Null Manageability Considerations Sections",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/40",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "bclaise"
+      ],
+      "labels": [
+        "text-needed"
+      ],
+      "body": "Remove the two occurrences of \"new\" in this section.\nAlso, check \"new\" throughout the  document\n",
+      "createdAt": "2025-05-15T13:46:33Z",
+      "updatedAt": "2025-05-16T09:55:48Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "In this case, revise the definition of \"New Protocol\"",
+          "createdAt": "2025-05-15T14:36:08Z",
+          "updatedAt": "2025-05-15T14:36:08Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See my proposed new definitions in the terminology section...\n\n   *  New protocol and protocol extension: These terms are used in this document\n      to identify entirely new Internet protocols, new versions of existing Internet\n      protocols, and extensions to Internet protocols. \n",
+          "createdAt": "2025-05-15T18:29:30Z",
+          "updatedAt": "2025-05-15T18:29:30Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "In relation to the discuss we had yesterday, here is what I'm planning to include in a document to show the use of \"Null\" OPS/MGT section: https://github.com/netmod-wg/rfc8407bis/commit/d872ae6ebfb1faf0e191e775a123e2d02c273e9c ",
+          "createdAt": "2025-05-16T09:18:15Z",
+          "updatedAt": "2025-05-16T09:18:15Z"
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "id": "I_kwDOOWPBqs62xLDe",
+      "title": "Changes Since RFC 5706",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/41",
+      "state": "CLOSED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Now that the organization of the introductory sections is stable, we need to start capturing the main \"Changes Since RFC 5706\".",
+      "createdAt": "2025-05-15T13:56:47Z",
+      "updatedAt": "2025-05-15T18:27:56Z",
+      "closedAt": "2025-05-15T18:27:56Z",
+      "comments": []
     }
   ],
   "pulls": [
@@ -857,7 +1077,7 @@
       "labels": [],
       "body": "Highlight areas where existing tooling might need to be enhanced or new tooling might need to be introduced to facilitate the management and operations of new specifications.",
       "createdAt": "2025-04-14T19:23:39Z",
-      "updatedAt": "2025-04-30T15:57:47Z",
+      "updatedAt": "2025-05-15T13:05:01Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
@@ -1262,7 +1482,7 @@
       "labels": [],
       "body": "Address #3 \r\n\r\n* Spell out that YANG is a recommendation for IMs\r\n* Describe the use of different types of YANG data models\r\n* Add references to RFCs 8199, 8309, and 8407",
       "createdAt": "2025-04-25T19:09:02Z",
-      "updatedAt": "2025-04-29T16:09:20Z",
+      "updatedAt": "2025-05-15T13:04:53Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "457cbe0c80b9fa96a053304ff450d65301beeb49",
@@ -2091,7 +2311,7 @@
       "id": "PR_kwDOOWPBqs6V65yP",
       "title": "\u201cOperations and Manageability Considerations\u201d section. #9",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/31",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -2100,19 +2320,850 @@
       "labels": [],
       "body": "Clarifying the \u201cOperations and Manageability Considerations\u201d section as per @boucadair 's guidance to the mailing list.",
       "createdAt": "2025-05-13T01:26:40Z",
-      "updatedAt": "2025-05-14T23:03:43Z",
+      "updatedAt": "2025-05-15T13:58:12Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "580020fc258f1840a62f9eefb0358a3f6c3b4a12",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-issue-9",
+      "headRefOid": "b76a16eff5fa38dd2be2b360dfd5d2e84f466627",
+      "closedAt": "2025-05-15T13:16:19Z",
+      "mergedAt": "2025-05-15T13:16:19Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "cd4bdb3f4174a1ceaffba4b90b43f7ddc3c6f1a7"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Reviewed everything so far, Carlos' input + Med's improvements. This looks good.\r\n",
+          "createdAt": "2025-05-15T12:47:32Z",
+          "updatedAt": "2025-05-15T12:47:32Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Results from the call. We merged this one but we will be iterating on this one.",
+          "createdAt": "2025-05-15T13:16:52Z",
+          "updatedAt": "2025-05-15T13:16:52Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6pbaY3",
+          "commit": {
+            "abbreviatedOid": "971ebd1"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thanks Carlos. This is a good start. Some more iteration may be needed.",
+          "createdAt": "2025-05-15T07:16:18Z",
+          "updatedAt": "2025-05-15T07:21:49Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\r\n   After evaluating the operational and manageability aspects of a\r\n```",
+              "createdAt": "2025-05-15T07:16:18Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 21,
+              "body": "```suggestion\r\n   protocol, a protocol extension, or an architecture, the resulting practices and\r\n```",
+              "createdAt": "2025-05-15T07:17:44Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\n   in an \"Operations and Manageability Considerations\" section within a\r\n```",
+              "createdAt": "2025-05-15T07:17:57Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "```suggestion\r\n   revisions of Internet-Drafts are expected to include an \"Operations and\r\n```",
+              "createdAt": "2025-05-15T07:18:33Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\r\n   Manageability Considerations\" section.\r\n```",
+              "createdAt": "2025-05-15T07:18:39Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 33,
+              "body": "Seems this is redundant with the previous sentence.",
+              "createdAt": "2025-05-15T07:19:32Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 36,
+              "body": "```suggestion\r\n   An \"Operations and Manageability Considerations\" section should include discussion of\r\n```",
+              "createdAt": "2025-05-15T07:19:45Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 52,
+              "body": "```suggestion\r\n   needed by the protocol. It would be helpful to\r\n```",
+              "createdAt": "2025-05-15T07:20:08Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 56,
+              "body": "```suggestion\r\n   future, or to those deploying the protocol, to know the rationale\r\n```",
+              "createdAt": "2025-05-15T07:20:20Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 66,
+              "body": "```suggestion\r\n   recommended that an \"Operations and Manageability Considerations\" section\r\n```",
+              "createdAt": "2025-05-15T07:20:33Z",
+              "updatedAt": "2025-05-15T07:21:49Z"
+            },
+            {
+              "originalPosition": 80,
+              "body": "```suggestion\r\n```\r\n\r\nAgreed in the call to remove the \"if\" part here.",
+              "createdAt": "2025-05-15T07:21:14Z",
+              "updatedAt": "2025-05-15T13:12:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pfqEE",
+          "commit": {
+            "abbreviatedOid": "5f9fd03"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T13:12:37Z",
+          "updatedAt": "2025-05-15T13:12:37Z",
+          "comments": [
+            {
+              "originalPosition": 81,
+              "body": "```suggestion\r\n   It is recommended that the section be\r\n```",
+              "createdAt": "2025-05-15T13:12:37Z",
+              "updatedAt": "2025-05-15T13:12:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pgNAS",
+          "commit": {
+            "abbreviatedOid": "971ebd1"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T13:54:11Z",
+          "updatedAt": "2025-05-15T13:54:11Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "@boucadair , note that Terminology defines \"new protocol\". Are you sure you want to remove \"new\"?",
+              "createdAt": "2025-05-15T13:54:11Z",
+              "updatedAt": "2025-05-15T13:54:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pgQs_",
+          "commit": {
+            "abbreviatedOid": "971ebd1"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T13:58:12Z",
+          "updatedAt": "2025-05-15T13:58:12Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "Please see https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/40",
+              "createdAt": "2025-05-15T13:58:12Z",
+              "updatedAt": "2025-05-15T13:58:12Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "id": "PR_kwDOOWPBqs6WQ5HF",
+      "title": "Minor editorial changes after 01",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/34",
+      "state": "CLOSED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "It includes:\r\n\r\n- Wrap some lines to 72 ch\r\n- Expand Syslog abbreviation\r\n- change ,\" to \", to make it homogenous acros the document\r\n\r\nIt should address #33 before closing",
+      "createdAt": "2025-05-15T05:48:50Z",
+      "updatedAt": "2025-05-15T06:27:36Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "add26aada2a4872254c6c36ee4b5a46129d200ff",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
-      "headRefName": "carlos-issue-9",
-      "headRefOid": "971ebd14e7dc32be0af69751bd07308a1700ac81",
-      "closedAt": null,
+      "headRefName": "minor-editorial-changes-after-01",
+      "headRefOid": "acb57a4c626b5724fc0435634126c5aa8ef79fa4",
+      "closedAt": "2025-05-15T06:27:36Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 35,
+      "id": "PR_kwDOOWPBqs6WRJy1",
+      "title": "yang operation text",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/35",
+      "state": "MERGED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "yang operation text",
+      "createdAt": "2025-05-15T06:25:43Z",
+      "updatedAt": "2025-05-16T07:33:31Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "add26aada2a4872254c6c36ee4b5a46129d200ff",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "yang-operation-considerations",
+      "headRefOid": "4297fc9e1f3ec547525066926b5362080642de1d",
+      "closedAt": "2025-05-16T07:33:29Z",
+      "mergedAt": "2025-05-16T07:33:29Z",
+      "mergedBy": "sbarguil",
+      "mergeCommit": {
+        "oid": "27d5a21c46253511570502c4ead89b5ed6aa3c5e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6pbLVg",
+          "commit": {
+            "abbreviatedOid": "4dd3647"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Thanks. Looks good to me for -01. Please find some few nits.",
+          "createdAt": "2025-05-15T06:51:49Z",
+          "updatedAt": "2025-05-15T06:56:25Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\n  A common challenge in YANG data model development lies in defining the\r\n```",
+              "createdAt": "2025-05-15T06:51:50Z",
+              "updatedAt": "2025-05-15T06:56:25Z"
+            },
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\r\n  cases, the YANG data model (and its accompanying documentation) should\r\n```",
+              "createdAt": "2025-05-15T06:52:53Z",
+              "updatedAt": "2025-05-15T06:56:25Z"
+            },
+            {
+              "originalPosition": 17,
+              "body": "```suggestion\r\n  events (and relevant triggered notifications) that indicate changes in an underlying state,\r\n```",
+              "createdAt": "2025-05-15T06:54:01Z",
+              "updatedAt": "2025-05-15T12:05:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pbiPX",
+          "commit": {
+            "abbreviatedOid": "4dd3647"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T07:27:00Z",
+          "updatedAt": "2025-05-15T07:35:42Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Do we want to limit it to data model here?  We're starting to expand to info models, too.  Maybe data and information model development?",
+              "createdAt": "2025-05-15T07:27:00Z",
+              "updatedAt": "2025-05-15T07:35:42Z"
+            },
+            {
+              "originalPosition": 17,
+              "body": "I think your suggested changes don't convey the same meaning as the original text.  Maybe:\r\n\r\n> events (and notifications) that indicate changes in an underlying state",
+              "createdAt": "2025-05-15T07:35:34Z",
+              "updatedAt": "2025-05-15T07:35:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pe1r8",
+          "commit": {
+            "abbreviatedOid": "4dd3647"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T12:02:19Z",
+          "updatedAt": "2025-05-15T12:02:19Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I'm afraid DM makes more sense for this specific text proposal as the text reasons about \"common xxx\". We don't have sufficient practice for YANG-based IMs.\r\n\r\nIf we extend to IMs, then we need to revisit the full sentence.",
+              "createdAt": "2025-05-15T12:02:19Z",
+              "updatedAt": "2025-05-15T12:02:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pe4Iy",
+          "commit": {
+            "abbreviatedOid": "4dd3647"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T12:06:06Z",
+          "updatedAt": "2025-05-15T12:06:06Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "@xorrkaz, yes as I wanted to insist on the triggered signals. Reworded to cover both aspects. Please check.",
+              "createdAt": "2025-05-15T12:06:06Z",
+              "updatedAt": "2025-05-15T12:06:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pe6Fj",
+          "commit": {
+            "abbreviatedOid": "4dd3647"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T12:08:56Z",
+          "updatedAt": "2025-05-15T12:08:56Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "Your new change reads better to me.",
+              "createdAt": "2025-05-15T12:08:56Z",
+              "updatedAt": "2025-05-15T12:08:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pgIGE",
+          "commit": {
+            "abbreviatedOid": "4297fc9"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-15T13:48:31Z",
+          "updatedAt": "2025-05-15T13:48:31Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "id": "PR_kwDOOWPBqs6WRNd0",
+      "title": "Update draft-opsarea-rfc5706bis.md",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/36",
+      "state": "MERGED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "nits"
+      ],
+      "body": "Expand Syslog abbreviation\r\nchange ,\" to \", to make it homogenous across the document \r\n\r\nIt should address #33 before closing",
+      "createdAt": "2025-05-15T06:33:48Z",
+      "updatedAt": "2025-05-15T12:36:39Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "add26aada2a4872254c6c36ee4b5a46129d200ff",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "minor-editorial",
+      "headRefOid": "9be3a59e426da144886b5a3c3051cba4a31d6dd9",
+      "closedAt": "2025-05-15T12:36:09Z",
+      "mergedAt": "2025-05-15T12:36:09Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "580020fc258f1840a62f9eefb0358a3f6c3b4a12"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6pbW9x",
+          "commit": {
+            "abbreviatedOid": "eef8413"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-15T07:11:14Z",
+          "updatedAt": "2025-05-15T07:14:04Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\n   *  Syslog {{?RFC5424}}\r\n```\r\n\r\nThe OLD is correct as this matches the use in rfc5424",
+              "createdAt": "2025-05-15T07:11:14Z",
+              "updatedAt": "2025-05-15T07:14:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pfOM3",
+          "commit": {
+            "abbreviatedOid": "9be3a59"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Looks good",
+          "createdAt": "2025-05-15T12:36:39Z",
+          "updatedAt": "2025-05-15T12:36:39Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "id": "PR_kwDOOWPBqs6WVCed",
+      "title": "Terminology input from Adrian",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/38",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "AdrianFarrel"
+      ],
+      "labels": [],
+      "body": "Shared by email",
+      "createdAt": "2025-05-15T13:22:28Z",
+      "updatedAt": "2025-05-15T18:54:28Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "cd4bdb3f4174a1ceaffba4b90b43f7ddc3c6f1a7",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Terminology",
+      "headRefOid": "46da469752c26f06bba2671d7a55f4e76493859f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "No sure why the SMI RFC reference was removed. Should it be [STD58]?\r\n",
+          "createdAt": "2025-05-15T14:06:50Z",
+          "updatedAt": "2025-05-15T14:06:50Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> No sure why the SMI RFC reference was removed. Should it be [STD58]?\r\n\r\nWe need to dig into this as for some reasoning the validation fails for that specific ref: https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/actions/runs/15046788676/job/42291234946 ",
+          "createdAt": "2025-05-15T14:13:29Z",
+          "updatedAt": "2025-05-15T14:13:29Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Fixed. It was the use of both 2578 and std 58, caught by xml2rfc. I fixed this specific citation and also capitalization of the other use.",
+          "createdAt": "2025-05-15T14:49:24Z",
+          "updatedAt": "2025-05-15T14:49:24Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I don't think this closes the issue (unless you want to open a new issue for the more work that it needed).\r\n\r\nPersonally, I think merge this and then we can do some more work.",
+          "createdAt": "2025-05-15T18:54:27Z",
+          "updatedAt": "2025-05-15T18:54:27Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6pgSMI",
+          "commit": {
+            "abbreviatedOid": "3cacf93"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T13:59:49Z",
+          "updatedAt": "2025-05-15T13:59:49Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "this is breaking validation for some reason. need to check this.",
+              "createdAt": "2025-05-15T13:59:49Z",
+              "updatedAt": "2025-05-15T13:59:49Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6phLMu",
+          "commit": {
+            "abbreviatedOid": "269c1bd"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T14:52:58Z",
+          "updatedAt": "2025-05-15T14:52:58Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n   This document obsoletes {{?RFC5706}} and fully updates its content\r\n```",
+              "createdAt": "2025-05-15T14:52:58Z",
+              "updatedAt": "2025-05-15T14:52:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6phM0_",
+          "commit": {
+            "abbreviatedOid": "269c1bd"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T14:54:32Z",
+          "updatedAt": "2025-05-15T14:55:01Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "```suggestion\r\n   This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?RFC2119}} and {{?RFC8174}}.\r\n```",
+              "createdAt": "2025-05-15T14:54:32Z",
+              "updatedAt": "2025-05-15T14:55:01Z"
+            },
+            {
+              "originalPosition": 134,
+              "body": "```suggestion\r\n   that do not support more resent management protocols {{IESG-STATEMENT}}.\r\n```",
+              "createdAt": "2025-05-15T14:54:48Z",
+              "updatedAt": "2025-05-15T14:55:01Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "id": "PR_kwDOOWPBqs6WVPzf",
+      "title": "Null Operations and Manageability Considerations Section",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/39",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-05-15T13:43:15Z",
+      "updatedAt": "2025-05-15T13:46:45Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "cd4bdb3f4174a1ceaffba4b90b43f7ddc3c6f1a7",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Null-Operations-and-Manageability-Considerations-Section-Title",
+      "headRefOid": "86109e4c59375ec3403d8019602e6183d5ad4612",
+      "closedAt": "2025-05-15T13:46:43Z",
+      "mergedAt": "2025-05-15T13:46:43Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "e0467db423d211559ac3f6eaa66781e439030734"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6pgFYV",
+          "commit": {
+            "abbreviatedOid": "86109e4"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-15T13:45:22Z",
+          "updatedAt": "2025-05-15T13:45:22Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "id": "PR_kwDOOWPBqs6WVZ61",
+      "title": "Update Information Term",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/42",
+      "state": "MERGED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "sbarguil"
+      ],
+      "labels": [],
+      "body": "#33",
+      "createdAt": "2025-05-15T13:57:20Z",
+      "updatedAt": "2025-05-16T07:32:59Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e0467db423d211559ac3f6eaa66781e439030734",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "37-clarification-proposal",
+      "headRefOid": "72e81b076ce06e46468bb11e217ed0238602c71b",
+      "closedAt": "2025-05-16T07:32:56Z",
+      "mergedAt": "2025-05-16T07:32:56Z",
+      "mergedBy": "sbarguil",
+      "mergeCommit": {
+        "oid": "d69cd1a0484aca80184f392d52e28a4685e9e2f7"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6pgVoy",
+          "commit": {
+            "abbreviatedOid": "0fbfce3"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-15T14:03:38Z",
+          "updatedAt": "2025-05-15T14:04:27Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   monitoring, controlling, or troubleshooting a protocol or its\r\n```",
+              "createdAt": "2025-05-15T14:03:38Z",
+              "updatedAt": "2025-05-15T14:04:27Z"
+            },
+            {
+              "originalPosition": 11,
+              "body": "```suggestion\r\n   contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.\r\n```",
+              "createdAt": "2025-05-15T14:04:19Z",
+              "updatedAt": "2025-05-15T14:04:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pgXib",
+          "commit": {
+            "abbreviatedOid": "0fbfce3"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T14:05:50Z",
+          "updatedAt": "2025-05-15T14:05:51Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "Small nit.  What about, \"or troubleshooting the new protocol and its\"",
+              "createdAt": "2025-05-15T14:05:50Z",
+              "updatedAt": "2025-05-15T14:05:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pgbw3",
+          "commit": {
+            "abbreviatedOid": "db10ca2"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T14:10:27Z",
+          "updatedAt": "2025-05-15T14:10:38Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   monitoring, controlling, or troubleshooting a protocol and its\r\n```",
+              "createdAt": "2025-05-15T14:10:28Z",
+              "updatedAt": "2025-05-15T14:10:38Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pgchU",
+          "commit": {
+            "abbreviatedOid": "85e2211"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-15T14:11:18Z",
+          "updatedAt": "2025-05-15T14:11:22Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   monitoring, controlling, or troubleshooting a new protocol and its\r\n```",
+              "createdAt": "2025-05-15T14:11:18Z",
+              "updatedAt": "2025-05-15T14:11:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pm7wI",
+          "commit": {
+            "abbreviatedOid": "891d547"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-16T05:43:50Z",
+          "updatedAt": "2025-05-16T05:43:50Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\n   Protocol designers must consider what operational, configuration,\r\n```\r\n\r\nPer Adrian's comment in #33. ",
+              "createdAt": "2025-05-16T05:43:50Z",
+              "updatedAt": "2025-05-16T05:43:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6pnu-o",
+          "commit": {
+            "abbreviatedOid": "72e81b0"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-16T07:32:50Z",
+          "updatedAt": "2025-05-16T07:32:50Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "id": "PR_kwDOOWPBqs6WV0Ws",
+      "title": "Changes since 5706 and Acknowledgements ",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/43",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "As we progress in evolving and editing the document, it is important to start capturing  particular \"meta-data\" sections, specifically:\r\n- Changes since RFC 5706\r\n- Acknowledgements\r\n\r\nMove the TODO to a subsection so as not to shift the whole numbering scheme for sections.\r\n\r\nFixes #41 ",
+      "createdAt": "2025-05-15T14:33:30Z",
+      "updatedAt": "2025-05-15T18:28:30Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e0467db423d211559ac3f6eaa66781e439030734",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-changes-since-5706",
+      "headRefOid": "5a6b83eb8f492e0b679a6c0ffd05f83014ed4b44",
+      "closedAt": "2025-05-15T18:27:55Z",
+      "mergedAt": "2025-05-15T18:27:55Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "cabec8cb3ca76f6df728819cdb30a15e3aebaac0"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "this looks good to me",
+          "createdAt": "2025-05-15T15:37:47Z",
+          "updatedAt": "2025-05-15T15:37:47Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6ph0vS",
+          "commit": {
+            "abbreviatedOid": "99f0439"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thanks, Carlos. Some minor edits to harmonize how bullets are listed, nits.",
+          "createdAt": "2025-05-15T15:41:22Z",
+          "updatedAt": "2025-05-15T15:44:34Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "```suggestion\r\n   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, which has been providing document reviews for over a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.\r\n```",
+              "createdAt": "2025-05-15T15:41:22Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            },
+            {
+              "originalPosition": 27,
+              "body": "```suggestion\r\n   * Change intended status from Informational to Best Current Practice\r\n```",
+              "createdAt": "2025-05-15T15:41:42Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            },
+            {
+              "originalPosition": 34,
+              "body": "```suggestion\r\n   * Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.\r\n```",
+              "createdAt": "2025-05-15T15:42:01Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            },
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\r\n   * Add a structured framing for the requirement of an \"Operational and\r\n```",
+              "createdAt": "2025-05-15T15:42:08Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            },
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\n   * Move the \"Operational Considerations\" Appendix A to a Checklist maintained in Github\r\n```",
+              "createdAt": "2025-05-15T15:42:28Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            },
+            {
+              "originalPosition": 36,
+              "body": "```suggestion\r\n      * Add a YANG Data Model Considerations section\r\n```",
+              "createdAt": "2025-05-15T15:43:01Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            },
+            {
+              "originalPosition": 38,
+              "body": "```suggestion\r\n  * Update the Available Management Technologies landscape\r\n```",
+              "createdAt": "2025-05-15T15:43:15Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            },
+            {
+              "originalPosition": 40,
+              "body": "```suggestion\r\n   * Add an \"Operational and Management Tooling Considerations\" section\r\n```",
+              "createdAt": "2025-05-15T15:43:23Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            },
+            {
+              "originalPosition": 60,
+              "body": "```suggestion\r\n   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.\r\n```",
+              "createdAt": "2025-05-15T15:43:50Z",
+              "updatedAt": "2025-05-15T15:44:34Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
