@@ -720,11 +720,11 @@ author:
    regardless of which management interface carries the data or which
    vendor product produces the data. The use of an information model might
    help improve the ability of operators to correlate messages in
-   different protocols where the data overlaps, such as a YANG data model 
+   different protocols where the data overlaps, such as a YANG data model
    and IPFIX Information Elements about the same event. An information model
    might identify which error conditions should be counted separately,
    and which error conditions can be recorded together in a single
-   counter. Then, whether the counter is gathered via Netconf/YANG or 
+   counter. Then, whether the counter is gathered via Netconf/YANG or
    exported via IPFIX, the counter will have the same meaning.
 
    Protocol designers must consider what operational, configuration,
@@ -746,13 +746,13 @@ author:
 ~~~~
 {: #fig-im-dm title="Information Models（IMs） and Data Models（DMs）" artwork-align="center"}
 
-   Protocol designers may decide an information model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols. Alternatively, the protocol designers may directly develop data models without first producing an information model. 
+   Protocol designers may decide an information model to describe the managed elements in a new protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols. Alternatively, the protocol designers may directly develop data models without first producing an information model.
 
    "On the Difference between Information Models and Data Models"
    {{?RFC3444}} is helpful in determining what information to consider
    regarding information models (IMs), as compared to data models (DMs).
 
-Protocol designers should develop an information model if multiple data model representations (e.g. YANG [RFC7950], IPFIX [RFC7011], gMNI [gMNI], etc.) are to be produced, to ensure lossless semantic mapping. Protocol designers may also make an information model if the consequent data models will be complex or many. 
+Protocol designers should develop an information model if multiple data model representations (e.g. YANG [RFC7950], IPFIX [RFC7011], gMNI [gMNI], etc.) are to be produced, to ensure lossless semantic mapping. Protocol designers may also make an information model if the consequent data models will be complex or many.
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
@@ -771,8 +771,6 @@ Protocol designers should develop an information model if multiple data model re
 
    *  {{?RFC3670}} - Information Model for Describing Network Device QoS
       Datapath Mechanisms
-
-   
 
    Management protocol standards and management data model standards
    often contain compliance clauses to ensure interoperability.
@@ -841,13 +839,11 @@ Protocol designers should develop an information model if multiple data model re
    possible by applying the following criteria:
 
    1.  Start with a small set of essential objects and make additions only as
-       further objects are needed with the objective of keeping the total number of objects as small as possible. .
+       further objects are needed with the objective of keeping the total number of objects as small as possible.
 
    2.  Require that all objects be essential for management.
 
    3.  Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.
-
-   
 
    4.  Exclude objects that can be derived from others in this or
        other information models.
@@ -856,7 +852,7 @@ Protocol designers should develop an information model if multiple data model re
        guideline is one counter per critical section per layer.
 
    6.  When defining an information model in YANG [RFC7950] with Data Structure Extensions [RFC8791] (thereby keeping it abstract and implementation-agnostic per [RFC3444]) ensure that the module remains simple, modular, and clear by following the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].
-  7.  When illustrating the abstract information model, use the YANG tree diagram from RFC 8340 to provide a simple, standardized, and implementation-neutral model structure. 
+  7.  When illustrating the abstract information model, use the YANG tree diagram from RFC 8340 to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
