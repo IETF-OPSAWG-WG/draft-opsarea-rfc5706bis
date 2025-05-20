@@ -752,7 +752,7 @@ author:
    {{?RFC3444}} is helpful in determining what information to consider
    regarding information models (IMs), as compared to data models (DMs).
 
-Protocol designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.
+Protocol designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
