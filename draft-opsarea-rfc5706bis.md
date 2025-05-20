@@ -724,7 +724,7 @@ author:
    and IPFIX Information Elements about the same event. An information model
    might identify which error conditions should be counted separately,
    and which error conditions can be recorded together in a single
-   counter. Then, whether the counter is gathered via Netconf/YANG or
+   counter. Then, whether the counter is gathered via, e.g., NETCONF/YANG or
    exported via IPFIX, the counter will have the same meaning.
 
    Protocol designers must consider what operational, configuration,
