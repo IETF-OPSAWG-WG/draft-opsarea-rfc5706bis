@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-18T00:52:52.542853+00:00",
+  "timestamp": "2025-05-20T00:50:32.537177+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3160,6 +3160,291 @@
               "body": "```suggestion\r\n   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.\r\n```",
               "createdAt": "2025-05-15T15:43:50Z",
               "updatedAt": "2025-05-15T15:44:34Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "id": "PR_kwDOOWPBqs6Wniqs",
+      "title": "Information model section update",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/44",
+      "state": "OPEN",
+      "author": "Ranchen666",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-05-18T13:24:59Z",
+      "updatedAt": "2025-05-18T16:45:53Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "27d5a21c46253511570502c4ead89b5ed6aa3c5e",
+      "headRepository": "Ranchen666/draft-opsarea-rfc5706bis",
+      "headRefName": "patch-1",
+      "headRefOid": "b1a48a8b16c963eae279e958188e6a854b684813",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6p0EtD",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-18T14:10:25Z",
+          "updatedAt": "2025-05-18T14:18:37Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "NETCONF",
+              "createdAt": "2025-05-18T14:10:25Z",
+              "updatedAt": "2025-05-18T14:18:37Z"
+            },
+            {
+              "originalPosition": 39,
+              "body": "Maye decide to _to include_?  Something is missing from this first sentence.  Perhaps even, \"Protocol designers may use an information model to describe the managed elements in a new protocol or protocol extension.\"",
+              "createdAt": "2025-05-18T14:12:15Z",
+              "updatedAt": "2025-05-18T14:18:37Z"
+            },
+            {
+              "originalPosition": 39,
+              "body": "And maybe \"managing the protocol\" with protocol singular is a better choice here.",
+              "createdAt": "2025-05-18T14:13:04Z",
+              "updatedAt": "2025-05-18T14:18:37Z"
+            },
+            {
+              "originalPosition": 46,
+              "body": "These bracket callouts should be {{?}} references.",
+              "createdAt": "2025-05-18T14:13:32Z",
+              "updatedAt": "2025-05-18T14:18:37Z"
+            },
+            {
+              "originalPosition": 46,
+              "body": "And perhaps, \"Protocol designers may also create an information model if the resulting data models are complex or numerous.\"",
+              "createdAt": "2025-05-18T14:14:20Z",
+              "updatedAt": "2025-05-18T14:18:37Z"
+            },
+            {
+              "originalPosition": 90,
+              "body": "More references rather than raw bracket notation.  And instead of \"module\" I think \"information model\" .",
+              "createdAt": "2025-05-18T14:18:15Z",
+              "updatedAt": "2025-05-18T14:18:37Z"
+            },
+            {
+              "originalPosition": 91,
+              "body": "Reference syntax needed.",
+              "createdAt": "2025-05-18T14:18:32Z",
+              "updatedAt": "2025-05-18T14:18:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6p0G4a",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-18T14:44:16Z",
+          "updatedAt": "2025-05-18T14:44:16Z",
+          "comments": [
+            {
+              "originalPosition": 39,
+              "body": "Yes, I posted it wrong on GitHub. The original sentence is: may decide to use an information model... Is this appropriate?",
+              "createdAt": "2025-05-18T14:44:16Z",
+              "updatedAt": "2025-05-18T14:44:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6p0G73",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-18T14:45:14Z",
+          "updatedAt": "2025-05-18T14:45:14Z",
+          "comments": [
+            {
+              "originalPosition": 39,
+              "body": "That works.",
+              "createdAt": "2025-05-18T14:45:14Z",
+              "updatedAt": "2025-05-18T14:45:14Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6p0HT0",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-18T14:52:04Z",
+          "updatedAt": "2025-05-18T14:52:04Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "These bracket callouts should be {{?}} references.\r\n---Yes.\r\n\r\nAnd perhaps, \"Protocol designers may also create an information model if the resulting data models are complex or numerous.\"\r\n---I agree.",
+              "createdAt": "2025-05-18T14:52:04Z",
+              "updatedAt": "2025-05-18T14:52:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6p0HsM",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-18T14:58:10Z",
+          "updatedAt": "2025-05-18T14:58:11Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "ACK",
+              "createdAt": "2025-05-18T14:58:10Z",
+              "updatedAt": "2025-05-18T14:58:11Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6p0H04",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-18T14:59:51Z",
+          "updatedAt": "2025-05-18T14:59:51Z",
+          "comments": [
+            {
+              "originalPosition": 90,
+              "body": "Thanks and updated as follows\uff1aWhen defining an information model in YANG {{?RFC7950}} with Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the information model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.",
+              "createdAt": "2025-05-18T14:59:51Z",
+              "updatedAt": "2025-05-18T14:59:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6p0H-A",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-18T15:01:53Z",
+          "updatedAt": "2025-05-18T15:01:53Z",
+          "comments": [
+            {
+              "originalPosition": 90,
+              "body": "That works for me.",
+              "createdAt": "2025-05-18T15:01:53Z",
+              "updatedAt": "2025-05-18T15:01:53Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6p0IH2",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-18T15:03:58Z",
+          "updatedAt": "2025-05-18T15:03:58Z",
+          "comments": [
+            {
+              "originalPosition": 91,
+              "body": "Thanks and updated as follows\uff1a {{?RFC8340}} ",
+              "createdAt": "2025-05-18T15:03:58Z",
+              "updatedAt": "2025-05-18T15:03:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6p0N-6",
+          "commit": {
+            "abbreviatedOid": "b1a48a8"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-18T16:33:11Z",
+          "updatedAt": "2025-05-18T16:45:53Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "```suggestion\r\n   vendor implementation produces the data. The use of an information model might\r\n```",
+              "createdAt": "2025-05-18T16:33:11Z",
+              "updatedAt": "2025-05-18T16:45:53Z"
+            },
+            {
+              "originalPosition": 21,
+              "body": "```suggestion\r\n   counter. Then, whether the counter is gathered via, e.g., NETCONF/YANG or\r\n```",
+              "createdAt": "2025-05-18T16:34:28Z",
+              "updatedAt": "2025-05-18T16:45:53Z"
+            },
+            {
+              "originalPosition": 39,
+              "body": "```suggestion\r\n   Protocol designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocols. Alternatively, the protocol designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).\r\n```",
+              "createdAt": "2025-05-18T16:38:20Z",
+              "updatedAt": "2025-05-18T16:45:53Z"
+            },
+            {
+              "originalPosition": 46,
+              "body": "```suggestion\r\nProtocol designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may also use an information model if the data models will be complex.\r\n```\r\n\r\ncan we have an example of the last part?",
+              "createdAt": "2025-05-18T16:41:53Z",
+              "updatedAt": "2025-05-18T16:45:53Z"
+            },
+            {
+              "originalPosition": 75,
+              "body": "We may clarify why \"of the managed protocol\" is mentioned here.",
+              "createdAt": "2025-05-18T16:43:10Z",
+              "updatedAt": "2025-05-18T16:45:53Z"
+            },
+            {
+              "originalPosition": 69,
+              "body": "```suggestion\r\n       further objects are needed with the objective of keeping the total number of objects as small as possible.\r\n```\r\n\r\nHow \"keeping the total number of objects as small as possible\" can be characterized?",
+              "createdAt": "2025-05-18T16:43:44Z",
+              "updatedAt": "2025-05-18T16:45:53Z"
+            },
+            {
+              "originalPosition": 89,
+              "body": "```suggestion\r\n   6.  When defining an information model using  YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}) ensure that the module remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.\r\n```",
+              "createdAt": "2025-05-18T16:44:56Z",
+              "updatedAt": "2025-05-18T16:45:53Z"
+            },
+            {
+              "originalPosition": 90,
+              "body": "```suggestion\r\n  7.  When illustrating the abstract information model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.\r\n```",
+              "createdAt": "2025-05-18T16:45:45Z",
+              "updatedAt": "2025-05-18T16:45:53Z"
             }
           ]
         }
