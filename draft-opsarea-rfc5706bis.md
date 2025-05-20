@@ -839,7 +839,8 @@ Protocol designers should develop an information model if multiple data model re
    possible by applying the following criteria:
 
    1.  Start with a small set of essential objects and make additions only as
-       further objects are needed with the objective of keeping the total number of objects as small as possible.
+       further objects are needed with the objective of keeping the absolute number of objects as small as possible while still delivering the required function such that there is 
+       no duplication between objects and where one piece of information can be derived from the other pieces of information, it is not itself represented as an object.
 
    2.  Require that all objects be essential for management.
 
