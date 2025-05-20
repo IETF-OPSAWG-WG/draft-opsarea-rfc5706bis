@@ -718,7 +718,7 @@ author:
    the semantic level -- they define what information
    should be gathered and how that information might be used,
    regardless of which management interface carries the data or which
-   vendor product produces the data. The use of an information model might
+   vendor implementation produces the data. The use of an information model might
    help improve the ability of operators to correlate messages in
    different protocols where the data overlaps, such as a YANG data model
    and IPFIX Information Elements about the same event. An information model
