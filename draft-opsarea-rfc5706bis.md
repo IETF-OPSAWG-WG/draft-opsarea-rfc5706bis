@@ -852,7 +852,7 @@ Protocol designers should develop an information model if multiple data model re
        guideline is one counter per critical section per layer.
 
    6.  When defining an information model using  YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}) ensure that the module remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
-  7.  When illustrating the abstract information model, use the YANG tree diagram from RFC 8340 to provide a simple, standardized, and implementation-neutral model structure.
+  7.  When illustrating the abstract information model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
