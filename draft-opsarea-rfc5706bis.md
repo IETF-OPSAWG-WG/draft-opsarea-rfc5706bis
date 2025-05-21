@@ -256,7 +256,7 @@ author:
    them to operational needs, especially configuration.
 
    One issue discussed was the user-unfriendliness of the binary format
-   of SNMP {{?RFC3410}} and Common Open Policy Service (COPS) Usage for
+   of SNMP and Common Open Policy Service (COPS) Usage for
    Policy Provisioning (COPS-PR) {{?RFC3084}}, and it was recommended that
    the IETF explore an XML-based Structure of Management Information and
    an XML-based protocol for configuration.
@@ -622,7 +622,7 @@ author:
 
    WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble. NETCONF {{?RFC6241}} addresses this in a generic manner
+   causes trouble. NETCONF addresses this in a generic manner
    by allowing an operator to lock the configuration on multiple
    devices, perform the configuration settings/changes, check that they
    are OK (undo if not), and then unlock the devices.
@@ -683,9 +683,9 @@ author:
    management systems tend to speak whatever the boxes support, whether
    or not the IETF likes this. The IETF is moving from support for one
    schema language for modeling the structure of management information
-   (Structure of Management Information Version 2 (SMIv2) {{?RFC2578}}) and
+   (Structure of Management Information Version 2 (SMIv2)) and
    one simple network management protocol (Simple Network Management
-   Protocol (SNMP) {{?RFC3410}}) towards support for additional schema
+   Protocol (SNMP)) towards support for additional schema
    languages and additional management protocols suited to different
    purposes. Other Standard Development Organizations (e.g., the
    Distributed Management Task Force - DMTF, the Tele-Management Forum -
