@@ -683,7 +683,7 @@ author:
    management systems tend to speak whatever the boxes support, whether
    or not the IETF likes this. The IETF is moving from support for one
    schema language for modeling the structure of management information
-   (Structure of Management Information Version 2 (SMIv2)) and
+   (SMIv2) and
    one simple network management protocol (Simple Network Management
    Protocol (SNMP)) towards support for additional schema
    languages and additional management protocols suited to different
