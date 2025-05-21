@@ -711,13 +711,13 @@ Table of Contents
    or not the IETF likes this.  The IETF is moving from support for one
    schema language for modeling the structure of management information
    (SMIv2) and one simple network management protocol (Simple Network
-   Management Protocol (SNMP)) towards support for additional schema
-   languages and additional management protocols suited to different
-   purposes.  Other Standard Development Organizations (e.g., the
-   Distributed Management Task Force - DMTF, the Tele-Management Forum -
-   TMF) also define schemas and protocols for management and these may
-   be more suitable than IETF schemas and protocols in some cases.  Some
-   of the alternatives being considered include:
+   Management SNMP) towards support for additional schema languages and
+   additional management protocols suited to different purposes.  Other
+   Standard Development Organizations (e.g., the Distributed Management
+   Task Force - DMTF, the Tele-Management Forum - TMF) also define
+   schemas and protocols for management and these may be more suitable
+   than IETF schemas and protocols in some cases.  Some of the
+   alternatives being considered include:
 
    *  XML Schema Definition [W3C.REC-xmlschema-0-20041028]
 
