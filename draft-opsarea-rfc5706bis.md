@@ -1289,7 +1289,7 @@ Information Models and Data Models
    Protocol designers should consider how access control lists are
    maintained and updated.
 
-   Standard SNMP notifications or syslog messages {{?RFC5424}} might
+   Standard SNMP notifications or syslog messages might
    already exist, or can be defined, to alert operators to the
    conditions identified in the security considerations for the new
    protocol. For example, you can log all the commands entered by the
