@@ -746,7 +746,15 @@ author:
 ~~~~
 {: #fig-im-dm title="Information Models（IMs） and Data Models（DMs）" artwork-align="center"}
 
-   Protocol designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers may then use the information model to develop data models that will be used for managing the protocol. Alternatively, the protocol designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
+   "On the Difference between Information Models and Data Models"
+   {{?RFC3444}} is helpful in determining what information to consider
+   regarding information models (IMs), as compared to data models (DMs).
+   
+   Protocol Designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
+   
+   Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop data models that will be used for managing the protocol. 
+   
+   Specifically, Protocol Designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.
 
 
 
