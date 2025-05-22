@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-20T00:50:32.537177+00:00",
+  "timestamp": "2025-05-22T00:48:39.773328+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3177,13 +3177,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-05-18T13:24:59Z",
-      "updatedAt": "2025-05-18T16:45:53Z",
+      "updatedAt": "2025-05-20T08:36:29Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "27d5a21c46253511570502c4ead89b5ed6aa3c5e",
       "headRepository": "Ranchen666/draft-opsarea-rfc5706bis",
       "headRefName": "patch-1",
-      "headRefOid": "b1a48a8b16c963eae279e958188e6a854b684813",
+      "headRefOid": "c2dde894ba12acda715207fb2b15d15fa4c03749",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -3447,6 +3447,344 @@
               "updatedAt": "2025-05-18T16:45:53Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAe7A",
+          "commit": {
+            "abbreviatedOid": "b1a48a8"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T00:53:30Z",
+          "updatedAt": "2025-05-20T00:53:30Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "The intent here is to suggest that an information model can be helpful when the data model becomes complex \u2014 for example, when it spans multiple related YANG modules. A unified and simplified information model can assist protocol and data model designers by providing a clear architectural view. Now, finding an example may be hard. Perhaps RFC 8328 which references the (expired) draft-ietf-supa-generic-policy-info-model\r\nAlternatively, RFC 8637 is referenced by draft-ietf-teas-yang-path-computation and draft-yu-ccamp-resource-pm-yang",
+              "createdAt": "2025-05-20T00:53:30Z",
+              "updatedAt": "2025-05-20T00:53:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAfUG",
+          "commit": {
+            "abbreviatedOid": "b1a48a8"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T00:55:16Z",
+          "updatedAt": "2025-05-20T00:55:17Z",
+          "comments": [
+            {
+              "originalPosition": 75,
+              "body": "The point here is that the choice of what objects to add should be influenced by experience with the protocol (where such experience is available) because the experience should help us know what needs to be managed and what information can be usefully gathered.",
+              "createdAt": "2025-05-20T00:55:17Z",
+              "updatedAt": "2025-05-20T00:55:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAgXA",
+          "commit": {
+            "abbreviatedOid": "b1a48a8"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T01:00:01Z",
+          "updatedAt": "2025-05-20T01:00:01Z",
+          "comments": [
+            {
+              "originalPosition": 69,
+              "body": "This is meant as an absolute design objective: to minimize the number of objects while still meeting all functional requirements. \r\nWe can consider rewording the sentence to something like:\r\n\u201ckeeping the absolute number of objects as small as possible while still delivering the required function such that there is no duplication between objects and where one piece of information can be derived from the other pieces of information, it is not itself represented as an object.\u201d",
+              "createdAt": "2025-05-20T01:00:01Z",
+              "updatedAt": "2025-05-20T01:00:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAnLE",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T01:23:07Z",
+          "updatedAt": "2025-05-20T01:23:07Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "Done",
+              "createdAt": "2025-05-20T01:23:07Z",
+              "updatedAt": "2025-05-20T01:23:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAnOu",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T01:23:18Z",
+          "updatedAt": "2025-05-20T01:23:18Z",
+          "comments": [
+            {
+              "originalPosition": 39,
+              "body": "Done",
+              "createdAt": "2025-05-20T01:23:18Z",
+              "updatedAt": "2025-05-20T01:23:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAnQS",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T01:23:24Z",
+          "updatedAt": "2025-05-20T01:23:24Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "Done",
+              "createdAt": "2025-05-20T01:23:24Z",
+              "updatedAt": "2025-05-20T01:23:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAnS5",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T01:23:32Z",
+          "updatedAt": "2025-05-20T01:23:33Z",
+          "comments": [
+            {
+              "originalPosition": 90,
+              "body": "Done",
+              "createdAt": "2025-05-20T01:23:32Z",
+              "updatedAt": "2025-05-20T01:23:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAnVQ",
+          "commit": {
+            "abbreviatedOid": "41e6a90"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T01:23:41Z",
+          "updatedAt": "2025-05-20T01:23:41Z",
+          "comments": [
+            {
+              "originalPosition": 91,
+              "body": "Done",
+              "createdAt": "2025-05-20T01:23:41Z",
+              "updatedAt": "2025-05-20T01:23:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qAonm",
+          "commit": {
+            "abbreviatedOid": "b1a48a8"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T01:28:59Z",
+          "updatedAt": "2025-05-20T01:29:00Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "Joe suggest, quoted above:\uff1a \"Protocol designers may also create an information model if the resulting data models are complex or numerous.\"",
+              "createdAt": "2025-05-20T01:29:00Z",
+              "updatedAt": "2025-05-20T01:29:00Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qDn1g",
+          "commit": {
+            "abbreviatedOid": "c1abc2e"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T07:49:47Z",
+          "updatedAt": "2025-05-20T07:50:50Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "```suggestion\r\nProtocol designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.\r\n```",
+              "createdAt": "2025-05-20T07:49:47Z",
+              "updatedAt": "2025-05-20T07:50:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qDt6f",
+          "commit": {
+            "abbreviatedOid": "b1a48a8"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T07:57:54Z",
+          "updatedAt": "2025-05-20T07:57:55Z",
+          "comments": [
+            {
+              "originalPosition": 69,
+              "body": "That's better. Thanks, Ran.",
+              "createdAt": "2025-05-20T07:57:54Z",
+              "updatedAt": "2025-05-20T07:57:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qETXD",
+          "commit": {
+            "abbreviatedOid": "b1a48a8"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-20T08:36:29Z",
+          "updatedAt": "2025-05-20T08:36:29Z",
+          "comments": [
+            {
+              "originalPosition": 69,
+              "body": "Text updated",
+              "createdAt": "2025-05-20T08:36:29Z",
+              "updatedAt": "2025-05-20T08:36:29Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "id": "PR_kwDOOWPBqs6XC2hF",
+      "title": "Minor editorial remove references that are duplicated",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/45",
+      "state": "OPEN",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Duplicate references found:\r\n{{?RFC7950}}: 2 times\r\n{{?RFC3410}}: 2 times\r\n{{?RFC3139}}: 2 times\r\n{{?RFC3535}}: 2 times\r\n{{?RFC2119}}: 2 times\r\n{{?RFC3444}}: 3 times\r\n{{?RFC5424}}: 3 times\r\n{{?RFC6241}}: 2 times\r\n{{?RFC7011}}: 2 times",
+      "createdAt": "2025-05-21T11:29:57Z",
+      "updatedAt": "2025-05-21T16:40:56Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "27d5a21c46253511570502c4ead89b5ed6aa3c5e",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "minor-editorial-references",
+      "headRefOid": "8d1d3d7ba0dc883eed0d2a00287944ec9cbbe586",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6qVAFT",
+          "commit": {
+            "abbreviatedOid": "1d3558f"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-21T12:58:58Z",
+          "updatedAt": "2025-05-21T12:59:50Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\n   (SMIv2) and\r\n```\r\n\r\nas the acronym was also introduced",
+              "createdAt": "2025-05-21T12:58:58Z",
+              "updatedAt": "2025-05-21T12:59:50Z"
+            },
+            {
+              "originalPosition": 24,
+              "body": "```suggestion\r\n   one simple network management protocol (\r\n```",
+              "createdAt": "2025-05-21T12:59:21Z",
+              "updatedAt": "2025-05-21T12:59:50Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\r\n   SNMP) towards support for additional schema\r\n```",
+              "createdAt": "2025-05-21T12:59:35Z",
+              "updatedAt": "2025-05-21T12:59:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qW_e-",
+          "commit": {
+            "abbreviatedOid": "b5a3b3d"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-21T15:17:27Z",
+          "updatedAt": "2025-05-21T15:17:54Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\r\n   one simple network management protocol\r\n```",
+              "createdAt": "2025-05-21T15:17:27Z",
+              "updatedAt": "2025-05-21T15:17:54Z"
+            },
+            {
+              "originalPosition": 27,
+              "body": "```suggestion\r\n   (SNMP) towards support for additional schema\r\n```",
+              "createdAt": "2025-05-21T15:17:36Z",
+              "updatedAt": "2025-05-21T15:17:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6qYMq7",
+          "commit": {
+            "abbreviatedOid": "8d1d3d7"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-21T16:40:56Z",
+          "updatedAt": "2025-05-21T16:40:56Z",
+          "comments": []
         }
       ]
     }
