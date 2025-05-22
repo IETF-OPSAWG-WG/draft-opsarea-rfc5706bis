@@ -2023,102 +2023,94 @@ usage accounting<a href="#section-4.1-7.2.1" class="pilcrow">¶</a></p>
    -- once you have the data, its meaning is a function of the managed
    entity.<a href="#section-4.1-9" class="pilcrow">¶</a></p>
 <p id="section-4.1-10">Information models are helpful to try to focus interoperability on
-   the semantic level -- they establish standards for what information
-   should be gathered and how gathered information might be used,
+   the semantic level -- they define what information
+   should be gathered and how that information might be used,
    regardless of which management interface carries the data or which
-   vendor produces the product. The use of an information model might
+   vendor implementation produces the data. The use of an information model might
    help improve the ability of operators to correlate messages in
-   different protocols where the data overlaps, such as a syslog message
-   and an SNMP notification about the same event. An information model
+   different protocols where the data overlaps, such as a YANG data model
+   and IPFIX Information Elements about the same event. An information model
    might identify which error conditions should be counted separately,
-   and which error conditions can be counted together in a single
-   counter. Then, whether the counter is gathered via SNMP, a CLI
-   command, or a syslog message, the counter will have the same meaning.<a href="#section-4.1-10" class="pilcrow">¶</a></p>
+   and which error conditions can be recorded together in a single
+   counter. Then, whether the counter is gathered via, e.g., NETCONF or
+   exported via IPFIX, the counter will have the same meaning.<a href="#section-4.1-10" class="pilcrow">¶</a></p>
 <p id="section-4.1-11">Protocol designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
    monitoring, controlling, or troubleshooting a new protocol and its
    extensions. This includes identifying key parameters that reflect the
    protocol’s behavior, performance metrics, error indicators, and any
    contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.<a href="#section-4.1-11" class="pilcrow">¶</a></p>
-<span id="name-ims-and-dms"></span><div id="fig-im-dm">
+<span id="name-information-modelsims-and-d"></span><div id="fig-im-dm">
 <figure id="figure-1">
           <div id="section-4.1-12.1">
             <div class="alignCenter art-svg artwork" id="section-4.1-12.1.1">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="160" width="504" viewBox="0 0 504 160" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
-                <path d="M 32,64 L 32,80" fill="none" stroke="black"></path>
-                <path d="M 120,48 L 120,80" fill="none" stroke="black"></path>
-                <path d="M 200,64 L 200,80" fill="none" stroke="black"></path>
-                <path d="M 256,32 L 272,32" fill="none" stroke="black"></path>
-                <path d="M 32,64 L 200,64" fill="none" stroke="black"></path>
-                <path d="M 256,96 L 272,96" fill="none" stroke="black"></path>
-                <polygon class="arrowhead" points="280,96 268,90.4 268,101.6" fill="black" transform="rotate(0,272,96)"></polygon>
-                <polygon class="arrowhead" points="280,32 268,26.4 268,37.6" fill="black" transform="rotate(0,272,32)"></polygon>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="176" width="480" viewBox="0 0 480 176" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+                <path d="M 8,64 L 8,80" fill="none" stroke="black"></path>
+                <path d="M 96,48 L 96,80" fill="none" stroke="black"></path>
+                <path d="M 176,64 L 176,80" fill="none" stroke="black"></path>
+                <path d="M 232,32 L 248,32" fill="none" stroke="black"></path>
+                <path d="M 8,64 L 176,64" fill="none" stroke="black"></path>
+                <path d="M 232,96 L 248,96" fill="none" stroke="black"></path>
+                <polygon class="arrowhead" points="256,96 244,90.4 244,101.6" fill="black" transform="rotate(0,248,96)"></polygon>
+                <polygon class="arrowhead" points="256,32 244,26.4 244,37.6" fill="black" transform="rotate(0,248,32)"></polygon>
                 <g class="text">
-                  <text x="116" y="36">IM</text>
-                  <text x="360" y="36">conceptual/abstract</text>
-                  <text x="464" y="36">model</text>
-                  <text x="296" y="52">for</text>
-                  <text x="352" y="52">designers</text>
-                  <text x="408" y="52">and</text>
-                  <text x="464" y="52">operators</text>
-                  <text x="36" y="100">DM</text>
-                  <text x="116" y="100">DM</text>
-                  <text x="204" y="100">DM</text>
-                  <text x="352" y="100">concrete/detailed</text>
-                  <text x="448" y="100">model</text>
-                  <text x="320" y="116">for</text>
-                  <text x="388" y="116">implementers</text>
-                  <text x="48" y="148">Information</text>
-                  <text x="124" y="148">Models</text>
-                  <text x="168" y="148">and</text>
-                  <text x="204" y="148">Data</text>
-                  <text x="252" y="148">Models</text>
+                  <text x="92" y="36">IM</text>
+                  <text x="336" y="36">conceptual/abstract</text>
+                  <text x="440" y="36">model</text>
+                  <text x="272" y="52">for</text>
+                  <text x="328" y="52">designers</text>
+                  <text x="384" y="52">and</text>
+                  <text x="440" y="52">operators</text>
+                  <text x="12" y="100">DM</text>
+                  <text x="92" y="100">DM</text>
+                  <text x="180" y="100">DM</text>
+                  <text x="328" y="100">concrete/detailed</text>
+                  <text x="424" y="100">model</text>
+                  <text x="296" y="116">for</text>
+                  <text x="364" y="116">implementers</text>
                 </g>
               </svg><a href="#section-4.1-12.1.1" class="pilcrow">¶</a>
 </div>
 </div>
 <figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
-<a href="#name-ims-and-dms" class="selfRef">IMs and DMs</a>
+<a href="#name-information-modelsims-and-d" class="selfRef">Information Models（IMs） and Data Models（DMs）</a>
           </figcaption></figure>
 </div>
-<p id="section-4.1-13">Protocol designers may decide an information model or data model
-   would be appropriate for managing the new protocol or protocol
-   extensions.<a href="#section-4.1-13" class="pilcrow">¶</a></p>
-<p id="section-4.1-14">"On the Difference between Information Models and Data Models"
-   <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span> can be helpful in determining what information to consider
-   regarding information models (IMs), as compared to data models (DMs).<a href="#section-4.1-14" class="pilcrow">¶</a></p>
-<p id="section-4.1-15">Information models should come from the protocol WGs and include
+<p id="section-4.1-13">"On the Difference between Information Models and Data Models"
+   <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span> is helpful in determining what information to consider
+   regarding information models (IMs), as compared to data models (DMs).<a href="#section-4.1-13" class="pilcrow">¶</a></p>
+<p id="section-4.1-14">Protocol Designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).<a href="#section-4.1-14" class="pilcrow">¶</a></p>
+<p id="section-4.1-15">Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop data models that will be used for managing the protocol.<a href="#section-4.1-15" class="pilcrow">¶</a></p>
+<p id="section-4.1-16">Specifically, Protocol Designers should develop an information model if multiple data model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.<a href="#section-4.1-16" class="pilcrow">¶</a></p>
+<p id="section-4.1-17">Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
    relevant. There are a number of information models contained in
-   protocol WG RFCs. Some examples:<a href="#section-4.1-15" class="pilcrow">¶</a></p>
+   protocol WG RFCs. Some examples:<a href="#section-4.1-17" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.1-16.1">
-            <p id="section-4.1-16.1.1"><span>[<a href="#RFC3060" class="cite xref">RFC3060</a>]</span> - Policy Core Information Model version 1<a href="#section-4.1-16.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-4.1-18.1">
+            <p id="section-4.1-18.1.1"><span>[<a href="#RFC3060" class="cite xref">RFC3060</a>]</span> - Policy Core Information Model version 1<a href="#section-4.1-18.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.1-16.2">
-            <p id="section-4.1-16.2.1"><span>[<a href="#RFC3290" class="cite xref">RFC3290</a>]</span> - An Informal Management Model for Diffserv Routers<a href="#section-4.1-16.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.1-18.2">
+            <p id="section-4.1-18.2.1"><span>[<a href="#RFC3290" class="cite xref">RFC3290</a>]</span> - An Informal Management Model for Diffserv Routers<a href="#section-4.1-18.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.1-16.3">
-            <p id="section-4.1-16.3.1"><span>[<a href="#RFC3460" class="cite xref">RFC3460</a>]</span> - Policy Core Information Model Extensions<a href="#section-4.1-16.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.1-18.3">
+            <p id="section-4.1-18.3.1"><span>[<a href="#RFC3460" class="cite xref">RFC3460</a>]</span> - Policy Core Information Model Extensions<a href="#section-4.1-18.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.1-16.4">
-            <p id="section-4.1-16.4.1"><span>[<a href="#RFC3585" class="cite xref">RFC3585</a>]</span> - IPsec Configuration Policy Information Model<a href="#section-4.1-16.4.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.1-18.4">
+            <p id="section-4.1-18.4.1"><span>[<a href="#RFC3585" class="cite xref">RFC3585</a>]</span> - IPsec Configuration Policy Information Model<a href="#section-4.1-18.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.1-16.5">
-            <p id="section-4.1-16.5.1"><span>[<a href="#RFC3644" class="cite xref">RFC3644</a>]</span> - Policy Quality of Service Information Model<a href="#section-4.1-16.5.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.1-18.5">
+            <p id="section-4.1-18.5.1"><span>[<a href="#RFC3644" class="cite xref">RFC3644</a>]</span> - Policy Quality of Service Information Model<a href="#section-4.1-18.5.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.1-16.6">
-            <p id="section-4.1-16.6.1"><span>[<a href="#RFC3670" class="cite xref">RFC3670</a>]</span> - Information Model for Describing Network Device QoS
-Datapath Mechanisms<a href="#section-4.1-16.6.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-4.1-16.7">
-            <p id="section-4.1-16.7.1"><span>[<a href="#RFC3805" class="cite xref">RFC3805</a>]</span> - Printer MIB v2 (contains both an IM and a DM)<a href="#section-4.1-16.7.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.1-18.6">
+            <p id="section-4.1-18.6.1"><span>[<a href="#RFC3670" class="cite xref">RFC3670</a>]</span> - Information Model for Describing Network Device QoS
+Datapath Mechanisms<a href="#section-4.1-18.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-4.1-17">Management protocol standards and management data model standards
+<p id="section-4.1-19">Management protocol standards and management data model standards
    often contain compliance clauses to ensure interoperability.
    Manageability considerations should include discussion of which level
-   of compliance is expected to be supported for interoperability.<a href="#section-4.1-17" class="pilcrow">¶</a></p>
+   of compliance is expected to be supported for interoperability.<a href="#section-4.1-19" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-mgt-info">
@@ -2182,31 +2174,29 @@ Datapath Mechanisms<a href="#section-4.1-16.6.1" class="pilcrow">¶</a></p>
    possible by applying the following criteria:<a href="#section-4.2.1-1" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-4.2.1-2">
 <li id="section-4.2.1-2.1">
-              <p id="section-4.2.1-2.1.1">Start with a small set of essential objects and add only as
-further objects are needed.<a href="#section-4.2.1-2.1.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.1.1">Start with a small set of essential objects and make additions only as
+further objects are needed with the objective of keeping the absolute number of objects as small as possible while still delivering the required function such that there is
+no duplication between objects and where one piece of information can be derived from the other pieces of information, it is not itself represented as an object.<a href="#section-4.2.1-2.1.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.2">
-              <p id="section-4.2.1-2.2.1">Require that objects be essential for management.<a href="#section-4.2.1-2.2.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.2.1">Require that all objects be essential for management.<a href="#section-4.2.1-2.2.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.3">
-              <p id="section-4.2.1-2.3.1">Consider evidence of current use and/or utility.<a href="#section-4.2.1-2.3.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.3.1">Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.<a href="#section-4.2.1-2.3.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.4">
-              <p id="section-4.2.1-2.4.1">Limit the total number of objects.<a href="#section-4.2.1-2.4.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.4.1">Exclude objects that can be derived from others in this or
+other information models.<a href="#section-4.2.1-2.4.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.5">
-              <p id="section-4.2.1-2.5.1">Exclude objects that are simply derivable from others in this or
-other information models.<a href="#section-4.2.1-2.5.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.5.1">Avoid causing critical sections to be heavily instrumented. A
+guideline is one counter per critical section per layer.<a href="#section-4.2.1-2.5.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.6">
-              <p id="section-4.2.1-2.6.1">Avoid causing critical sections to be heavily instrumented. A
-guideline is one counter per critical section per layer.<a href="#section-4.2.1-2.6.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.6.1">When defining an information model using  YANG Data Structure Extensions <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> (thereby keeping it abstract and implementation-agnostic per <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>) ensure that the information model remains simple, modular, and clear by following the authoring guidelines in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-4.2.1-2.6.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.7">
-              <p id="section-4.2.1-2.7.1">When using YANG to complement or define an information model,
-ensure that the model maintains simplicity, modularity, and
-clarity.  Specific guidelines to consider when authoring YANG
-modules are described in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-4.2.1-2.7.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.7.1">When illustrating the abstract information model, use YANG Tree Diagrams <span>[<a href="#RFC8340" class="cite xref">RFC8340</a>]</span> to provide a simple, standardized, and implementation-neutral model structure.<a href="#section-4.2.1-2.7.1" class="pilcrow">¶</a></p>
 </li>
           </ol>
 </section>
@@ -3025,10 +3015,6 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
       <dd>
 <span class="refAuthor">Moore, B.</span>, <span class="refAuthor">Durham, D.</span>, <span class="refAuthor">Strassner, J.</span>, <span class="refAuthor">Westerinen, A.</span>, and <span class="refAuthor">W. Weiss</span>, <span class="refTitle">"Information Model for Describing Network Device QoS Datapath Mechanisms"</span>, <span class="seriesInfo">RFC 3670</span>, <span class="seriesInfo">DOI 10.17487/RFC3670</span>, <time datetime="2004-01" class="refDate">January 2004</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3670">https://www.rfc-editor.org/rfc/rfc3670</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC3805">[RFC3805]</dt>
-      <dd>
-<span class="refAuthor">Bergman, R.</span>, <span class="refAuthor">Lewis, H.</span>, and <span class="refAuthor">I. McDonald</span>, <span class="refTitle">"Printer MIB v2"</span>, <span class="seriesInfo">RFC 3805</span>, <span class="seriesInfo">DOI 10.17487/RFC3805</span>, <time datetime="2004-06" class="refDate">June 2004</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3805">https://www.rfc-editor.org/rfc/rfc3805</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC5321">[RFC5321]</dt>
       <dd>
 <span class="refAuthor">Klensin, J.</span>, <span class="refTitle">"Simple Mail Transfer Protocol"</span>, <span class="seriesInfo">RFC 5321</span>, <span class="seriesInfo">DOI 10.17487/RFC5321</span>, <time datetime="2008-10" class="refDate">October 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5321">https://www.rfc-editor.org/rfc/rfc5321</a>&gt;</span>. </dd>
@@ -3085,9 +3071,17 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
       <dd>
 <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Liu, W.</span>, and <span class="refAuthor">A. Farrel</span>, <span class="refTitle">"Service Models Explained"</span>, <span class="seriesInfo">RFC 8309</span>, <span class="seriesInfo">DOI 10.17487/RFC8309</span>, <time datetime="2018-01" class="refDate">January 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8309">https://www.rfc-editor.org/rfc/rfc8309</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC8340">[RFC8340]</dt>
+      <dd>
+<span class="refAuthor">Bjorklund, M.</span> and <span class="refAuthor">L. Berger, Ed.</span>, <span class="refTitle">"YANG Tree Diagrams"</span>, <span class="seriesInfo">BCP 215</span>, <span class="seriesInfo">RFC 8340</span>, <span class="seriesInfo">DOI 10.17487/RFC8340</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8340">https://www.rfc-editor.org/rfc/rfc8340</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC8499">[RFC8499]</dt>
       <dd>
 <span class="refAuthor">Hoffman, P.</span>, <span class="refAuthor">Sullivan, A.</span>, and <span class="refAuthor">K. Fujiwara</span>, <span class="refTitle">"DNS Terminology"</span>, <span class="seriesInfo">RFC 8499</span>, <span class="seriesInfo">DOI 10.17487/RFC8499</span>, <time datetime="2019-01" class="refDate">January 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8499">https://www.rfc-editor.org/rfc/rfc8499</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8791">[RFC8791]</dt>
+      <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Björklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"YANG Data Structure Extensions"</span>, <span class="seriesInfo">RFC 8791</span>, <span class="seriesInfo">DOI 10.17487/RFC8791</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8791">https://www.rfc-editor.org/rfc/rfc8791</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9182">[RFC9182]</dt>
       <dd>
