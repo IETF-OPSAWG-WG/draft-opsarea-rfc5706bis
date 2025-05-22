@@ -715,17 +715,17 @@ author:
    entity.
 
    Information models are helpful to try to focus interoperability on
-   the semantic level -- they establish standards for what information
-   should be gathered and how gathered information might be used,
+   the semantic level -- they define what information
+   should be gathered and how that information might be used,
    regardless of which management interface carries the data or which
-   vendor produces the product. The use of an information model might
+   vendor implementation produces the data. The use of an information model might
    help improve the ability of operators to correlate messages in
-   different protocols where the data overlaps, such as a syslog message
-   and an SNMP notification about the same event. An information model
+   different protocols where the data overlaps, such as a YANG data model
+   and IPFIX Information Elements about the same event. An information model
    might identify which error conditions should be counted separately,
-   and which error conditions can be counted together in a single
-   counter. Then, whether the counter is gathered via SNMP, a CLI
-   command, or a syslog message, the counter will have the same meaning.
+   and which error conditions can be recorded together in a single
+   counter. Then, whether the counter is gathered via, e.g., NETCONF or
+   exported via IPFIX, the counter will have the same meaning.
 
    Protocol designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
@@ -742,17 +742,21 @@ author:
    DM        DM         DM     --> concrete/detailed model
                                       for implementers
 
-Information Models and Data Models
-~~~~
-{: #fig-im-dm title="IMs and DMs" artwork-align="center"}
 
-   Protocol designers may decide an information model or data model
-   would be appropriate for managing the new protocol or protocol
-   extensions.
+~~~~
+{: #fig-im-dm title="Information Models（IMs） and Data Models（DMs）" artwork-align="center"}
 
    "On the Difference between Information Models and Data Models"
-   {{?RFC3444}} can be helpful in determining what information to consider
+   {{?RFC3444}} is helpful in determining what information to consider
    regarding information models (IMs), as compared to data models (DMs).
+
+   Protocol Designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
+
+   Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop data models that will be used for managing the protocol.
+
+   Specifically, Protocol Designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.
+
+
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
@@ -771,8 +775,6 @@ Information Models and Data Models
 
    *  {{?RFC3670}} - Information Model for Describing Network Device QoS
       Datapath Mechanisms
-
-   *  {{?RFC3805}} - Printer MIB v2 (contains both an IM and a DM)
 
    Management protocol standards and management data model standards
    often contain compliance clauses to ensure interoperability.
@@ -840,25 +842,22 @@ Information Models and Data Models
    This document recommends keeping the information model as simple as
    possible by applying the following criteria:
 
-   1.  Start with a small set of essential objects and add only as
-       further objects are needed.
+   1.  Start with a small set of essential objects and make additions only as
+       further objects are needed with the objective of keeping the absolute number of objects as small as possible while still delivering the required function such that there is
+       no duplication between objects and where one piece of information can be derived from the other pieces of information, it is not itself represented as an object.
 
-   2.  Require that objects be essential for management.
+   2.  Require that all objects be essential for management.
 
-   3.  Consider evidence of current use and/or utility.
+   3.  Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.
 
-   4.  Limit the total number of objects.
-
-   5.  Exclude objects that are simply derivable from others in this or
+   4.  Exclude objects that can be derived from others in this or
        other information models.
 
-   6.  Avoid causing critical sections to be heavily instrumented. A
+   5.  Avoid causing critical sections to be heavily instrumented. A
        guideline is one counter per critical section per layer.
 
-   7.  When using YANG to complement or define an information model,
-       ensure that the model maintains simplicity, modularity, and
-       clarity.  Specific guidelines to consider when authoring YANG
-       modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
+   6.  When defining an information model using  YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}) ensure that the information model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
+  7.  When illustrating the abstract information model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
