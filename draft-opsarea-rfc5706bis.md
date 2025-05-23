@@ -25,6 +25,11 @@ informative:
     date: 2025
     target: https://github.com/IETF-OPS-DIR/Review-Template/tree/main
 
+  IETF-OPS-Dir:
+    title: Ops Directorate (opsdir)
+    date: 2025
+    target: https://datatracker.ietf.org/group/opsdir/about/
+
   IETF-HACKATHONS:
     target: https://www.ietf.org/meeting/hackathons/
     title: IETF Hackathons
@@ -96,9 +101,6 @@ author:
 
 --- middle
 
-#  TO DO LIST
-
-   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 #  Introduction
 
@@ -254,7 +256,7 @@ author:
    them to operational needs, especially configuration.
 
    One issue discussed was the user-unfriendliness of the binary format
-   of SNMP {{?RFC3410}} and Common Open Policy Service (COPS) Usage for
+   of SNMP and Common Open Policy Service (COPS) Usage for
    Policy Provisioning (COPS-PR) {{?RFC3084}}, and it was recommended that
    the IETF explore an XML-based Structure of Management Information and
    an XML-based protocol for configuration.
@@ -291,9 +293,26 @@ author:
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
-   * TBC
+   * Change intended status from Informational to Best Current Practice
 
-   * TBC
+   * Move the "Operational Considerations" Appendix A to a Checklist maintained in Github
+
+   * Add a structured framing for the requirement of an "Operational and
+      Management Considerations" section in Internet-Drafts
+
+   * Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
+
+      * Add a "YANG Data Model Considerations" section
+
+      * Update the "Available Management Technologies" landscape
+
+   * Add an "Operational and Management Tooling Considerations" section
+
+
+##  TO DO LIST
+
+   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
+
 
 # Key Concepts, Terminology, and Technological Landscape
 
@@ -631,7 +650,7 @@ author:
 
    WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble. NETCONF {{?RFC6241}} addresses this in a generic manner
+   causes trouble. NETCONF addresses this in a generic manner
    by allowing an operator to lock the configuration on multiple
    devices, perform the configuration settings/changes, check that they
    are OK (undo if not), and then unlock the devices.
@@ -692,9 +711,7 @@ author:
    management systems tend to speak whatever the boxes support, whether
    or not the IETF likes this. The IETF is moving from support for one
    schema language for modeling the structure of management information
-   (Structure of Management Information Version 2 (SMIv2)) and
-   one simple network management protocol (Simple Network Management
-   Protocol (SNMP) {{?RFC3410}}) towards support for additional schema
+   (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
    languages and additional management protocols suited to different
    purposes. Other Standard Development Organizations (e.g., the
    Distributed Management Task Force - DMTF, the Tele-Management Forum -
@@ -724,20 +741,24 @@ author:
    entity.
 
    Information models are helpful to try to focus interoperability on
-   the semantic level -- they establish standards for what information
-   should be gathered and how gathered information might be used,
+   the semantic level -- they define what information
+   should be gathered and how that information might be used,
    regardless of which management interface carries the data or which
-   vendor produces the product. The use of an information model might
+   vendor implementation produces the data. The use of an information model might
    help improve the ability of operators to correlate messages in
-   different protocols where the data overlaps, such as a syslog message
-   and an SNMP notification about the same event. An information model
+   different protocols where the data overlaps, such as a YANG data model
+   and IPFIX Information Elements about the same event. An information model
    might identify which error conditions should be counted separately,
-   and which error conditions can be counted together in a single
-   counter. Then, whether the counter is gathered via SNMP, a CLI
-   command, or a syslog message, the counter will have the same meaning.
+   and which error conditions can be recorded together in a single
+   counter. Then, whether the counter is gathered via, e.g., NETCONF or
+   exported via IPFIX, the counter will have the same meaning.
 
-   Protocol designers should consider which information might be useful
-   for managing the new protocol or protocol extensions.
+   Protocol designers must consider what operational, configuration,
+   state, or statistical information will be relevant for effectively
+   monitoring, controlling, or troubleshooting a new protocol and its
+   extensions. This includes identifying key parameters that reflect the
+   protocol’s behavior, performance metrics, error indicators, and any
+   contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
 
 ~~~~ aasvg
              IM                --> conceptual/abstract model
@@ -747,17 +768,21 @@ author:
    DM        DM         DM     --> concrete/detailed model
                                       for implementers
 
-Information Models and Data Models
-~~~~
-{: #fig-im-dm title="IMs and DMs" artwork-align="center"}
 
-   Protocol designers may decide an information model or data model
-   would be appropriate for managing the new protocol or protocol
-   extensions.
+~~~~
+{: #fig-im-dm title="Information Models（IMs） and Data Models（DMs）" artwork-align="center"}
 
    "On the Difference between Information Models and Data Models"
-   {{?RFC3444}} can be helpful in determining what information to consider
+   {{?RFC3444}} is helpful in determining what information to consider
    regarding information models (IMs), as compared to data models (DMs).
+
+   Protocol Designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
+
+   Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop data models that will be used for managing the protocol.
+
+   Specifically, Protocol Designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.
+
+
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
@@ -776,8 +801,6 @@ Information Models and Data Models
 
    *  {{?RFC3670}} - Information Model for Describing Network Device QoS
       Datapath Mechanisms
-
-   *  {{?RFC3805}} - Printer MIB v2 (contains both an IM and a DM)
 
    Management protocol standards and management data model standards
    often contain compliance clauses to ensure interoperability.
@@ -845,25 +868,22 @@ Information Models and Data Models
    This document recommends keeping the information model as simple as
    possible by applying the following criteria:
 
-   1.  Start with a small set of essential objects and add only as
-       further objects are needed.
+   1.  Start with a small set of essential objects and make additions only as
+       further objects are needed with the objective of keeping the absolute number of objects as small as possible while still delivering the required function such that there is
+       no duplication between objects and where one piece of information can be derived from the other pieces of information, it is not itself represented as an object.
 
-   2.  Require that objects be essential for management.
+   2.  Require that all objects be essential for management.
 
-   3.  Consider evidence of current use and/or utility.
+   3.  Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.
 
-   4.  Limit the total number of objects.
-
-   5.  Exclude objects that are simply derivable from others in this or
+   4.  Exclude objects that can be derived from others in this or
        other information models.
 
-   6.  Avoid causing critical sections to be heavily instrumented. A
+   5.  Avoid causing critical sections to be heavily instrumented. A
        guideline is one counter per critical section per layer.
 
-   7.  When using YANG to complement or define an information model,
-       ensure that the model maintains simplicity, modularity, and
-       clarity.  Specific guidelines to consider when authoring YANG
-       modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
+   6.  When defining an information model using  YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}) ensure that the information model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
+  7.  When illustrating the abstract information model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
@@ -898,6 +918,25 @@ Information Models and Data Models
      with strong multi-party consensus. Examples of service models include
      the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)
      {{?RFC8499}}.
+
+  A common challenge in YANG data model development lies in defining the
+  relationships between abstract service or network constructs and the
+  underlying device models. Therefore, when designing YANG modules, it
+  is important to go beyond simply modeling configuration and
+  operational data (i.e., leaf nodes), and also consider how the
+  status and relationships of abstract or distributed constructs can
+  be reflected based on parameters available in the network.
+
+  For example, the status of a service may depend on the operational state
+  of multiple network elements to which the service is attached. In such
+  cases, the YANG data model (and its accompanying documentation) should
+  clearly describe how service-level status is derived from underlying
+  device-level information. Similarly, it is beneficial to define
+  events (and relevant triggered notifications) that indicate changes in an underlying state,
+  enabling reliable detection and correlation of service-affecting
+  conditions. Including such mechanisms improves the robustness of
+  integrations and helps ensure consistent behavior across
+  implementations.
 
   Specific guidelines to consider when authoring any type of YANG
   modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
@@ -1275,7 +1314,7 @@ Information Models and Data Models
    Protocol designers should consider how access control lists are
    maintained and updated.
 
-   Standard SNMP notifications or syslog messages {{?RFC5424}} might
+   Standard SNMP notifications or syslog messages might
    already exist, or can be defined, to alert operators to the
    conditions identified in the security considerations for the new
    protocol. For example, you can log all the commands entered by the
@@ -1405,7 +1444,7 @@ Information Models and Data Models
    should consider how using existing protocols and data models might
    impact network operations.
 
-##  Null Manageability Considerations Sections
+##  Null Operations and Manageability Considerations Section
 
    A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
@@ -1477,7 +1516,15 @@ Information Models and Data Models
 #  Acknowledgements
 {:numbered="false"}
 
-   TBC.
+The authors wish to thank the following individuals and groups.
+
+
+The IETF Ops Directorate:
+   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.
+
+
+The AD championing the update:
+   : Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 
 The author of RFC 5706:
