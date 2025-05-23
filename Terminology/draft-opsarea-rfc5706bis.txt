@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 16 November 2025                                      A. Farrel
+Expires: 24 November 2025                                      A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 16 November 2025                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             15 May 2025
+                                                             23 May 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 November 2025.
+   This Internet-Draft will expire on 24 November 2025.
 
 Copyright Notice
 
@@ -72,61 +72,56 @@ Copyright Notice
 
 Table of Contents
 
-   1.  TO DO LIST
-   2.  Introduction
-     2.1.  Designing for Operations and Management
-     2.2.  This Document
-     2.3.  Motivation
-     2.4.  Background
-     2.5.  Changes Since RFC 5706
-   3.  Key Concepts, Terminology, and Technological Landscape
-     3.1.  Terminology
-     3.2.  Available Management Technologies
-   4.  Operational Considerations - How Will the New Protocol Fit into
+   1.  Introduction
+     1.1.  Designing for Operations and Management
+     1.2.  This Document
+     1.3.  Motivation
+     1.4.  Background
+     1.5.  Changes Since RFC 5706
+     1.6.  TO DO LIST
+   2.  Key Concepts, Terminology, and Technological Landscape
+     2.1.  Terminology
+     2.2.  Available Management Technologies
+   3.  Operational Considerations - How Will the New Protocol Fit into
            the Current Environment?
-     4.1.  Operations
-     4.2.  Installation and Initial Setup
-     4.3.  Migration Path
-     4.4.  Requirements on Other Protocols and Functional Components
-     4.5.  Impact on Network Operation
-     4.6.  Verifying Correct Operation
-   5.  Management Considerations - How Will the Protocol Be Managed?
-     5.1.  Interoperability
-     5.2.  Management Information
-       5.2.1.  Information Model Design
-       5.2.2.  YANG Data Model Considerations
-     5.3.  Fault Management
-       5.3.1.  Liveness Detection and Monitoring
-       5.3.2.  Fault Determination
-       5.3.3.  Root Cause Analysis
-       5.3.4.  Fault Isolation
-     5.4.  Configuration Management
-       5.4.1.  Verifying Correct Operation
-     5.5.  Accounting Management
-     5.6.  Performance Management
-       5.6.1.  Monitoring the Protocol
-       5.6.2.  Monitoring the Device
-       5.6.3.  Monitoring the Network
-       5.6.4.  Monitoring the Service
-     5.7.  Security Management
-   6.  Operational and Management Tooling Considerations
-   7.  Documentation Guidelines
-     7.1.  Recommended Discussions
-     7.2.  Null Manageability Considerations Sections
-     7.3.  Placement of Operations and Manageability Considerations
+     3.1.  Operations
+     3.2.  Installation and Initial Setup
+     3.3.  Migration Path
+     3.4.  Requirements on Other Protocols and Functional Components
+     3.5.  Impact on Network Operation
+     3.6.  Verifying Correct Operation
+   4.  Management Considerations - How Will the Protocol Be Managed?
+     4.1.  Interoperability
+     4.2.  Management Information
+       4.2.1.  Information Model Design
+       4.2.2.  YANG Data Model Considerations
+     4.3.  Fault Management
+       4.3.1.  Liveness Detection and Monitoring
+       4.3.2.  Fault Determination
+       4.3.3.  Root Cause Analysis
+       4.3.4.  Fault Isolation
+     4.4.  Configuration Management
+       4.4.1.  Verifying Correct Operation
+     4.5.  Accounting Management
+     4.6.  Performance Management
+       4.6.1.  Monitoring the Protocol
+       4.6.2.  Monitoring the Device
+       4.6.3.  Monitoring the Network
+       4.6.4.  Monitoring the Service
+     4.7.  Security Management
+   5.  Operational and Management Tooling Considerations
+   6.  Documentation Guidelines
+     6.1.  Recommended Discussions
+     6.2.  Null Operations and Manageability Considerations Section
+     6.3.  Placement of Operations and Manageability Considerations
            Sections
-   8.  IANA Considerations
-   9.  Security Considerations
-   10. Informative References
+   7.  IANA Considerations
+   8.  Security Considerations
+   9.  Informative References
    Acknowledgements
    Authors' Addresses
 
-1.  TO DO LIST
-
-   See the list of open issues at https://github.com/IETF-OPSAWG-WG/
-   draft-opsarea-rfc5706bis/issues
-
-2.  Introduction
+1.  Introduction
 
    Often when new protocols or protocol extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
@@ -145,9 +140,9 @@ Table of Contents
    progressed for publication as an RFC.  It removes outdated references
    and aligns with current practices, protocols, and technologies used
    in operating and managing network devices and services.  See
-   Section 2.5.
+   Section 1.5.
 
-2.1.  Designing for Operations and Management
+1.1.  Designing for Operations and Management
 
    The operational environment and manageability of the protocol should
    be considered from the start when new protocols are designed.
@@ -182,7 +177,7 @@ Table of Contents
    need to be updated in the future, after further operational
    experience has been gained.
 
-2.2.  This Document
+1.2.  This Document
 
    This document makes a distinction between "Operational
    Considerations" and "Management Considerations", although the two are
@@ -217,7 +212,7 @@ Table of Contents
    address common operations and management needs, is provided in
    [CHECKLIST].
 
-2.3.  Motivation
+1.3.  Motivation
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
@@ -255,7 +250,7 @@ Table of Contents
    deliberate decision, not the result of omission.  This document
    provides some guidelines for those considerations.
 
-2.4.  Background
+1.4.  Background
 
    There have been a significant number of efforts, meetings, and
    documents that are related to Internet operations and management.
@@ -282,10 +277,10 @@ Table of Contents
    especially configuration.
 
    One issue discussed was the user-unfriendliness of the binary format
-   of SNMP [RFC3410] and Common Open Policy Service (COPS) Usage for
-   Policy Provisioning (COPS-PR) [RFC3084], and it was recommended that
-   the IETF explore an XML-based Structure of Management Information and
-   an XML-based protocol for configuration.
+   of SNMP and Common Open Policy Service (COPS) Usage for Policy
+   Provisioning (COPS-PR) [RFC3084], and it was recommended that the
+   IETF explore an XML-based Structure of Management Information and an
+   XML-based protocol for configuration.
 
    Another conclusion was that the tools for event/alarm correlation and
    for root cause analysis and logging are not sufficient and that there
@@ -317,16 +312,34 @@ Table of Contents
    proposed plan of action and provided network management
    recommendations for both the IETF and IRTF.
 
-2.5.  Changes Since RFC 5706
+1.5.  Changes Since RFC 5706
 
    The following changes have been made to the guidelines published in
    [RFC5706]:
 
-   *  TBC
+   *  Change intended status from Informational to Best Current Practice
 
-   *  TBC
+   *  Move the "Operational Considerations" Appendix A to a Checklist
+      maintained in Github
 
-3.  Key Concepts, Terminology, and Technological Landscape
+   *  Add a structured framing for the requirement of an "Operational
+      and Management Considerations" section in Internet-Drafts
+
+   *  Provide focus and details on NETCONF/YANG standards,
+      deprioritizing MIB Modules.
+
+      -  Add a "YANG Data Model Considerations" section
+
+      -  Update the "Available Management Technologies" landscape
+
+   *  Add an "Operational and Management Tooling Considerations" section
+
+1.6.  TO DO LIST
+
+   See the list of open issues at https://github.com/IETF-OPSAWG-WG/
+   draft-opsarea-rfc5706bis/issues
+
+2.  Key Concepts, Terminology, and Technological Landscape
 
    This section introduces the key concepts and terminology used
    throughout the document, and provides an overview of the relevant
@@ -338,7 +351,7 @@ Table of Contents
    such, it does not use the capitalized keywords defined in [RFC2119]
    and [RFC8174].
 
-3.1.  Terminology
+2.1.  Terminology
 
    These terms are:
 
@@ -355,8 +368,8 @@ Table of Contents
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other.  The
       model is independent of any specific repository, software usage,
-      protocol, or platform [RFC3444].  See Section 5.1 and
-      Section 5.2.1 for further discussion of information models.
+      protocol, or platform [RFC3444].  See Section 4.1 and
+      Section 4.2.1 for further discussion of information models.
 
    *  Data model: A set of mechanisms for representing, organizing,
       storing and handling data within a particular type of data store
@@ -368,7 +381,7 @@ Table of Contents
       state (operations on values).  A data model may be derived by
       mapping the contents of an information model or may be developed
       ab initio.  Further discussion of data models can be found in
-      [RFC3444], Section 5.1, and Section 5.2.
+      [RFC3444], Section 4.1, and Section 4.2.
 
    *  OAM: Operations, Administration, and Maintenance [RFC6291]
       [I-D.ietf-opsawg-oam-characterization] is the term given to the
@@ -399,7 +412,7 @@ Table of Contents
       development and specification of new protocols or protocol
       extensions.
 
-3.2.  Available Management Technologies
+2.2.  Available Management Technologies
 
    The IETF has a number of standard management protocols available that
    are suitable for different purposes.  These include:
@@ -430,7 +443,7 @@ Table of Contents
    specific functionality, and provide pointers to the documents that
    define them.
 
-4.  Operational Considerations - How Will the New Protocol Fit into the
+3.  Operational Considerations - How Will the New Protocol Fit into the
     Current Environment?
 
    Designers of a new protocol should carefully consider the operational
@@ -450,7 +463,7 @@ Table of Contents
    loss of reachability.  As a result, many networks turned flap damping
    off.
 
-4.1.  Operations
+3.1.  Operations
 
    Protocol designers can analyze the operational environment and mode
    of work in which the new protocol or extension will work.  Such an
@@ -478,7 +491,7 @@ Table of Contents
    routers and on hosts, or whether notifications for alarms or other
    events will be expected.
 
-4.2.  Installation and Initial Setup
+3.2.  Installation and Initial Setup
 
    Anything that can be configured can be misconfigured.  "Architectural
    Principles of the Internet" [RFC1958], Section 3.8, states: "Avoid
@@ -521,7 +534,7 @@ Table of Contents
    speed or some other relevant factors.  This would help reduce the
    chance of problems caused by technology advancement.
 
-4.3.  Migration Path
+3.3.  Migration Path
 
    If the new protocol is a new version of an existing one, or if it is
    replacing another technology, the protocol designer should consider
@@ -536,7 +549,7 @@ Table of Contents
    operators may deploy aspects of a protocol before deploying the
    protocol fully.
 
-4.4.  Requirements on Other Protocols and Functional Components
+3.4.  Requirements on Other Protocols and Functional Components
 
    Protocol designers should consider the requirements that the new
    protocol might put on other protocols and functional components and
@@ -564,7 +577,7 @@ Table of Contents
    packets off the fast-forwarding path.  Yet, router alert has its own
    problems in impacting router performance.
 
-4.5.  Impact on Network Operation
+3.5.  Impact on Network Operation
 
    The introduction of a new protocol or extensions to an existing
    protocol may have an impact on the operation of existing networks.
@@ -605,7 +618,7 @@ Table of Contents
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-4.6.  Verifying Correct Operation
+3.6.  Verifying Correct Operation
 
    The protocol designer should consider techniques for testing the
    effect that the protocol has had on the network by sending data
@@ -619,7 +632,7 @@ Table of Contents
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
-5.  Management Considerations - How Will the Protocol Be Managed?
+4.  Management Considerations - How Will the Protocol Be Managed?
 
    The considerations of manageability should start from identifying the
    entities to be managed, as well as how the managed protocol is
@@ -674,10 +687,10 @@ Table of Contents
 
    WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble.  NETCONF [RFC6241] addresses this in a generic manner
-   by allowing an operator to lock the configuration on multiple
-   devices, perform the configuration settings/changes, check that they
-   are OK (undo if not), and then unlock the devices.
+   causes trouble.  NETCONF addresses this in a generic manner by
+   allowing an operator to lock the configuration on multiple devices,
+   perform the configuration settings/changes, check that they are OK
+   (undo if not), and then unlock the devices.
 
    Techniques for debugging protocol interactions in a network must be
    part of the network-management discussion.  Implementation source
@@ -699,7 +712,7 @@ Table of Contents
    performance of the server might impact more nodes than the
    performance of a specific client.
 
-5.1.  Interoperability
+4.1.  Interoperability
 
    Just as when deploying protocols that will inter-connect devices,
    management interoperability should be considered -- whether across
@@ -735,15 +748,14 @@ Table of Contents
    management systems tend to speak whatever the boxes support, whether
    or not the IETF likes this.  The IETF is moving from support for one
    schema language for modeling the structure of management information
-   (Structure of Management Information Version 2 (SMIv2)) and one
-   simple network management protocol (Simple Network Management
-   Protocol (SNMP) [RFC3410]) towards support for additional schema
-   languages and additional management protocols suited to different
-   purposes.  Other Standard Development Organizations (e.g., the
-   Distributed Management Task Force - DMTF, the Tele-Management Forum -
-   TMF) also define schemas and protocols for management and these may
-   be more suitable than IETF schemas and protocols in some cases.  Some
-   of the alternatives being considered include:
+   (SMIv2) and one simple network management protocol (SNMP) towards
+   support for additional schema languages and additional management
+   protocols suited to different purposes.  Other Standard Development
+   Organizations (e.g., the Distributed Management Task Force - DMTF,
+   the Tele-Management Forum - TMF) also define schemas and protocols
+   for management and these may be more suitable than IETF schemas and
+   protocols in some cases.  Some of the alternatives being considered
+   include:
 
    *  XML Schema Definition [W3C.REC-xmlschema-0-20041028]
 
@@ -767,20 +779,26 @@ Table of Contents
    entity.
 
    Information models are helpful to try to focus interoperability on
-   the semantic level -- they establish standards for what information
-   should be gathered and how gathered information might be used,
-   regardless of which management interface carries the data or which
-   vendor produces the product.  The use of an information model might
-   help improve the ability of operators to correlate messages in
-   different protocols where the data overlaps, such as a syslog message
-   and an SNMP notification about the same event.  An information model
-   might identify which error conditions should be counted separately,
-   and which error conditions can be counted together in a single
-   counter.  Then, whether the counter is gathered via SNMP, a CLI
-   command, or a syslog message, the counter will have the same meaning.
+   the semantic level -- they define what information should be gathered
+   and how that information might be used, regardless of which
+   management interface carries the data or which vendor implementation
+   produces the data.  The use of an information model might help
+   improve the ability of operators to correlate messages in different
+   protocols where the data overlaps, such as a YANG data model and
+   IPFIX Information Elements about the same event.  An information
+   model might identify which error conditions should be counted
+   separately, and which error conditions can be recorded together in a
+   single counter.  Then, whether the counter is gathered via, e.g.,
+   NETCONF or exported via IPFIX, the counter will have the same
+   meaning.
 
-   Protocol designers should consider which information might be useful
-   for managing the new protocol or protocol extensions.
+   Protocol designers must consider what operational, configuration,
+   state, or statistical information will be relevant for effectively
+   monitoring, controlling, or troubleshooting a new protocol and its
+   extensions.  This includes identifying key parameters that reflect
+   the protocol’s behavior, performance metrics, error indicators, and
+   any contextual data that would aid in diagnostic, troubleshooting, or
+   lifecycle management.
 
                    IM                --> conceptual/abstract model
                     |                    for designers and operators
@@ -789,17 +807,27 @@ Table of Contents
          DM        DM         DM     --> concrete/detailed model
                                             for implementers
 
-      Information Models and Data Models
-
-                           Figure 1: IMs and DMs
-
-   Protocol designers may decide an information model or data model
-   would be appropriate for managing the new protocol or protocol
-   extensions.
+           Figure 1: Information Models（IMs） and Data Models（DMs）
 
    "On the Difference between Information Models and Data Models"
-   [RFC3444] can be helpful in determining what information to consider
+   [RFC3444] is helpful in determining what information to consider
    regarding information models (IMs), as compared to data models (DMs).
+
+   Protocol Designers may directly develop data models without first
+   producing an information model.  For example, such a decision can be
+   taken when it is given that the data component is not used by
+   distinct protocols (e.g., IPFIX-only).
+
+   Alternatively, Protocol Designers may decide to use an information
+   model to describe the managed elements in a protocol or protocol
+   extension.  The protocol designers then use the information model to
+   develop data models that will be used for managing the protocol.
+
+   Specifically, Protocol Designers should develop an information model
+   if multiple data model representations (e.g., YANG [RFC6020][RFC7950]
+   and/or IPFIX [RFC7011]) are to be produced, to ensure lossless
+   semantic mapping.  Protocol designers may create an information model
+   if the resulting data models are complex or numerous.
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
@@ -819,14 +847,12 @@ Table of Contents
    *  [RFC3670] - Information Model for Describing Network Device QoS
       Datapath Mechanisms
 
-   *  [RFC3805] - Printer MIB v2 (contains both an IM and a DM)
-
    Management protocol standards and management data model standards
    often contain compliance clauses to ensure interoperability.
    Manageability considerations should include discussion of which level
    of compliance is expected to be supported for interoperability.
 
-5.2.  Management Information
+4.2.  Management Information
 
    Languages used to describe an information model can influence the
    nature of the model.  Using a particular data modeling language, such
@@ -882,32 +908,41 @@ Table of Contents
    between objects have an impact on fate sharing?  YANG's relationships
    and constraints can help express and enforce these relationships.
 
-5.2.1.  Information Model Design
+4.2.1.  Information Model Design
 
    This document recommends keeping the information model as simple as
    possible by applying the following criteria:
 
-   1.  Start with a small set of essential objects and add only as
-       further objects are needed.
+   1.  Start with a small set of essential objects and make additions
+       only as further objects are needed with the objective of keeping
+       the absolute number of objects as small as possible while still
+       delivering the required function such that there is no
+       duplication between objects and where one piece of information
+       can be derived from the other pieces of information, it is not
+       itself represented as an object.
 
-   2.  Require that objects be essential for management.
+   2.  Require that all objects be essential for management.
 
-   3.  Consider evidence of current use and/or utility.
+   3.  Consider evidence of current use of the managed protocol, and the
+       perceived utility of objects added to the information model.
 
-   4.  Limit the total number of objects.
+   4.  Exclude objects that can be derived from others in this or other
+       information models.
 
-   5.  Exclude objects that are simply derivable from others in this or
-       other information models.
-
-   6.  Avoid causing critical sections to be heavily instrumented.  A
+   5.  Avoid causing critical sections to be heavily instrumented.  A
        guideline is one counter per critical section per layer.
 
-   7.  When using YANG to complement or define an information model,
-       ensure that the model maintains simplicity, modularity, and
-       clarity.  Specific guidelines to consider when authoring YANG
-       modules are described in [I-D.ietf-netmod-rfc8407bis].
+   6.  When defining an information model using YANG Data Structure
+       Extensions [RFC8791] (thereby keeping it abstract and
+       implementation-agnostic per [RFC3444]) ensure that the
+       information model remains simple, modular, and clear by following
+       the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].
 
-5.2.2.  YANG Data Model Considerations
+   7.  When illustrating the abstract information model, use YANG Tree
+       Diagrams [RFC8340] to provide a simple, standardized, and
+       implementation-neutral model structure.
+
+4.2.2.  YANG Data Model Considerations
 
    When considering YANG data models for a new specification, there are
    multiple types of data models that may be applicable.  The hierarchy
@@ -942,10 +977,29 @@ Table of Contents
       Model (L3SM) [RFC8299] and the L2VPN Service Model (L2SM)
       [RFC8499].
 
+   A common challenge in YANG data model development lies in defining
+   the relationships between abstract service or network constructs and
+   the underlying device models.  Therefore, when designing YANG
+   modules, it is important to go beyond simply modeling configuration
+   and operational data (i.e., leaf nodes), and also consider how the
+   status and relationships of abstract or distributed constructs can be
+   reflected based on parameters available in the network.
+
+   For example, the status of a service may depend on the operational
+   state of multiple network elements to which the service is attached.
+   In such cases, the YANG data model (and its accompanying
+   documentation) should clearly describe how service-level status is
+   derived from underlying device-level information.  Similarly, it is
+   beneficial to define events (and relevant triggered notifications)
+   that indicate changes in an underlying state, enabling reliable
+   detection and correlation of service-affecting conditions.  Including
+   such mechanisms improves the robustness of integrations and helps
+   ensure consistent behavior across implementations.
+
    Specific guidelines to consider when authoring any type of YANG
    modules are described in [I-D.ietf-netmod-rfc8407bis].
 
-5.3.  Fault Management
+4.3.  Fault Management
 
    The protocol designer should document the basic faults and health
    indicators that need to be instrumented for the new protocol, as well
@@ -972,7 +1026,7 @@ Table of Contents
    the event information within a given (high) margin of confidence?
    Can we poll the latest events in the box?
 
-5.3.1.  Liveness Detection and Monitoring
+4.3.1.  Liveness Detection and Monitoring
 
    Protocol designers should always build in basic testing features
    (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
@@ -992,7 +1046,7 @@ Table of Contents
    through management applications or at least to record the fact in an
    event log.
 
-5.3.2.  Fault Determination
+4.3.2.  Fault Determination
 
    It can be helpful to describe how faults can be pinpointed using
    management information.  For example, counters might record instances
@@ -1013,14 +1067,14 @@ Table of Contents
    are there some "standard" notifications that could be used?  Or can
    relevant counters be polled as needed?
 
-5.3.3.  Root Cause Analysis
+4.3.3.  Root Cause Analysis
 
    Root cause analysis is about working out where in the network the
    fault is.  For example, if end-to-end data delivery is failing
    (reported by a notification), root cause analysis can help find the
    failed link or node in the end-to-end path.
 
-5.3.4.  Fault Isolation
+4.3.4.  Fault Isolation
 
    It might be useful to isolate or quarantine faults, such as isolating
    a device that emits malformed messages that are necessary to
@@ -1028,7 +1082,7 @@ Table of Contents
    configuring next-hop devices to drop the faulty messages to prevent
    them from entering the rest of the network.
 
-5.4.  Configuration Management
+4.4.  Configuration Management
 
    A protocol designer should document the basic configuration
    parameters that need to be instrumented for a new protocol, as well
@@ -1113,7 +1167,7 @@ Table of Contents
    should have default values suggested in the protocol specification
    and may not need to be otherwise configurable.
 
-5.4.1.  Verifying Correct Operation
+4.4.1.  Verifying Correct Operation
 
    An important function that should be provided is guidance on how to
    verify the correct operation of a protocol.  A protocol designer
@@ -1129,7 +1183,7 @@ Table of Contents
    each network element.  This may be achieved through status and
    statistical information gathered from devices.
 
-5.5.  Accounting Management
+4.5.  Accounting Management
 
    A protocol designer should consider whether it would be appropriate
    to collect usage information related to this protocol and, if so,
@@ -1143,7 +1197,7 @@ Table of Contents
    designing a protocol whose usage might need to be monitored or when
    recommending a protocol to do usage accounting.
 
-5.6.  Performance Management
+4.6.  Performance Management
 
    From a manageability point of view, it is important to determine how
    well a network deploying the protocol or technology defined in the
@@ -1184,7 +1238,7 @@ Table of Contents
    protocol / service activation on the device), network monitoring, and
    service monitoring (the impact of service activation on the network).
 
-5.6.1.  Monitoring the Protocol
+4.6.1.  Monitoring the Protocol
 
    Certain properties of protocols are useful to monitor.  The number of
    protocol packets received, the number of packets sent, and the number
@@ -1223,7 +1277,7 @@ Table of Contents
    Therefore, a YANG vlanid definition representing the 12-bit VLAN-ID
    used in the VLAN Tag header uses a range of "1..4094".
 
-5.6.2.  Monitoring the Device
+4.6.2.  Monitoring the Device
 
    Consider whether device performance will be affected by the number of
    protocol entities being instantiated on the device.  Designers of an
@@ -1239,7 +1293,7 @@ Table of Contents
    number of instances, and the expected behavior when the current
    instances exceed the capacity of the device.
 
-5.6.3.  Monitoring the Network
+4.6.3.  Monitoring the Network
 
    Consider whether network performance will be affected by the number
    of protocol entities being deployed.
@@ -1254,7 +1308,7 @@ Table of Contents
    the protocol?  Is it important to measure setup times?  End-to-end
    connectivity?  Hop-to-hop connectivity?  Network throughput?
 
-5.6.4.  Monitoring the Service
+4.6.4.  Monitoring the Service
 
    What are the principal performance factors that need to be looked at
    when measuring the performance of a service using the protocol?  Is
@@ -1262,7 +1316,7 @@ Table of Contents
    server associations?  End-to-end application quality?  Service
    interruptions?  User experience?
 
-5.7.  Security Management
+4.7.  Security Management
 
    Protocol designers should consider how to monitor and manage security
    aspects and vulnerabilities of the new protocol.
@@ -1318,13 +1372,13 @@ Table of Contents
    Protocol designers should consider how access control lists are
    maintained and updated.
 
-   Standard SNMP notifications or syslog messages [RFC5424] might
-   already exist, or can be defined, to alert operators to the
-   conditions identified in the security considerations for the new
-   protocol.  For example, you can log all the commands entered by the
-   operator using syslog (giving you some degree of audit trail), or you
-   can see who has logged on/off using the Secure SHell Protocol (SSH)
-   and from where; failed SSH logins can be logged using syslog, etc.
+   Standard SNMP notifications or syslog messages might already exist,
+   or can be defined, to alert operators to the conditions identified in
+   the security considerations for the new protocol.  For example, you
+   can log all the commands entered by the operator using syslog (giving
+   you some degree of audit trail), or you can see who has logged on/off
+   using the Secure SHell Protocol (SSH) and from where; failed SSH
+   logins can be logged using syslog, etc.
 
    An analysis of existing counters might help operators recognize the
    conditions identified in the security considerations for the new
@@ -1341,7 +1395,7 @@ Table of Contents
    Protocol designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
-6.  Operational and Management Tooling Considerations
+5.  Operational and Management Tooling Considerations
 
    The operational community's ability to effectively adopt and use new
    specifications is significantly influenced by the availability and
@@ -1412,7 +1466,7 @@ Table of Contents
       provide operators with the flexibility to customize and extend the
       tools to meet their specific needs.
 
-7.  Documentation Guidelines
+6.  Documentation Guidelines
 
    This document outlines key considerations for protocol designers and
    provides guidance on how these considerations ought to be documented.
@@ -1424,7 +1478,7 @@ Table of Contents
    occurrence of words like 'must' or 'should' needs to be interpreted
    only in the context of their natural, English-language meaning.
 
-7.1.  Recommended Discussions
+6.1.  Recommended Discussions
 
    After evaluating the operational and manageability aspects of a
    protocol, a protocol extension, or an architecture, the resulting
@@ -1457,7 +1511,7 @@ Table of Contents
    should consider how using existing protocols and data models might
    impact network operations.
 
-7.2.  Null Manageability Considerations Sections
+6.2.  Null Operations and Manageability Considerations Section
 
    A protocol designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
@@ -1480,7 +1534,7 @@ Table of Contents
    considerations, it would be helpful to point out the considerations
    section in the base document.
 
-7.3.  Placement of Operations and Manageability Considerations Sections
+6.3.  Placement of Operations and Manageability Considerations Sections
 
    section for a new protocol, it is recommended that the section be
    placed immediately before the Security Considerations section.
@@ -1488,11 +1542,11 @@ Table of Contents
    placement could simplify the development of tools to detect the
    presence of such a section.
 
-8.  IANA Considerations
+7.  IANA Considerations
 
    This document does not have any IANA actions required.
 
-9.  Security Considerations
+8.  Security Considerations
 
    This document is informational and provides guidelines for
    considering manageability and operations.  It introduces no new
@@ -1520,9 +1574,9 @@ Table of Contents
    concerted attack might be able to be mounted by causing an excess of
    these events.  In other words, the security-management mechanisms
    could constitute a security vulnerability.  The management of
-   security aspects is important (see Section 5.7).
+   security aspects is important (see Section 4.7).
 
-10.  Informative References
+9.  Informative References
 
    [CHECKLIST]
               "Operations and Management Review Checklist", 2025,
@@ -1553,12 +1607,16 @@ Table of Contents
               IETF, "IETF Hackathons", 1 May 2025,
               <https://www.ietf.org/meeting/hackathons/>.
 
+   [IETF-OPS-Dir]
+              "Ops Directorate (opsdir)", 2025,
+              <https://datatracker.ietf.org/group/opsdir/about/>.
+
    [NEMOPS]   Hardaker, W. and D. Dhody, "Report from the IAB Workshop
               on the Next Era of Network Management Operations
               (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
-              nemops-workshop-report-01, 18 February 2025,
+              nemops-workshop-report-02, 19 May 2025,
               <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
-              workshop-report-01>.
+              workshop-report-02>.
 
    [NEMOPS-WORKSHOP]
               IAB, "IAB workshop on the Next Era of Network Management
@@ -1670,10 +1728,6 @@ Table of Contents
               QoS Datapath Mechanisms", RFC 3670, DOI 10.17487/RFC3670,
               January 2004, <https://www.rfc-editor.org/rfc/rfc3670>.
 
-   [RFC3805]  Bergman, R., Lewis, H., and I. McDonald, "Printer MIB v2",
-              RFC 3805, DOI 10.17487/RFC3805, June 2004,
-              <https://www.rfc-editor.org/rfc/rfc3805>.
-
    [RFC5321]  Klensin, J., "Simple Mail Transfer Protocol", RFC 5321,
               DOI 10.17487/RFC5321, October 2008,
               <https://www.rfc-editor.org/rfc/rfc5321>.
@@ -1744,9 +1798,17 @@ Table of Contents
               Explained", RFC 8309, DOI 10.17487/RFC8309, January 2018,
               <https://www.rfc-editor.org/rfc/rfc8309>.
 
+   [RFC8340]  Bjorklund, M. and L. Berger, Ed., "YANG Tree Diagrams",
+              BCP 215, RFC 8340, DOI 10.17487/RFC8340, March 2018,
+              <https://www.rfc-editor.org/rfc/rfc8340>.
+
    [RFC8499]  Hoffman, P., Sullivan, A., and K. Fujiwara, "DNS
               Terminology", RFC 8499, DOI 10.17487/RFC8499, January
               2019, <https://www.rfc-editor.org/rfc/rfc8499>.
+
+   [RFC8791]  Bierman, A., Björklund, M., and K. Watsen, "YANG Data
+              Structure Extensions", RFC 8791, DOI 10.17487/RFC8791,
+              June 2020, <https://www.rfc-editor.org/rfc/rfc8791>.
 
    [RFC9182]  Barguil, S., Gonzalez de Dios, O., Ed., Boucadair, M.,
               Ed., Munoz, L., and A. Aguado, "A YANG Network Data Model
@@ -1786,7 +1848,16 @@ Table of Contents
 
 Acknowledgements
 
-   TBC.
+   The authors wish to thank the following individuals and groups.
+
+   The IETF Ops Directorate:  The IETF Ops Directorate [IETF-OPS-Dir]
+      reviewer team, who has been providing document reviews for over a
+      decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and
+      Bo Wu.
+
+   The AD championing the update:  Med Boucadair initiated the effort to
+      refresh RFC 5706, 15 years after its publication, building on an
+      idea originally suggested by Carlos Pignataro.
 
    The author of RFC 5706:  David Harrington
 
