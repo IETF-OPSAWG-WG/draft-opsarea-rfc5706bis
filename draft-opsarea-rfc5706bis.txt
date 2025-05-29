@@ -154,7 +154,7 @@ Table of Contents
    address the emerging management requirements.  In the past, most of
    the existing IETF management standards were focused on creating MIB
    modules using the Structure of Management Information (SMI)-based
-   [RFC2578] data modelling language, to monitor and manage networking
+   [RFC2578] data modeling language, to monitor and manage networking
    devices.  Currently, the YANG data modeling language [RFC7950] is
    recommended to monitor and manage the IETF protocols and the
    networking devices.  Management requirements continually evolve in
@@ -166,9 +166,10 @@ Table of Contents
    be addressed, and suggest (preferably standard) management protocols
    and data models that could be used to address those needs.  This is
    similar to a WG that considers which security threats are relevant to
-   their protocol, documents (in the compulsory Security Considerations
-   section) how threats should be mitigated, and then suggests
-   appropriate standard protocols that could mitigate the threats.
+   their protocol, documents (in the required Security Considerations
+   section, per RFC Style Guide [RFC7322]) how threats should be
+   mitigated, and then suggests appropriate standard protocols that
+   could mitigate the threats.
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
@@ -1735,6 +1736,10 @@ Table of Contents
               Protocol for the Exchange of Flow Information", STD 77,
               RFC 7011, DOI 10.17487/RFC7011, September 2013,
               <https://www.rfc-editor.org/rfc/rfc7011>.
+
+   [RFC7322]  Flanagan, H. and S. Ginoza, "RFC Style Guide", RFC 7322,
+              DOI 10.17487/RFC7322, September 2014,
+              <https://www.rfc-editor.org/rfc/rfc7322>.
 
    [RFC7854]  Scudder, J., Ed., Fernando, R., and S. Stuart, "BGP
               Monitoring Protocol (BMP)", RFC 7854,
