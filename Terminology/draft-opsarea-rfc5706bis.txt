@@ -200,13 +200,14 @@ Table of Contents
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
    is mandatory.  If protocol designers conclude that the technology can
-   be managed solely by using proprietary command line interfaces (CLIs)
-   and that no structured or standardized data model needs to be in
-   place, this might be fine, but it is a decision that should be
-   explicit in a manageability discussion -- that this is how the
-   protocol will need to be operated and managed.  Protocol designers
-   should avoid having manageability pushed for a later phase of the
-   development of the standard.
+   be managed solely by using proprietary interfaces, such as command
+   line interfaces (CLIs), graphical user interfaces (GUIs), or vendor-
+   specific APIs, and that no structured or standardized data model
+   needs to be in place, this might be fine, but it is a decision that
+   should be explicit in a manageability discussion -- that this is how
+   the protocol will need to be operated and managed.  Protocol
+   designers should avoid having manageability pushed for a later phase
+   of the development of the standard.
 
    A list of guidelines and a checklist of questions to consider, which
    a reviewer can use to evaluate whether the protocol and documentation
@@ -356,14 +357,22 @@ Table of Contents
 
    These terms are:
 
+   *  Proprietary Interfaces: An interface to manage a network element
+      that is not standardized.  As such, the user interface, syntax,
+      and semantics typically vary significantly between
+      implementations.  Examples of proprietary interfaces include CLI
+      (Command Line Interface), management web portal and Browser User
+      Interface (BUI), Graphical User Interface (GUI), and vendor-
+      specific APIs.
+
    *  CLI: Command Line Interface.  Typically a proprietary interface to
-      hardware devices (such as routers) for use by human operators
-      directly at a terminal or via scripts.  The commands, their
-      syntax, and the precise semantics of the parameters may vary
-      considerably between different equipment vendors, between products
-      from the same vendor, and even between different versions or
-      releases of a single product.  No attempt at standardizing CLIs
-      has been made by the IETF.
+      hardware or software devices (e.g., routers or operating systems)
+      for use by human operators directly at a terminal or via scripts.
+      The commands, their syntax, and the precise semantics of the
+      parameters may vary considerably between different vendors,
+      between products from the same vendor, and even between different
+      versions or releases of a single product.  No attempt at
+      standardizing CLIs has been made by the IETF.
 
    *  Information model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
@@ -1124,16 +1133,16 @@ Table of Contents
        experience, reordering ACLs can lead to a huge security issue.
 
    Network-wide configurations may be stored in central master databases
-   and transformed into formats that can be pushed to devices, either by
-   generating sequences of CLI commands or complete configuration files
-   that are pushed to devices.  There is no common database schema for
-   network configuration, although the models used by various operators
-   are probably very similar.  Many operators consider it desirable to
-   extract, document, and standardize the common parts of these network-
-   wide configuration database schemas.  A protocol designer should
-   consider how to standardize the common parts of configuring the new
-   protocol, while recognizing that vendors may also have proprietary
-   aspects of their configurations.
+   and transformed into readable formats that can be pushed to devices,
+   either by generating sequences of CLI commands or complete textual
+   configuration files that are pushed to devices.  There is no common
+   database schema for network configuration, although the models used
+   by various operators are probably very similar.  Many operators
+   consider it desirable to extract, document, and standardize the
+   common parts of these network- wide configuration database schemas.
+   A protocol designer should consider how to standardize the common
+   parts of configuring the new protocol, while recognizing that vendors
+   may also have proprietary aspects of their configurations.
 
    It is important to enable operators to concentrate on the
    configuration of the network as a whole, rather than individual
