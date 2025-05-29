@@ -1607,7 +1607,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-2.1-2.1.1">CLI: Command Line Interface<a href="#section-2.1-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-2.2">
-            <p id="section-2.1-2.2.1">Data Model: a mapping of the contents of an information model into
+            <p id="section-2.1-2.2.1">Data Model: a mapping of the contents of an Information Model into
  a form that is specific to a particular type of data store or
  repository <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>.<a href="#section-2.1-2.2.1" class="pilcrow">¶</a></p>
 </li>
@@ -2026,10 +2026,10 @@ usage accounting<a href="#section-4.1-7.2.1" class="pilcrow">¶</a></p>
    the semantic level -- they define what information
    should be gathered and how that information might be used,
    regardless of which management interface carries the data or which
-   vendor implementation produces the data. The use of an information model might
+   vendor implementation produces the data. The use of an Information Model might
    help improve the ability of operators to correlate messages in
    different protocols where the data overlaps, such as a YANG data model
-   and IPFIX Information Elements about the same event. An information model
+   and IPFIX Information Elements about the same event. An Information Model
    might identify which error conditions should be counted separately,
    and which error conditions can be recorded together in a single
    counter. Then, whether the counter is gathered via, e.g., NETCONF or
@@ -2078,10 +2078,10 @@ usage accounting<a href="#section-4.1-7.2.1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.1-13">"On the Difference between Information Models and Data Models"
    <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span> is helpful in determining what information to consider
-   regarding information models (IMs), as compared to Data Models (DMs).<a href="#section-4.1-13" class="pilcrow">¶</a></p>
-<p id="section-4.1-14">Protocol Designers may directly develop Data Models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).<a href="#section-4.1-14" class="pilcrow">¶</a></p>
-<p id="section-4.1-15">Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop Data Models that will be used for managing the protocol.<a href="#section-4.1-15" class="pilcrow">¶</a></p>
-<p id="section-4.1-16">Specifically, Protocol Designers should develop an information model if multiple Data Model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting Data Models are complex or numerous.<a href="#section-4.1-16" class="pilcrow">¶</a></p>
+   regarding Information Models (IMs), as compared to Data Models (DMs).<a href="#section-4.1-13" class="pilcrow">¶</a></p>
+<p id="section-4.1-14">Protocol Designers may directly develop Data Models without first producing an Information Model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).<a href="#section-4.1-14" class="pilcrow">¶</a></p>
+<p id="section-4.1-15">Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the Information Model to develop Data Models that will be used for managing the protocol.<a href="#section-4.1-15" class="pilcrow">¶</a></p>
+<p id="section-4.1-16">Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an Information Model if the resulting Data Models are complex or numerous.<a href="#section-4.1-16" class="pilcrow">¶</a></p>
 <p id="section-4.1-17">Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
    relevant. There are a number of information models contained in
@@ -2118,7 +2118,7 @@ Datapath Mechanisms<a href="#section-4.1-18.6.1" class="pilcrow">¶</a></p>
         <h3 id="name-management-information">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-management-information" class="section-name selfRef">Management Information</a>
         </h3>
-<p id="section-4.2-1">Languages used to describe an information model can influence the
+<p id="section-4.2-1">Languages used to describe an Information Model can influence the
    nature of the model. Using a particular data modeling language, such
    as YANG, influences the model to use certain types of structures, for
    example, hierarchical trees, groupings, and reusable types.
@@ -2130,11 +2130,11 @@ Datapath Mechanisms<a href="#section-4.1-18.6.1" class="pilcrow">¶</a></p>
    way makes it an effective choice for defining management information
    models.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.2-2">Although this document recommends using English text (the official
-   language for IETF specifications) to describe an information model,
+   language for IETF specifications) to describe an Information Model,
    including a complementary YANG module helps translate abstract concepts
    into implementation-specific Data Models. This ensures consistency between
    the high-level design and practical deployment.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
-<p id="section-4.2-3">A management information model should include a discussion of what is
+<p id="section-4.2-3">A management Information Model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
    types of operations are allowed, what protocol-specific events might
    occur, which events can be counted, and for which events an operator
@@ -2152,7 +2152,7 @@ Datapath Mechanisms<a href="#section-4.1-18.6.1" class="pilcrow">¶</a></p>
    should exist, do not conflate multiple information elements into a
    single element.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.2-5">What is typically difficult to work through are relationships between
-   abstract objects. Ideally, an information model would describe the
+   abstract objects. Ideally, an Information Model would describe the
    relationships between the objects and concepts in the information
    model.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
 <p id="section-4.2-6">Is there always just one instance of this object or can there be
@@ -2170,7 +2170,7 @@ Datapath Mechanisms<a href="#section-4.1-18.6.1" class="pilcrow">¶</a></p>
           <h4 id="name-information-model-design">
 <a href="#section-4.2.1" class="section-number selfRef">4.2.1. </a><a href="#name-information-model-design" class="section-name selfRef">Information Model Design</a>
           </h4>
-<p id="section-4.2.1-1">This document recommends keeping the information model as simple as
+<p id="section-4.2.1-1">This document recommends keeping the Information Model as simple as
    possible by applying the following criteria:<a href="#section-4.2.1-1" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-4.2.1-2">
 <li id="section-4.2.1-2.1">
@@ -2182,7 +2182,7 @@ no duplication between objects and where one piece of information can be derived
               <p id="section-4.2.1-2.2.1">Require that all objects be essential for management.<a href="#section-4.2.1-2.2.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.3">
-              <p id="section-4.2.1-2.3.1">Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.<a href="#section-4.2.1-2.3.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.3.1">Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the Information Model.<a href="#section-4.2.1-2.3.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.4">
               <p id="section-4.2.1-2.4.1">Exclude objects that can be derived from others in this or
@@ -2193,10 +2193,10 @@ other information models.<a href="#section-4.2.1-2.4.1" class="pilcrow">¶</a></
 guideline is one counter per critical section per layer.<a href="#section-4.2.1-2.5.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.6">
-              <p id="section-4.2.1-2.6.1">When defining an information model using  YANG Data Structure Extensions <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> (thereby keeping it abstract and implementation-agnostic per <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>) ensure that the information model remains simple, modular, and clear by following the authoring guidelines in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-4.2.1-2.6.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.6.1">When defining an Information Model using  YANG Data Structure Extensions <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> (thereby keeping it abstract and implementation-agnostic per <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>) ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-4.2.1-2.6.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-4.2.1-2.7">
-              <p id="section-4.2.1-2.7.1">When illustrating the abstract information model, use YANG Tree Diagrams <span>[<a href="#RFC8340" class="cite xref">RFC8340</a>]</span> to provide a simple, standardized, and implementation-neutral model structure.<a href="#section-4.2.1-2.7.1" class="pilcrow">¶</a></p>
+              <p id="section-4.2.1-2.7.1">When illustrating the abstract Information Model, use YANG Tree Diagrams <span>[<a href="#RFC8340" class="cite xref">RFC8340</a>]</span> to provide a simple, standardized, and implementation-neutral model structure.<a href="#section-4.2.1-2.7.1" class="pilcrow">¶</a></p>
 </li>
           </ol>
 </section>
@@ -2563,12 +2563,12 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
           </h4>
 <p id="section-4.6.2-1">Consider whether device performance will be affected by the number of
    protocol entities being instantiated on the device. Designers of an
-   information model should include information, accessible at runtime,
+   Information Model should include information, accessible at runtime,
    about the maximum number of instances an implementation can support,
    the current number of instances, and the expected behavior when the
    current instances exceed the capacity of the implementation or the
    capacity of the device.<a href="#section-4.6.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.6.2-2">Designers of an information model should model information,
+<p id="section-4.6.2-2">Designers of an Information Model should model information,
    accessible at runtime, about the maximum number of protocol entity
    instances an implementation can support on a device, the current
    number of instances, and the expected behavior when the current

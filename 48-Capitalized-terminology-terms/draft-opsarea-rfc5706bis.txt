@@ -360,7 +360,7 @@ Table of Contents
 
    *  CLI: Command Line Interface
 
-   *  Data Model: a mapping of the contents of an information model into
+   *  Data Model: a mapping of the contents of an Information Model into
       a form that is specific to a particular type of data store or
       repository [RFC3444].
 
@@ -744,11 +744,11 @@ Table of Contents
    the semantic level -- they define what information should be gathered
    and how that information might be used, regardless of which
    management interface carries the data or which vendor implementation
-   produces the data.  The use of an information model might help
+   produces the data.  The use of an Information Model might help
    improve the ability of operators to correlate messages in different
    protocols where the data overlaps, such as a YANG data model and
-   IPFIX Information Elements about the same event.  An information
-   model might identify which error conditions should be counted
+   IPFIX Information Elements about the same event.  An Information
+   Model might identify which error conditions should be counted
    separately, and which error conditions can be recorded together in a
    single counter.  Then, whether the counter is gathered via, e.g.,
    NETCONF or exported via IPFIX, the counter will have the same
@@ -773,22 +773,22 @@ Table of Contents
 
    "On the Difference between Information Models and Data Models"
    [RFC3444] is helpful in determining what information to consider
-   regarding information models (IMs), as compared to Data Models (DMs).
+   regarding Information Models (IMs), as compared to Data Models (DMs).
 
    Protocol Designers may directly develop Data Models without first
-   producing an information model.  For example, such a decision can be
+   producing an Information Model.  For example, such a decision can be
    taken when it is given that the data component is not used by
    distinct protocols (e.g., IPFIX-only).
 
-   Alternatively, Protocol Designers may decide to use an information
-   model to describe the managed elements in a protocol or protocol
-   extension.  The protocol designers then use the information model to
+   Alternatively, Protocol Designers may decide to use an Information
+   Model to describe the managed elements in a protocol or protocol
+   extension.  The protocol designers then use the Information Model to
    develop Data Models that will be used for managing the protocol.
 
-   Specifically, Protocol Designers should develop an information model
+   Specifically, Protocol Designers should develop an Information Model
    if multiple Data Model representations (e.g., YANG [RFC6020][RFC7950]
    and/or IPFIX [RFC7011]) are to be produced, to ensure lossless
-   semantic mapping.  Protocol designers may create an information model
+   semantic mapping.  Protocol designers may create an Information Model
    if the resulting Data Models are complex or numerous.
 
    Information models should come from the protocol WGs and include
@@ -816,7 +816,7 @@ Table of Contents
 
 4.2.  Management Information
 
-   Languages used to describe an information model can influence the
+   Languages used to describe an Information Model can influence the
    nature of the model.  Using a particular data modeling language, such
    as YANG, influences the model to use certain types of structures, for
    example, hierarchical trees, groupings, and reusable types.  YANG, as
@@ -829,12 +829,12 @@ Table of Contents
    information models.
 
    Although this document recommends using English text (the official
-   language for IETF specifications) to describe an information model,
+   language for IETF specifications) to describe an Information Model,
    including a complementary YANG module helps translate abstract
    concepts into implementation-specific Data Models.  This ensures
    consistency between the high-level design and practical deployment.
 
-   A management information model should include a discussion of what is
+   A management Information Model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
    types of operations are allowed, what protocol-specific events might
    occur, which events can be counted, and for which events an operator
@@ -854,7 +854,7 @@ Table of Contents
    single element.
 
    What is typically difficult to work through are relationships between
-   abstract objects.  Ideally, an information model would describe the
+   abstract objects.  Ideally, an Information Model would describe the
    relationships between the objects and concepts in the information
    model.
 
@@ -872,7 +872,7 @@ Table of Contents
 
 4.2.1.  Information Model Design
 
-   This document recommends keeping the information model as simple as
+   This document recommends keeping the Information Model as simple as
    possible by applying the following criteria:
 
    1.  Start with a small set of essential objects and make additions
@@ -886,7 +886,7 @@ Table of Contents
    2.  Require that all objects be essential for management.
 
    3.  Consider evidence of current use of the managed protocol, and the
-       perceived utility of objects added to the information model.
+       perceived utility of objects added to the Information Model.
 
    4.  Exclude objects that can be derived from others in this or other
        information models.
@@ -894,13 +894,13 @@ Table of Contents
    5.  Avoid causing critical sections to be heavily instrumented.  A
        guideline is one counter per critical section per layer.
 
-   6.  When defining an information model using YANG Data Structure
+   6.  When defining an Information Model using YANG Data Structure
        Extensions [RFC8791] (thereby keeping it abstract and
        implementation-agnostic per [RFC3444]) ensure that the
-       information model remains simple, modular, and clear by following
+       Information Model remains simple, modular, and clear by following
        the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].
 
-   7.  When illustrating the abstract information model, use YANG Tree
+   7.  When illustrating the abstract Information Model, use YANG Tree
        Diagrams [RFC8340] to provide a simple, standardized, and
        implementation-neutral model structure.
 
@@ -1243,13 +1243,13 @@ Table of Contents
 
    Consider whether device performance will be affected by the number of
    protocol entities being instantiated on the device.  Designers of an
-   information model should include information, accessible at runtime,
+   Information Model should include information, accessible at runtime,
    about the maximum number of instances an implementation can support,
    the current number of instances, and the expected behavior when the
    current instances exceed the capacity of the implementation or the
    capacity of the device.
 
-   Designers of an information model should model information,
+   Designers of an Information Model should model information,
    accessible at runtime, about the maximum number of protocol entity
    instances an implementation can support on a device, the current
    number of instances, and the expected behavior when the current
