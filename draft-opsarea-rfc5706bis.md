@@ -134,7 +134,7 @@ author:
    IETF management strategy has been changing to address the emerging
    management requirements. In the past, most of the existing IETF management
    standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based {{?RFC2578}}
-   data modelling language, to monitor and manage networking devices.
+   data modeling language, to monitor and manage networking devices.
    Currently, the YANG data modeling language {{?RFC7950}} is recommended to
    monitor and manage the IETF protocols and the networking devices.
    Management requirements continually evolve in the IETF. Therefore,
@@ -146,7 +146,7 @@ author:
    be addressed, and suggest (preferably standard) management protocols
    and data models that could be used to address those needs. This is
    similar to a WG that considers which security threats are relevant to
-   their protocol, documents (in the compulsory Security Considerations section)
+   their protocol, documents (in the required Security Considerations section, per RFC Style Guide {{?RFC7322}})
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
