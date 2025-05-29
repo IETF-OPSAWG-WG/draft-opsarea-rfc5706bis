@@ -110,7 +110,7 @@ author:
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
    management particularly hard. This document provides guidelines to
-   help protocol designers and working groups consider the operations
+   help Protocol Designers and working groups consider the operations
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
@@ -141,7 +141,7 @@ author:
    the management protocols used should track with current IETF
    recommendations.
 
-   Protocol designers should consider which operations and management
+   Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
    and data models that could be used to address those needs. This is
@@ -178,12 +178,12 @@ author:
 
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
-   is mandatory. If protocol designers conclude that the technology can
+   is mandatory. If Protocol Designers conclude that the technology can
    be managed solely by using proprietary command line interfaces (CLIs)
    and that no structured or standardized data model needs to be in
    place, this might be fine, but it is a decision that should be
    explicit in a manageability discussion -- that this is how the
-   protocol will need to be operated and managed. Protocol designers
+   protocol will need to be operated and managed. Protocol Designers
    should avoid having manageability pushed for a later phase of the
    development of the standard.
 
@@ -233,7 +233,7 @@ author:
 
    There have been a significant number of efforts, meetings, and
    documents that are related to Internet operations and management.
-   Some of them are mentioned here to help protocol designers find
+   Some of them are mentioned here to help Protocol Designers find
    documentation of previous efforts. Hopefully, providing these
    references will help the IETF avoid rehashing old discussions and
    reinventing old solutions.
@@ -271,7 +271,7 @@ author:
    be updated to accommodate multiple IETF schema languages for
    describing the structure of management information and multiple IETF
    standard protocols for performing management tasks. The IESG asked
-   that a document be written to discuss how protocol designers and
+   that a document be written to discuss how Protocol Designers and
    working groups should address management in this emerging multi-
    protocol environment. This document and some planned companion
    documents attempt to provide some guidelines for navigating the
@@ -400,7 +400,7 @@ author:
 
 ##  Operations {#sec-ops}
 
-   Protocol designers can analyze the operational environment and mode
+   Protocol Designers can analyze the operational environment and mode
    of work in which the new protocol or extension will work. Such an
    exercise need not be reflected directly by text in their document
    but could help in visualizing how to apply the protocol in the
@@ -420,7 +420,7 @@ author:
    methods of determining information, such as what gets counted in a
    specific counter, is relevant.
 
-   Protocol designers should consider what management operations are
+   Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
    protocol -- such as whether write operations will be allowed on
    routers and on hosts, or whether notifications for alarms or other
@@ -433,7 +433,7 @@ author:
    options and parameters whenever possible. Any options and parameters
    should be configured or negotiated dynamically rather than manually".
 
-   To simplify configuration, protocol designers should consider
+   To simplify configuration, Protocol Designers should consider
    specifying reasonable defaults, including default modes and
    parameters. For example, it could be helpful or necessary to specify
    default values for modes, timers, default state of logical control
@@ -441,7 +441,7 @@ author:
    used, it must be possible to retrieve all the actual values or at
    least an indication that known default values are being used.
 
-   Protocol designers should consider how to enable operators to
+   Protocol Designers should consider how to enable operators to
    concentrate on the configuration of the network as a whole rather
    than on individual devices. Of course, how one accomplishes this is
    the hard part.
@@ -472,7 +472,7 @@ author:
 ##  Migration Path {#sec-migration}
 
    If the new protocol is a new version of an existing one, or if it is
-   replacing another technology, the protocol designer should consider
+   replacing another technology, the Protocol Designer should consider
    how deployments should transition to the new protocol. This should
    include coexistence with previously deployed protocols and/or
    previous versions of the same protocol, incompatibilities between
@@ -486,7 +486,7 @@ author:
 
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
 
-   Protocol designers should consider the requirements that the new
+   Protocol Designers should consider the requirements that the new
    protocol might put on other protocols and functional components and
    should also document the requirements from other protocols and
    functional elements that have been considered in designing the new
@@ -516,7 +516,7 @@ author:
 
    The introduction of a new protocol or extensions to an existing
    protocol may have an impact on the operation of existing networks.
-   Protocol designers should outline such impacts (which may be
+   Protocol Designers should outline such impacts (which may be
    positive), including scaling concerns and interactions with other
    protocols. For example, a new protocol that doubles the number of
    active, reachable addresses in use within a network might need to be
@@ -527,7 +527,7 @@ author:
    don't pay attention, we might get very good accuracy but could send
    too many active monitoring packets.
 
-   The protocol designer should consider the potential impact on the
+   The Protocol Designer should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
    and traffic patterns that might change, including specific types of
    traffic, such as multicast. Also, consider the need to install new
@@ -535,7 +535,7 @@ author:
    the configuration, such as servers performing auto-configuration
    operations.
 
-   The protocol designer should consider also the impact on
+   The Protocol Designer should consider also the impact on
    infrastructure applications like DNS {{?RFC1034}}, the registries, or
    the size of routing tables. For example, Simple Mail Transfer
    Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
@@ -555,10 +555,10 @@ author:
 
 ##  Verifying Correct Operation {#sec-verify}
 
-   The protocol designer should consider techniques for testing the
+   The Protocol Designer should consider techniques for testing the
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
-   monitoring). Protocol designers should consider how the correct end-
+   monitoring). Protocol Designers should consider how the correct end-
    to-end operation of the new protocol in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
@@ -605,7 +605,7 @@ author:
       operation, scripts)? Are they performed immediately or are they
       time scheduled, or event triggered?
 
-   Protocol designers should consider how the new protocol will be
+   Protocol Designers should consider how the new protocol will be
    managed in different deployment scales. It might be sensible to use
    a local management interface to manage the new protocol on a single
    device, but in a large network, remote management using a centralized
@@ -659,7 +659,7 @@ author:
    for the use of third-party applications and the outsourcing of
    management services.
 
-   Some product designers and protocol designers assume that if a device
+   Some product designers and Protocol Designers assume that if a device
    can be managed individually using a command line interface or a web
    page interface, that such a solution is enough. But when equipment
    from multiple vendors is combined into a large network, scalability
@@ -727,7 +727,7 @@ author:
    counter. Then, whether the counter is gathered via, e.g., NETCONF or
    exported via IPFIX, the counter will have the same meaning.
 
-   Protocol designers must consider what operational, configuration,
+   Protocol Designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
    monitoring, controlling, or troubleshooting a new protocol and its
    extensions. This includes identifying key parameters that reflect the
@@ -752,9 +752,9 @@ author:
 
    Protocol Designers may directly develop Data Models without first producing an Information Model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
 
-   Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the Information Model to develop Data Models that will be used for managing the protocol.
+   Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or protocol extension. The protocol Designers then use the Information Model to develop Data Models that will be used for managing the protocol.
 
-   Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an Information Model if the resulting Data Models are complex or numerous.
+   Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol Designers may create an Information Model if the resulting Data Models are complex or numerous.
 
 
 
@@ -917,17 +917,17 @@ author:
 
 ## Fault Management {#sec-fm-mgt}
 
-   The protocol designer should document the basic faults and health
+   The Protocol Designer should document the basic faults and health
    indicators that need to be instrumented for the new protocol, as well
    as the alarms and events that must be propagated to management
    applications or exposed through a Data Model.
 
-   The protocol designer should consider how fault information will be
+   The Protocol Designer should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?
 
    If notifications are used to alert operators to certain conditions,
-   then the protocol designer should discuss mechanisms to throttle
+   then the Protocol Designer should discuss mechanisms to throttle
    notifications to prevent congestion and duplications of event
    notifications. Will there be a hierarchy of faults, and will the
    fault reporting be done by each fault in the hierarchy, or will only
@@ -944,7 +944,7 @@ author:
 
 ###  Liveness Detection and Monitoring
 
-   Protocol designers should always build in basic testing features
+   Protocol Designers should always build in basic testing features
    (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
    calls)) that can be used to test for liveness, with an option to
    enable and disable them.
@@ -968,7 +968,7 @@ author:
    management information. For example, counters might record instances
    of error conditions. Some faults might be able to be pinpointed by
    comparing the outputs of one device and the inputs of another device,
-   looking for anomalies. Protocol designers should consider what
+   looking for anomalies. Protocol Designers should consider what
    counters should count. If a single counter provided by vendor A
    counts three types of error conditions, while the corresponding
    counter provided by vendor B counts seven types of error conditions,
@@ -1000,7 +1000,7 @@ author:
 
 ##  Configuration Management {#sec-config-mgt}
 
-   A protocol designer should document the basic configuration
+   A Protocol Designer should document the basic configuration
    parameters that need to be instrumented for a new protocol, as well
    as default values and modes of operation.
 
@@ -1025,7 +1025,7 @@ author:
    Implementations should not arbitrarily modify configuration data. In
    some cases (such as access control lists (ACLs)), the order of data
    items is significant and comprises part of the configured data. If a
-   protocol designer defines mechanisms for configuration, it would be
+   Protocol Designer defines mechanisms for configuration, it would be
    desirable to standardize the order of elements for consistency of
    configuration and of reporting across vendors and across releases
    from vendors.
@@ -1045,7 +1045,7 @@ author:
    network configuration, although the models used by various operators
    are probably very similar. Many operators consider it desirable to
    extract, document, and standardize the common parts of these network-
-   wide configuration database schemas. A protocol designer should
+   wide configuration database schemas. A Protocol Designer should
    consider how to standardize the common parts of configuring the new
    protocol, while recognizing that vendors may also have proprietary
    aspects of their configurations.
@@ -1057,7 +1057,7 @@ author:
    management. The ability to distribute configurations to multiple
    devices, or to modify candidate configurations on multiple devices,
    and then activate them in a near-simultaneous manner might help.
-   Protocol designers can consider how it would make sense for their
+   Protocol Designers can consider how it would make sense for their
    protocol to be configured across multiple devices. Configuration
    templates might also be helpful.
 
@@ -1075,7 +1075,7 @@ author:
    state changes and effects on network and systems. It is important to
    minimize the impact caused by configuration changes.
 
-   A protocol designer should consider the configurable items that exist
+   A Protocol Designer should consider the configurable items that exist
    for the control of function via the protocol elements described in
    the protocol specification. For example, sometimes the protocol
    requires that timers can be configured by the operator to ensure
@@ -1086,13 +1086,13 @@ author:
 ###  Verifying Correct Operation
 
    An important function that should be provided is guidance on how to
-   verify the correct operation of a protocol. A protocol designer
+   verify the correct operation of a protocol. A Protocol Designer
    could suggest techniques for testing the impact of the protocol on
    the network before it is deployed as well as techniques for testing
    the effect that the protocol has had on the network after being
    deployed.
 
-   Protocol designers should consider how to test the correct end-to-end
+   Protocol Designers should consider how to test the correct end-to-end
    operation of the service or network, how to verify the correct
    functioning of the protocol, and whether that is verified by testing
    the service function and/or by testing the forwarding function of
@@ -1101,7 +1101,7 @@ author:
 
 ##  Accounting Management {#sec-acc-mgt}
 
-   A protocol designer should consider whether it would be appropriate
+   A Protocol Designer should consider whether it would be appropriate
    to collect usage information related to this protocol and, if so,
    what usage information would be appropriate to collect.
 
@@ -1234,7 +1234,7 @@ author:
 
 ##  Security Management {#sec-secuity-mgt}
 
-   Protocol designers should consider how to monitor and manage security
+   Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the new protocol.
 
    There will be security considerations related to the new protocol.
@@ -1275,17 +1275,17 @@ author:
    perform a required task.
 
    Some operators wish to do consistency checks of access control lists
-   across devices. Protocol designers should consider information
+   across devices. Protocol Designers should consider information
    models to promote comparisons across devices and across vendors to
    permit checking the consistency of security configurations.
 
-   Protocol designers should consider how to provide a secure transport,
+   Protocol Designers should consider how to provide a secure transport,
    authentication, identity, and access control that integrates well
    with existing key and credential management infrastructure. It is a
    good idea to start with defining the threat model for the protocol,
    and from that deducing what is required.
 
-   Protocol designers should consider how access control lists are
+   Protocol Designers should consider how access control lists are
    maintained and updated.
 
    Standard SNMP notifications or syslog messages might
@@ -1301,14 +1301,14 @@ author:
    protocol before they can impact the network.
 
    Different management protocols use different assumptions about
-   message security and data-access controls. A protocol designer that
+   message security and data-access controls. A protocol Designer that
    recommends using different protocols should consider how security
    will be applied in a balanced manner across multiple management
    interfaces. SNMP authority levels and policy are data-oriented,
    while CLI authority levels and policy are usually command-oriented
    (i.e., task-oriented). Depending on the management function,
    sometimes data-oriented or task-oriented approaches make more sense.
-   Protocol designers should consider both data-oriented and task-
+   Protocol Designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
 # Operational and Management Tooling Considerations {#sec-oandm-tooling}
@@ -1377,7 +1377,7 @@ author:
 
 #  Documentation Guidelines
 
-   This document outlines key considerations for protocol designers and
+   This document outlines key considerations for Protocol Designers and
    provides guidance on how these considerations ought to be documented.
 
    This document does not describe interoperability requirements but
@@ -1414,13 +1414,13 @@ author:
    should be included as well.
 
    Existing protocols and Data Models can provide the management
-   functions identified in the previous section. Protocol designers
+   functions identified in the previous section. Protocol Designers
    should consider how using existing protocols and Data Models might
    impact network operations.
 
 ##  Null Operations and Manageability Considerations Section
 
-   A protocol designer may seriously consider the manageability
+   A protocol Designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
    functionality or operatinal best-practice clarifications are
    needed by the protocol. It would be helpful to
