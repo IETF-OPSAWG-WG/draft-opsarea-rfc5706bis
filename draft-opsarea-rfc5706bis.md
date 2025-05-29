@@ -324,11 +324,19 @@ author:
 
    These terms are:
 
+   *  Proprietary Interfaces: An interface to manage a network element
+      that is not standardized. As such, the user interface, syntax, and
+      semantics typically vary significantly between implementations.
+      Examples of proprietary interfaces include CLI (Command Line
+      Interface), management web portal and Browser User Interface (BUI),
+      Graphical User Interface (GUI), and vendor-specific APIs.
+
    *  CLI: Command Line Interface. Typically a proprietary interface to
-      hardware devices (such as routers) for use by human operators
+      hardware or software devices (e.g., routers or operating systems)
+      for use by human operators
       directly at a terminal or via scripts. The commands, their syntax,
       and the precise semantics of the parameters may vary considerably
-      between different equipment vendors, between products from the same
+      between different vendors, between products from the same
       vendor, and even between different versions or releases of a single
       product. No attempt at standardizing CLIs has been made by the IETF.
 
