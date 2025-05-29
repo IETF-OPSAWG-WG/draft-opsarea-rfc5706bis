@@ -739,7 +739,7 @@ author:
    |          |         |
    DM        DM         DM     --> concrete/detailed model
                                       for implementers
-                                      
+
 ~~~~
 {: #fig-im-dm title="Information Models（IMs） and Data Models（DMs）" artwork-align="center"}
 
