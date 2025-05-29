@@ -1358,7 +1358,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
    management particularly hard. This document provides guidelines to
-   help protocol designers and working groups consider the operations
+   help Protocol Designers and working groups consider the operations
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">This document obsoletes RFC 5706 and fully updates its content
@@ -1388,7 +1388,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    Management requirements continually evolve in the IETF. Therefore,
    the management protocols used should track with current IETF
    recommendations.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
-<p id="section-1.1-3">Protocol designers should consider which operations and management
+<p id="section-1.1-3">Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
    and data models that could be used to address those needs. This is
@@ -1426,12 +1426,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
    location are a decision that can be made from case to case.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
 <p id="section-1.2-3">This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
-   is mandatory. If protocol designers conclude that the technology can
+   is mandatory. If Protocol Designers conclude that the technology can
    be managed solely by using proprietary command line interfaces (CLIs)
    and that no structured or standardized data model needs to be in
    place, this might be fine, but it is a decision that should be
    explicit in a manageability discussion -- that this is how the
-   protocol will need to be operated and managed. Protocol designers
+   protocol will need to be operated and managed. Protocol Designers
    should avoid having manageability pushed for a later phase of the
    development of the standard.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
 <p id="section-1.2-4">A list of guidelines and a
@@ -1485,7 +1485,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h3>
 <p id="section-1.4-1">There have been a significant number of efforts, meetings, and
    documents that are related to Internet operations and management.
-   Some of them are mentioned here to help protocol designers find
+   Some of them are mentioned here to help Protocol Designers find
    documentation of previous efforts. Hopefully, providing these
    references will help the IETF avoid rehashing old discussions and
    reinventing old solutions.<a href="#section-1.4-1" class="pilcrow">¶</a></p>
@@ -1517,7 +1517,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    be updated to accommodate multiple IETF schema languages for
    describing the structure of management information and multiple IETF
    standard protocols for performing management tasks. The IESG asked
-   that a document be written to discuss how protocol designers and
+   that a document be written to discuss how Protocol Designers and
    working groups should address management in this emerging multi-
    protocol environment. This document and some planned companion
    documents attempt to provide some guidelines for navigating the
@@ -1698,7 +1698,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-operations">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-operations" class="section-name selfRef">Operations</a>
         </h3>
-<p id="section-3.1-1">Protocol designers can analyze the operational environment and mode
+<p id="section-3.1-1">Protocol Designers can analyze the operational environment and mode
    of work in which the new protocol or extension will work. Such an
    exercise need not be reflected directly by text in their document
    but could help in visualizing how to apply the protocol in the
@@ -1715,7 +1715,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    consistent when presented to an operator. Identifying consistent
    methods of determining information, such as what gets counted in a
    specific counter, is relevant.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
-<p id="section-3.1-4">Protocol designers should consider what management operations are
+<p id="section-3.1-4">Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
    protocol -- such as whether write operations will be allowed on
    routers and on hosts, or whether notifications for alarms or other
@@ -1731,14 +1731,14 @@ svg :is([fill="white"], [fill^="#fff"]) {
    Principles of the Internet" <span>[<a href="#RFC1958" class="cite xref">RFC1958</a>]</span>, Section 3.8, states: "Avoid
    options and parameters whenever possible. Any options and parameters
    should be configured or negotiated dynamically rather than manually".<a href="#section-3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.2-2">To simplify configuration, protocol designers should consider
+<p id="section-3.2-2">To simplify configuration, Protocol Designers should consider
    specifying reasonable defaults, including default modes and
    parameters. For example, it could be helpful or necessary to specify
    default values for modes, timers, default state of logical control
    variables, default transports, and so on. Even if default values are
    used, it must be possible to retrieve all the actual values or at
    least an indication that known default values are being used.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
-<p id="section-3.2-3">Protocol designers should consider how to enable operators to
+<p id="section-3.2-3">Protocol Designers should consider how to enable operators to
    concentrate on the configuration of the network as a whole rather
    than on individual devices. Of course, how one accomplishes this is
    the hard part.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
@@ -1769,7 +1769,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-migration-path" class="section-name selfRef">Migration Path</a>
         </h3>
 <p id="section-3.3-1">If the new protocol is a new version of an existing one, or if it is
-   replacing another technology, the protocol designer should consider
+   replacing another technology, the Protocol Designer should consider
    how deployments should transition to the new protocol. This should
    include coexistence with previously deployed protocols and/or
    previous versions of the same protocol, incompatibilities between
@@ -1786,7 +1786,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-requirements-on-other-proto">
 <a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-requirements-on-other-proto" class="section-name selfRef">Requirements on Other Protocols and Functional Components</a>
         </h3>
-<p id="section-3.4-1">Protocol designers should consider the requirements that the new
+<p id="section-3.4-1">Protocol Designers should consider the requirements that the new
    protocol might put on other protocols and functional components and
    should also document the requirements from other protocols and
    functional elements that have been considered in designing the new
@@ -1818,7 +1818,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h3>
 <p id="section-3.5-1">The introduction of a new protocol or extensions to an existing
    protocol may have an impact on the operation of existing networks.
-   Protocol designers should outline such impacts (which may be
+   Protocol Designers should outline such impacts (which may be
    positive), including scaling concerns and interactions with other
    protocols. For example, a new protocol that doubles the number of
    active, reachable addresses in use within a network might need to be
@@ -1827,14 +1827,14 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-3.5-2">A protocol could send active monitoring packets on the wire. If we
    don't pay attention, we might get very good accuracy but could send
    too many active monitoring packets.<a href="#section-3.5-2" class="pilcrow">¶</a></p>
-<p id="section-3.5-3">The protocol designer should consider the potential impact on the
+<p id="section-3.5-3">The Protocol Designer should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
    and traffic patterns that might change, including specific types of
    traffic, such as multicast. Also, consider the need to install new
    components that are added to the network as a result of changes in
    the configuration, such as servers performing auto-configuration
    operations.<a href="#section-3.5-3" class="pilcrow">¶</a></p>
-<p id="section-3.5-4">The protocol designer should consider also the impact on
+<p id="section-3.5-4">The Protocol Designer should consider also the impact on
    infrastructure applications like DNS <span>[<a href="#RFC1034" class="cite xref">RFC1034</a>]</span>, the registries, or
    the size of routing tables. For example, Simple Mail Transfer
    Protocol (SMTP) <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
@@ -1856,10 +1856,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-verifying-correct-operation">
 <a href="#section-3.6" class="section-number selfRef">3.6. </a><a href="#name-verifying-correct-operation" class="section-name selfRef">Verifying Correct Operation</a>
         </h3>
-<p id="section-3.6-1">The protocol designer should consider techniques for testing the
+<p id="section-3.6-1">The Protocol Designer should consider techniques for testing the
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
-   monitoring). Protocol designers should consider how the correct end-
+   monitoring). Protocol Designers should consider how the correct end-
    to-end operation of the new protocol in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
@@ -1914,7 +1914,7 @@ operation, scripts)? Are they performed immediately or are they
 time scheduled, or event triggered?<a href="#section-4-4.4.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-4-5">Protocol designers should consider how the new protocol will be
+<p id="section-4-5">Protocol Designers should consider how the new protocol will be
    managed in different deployment scales. It might be sensible to use
    a local management interface to manage the new protocol on a single
    device, but in a large network, remote management using a centralized
@@ -1965,7 +1965,7 @@ time scheduled, or event triggered?<a href="#section-4-4.4.1" class="pilcrow">¶
    applications, often from different vendors. Interoperability allows
    for the use of third-party applications and the outsourcing of
    management services.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
-<p id="section-4.1-2">Some product designers and protocol designers assume that if a device
+<p id="section-4.1-2">Some product designers and Protocol Designers assume that if a device
    can be managed individually using a command line interface or a web
    page interface, that such a solution is enough. But when equipment
    from multiple vendors is combined into a large network, scalability
@@ -2034,7 +2034,7 @@ usage accounting<a href="#section-4.1-7.2.1" class="pilcrow">¶</a></p>
    and which error conditions can be recorded together in a single
    counter. Then, whether the counter is gathered via, e.g., NETCONF or
    exported via IPFIX, the counter will have the same meaning.<a href="#section-4.1-10" class="pilcrow">¶</a></p>
-<p id="section-4.1-11">Protocol designers must consider what operational, configuration,
+<p id="section-4.1-11">Protocol Designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
    monitoring, controlling, or troubleshooting a new protocol and its
    extensions. This includes identifying key parameters that reflect the
@@ -2080,8 +2080,8 @@ usage accounting<a href="#section-4.1-7.2.1" class="pilcrow">¶</a></p>
    <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span> is helpful in determining what information to consider
    regarding Information Models (IMs), as compared to Data Models (DMs).<a href="#section-4.1-13" class="pilcrow">¶</a></p>
 <p id="section-4.1-14">Protocol Designers may directly develop Data Models without first producing an Information Model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).<a href="#section-4.1-14" class="pilcrow">¶</a></p>
-<p id="section-4.1-15">Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the Information Model to develop Data Models that will be used for managing the protocol.<a href="#section-4.1-15" class="pilcrow">¶</a></p>
-<p id="section-4.1-16">Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an Information Model if the resulting Data Models are complex or numerous.<a href="#section-4.1-16" class="pilcrow">¶</a></p>
+<p id="section-4.1-15">Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or protocol extension. The protocol Designers then use the Information Model to develop Data Models that will be used for managing the protocol.<a href="#section-4.1-15" class="pilcrow">¶</a></p>
+<p id="section-4.1-16">Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol Designers may create an Information Model if the resulting Data Models are complex or numerous.<a href="#section-4.1-16" class="pilcrow">¶</a></p>
 <p id="section-4.1-17">Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
    relevant. There are a number of information models contained in
@@ -2270,15 +2270,15 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
         <h3 id="name-fault-management">
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-fault-management" class="section-name selfRef">Fault Management</a>
         </h3>
-<p id="section-4.3-1">The protocol designer should document the basic faults and health
+<p id="section-4.3-1">The Protocol Designer should document the basic faults and health
    indicators that need to be instrumented for the new protocol, as well
    as the alarms and events that must be propagated to management
    applications or exposed through a Data Model.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
-<p id="section-4.3-2">The protocol designer should consider how fault information will be
+<p id="section-4.3-2">The Protocol Designer should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?<a href="#section-4.3-2" class="pilcrow">¶</a></p>
 <p id="section-4.3-3">If notifications are used to alert operators to certain conditions,
-   then the protocol designer should discuss mechanisms to throttle
+   then the Protocol Designer should discuss mechanisms to throttle
    notifications to prevent congestion and duplications of event
    notifications. Will there be a hierarchy of faults, and will the
    fault reporting be done by each fault in the hierarchy, or will only
@@ -2296,7 +2296,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
           <h4 id="name-liveness-detection-and-moni">
 <a href="#section-4.3.1" class="section-number selfRef">4.3.1. </a><a href="#name-liveness-detection-and-moni" class="section-name selfRef">Liveness Detection and Monitoring</a>
           </h4>
-<p id="section-4.3.1-1">Protocol designers should always build in basic testing features
+<p id="section-4.3.1-1">Protocol Designers should always build in basic testing features
    (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
    calls)) that can be used to test for liveness, with an option to
    enable and disable them.<a href="#section-4.3.1-1" class="pilcrow">¶</a></p>
@@ -2322,7 +2322,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    management information. For example, counters might record instances
    of error conditions. Some faults might be able to be pinpointed by
    comparing the outputs of one device and the inputs of another device,
-   looking for anomalies. Protocol designers should consider what
+   looking for anomalies. Protocol Designers should consider what
    counters should count. If a single counter provided by vendor A
    counts three types of error conditions, while the corresponding
    counter provided by vendor B counts seven types of error conditions,
@@ -2366,7 +2366,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
         <h3 id="name-configuration-management">
 <a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-configuration-management" class="section-name selfRef">Configuration Management</a>
         </h3>
-<p id="section-4.4-1">A protocol designer should document the basic configuration
+<p id="section-4.4-1">A Protocol Designer should document the basic configuration
    parameters that need to be instrumented for a new protocol, as well
    as default values and modes of operation.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
 <p id="section-4.4-2">What information should be maintained across reboots of the device,
@@ -2387,7 +2387,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <p id="section-4.4-5">Implementations should not arbitrarily modify configuration data. In
    some cases (such as access control lists (ACLs)), the order of data
    items is significant and comprises part of the configured data. If a
-   protocol designer defines mechanisms for configuration, it would be
+   Protocol Designer defines mechanisms for configuration, it would be
    desirable to standardize the order of elements for consistency of
    configuration and of reporting across vendors and across releases
    from vendors.<a href="#section-4.4-5" class="pilcrow">¶</a></p>
@@ -2409,7 +2409,7 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
    network configuration, although the models used by various operators
    are probably very similar. Many operators consider it desirable to
    extract, document, and standardize the common parts of these network-
-   wide configuration database schemas. A protocol designer should
+   wide configuration database schemas. A Protocol Designer should
    consider how to standardize the common parts of configuring the new
    protocol, while recognizing that vendors may also have proprietary
    aspects of their configurations.<a href="#section-4.4-8" class="pilcrow">¶</a></p>
@@ -2420,7 +2420,7 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
    management. The ability to distribute configurations to multiple
    devices, or to modify candidate configurations on multiple devices,
    and then activate them in a near-simultaneous manner might help.
-   Protocol designers can consider how it would make sense for their
+   Protocol Designers can consider how it would make sense for their
    protocol to be configured across multiple devices. Configuration
    templates might also be helpful.<a href="#section-4.4-9" class="pilcrow">¶</a></p>
 <p id="section-4.4-10">Consensus of the 2002 IAB Workshop <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span> was that textual
@@ -2434,7 +2434,7 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
    generate the operations necessary to get from A to B with minimal
    state changes and effects on network and systems. It is important to
    minimize the impact caused by configuration changes.<a href="#section-4.4-12" class="pilcrow">¶</a></p>
-<p id="section-4.4-13">A protocol designer should consider the configurable items that exist
+<p id="section-4.4-13">A Protocol Designer should consider the configurable items that exist
    for the control of function via the protocol elements described in
    the protocol specification. For example, sometimes the protocol
    requires that timers can be configured by the operator to ensure
@@ -2447,12 +2447,12 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
 <a href="#section-4.4.1" class="section-number selfRef">4.4.1. </a><a href="#name-verifying-correct-operation-2" class="section-name selfRef">Verifying Correct Operation</a>
           </h4>
 <p id="section-4.4.1-1">An important function that should be provided is guidance on how to
-   verify the correct operation of a protocol. A protocol designer
+   verify the correct operation of a protocol. A Protocol Designer
    could suggest techniques for testing the impact of the protocol on
    the network before it is deployed as well as techniques for testing
    the effect that the protocol has had on the network after being
    deployed.<a href="#section-4.4.1-1" class="pilcrow">¶</a></p>
-<p id="section-4.4.1-2">Protocol designers should consider how to test the correct end-to-end
+<p id="section-4.4.1-2">Protocol Designers should consider how to test the correct end-to-end
    operation of the service or network, how to verify the correct
    functioning of the protocol, and whether that is verified by testing
    the service function and/or by testing the forwarding function of
@@ -2467,7 +2467,7 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
         <h3 id="name-accounting-management">
 <a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-accounting-management" class="section-name selfRef">Accounting Management</a>
         </h3>
-<p id="section-4.5-1">A protocol designer should consider whether it would be appropriate
+<p id="section-4.5-1">A Protocol Designer should consider whether it would be appropriate
    to collect usage information related to this protocol and, if so,
    what usage information would be appropriate to collect.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
 <p id="section-4.5-2">"Introduction to Accounting Management" <span>[<a href="#RFC2975" class="cite xref">RFC2975</a>]</span> discusses a number
@@ -2611,7 +2611,7 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
         <h3 id="name-security-management">
 <a href="#section-4.7" class="section-number selfRef">4.7. </a><a href="#name-security-management" class="section-name selfRef">Security Management</a>
         </h3>
-<p id="section-4.7-1">Protocol designers should consider how to monitor and manage security
+<p id="section-4.7-1">Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the new protocol.<a href="#section-4.7-1" class="pilcrow">¶</a></p>
 <p id="section-4.7-2">There will be security considerations related to the new protocol.
    To make it possible for operators to be aware of security-related
@@ -2645,15 +2645,15 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
    where a user can be given only the minimum access necessary to
    perform a required task.<a href="#section-4.7-7" class="pilcrow">¶</a></p>
 <p id="section-4.7-8">Some operators wish to do consistency checks of access control lists
-   across devices. Protocol designers should consider information
+   across devices. Protocol Designers should consider information
    models to promote comparisons across devices and across vendors to
    permit checking the consistency of security configurations.<a href="#section-4.7-8" class="pilcrow">¶</a></p>
-<p id="section-4.7-9">Protocol designers should consider how to provide a secure transport,
+<p id="section-4.7-9">Protocol Designers should consider how to provide a secure transport,
    authentication, identity, and access control that integrates well
    with existing key and credential management infrastructure. It is a
    good idea to start with defining the threat model for the protocol,
    and from that deducing what is required.<a href="#section-4.7-9" class="pilcrow">¶</a></p>
-<p id="section-4.7-10">Protocol designers should consider how access control lists are
+<p id="section-4.7-10">Protocol Designers should consider how access control lists are
    maintained and updated.<a href="#section-4.7-10" class="pilcrow">¶</a></p>
 <p id="section-4.7-11">Standard SNMP notifications or syslog messages might
    already exist, or can be defined, to alert operators to the
@@ -2666,14 +2666,14 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
    conditions identified in the security considerations for the new
    protocol before they can impact the network.<a href="#section-4.7-12" class="pilcrow">¶</a></p>
 <p id="section-4.7-13">Different management protocols use different assumptions about
-   message security and data-access controls. A protocol designer that
+   message security and data-access controls. A protocol Designer that
    recommends using different protocols should consider how security
    will be applied in a balanced manner across multiple management
    interfaces. SNMP authority levels and policy are data-oriented,
    while CLI authority levels and policy are usually command-oriented
    (i.e., task-oriented). Depending on the management function,
    sometimes data-oriented or task-oriented approaches make more sense.
-   Protocol designers should consider both data-oriented and task-
+   Protocol Designers should consider both data-oriented and task-
    oriented authority levels and policy.<a href="#section-4.7-13" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -2768,7 +2768,7 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
       <h2 id="name-documentation-guidelines">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-documentation-guidelines" class="section-name selfRef">Documentation Guidelines</a>
       </h2>
-<p id="section-6-1">This document outlines key considerations for protocol designers and
+<p id="section-6-1">This document outlines key considerations for Protocol Designers and
    provides guidance on how these considerations ought to be documented.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <p id="section-6-2">This document does not describe interoperability requirements but
    rather describes practices that are useful to follow when dealing
@@ -2802,7 +2802,7 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
    Of course, additional relevant operational and manageability topics
    should be included as well.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
 <p id="section-6.1-5">Existing protocols and Data Models can provide the management
-   functions identified in the previous section. Protocol designers
+   functions identified in the previous section. Protocol Designers
    should consider how using existing protocols and Data Models might
    impact network operations.<a href="#section-6.1-5" class="pilcrow">¶</a></p>
 </section>
@@ -2812,7 +2812,7 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
         <h3 id="name-null-operations-and-managea">
 <a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-null-operations-and-managea" class="section-name selfRef">Null Operations and Manageability Considerations Section</a>
         </h3>
-<p id="section-6.2-1">A protocol designer may seriously consider the manageability
+<p id="section-6.2-1">A protocol Designer may seriously consider the manageability
    requirements of a new protocol and determine that no management
    functionality or operatinal best-practice clarifications are
    needed by the protocol. It would be helpful to
