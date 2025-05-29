@@ -85,11 +85,11 @@ author:
     email: chen.ran@zte.com.cn
 --- abstract
 
-   New protocols or protocol extensions are best designed with due
+   New Protocols or protocol extensions are best designed with due
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
-   reviewers of documents that define new protocols or protocol
+   reviewers of documents that define New Protocols or protocol
    extensions regarding aspects of operations and management that should
    be considered.
 
@@ -110,7 +110,7 @@ author:
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
    management particularly hard. This document provides guidelines to
-   help protocol designers and working groups consider the operations
+   help Protocol Designers and working groups (WG) consider the operations
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
@@ -126,15 +126,15 @@ author:
 ##  Designing for Operations and Management
 
    The operational environment and manageability of the protocol should
-   be considered from the start when new protocols are designed.
+   be considered from the start when New Protocols are designed.
 
    As the Internet has grown, IETF protocols have addressed a constantly growing set of
    needs, such as web servers, collaboration services, and applications.
    The number of IETF management technologies has been expanding and the
    IETF management strategy has been changing to address the emerging
    management requirements. In the past, most of the existing IETF management
-   standards were focused on using Structure of Management Information (SMI)-based
-   data models (MIB modules) to monitor and manage networking devices.
+   standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based {{?RFC2578}}
+   data modelling language, to monitor and manage networking devices.
    Currently, the YANG data modeling language {{?RFC7950}} is recommended to
    monitor and manage the IETF protocols and the networking devices.
    Management requirements continually evolve in the IETF. Therefore,
@@ -145,10 +145,10 @@ author:
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
    and data models that could be used to address those needs. This is
-   similar to a working group (WG) that considers which security threats
-   are relevant to their protocol, documents how threats should be
-   mitigated, and then suggests appropriate standard protocols that
-   could mitigate the threats.
+   similar to a WG that considers which security threats are relevant to
+   their protocol, documents (in the compulsory Security Considerations section)
+   how threats should be mitigated, and then suggests appropriate standard
+   protocols that could mitigate the threats.
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
@@ -196,11 +196,11 @@ author:
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
    {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
-   data models for managing new protocols. As the Internet has evolved,
+   data models for managing New Protocols. As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate. The
    IESG policy to require working groups to write a MIB module to
-   provide manageability for new protocols is being replaced by a policy
+   provide manageability for New Protocols is being replaced by a policy
    that is more open to using a variety of management protocols and data
    models designed to achieve different goals. In 2014, the IESG wrote a
    statement about "Writable MIB Module" {{IESG-STATEMENT}}.
