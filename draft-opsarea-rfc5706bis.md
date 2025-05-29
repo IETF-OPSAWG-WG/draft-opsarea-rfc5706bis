@@ -85,11 +85,11 @@ author:
     email: chen.ran@zte.com.cn
 --- abstract
 
-   New protocols or protocol extensions are best designed with due
+   New Protocols or protocol extensions are best designed with due
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
-   reviewers of documents that define new protocols or protocol
+   reviewers of documents that define New Protocols or protocol
    extensions regarding aspects of operations and management that should
    be considered.
 
@@ -104,7 +104,7 @@ author:
 
 #  Introduction
 
-   Often when new protocols or protocol extensions are developed, not
+   Often when New Protocols or protocol extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
@@ -126,7 +126,7 @@ author:
 ##  Designing for Operations and Management
 
    The operational environment and manageability of the protocol should
-   be considered from the start when new protocols are designed.
+   be considered from the start when New Protocols are designed.
 
    As the Internet has grown, IETF protocols have addressed a constantly growing set of
    needs, such as web servers, collaboration services, and applications.
@@ -196,11 +196,11 @@ author:
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
    {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
-   data models for managing new protocols. As the Internet has evolved,
+   data models for managing New Protocols. As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate. The
    IESG policy to require working groups to write a MIB module to
-   provide manageability for new protocols is being replaced by a policy
+   provide manageability for New Protocols is being replaced by a policy
    that is more open to using a variety of management protocols and data
    models designed to achieve different goals. In 2014, the IESG wrote a
    statement about "Writable MIB Module" {{IESG-STATEMENT}}.
@@ -213,7 +213,7 @@ author:
    with an eye toward being flexible while also striving for
    interoperability.
 
-   Fully new protocols may require significant consideration of expected
+   Fully New Protocols may require significant consideration of expected
    operations and management, while extensions to existing, widely
    deployed protocols may have established de facto operations and
    management practices that are already well understood.
@@ -351,7 +351,7 @@ author:
       models, or other functionality being designed.
 
    * Protocol Designer: represents individuals and working groups
-      involved in the development of new protocols or extensions.
+      involved in the development of New Protocols or extensions.
 
 ##  Available Management Technologies
 
@@ -381,7 +381,7 @@ author:
 
 # Operational Considerations - How Will the New Protocol Fit into the Current Environment?
 
-   Designers of a new protocol should carefully consider the operational
+   Designers of a New Protocol should carefully consider the operational
    aspects. To ensure that a protocol will be practical to deploy in
    the real world, it is not enough to merely define it very precisely
    in a well-written document. Operational aspects will have a serious
@@ -401,7 +401,7 @@ author:
 ##  Operations {#sec-ops}
 
    Protocol Designers can analyze the operational environment and mode
-   of work in which the new protocol or extension will work. Such an
+   of work in which the New Protocol or extension will work. Such an
    exercise need not be reflected directly by text in their document
    but could help in visualizing how to apply the protocol in the
    Internet environments where it will be deployed.
@@ -471,14 +471,14 @@ author:
 
 ##  Migration Path {#sec-migration}
 
-   If the new protocol is a new version of an existing one, or if it is
+   If the New Protocol is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
-   how deployments should transition to the new protocol. This should
+   how deployments should transition to the New Protocol. This should
    include coexistence with previously deployed protocols and/or
    previous versions of the same protocol, incompatibilities between
    versions, translation between versions, and side effects that might
    occur. Are older protocols or versions disabled, or do they coexist
-   in the network with the new protocol?
+   in the network with the New Protocol?
 
    Many protocols benefit from being incrementally deployable --
    operators may deploy aspects of a protocol before deploying the
@@ -514,11 +514,11 @@ author:
 
 ##  Impact on Network Operation {#sec-impact}
 
-   The introduction of a new protocol or extensions to an existing
+   The introduction of a New Protocol or extensions to an existing
    protocol may have an impact on the operation of existing networks.
    Protocol Designers should outline such impacts (which may be
    positive), including scaling concerns and interactions with other
-   protocols. For example, a new protocol that doubles the number of
+   protocols. For example, a New Protocol that doubles the number of
    active, reachable addresses in use within a network might need to be
    considered in the light of the impact on the scalability of the
    interior gateway protocols operating within the network.
@@ -559,10 +559,10 @@ author:
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct end-
-   to-end operation of the new protocol in the network can be tested
+   to-end operation of the New Protocol in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
-   properly with the new protocol. Which metrics are of interest?
+   properly with the New Protocol. Which metrics are of interest?
 
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
@@ -605,18 +605,18 @@ author:
       operation, scripts)? Are they performed immediately or are they
       time scheduled, or event triggered?
 
-   Protocol Designers should consider how the new protocol will be
+   Protocol Designers should consider how the New Protocol will be
    managed in different deployment scales. It might be sensible to use
-   a local management interface to manage the new protocol on a single
+   a local management interface to manage the New Protocol on a single
    device, but in a large network, remote management using a centralized
    server and/or using distributed management functionality might make
    more sense. Auto-configuration and default parameters might be
-   possible for some new protocols.
+   possible for some New Protocols.
 
    Management needs to be considered not only from the perspective of a
    device, but also from the perspective of network and service
    management. A service might be network and operational functionality
-   derived from the implementation and deployment of a new protocol.
+   derived from the implementation and deployment of a New Protocol.
    Often an individual network element is not aware of the service being
    delivered.
 
@@ -729,7 +729,7 @@ author:
 
    Protocol Designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
-   monitoring, controlling, or troubleshooting a new protocol and its
+   monitoring, controlling, or troubleshooting a New Protocol and its
    extensions. This includes identifying key parameters that reflect the
    protocol’s behavior, performance metrics, error indicators, and any
    contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
@@ -918,7 +918,7 @@ author:
 ## Fault Management {#sec-fm-mgt}
 
    The Protocol Designer should document the basic faults and health
-   indicators that need to be instrumented for the new protocol, as well
+   indicators that need to be instrumented for the New Protocol, as well
    as the alarms and events that must be propagated to management
    applications or exposed through a Data Model.
 
@@ -936,7 +936,7 @@ author:
    of propagated faults from a given domain or device?
 
    SNMP notifications and syslog messages can alert an operator when an
-   aspect of the new protocol fails or encounters an error or failure
+   aspect of the New Protocol fails or encounters an error or failure
    condition, and SNMP is frequently used as a heartbeat monitor.
    Should the event reporting provide guaranteed accurate delivery of
    the event information within a given (high) margin of confidence?
@@ -1001,7 +1001,7 @@ author:
 ##  Configuration Management {#sec-config-mgt}
 
    A Protocol Designer should document the basic configuration
-   parameters that need to be instrumented for a new protocol, as well
+   parameters that need to be instrumented for a New Protocol, as well
    as default values and modes of operation.
 
    What information should be maintained across reboots of the device,
@@ -1235,9 +1235,9 @@ author:
 ##  Security Management {#sec-secuity-mgt}
 
    Protocol Designers should consider how to monitor and manage security
-   aspects and vulnerabilities of the new protocol.
+   aspects and vulnerabilities of the New protocol.
 
-   There will be security considerations related to the new protocol.
+   There will be security considerations related to the New Protocol.
    To make it possible for operators to be aware of security-related
    events, it is recommended that system logs should record events, such
    as failed logins, but the logs must be secured.
@@ -1358,9 +1358,9 @@ author:
   *  IETF Hackathons for Manageability Testing:
      IETF Hackathons {{IETF-HACKATHONS}}
      provide an opportunity to test the functionality, interoperability,
-     and manageability of new protocols. These events can be specifically
+     and manageability of New Protocols. These events can be specifically
      leveraged to assess the operational (including manageability) implications
-     of a new protocol by focusing tasks on:
+     of a New Protocol by focusing tasks on:
 
      *  Adapting existing tools to interact with the new specification.
      *  Developing example management scripts or modules for existing management
@@ -1409,7 +1409,7 @@ author:
    the management and operations topics raised in this document, and
    when one or more of these topics is not relevant, it would be useful
    to contain a simple statement explaining why the topic is not
-   relevant or applicable for the new protocol or feature.
+   relevant or applicable for the New Protocol or feature.
    Of course, additional relevant operational and manageability topics
    should be included as well.
 
@@ -1421,7 +1421,7 @@ author:
 ##  Null Operations and Manageability Considerations Section
 
    A protocol Designer may seriously consider the manageability
-   requirements of a new protocol and determine that no management
+   requirements of a New Protocol and determine that no management
    functionality or operatinal best-practice clarifications are
    needed by the protocol. It would be helpful to
    those who may update or write extensions to the protocol in the
@@ -1437,14 +1437,14 @@ author:
    section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
-   In the case where the new protocol is an extension and the base
+   In the case where the New Protocol is an extension and the base
    protocol discusses all the relevant operational and manageability
    considerations, it would be helpful to point out the considerations
    section in the base document.
 
 ##  Placement of Operations and Manageability Considerations Sections
 
-   section for a new protocol, it is recommended that the section be
+   section for a New Protocol, it is recommended that the section be
    placed immediately before the Security Considerations section.
    Reviewers interested in such sections could find it easily, and this
    placement could simplify the development of tools to detect the
