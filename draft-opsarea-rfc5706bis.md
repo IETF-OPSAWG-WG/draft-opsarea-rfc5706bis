@@ -179,7 +179,9 @@ author:
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
    is mandatory. If protocol designers conclude that the technology can
-   be managed solely by using proprietary command line interfaces (CLIs)
+   be managed solely by using proprietary interfaces, such as 
+   command line interfaces (CLIs), graphical user interfaces (GUIs), or
+   vendor-specific APIs,
    and that no structured or standardized data model needs to be in
    place, this might be fine, but it is a decision that should be
    explicit in a manageability discussion -- that this is how the
@@ -1073,8 +1075,8 @@ author:
        experience, reordering ACLs can lead to a huge security issue.
 
    Network-wide configurations may be stored in central master databases
-   and transformed into formats that can be pushed to devices, either by
-   generating sequences of CLI commands or complete configuration files
+   and transformed into readable formats that can be pushed to devices, either by
+   generating sequences of CLI commands or complete textual configuration files
    that are pushed to devices. There is no common database schema for
    network configuration, although the models used by various operators
    are probably very similar. Many operators consider it desirable to
