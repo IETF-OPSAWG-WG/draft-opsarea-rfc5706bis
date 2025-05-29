@@ -1666,7 +1666,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
         </ul>
 <p id="section-2.2-3">A planned supplement to this document will discuss these protocol
-   standards, discuss some standard information and data models for
+   standards, discuss some standard information and Data Models for
    specific functionality, and provide pointers to the documents that
    define them.<a href="#section-2.2-3" class="pilcrow">¶</a></p>
 </section>
@@ -2078,10 +2078,10 @@ usage accounting<a href="#section-4.1-7.2.1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.1-13">"On the Difference between Information Models and Data Models"
    <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span> is helpful in determining what information to consider
-   regarding information models (IMs), as compared to data models (DMs).<a href="#section-4.1-13" class="pilcrow">¶</a></p>
-<p id="section-4.1-14">Protocol Designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).<a href="#section-4.1-14" class="pilcrow">¶</a></p>
-<p id="section-4.1-15">Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop data models that will be used for managing the protocol.<a href="#section-4.1-15" class="pilcrow">¶</a></p>
-<p id="section-4.1-16">Specifically, Protocol Designers should develop an information model if multiple data model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.<a href="#section-4.1-16" class="pilcrow">¶</a></p>
+   regarding information models (IMs), as compared to Data Models (DMs).<a href="#section-4.1-13" class="pilcrow">¶</a></p>
+<p id="section-4.1-14">Protocol Designers may directly develop Data Models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).<a href="#section-4.1-14" class="pilcrow">¶</a></p>
+<p id="section-4.1-15">Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop Data Models that will be used for managing the protocol.<a href="#section-4.1-15" class="pilcrow">¶</a></p>
+<p id="section-4.1-16">Specifically, Protocol Designers should develop an information model if multiple Data Model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting Data Models are complex or numerous.<a href="#section-4.1-16" class="pilcrow">¶</a></p>
 <p id="section-4.1-17">Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
    relevant. There are a number of information models contained in
@@ -2107,7 +2107,7 @@ usage accounting<a href="#section-4.1-7.2.1" class="pilcrow">¶</a></p>
 Datapath Mechanisms<a href="#section-4.1-18.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-4.1-19">Management protocol standards and management data model standards
+<p id="section-4.1-19">Management protocol standards and management Data Model standards
    often contain compliance clauses to ensure interoperability.
    Manageability considerations should include discussion of which level
    of compliance is expected to be supported for interoperability.<a href="#section-4.1-19" class="pilcrow">¶</a></p>
@@ -2132,7 +2132,7 @@ Datapath Mechanisms<a href="#section-4.1-18.6.1" class="pilcrow">¶</a></p>
 <p id="section-4.2-2">Although this document recommends using English text (the official
    language for IETF specifications) to describe an information model,
    including a complementary YANG module helps translate abstract concepts
-   into implementation-specific data models. This ensures consistency between
+   into implementation-specific Data Models. This ensures consistency between
    the high-level design and practical deployment.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
 <p id="section-4.2-3">A management information model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
@@ -2207,7 +2207,7 @@ guideline is one counter per critical section per layer.<a href="#section-4.2.1-
 <a href="#section-4.2.2" class="section-number selfRef">4.2.2. </a><a href="#name-yang-data-model-considerati" class="section-name selfRef">YANG Data Model Considerations</a>
           </h4>
 <p id="section-4.2.2-1">When considering YANG data models for a new specification, there
-  are multiple types of data models that may be applicable. The
+  are multiple types of Data Models that may be applicable. The
   hierarchy and relationship between these types is described in
   <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-25#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>. A new specification
   may require or benefit from one or more of these YANG data model types.<a href="#section-4.2.2-1" class="pilcrow">¶</a></p>
@@ -2219,7 +2219,7 @@ individual devices. These models are designed to distinguish
 between these types of data and support querying and updating
 device-specific parameters. Consideration should be given to
 how device-level models might fit with broader network and
-service data models.<a href="#section-4.2.2-2.1.1" class="pilcrow">¶</a></p>
+service Data Models.<a href="#section-4.2.2-2.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.2.2-2.2">
               <p id="section-4.2.2-2.2.1">Network Models - Also called Network Service Models, define abstractions
@@ -2273,7 +2273,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <p id="section-4.3-1">The protocol designer should document the basic faults and health
    indicators that need to be instrumented for the new protocol, as well
    as the alarms and events that must be propagated to management
-   applications or exposed through a data model.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+   applications or exposed through a Data Model.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <p id="section-4.3-2">The protocol designer should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?<a href="#section-4.3-2" class="pilcrow">¶</a></p>
@@ -2801,9 +2801,9 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
    relevant or applicable for the new protocol or feature.
    Of course, additional relevant operational and manageability topics
    should be included as well.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
-<p id="section-6.1-5">Existing protocols and data models can provide the management
+<p id="section-6.1-5">Existing protocols and Data Models can provide the management
    functions identified in the previous section. Protocol designers
-   should consider how using existing protocols and data models might
+   should consider how using existing protocols and Data Models might
    impact network operations.<a href="#section-6.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
