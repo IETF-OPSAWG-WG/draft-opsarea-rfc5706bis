@@ -1,8 +1,8 @@
 <!-- regenerate: off (set to off if you edit this file) -->
 
-# Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions
+# Guidelines for Considering Operations and Management in IETF Specifications
 
-This is the working area for the individual Internet-Draft, "Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions".
+This is the working area for the individual Internet-Draft, "Guidelines for Considering Operations and Management in IETF Specifications".
 
 * [Editor's Copy](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-opsarea-rfc5706bis.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-opsarea-rfc5706bis)
@@ -11,6 +11,7 @@ This is the working area for the individual Internet-Draft, "Guidelines for Cons
 * [Compare PRs to Datatracker Page](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/)
 * [Compare I-D to RFC5706](https://author-tools.ietf.org/diff?doc_1=rfc5706&doc_2=draft-opsarea-rfc5706bis)
 * [Submit a new revision](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/releases/new)
+
 
 ## Contributing
 
