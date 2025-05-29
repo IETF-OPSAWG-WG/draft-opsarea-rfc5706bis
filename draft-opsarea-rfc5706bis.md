@@ -375,7 +375,7 @@ author:
    *  BGP Monitoring Protocol - BMP {{?RFC7854}}
 
    A planned supplement to this document will discuss these protocol
-   standards, discuss some standard information and data models for
+   standards, discuss some standard information and Data Models for
    specific functionality, and provide pointers to the documents that
    define them.
 
@@ -748,13 +748,13 @@ author:
 
    "On the Difference between Information Models and Data Models"
    {{?RFC3444}} is helpful in determining what information to consider
-   regarding information models (IMs), as compared to data models (DMs).
+   regarding information models (IMs), as compared to Data Models (DMs).
 
-   Protocol Designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
+   Protocol Designers may directly develop Data Models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
 
-   Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop data models that will be used for managing the protocol.
+   Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop Data Models that will be used for managing the protocol.
 
-   Specifically, Protocol Designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.
+   Specifically, Protocol Designers should develop an information model if multiple Data Model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting Data Models are complex or numerous.
 
 
 
@@ -776,7 +776,7 @@ author:
    *  {{?RFC3670}} - Information Model for Describing Network Device QoS
       Datapath Mechanisms
 
-   Management protocol standards and management data model standards
+   Management protocol standards and management Data Model standards
    often contain compliance clauses to ensure interoperability.
    Manageability considerations should include discussion of which level
    of compliance is expected to be supported for interoperability.
@@ -798,7 +798,7 @@ author:
    Although this document recommends using English text (the official
    language for IETF specifications) to describe an information model,
    including a complementary YANG module helps translate abstract concepts
-   into implementation-specific data models. This ensures consistency between
+   into implementation-specific Data Models. This ensures consistency between
    the high-level design and practical deployment.
 
    A management information model should include a discussion of what is
@@ -862,7 +862,7 @@ author:
 ### YANG Data Model Considerations {#sec-yang-dm}
 
   When considering YANG data models for a new specification, there
-  are multiple types of data models that may be applicable. The
+  are multiple types of Data Models that may be applicable. The
   hierarchy and relationship between these types is described in
   {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}. A new specification
   may require or benefit from one or more of these YANG data model types.
@@ -873,7 +873,7 @@ author:
      between these types of data and support querying and updating
      device-specific parameters. Consideration should be given to
      how device-level models might fit with broader network and
-     service data models.
+     service Data Models.
 
   *  Network Models - Also called Network Service Models, define abstractions
      for managing the behavior and relationships of multiple devices
@@ -920,7 +920,7 @@ author:
    The protocol designer should document the basic faults and health
    indicators that need to be instrumented for the new protocol, as well
    as the alarms and events that must be propagated to management
-   applications or exposed through a data model.
+   applications or exposed through a Data Model.
 
    The protocol designer should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
@@ -1413,9 +1413,9 @@ author:
    Of course, additional relevant operational and manageability topics
    should be included as well.
 
-   Existing protocols and data models can provide the management
+   Existing protocols and Data Models can provide the management
    functions identified in the previous section. Protocol designers
-   should consider how using existing protocols and data models might
+   should consider how using existing protocols and Data Models might
    impact network operations.
 
 ##  Null Operations and Manageability Considerations Section
