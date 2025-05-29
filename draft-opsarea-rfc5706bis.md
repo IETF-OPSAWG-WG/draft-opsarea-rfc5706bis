@@ -335,11 +335,11 @@ author:
 
    * CLI: Command Line Interface
 
-   * DATA MODEL: a mapping of the contents of an information model into
+   * Data Model: a mapping of the contents of an information model into
       a form that is specific to a particular type of data store or
       repository {{?RFC3444}}.
 
-   * INFORMATION MODEL: an abstraction and representation of the
+   * Information Model: an abstraction and representation of the
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other. It is
       independent of any specific repository, software usage, protocol,
@@ -347,10 +347,10 @@ author:
 
    * OAM: Operations, Administration, and Maintenance {{?RFC6291}} {{?I-D.ietf-opsawg-oam-characterization}}.
 
-   * NEW PROTOCOL: includes new protocols, protocol extensions, data
+   * New Protocol: includes new protocols, protocol extensions, data
       models, or other functionality being designed.
 
-   * PROTOCOL DESIGNER: represents individuals and working groups
+   * Protocol Designer: represents individuals and working groups
       involved in the development of new protocols or extensions.
 
 ##  Available Management Technologies
