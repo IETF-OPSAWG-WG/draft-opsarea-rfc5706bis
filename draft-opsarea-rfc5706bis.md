@@ -179,7 +179,7 @@ author:
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
    is mandatory. If protocol designers conclude that the technology can
-   be managed solely by using proprietary interfaces, such as 
+   be managed solely by using proprietary interfaces, such as
    command line interfaces (CLIs), graphical user interfaces (GUIs), or
    vendor-specific APIs,
    and that no structured or standardized data model needs to be in
