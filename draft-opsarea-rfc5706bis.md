@@ -85,7 +85,7 @@ author:
     email: chen.ran@zte.com.cn
 --- abstract
 
-   New Protocols or protocol extensions are best designed with due
+   New Protocols or Protocol Extensions are best designed with due
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
@@ -104,7 +104,7 @@ author:
 
 #  Introduction
 
-   Often when New Protocols or protocol extensions are developed, not
+   Often when New Protocols or Protocol Extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
@@ -385,7 +385,7 @@ author:
 
    *  Protocol Designer: This term is used to refer to an individual, a group of
       people, or an IETF Working Group involved in the development and specification
-      of new protocols or protocol extensions.
+      of New Protocols or Protocol Extensions.
 
 
 ##  Available Management Technologies
@@ -789,7 +789,7 @@ author:
 
    Protocol Designers may directly develop Data Models without first producing an Information Model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
 
-   Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or protocol extension. The protocol Designers then use the Information Model to develop Data Models that will be used for managing the protocol.
+   Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or Protocol Extension. The protocol Designers then use the Information Model to develop Data Models that will be used for managing the protocol.
 
    Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol Designers may create an Information Model if the resulting Data Models are complex or numerous.
 
@@ -1427,7 +1427,7 @@ author:
 ##  Recommended Discussions
 
    After evaluating the operational and manageability aspects of a
-   protocol, a protocol extension, or an architecture, the resulting practices and
+   protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
    in an "Operations and Manageability Considerations" section within a
    specification. Since protocols are intended for operational deployment and
