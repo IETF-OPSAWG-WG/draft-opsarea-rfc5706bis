@@ -110,11 +110,11 @@ author:
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
    management particularly hard. This document provides guidelines to
-   help Protocol Designers and working groups consider the operations
+   help Protocol Designers and working groups (WG) consider the operations
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
-   This document obsoletes RFC 5706 and fully updates its content
+   This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms, and
    introduces a requirement for an “Operational and Management
    Considerations” section in Internet-Drafts, before they are progressed
@@ -133,8 +133,8 @@ author:
    The number of IETF management technologies has been expanding and the
    IETF management strategy has been changing to address the emerging
    management requirements. In the past, most of the existing IETF management
-   standards were focused on using Structure of Management Information (SMI)-based
-   data models (MIB modules) to monitor and manage networking devices.
+   standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based {{?STD58}}
+   data modeling language, to monitor and manage networking devices.
    Currently, the YANG data modeling language {{?RFC7950}} is recommended to
    monitor and manage the IETF protocols and the networking devices.
    Management requirements continually evolve in the IETF. Therefore,
@@ -145,10 +145,10 @@ author:
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
    and data models that could be used to address those needs. This is
-   similar to a working group (WG) that considers which security threats
-   are relevant to their protocol, documents how threats should be
-   mitigated, and then suggests appropriate standard protocols that
-   could mitigate the threats.
+   similar to a WG that considers which security threats are relevant to
+   their protocol, documents (in the required Security Considerations section, per RFC Style Guide {{?RFC7322}})
+   how threats should be mitigated, and then suggests appropriate standard
+   protocols that could mitigate the threats.
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
@@ -179,7 +179,9 @@ author:
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
    is mandatory. If Protocol Designers conclude that the technology can
-   be managed solely by using proprietary command line interfaces (CLIs)
+   be managed solely by using proprietary interfaces, such as
+   command line interfaces (CLIs), graphical user interfaces (GUIs), or
+   vendor-specific APIs,
    and that no structured or standardized data model needs to be in
    place, this might be fine, but it is a decision that should be
    explicit in a manageability discussion -- that this is how the
@@ -195,8 +197,8 @@ author:
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
-   data models for managing New Protocols. As the Internet has evolved,
+   {{?RFC3410}}, the Structure of Management Information (SMI) {{?STD58}}, and MIB
+   Data Models for managing New Protocols. As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate. The
    IESG policy to require working groups to write a MIB module to
@@ -316,42 +318,75 @@ author:
 
 # Key Concepts, Terminology, and Technological Landscape
 
+   This section introduces the key concepts and terminology used throughout the document, and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
+
+   This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?RFC2119}} and {{?RFC8174}}.
+
 ##  Terminology
 
-   This document deliberately does not use the (capitalized) keywords
-   described in RFC 2119 {{?RFC2119}}. RFC 2119 states the keywords must
-   only be used where it is actually required for interoperation or to
-   limit behavior which has potential for causing harm (e.g., limiting
-   retransmissions). For example, they must not be used to try to
-   impose a particular method on implementers where the method is not
-   required for interoperability. This informational document is a set
-   of guidelines based on current practices of \*\*some\*\* protocol
-   designers and operators. This document is biased toward router
-   operations and management and some advice may not be directly
-   applicable to protocols with a different purpose, such as application
-   server protocols. This document \*\*does not\*\* describe
-   interoperability requirements, so the capitalized keywords from RFC
-   2119 do not apply here.
+   These terms are:
 
-   * CLI: Command Line Interface
+   *  Proprietary Interfaces: An interface to manage a network element
+      that is not standardized. As such, the user interface, syntax, and
+      semantics typically vary significantly between implementations.
+      Examples of proprietary interfaces include CLI (Command Line
+      Interface), management web portal and Browser User Interface (BUI),
+      Graphical User Interface (GUI), and vendor-specific APIs.
 
-   * Data Model: a mapping of the contents of an Information Model into
-      a form that is specific to a particular type of data store or
-      repository {{?RFC3444}}.
+   *  CLI: Command Line Interface. Typically a proprietary interface to
+      hardware or software devices (e.g., routers or operating systems)
+      for use by human operators
+      directly at a terminal or via scripts. The commands, their syntax,
+      and the precise semantics of the parameters may vary considerably
+      between different vendors, between products from the same
+      vendor, and even between different versions or releases of a single
+      product. No attempt at standardizing CLIs has been made by the IETF.
 
-   * Information Model: an abstraction and representation of the
+   *  Information Model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
-      and operations, and the way that they relate to each other. It is
+      and operations, and the way that they relate to each other. The model is
       independent of any specific repository, software usage, protocol,
-      or platform {{?RFC3444}}.
+      or platform {{?RFC3444}}. See {{sec-interop}} and {{sec-im-design}} for
+      further discussion of information models.
 
-   * OAM: Operations, Administration, and Maintenance {{?RFC6291}} {{?I-D.ietf-opsawg-oam-characterization}}.
+   *  Data Model: A set of mechanisms for representing, organizing, storing
+      and handling data within a particular type of data store or repository.
+      This usually comprises a collection of data structures such as lists, tables,
+      relations, etc., a collection of operations that can be applied to the
+      structures such as retrieval, update, summation, etc., and a collection of
+      integrity rules that define the legal states (set of values) or changes of
+      state (operations on values). A data model may be derived by mapping the
+      contents of an information model or may be developed ab initio. Further
+      discussion of data models can be found in {{?RFC3444}}, {{sec-interop}},
+      and {{sec-mgt-info}}.
 
-   * New Protocol: includes new protocols, protocol extensions, data
-      models, or other functionality being designed.
+   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
+      {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
+      combination of:
 
-   * Protocol Designer: represents individuals and working groups
-      involved in the development of New Protocols or extensions.
+      1. Operation activities that are undertaken to keep the
+         network. They include monitoring of the network.
+
+      2. Administration activities that keep track of resources in the
+         network and how they are used. They include the bookkeeping necessary
+         to track networking resources.
+
+      3. Maintenance activities focused on facilitating repairs and upgrades.
+         They also involve corrective and preventive measures to make the
+         managed network run more effectively.
+
+      The broader concept of "operations and management" that is the subject of
+      this document encompasses OAM along with other management and provisioning
+      tools and concepts.
+
+   *  New Protocol and Protocol Extension: These terms are used in this document
+      to identify entirely new Internet protocols, new versions of existing Internet
+      protocols, and extensions to Internet protocols.
+
+   *  Protocol Designer: This term is used to refer to an individual, a group of
+      people, or an IETF Working Group involved in the development and specification
+      of new protocols or protocol extensions.
+
 
 ##  Available Management Technologies
 
@@ -359,8 +394,6 @@ author:
    are suitable for different purposes.  These include:
 
    *  Syslog {{?RFC5424}}
-
-   *  Simple Network Management Protocol - SNMP {{?RFC3410}}
 
    *  Network Configuration Protocol - NETCONF {{?RFC6241}}
 
@@ -373,6 +406,12 @@ author:
    *  IP Flow Information Export - IPFIX {{?RFC7011}}
 
    *  BGP Monitoring Protocol - BMP {{?RFC7854}}
+
+   The IETF previously also worked on the Simple Network Management Protocol
+   (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
+   but further use of this management protocol in new IETF documents has been constrained
+   to maintenance of existing MIB modules and development of MIB modules for legacy devices
+   that do not support more resent management protocols {{IESG-STATEMENT}}.
 
    A planned supplement to this document will discuss these protocol
    standards, discuss some standard information and Data Models for
@@ -683,9 +722,7 @@ author:
    management systems tend to speak whatever the boxes support, whether
    or not the IETF likes this. The IETF is moving from support for one
    schema language for modeling the structure of management information
-   (SMIv2) and
-   one simple network management protocol
-   (SNMP) towards support for additional schema
+   (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
    languages and additional management protocols suited to different
    purposes. Other Standard Development Organizations (e.g., the
    Distributed Management Task Force - DMTF, the Tele-Management Forum -
@@ -717,7 +754,7 @@ author:
    Information models are helpful to try to focus interoperability on
    the semantic level -- they define what information
    should be gathered and how that information might be used,
-   regardless of which management interface carries the data or which
+   regardless of which management protocol carries the data or which
    vendor implementation produces the data. The use of an Information Model might
    help improve the ability of operators to correlate messages in
    different protocols where the data overlaps, such as a YANG data model
@@ -1039,8 +1076,8 @@ author:
        experience, reordering ACLs can lead to a huge security issue.
 
    Network-wide configurations may be stored in central master databases
-   and transformed into formats that can be pushed to devices, either by
-   generating sequences of CLI commands or complete configuration files
+   and transformed into readable formats that can be pushed to devices, either by
+   generating sequences of CLI commands or complete textual configuration files
    that are pushed to devices. There is no common database schema for
    network configuration, although the models used by various operators
    are probably very similar. Many operators consider it desirable to
