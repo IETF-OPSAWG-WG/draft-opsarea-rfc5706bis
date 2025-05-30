@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 30 November 2025                                      A. Farrel
+Expires: 1 December 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 30 November 2025                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             29 May 2025
+                                                             30 May 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 November 2025.
+   This Internet-Draft will expire on 1 December 2025.
 
 Copyright Notice
 
@@ -650,18 +650,18 @@ Table of Contents
 
    Considerations for management should include a discussion of what
    needs to be managed, and how to achieve various management tasks.
-   Where are the managers and what type of management interfaces and
-   protocols will they need?  The "write a MIB module" approach to
-   considering management often focuses on monitoring a protocol
-   endpoint on a single device.  A MIB module document typically only
-   considers monitoring properties observable at one end, while the
-   document does not really cover managing the *protocol* (the
-   coordination of multiple ends) and does not even come near managing
-   the *service* (which includes a lot of stuff that is very far away
-   from the box).  This scenario reflects a common operational concern:
-   the inability to manage both ends of a connection effectively.  As
-   noted in [RFC3535], "MIB modules can often be characterized as a list
-   of ingredients without a recipe".
+   Where are the managers and what type of interfaces and protocols will
+   they need?  The "write a MIB module" approach to considering
+   management often focuses on monitoring a protocol endpoint on a
+   single device.  A MIB module document typically only considers
+   monitoring properties observable at one end, while the document does
+   not really cover managing the *protocol* (the coordination of
+   multiple ends) and does not even come near managing the *service*
+   (which includes a lot of stuff that is very far away from the box).
+   This scenario reflects a common operational concern: the inability to
+   manage both ends of a connection effectively.  As noted in [RFC3535],
+   "MIB modules can often be characterized as a list of ingredients
+   without a recipe".
 
    The management model should take into account factors such as:
 
@@ -739,14 +739,14 @@ Table of Contents
    page interface, that such a solution is enough.  But when equipment
    from multiple vendors is combined into a large network, scalability
    of management may become a problem.  It may be important to have
-   consistency in the management interfaces so network-wide operational
-   processes can be automated.  For example, a single switch might be
-   easily managed using an interactive web interface when installed in a
-   single-office small business, but when, say, a fast-food company
-   installs similar switches from multiple vendors in hundreds or
-   thousands of individual branches and wants to automate monitoring
-   them from a central location, monitoring vendor- and model-specific
-   web pages would be difficult to automate.
+   consistency in the management protocol support so network-wide
+   operational processes can be automated.  For example, a single switch
+   might be easily managed using an interactive web interface when
+   installed in a single-office small business, but when, say, a fast-
+   food company installs similar switches from multiple vendors in
+   hundreds or thousands of individual branches and wants to automate
+   monitoring them from a central location, monitoring vendor- and
+   model-specific web pages would be difficult to automate.
 
    The primary goal is the ability to roll out new useful functions and
    services in a way in which they can be managed in a scalable manner,
@@ -1357,10 +1357,10 @@ Table of Contents
    operations.  For example, Control and Provisioning of Wireless Access
    Points (CAPWAP) breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
-   By using a management interface, internal information that was
-   previously not accessible is now exposed over the network and to
-   management applications and may become a source of potential security
-   threats.
+   By using a control protocol or management protocol, internal
+   information that was previously not accessible is now exposed over
+   the network and to management applications and may become a source of
+   potential security threats.
 
    The granularity of access control needed on management interfaces
    needs to match operational needs.  Typical requirements are a role-
