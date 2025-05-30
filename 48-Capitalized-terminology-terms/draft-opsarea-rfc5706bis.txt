@@ -25,7 +25,7 @@ Expires: 1 December 2025                                       A. Farrel
 
 Abstract
 
-   New Protocols or protocol extensions are best designed with due
+   New Protocols or Protocol Extensions are best designed with due
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
@@ -123,7 +123,7 @@ Table of Contents
 
 1.  Introduction
 
-   Often when New Protocols or protocol extensions are developed, not
+   Often when New Protocols or Protocol Extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
    operated, and managed.  Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
@@ -419,8 +419,8 @@ Table of Contents
 
    *  Protocol Designer: This term is used to refer to an individual, a
       group of people, or an IETF Working Group involved in the
-      development and specification of new protocols or protocol
-      extensions.
+      development and specification of New Protocols or Protocol
+      Extensions.
 
 2.2.  Available Management Technologies
 
@@ -829,8 +829,8 @@ Table of Contents
    distinct protocols (e.g., IPFIX-only).
 
    Alternatively, Protocol Designers may decide to use an Information
-   Model to describe the managed elements in a protocol or protocol
-   extension.  The protocol Designers then use the Information Model to
+   Model to describe the managed elements in a protocol or Protocol
+   Extension.  The protocol Designers then use the Information Model to
    develop Data Models that will be used for managing the protocol.
 
    Specifically, Protocol Designers should develop an Information Model
@@ -1491,7 +1491,7 @@ Table of Contents
 6.1.  Recommended Discussions
 
    After evaluating the operational and manageability aspects of a
-   protocol, a protocol extension, or an architecture, the resulting
+   protocol, a Protocol Extension, or an architecture, the resulting
    practices and requirements should be documented in an "Operations and
    Manageability Considerations" section within a specification.  Since
    protocols are intended for operational deployment and management
