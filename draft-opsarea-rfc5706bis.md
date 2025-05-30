@@ -613,7 +613,7 @@ author:
 
    Considerations for management should include a discussion of what
    needs to be managed, and how to achieve various management tasks.
-   Where are the managers and what type of management interfaces and
+   Where are the managers and what type of interfaces and
    protocols will they need? The "write a MIB module" approach to
    considering management often focuses on monitoring a protocol
    endpoint on a single device. A MIB module document typically only
@@ -702,7 +702,7 @@ author:
    page interface, that such a solution is enough. But when equipment
    from multiple vendors is combined into a large network, scalability
    of management may become a problem. It may be important to have
-   consistency in the management interfaces so network-wide operational
+   consistency in the management protocol support so network-wide operational
    processes can be automated. For example, a single switch might be
    easily managed using an interactive web interface when installed in a
    single-office small business, but when, say, a fast-food company
@@ -1299,10 +1299,10 @@ author:
    operations. For example, Control and Provisioning of Wireless Access
    Points (CAPWAP) breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
-   By using a management interface, internal information that was
-   previously not accessible is now exposed over the network and to
-   management applications and may become a source of potential security
-   threats.
+   By using a control protocol or management protocol, internal
+   information that was previously not accessible is now exposed over
+   the network and to management applications and may become a source of
+   potential security threats.
 
    The granularity of access control needed on management interfaces
    needs to match operational needs. Typical requirements are a role-
