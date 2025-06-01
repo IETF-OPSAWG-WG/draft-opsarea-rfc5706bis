@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-25T00:54:16.724178+00:00",
+  "timestamp": "2025-06-01T01:00:06.129770+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -465,7 +465,7 @@
       "id": "I_kwDOOWPBqs6xyldP",
       "title": "Operations and Manageability Consideration Section",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/9",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -474,8 +474,8 @@
       "labels": [],
       "body": "The ideal end goal to have \"Operations and Manageability Considerations\" section(s) all IETF drafts. As Med mentioned on the OPSAWG mailing list: \"We need to find the right balance between providing clear guidance while avoiding some rigidity. We will explore that path together with other areas.\"\n",
       "createdAt": "2025-04-09T13:25:38Z",
-      "updatedAt": "2025-05-05T16:23:55Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-29T15:34:21Z",
+      "closedAt": "2025-05-29T15:34:20Z",
       "comments": [
         {
           "author": "graf3net",
@@ -483,6 +483,13 @@
           "body": "How about Service Models?\n\nhttps://datatracker.ietf.org/doc/html/rfc8199\nhttps://datatracker.ietf.org/doc/html/rfc8309",
           "createdAt": "2025-04-22T13:12:49Z",
           "updatedAt": "2025-04-22T13:12:49Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Soved by PR #31 ",
+          "createdAt": "2025-05-29T15:34:20Z",
+          "updatedAt": "2025-05-29T15:34:20Z"
         }
       ]
     },
@@ -757,7 +764,7 @@
       ],
       "body": "RFC 5706 mentioned\nAppendix A.  Operations and Management Review Checklist\n\n   This appendix provides a quick checklist of issues that protocol\n   designers should expect operations and management expert reviewers to\n   look for when reviewing a document being proposed for consideration\n   as a protocol standard.\n\nRFC 5706 audience was primarily for OPS-DIR (but also for authors writing an Operational Section.\n\nRFC 5706bis audience is wider, because the scope is wider: all draft authors, WG chairs, IESG",
       "createdAt": "2025-05-15T12:33:41Z",
-      "updatedAt": "2025-05-16T09:56:00Z",
+      "updatedAt": "2025-05-29T13:51:35Z",
       "closedAt": null,
       "comments": [
         {
@@ -787,6 +794,13 @@
           "body": "To be clear: I think it is probably a new sub-section \"How to use this document.\"\nThis would explain those three categories with, probably,\n- Use this to help guide your review, but refer to the Directorate wiki for detailed instructions\n- Use this guidance to help you build valuable Operational Considerations sections in your drafts\n- Use this document to help you understand, contribute to, and review drafts",
           "createdAt": "2025-05-15T18:34:45Z",
           "updatedAt": "2025-05-15T18:34:45Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "From the May 29th 2025 call:\n\"Background\" section should be folded into the \"Motivation\" section, keeping 3 main points: \n- The world embraces the data models \n- 2014 writeable IESG statement (which is already present)\n- NEMOPS: how to use them\n\nFor the audience, it's a new section called \"Audience\" with how to use this document: \n\n    Protocol Designer => Use this guidance to help you build valuable Operational Considerations sections in your drafts\n    IESG => helping the IESG evaluating the new OPS section content (to be checked with Med)\n    anyone involved in the document lifecyle (WG chair, WG advisor, Document Shepherd, and up to the responsible AD)\n               helping documenting or evaluating\n    AD when creating a charter             \n    Broader community => Use this document to help you understand, contribute to, and review drafts, taking into OPS considerations into account\n    OPS-DIR => Use this to help guide your review, but refer to the Directorate WIKI for detailed instructions\n    \n",
+          "createdAt": "2025-05-29T13:51:34Z",
+          "updatedAt": "2025-05-29T13:51:34Z"
         }
       ]
     },
@@ -855,16 +869,31 @@
       "id": "I_kwDOOWPBqs63yDvR",
       "title": "Consider rephrasing \"management interface\"",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/47",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "The term management interface is used in the text to mean a management protocol or API-like interface (especially with respect to information models).  This might need to be rephrased to disambiguate it from the physical or logical interface used to manage a network device (e.g., mgmt0, loopback0, etc.).  Consider \"management protocol\" or even \"API\" to clarify the interface type.",
       "createdAt": "2025-05-22T13:16:52Z",
-      "updatedAt": "2025-05-22T13:16:52Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-05-30T19:16:39Z",
+      "closedAt": "2025-05-30T19:16:39Z",
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I've looked over the remaining instances of \"management interface\" in the document, and I think all are acceptable in the context except one in the security section:\n\n> Consider security threats that may be introduced by management\n   operations. For example, Control and Provisioning of Wireless Access\n   Points (CAPWAP) breaks the structure of monolithic Access Points\n   (APs) into Access Controllers and Wireless Termination Points (WTPs).\n   By using a management interface, internal information that was\n   previously not accessible is now exposed over the network and to\n   management applications and may become a source of potential security\n   threats.\n\nHere, I think \"control protocol\" makes more sense or perhaps \"control or management protocol\" since that is what CAPWAP is in this example and explains a case where control/management instructions are distributed from within a single device to across the network.",
+          "createdAt": "2025-05-30T16:02:22Z",
+          "updatedAt": "2025-05-30T16:02:22Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Yes! \nPlease let's not conflate control protocol with management protocol.\nLet's also not use that ghastly and confusing term \"management interface\"\nSo, \"control or management protocol\" is nice.\n[A pedant might ask for \"control protocol or management protocol\"]",
+          "createdAt": "2025-05-30T16:14:23Z",
+          "updatedAt": "2025-05-30T16:14:23Z"
+        }
+      ]
     },
     {
       "number": 48,
@@ -894,9 +923,57 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-05-22T13:55:54Z",
-      "updatedAt": "2025-05-22T13:55:54Z",
+      "updatedAt": "2025-05-29T13:37:52Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Background:\n- we present in the OPSAREA, obviously\n- Joe presents in the routing area\n- We might present in different areas but, let's first look at the IETF agenda (as the presentation sequence might be important)",
+          "createdAt": "2025-05-29T10:21:53Z",
+          "updatedAt": "2025-05-29T10:21:53Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Sorry I @cpignata will not be in Madrid... actually I will be around Madrid, but I will not be attending IETF>",
+          "createdAt": "2025-05-29T13:37:51Z",
+          "updatedAt": "2025-05-29T13:37:51Z"
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "id": "I_kwDOOWPBqs64zAGw",
+      "title": "Do we need an \"Operations and Manageability Considerations\" section in *this* document?",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/51",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Since it's a must :-) \nIt can say something like \"this whole doc is about $topic, and this section shows where to potentially include such section.",
+      "createdAt": "2025-05-29T13:36:44Z",
+      "updatedAt": "2025-05-30T16:21:03Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I would add: \"Even if this document does not specific a New Protocol, this whole ...\"",
+          "createdAt": "2025-05-29T18:33:15Z",
+          "updatedAt": "2025-05-29T18:33:15Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Or, rather,\n\"Even if this document does not specify a New Protocol, this whole ...\"",
+          "createdAt": "2025-05-30T16:21:02Z",
+          "updatedAt": "2025-05-30T16:21:02Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -2795,26 +2872,29 @@
       "id": "PR_kwDOOWPBqs6WVCed",
       "title": "Terminology input from Adrian",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/38",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
+        "cpignata",
         "AdrianFarrel"
       ],
       "labels": [],
       "body": "Shared by email",
       "createdAt": "2025-05-15T13:22:28Z",
-      "updatedAt": "2025-05-23T06:18:01Z",
+      "updatedAt": "2025-05-29T16:17:46Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "c5634af696dded83d224351468399d299f5040ca",
+      "baseRefOid": "d44cb55ab4a45ec4c103bc15aab8374dcadee060",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "Terminology",
-      "headRefOid": "5ebd1eeb218d92fef29a7a30b804d49a6b2893f0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "163ec880177fe355cd75c044b1ff22b5776b167c",
+      "closedAt": "2025-05-29T16:17:45Z",
+      "mergedAt": "2025-05-29T16:17:45Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "b262e979d261c030bd5581844c532bd60a6d7334"
+      },
       "comments": [
         {
           "author": "bclaise",
@@ -2843,6 +2923,20 @@
           "body": "I don't think this closes the issue (unless you want to open a new issue for the more work that it needed).\r\n\r\nPersonally, I think merge this and then we can do some more work.",
           "createdAt": "2025-05-15T18:54:27Z",
           "updatedAt": "2025-05-15T18:54:27Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@bclaise @xorrkaz , I think this one is ready to merge. ",
+          "createdAt": "2025-05-29T15:18:36Z",
+          "updatedAt": "2025-05-29T15:18:36Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@xorrkaz , can you please review based on today's discussion?",
+          "createdAt": "2025-05-29T15:50:17Z",
+          "updatedAt": "2025-05-29T15:50:17Z"
         }
       ],
       "reviews": [
@@ -2911,6 +3005,45 @@
               "updatedAt": "2025-05-15T14:55:01Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6rlT80",
+          "commit": {
+            "abbreviatedOid": "0c13f15"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-29T15:24:27Z",
+          "updatedAt": "2025-05-29T15:26:02Z",
+          "comments": [
+            {
+              "originalPosition": 73,
+              "body": "While \"CLI\" is used in the doc today, my point was this should be expanded to proprietary interfaces _including_ CLI, web portals, and vendor-specific APIs.",
+              "createdAt": "2025-05-29T15:24:27Z",
+              "updatedAt": "2025-05-29T15:26:02Z"
+            },
+            {
+              "originalPosition": 73,
+              "body": "Maybe the term is \"Proprietary Interfaces\"",
+              "createdAt": "2025-05-29T15:24:46Z",
+              "updatedAt": "2025-05-29T15:26:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6rlwJd",
+          "commit": {
+            "abbreviatedOid": "163ec88"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-29T15:57:27Z",
+          "updatedAt": "2025-05-29T15:57:27Z",
+          "comments": []
         }
       ]
     },
@@ -3948,17 +4081,19 @@
       "state": "OPEN",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "cpignata"
+      ],
       "labels": [],
       "body": "",
       "createdAt": "2025-05-22T12:57:17Z",
-      "updatedAt": "2025-05-23T06:21:49Z",
+      "updatedAt": "2025-05-29T15:50:50Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "27d5a21c46253511570502c4ead89b5ed6aa3c5e",
+      "baseRefOid": "d44cb55ab4a45ec4c103bc15aab8374dcadee060",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "bclaise-patch-1",
-      "headRefOid": "1e7c4372989d9d0267fea0662097512842c70a71",
+      "headRefOid": "6628875dafedc19cace18285122da58bc5420887",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -3977,9 +4112,160 @@
           "body": "> RFC5706 mentions \"CLI\" as a proprietary interface to manipulate implementations of protocols. The bis draft should define a set of proprietary interfaces to be used to interact with devices. This may include CLI, web interfaces, vendor-specific APIs, etc.\r\n\r\nAs discussed yesterday, this should also be linked to the discussion #38 (CLI, entry in particular) edited by @AdrianFarrel. ",
           "createdAt": "2025-05-23T06:21:48Z",
           "updatedAt": "2025-05-23T06:21:48Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Summary from the May 29th:\r\nAdrian to consider a new term: proprietary interface (management interface might be better) in the terminology.\r\nEither in the terminology section, or in the appropriate text.",
+          "createdAt": "2025-05-29T13:18:29Z",
+          "updatedAt": "2025-05-29T13:18:29Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6rlrQU",
+          "commit": {
+            "abbreviatedOid": "6628875"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-29T15:50:50Z",
+          "updatedAt": "2025-05-29T15:50:50Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "id": "PR_kwDOOWPBqs6YFqs3",
+      "title": "Capitalize Terminology",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/50",
+      "state": "OPEN",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-05-29T09:14:14Z",
+      "updatedAt": "2025-05-30T13:15:11Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "b262e979d261c030bd5581844c532bd60a6d7334",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "48-Capitalized-terminology-terms",
+      "headRefOid": "1ac45d48ea00d9b3da39dda2d56a8a9e12ba8366",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hi Samier, I was more thinking along the lines: data model => Data Model \r\nThis would stress that this is a defined term in the Terminology Section",
+          "createdAt": "2025-05-29T10:25:00Z",
+          "updatedAt": "2025-05-29T10:25:33Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Question: \"YANG data model\" should remain \"YANG data model\" as opposed to \"YANG Data Model\", right?",
+          "createdAt": "2025-05-29T10:34:36Z",
+          "updatedAt": "2025-05-29T10:34:36Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6rjQ4K",
+          "commit": {
+            "abbreviatedOid": "f327b8c"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-29T12:44:09Z",
+          "updatedAt": "2025-05-29T12:44:09Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6rvaVy",
+          "commit": {
+            "abbreviatedOid": "1ac45d4"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-30T13:15:11Z",
+          "updatedAt": "2025-05-30T13:15:11Z",
+          "comments": [
+            {
+              "originalPosition": 395,
+              "body": "This goes to Beno\u00eet's earlier question about what to do with \"YANG data model\".  Here, \"data models\" refers to the types of YANG data models defined below.  Each is a \"Data Model\" via our terminology.  So, I don't know what is correct here.  Admittedly, I'm bikeshedding a bit.  I think Data Models is probably fine, but I'm commenting in case others feel strongly one way or the other.",
+              "createdAt": "2025-05-30T13:15:11Z",
+              "updatedAt": "2025-05-30T13:15:12Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "id": "PR_kwDOOWPBqs6YTOka",
+      "title": "Address some other uses of \"management interface\".",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/52",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "This aims to close out #47.",
+      "createdAt": "2025-05-30T16:34:20Z",
+      "updatedAt": "2025-05-30T19:16:39Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "b262e979d261c030bd5581844c532bd60a6d7334",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "issue-47-management-interface",
+      "headRefOid": "77fe3d6d2ee0bcab0afeaad00230fa0d78b5f985",
+      "closedAt": "2025-05-30T19:16:38Z",
+      "mergedAt": "2025-05-30T19:16:38Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "2f503a6593eb19eee3d12f684c60913ac6cdc28c"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6rx1Ix",
+          "commit": {
+            "abbreviatedOid": "77fe3d6"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "wfm",
+          "createdAt": "2025-05-30T17:25:54Z",
+          "updatedAt": "2025-05-30T17:25:54Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6ryIeJ",
+          "commit": {
+            "abbreviatedOid": "77fe3d6"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Nice!",
+          "createdAt": "2025-05-30T18:01:35Z",
+          "updatedAt": "2025-05-30T18:01:35Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
