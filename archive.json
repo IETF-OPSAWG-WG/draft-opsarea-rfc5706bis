@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-01T01:00:06.129770+00:00",
+  "timestamp": "2025-06-03T00:50:43.442453+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -953,10 +953,12 @@
       "assignees": [
         "cpignata"
       ],
-      "labels": [],
+      "labels": [
+        "text-needed"
+      ],
       "body": "Since it's a must :-) \nIt can say something like \"this whole doc is about $topic, and this section shows where to potentially include such section.",
       "createdAt": "2025-05-29T13:36:44Z",
-      "updatedAt": "2025-05-30T16:21:03Z",
+      "updatedAt": "2025-06-02T05:32:54Z",
       "closedAt": null,
       "comments": [
         {
@@ -4266,6 +4268,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 53,
+      "id": "PR_kwDOOWPBqs6YjCn6",
+      "title": "fix a broken text",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/53",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-02T05:39:32Z",
+      "updatedAt": "2025-06-02T05:39:48Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "9bf61a92b48f517d3ab78747875330b1295ee9a0",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "broken-text",
+      "headRefOid": "db563a7281be33f37cc38f17444ee8f8434d795d",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
