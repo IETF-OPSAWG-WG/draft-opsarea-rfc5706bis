@@ -1019,7 +1019,7 @@ author:
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?
 
-###  Root Cause Analysis
+###  Root Cause Analysis {#sec-root-cause-analysis}
 
    Root cause analysis is about working out where in the network the
    fault is. For example, if end-to-end data delivery is failing
