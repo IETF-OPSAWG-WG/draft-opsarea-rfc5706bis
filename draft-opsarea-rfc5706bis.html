@@ -1332,16 +1332,19 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-operations-and-manageabilit" class="internal xref">Operations and Manageability Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
-            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgements" class="internal xref">Acknowledgements</a></p>
+            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-informative-references" class="internal xref">Informative References</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+            <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgements" class="internal xref">Acknowledgements</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
+            <p id="section-toc.1-1.12.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -2893,40 +2896,48 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
 <p id="section-7-1">This document does not have any IANA actions required.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="security-considerations">
+<div id="operations-and-manageability-considerations">
 <section id="section-8">
-      <h2 id="name-security-considerations">
-<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      <h2 id="name-operations-and-manageabilit">
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-operations-and-manageabilit" class="section-name selfRef">Operations and Manageability Considerations</a>
       </h2>
-<p id="section-8-1">This document is informational and provides guidelines for
+<p id="section-8-1">Although this document focuses on operations and manageability guidance, it does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.<a href="#section-8-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="security-considerations">
+<section id="section-9">
+      <h2 id="name-security-considerations">
+<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      </h2>
+<p id="section-9-1">This document is informational and provides guidelines for
    considering manageability and operations. It introduces no new
-   security concerns.<a href="#section-8-1" class="pilcrow">¶</a></p>
-<p id="section-8-2">The provision of a management portal to a network device provides a
+   security concerns.<a href="#section-9-1" class="pilcrow">¶</a></p>
+<p id="section-9-2">The provision of a management portal to a network device provides a
    doorway through which an attack on the device may be launched.
    Making the protocol under development be manageable through a
    management protocol creates a vulnerability to a new source of
    attacks. Only management protocols with adequate security apparatus,
    such as authentication, message integrity checking, and
-   authorization, should be used.<a href="#section-8-2" class="pilcrow">¶</a></p>
-<p id="section-8-3">A standard description of the manageable knobs and whistles on a
+   authorization, should be used.<a href="#section-9-2" class="pilcrow">¶</a></p>
+<p id="section-9-3">A standard description of the manageable knobs and whistles on a
    protocol makes it easier for an attacker to understand what they may
-   try to control and how to tweak it.<a href="#section-8-3" class="pilcrow">¶</a></p>
-<p id="section-8-4">A well-designed protocol is usually more stable and secure. A
+   try to control and how to tweak it.<a href="#section-9-3" class="pilcrow">¶</a></p>
+<p id="section-9-4">A well-designed protocol is usually more stable and secure. A
    protocol that can be managed and inspected offers the operator a
    better chance of spotting and quarantining any attacks. Conversely,
    making a protocol easy to inspect is a risk if the wrong person
-   inspects it.<a href="#section-8-4" class="pilcrow">¶</a></p>
-<p id="section-8-5">If security events cause logs and/or notifications/alerts, a
+   inspects it.<a href="#section-9-4" class="pilcrow">¶</a></p>
+<p id="section-9-5">If security events cause logs and/or notifications/alerts, a
    concerted attack might be able to be mounted by causing an excess of
    these events. In other words, the security-management mechanisms
    could constitute a security vulnerability. The management of
-   security aspects is important (see <a href="#sec-secuity-mgt" class="auto internal xref">Section 4.7</a>).<a href="#section-8-5" class="pilcrow">¶</a></p>
+   security aspects is important (see <a href="#sec-secuity-mgt" class="auto internal xref">Section 4.7</a>).<a href="#section-9-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-informative-references">
-<section id="section-9">
+<section id="section-10">
       <h2 id="name-informative-references">
-<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
       </h2>
 <dl class="references">
 <dt id="CHECKLIST">[CHECKLIST]</dt>

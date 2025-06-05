@@ -116,8 +116,9 @@ Table of Contents
      6.3.  Placement of Operations and Manageability Considerations
            Sections
    7.  IANA Considerations
-   8.  Security Considerations
-   9.  Informative References
+   8.  Operations and Manageability Considerations
+   9.  Security Considerations
+   10. Informative References
    Acknowledgements
    Authors' Addresses
 
@@ -1556,7 +1557,14 @@ Table of Contents
 
    This document does not have any IANA actions required.
 
-8.  Security Considerations
+8.  Operations and Manageability Considerations
+
+   Although this document focuses on operations and manageability
+   guidance, it does not define a protocol, a protocol extension, or an
+   architecture.  As such, there are no new operations or manageability
+   requirements introduced by this document.
+
+9.  Security Considerations
 
    This document is informational and provides guidelines for
    considering manageability and operations.  It introduces no new
@@ -1586,7 +1594,7 @@ Table of Contents
    could constitute a security vulnerability.  The management of
    security aspects is important (see Section 4.7).
 
-9.  Informative References
+10.  Informative References
 
    [CHECKLIST]
               "Operations and Management Review Checklist", 2025,
