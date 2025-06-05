@@ -390,15 +390,17 @@ author:
 
    * Problem: See {{?I-D.ietf-nmop-terminology}}.
 
-   * Fault and Fault management: Fault is defined in {{?I-D.ietf-nmop-terminology}}.
-      Fault management is the process of interpreting fault notifications and other alerts
+   * Fault: See {{?I-D.ietf-nmop-terminology}}.
+
+   * Fault management: Fault management is the process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and decucing underlying causes. See
       {{sec-fm-mgt}} for more information.
-
+     
    * Anomaly: See {{?I-D.ietf-nmop-terminology}}.
+     
+   * Cause: See {{?I-D.ietf-nmop-terminology}}. 
 
-   * Cause and Root cause: Cause is defined in ({{?I-D.ietf-nmop-terminology}}). Since one
-     fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
+   * Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
      to describe the original event that is the foundation of all related faults.
 
 ##  Available Management Technologies
