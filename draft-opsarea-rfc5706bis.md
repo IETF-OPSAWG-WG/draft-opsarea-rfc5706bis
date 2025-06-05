@@ -110,7 +110,7 @@ author:
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
    management particularly hard. This document provides guidelines to
-   help Protocol Designers and working groups (WG) consider the operations
+   help Protocol Designers and working groups (WGs) consider the operations
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
@@ -182,16 +182,17 @@ author:
 
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
-   is mandatory. If Protocol Designers conclude that the technology can
-   be managed solely by using proprietary interfaces, such as
-   command line interfaces (CLIs), graphical user interfaces (GUIs), or
-   vendor-specific APIs,
-   and that no structured or standardized data model needs to be in
-   place, this might be fine, but it is a decision that should be
-   explicit in a manageability discussion -- that this is how the
-   protocol will need to be operated and managed. Protocol Designers
-   should avoid having manageability pushed for a later phase of the
-   development of the specification.
+   is mandatory. If Protocol Designers conclude that the technology can be managed
+   solely by using Proprietary Interfaces or that it does
+   not need any structured or standardized data model, this might be fine,
+   but it is a decision that should be explicit in a manageability discussion
+   -- that this is how the protocol will need to be operated and managed.
+   Protocol Designers should avoid having manageability pushed for a later
+   phase of the development of the standard.
+
+   A list of guidelines and a
+   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
+   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
 ##  Motivation
 
@@ -387,7 +388,6 @@ author:
       people, or an IETF Working Group involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-
 ##  Available Management Technologies
 
    The IETF has a number of standard management protocols available that
@@ -440,7 +440,7 @@ author:
 ##  Operations {#sec-ops}
 
    Protocol Designers can analyze the operational environment and mode
-   of work in which the New Protocol or extension will work. Such an
+   of work in which the New Protocol and Protocol Extension will work. Such an
    exercise need not be reflected directly by text in their document
    but could help in visualizing how to apply the protocol in the
    Internet environments where it will be deployed.
@@ -512,7 +512,7 @@ author:
 
    If the New Protocol is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
-   how deployments should transition to the New Protocol. This should
+   how deployments should transition to the New Protocol or Protocol Extensions. This should
    include coexistence with previously deployed protocols and/or
    previous versions of the same protocol, incompatibilities between
    versions, translation between versions, and side effects that might
@@ -598,7 +598,7 @@ author:
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct end-
-   to-end operation of the New Protocol in the network can be tested
+   to-end operation of the New Protocol or Protocol Extension in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
    properly with the New Protocol. Which metrics are of interest?
@@ -644,7 +644,7 @@ author:
       operation, scripts)? Are they performed immediately or are they
       time scheduled, or event triggered?
 
-   Protocol Designers should consider how the New Protocol will be
+   Protocol Designers should consider how the New Protocol or Protocol Extension will be
    managed in different deployment scales. It might be sensible to use
    a local management interface to manage the New Protocol on a single
    device, but in a large network, remote management using a centralized
@@ -778,7 +778,6 @@ author:
    |          |         |
    DM        DM         DM     --> concrete/detailed model
                                       for implementers
-
 
 ~~~~
 {: #fig-im-dm title="Information Models（IMs） and Data Models（DMs）" artwork-align="center"}
@@ -955,7 +954,7 @@ author:
 ## Fault Management {#sec-fm-mgt}
 
    The Protocol Designer should document the basic faults and health
-   indicators that need to be instrumented for the New Protocol, as well
+   indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
    as the alarms and events that must be propagated to management
    applications or exposed through a Data Model.
 
@@ -1038,7 +1037,7 @@ author:
 ##  Configuration Management {#sec-config-mgt}
 
    A Protocol Designer should document the basic configuration
-   parameters that need to be instrumented for a New Protocol, as well
+   parameters that need to be instrumented for a New Protocol or Protocol Extensions, as well
    as default values and modes of operation.
 
    What information should be maintained across reboots of the device,
@@ -1272,7 +1271,7 @@ author:
 ##  Security Management {#sec-secuity-mgt}
 
    Protocol Designers should consider how to monitor and manage security
-   aspects and vulnerabilities of the New protocol.
+   aspects and vulnerabilities of the New Protocol or Protocol Extension.
 
    There will be security considerations related to the New Protocol.
    To make it possible for operators to be aware of security-related
@@ -1338,7 +1337,7 @@ author:
    protocol before they can impact the network.
 
    Different management protocols use different assumptions about
-   message security and data-access controls. A protocol Designer that
+   message security and data-access controls. A Protocol Designer that
    recommends using different protocols should consider how security
    will be applied in a balanced manner across multiple management
    interfaces. SNMP authority levels and policy are data-oriented,
@@ -1457,8 +1456,8 @@ author:
 
 ##  Null Operations and Manageability Considerations Section
 
-   A protocol Designer may seriously consider the manageability
-   requirements of a New Protocol and determine that no management
+   A Protocol Designer should consider the manageability
+   requirements of a New Protocol or Protocol Extension and determine that no management
    functionality or operatinal best-practice clarifications are
    needed by the protocol. It would be helpful to
    those who may update or write extensions to the protocol in the
