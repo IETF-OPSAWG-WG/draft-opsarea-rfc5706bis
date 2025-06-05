@@ -182,7 +182,7 @@ author:
 
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
-   is mandatory. If Protocol Designers conclude that the technology can be managed 
+   is mandatory. If Protocol Designers conclude that the technology can be managed
    solely by using Proprietary Interfaces or that it does
    not need any structured or standardized data model, this might be fine,
    but it is a decision that should be explicit in a manageability discussion
