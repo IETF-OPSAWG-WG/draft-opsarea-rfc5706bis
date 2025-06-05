@@ -757,7 +757,7 @@ author:
    regardless of which management protocol carries the data or which
    vendor implementation produces the data. The use of an Information Model might
    help improve the ability of operators to correlate messages in
-   different protocols where the data overlaps, such as a YANG data model
+   different protocols where the data overlaps, such as a YANG Data Model
    and IPFIX Information Elements about the same event. An Information Model
    might identify which error conditions should be counted separately,
    and which error conditions can be recorded together in a single
@@ -898,11 +898,11 @@ author:
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
-  When considering YANG data models for a new specification, there
+  When considering YANG Data Models for a new specification, there
   are multiple types of Data Models that may be applicable. The
   hierarchy and relationship between these types is described in
   {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}. A new specification
-  may require or benefit from one or more of these YANG data model types.
+  may require or benefit from one or more of these YANG Data Model types.
 
   *  Device Models - Also called Network Element Models,
      represent the configuration, operational state, and notifications of
@@ -930,7 +930,7 @@ author:
      the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)
      {{?RFC8499}}.
 
-  A common challenge in YANG data model development lies in defining the
+  A common challenge in YANG Data Model development lies in defining the
   relationships between abstract service or network constructs and the
   underlying device models. Therefore, when designing YANG modules, it
   is important to go beyond simply modeling configuration and
@@ -940,7 +940,7 @@ author:
 
   For example, the status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
-  cases, the YANG data model (and its accompanying documentation) should
+  cases, the YANG Data Model (and its accompanying documentation) should
   clearly describe how service-level status is derived from underlying
   device-level information. Similarly, it is beneficial to define
   events (and relevant triggered notifications) that indicate changes in an underlying state,
