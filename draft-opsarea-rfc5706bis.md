@@ -85,7 +85,7 @@ author:
     email: chen.ran@zte.com.cn
 --- abstract
 
-   New Protocols or protocol extensions are best designed with due
+   New Protocols or Protocol Extensions are best designed with due
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
@@ -95,8 +95,8 @@ author:
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are progressed
+   introduces a requirement for an "Operational and Management
+   Considerations" section in Internet-Drafts, before they are progressed
    as publication as RFCs.
 
 --- middle
@@ -104,7 +104,7 @@ author:
 
 #  Introduction
 
-   Often when new protocols or protocol extensions are developed, not
+   Often when New Protocols or Protocol Extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
@@ -114,18 +114,18 @@ author:
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.
 
-   This document obsoletes RFC 5706 and fully updates its content
+   This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are progressed
-   for publication as an RFC. It removes outdated
+   introduces a requirement for an "Operational and Management
+   Considerations" section in Internet-Drafts, before they are progressed
+   for publication as an RFC. Also, the document removes outdated
    references and aligns with current practices, protocols, and
-   technologies used in operating and managing network devices and
-   services. See {{changes-since-5706}}.
+   technologies used in operating and managing devices, networks, and
+   services. See {{changes-since-5706}} for more details.
 
 ##  Designing for Operations and Management
 
-   The operational environment and manageability of the protocol should
+   The operational environment and manageability of a protocol should
    be considered from the start when New Protocols are designed.
 
    As the Internet has grown, IETF protocols have addressed a constantly growing set of
@@ -133,10 +133,10 @@ author:
    The number of IETF management technologies has been expanding and the
    IETF management strategy has been changing to address the emerging
    management requirements. In the past, most of the existing IETF management
-   standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based {{?RFC2578}}
+   standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based {{?STD58}}
    data modeling language, to monitor and manage networking devices.
    Currently, the YANG data modeling language {{?RFC7950}} is recommended to
-   monitor and manage the IETF protocols and the networking devices.
+   monitor and manage the IETF protocols in devices, networks, and network services.
    Management requirements continually evolve in the IETF. Therefore,
    the management protocols used should track with current IETF
    recommendations.
@@ -152,20 +152,24 @@ author:
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
-   to understand how the protocol will be deployed and managed. The WG
+   to understand how the protocol will be deployed and managed. The considerations
+   do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
    should expect that considerations for operations and management may
    need to be updated in the future, after further operational
    experience has been gained.
+
+   A list of guidelines and a
+   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
+   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
 ##  This Document
 
    This document makes a distinction between "Operational
    Considerations" and "Management Considerations", although the two are
-   closely related. The section on manageability is focused on
+   closely related. The operational considerations apply to operating the protocol within a network, even
+   if there were no management protocol actively being used. The section on manageability is focused on
    management technology, such as how to utilize management protocols
-   and how to design management data models. The operational
-   considerations apply to operating the protocol within a network, even
-   if there were no management protocol actively being used.
+   and how to design management data models.
 
    The purpose of this document is to provide guidance about what to
    consider when thinking about the management and deployment of a new
@@ -194,8 +198,8 @@ author:
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
-   {{?RFC3410}}, the Structure of Management Information {{?RFC2578}}, and MIB
-   data models for managing New Protocols. As the Internet has evolved,
+   {{?RFC3410}}, the Structure of Management Information (SMI) {{?STD58}}, and MIB
+   Data Models for managing New Protocols. As the Internet has evolved,
    operators have found the reliance on one protocol and one schema
    language for managing all aspects of the Internet inadequate. The
    IESG policy to require working groups to write a MIB module to
@@ -212,7 +216,7 @@ author:
    with an eye toward being flexible while also striving for
    interoperability.
 
-   Fully new protocols may require significant consideration of expected
+   Fully New Protocols may require significant consideration of expected
    operations and management, while extensions to existing, widely
    deployed protocols may have established de facto operations and
    management practices that are already well understood.
@@ -279,7 +283,7 @@ author:
    In 2014, the IESG wrote its statement on "Writable MIB Module" {{IESG-STATEMENT}}, as
    mentioned above.
 
-   In 2024, the IAB hold the "Next Era of Network Management Operations (NEMOPS)"
+   In 2024, the IAB held the "Next Era of Network Management Operations (NEMOPS)"
    workshop {{NEMOPS-WORKSHOP}}, building on the previous 2002 IAB workshop. Given that much has changed
    in the Internet’s operation and technological foundations since the first
    worshop, the NEMOPS workshop reviewed the past outcomes and discussed any
@@ -315,42 +319,74 @@ author:
 
 # Key Concepts, Terminology, and Technological Landscape
 
+   This section introduces the key concepts and terminology used throughout the document, and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
+
+   This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?RFC2119}} and {{?RFC8174}}.
+
 ##  Terminology
 
-   This document deliberately does not use the (capitalized) keywords
-   described in RFC 2119 {{?RFC2119}}. RFC 2119 states the keywords must
-   only be used where it is actually required for interoperation or to
-   limit behavior which has potential for causing harm (e.g., limiting
-   retransmissions). For example, they must not be used to try to
-   impose a particular method on implementers where the method is not
-   required for interoperability. This informational document is a set
-   of guidelines based on current practices of \*\*some\*\* protocol
-   designers and operators. This document is biased toward router
-   operations and management and some advice may not be directly
-   applicable to protocols with a different purpose, such as application
-   server protocols. This document \*\*does not\*\* describe
-   interoperability requirements, so the capitalized keywords from RFC
-   2119 do not apply here.
+   These terms are:
 
-   * CLI: Command Line Interface
+   *  Proprietary Interfaces: An interface to manage a network element
+      that is not standardized. As such, the user interface, syntax, and
+      semantics typically vary significantly between implementations.
+      Examples of proprietary interfaces include CLI (Command Line
+      Interface), management web portal and Browser User Interface (BUI),
+      Graphical User Interface (GUI), and vendor-specific APIs.
 
-   *  Data model: a mapping of the contents of an information model into
-      a form that is specific to a particular type of data store or
-      repository {{?RFC3444}}.
+   *  CLI: Command Line Interface. Typically a proprietary interface to
+      hardware or software devices (e.g., routers or operating systems)
+      for use by human operators
+      directly at a terminal or via scripts. The commands, their syntax,
+      and the precise semantics of the parameters may vary considerably
+      between different vendors, between products from the same
+      vendor, and even between different versions or releases of a single
+      product. No attempt at standardizing CLIs has been made by the IETF.
 
-   *  Information model: an abstraction and representation of the
+   *  Information Model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
-      and operations, and the way that they relate to each other. It is
+      and operations, and the way that they relate to each other. The model is
       independent of any specific repository, software usage, protocol,
-      or platform {{?RFC3444}}.
+      or platform {{?RFC3444}}. See {{sec-interop}} and {{sec-im-design}} for
+      further discussion of information models.
 
-   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}} {{?I-D.ietf-opsawg-oam-characterization}}.
+   *  Data Model: A set of mechanisms for representing, organizing, storing
+      and handling data within a particular type of data store or repository.
+      This usually comprises a collection of data structures such as lists, tables,
+      relations, etc., a collection of operations that can be applied to the
+      structures such as retrieval, update, summation, etc., and a collection of
+      integrity rules that define the legal states (set of values) or changes of
+      state (operations on values). A data model may be derived by mapping the
+      contents of an information model or may be developed ab initio. Further
+      discussion of data models can be found in {{?RFC3444}}, {{sec-interop}},
+      and {{sec-mgt-info}}.
 
-   *  New protocol: includes new protocols, protocol extensions, data
-      models, or other functionality being designed.
+   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
+      {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
+      combination of:
 
-   *  Protocol Designer: represents individuals and working groups
-      involved in the development of new protocols or extensions.
+      1. Operation activities that are undertaken to keep the
+         network. They include monitoring of the network.
+
+      2. Administration activities that keep track of resources in the
+         network and how they are used. They include the bookkeeping necessary
+         to track networking resources.
+
+      3. Maintenance activities focused on facilitating repairs and upgrades.
+         They also involve corrective and preventive measures to make the
+         managed network run more effectively.
+
+      The broader concept of "operations and management" that is the subject of
+      this document encompasses OAM along with other management and provisioning
+      tools and concepts.
+
+   *  New Protocol and Protocol Extension: These terms are used in this document
+      to identify entirely new Internet protocols, new versions of existing Internet
+      protocols, and extensions to Internet protocols.
+
+   *  Protocol Designer: This term is used to refer to an individual, a group of
+      people, or an IETF Working Group involved in the development and specification
+      of New Protocols or Protocol Extensions.
 
 ##  Available Management Technologies
 
@@ -358,8 +394,6 @@ author:
    are suitable for different purposes.  These include:
 
    *  Syslog {{?RFC5424}}
-
-   *  Simple Network Management Protocol - SNMP {{?RFC3410}}
 
    *  Network Configuration Protocol - NETCONF {{?RFC6241}}
 
@@ -373,14 +407,20 @@ author:
 
    *  BGP Monitoring Protocol - BMP {{?RFC7854}}
 
+   The IETF previously also worked on the Simple Network Management Protocol
+   (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
+   but further use of this management protocol in new IETF documents has been constrained
+   to maintenance of existing MIB modules and development of MIB modules for legacy devices
+   that do not support more resent management protocols {{IESG-STATEMENT}}.
+
    A planned supplement to this document will discuss these protocol
-   standards, discuss some standard information and data models for
+   standards, discuss some standard information and Data Models for
    specific functionality, and provide pointers to the documents that
    define them.
 
 # Operational Considerations - How Will the New Protocol Fit into the Current Environment?
 
-   Designers of a new protocol should carefully consider the operational
+   Designers of a New Protocol should carefully consider the operational
    aspects. To ensure that a protocol will be practical to deploy in
    the real world, it is not enough to merely define it very precisely
    in a well-written document. Operational aspects will have a serious
@@ -400,7 +440,7 @@ author:
 ##  Operations {#sec-ops}
 
    Protocol Designers can analyze the operational environment and mode
-   of work in which the new protocol or extension will work. Such an
+   of work in which the New Protocol and Protocol Extension will work. Such an
    exercise need not be reflected directly by text in their document
    but could help in visualizing how to apply the protocol in the
    Internet environments where it will be deployed.
@@ -470,14 +510,14 @@ author:
 
 ##  Migration Path {#sec-migration}
 
-   If the new protocol is a new version of an existing one, or if it is
+   If the New Protocol is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
-   how deployments should transition to the new protocol. This should
+   how deployments should transition to the New Protocol or Protocol Extensions. This should
    include coexistence with previously deployed protocols and/or
    previous versions of the same protocol, incompatibilities between
    versions, translation between versions, and side effects that might
    occur. Are older protocols or versions disabled, or do they coexist
-   in the network with the new protocol?
+   in the network with the New Protocol?
 
    Many protocols benefit from being incrementally deployable --
    operators may deploy aspects of a protocol before deploying the
@@ -513,11 +553,11 @@ author:
 
 ##  Impact on Network Operation {#sec-impact}
 
-   The introduction of a new protocol or extensions to an existing
+   The introduction of a New Protocol or extensions to an existing
    protocol may have an impact on the operation of existing networks.
    Protocol Designers should outline such impacts (which may be
    positive), including scaling concerns and interactions with other
-   protocols. For example, a new protocol that doubles the number of
+   protocols. For example, a New Protocol that doubles the number of
    active, reachable addresses in use within a network might need to be
    considered in the light of the impact on the scalability of the
    interior gateway protocols operating within the network.
@@ -558,10 +598,10 @@ author:
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct end-
-   to-end operation of the new protocol in the network can be tested
+   to-end operation of the New Protocol or Protocol Extension in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
-   properly with the new protocol. Which metrics are of interest?
+   properly with the New Protocol. Which metrics are of interest?
 
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
@@ -574,7 +614,7 @@ author:
 
    Considerations for management should include a discussion of what
    needs to be managed, and how to achieve various management tasks.
-   Where are the managers and what type of management interfaces and
+   Where are the managers and what type of interfaces and
    protocols will they need? The "write a MIB module" approach to
    considering management often focuses on monitoring a protocol
    endpoint on a single device. A MIB module document typically only
@@ -604,18 +644,18 @@ author:
       operation, scripts)? Are they performed immediately or are they
       time scheduled, or event triggered?
 
-   Protocol Designers should consider how the new protocol will be
+   Protocol Designers should consider how the New Protocol or Protocol Extension will be
    managed in different deployment scales. It might be sensible to use
-   a local management interface to manage the new protocol on a single
+   a local management interface to manage the New Protocol on a single
    device, but in a large network, remote management using a centralized
    server and/or using distributed management functionality might make
    more sense. Auto-configuration and default parameters might be
-   possible for some new protocols.
+   possible for some New Protocols.
 
    Management needs to be considered not only from the perspective of a
    device, but also from the perspective of network and service
    management. A service might be network and operational functionality
-   derived from the implementation and deployment of a new protocol.
+   derived from the implementation and deployment of a New Protocol.
    Often an individual network element is not aware of the service being
    delivered.
 
@@ -663,7 +703,7 @@ author:
    page interface, that such a solution is enough. But when equipment
    from multiple vendors is combined into a large network, scalability
    of management may become a problem. It may be important to have
-   consistency in the management interfaces so network-wide operational
+   consistency in the management protocol support so network-wide operational
    processes can be automated. For example, a single switch might be
    easily managed using an interactive web interface when installed in a
    single-office small business, but when, say, a fast-food company
@@ -682,9 +722,7 @@ author:
    management systems tend to speak whatever the boxes support, whether
    or not the IETF likes this. The IETF is moving from support for one
    schema language for modeling the structure of management information
-   (SMIv2) and
-   one simple network management protocol
-   (SNMP) towards support for additional schema
+   (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
    languages and additional management protocols suited to different
    purposes. Other Standard Development Organizations (e.g., the
    Distributed Management Task Force - DMTF, the Tele-Management Forum -
@@ -717,10 +755,10 @@ author:
    the semantic level -- they define what information
    should be gathered and how that information might be used,
    regardless of which management protocol carries the data or which
-   vendor implementation produces the data. The use of an information model might
+   vendor implementation produces the data. The use of an Information Model might
    help improve the ability of operators to correlate messages in
-   different protocols where the data overlaps, such as a YANG data model
-   and IPFIX Information Elements about the same event. An information model
+   different protocols where the data overlaps, such as a YANG Data Model
+   and IPFIX Information Elements about the same event. An Information Model
    might identify which error conditions should be counted separately,
    and which error conditions can be recorded together in a single
    counter. Then, whether the counter is gathered via, e.g., NETCONF or
@@ -728,7 +766,7 @@ author:
 
    Protocol Designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
-   monitoring, controlling, or troubleshooting a new protocol and its
+   monitoring, controlling, or troubleshooting a New Protocol and its
    extensions. This includes identifying key parameters that reflect the
    protocol’s behavior, performance metrics, error indicators, and any
    contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
@@ -746,13 +784,13 @@ author:
 
    "On the Difference between Information Models and Data Models"
    {{?RFC3444}} is helpful in determining what information to consider
-   regarding information models (IMs), as compared to data models (DMs).
+   regarding Information Models (IMs), as compared to Data Models (DMs).
 
-   Protocol Designers may directly develop data models without first producing an information model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
+   Protocol Designers may directly develop Data Models without first producing an Information Model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
 
-   Alternatively, Protocol Designers may decide to use an information model to describe the managed elements in a protocol or protocol extension. The protocol designers then use the information model to develop data models that will be used for managing the protocol.
+   Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or Protocol Extension. The protocol Designers then use the Information Model to develop Data Models that will be used for managing the protocol.
 
-   Specifically, Protocol Designers should develop an information model if multiple data model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol designers may create an information model if the resulting data models are complex or numerous.
+   Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol Designers may create an Information Model if the resulting Data Models are complex or numerous.
 
 
 
@@ -774,14 +812,14 @@ author:
    *  {{?RFC3670}} - Information Model for Describing Network Device QoS
       Datapath Mechanisms
 
-   Management protocol standards and management data model standards
+   Management protocol standards and management Data Model standards
    often contain compliance clauses to ensure interoperability.
    Manageability considerations should include discussion of which level
    of compliance is expected to be supported for interoperability.
 
 ##  Management Information {#sec-mgt-info}
 
-   Languages used to describe an information model can influence the
+   Languages used to describe an Information Model can influence the
    nature of the model. Using a particular data modeling language, such
    as YANG, influences the model to use certain types of structures, for
    example, hierarchical trees, groupings, and reusable types.
@@ -794,12 +832,12 @@ author:
    models.
 
    Although this document recommends using English text (the official
-   language for IETF specifications) to describe an information model,
+   language for IETF specifications) to describe an Information Model,
    including a complementary YANG module helps translate abstract concepts
-   into implementation-specific data models. This ensures consistency between
+   into implementation-specific Data Models. This ensures consistency between
    the high-level design and practical deployment.
 
-   A management information model should include a discussion of what is
+   A management Information Model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
    types of operations are allowed, what protocol-specific events might
    occur, which events can be counted, and for which events an operator
@@ -819,7 +857,7 @@ author:
    single element.
 
    What is typically difficult to work through are relationships between
-   abstract objects. Ideally, an information model would describe the
+   abstract objects. Ideally, an Information Model would describe the
    relationships between the objects and concepts in the information
    model.
 
@@ -837,7 +875,7 @@ author:
 
 ###  Information Model Design {#sec-im-design}
 
-   This document recommends keeping the information model as simple as
+   This document recommends keeping the Information Model as simple as
    possible by applying the following criteria:
 
    1.  Start with a small set of essential objects and make additions only as
@@ -846,7 +884,7 @@ author:
 
    2.  Require that all objects be essential for management.
 
-   3.  Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the information model.
+   3.  Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the Information Model.
 
    4.  Exclude objects that can be derived from others in this or
        other information models.
@@ -854,16 +892,16 @@ author:
    5.  Avoid causing critical sections to be heavily instrumented. A
        guideline is one counter per critical section per layer.
 
-   6.  When defining an information model using  YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}) ensure that the information model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
-  7.  When illustrating the abstract information model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
+   6.  When defining an Information Model using  YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}) ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
+  7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
-  When considering YANG data models for a new specification, there
-  are multiple types of data models that may be applicable. The
+  When considering YANG Data Models for a new specification, there
+  are multiple types of Data Models that may be applicable. The
   hierarchy and relationship between these types is described in
   {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}. A new specification
-  may require or benefit from one or more of these YANG data model types.
+  may require or benefit from one or more of these YANG Data Model types.
 
   *  Device Models - Also called Network Element Models,
      represent the configuration, operational state, and notifications of
@@ -871,7 +909,7 @@ author:
      between these types of data and support querying and updating
      device-specific parameters. Consideration should be given to
      how device-level models might fit with broader network and
-     service data models.
+     service Data Models.
 
   *  Network Models - Also called Network Service Models, define abstractions
      for managing the behavior and relationships of multiple devices
@@ -891,7 +929,7 @@ author:
      the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)
      {{?RFC8499}}.
 
-  A common challenge in YANG data model development lies in defining the
+  A common challenge in YANG Data Model development lies in defining the
   relationships between abstract service or network constructs and the
   underlying device models. Therefore, when designing YANG modules, it
   is important to go beyond simply modeling configuration and
@@ -901,7 +939,7 @@ author:
 
   For example, the status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
-  cases, the YANG data model (and its accompanying documentation) should
+  cases, the YANG Data Model (and its accompanying documentation) should
   clearly describe how service-level status is derived from underlying
   device-level information. Similarly, it is beneficial to define
   events (and relevant triggered notifications) that indicate changes in an underlying state,
@@ -916,9 +954,9 @@ author:
 ## Fault Management {#sec-fm-mgt}
 
    The Protocol Designer should document the basic faults and health
-   indicators that need to be instrumented for the new protocol, as well
+   indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
    as the alarms and events that must be propagated to management
-   applications or exposed through a data model.
+   applications or exposed through a Data Model.
 
    The Protocol Designer should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
@@ -934,7 +972,7 @@ author:
    of propagated faults from a given domain or device?
 
    SNMP notifications and syslog messages can alert an operator when an
-   aspect of the new protocol fails or encounters an error or failure
+   aspect of the New Protocol fails or encounters an error or failure
    condition, and SNMP is frequently used as a heartbeat monitor.
    Should the event reporting provide guaranteed accurate delivery of
    the event information within a given (high) margin of confidence?
@@ -999,7 +1037,7 @@ author:
 ##  Configuration Management {#sec-config-mgt}
 
    A Protocol Designer should document the basic configuration
-   parameters that need to be instrumented for a new protocol, as well
+   parameters that need to be instrumented for a New Protocol or Protocol Extensions, as well
    as default values and modes of operation.
 
    What information should be maintained across reboots of the device,
@@ -1037,8 +1075,8 @@ author:
        experience, reordering ACLs can lead to a huge security issue.
 
    Network-wide configurations may be stored in central master databases
-   and transformed into formats that can be pushed to devices, either by
-   generating sequences of CLI commands or complete configuration files
+   and transformed into readable formats that can be pushed to devices, either by
+   generating sequences of CLI commands or complete textual configuration files
    that are pushed to devices. There is no common database schema for
    network configuration, although the models used by various operators
    are probably very similar. Many operators consider it desirable to
@@ -1195,13 +1233,13 @@ author:
 
    Consider whether device performance will be affected by the number of
    protocol entities being instantiated on the device. Designers of an
-   information model should include information, accessible at runtime,
+   Information Model should include information, accessible at runtime,
    about the maximum number of instances an implementation can support,
    the current number of instances, and the expected behavior when the
    current instances exceed the capacity of the implementation or the
    capacity of the device.
 
-   Designers of an information model should model information,
+   Designers of an Information Model should model information,
    accessible at runtime, about the maximum number of protocol entity
    instances an implementation can support on a device, the current
    number of instances, and the expected behavior when the current
@@ -1233,9 +1271,9 @@ author:
 ##  Security Management {#sec-secuity-mgt}
 
    Protocol Designers should consider how to monitor and manage security
-   aspects and vulnerabilities of the new protocol.
+   aspects and vulnerabilities of the New Protocol or Protocol Extension.
 
-   There will be security considerations related to the new protocol.
+   There will be security considerations related to the New Protocol.
    To make it possible for operators to be aware of security-related
    events, it is recommended that system logs should record events, such
    as failed logins, but the logs must be secured.
@@ -1261,10 +1299,10 @@ author:
    operations. For example, Control and Provisioning of Wireless Access
    Points (CAPWAP) breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
-   By using a management interface, internal information that was
-   previously not accessible is now exposed over the network and to
-   management applications and may become a source of potential security
-   threats.
+   By using a control protocol or management protocol, internal
+   information that was previously not accessible is now exposed over
+   the network and to management applications and may become a source of
+   potential security threats.
 
    The granularity of access control needed on management interfaces
    needs to match operational needs. Typical requirements are a role-
@@ -1356,9 +1394,9 @@ author:
   *  IETF Hackathons for Manageability Testing:
      IETF Hackathons {{IETF-HACKATHONS}}
      provide an opportunity to test the functionality, interoperability,
-     and manageability of new protocols. These events can be specifically
+     and manageability of New Protocols. These events can be specifically
      leveraged to assess the operational (including manageability) implications
-     of a new protocol by focusing tasks on:
+     of a New Protocol by focusing tasks on:
 
      *  Adapting existing tools to interact with the new specification.
      *  Developing example management scripts or modules for existing management
@@ -1388,7 +1426,7 @@ author:
 ##  Recommended Discussions
 
    After evaluating the operational and manageability aspects of a
-   protocol, a protocol extension, or an architecture, the resulting practices and
+   protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
    in an "Operations and Manageability Considerations" section within a
    specification. Since protocols are intended for operational deployment and
@@ -1407,19 +1445,19 @@ author:
    the management and operations topics raised in this document, and
    when one or more of these topics is not relevant, it would be useful
    to contain a simple statement explaining why the topic is not
-   relevant or applicable for the new protocol or feature.
+   relevant or applicable for the New Protocol or feature.
    Of course, additional relevant operational and manageability topics
    should be included as well.
 
-   Existing protocols and data models can provide the management
+   Existing protocols and Data Models can provide the management
    functions identified in the previous section. Protocol Designers
-   should consider how using existing protocols and data models might
+   should consider how using existing protocols and Data Models might
    impact network operations.
 
 ##  Null Operations and Manageability Considerations Section
 
-   A Protocol Designer may seriously consider the manageability
-   requirements of a new protocol and determine that no management
+   A Protocol Designer should consider the manageability
+   requirements of a New Protocol or Protocol Extension and determine that no management
    functionality or operatinal best-practice clarifications are
    needed by the protocol. It would be helpful to
    those who may update or write extensions to the protocol in the
@@ -1435,22 +1473,26 @@ author:
    section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
-   In the case where the new protocol is an extension and the base
+   In the case where the New Protocol is an extension and the base
    protocol discusses all the relevant operational and manageability
    considerations, it would be helpful to point out the considerations
    section in the base document.
 
 ##  Placement of Operations and Manageability Considerations Sections
 
-   section for a new protocol, it is recommended that the section be
+   It is recommended that the section be
    placed immediately before the Security Considerations section.
-   Reviewers interested in such sections could find it easily, and this
+   Reviewers interested in such sections will find it easily, and this
    placement could simplify the development of tools to detect the
    presence of such a section.
 
 #  IANA Considerations
 
    This document does not have any IANA actions required.
+
+# Operations and Manageability Considerations
+
+   Although this document focuses on operations and manageability guidance, it does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
 
 #  Security Considerations
 
