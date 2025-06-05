@@ -395,9 +395,9 @@ author:
    * Fault management: Fault management is the process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and decucing underlying causes. See
       {{sec-fm-mgt}} for more information.
-     
+
    * Anomaly: See {{?I-D.ietf-nmop-terminology}}.
-     
+
    * Cause: See {{?I-D.ietf-nmop-terminology}}.
 
    * Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
