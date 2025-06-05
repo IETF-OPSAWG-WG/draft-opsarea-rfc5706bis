@@ -1492,7 +1492,7 @@ author:
 
 # Operations and Manageability Considerations
 
-   Although the document focuses on operations and manageability guidance, the document does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
+   Although this document focuses on operations and manageability guidance, it does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
 
 #  Security Considerations
 
