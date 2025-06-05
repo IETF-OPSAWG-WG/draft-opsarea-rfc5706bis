@@ -1491,6 +1491,10 @@ author:
 
    This document does not have any IANA actions required.
 
+# Operations and Manageability Considerations
+
+   Although this document focuses on operations and manageability guidance, it does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
+
 #  Security Considerations
 
    This document is informational and provides guidelines for
