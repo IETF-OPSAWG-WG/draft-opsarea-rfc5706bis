@@ -417,7 +417,7 @@ author:
    specific functionality, and provide pointers to the documents that
    define them.
 
-# Operational Considerations - How Will the New Protocol Fit into the Current Environment? {#sec-ops}
+# Operational Considerations - How Will the New Protocol Fit into the Current Environment?
 
    Designers of a new protocol should carefully consider the operational
    aspects. To ensure that a protocol will be practical to deploy in
