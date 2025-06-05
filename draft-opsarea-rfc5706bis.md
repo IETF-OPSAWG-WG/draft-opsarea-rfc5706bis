@@ -388,6 +388,21 @@ author:
       people, or an IETF Working Group involved in the development and specification
       of New Protocols or Protocol Extensions.
 
+   * Problem: See {{?I-D.ietf-nmop-terminology}}.
+
+   * Fault: See {{?I-D.ietf-nmop-terminology}}.
+
+   * Fault management: Fault management is the process of interpreting fault notifications and other alerts
+      and alarms, isolating faults, correlating them, and decucing underlying causes. See
+      {{sec-fm-mgt}} for more information.
+
+   * Anomaly: See {{?I-D.ietf-nmop-terminology}}.
+
+   * Cause: See {{?I-D.ietf-nmop-terminology}}.
+
+   * Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
+     to describe the original event that is the foundation of all related faults.
+
 ##  Available Management Technologies
 
    The IETF has a number of standard management protocols available that
