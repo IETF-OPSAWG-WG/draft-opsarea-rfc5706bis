@@ -95,8 +95,8 @@ author:
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are progressed
+   introduces a requirement for an "Operational and Management
+   Considerations" section in Internet-Drafts, before they are progressed
    as publication as RFCs.
 
 --- middle
@@ -116,16 +116,16 @@ author:
 
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are progressed
-   for publication as an RFC. It removes outdated
+   introduces a requirement for an "Operational and Management
+   Considerations" section in Internet-Drafts, before they are progressed
+   for publication as an RFC. Also, the document removes outdated
    references and aligns with current practices, protocols, and
-   technologies used in operating and managing network devices and
-   services. See {{changes-since-5706}}.
+   technologies used in operating and managing devices, networks, and
+   services. See {{changes-since-5706}} for more details.
 
 ##  Designing for Operations and Management
 
-   The operational environment and manageability of the protocol should
+   The operational environment and manageability of a protocol should
    be considered from the start when New Protocols are designed.
 
    As the Internet has grown, IETF protocols have addressed a constantly growing set of
@@ -136,7 +136,7 @@ author:
    standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based {{?STD58}}
    data modeling language, to monitor and manage networking devices.
    Currently, the YANG data modeling language {{?RFC7950}} is recommended to
-   monitor and manage the IETF protocols and the networking devices.
+   monitor and manage the IETF protocols in devices, networks, and network services.
    Management requirements continually evolve in the IETF. Therefore,
    the management protocols used should track with current IETF
    recommendations.
@@ -152,20 +152,24 @@ author:
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
-   to understand how the protocol will be deployed and managed. The WG
+   to understand how the protocol will be deployed and managed. The considerations
+   do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
    should expect that considerations for operations and management may
    need to be updated in the future, after further operational
    experience has been gained.
+
+   A list of guidelines and a
+   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
+   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
 ##  This Document
 
    This document makes a distinction between "Operational
    Considerations" and "Management Considerations", although the two are
-   closely related. The section on manageability is focused on
+   closely related. The operational considerations apply to operating the protocol within a network, even
+   if there were no management protocol actively being used. The section on manageability is focused on
    management technology, such as how to utilize management protocols
-   and how to design management data models. The operational
-   considerations apply to operating the protocol within a network, even
-   if there were no management protocol actively being used.
+   and how to design management data models.
 
    The purpose of this document is to provide guidance about what to
    consider when thinking about the management and deployment of a new
@@ -187,11 +191,7 @@ author:
    explicit in a manageability discussion -- that this is how the
    protocol will need to be operated and managed. Protocol designers
    should avoid having manageability pushed for a later phase of the
-   development of the standard.
-
-   A list of guidelines and a
-   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
+   development of the specification.
 
 ##  Motivation
 
