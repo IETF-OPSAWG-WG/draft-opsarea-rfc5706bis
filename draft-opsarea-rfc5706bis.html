@@ -1361,7 +1361,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
    management particularly hard. This document provides guidelines to
-   help Protocol Designers and working groups (WG) consider the operations
+   help Protocol Designers and working groups (WGs) consider the operations
    and management functionality for their new IETF protocol or protocol
    extension at an earlier phase.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">This document obsoletes <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> and fully updates its content
@@ -1432,16 +1432,16 @@ svg :is([fill="white"], [fill^="#fff"]) {
    location are a decision that can be made from case to case.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
 <p id="section-1.2-3">This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
-   is mandatory. If Protocol Designers conclude that the technology can
-   be managed solely by using proprietary interfaces, such as
-   command line interfaces (CLIs), graphical user interfaces (GUIs), or
-   vendor-specific APIs,
-   and that no structured or standardized data model needs to be in
-   place, this might be fine, but it is a decision that should be
-   explicit in a manageability discussion -- that this is how the
-   protocol will need to be operated and managed. Protocol Designers
-   should avoid having manageability pushed for a later phase of the
-   development of the specification.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
+   is mandatory. If Protocol Designers conclude that the technology can be managed
+   solely by using Proprietary Interfaces or that it does
+   not need any structured or standardized data model, this might be fine,
+   but it is a decision that should be explicit in a manageability discussion
+   -- that this is how the protocol will need to be operated and managed.
+   Protocol Designers should avoid having manageability pushed for a later
+   phase of the development of the standard.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
+<p id="section-1.2-4">A list of guidelines and a
+   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
+   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-1.2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="motivation">
@@ -1742,7 +1742,7 @@ of New Protocols or Protocol Extensions.<a href="#section-2.1-2.7.1" class="pilc
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-operations" class="section-name selfRef">Operations</a>
         </h3>
 <p id="section-3.1-1">Protocol Designers can analyze the operational environment and mode
-   of work in which the New Protocol or extension will work. Such an
+   of work in which the New Protocol and Protocol Extension will work. Such an
    exercise need not be reflected directly by text in their document
    but could help in visualizing how to apply the protocol in the
    Internet environments where it will be deployed.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
@@ -1813,7 +1813,7 @@ of New Protocols or Protocol Extensions.<a href="#section-2.1-2.7.1" class="pilc
         </h3>
 <p id="section-3.3-1">If the New Protocol is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
-   how deployments should transition to the New Protocol. This should
+   how deployments should transition to the New Protocol or Protocol Extensions. This should
    include coexistence with previously deployed protocols and/or
    previous versions of the same protocol, incompatibilities between
    versions, translation between versions, and side effects that might
@@ -1903,7 +1903,7 @@ of New Protocols or Protocol Extensions.<a href="#section-2.1-2.7.1" class="pilc
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct end-
-   to-end operation of the New Protocol in the network can be tested
+   to-end operation of the New Protocol or Protocol Extension in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
    properly with the New Protocol. Which metrics are of interest?<a href="#section-3.6-1" class="pilcrow">¶</a></p>
@@ -1957,7 +1957,7 @@ operation, scripts)? Are they performed immediately or are they
 time scheduled, or event triggered?<a href="#section-4-4.4.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-4-5">Protocol Designers should consider how the New Protocol will be
+<p id="section-4-5">Protocol Designers should consider how the New Protocol or Protocol Extension will be
    managed in different deployment scales. It might be sensible to use
    a local management interface to manage the New Protocol on a single
    device, but in a large network, remote management using a centralized
@@ -2085,7 +2085,7 @@ usage accounting<a href="#section-4.1-7.2.1" class="pilcrow">¶</a></p>
 <figure id="figure-1">
           <div id="section-4.1-12.1">
             <div class="alignCenter art-svg artwork" id="section-4.1-12.1.1">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="176" width="480" viewBox="0 0 480 176" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="160" width="480" viewBox="0 0 480 160" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
                 <path d="M 8,64 L 8,80" fill="none" stroke="black"></path>
                 <path d="M 96,48 L 96,80" fill="none" stroke="black"></path>
                 <path d="M 176,64 L 176,80" fill="none" stroke="black"></path>
@@ -2312,7 +2312,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-fault-management" class="section-name selfRef">Fault Management</a>
         </h3>
 <p id="section-4.3-1">The Protocol Designer should document the basic faults and health
-   indicators that need to be instrumented for the New Protocol, as well
+   indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
    as the alarms and events that must be propagated to management
    applications or exposed through a Data Model.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <p id="section-4.3-2">The Protocol Designer should consider how fault information will be
@@ -2408,7 +2408,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-configuration-management" class="section-name selfRef">Configuration Management</a>
         </h3>
 <p id="section-4.4-1">A Protocol Designer should document the basic configuration
-   parameters that need to be instrumented for a New Protocol, as well
+   parameters that need to be instrumented for a New Protocol or Protocol Extensions, as well
    as default values and modes of operation.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
 <p id="section-4.4-2">What information should be maintained across reboots of the device,
    or restarts of the management system?<a href="#section-4.4-2" class="pilcrow">¶</a></p>
@@ -2653,7 +2653,7 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
 <a href="#section-4.7" class="section-number selfRef">4.7. </a><a href="#name-security-management" class="section-name selfRef">Security Management</a>
         </h3>
 <p id="section-4.7-1">Protocol Designers should consider how to monitor and manage security
-   aspects and vulnerabilities of the New protocol.<a href="#section-4.7-1" class="pilcrow">¶</a></p>
+   aspects and vulnerabilities of the New Protocol or Protocol Extension.<a href="#section-4.7-1" class="pilcrow">¶</a></p>
 <p id="section-4.7-2">There will be security considerations related to the New Protocol.
    To make it possible for operators to be aware of security-related
    events, it is recommended that system logs should record events, such
@@ -2707,7 +2707,7 @@ experience, reordering ACLs can lead to a huge security issue.<a href="#section-
    conditions identified in the security considerations for the new
    protocol before they can impact the network.<a href="#section-4.7-12" class="pilcrow">¶</a></p>
 <p id="section-4.7-13">Different management protocols use different assumptions about
-   message security and data-access controls. A protocol Designer that
+   message security and data-access controls. A Protocol Designer that
    recommends using different protocols should consider how security
    will be applied in a balanced manner across multiple management
    interfaces. SNMP authority levels and policy are data-oriented,
@@ -2853,8 +2853,8 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
         <h3 id="name-null-operations-and-managea">
 <a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-null-operations-and-managea" class="section-name selfRef">Null Operations and Manageability Considerations Section</a>
         </h3>
-<p id="section-6.2-1">A protocol Designer may seriously consider the manageability
-   requirements of a New Protocol and determine that no management
+<p id="section-6.2-1">A Protocol Designer should consider the manageability
+   requirements of a New Protocol or Protocol Extension and determine that no management
    functionality or operatinal best-practice clarifications are
    needed by the protocol. It would be helpful to
    those who may update or write extensions to the protocol in the
