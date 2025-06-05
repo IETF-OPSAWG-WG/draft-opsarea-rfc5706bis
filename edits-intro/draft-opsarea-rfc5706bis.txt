@@ -156,10 +156,10 @@ Table of Contents
    modules using the Structure of Management Information (SMI)-based
    [STD58] data modeling language, to monitor and manage networking
    devices.  Currently, the YANG data modeling language [RFC7950] is
-   recommended to monitor and manage the IETF protocols, networks, and
-   underlying devices.  Management requirements continually evolve in
-   the IETF.  Therefore, the management protocols used should track with
-   current IETF recommendations.
+   recommended to monitor and manage the IETF protocols in devices,
+   networks, and network services.  Management requirements continually
+   evolve in the IETF.  Therefore, the management protocols used should
+   track with current IETF recommendations.
 
    Protocol designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -1598,9 +1598,9 @@ Table of Contents
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
               Authors and Reviewers of Documents Containing YANG Data
               Models", Work in Progress, Internet-Draft, draft-ietf-
-              netmod-rfc8407bis-27, 5 June 2025,
+              netmod-rfc8407bis-28, 5 June 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc8407bis-27>.
+              rfc8407bis-28>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
