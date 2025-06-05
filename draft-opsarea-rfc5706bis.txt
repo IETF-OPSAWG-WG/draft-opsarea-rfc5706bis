@@ -427,6 +427,23 @@ Table of Contents
       development and specification of New Protocols or Protocol
       Extensions.
 
+   *  Problem: See [I-D.ietf-nmop-terminology].
+
+   *  Fault: See [I-D.ietf-nmop-terminology].
+
+   *  Fault management: Fault management is the process of interpreting
+      fault notifications and other alerts and alarms, isolating faults,
+      correlating them, and decucing underlying causes.  See Section 4.3
+      for more information.
+
+   *  Anomaly: See [I-D.ietf-nmop-terminology].
+
+   *  Cause: See [I-D.ietf-nmop-terminology].
+
+   *  Root Cause: Since one fault may give rise to another, a root cause
+      Section 4.3.3 is commonly meant to describe the original event
+      that is the foundation of all related faults.
+
 2.2.  Available Management Technologies
 
    The IETF has a number of standard management protocols available that
@@ -1615,6 +1632,13 @@ Table of Contents
               netmod-rfc8407bis-28, 5 June 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
               rfc8407bis-28>.
+
+   [I-D.ietf-nmop-terminology]
+              Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
+              Key Terms for Network Fault and Problem Management", Work
+              in Progress, Internet-Draft, draft-ietf-nmop-terminology-
+              17, 18 May 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-nmop-terminology-17>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
