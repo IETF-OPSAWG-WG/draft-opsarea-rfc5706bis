@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 1 December 2025                                       A. Farrel
+Expires: 7 December 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 1 December 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             30 May 2025
+                                                             5 June 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 December 2025.
+   This Internet-Draft will expire on 7 December 2025.
 
 Copyright Notice
 
@@ -303,7 +303,7 @@ Table of Contents
    In 2014, the IESG wrote its statement on "Writable MIB Module"
    [IESG-STATEMENT], as mentioned above.
 
-   In 2024, the IAB hold the "Next Era of Network Management Operations
+   In 2024, the IAB held the "Next Era of Network Management Operations
    (NEMOPS)" workshop [NEMOPS-WORKSHOP], building on the previous 2002
    IAB workshop.  Given that much has changed in the Internet’s
    operation and technological foundations since the first worshop, the
@@ -650,18 +650,18 @@ Table of Contents
 
    Considerations for management should include a discussion of what
    needs to be managed, and how to achieve various management tasks.
-   Where are the managers and what type of management interfaces and
-   protocols will they need?  The "write a MIB module" approach to
-   considering management often focuses on monitoring a protocol
-   endpoint on a single device.  A MIB module document typically only
-   considers monitoring properties observable at one end, while the
-   document does not really cover managing the *protocol* (the
-   coordination of multiple ends) and does not even come near managing
-   the *service* (which includes a lot of stuff that is very far away
-   from the box).  This scenario reflects a common operational concern:
-   the inability to manage both ends of a connection effectively.  As
-   noted in [RFC3535], "MIB modules can often be characterized as a list
-   of ingredients without a recipe".
+   Where are the managers and what type of interfaces and protocols will
+   they need?  The "write a MIB module" approach to considering
+   management often focuses on monitoring a protocol endpoint on a
+   single device.  A MIB module document typically only considers
+   monitoring properties observable at one end, while the document does
+   not really cover managing the *protocol* (the coordination of
+   multiple ends) and does not even come near managing the *service*
+   (which includes a lot of stuff that is very far away from the box).
+   This scenario reflects a common operational concern: the inability to
+   manage both ends of a connection effectively.  As noted in [RFC3535],
+   "MIB modules can often be characterized as a list of ingredients
+   without a recipe".
 
    The management model should take into account factors such as:
 
@@ -739,14 +739,14 @@ Table of Contents
    page interface, that such a solution is enough.  But when equipment
    from multiple vendors is combined into a large network, scalability
    of management may become a problem.  It may be important to have
-   consistency in the management interfaces so network-wide operational
-   processes can be automated.  For example, a single switch might be
-   easily managed using an interactive web interface when installed in a
-   single-office small business, but when, say, a fast-food company
-   installs similar switches from multiple vendors in hundreds or
-   thousands of individual branches and wants to automate monitoring
-   them from a central location, monitoring vendor- and model-specific
-   web pages would be difficult to automate.
+   consistency in the management protocol support so network-wide
+   operational processes can be automated.  For example, a single switch
+   might be easily managed using an interactive web interface when
+   installed in a single-office small business, but when, say, a fast-
+   food company installs similar switches from multiple vendors in
+   hundreds or thousands of individual branches and wants to automate
+   monitoring them from a central location, monitoring vendor- and
+   model-specific web pages would be difficult to automate.
 
    The primary goal is the ability to roll out new useful functions and
    services in a way in which they can be managed in a scalable manner,
@@ -1357,10 +1357,10 @@ Table of Contents
    operations.  For example, Control and Provisioning of Wireless Access
    Points (CAPWAP) breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
-   By using a management interface, internal information that was
-   previously not accessible is now exposed over the network and to
-   management applications and may become a source of potential security
-   threats.
+   By using a control protocol or management protocol, internal
+   information that was previously not accessible is now exposed over
+   the network and to management applications and may become a source of
+   potential security threats.
 
    The granularity of access control needed on management interfaces
    needs to match operational needs.  Typical requirements are a role-
@@ -1546,11 +1546,10 @@ Table of Contents
 
 6.3.  Placement of Operations and Manageability Considerations Sections
 
-   section for a New Protocol, it is recommended that the section be
-   placed immediately before the Security Considerations section.
-   Reviewers interested in such sections could find it easily, and this
-   placement could simplify the development of tools to detect the
-   presence of such a section.
+   It is recommended that the section be placed immediately before the
+   Security Considerations section.  Reviewers interested in such
+   sections will find it easily, and this placement could simplify the
+   development of tools to detect the presence of such a section.
 
 7.  IANA Considerations
 
@@ -1597,9 +1596,9 @@ Table of Contents
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
               Authors and Reviewers of Documents Containing YANG Data
               Models", Work in Progress, Internet-Draft, draft-ietf-
-              netmod-rfc8407bis-25, 5 May 2025,
+              netmod-rfc8407bis-27, 5 June 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc8407bis-25>.
+              rfc8407bis-27>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
