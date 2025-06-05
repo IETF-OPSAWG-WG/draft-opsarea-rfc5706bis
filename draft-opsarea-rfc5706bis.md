@@ -398,7 +398,7 @@ author:
      
    * Anomaly: See {{?I-D.ietf-nmop-terminology}}.
      
-   * Cause: See {{?I-D.ietf-nmop-terminology}}. 
+   * Cause: See {{?I-D.ietf-nmop-terminology}}.
 
    * Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
      to describe the original event that is the foundation of all related faults.
