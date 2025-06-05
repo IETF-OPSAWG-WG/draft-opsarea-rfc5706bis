@@ -388,25 +388,18 @@ author:
       people, or an IETF Working Group involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-   *  Problem: A problem is a state that is undesirable and that may require remedial
-       action {{?I-D.ietf-nmop-terminology}}.
+   * Problem: See {{?I-D.ietf-nmop-terminology}}.
 
-   *  Fault and Fault management: As defined in {{?I-D.ietf-nmop-terminology}}, a fault
-      is an event or change that is not desired or required because it may be indicative
-      of a current or future undesired state. Fault management is, therefore, the process
-      of interpreting fault notifications and other alerts and alarms, isolating faults,
-      correlating them, and decucing underlying causes. See {{sec-fm-mgt}} for more
-      information.
+   * Fault and Fault management: Fault is defined in {{?I-D.ietf-nmop-terminology}}.
+      Fault management is the process of interpreting fault notifications and other alerts
+      and alarms, isolating faults, correlating them, and decucing underlying causes. See
+      {{sec-fm-mgt}} for more information.
 
-   *  Anomaly: {{?I-D.ietf-nmop-terminology}} defines an anomaly as an unusual or
-       unexpected event or pattern in network data in the forwarding plane, control plane, or
-      management plane that deviates from the normal, expected behavior. This is discussed
-      further in {{?I-D.ietf-nmop-network-anomaly-architecture}}.
+   * Anomaly: See {{?I-D.ietf-nmop-terminology}} and {{?I-D.ietf-nmop-network-anomaly-architecture}}.
 
-   *  Cause and Root cause: A cause is the event (or events) that gave rise to a fault or problem
-      ({{?I-D.ietf-nmop-terminology}}). Since one fault may give rise to another, a root cause
-      {{sec-root-cause-analysis}} is commonly meant to describe the original event that is the
-      foundation of all related faults.
+   * Cause and Root cause: Cause is defined in ({{?I-D.ietf-nmop-terminology}}). Since one
+     fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
+     to describe the original event that is the foundation of all related faults.
 
 ##  Available Management Technologies
 
