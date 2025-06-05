@@ -395,7 +395,7 @@ author:
       and alarms, isolating faults, correlating them, and decucing underlying causes. See
       {{sec-fm-mgt}} for more information.
 
-   * Anomaly: See {{?I-D.ietf-nmop-terminology}} and {{?I-D.ietf-nmop-network-anomaly-architecture}}.
+   * Anomaly: See {{?I-D.ietf-nmop-terminology}}.
 
    * Cause and Root cause: Cause is defined in ({{?I-D.ietf-nmop-terminology}}). Since one
      fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
