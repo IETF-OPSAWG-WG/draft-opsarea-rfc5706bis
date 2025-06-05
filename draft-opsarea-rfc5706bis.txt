@@ -35,8 +35,8 @@ Abstract
 
    This document obsoletes RFC 5706, replacing it completely and
    updating it with new operational and management techniques and
-   mechanisms, and introduces a requirement for an “Operational and
-   Management Considerations” section in Internet-Drafts, before they
+   mechanisms, and introduces a requirement for an "Operational and
+   Management Considerations" section in Internet-Drafts, before they
    are progressed as publication as RFCs.
 
 Status of This Memo
@@ -135,17 +135,17 @@ Table of Contents
 
    This document obsoletes [RFC5706] and fully updates its content with
    new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are
-   progressed for publication as an RFC.  It removes outdated references
-   and aligns with current practices, protocols, and technologies used
-   in operating and managing network devices and services.  See
-   Section 1.5.
+   introduces a requirement for an "Operational and Management
+   Considerations" section in Internet-Drafts, before they are
+   progressed for publication as an RFC.  Also, the document removes
+   outdated references and aligns with current practices, protocols, and
+   technologies used in operating and managing devices, networks, and
+   services.  See Section 1.5 for more details.
 
 1.1.  Designing for Operations and Management
 
-   The operational environment and manageability of the protocol should
-   be considered from the start when New Protocols are designed.
+   The operational environment and manageability of a protocol should be
+   considered from the start when New Protocols are designed.
 
    As the Internet has grown, IETF protocols have addressed a constantly
    growing set of needs, such as web servers, collaboration services,
@@ -156,10 +156,10 @@ Table of Contents
    modules using the Structure of Management Information (SMI)-based
    [STD58] data modeling language, to monitor and manage networking
    devices.  Currently, the YANG data modeling language [RFC7950] is
-   recommended to monitor and manage the IETF protocols and the
-   networking devices.  Management requirements continually evolve in
-   the IETF.  Therefore, the management protocols used should track with
-   current IETF recommendations.
+   recommended to monitor and manage the IETF protocols in devices,
+   networks, and network services.  Management requirements continually
+   evolve in the IETF.  Therefore, the management protocols used should
+   track with current IETF recommendations.
 
    Protocol designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -173,20 +173,26 @@ Table of Contents
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
-   to understand how the protocol will be deployed and managed.  The WG
-   should expect that considerations for operations and management may
-   need to be updated in the future, after further operational
-   experience has been gained.
+   to understand how the protocol will be deployed and managed.  The
+   considerations do not need to be comprehensive and exhaustive; focus
+   should be on key aspects.  The WG should expect that considerations
+   for operations and management may need to be updated in the future,
+   after further operational experience has been gained.
+
+   A list of guidelines and a checklist of questions to consider, which
+   a reviewer can use to evaluate whether the protocol and documentation
+   address common operations and management needs, is provided in
+   [CHECKLIST].
 
 1.2.  This Document
 
    This document makes a distinction between "Operational
    Considerations" and "Management Considerations", although the two are
-   closely related.  The section on manageability is focused on
-   management technology, such as how to utilize management protocols
-   and how to design management data models.  The operational
-   considerations apply to operating the protocol within a network, even
-   if there were no management protocol actively being used.
+   closely related.  The operational considerations apply to operating
+   the protocol within a network, even if there were no management
+   protocol actively being used.  The section on manageability is
+   focused on management technology, such as how to utilize management
+   protocols and how to design management data models.
 
    The purpose of this document is to provide guidance about what to
    consider when thinking about the management and deployment of a new
@@ -207,12 +213,7 @@ Table of Contents
    should be explicit in a manageability discussion -- that this is how
    the protocol will need to be operated and managed.  Protocol
    designers should avoid having manageability pushed for a later phase
-   of the development of the standard.
-
-   A list of guidelines and a checklist of questions to consider, which
-   a reviewer can use to evaluate whether the protocol and documentation
-   address common operations and management needs, is provided in
-   [CHECKLIST].
+   of the development of the specification.
 
 1.3.  Motivation
 
@@ -1596,9 +1597,9 @@ Table of Contents
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
               Authors and Reviewers of Documents Containing YANG Data
               Models", Work in Progress, Internet-Draft, draft-ietf-
-              netmod-rfc8407bis-27, 5 June 2025,
+              netmod-rfc8407bis-28, 5 June 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc8407bis-27>.
+              rfc8407bis-28>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for

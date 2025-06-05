@@ -12,7 +12,7 @@
 <meta content="Samier Barguil" name="author">
 <meta content="Carlos Pignataro" name="author">
 <meta content="Ran Chen" name="author">
-<meta content="
+<meta content='
        New Protocols or protocol extensions are best designed with due
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
@@ -22,10 +22,10 @@
    be considered. 
        This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are progressed
+   introduces a requirement for an "Operational and Management
+   Considerations" section in Internet-Drafts, before they are progressed
    as publication as RFCs. 
-    " name="description">
+    ' name="description">
 <meta content="xml2rfc 3.28.1" name="generator">
 <meta content="management" name="keyword">
 <meta content="operations" name="keyword">
@@ -1135,8 +1135,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
    be considered.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are progressed
+   introduces a requirement for an "Operational and Management
+   Considerations" section in Internet-Drafts, before they are progressed
    as publication as RFCs.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
@@ -1363,18 +1363,18 @@ svg :is([fill="white"], [fill^="#fff"]) {
    extension at an earlier phase.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">This document obsoletes <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> and fully updates its content
    with new operational and management techniques and mechanisms, and
-   introduces a requirement for an “Operational and Management
-   Considerations” section in Internet-Drafts, before they are progressed
-   for publication as an RFC. It removes outdated
+   introduces a requirement for an "Operational and Management
+   Considerations" section in Internet-Drafts, before they are progressed
+   for publication as an RFC. Also, the document removes outdated
    references and aligns with current practices, protocols, and
-   technologies used in operating and managing network devices and
-   services. See <a href="#changes-since-5706" class="auto internal xref">Section 1.5</a>.<a href="#section-1-2" class="pilcrow">¶</a></p>
+   technologies used in operating and managing devices, networks, and
+   services. See <a href="#changes-since-5706" class="auto internal xref">Section 1.5</a> for more details.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <div id="designing-for-operations-and-management">
 <section id="section-1.1">
         <h3 id="name-designing-for-operations-an">
 <a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-designing-for-operations-an" class="section-name selfRef">Designing for Operations and Management</a>
         </h3>
-<p id="section-1.1-1">The operational environment and manageability of the protocol should
+<p id="section-1.1-1">The operational environment and manageability of a protocol should
    be considered from the start when New Protocols are designed.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
 <p id="section-1.1-2">As the Internet has grown, IETF protocols have addressed a constantly growing set of
    needs, such as web servers, collaboration services, and applications.
@@ -1384,7 +1384,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based <span>[<a href="#STD58" class="cite xref">STD58</a>]</span>
    data modeling language, to monitor and manage networking devices.
    Currently, the YANG data modeling language <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> is recommended to
-   monitor and manage the IETF protocols and the networking devices.
+   monitor and manage the IETF protocols in devices, networks, and network services.
    Management requirements continually evolve in the IETF. Therefore,
    the management protocols used should track with current IETF
    recommendations.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
@@ -1398,10 +1398,14 @@ svg :is([fill="white"], [fill^="#fff"]) {
    protocols that could mitigate the threats.<a href="#section-1.1-3" class="pilcrow">¶</a></p>
 <p id="section-1.1-4">When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
-   to understand how the protocol will be deployed and managed. The WG
+   to understand how the protocol will be deployed and managed. The considerations
+   do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
    should expect that considerations for operations and management may
    need to be updated in the future, after further operational
    experience has been gained.<a href="#section-1.1-4" class="pilcrow">¶</a></p>
+<p id="section-1.1-5">A list of guidelines and a
+   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
+   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-1.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="this-document">
@@ -1411,11 +1415,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h3>
 <p id="section-1.2-1">This document makes a distinction between "Operational
    Considerations" and "Management Considerations", although the two are
-   closely related. The section on manageability is focused on
+   closely related. The operational considerations apply to operating the protocol within a network, even
+   if there were no management protocol actively being used. The section on manageability is focused on
    management technology, such as how to utilize management protocols
-   and how to design management data models. The operational
-   considerations apply to operating the protocol within a network, even
-   if there were no management protocol actively being used.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+   and how to design management data models.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
 <p id="section-1.2-2">The purpose of this document is to provide guidance about what to
    consider when thinking about the management and deployment of a new
    protocol, and to provide guidance about documenting the
@@ -1435,10 +1438,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    explicit in a manageability discussion -- that this is how the
    protocol will need to be operated and managed. Protocol designers
    should avoid having manageability pushed for a later phase of the
-   development of the standard.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
-<p id="section-1.2-4">A list of guidelines and a
-   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-1.2-4" class="pilcrow">¶</a></p>
+   development of the specification.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="motivation">
@@ -2247,7 +2247,7 @@ guideline is one counter per critical section per layer.<a href="#section-4.2.1-
 <p id="section-4.2.2-1">When considering YANG data models for a new specification, there
   are multiple types of data models that may be applicable. The
   hierarchy and relationship between these types is described in
-  <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-27#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>. A new specification
+  <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-28#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>. A new specification
   may require or benefit from one or more of these YANG data model types.<a href="#section-4.2.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4.2.2-2.1">
@@ -2935,7 +2935,7 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-netmod-rfc8407bis">[I-D.ietf-netmod-rfc8407bis]</dt>
       <dd>
-<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Boucadair, M.</span>, and <span class="refAuthor">Q. Wu</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of Documents Containing YANG Data Models"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-netmod-rfc8407bis-27</span>, <time datetime="2025-06-05" class="refDate">5 June 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-27">https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-27</a>&gt;</span>. </dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Boucadair, M.</span>, and <span class="refAuthor">Q. Wu</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of Documents Containing YANG Data Models"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-netmod-rfc8407bis-28</span>, <time datetime="2025-06-05" class="refDate">5 June 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-28">https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-28</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-opsawg-oam-characterization">[I-D.ietf-opsawg-oam-characterization]</dt>
       <dd>
