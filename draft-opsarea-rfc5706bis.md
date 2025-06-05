@@ -1480,9 +1480,9 @@ author:
 
 ##  Placement of Operations and Manageability Considerations Sections
 
-   section for a new protocol, it is recommended that the section be
+   It is recommended that the section be
    placed immediately before the Security Considerations section.
-   Reviewers interested in such sections could find it easily, and this
+   Reviewers interested in such sections will find it easily, and this
    placement could simplify the development of tools to detect the
    presence of such a section.
 
