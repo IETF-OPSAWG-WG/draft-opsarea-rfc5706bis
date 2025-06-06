@@ -1087,7 +1087,7 @@ DM         DM        DM     --> concrete/detailed model
    1.  A Network Management System (NMS) could optimize ACLs for
        performance reasons.
 
-   2.  Unless the device or NMS is configured with proper rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.
+   2.  Unless the device or NMS is configured with adequate rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.
 
    Network-wide configurations may be stored in central master databases
    and transformed into readable formats that can be pushed to devices, either by
