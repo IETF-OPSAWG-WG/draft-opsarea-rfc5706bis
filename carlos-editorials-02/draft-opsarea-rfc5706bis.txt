@@ -1155,7 +1155,7 @@ Table of Contents
    1.  A Network Management System (NMS) could optimize ACLs for
        performance reasons.
 
-   2.  Unless the device or NMS is configured with proper rules and
+   2.  Unless the device or NMS is configured with adequate rules and
        guided by administrators with extensive experience, reordering
        ACLs can introduce significant security risks.
 
