@@ -518,7 +518,7 @@ author:
 
    The default value should stay on the conservative side rather than on
    the "optimizing performance" side (example: the initial RTT and
-   RTTVAR values of a TCP connection).
+   RTTVAR values of a TCP connection {{?RFC6298}}).
 
    For those parameters that are speed-dependent, instead of using a
    constant, try to set the default value as a function of the link
