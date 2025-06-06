@@ -102,7 +102,7 @@ author:
 --- middle
 
 
-#  Introduction
+#  Introduction {#sec-intro}
 
    Often when New Protocols or Protocol Extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
@@ -121,9 +121,9 @@ author:
    for publication as an RFC. Also, the document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
-   services. See {{changes-since-5706}} for more details.
+   services. See {{sec-changes-since-5706}} for more details.
 
-##  Designing for Operations and Management
+##  Designing for Operations and Management {#sec-designing}
 
    The operational environment and manageability of a protocol should
    be considered from the start when New Protocols are designed.
@@ -162,7 +162,7 @@ author:
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
-##  This Document
+##  This Document {#sec-this-doc}
 
    This document makes a distinction between "Operational
    Considerations" and "Management Considerations", although the two are
@@ -194,7 +194,7 @@ author:
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
-##  Motivation
+##  Motivation {#sec-motivation}
 
    For years the IETF community has used the IETF Standard Management
    Framework, including the Simple Network Management Protocol
@@ -232,7 +232,7 @@ author:
    deliberate decision, not the result of omission. This document
    provides some guidelines for those considerations.
 
-##  Background
+##  Background {#sec-background}
 
    There have been a significant number of efforts, meetings, and
    documents that are related to Internet operations and management.
@@ -292,7 +292,7 @@ author:
    working in collaboration, the workshop developed a proposed plan of action
    and provided network management recommendations for both the IETF and IRTF.
 
-## Changes Since RFC 5706 {#changes-since-5706}
+## Changes Since RFC 5706 {#sec-changes-since-5706}
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
@@ -312,18 +312,18 @@ author:
    * Add an "Operational and Management Tooling Considerations" section
 
 
-##  TO DO LIST
+##  TO DO LIST {#sec-todo}
 
    See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 
-# Key Concepts, Terminology, and Technological Landscape
+# Key Concepts, Terminology, and Technological Landscape {#sec-key-concepts}
 
    This section introduces the key concepts and terminology used throughout the document, and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
 
    This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?RFC2119}} and {{?RFC8174}}.
 
-##  Terminology
+##  Terminology {#sec-terms}
 
    These terms are:
 
@@ -359,7 +359,7 @@ author:
       state (operations on values). A data model may be derived by mapping the
       contents of an information model or may be developed ab initio. Further
       discussion of data models can be found in {{?RFC3444}}, {{sec-interop}},
-      and {{sec-mgt-info}}.
+      and {{sec-mgmt-info}}.
 
    *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
@@ -394,7 +394,7 @@ author:
 
    * Fault management: Fault management is the process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and decucing underlying causes. See
-      {{sec-fm-mgt}} for more information.
+      {{sec-fm-mgmt}} for more information.
 
    * Anomaly: See {{?I-D.ietf-nmop-terminology}}.
 
@@ -403,7 +403,7 @@ author:
    * Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
      to describe the original event that is the foundation of all related faults.
 
-##  Available Management Technologies
+##  Available Management Technologies {#sec-mgmt-tech}
 
    The IETF has a number of standard management protocols available that
    are suitable for different purposes.  These include:
@@ -433,7 +433,7 @@ author:
    specific functionality, and provide pointers to the documents that
    define them.
 
-# Operational Considerations - How Will the New Protocol Fit into the Current Environment?
+# Operational Considerations - How Will the New Protocol Fit into the Current Environment? {#sec-oper-consid}
 
    Designers of a New Protocol should carefully consider the operational
    aspects. To ensure that a protocol will be practical to deploy in
@@ -607,7 +607,7 @@ author:
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-##  Verifying Correct Operation {#sec-verify}
+##  Verifying Correct Operation {#sec-oper-verify}
 
    The Protocol Designer should consider techniques for testing the
    effect that the protocol has had on the network by sending data
@@ -621,7 +621,7 @@ author:
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
-# Management Considerations - How Will the Protocol Be Managed? {#sec-proto}
+# Management Considerations - How Will the Protocol Be Managed? {#sec-mgmt-consid}
 
    The considerations of manageability should start from identifying the
    entities to be managed, as well as how the managed protocol is
@@ -832,7 +832,7 @@ author:
    Manageability considerations should include discussion of which level
    of compliance is expected to be supported for interoperability.
 
-##  Management Information {#sec-mgt-info}
+##  Management Information {#sec-mgmt-info}
 
    Languages used to describe an Information Model can influence the
    nature of the model. Using a particular data modeling language, such
@@ -966,7 +966,7 @@ author:
   Specific guidelines to consider when authoring any type of YANG
   modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
 
-## Fault Management {#sec-fm-mgt}
+## Fault Management {#sec-fm-mgmt}
 
    The Protocol Designer should document the basic faults and health
    indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
@@ -993,7 +993,7 @@ author:
    the event information within a given (high) margin of confidence?
    Can we poll the latest events in the box?
 
-###  Liveness Detection and Monitoring
+###  Liveness Detection and Monitoring {#sec-monitor}
 
    Protocol Designers should always build in basic testing features
    (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
@@ -1013,7 +1013,7 @@ author:
    through management applications or at least to record the fact in an
    event log.
 
-### Fault Determination
+### Fault Determination {#sec-fault-determ}
 
    It can be helpful to describe how faults can be pinpointed using
    management information. For example, counters might record instances
@@ -1041,7 +1041,7 @@ author:
    (reported by a notification), root cause analysis can help find the
    failed link or node in the end-to-end path.
 
-###  Fault Isolation
+###  Fault Isolation {#sec-fault-isol}
 
    It might be useful to isolate or quarantine faults, such as isolating
    a device that emits malformed messages that are necessary to
@@ -1049,7 +1049,7 @@ author:
    configuring next-hop devices to drop the faulty messages to prevent
    them from entering the rest of the network.
 
-##  Configuration Management {#sec-config-mgt}
+##  Configuration Management {#sec-config-mgmt}
 
    A Protocol Designer should document the basic configuration
    parameters that need to be instrumented for a New Protocol or Protocol Extensions, as well
@@ -1134,7 +1134,7 @@ author:
    should have default values suggested in the protocol specification
    and may not need to be otherwise configurable.
 
-###  Verifying Correct Operation
+###  Verifying Correct Operation {#sec-mgmt-verify}
 
    An important function that should be provided is guidance on how to
    verify the correct operation of a protocol. A Protocol Designer
@@ -1150,7 +1150,7 @@ author:
    each network element. This may be achieved through status and
    statistical information gathered from devices.
 
-##  Accounting Management {#sec-acc-mgt}
+##  Accounting Management {#sec-acc-mgmt}
 
    A Protocol Designer should consider whether it would be appropriate
    to collect usage information related to this protocol and, if so,
@@ -1164,7 +1164,7 @@ author:
    designing a protocol whose usage might need to be monitored or when
    recommending a protocol to do usage accounting.
 
-##  Performance Management {#sec-perf-mgt}
+##  Performance Management {#sec-perf-mgmt}
 
    From a manageability point of view, it is important to determine how
    well a network deploying the protocol or technology defined in the
@@ -1205,7 +1205,7 @@ author:
    protocol / service activation on the device), network monitoring, and
    service monitoring (the impact of service activation on the network).
 
-###  Monitoring the Protocol
+###  Monitoring the Protocol {#sec-monitor-proto}
 
    Certain properties of protocols are useful to monitor. The number of
    protocol packets received, the number of packets sent, and the number
@@ -1244,7 +1244,7 @@ author:
    from 1 to 4094. Therefore, a YANG vlanid definition representing the
    12-bit VLAN-ID used in the VLAN Tag header uses a range of "1..4094".
 
-###  Monitoring the Device
+###  Monitoring the Device {#sec-monitor-dev}
 
    Consider whether device performance will be affected by the number of
    protocol entities being instantiated on the device. Designers of an
@@ -1260,7 +1260,7 @@ author:
    number of instances, and the expected behavior when the current
    instances exceed the capacity of the device.
 
-###  Monitoring the Network
+###  Monitoring the Network {#sec-monitor-net}
 
    Consider whether network performance will be affected by the number
    of protocol entities being deployed.
@@ -1275,7 +1275,7 @@ author:
    the protocol? Is it important to measure setup times? End-to-end
    connectivity? Hop-to-hop connectivity? Network throughput?
 
-###  Monitoring the Service
+###  Monitoring the Service {#sec-monitor-svc}
 
    What are the principal performance factors that need to be looked at
    when measuring the performance of a service using the protocol? Is
@@ -1283,7 +1283,7 @@ author:
    server associations? End-to-end application quality? Service
    interruptions? User experience?
 
-##  Security Management {#sec-secuity-mgt}
+##  Security Management {#sec-secuity-mgmt}
 
    Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the New Protocol or Protocol Extension.
@@ -1362,7 +1362,7 @@ author:
    Protocol Designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
-# Operational and Management Tooling Considerations {#sec-oandm-tooling}
+# Operational and Management Tooling Considerations {#sec-oper-mgmt-tooling}
 
    The operational community's ability to effectively adopt and
    use new specifications is significantly influenced by the availability
@@ -1426,7 +1426,7 @@ author:
      encourage collaboration, and provide operators with the flexibility to customize
      and extend the tools to meet their specific needs.
 
-#  Documentation Guidelines
+#  Documentation Guidelines {#sec-doc-guidelines}
 
    This document outlines key considerations for Protocol Designers and
    provides guidance on how these considerations ought to be documented.
@@ -1438,7 +1438,7 @@ author:
    like 'must' or 'should' needs to be interpreted only in the context
    of their natural, English-language meaning.
 
-##  Recommended Discussions
+##  Recommended Discussions {#sec-rec-discuss}
 
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting practices and
@@ -1469,7 +1469,7 @@ author:
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-##  Null Operations and Manageability Considerations Section
+##  Null Operations and Manageability Considerations Section {#sec-null-sec}
 
    A Protocol Designer should consider the manageability
    requirements of a New Protocol or Protocol Extension and determine that no management
@@ -1493,7 +1493,7 @@ author:
    considerations, it would be helpful to point out the considerations
    section in the base document.
 
-##  Placement of Operations and Manageability Considerations Sections
+##  Placement of Operations and Manageability Considerations Sections {#sec-placement-sec}
 
    It is recommended that the section be
    placed immediately before the Security Considerations section.
@@ -1501,15 +1501,15 @@ author:
    placement could simplify the development of tools to detect the
    presence of such a section.
 
-#  IANA Considerations
+#  IANA Considerations {#sec-iana}
 
    This document does not have any IANA actions required.
 
-# Operations and Manageability Considerations
+# Operations and Manageability Considerations {#sec-oper-mgmt-consid}
 
    Although this document focuses on operations and manageability guidance, it does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
 
-#  Security Considerations
+#  Security Considerations {#sec-security}
 
    This document is informational and provides guidelines for
    considering manageability and operations. It introduces no new
@@ -1537,12 +1537,12 @@ author:
    concerted attack might be able to be mounted by causing an excess of
    these events. In other words, the security-management mechanisms
    could constitute a security vulnerability. The management of
-   security aspects is important (see {{sec-secuity-mgt}}).
+   security aspects is important (see {{sec-secuity-mgmt}}).
 
 --- back
 
 
-#  Acknowledgements
+#  Acknowledgements {#sec-ack}
 {:numbered="false"}
 
 The authors wish to thank the following individuals and groups.
