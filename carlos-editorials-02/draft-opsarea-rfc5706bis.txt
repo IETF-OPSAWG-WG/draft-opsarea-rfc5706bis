@@ -559,7 +559,7 @@ Table of Contents
 
    The default value should stay on the conservative side rather than on
    the "optimizing performance" side (example: the initial RTT and
-   RTTVAR values of a TCP connection).
+   RTTVAR values of a TCP connection [RFC6298]).
 
    For those parameters that are speed-dependent, instead of using a
    constant, try to set the default value as a function of the link
@@ -1811,6 +1811,11 @@ Table of Contents
               Acronym in the IETF", BCP 161, RFC 6291,
               DOI 10.17487/RFC6291, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6291>.
+
+   [RFC6298]  Paxson, V., Allman, M., Chu, J., and M. Sargent,
+              "Computing TCP's Retransmission Timer", RFC 6298,
+              DOI 10.17487/RFC6298, June 2011,
+              <https://www.rfc-editor.org/rfc/rfc6298>.
 
    [RFC6733]  Fajardo, V., Ed., Arkko, J., Loughney, J., and G. Zorn,
               Ed., "Diameter Base Protocol", RFC 6733,
