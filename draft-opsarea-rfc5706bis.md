@@ -89,8 +89,8 @@ author:
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
-   reviewers of documents that define New Protocols or protocol
-   extensions regarding aspects of operations and management that should
+   reviewers of documents that define New Protocols or Protocol
+   Extensions regarding aspects of operations and management that should
    be considered.
 
    This document obsoletes RFC 5706, replacing it completely and updating
@@ -111,8 +111,8 @@ author:
    protocol design choices may make deployment, operations, and
    management particularly hard. This document provides guidelines to
    help Protocol Designers and working groups (WGs) consider the operations
-   and management functionality for their new IETF protocol or protocol
-   extension at an earlier phase.
+   and management functionality for their New Protocol or Protocol
+   Extension at an earlier phase.
 
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
@@ -570,7 +570,7 @@ author:
 
 ##  Impact on Network Operation {#sec-impact}
 
-   The introduction of a New Protocol or extensions to an existing
+   The introduction of a New Protocol or Protocol Extensions to an existing
    protocol may have an impact on the operation of existing networks.
    Protocol Designers should outline such impacts (which may be
    positive), including scaling concerns and interactions with other
@@ -783,8 +783,8 @@ author:
 
    Protocol Designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
-   monitoring, controlling, or troubleshooting a New Protocol and its
-   extensions. This includes identifying key parameters that reflect the
+   monitoring, controlling, or troubleshooting a New Protocol and its Protocol
+   Extensions. This includes identifying key parameters that reflect the
    protocol’s behavior, performance metrics, error indicators, and any
    contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
 
@@ -1507,7 +1507,7 @@ DM         DM        DM     --> concrete/detailed model
 
 # Operations and Manageability Considerations
 
-   Although this document focuses on operations and manageability guidance, it does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
+   Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an Architecture. As such, there are no new operations or manageability requirements introduced by this document.
 
 #  Security Considerations
 
