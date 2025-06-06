@@ -433,7 +433,7 @@ Table of Contents
 
    *  Fault management: Fault management is the process of interpreting
       fault notifications and other alerts and alarms, isolating faults,
-      correlating them, and deducing underlying causes.  See Section 4.3
+      correlating them, and decucing underlying causes.  See Section 4.3
       for more information.
 
    *  Anomaly: See [I-D.ietf-nmop-terminology].
