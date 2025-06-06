@@ -94,10 +94,10 @@ author:
    be considered.
 
    This document obsoletes RFC 5706, replacing it completely and updating
-   it with new operational and management techniques and mechanisms, and
+   it with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational and Management
    Considerations" section in Internet-Drafts, before they are progressed
-   as publication as RFCs.
+   for publication as RFCs.
 
 --- middle
 
@@ -115,10 +115,10 @@ author:
    extension at an earlier phase.
 
    This document obsoletes {{?RFC5706}} and fully updates its content
-   with new operational and management techniques and mechanisms, and
+   with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational and Management
    Considerations" section in Internet-Drafts, before they are progressed
-   for publication as an RFC. Also, the document removes outdated
+   for publication as RFCs. Also, the document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services. See {{changes-since-5706}} for more details.
@@ -286,7 +286,7 @@ author:
    In 2024, the IAB held the "Next Era of Network Management Operations (NEMOPS)"
    workshop {{NEMOPS-WORKSHOP}}, building on the previous 2002 IAB workshop. Given that much has changed
    in the Internet’s operation and technological foundations since the first
-   worshop, the NEMOPS workshop reviewed the past outcomes and discussed any
+   workshop, the NEMOPS workshop reviewed the past outcomes and discussed any
    operational barriers that prevented these technologies from being widely
    implemented. With the industry, network operators, and protocol engineers
    working in collaboration, the workshop developed a proposed plan of action
@@ -298,7 +298,7 @@ author:
 
    * Change intended status from Informational to Best Current Practice
 
-   * Move the "Operational Considerations" Appendix A to a Checklist maintained in Github
+   * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
 
    * Add a structured framing for the requirement of an "Operational and
       Management Considerations" section in Internet-Drafts
@@ -319,7 +319,7 @@ author:
 
 # Key Concepts, Terminology, and Technological Landscape
 
-   This section introduces the key concepts and terminology used throughout the document, and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
+   This section introduces the key concepts and terminology used throughout the document and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
 
    This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?RFC2119}} and {{?RFC8174}}.
 
@@ -330,11 +330,12 @@ author:
    *  Proprietary Interfaces: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
       semantics typically vary significantly between implementations.
-      Examples of proprietary interfaces include CLI (Command Line
-      Interface), management web portal and Browser User Interface (BUI),
-      Graphical User Interface (GUI), and vendor-specific APIs.
+      Examples of proprietary interfaces include Command Line
+      Interface (CLI), management web portal and Browser User Interface (BUI),
+      Graphical User Interface (GUI), and vendor-specific application programming
+   interface (API).
 
-   *  CLI: Command Line Interface. Typically a proprietary interface to
+   *  CLI: Command Line Interface. Typically, a proprietary interface to
       hardware or software devices (e.g., routers or operating systems)
       for use by human operators
       directly at a terminal or via scripts. The commands, their syntax,
@@ -393,7 +394,7 @@ author:
    * Fault: See {{?I-D.ietf-nmop-terminology}}.
 
    * Fault management: Fault management is the process of interpreting fault notifications and other alerts
-      and alarms, isolating faults, correlating them, and decucing underlying causes. See
+      and alarms, isolating faults, correlating them, and deducing underlying causes. See
       {{sec-fm-mgt}} for more information.
 
    * Anomaly: See {{?I-D.ietf-nmop-terminology}}.
@@ -465,13 +466,14 @@ author:
    needs to operate well with any choice of values. If there are
    sensible defaults, these need to be stated.
 
-   There may be a need to support a human interface, e.g., for
-   troubleshooting, and a programmatic interface, e.g., for automated
-   monitoring and root cause analysis. The application programming
-   interfaces and the human interfaces might benefit from being similar
-   to ensure that the information exposed by these two interfaces is
+
+   There may be a need to support both a human interface (e.g., for
+   troubleshooting) and a programmatic interface (e.g., for automated
+   monitoring and root cause analysis). The application programming
+   interfaces (APIs) and the human interfaces might benefit from being similar
+   to ensure that the information exposed by both is
    consistent when presented to an operator. Identifying consistent
-   methods of determining information, such as what gets counted in a
+   methods for determining information, such as what is counted in a
    specific counter, is relevant.
 
    Protocol Designers should consider what management operations are
@@ -516,7 +518,7 @@ author:
 
    The default value should stay on the conservative side rather than on
    the "optimizing performance" side (example: the initial RTT and
-   RTTvar values of a TCP connection).
+   RTTVAR values of a TCP connection).
 
    For those parameters that are speed-dependent, instead of using a
    constant, try to set the default value as a function of the link
@@ -735,7 +737,7 @@ author:
    Getting everybody to agree on a single syntax and an associated
    protocol to do all management has proven to be difficult. So,
    management systems tend to speak whatever the boxes support, whether
-   or not the IETF likes this. The IETF is moving from support for one
+   the IETF likes this. The IETF is moving from support for one
    schema language for modeling the structure of management information
    (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
    languages and additional management protocols suited to different
@@ -787,15 +789,15 @@ author:
    contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
 
 ~~~~ aasvg
-             IM                --> conceptual/abstract model
-              |                    for designers and operators
-   +----------+---------+
-   |          |         |
-   DM        DM         DM     --> concrete/detailed model
-                                      for implementers
+           IM               --> conceptual/abstract model
+           |                    for designers & operators
++----------+---------+
+|          |         |
+DM         DM        DM     --> concrete/detailed model
+                                   for implementers
 
 ~~~~
-{: #fig-im-dm title="Information Models（IMs） and Data Models（DMs）" artwork-align="center"}
+{: #fig-im-dm title="Information Models（IMs）and Data Models（DMs）" artwork-align="center"}
 
    "On the Difference between Information Models and Data Models"
    {{?RFC3444}} is helpful in determining what information to consider
@@ -814,18 +816,17 @@ author:
    relevant. There are a number of information models contained in
    protocol WG RFCs. Some examples:
 
-   *  {{?RFC3060}} - Policy Core Information Model version 1
+   *  {{?RFC3060}} - Policy Core Information Model -- Version 1 Specification
 
    *  {{?RFC3290}} - An Informal Management Model for Diffserv Routers
 
-   *  {{?RFC3460}} - Policy Core Information Model Extensions
+   *  {{?RFC3460}} - Policy Core Information Model (PCIM) Extensions
 
    *  {{?RFC3585}} - IPsec Configuration Policy Information Model
 
-   *  {{?RFC3644}} - Policy Quality of Service Information Model
+   *  {{?RFC3644}} - Policy Quality of Service (QoS) Information Model
 
-   *  {{?RFC3670}} - Information Model for Describing Network Device QoS
-      Datapath Mechanisms
+   *  {{?RFC3670}} - Information Model for Describing Network Device QoS Datapath Mechanisms
 
    Management protocol standards and management Data Model standards
    often contain compliance clauses to ensure interoperability.
@@ -1086,8 +1087,7 @@ author:
    1.  A Network Management System (NMS) could optimize ACLs for
        performance reasons.
 
-   2.  Unless the device/NMS systems have correct rules / a lot of
-       experience, reordering ACLs can lead to a huge security issue.
+   2.  Unless the device or NMS is configured with proper rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.
 
    Network-wide configurations may be stored in central master databases
    and transformed into readable formats that can be pushed to devices, either by
@@ -1241,8 +1241,8 @@ author:
    is not specific to a management protocol, then it should be left
    to data modelers of that protocol to determine how to handle it.
    For example, VLAN identifiers are defined by standard to range
-   from 1 to 4094. Therefore, a YANG vlanid definition representing the
-   12-bit VLAN-ID used in the VLAN Tag header uses a range of "1..4094".
+   from 1 to 4094. Therefore, a YANG vlan-id definition representing the
+   12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
 ###  Monitoring the Device
 
@@ -1270,18 +1270,18 @@ author:
    received messages rejected due to format problems, and the expected
    behaviors when a malformed message is received.
 
-   What are the principal performance factors that need to be looked at
-   when measuring the operational performance of the network built using
-   the protocol? Is it important to measure setup times? End-to-end
-   connectivity? Hop-to-hop connectivity? Network throughput?
+   What are the principal performance factors that need to be considered
+   when measuring the operational performance of a network built using
+   the protocol? Is it important to measure setup times, end-to-end
+   connectivity, hop-by-hop connectivity, or network throughput?
 
 ###  Monitoring the Service
 
-   What are the principal performance factors that need to be looked at
+   What are the principal performance factors that need to be considered
    when measuring the performance of a service using the protocol? Is
-   it important to measure application-specific throughput? Client-
-   server associations? End-to-end application quality? Service
-   interruptions? User experience?
+   it important to measure application-specific throughput, client-server
+   associations, end-to-end application quality, service interruptions,
+   or user experience (UX)?
 
 ##  Security Management {#sec-secuity-mgt}
 
@@ -1344,7 +1344,7 @@ author:
    conditions identified in the security considerations for the new
    protocol. For example, you can log all the commands entered by the
    operator using syslog (giving you some degree of audit trail), or you
-   can see who has logged on/off using the Secure SHell Protocol (SSH)
+   can see who has logged on/off using the Secure Shell (SSH) Protocol {{?RFC4251}}
    and from where; failed SSH logins can be logged using syslog, etc.
 
    An analysis of existing counters might help operators recognize the
@@ -1473,7 +1473,7 @@ author:
 
    A Protocol Designer should consider the manageability
    requirements of a New Protocol or Protocol Extension and determine that no management
-   functionality or operatinal best-practice clarifications are
+   functionality or operational best-practice clarifications are
    needed by the protocol. It would be helpful to
    those who may update or write extensions to the protocol in the
    future, or to those deploying the protocol, to know the rationale
@@ -1488,10 +1488,10 @@ author:
    section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
-   In the case where the New Protocol is an extension and the base
-   protocol discusses all the relevant operational and manageability
-   considerations, it would be helpful to point out the considerations
-   section in the base document.
+   In cases where the New Protocol is an extension and the base protocol
+   already addresses the relevant operational and manageability
+   considerations, it is helpful to reference the considerations section
+   in the base document.
 
 ##  Placement of Operations and Manageability Considerations Sections
 
