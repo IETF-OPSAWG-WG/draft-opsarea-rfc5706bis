@@ -1587,7 +1587,7 @@ Table of Contents
 
    Although this document focuses on operations and manageability
    guidance, it does not define a New Protocol, a Protocol Extension, or
-   an Architecture.  As such, there are no new operations or
+   an architecture.  As such, there are no new operations or
    manageability requirements introduced by this document.
 
 9.  Security Considerations
