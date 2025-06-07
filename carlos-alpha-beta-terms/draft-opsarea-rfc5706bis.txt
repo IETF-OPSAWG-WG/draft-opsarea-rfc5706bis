@@ -402,8 +402,8 @@ Table of Contents
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other.  The
       model is independent of any specific repository, software usage,
-      protocol, or platform [RFC3444].  See Section 4.1 and
-      Section 4.2.1 for further discussion of information models.
+      protocol, or platform [RFC3444].  See Sections 4.1 and 4.2.1 for
+      further discussion of information models.
 
    *  New Protocol and Protocol Extension: These terms are used in this
       document to identify entirely new Internet protocols, new versions
