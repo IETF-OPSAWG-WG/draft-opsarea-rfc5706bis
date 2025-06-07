@@ -360,7 +360,7 @@ author:
    *  Information Model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other. The model is
-      independent of any specific repository, software usage, protocol,
+      independent of any specific software usage, protocol,
       or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for
       further discussion of information models.
 
