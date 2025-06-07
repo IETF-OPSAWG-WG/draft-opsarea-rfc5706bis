@@ -325,7 +325,7 @@ author:
 
 ##  Terminology {#sec-terms}
 
-   This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
+   This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
    *  Anomaly: See {{?I-D.ietf-nmop-terminology}}.
 
