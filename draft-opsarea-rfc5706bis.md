@@ -361,7 +361,7 @@ author:
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other. The model is
       independent of any specific repository, software usage, protocol,
-      or platform {{?RFC3444}}. See {{sec-interop}} and {{sec-im-design}} for
+      or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for
       further discussion of information models.
 
    *  New Protocol and Protocol Extension: These terms are used in this document
