@@ -300,10 +300,11 @@ author:
 
    * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
 
-   * Add a structured framing for the requirement of an "Operational and
-      Management Considerations" section in Internet-Drafts
+   * Add a requirement for an “Operational and Management Considerations” section in Internet-Drafts, along with specific guidance on its content.
 
-   * Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
+   * Update the operational and manageability-related technologies to reflect over 15 years of advancements
+
+      * Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
 
       * Add a "YANG Data Model Considerations" section
 
@@ -406,22 +407,26 @@ author:
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
-   The IETF has a number of standard management protocols available that
-   are suitable for different purposes.  These include:
+   The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management data models. Examples include:
 
-   *  Syslog {{?RFC5424}}
+   *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
 
-   *  Network Configuration Protocol - NETCONF {{?RFC6241}}
+   *  The Syslog Protocol {{?RFC5424}}
 
-   *  RESTCONF {{?RFC8040}}
+   *  Packet Sampling (PSAMP) Protocol Specifications {{?RFC5476}}
 
-   *  Remote Authentication Dial-In User Service - RADIUS {{?RFC2865}}
+   *  Network Configuration Protocol (NETCONF) {{?RFC6241}}
 
-   *  DIAMETER {{?RFC6733}}
+   *  Diameter Base Protocol {{?RFC6733}}
 
-   *  IP Flow Information Export - IPFIX {{?RFC7011}}
+   *  Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information {{?RFC7011}}
 
-   *  BGP Monitoring Protocol - BMP {{?RFC7854}}
+   *  BGP Monitoring Protocol (BMP) {{?RFC7854}}
+
+   *  RESTCONF Protocol {{?RFC8040}}
+
+   *  Network Telemetry Framework {{?RFC9232}}
+
 
    The IETF previously also worked on the Simple Network Management Protocol
    (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
@@ -429,10 +434,6 @@ author:
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
    that do not support more resent management protocols {{IESG-STATEMENT}}.
 
-   A planned supplement to this document will discuss these protocol
-   standards, discuss some standard information and Data Models for
-   specific functionality, and provide pointers to the documents that
-   define them.
 
 # Operational Considerations - How Will the New Protocol Fit into the Current Environment? {#sec-oper-consid}
 
