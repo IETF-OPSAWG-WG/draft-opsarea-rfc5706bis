@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 8 December 2025                                       A. Farrel
+Expires: 9 December 2025                                       A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 8 December 2025                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             6 June 2025
+                                                             7 June 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -29,15 +29,15 @@ Abstract
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
-   reviewers of documents that define New Protocols or protocol
-   extensions regarding aspects of operations and management that should
+   reviewers of documents that define New Protocols or Protocol
+   Extensions regarding aspects of operations and management that should
    be considered.
 
    This document obsoletes RFC 5706, replacing it completely and
    updating it with new operational and management techniques and
-   mechanisms, and introduces a requirement for an "Operational and
+   mechanisms.  It also introduces a requirement for an "Operational and
    Management Considerations" section in Internet-Drafts, before they
-   are progressed as publication as RFCs.
+   are progressed for publication as RFCs.
 
 Status of This Memo
 
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 December 2025.
+   This Internet-Draft will expire on 9 December 2025.
 
 Copyright Notice
 
@@ -131,14 +131,14 @@ Table of Contents
    protocol design choices may make deployment, operations, and
    management particularly hard.  This document provides guidelines to
    help Protocol Designers and working groups (WGs) consider the
-   operations and management functionality for their new IETF protocol
-   or protocol extension at an earlier phase.
+   operations and management functionality for their New Protocol or
+   Protocol Extension at an earlier phase.
 
    This document obsoletes [RFC5706] and fully updates its content with
-   new operational and management techniques and mechanisms, and
+   new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational and Management
    Considerations" section in Internet-Drafts, before they are
-   progressed for publication as an RFC.  Also, the document removes
+   progressed for publication as RFCs.  Also, the document removes
    outdated references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services.  See Section 1.5 for more details.
@@ -311,7 +311,7 @@ Table of Contents
    In 2024, the IAB held the "Next Era of Network Management Operations
    (NEMOPS)" workshop [NEMOPS-WORKSHOP], building on the previous 2002
    IAB workshop.  Given that much has changed in the Internet’s
-   operation and technological foundations since the first worshop, the
+   operation and technological foundations since the first workshop, the
    NEMOPS workshop reviewed the past outcomes and discussed any
    operational barriers that prevented these technologies from being
    widely implemented.  With the industry, network operators, and
@@ -327,7 +327,7 @@ Table of Contents
    *  Change intended status from Informational to Best Current Practice
 
    *  Move the "Operational Considerations" Appendix A to a Checklist
-      maintained in Github
+      maintained in GitHub
 
    *  Add a structured framing for the requirement of an "Operational
       and Management Considerations" section in Internet-Drafts
@@ -349,7 +349,7 @@ Table of Contents
 2.  Key Concepts, Terminology, and Technological Landscape
 
    This section introduces the key concepts and terminology used
-   throughout the document, and provides an overview of the relevant
+   throughout the document and provides an overview of the relevant
    technological landscape.  It is not intended to offer in-depth
    definitions or explanations; readers seeking more detail should
    consult the referenced materials.
@@ -365,16 +365,16 @@ Table of Contents
    *  Proprietary Interfaces: An interface to manage a network element
       that is not standardized.  As such, the user interface, syntax,
       and semantics typically vary significantly between
-      implementations.  Examples of proprietary interfaces include CLI
-      (Command Line Interface), management web portal and Browser User
-      Interface (BUI), Graphical User Interface (GUI), and vendor-
-      specific APIs.
+      implementations.  Examples of proprietary interfaces include
+      Command Line Interface (CLI), management web portal and Browser
+      User Interface (BUI), Graphical User Interface (GUI), and vendor-
+      specific application programming interface (API).
 
-   *  CLI: Command Line Interface.  Typically a proprietary interface to
-      hardware or software devices (e.g., routers or operating systems)
-      for use by human operators directly at a terminal or via scripts.
-      The commands, their syntax, and the precise semantics of the
-      parameters may vary considerably between different vendors,
+   *  CLI: Command Line Interface.  Typically, a proprietary interface
+      to hardware or software devices (e.g., routers or operating
+      systems) for use by human operators directly at a terminal or via
+      scripts.  The commands, their syntax, and the precise semantics of
+      the parameters may vary considerably between different vendors,
       between products from the same vendor, and even between different
       versions or releases of a single product.  No attempt at
       standardizing CLIs has been made by the IETF.
@@ -508,14 +508,14 @@ Table of Contents
    needs to operate well with any choice of values.  If there are
    sensible defaults, these need to be stated.
 
-   There may be a need to support a human interface, e.g., for
-   troubleshooting, and a programmatic interface, e.g., for automated
-   monitoring and root cause analysis.  The application programming
-   interfaces and the human interfaces might benefit from being similar
-   to ensure that the information exposed by these two interfaces is
-   consistent when presented to an operator.  Identifying consistent
-   methods of determining information, such as what gets counted in a
-   specific counter, is relevant.
+   There may be a need to support both a human interface (e.g., for
+   troubleshooting) and a programmatic interface (e.g., for automated
+   monitoring and root cause analysis).  The application programming
+   interfaces (APIs) and the human interfaces might benefit from being
+   similar to ensure that the information exposed by both is consistent
+   when presented to an operator.  Identifying consistent methods for
+   determining information, such as what is counted in a specific
+   counter, is relevant.
 
    Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
@@ -559,7 +559,7 @@ Table of Contents
 
    The default value should stay on the conservative side rather than on
    the "optimizing performance" side (example: the initial RTT and
-   RTTvar values of a TCP connection).
+   RTTVAR values of a TCP connection [RFC6298]).
 
    For those parameters that are speed-dependent, instead of using a
    constant, try to set the default value as a function of the link
@@ -611,10 +611,10 @@ Table of Contents
 
 3.5.  Impact on Network Operation
 
-   The introduction of a New Protocol or extensions to an existing
-   protocol may have an impact on the operation of existing networks.
-   Protocol Designers should outline such impacts (which may be
-   positive), including scaling concerns and interactions with other
+   The introduction of a New Protocol or Protocol Extensions to an
+   existing protocol may have an impact on the operation of existing
+   networks.  Protocol Designers should outline such impacts (which may
+   be positive), including scaling concerns and interactions with other
    protocols.  For example, a New Protocol that doubles the number of
    active, reachable addresses in use within a network might need to be
    considered in the light of the impact on the scalability of the
@@ -779,11 +779,11 @@ Table of Contents
    Getting everybody to agree on a single syntax and an associated
    protocol to do all management has proven to be difficult.  So,
    management systems tend to speak whatever the boxes support, whether
-   or not the IETF likes this.  The IETF is moving from support for one
-   schema language for modeling the structure of management information
-   (SMIv2) and one simple network management protocol (SNMP) towards
-   support for additional schema languages and additional management
-   protocols suited to different purposes.  Other Standard Development
+   the IETF likes this.  The IETF is moving from support for one schema
+   language for modeling the structure of management information (SMIv2)
+   and one simple network management protocol (SNMP) towards support for
+   additional schema languages and additional management protocols
+   suited to different purposes.  Other Standard Development
    Organizations (e.g., the Distributed Management Task Force - DMTF,
    the Tele-Management Forum - TMF) also define schemas and protocols
    for management and these may be more suitable than IETF schemas and
@@ -828,19 +828,19 @@ Table of Contents
    Protocol Designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
    monitoring, controlling, or troubleshooting a New Protocol and its
-   extensions.  This includes identifying key parameters that reflect
-   the protocol’s behavior, performance metrics, error indicators, and
-   any contextual data that would aid in diagnostic, troubleshooting, or
-   lifecycle management.
+   Protocol Extensions.  This includes identifying key parameters that
+   reflect the protocol’s behavior, performance metrics, error
+   indicators, and any contextual data that would aid in diagnostic,
+   troubleshooting, or lifecycle management.
 
-                   IM                --> conceptual/abstract model
-                    |                    for designers and operators
+                    IM               --> conceptual/abstract model
+                    |                    for designers & operators
          +----------+---------+
          |          |         |
-         DM        DM         DM     --> concrete/detailed model
+         DM         DM        DM     --> concrete/detailed model
                                             for implementers
 
-           Figure 1: Information Models（IMs） and Data Models（DMs）
+           Figure 1: Information Models（IMs）and Data Models（DMs）
 
    "On the Difference between Information Models and Data Models"
    [RFC3444] is helpful in determining what information to consider
@@ -867,15 +867,16 @@ Table of Contents
    relevant.  There are a number of information models contained in
    protocol WG RFCs.  Some examples:
 
-   *  [RFC3060] - Policy Core Information Model version 1
+   *  [RFC3060] - Policy Core Information Model -- Version 1
+      Specification
 
    *  [RFC3290] - An Informal Management Model for Diffserv Routers
 
-   *  [RFC3460] - Policy Core Information Model Extensions
+   *  [RFC3460] - Policy Core Information Model (PCIM) Extensions
 
    *  [RFC3585] - IPsec Configuration Policy Information Model
 
-   *  [RFC3644] - Policy Quality of Service Information Model
+   *  [RFC3644] - Policy Quality of Service (QoS) Information Model
 
    *  [RFC3670] - Information Model for Describing Network Device QoS
       Datapath Mechanisms
@@ -1154,8 +1155,9 @@ Table of Contents
    1.  A Network Management System (NMS) could optimize ACLs for
        performance reasons.
 
-   2.  Unless the device/NMS systems have correct rules / a lot of
-       experience, reordering ACLs can lead to a huge security issue.
+   2.  Unless the device or NMS is configured with adequate rules and
+       guided by administrators with extensive experience, reordering
+       ACLs can introduce significant security risks.
 
    Network-wide configurations may be stored in central master databases
    and transformed into readable formats that can be pushed to devices,
@@ -1309,8 +1311,8 @@ Table of Contents
    a management protocol, then it should be left to data modelers of
    that protocol to determine how to handle it.  For example, VLAN
    identifiers are defined by standard to range from 1 to 4094.
-   Therefore, a YANG vlanid definition representing the 12-bit VLAN-ID
-   used in the VLAN Tag header uses a range of "1..4094".
+   Therefore, a YANG "vlan-id" definition representing the 12-bit VLAN
+   ID used in the VLAN Tag header uses a range of "1..4094".
 
 4.6.2.  Monitoring the Device
 
@@ -1338,18 +1340,18 @@ Table of Contents
    received messages rejected due to format problems, and the expected
    behaviors when a malformed message is received.
 
-   What are the principal performance factors that need to be looked at
-   when measuring the operational performance of the network built using
-   the protocol?  Is it important to measure setup times?  End-to-end
-   connectivity?  Hop-to-hop connectivity?  Network throughput?
+   What are the principal performance factors that need to be considered
+   when measuring the operational performance of a network built using
+   the protocol?  Is it important to measure setup times, end-to-end
+   connectivity, hop-by-hop connectivity, or network throughput?
 
 4.6.4.  Monitoring the Service
 
-   What are the principal performance factors that need to be looked at
+   What are the principal performance factors that need to be considered
    when measuring the performance of a service using the protocol?  Is
-   it important to measure application-specific throughput?  Client-
-   server associations?  End-to-end application quality?  Service
-   interruptions?  User experience?
+   it important to measure application-specific throughput, client-
+   server associations, end-to-end application quality, service
+   interruptions, or user experience (UX)?
 
 4.7.  Security Management
 
@@ -1413,8 +1415,8 @@ Table of Contents
    the security considerations for the new protocol.  For example, you
    can log all the commands entered by the operator using syslog (giving
    you some degree of audit trail), or you can see who has logged on/off
-   using the Secure SHell Protocol (SSH) and from where; failed SSH
-   logins can be logged using syslog, etc.
+   using the Secure Shell (SSH) Protocol [RFC4251] and from where;
+   failed SSH logins can be logged using syslog, etc.
 
    An analysis of existing counters might help operators recognize the
    conditions identified in the security considerations for the new
@@ -1551,7 +1553,7 @@ Table of Contents
 
    A Protocol Designer should consider the manageability requirements of
    a New Protocol or Protocol Extension and determine that no management
-   functionality or operatinal best-practice clarifications are needed
+   functionality or operational best-practice clarifications are needed
    by the protocol.  It would be helpful to those who may update or
    write extensions to the protocol in the future, or to those deploying
    the protocol, to know the rationale regarding the decisions on
@@ -1565,10 +1567,10 @@ Table of Contents
    The presence of such a section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
-   In the case where the New Protocol is an extension and the base
-   protocol discusses all the relevant operational and manageability
-   considerations, it would be helpful to point out the considerations
-   section in the base document.
+   In cases where the New Protocol is an extension and the base protocol
+   already addresses the relevant operational and manageability
+   considerations, it is helpful to reference the considerations section
+   in the base document.
 
 6.3.  Placement of Operations and Manageability Considerations Sections
 
@@ -1584,9 +1586,9 @@ Table of Contents
 8.  Operations and Manageability Considerations
 
    Although this document focuses on operations and manageability
-   guidance, it does not define a protocol, a protocol extension, or an
-   architecture.  As such, there are no new operations or manageability
-   requirements introduced by this document.
+   guidance, it does not define a New Protocol, a Protocol Extension, or
+   an architecture.  As such, there are no new operations or
+   manageability requirements introduced by this document.
 
 9.  Security Considerations
 
@@ -1777,6 +1779,10 @@ Table of Contents
               QoS Datapath Mechanisms", RFC 3670, DOI 10.17487/RFC3670,
               January 2004, <https://www.rfc-editor.org/rfc/rfc3670>.
 
+   [RFC4251]  Ylonen, T. and C. Lonvick, Ed., "The Secure Shell (SSH)
+              Protocol Architecture", RFC 4251, DOI 10.17487/RFC4251,
+              January 2006, <https://www.rfc-editor.org/rfc/rfc4251>.
+
    [RFC5321]  Klensin, J., "Simple Mail Transfer Protocol", RFC 5321,
               DOI 10.17487/RFC5321, October 2008,
               <https://www.rfc-editor.org/rfc/rfc5321>.
@@ -1805,6 +1811,11 @@ Table of Contents
               Acronym in the IETF", BCP 161, RFC 6291,
               DOI 10.17487/RFC6291, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6291>.
+
+   [RFC6298]  Paxson, V., Allman, M., Chu, J., and M. Sargent,
+              "Computing TCP's Retransmission Timer", RFC 6298,
+              DOI 10.17487/RFC6298, June 2011,
+              <https://www.rfc-editor.org/rfc/rfc6298>.
 
    [RFC6733]  Fajardo, V., Ed., Arkko, J., Loughney, J., and G. Zorn,
               Ed., "Diameter Base Protocol", RFC 6733,
