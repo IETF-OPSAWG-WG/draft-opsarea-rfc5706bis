@@ -398,7 +398,7 @@ author:
       programming interface (API).
 
    *  Protocol Designer: An individual, a group of
-      people, or an IETF Working Group involved in the development and specification
+      people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
 
    *  Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
