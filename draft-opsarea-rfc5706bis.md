@@ -300,7 +300,7 @@ author:
 
    * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
 
-   * Add a requirement for an “Operational and Management Considerations” section in Internet-Drafts, along with specific guidance on its content.
+   * Add a requirement for an "Operational and Management Considerations" section in all Internet-Drafts, along with specific guidance on its content.
 
    * Update the operational and manageability-related technologies to reflect over 15 years of advancements
 
