@@ -365,7 +365,7 @@ author:
       further discussion of information models.
 
    *  New Protocol and Protocol Extension: These terms are used in this document
-      to identify entirely new Internet protocols, new versions of existing
+      to identify entirely new protocols, new versions of existing
       Internet protocols, and extensions to Internet protocols.
 
    *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
