@@ -397,7 +397,7 @@ author:
       Graphical User Interface (GUI), and vendor-specific application
       programming interface (API).
 
-   *  Protocol Designer: This term is used to refer to an individual, a group of
+   *  Protocol Designer: An individual, a group of
       people, or an IETF Working Group involved in the development and specification
       of New Protocols or Protocol Extensions.
 
