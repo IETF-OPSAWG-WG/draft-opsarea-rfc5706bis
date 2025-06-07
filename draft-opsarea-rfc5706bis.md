@@ -407,7 +407,7 @@ author:
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
-   The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management data models. Examples include:
+   The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management data models. A non-exhaustive list of such protocols is provided below:
 
    *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
 
