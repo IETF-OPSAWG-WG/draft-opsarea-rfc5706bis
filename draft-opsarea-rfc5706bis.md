@@ -366,7 +366,7 @@ author:
 
    *  New Protocol and Protocol Extension: These terms are used in this document
       to identify entirely new protocols, new versions of existing
-      Internet protocols, and extensions to Internet protocols.
+      protocols, and extensions to protocols.
 
    *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
