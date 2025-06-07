@@ -401,7 +401,7 @@ author:
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-   *  Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
+   *  Root Cause: Since one fault may give rise to another fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant
      to describe the original event that is the foundation of all related faults.
 
    *  Symptom: See {{?I-D.ietf-nmop-terminology}}.
