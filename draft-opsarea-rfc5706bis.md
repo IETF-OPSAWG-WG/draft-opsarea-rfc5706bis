@@ -304,7 +304,7 @@ author:
 
    * Update the operational and manageability-related technologies to reflect over 15 years of advancements
 
-      * Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.
+      * Provide focus and details on YANG-based standards, deprioritizing MIB Modules.
 
       * Add a "YANG Data Model Considerations" section
 
