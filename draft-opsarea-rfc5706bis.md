@@ -353,7 +353,7 @@ author:
 
    *  Fault: See {{?I-D.ietf-nmop-terminology}}.
 
-   *  Fault management: The process of interpreting fault notifications and other alerts
+   *  Fault Management: The process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and decucing underlying
       causes. See {{sec-fm-mgmt}} for more information.
 
