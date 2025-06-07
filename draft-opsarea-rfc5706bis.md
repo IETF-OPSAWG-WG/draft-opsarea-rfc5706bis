@@ -325,7 +325,8 @@ author:
 
 ##  Terminology {#sec-terms}
 
-   These terms are:
+   This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
+
 
    *  Proprietary Interfaces: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
