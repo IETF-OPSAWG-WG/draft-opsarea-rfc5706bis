@@ -327,14 +327,9 @@ author:
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
+   *  Anomaly: See {{?I-D.ietf-nmop-terminology}}.
 
-   *  Proprietary Interfaces: An interface to manage a network element
-      that is not standardized. As such, the user interface, syntax, and
-      semantics typically vary significantly between implementations.
-      Examples of proprietary interfaces include Command Line
-      Interface (CLI), management web portal and Browser User Interface (BUI),
-      Graphical User Interface (GUI), and vendor-specific application programming
-   interface (API).
+   *  Cause: See {{?I-D.ietf-nmop-terminology}}.
 
    *  CLI: Command Line Interface. Typically, a proprietary interface to
       hardware or software devices (e.g., routers or operating systems)
@@ -344,13 +339,6 @@ author:
       between different vendors, between products from the same
       vendor, and even between different versions or releases of a single
       product. No attempt at standardizing CLIs has been made by the IETF.
-
-   *  Information Model: An abstraction and representation of the
-      entities in a managed environment, their properties, attributes
-      and operations, and the way that they relate to each other. The model is
-      independent of any specific repository, software usage, protocol,
-      or platform {{?RFC3444}}. See {{sec-interop}} and {{sec-im-design}} for
-      further discussion of information models.
 
    *  Data Model: A set of mechanisms for representing, organizing, storing
       and handling data within a particular type of data store or repository.
@@ -362,6 +350,23 @@ author:
       contents of an information model or may be developed ab initio. Further
       discussion of data models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgmt-info}}.
+
+   *  Fault: See {{?I-D.ietf-nmop-terminology}}.
+
+   *  Fault management: Fault management is the process of interpreting fault notifications and other alerts
+      and alarms, isolating faults, correlating them, and decucing underlying
+      causes. See {{sec-fm-mgmt}} for more information.
+
+   *  Information Model: An abstraction and representation of the
+      entities in a managed environment, their properties, attributes
+      and operations, and the way that they relate to each other. The model is
+      independent of any specific repository, software usage, protocol,
+      or platform {{?RFC3444}}. See {{sec-interop}} and {{sec-im-design}} for
+      further discussion of information models.
+
+   *  New Protocol and Protocol Extension: These terms are used in this document
+      to identify entirely new Internet protocols, new versions of existing
+      Internet protocols, and extensions to Internet protocols.
 
    *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
@@ -382,28 +387,23 @@ author:
       this document encompasses OAM along with other management and provisioning
       tools and concepts.
 
-   *  New Protocol and Protocol Extension: These terms are used in this document
-      to identify entirely new Internet protocols, new versions of existing Internet
-      protocols, and extensions to Internet protocols.
+   *  Problem: See {{?I-D.ietf-nmop-terminology}}.
+
+   *  Proprietary Interfaces: An interface to manage a network element
+      that is not standardized. As such, the user interface, syntax, and
+      semantics typically vary significantly between implementations.
+      Examples of proprietary interfaces include Command Line
+      Interface (CLI), management web portal and Browser User Interface (BUI),
+      Graphical User Interface (GUI), and vendor-specific application
+      programming interface (API).
 
    *  Protocol Designer: This term is used to refer to an individual, a group of
       people, or an IETF Working Group involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-   * Problem: See {{?I-D.ietf-nmop-terminology}}.
-
-   * Fault: See {{?I-D.ietf-nmop-terminology}}.
-
-   * Fault management: Fault management is the process of interpreting fault notifications and other alerts
-      and alarms, isolating faults, correlating them, and decucing underlying causes. See
-      {{sec-fm-mgmt}} for more information.
-
-   * Anomaly: See {{?I-D.ietf-nmop-terminology}}.
-
-   * Cause: See {{?I-D.ietf-nmop-terminology}}.
-
-   * Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
+   *  Root Cause: Since one fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant
      to describe the original event that is the foundation of all related faults.
+
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
