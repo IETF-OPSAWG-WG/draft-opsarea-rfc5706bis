@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-03T00:50:43.442453+00:00",
+  "timestamp": "2025-06-08T00:55:06.105204+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -74,7 +74,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:48:58Z",
-      "updatedAt": "2025-05-07T13:51:48Z",
+      "updatedAt": "2025-06-05T13:47:31Z",
       "closedAt": null,
       "comments": [
         {
@@ -118,6 +118,20 @@
           "body": "Terminology in there? https://datatracker.ietf.org/doc/rfc6632/, to be checked. At least FCAPS is there.",
           "createdAt": "2025-05-07T13:51:23Z",
           "updatedAt": "2025-05-07T13:51:48Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Add four terms from NMOP as follows. Internal section references will need to be resolved.\n\n   *  Problem: A problem is a state that is undesirable and that may require remedial\n      action {{?I-D.ietf-nmop-terminology}}.\n\n   *  Fault and Fault management: As defined in {{?I-D.ietf-nmop-terminology}}, a fault\n      is an event or change that is not desired or required because it may be indicative\n      of a current or future undesired state. Fault management is, therefore, the process\n      of interpreting fault notifications and other alerts and alarms, isolating faults, \n      correlating them, and decucing underlying causes. See {{sec-fm-mgt}} for more\n      information.\n\n   *  Anomaly: {{?I-D.ietf-nmop-terminology}} defines an anomaly as an unusual or\n      unexpected event or pattern in network data in the forwarding plane, control plane, or\n      management plane that deviates from the normal, expected behavior. This is discussed\n      further in {{?I-D.ietf-nmop-network-anomaly-architecture}}.\n\n   *  Cause and Root cause: A cause is the event (or events) that gave rise to a fault or problem\n      ({{?I-D.ietf-nmop-terminology}}). Since one fault may give rise to another, a root cause\n      {{root-cause-analysis}} is commonly meant to describe the original event that is the\n      foundation of all related faults.\n",
+          "createdAt": "2025-06-05T12:44:22Z",
+          "updatedAt": "2025-06-05T12:44:22Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Updated proposed text...\n\n   *  Problem: See {{?I-D.ietf-nmop-terminology}}.\n\n   *  Fault and Fault management: Fault is defined in {{?I-D.ietf-nmop-terminology}}.\n      Fault management is the process of interpreting fault notifications and other alerts\n      and alarms, isolating faults, correlating them, and decucing underlying causes. See\n      {{sec-fm-mgt}} for more information.\n\n   *  Anomaly: See {{?I-D.ietf-nmop-terminology}} and {{?I-D.ietf-nmop-network-anomaly-architecture}}.\n\n   *  Cause and Root cause: Cause is defined in ({{?I-D.ietf-nmop-terminology}}). Since one \n      fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant\n      to describe the original event that is the foundation of all related faults.\n",
+          "createdAt": "2025-06-05T13:47:30Z",
+          "updatedAt": "2025-06-05T13:47:30Z"
         }
       ]
     },
@@ -809,7 +823,7 @@
       "id": "I_kwDOOWPBqs62xCer",
       "title": "7.2.  Null Manageability Considerations Sections",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/40",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -820,8 +834,8 @@
       ],
       "body": "Remove the two occurrences of \"new\" in this section.\nAlso, check \"new\" throughout the  document\n",
       "createdAt": "2025-05-15T13:46:33Z",
-      "updatedAt": "2025-05-16T09:55:48Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-05T13:08:53Z",
+      "closedAt": "2025-06-05T13:08:53Z",
       "comments": [
         {
           "author": "cpignata",
@@ -843,6 +857,13 @@
           "body": "In relation to the discuss we had yesterday, here is what I'm planning to include in a document to show the use of \"Null\" OPS/MGT section: https://github.com/netmod-wg/rfc8407bis/commit/d872ae6ebfb1faf0e191e775a123e2d02c273e9c ",
           "createdAt": "2025-05-16T09:18:15Z",
           "updatedAt": "2025-05-16T09:18:15Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Null ops sections is now followed in public versions of these specs: \n\n* [draft-ietf-netmod-rfc6020-iana-update-01](https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc6020-iana-update-01#name-operations-and-manageabilit#name-operations-and-manageabilit)\n* [draft-ietf-netmod-rfc8407bis-27](https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-27#name-operations-and-manageabilit#name-operations-and-manageabilit)",
+          "createdAt": "2025-06-05T08:42:55Z",
+          "updatedAt": "2025-06-05T08:42:55Z"
         }
       ]
     },
@@ -900,15 +921,15 @@
       "id": "I_kwDOOWPBqs63yR8B",
       "title": "Capitalized Terminology Terms",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/48",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-05-22T13:35:34Z",
-      "updatedAt": "2025-05-22T13:35:34Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-05T13:08:27Z",
+      "closedAt": "2025-06-05T13:08:27Z",
       "comments": []
     },
     {
@@ -947,7 +968,7 @@
       "id": "I_kwDOOWPBqs64zAGw",
       "title": "Do we need an \"Operations and Manageability Considerations\" section in *this* document?",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/51",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -958,8 +979,8 @@
       ],
       "body": "Since it's a must :-) \nIt can say something like \"this whole doc is about $topic, and this section shows where to potentially include such section.",
       "createdAt": "2025-05-29T13:36:44Z",
-      "updatedAt": "2025-06-02T05:32:54Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-05T13:08:54Z",
+      "closedAt": "2025-06-05T13:08:54Z",
       "comments": [
         {
           "author": "bclaise",
@@ -974,6 +995,81 @@
           "body": "Or, rather,\n\"Even if this document does not specify a New Protocol, this whole ...\"",
           "createdAt": "2025-05-30T16:21:02Z",
           "updatedAt": "2025-05-30T16:21:02Z"
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "id": "I_kwDOOWPBqs65_Q6U",
+      "title": "Redundant motivation",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/55",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/blob/9bf61a92b48f517d3ab78747875330b1295ee9a0/draft-opsarea-rfc5706bis.md?plain=1#L223\n\nRedundant with what was already said in [1.2. ](https://ietf-opsawg-wg.github.io/draft-opsarea-rfc5706bis/draft-opsarea-rfc5706bis.html#section-1.2)[This Document](https://ietf-opsawg-wg.github.io/draft-opsarea-rfc5706bis/draft-opsarea-rfc5706bis.html#name-this-document)",
+      "createdAt": "2025-06-05T08:47:59Z",
+      "updatedAt": "2025-06-06T09:07:26Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "As discussed in the call yesterday, this may be fixed by https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/37",
+          "createdAt": "2025-06-06T09:07:24Z",
+          "updatedAt": "2025-06-06T09:07:24Z"
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "id": "I_kwDOOWPBqs66CBxg",
+      "title": "Add internal citation tags to *all* sections and subsections",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/57",
+      "state": "CLOSED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "It will make it easier to add new text in a smooth way.",
+      "createdAt": "2025-06-05T12:45:32Z",
+      "updatedAt": "2025-06-06T08:12:15Z",
+      "closedAt": "2025-06-06T08:12:15Z",
+      "comments": []
+    },
+    {
+      "number": 62,
+      "id": "I_kwDOOWPBqs66Z1RC",
+      "title": "Sort the Terms",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/62",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "What is the most effective way to sort and organize the terms in the Terminology section 2.1?\nRight now they are in disorder :-)\n\nPersonally, I would do it alphabetically, rather than trying to figure out themes... \n\nThoughts?",
+      "createdAt": "2025-06-07T18:09:12Z",
+      "updatedAt": "2025-06-07T18:23:42Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The question for you is whether the section is to be read or used to look up information.\nIn the former case, we might try to arrange them so that references are done only to terms already defined. And maybe to class them as well.\nIn the latter case, alphamabeticallisification is best.",
+          "createdAt": "2025-06-07T18:21:08Z",
+          "updatedAt": "2025-06-07T18:21:08Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "+1 for alphamabeticallisification",
+          "createdAt": "2025-06-07T18:23:40Z",
+          "updatedAt": "2025-06-07T18:23:40Z"
         }
       ]
     }
@@ -1428,7 +1524,7 @@
       "labels": [],
       "body": "Reword for clarity.",
       "createdAt": "2025-04-16T22:27:09Z",
-      "updatedAt": "2025-04-22T19:02:08Z",
+      "updatedAt": "2025-06-05T11:42:00Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d01bb31c34594d7d9016b35f28f104bc3e3232d5",
@@ -2106,7 +2202,7 @@
       "labels": [],
       "body": "Fixes #27 ",
       "createdAt": "2025-05-02T02:22:02Z",
-      "updatedAt": "2025-05-02T13:56:12Z",
+      "updatedAt": "2025-06-05T11:42:50Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "8d4cb736b0eaf5f57eaddf3bdef67f0b863593d5",
@@ -4080,7 +4176,7 @@
       "id": "PR_kwDOOWPBqs6XOYRg",
       "title": "Remove CLI as a way to manager devices + discuss \"proprietary protocols\" + Protocol Designer capitalized",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/46",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -4089,17 +4185,19 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-05-22T12:57:17Z",
-      "updatedAt": "2025-05-29T15:50:50Z",
+      "updatedAt": "2025-06-05T13:35:04Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "d44cb55ab4a45ec4c103bc15aab8374dcadee060",
+      "baseRefOid": "0aea906c053064445b1afba787f8f1940529d771",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "bclaise-patch-1",
-      "headRefOid": "6628875dafedc19cace18285122da58bc5420887",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "4d9f1e4c030fca8b51e7148fc69011afc172c7d4",
+      "closedAt": "2025-06-05T13:35:03Z",
+      "mergedAt": "2025-06-05T13:35:03Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "76d310e1bb0638233b023ff21cec5cf55cc4a24a"
+      },
       "comments": [
         {
           "author": "xorrkaz",
@@ -4144,24 +4242,26 @@
       "id": "PR_kwDOOWPBqs6YFqs3",
       "title": "Capitalize Terminology",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/50",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-05-29T09:14:14Z",
-      "updatedAt": "2025-05-30T13:15:11Z",
+      "updatedAt": "2025-06-05T13:08:27Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "b262e979d261c030bd5581844c532bd60a6d7334",
+      "baseRefOid": "2d7b24e10004428059ef1622f4ccc06cd32a35e7",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "48-Capitalized-terminology-terms",
-      "headRefOid": "1ac45d48ea00d9b3da39dda2d56a8a9e12ba8366",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "c8110caadc50666befd2eb6d8145debd99763f11",
+      "closedAt": "2025-06-05T13:08:26Z",
+      "mergedAt": "2025-06-05T13:08:26Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "f9d3e33f8ac0d84c9c10c6ee8cc63bb8f783fa25"
+      },
       "comments": [
         {
           "author": "bclaise",
@@ -4209,6 +4309,59 @@
               "body": "This goes to Beno\u00eet's earlier question about what to do with \"YANG data model\".  Here, \"data models\" refers to the types of YANG data models defined below.  Each is a \"Data Model\" via our terminology.  So, I don't know what is correct here.  Admittedly, I'm bikeshedding a bit.  I think Data Models is probably fine, but I'm commenting in case others feel strongly one way or the other.",
               "createdAt": "2025-05-30T13:15:11Z",
               "updatedAt": "2025-05-30T13:15:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6s2Kro",
+          "commit": {
+            "abbreviatedOid": "1ac45d4"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-05T11:13:50Z",
+          "updatedAt": "2025-06-05T11:13:50Z",
+          "comments": [
+            {
+              "originalPosition": 395,
+              "body": "@xorrkaz , what is your preference? YANG data models or YANG Data Models? No strong feeling here",
+              "createdAt": "2025-06-05T11:13:50Z",
+              "updatedAt": "2025-06-05T11:13:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6s2iH7",
+          "commit": {
+            "abbreviatedOid": "c0e7703"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-05T11:45:31Z",
+          "updatedAt": "2025-06-05T11:45:31Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6s3Ybb",
+          "commit": {
+            "abbreviatedOid": "1ac45d4"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-05T12:51:07Z",
+          "updatedAt": "2025-06-05T12:51:08Z",
+          "comments": [
+            {
+              "originalPosition": 395,
+              "body": "I don't have a strong preference, but maybe Data Models to be extra consistent.",
+              "createdAt": "2025-06-05T12:51:07Z",
+              "updatedAt": "2025-06-05T12:51:08Z"
             }
           ]
         }
@@ -4274,26 +4427,739 @@
       "id": "PR_kwDOOWPBqs6YjCn6",
       "title": "fix a broken text",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/53",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-06-02T05:39:32Z",
-      "updatedAt": "2025-06-02T05:39:48Z",
+      "updatedAt": "2025-06-05T11:23:00Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9bf61a92b48f517d3ab78747875330b1295ee9a0",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "broken-text",
       "headRefOid": "db563a7281be33f37cc38f17444ee8f8434d795d",
+      "closedAt": "2025-06-05T11:22:59Z",
+      "mergedAt": "2025-06-05T11:22:59Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "2d7b24e10004428059ef1622f4ccc06cd32a35e7"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 54,
+      "id": "PR_kwDOOWPBqs6ZKEN2",
+      "title": "some edits to the introduction",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/54",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-05T08:40:06Z",
+      "updatedAt": "2025-06-05T13:07:38Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "9bf61a92b48f517d3ab78747875330b1295ee9a0",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "edits-intro",
+      "headRefOid": "44f100027d782a7099ff07179a5d152fa3d392a7",
+      "closedAt": "2025-06-05T13:07:37Z",
+      "mergedAt": "2025-06-05T13:07:37Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "0ffedef3d1aec3026ad2b22d1ef1f270c7779ff2"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@boucadair I like all the changes you introduced. I believe there are ready to merge.\r\n\r\nOne question, for potential discussion in our call today. When I read\r\n   Currently, the YANG data modeling language {{?RFC7950}} is recommended to\r\n   monitor and manage the IETF protocols, networks, and underlying devices.\r\n   Management requirements continually evolve in the IETF. Therefore,\r\n   the management protocols used should track with current IETF\r\n   recommendations.\r\n\r\nI am wondering: IETF protocols, networks, and underlying devices ... but what about services? \r\nYANG is used for services, but the sentence is \"is recommended ...\". \r\nThe only recommendation I can think of is: https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/ and it does not make specific call to \"service\"\r\n\r\nBottom: should be add service to \"is recommended to monitor and manage the IETF protocols, networks, and underlying devices\"",
+          "createdAt": "2025-06-05T11:20:59Z",
+          "updatedAt": "2025-06-05T11:20:59Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Bottom: should be add service to \"is recommended to monitor and manage the IETF protocols, networks, and underlying devices\"\r\n\r\nMaybe:\r\n\r\n```suggestion\r\n   monitor and manage the IETF protocols in devices, networks, and network services.\r\n```\r\n",
+          "createdAt": "2025-06-05T11:30:54Z",
+          "updatedAt": "2025-06-05T11:30:54Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6s0VHk",
+          "commit": {
+            "abbreviatedOid": "61a2d08"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-05T08:44:40Z",
+          "updatedAt": "2025-06-05T08:44:40Z",
+          "comments": [
+            {
+              "originalPosition": 91,
+              "body": "```suggestion\r\n# Operational Considerations - How Will the New Protocol Fit into the Current Environment?\r\n```",
+              "createdAt": "2025-06-05T08:44:40Z",
+              "updatedAt": "2025-06-05T08:44:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6s3oKw",
+          "commit": {
+            "abbreviatedOid": "fa4ee19"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-05T13:06:43Z",
+          "updatedAt": "2025-06-05T13:06:43Z",
+          "comments": [
+            {
+              "originalPosition": 39,
+              "body": "```suggestion\r\n   monitor and manage the IETF protocols in devices, networks, and network services.\r\n```",
+              "createdAt": "2025-06-05T13:06:43Z",
+              "updatedAt": "2025-06-05T13:06:43Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 56,
+      "id": "PR_kwDOOWPBqs6ZL0CL",
+      "title": "Add null ops cons section",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/56",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-05T11:33:56Z",
+      "updatedAt": "2025-06-05T13:08:54Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "2d7b24e10004428059ef1622f4ccc06cd32a35e7",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Add-null-ops-cons-section",
+      "headRefOid": "af48b848a6d9ecae7e7a2b80f8e2d535b06e3b7c",
+      "closedAt": "2025-06-05T13:08:52Z",
+      "mergedAt": "2025-06-05T13:08:52Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "f29b0fc21dc9143508b101f87791201c075da44a"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "All look good.",
+          "createdAt": "2025-06-05T12:06:53Z",
+          "updatedAt": "2025-06-05T12:06:53Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6s2l0K",
+          "commit": {
+            "abbreviatedOid": "d6a5e12"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Replace as...\r\nAlthough this document focuses on operations and manageability guidance, it does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.",
+          "createdAt": "2025-06-05T11:48:36Z",
+          "updatedAt": "2025-06-05T11:48:36Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6s2w05",
+          "commit": {
+            "abbreviatedOid": "d6a5e12"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-05T12:02:07Z",
+          "updatedAt": "2025-06-05T12:02:07Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\n   Although this document focuses on operations and manageability guidance, it does not define a protocol, a protocol extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.\r\n```",
+              "createdAt": "2025-06-05T12:02:07Z",
+              "updatedAt": "2025-06-05T12:02:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6s2xEC",
+          "commit": {
+            "abbreviatedOid": "d6a5e12"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-05T12:02:31Z",
+          "updatedAt": "2025-06-05T12:02:31Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "per the suggestion from @AdrianFarrel",
+              "createdAt": "2025-06-05T12:02:31Z",
+              "updatedAt": "2025-06-05T12:02:31Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 58,
+      "id": "PR_kwDOOWPBqs6ZNH8n",
+      "title": "add root anchor",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/58",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "root cause section anchor",
+      "createdAt": "2025-06-05T13:36:58Z",
+      "updatedAt": "2025-06-05T13:37:59Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "76d310e1bb0638233b023ff21cec5cf55cc4a24a",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "7a3b3d205c7c0f8ba57363c0af22b201e135e94f",
+      "closedAt": "2025-06-05T13:37:57Z",
+      "mergedAt": "2025-06-05T13:37:57Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "f1532dfa50188a8d697b0b8ce6da2aac9d882fae"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 59,
+      "id": "PR_kwDOOWPBqs6ZNKI7",
+      "title": "new terms from Adrian",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/59",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add new def entries",
+      "createdAt": "2025-06-05T13:39:57Z",
+      "updatedAt": "2025-06-05T14:03:16Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "f1532dfa50188a8d697b0b8ce6da2aac9d882fae",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "new-terms",
+      "headRefOid": "56e8ba43342ff9132560a75ab90de359cc966042",
+      "closedAt": "2025-06-05T14:03:14Z",
+      "mergedAt": "2025-06-05T14:03:14Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "3cdb239607720c4614d94d8127ce1a64c31f208b"
+      },
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See #1",
+          "createdAt": "2025-06-05T13:44:14Z",
+          "updatedAt": "2025-06-05T13:44:14Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 60,
+      "id": "PR_kwDOOWPBqs6ZTcHY",
+      "title": "Added *all* sec- citation tags, fixes #57",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/60",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Fixes #57 ",
+      "createdAt": "2025-06-06T00:11:17Z",
+      "updatedAt": "2025-06-06T08:12:16Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "3cdb239607720c4614d94d8127ce1a64c31f208b",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "cpignata-citations",
+      "headRefOid": "4e52024ced24dc861d781caf19fdd43025cfb52a",
+      "closedAt": "2025-06-06T08:12:14Z",
+      "mergedAt": "2025-06-06T08:12:14Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "e343ee693c843f923f0087afd1bd9b49377f8b10"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6tFTtk",
+          "commit": {
+            "abbreviatedOid": "4e52024"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-06T05:41:15Z",
+          "updatedAt": "2025-06-06T05:41:15Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 61,
+      "id": "PR_kwDOOWPBqs6ZT5Wr",
+      "title": "Several editorial improvements",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/61",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Fix syntax and grammar errors, and provide improved flow in some paragraphs.",
+      "createdAt": "2025-06-06T01:06:02Z",
+      "updatedAt": "2025-06-07T17:33:33Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e343ee693c843f923f0087afd1bd9b49377f8b10",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-editorials-02",
+      "headRefOid": "529a3c89c6eb283d0a40de6cc5c0a732508a2e65",
+      "closedAt": "2025-06-07T17:33:32Z",
+      "mergedAt": "2025-06-07T17:33:32Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "b2056806da2ba6b991899779c4809b272cfb5d7e"
+      },
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@bclaise @boucadair agree with all your requested changes, all committed!",
+          "createdAt": "2025-06-06T14:35:12Z",
+          "updatedAt": "2025-06-06T14:35:12Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6tFUle",
+          "commit": {
+            "abbreviatedOid": "cafc249"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-06-06T05:44:10Z",
+          "updatedAt": "2025-06-06T05:47:28Z",
+          "comments": [
+            {
+              "originalPosition": 118,
+              "body": "```suggestion\r\n   RTTVAR values of a TCP connection {{?RFC6298}}).\r\n```",
+              "createdAt": "2025-06-06T05:44:10Z",
+              "updatedAt": "2025-06-06T05:47:28Z"
+            },
+            {
+              "originalPosition": 200,
+              "body": "```suggestion\r\n   2.  Unless the device or NMS is configured with adequate rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.\r\n```",
+              "createdAt": "2025-06-06T05:45:56Z",
+              "updatedAt": "2025-06-06T05:47:28Z"
+            },
+            {
+              "originalPosition": 210,
+              "body": "```suggestion\r\n   from 1 to 4094. Therefore, a YANG \"vlan-id\" definition representing the\r\n```",
+              "createdAt": "2025-06-06T05:46:15Z",
+              "updatedAt": "2025-06-06T05:47:28Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tGdCI",
+          "commit": {
+            "abbreviatedOid": "cafc249"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Nits: Architecture => architecure",
+          "createdAt": "2025-06-06T08:16:33Z",
+          "updatedAt": "2025-06-06T08:17:38Z",
+          "comments": [
+            {
+              "originalPosition": 280,
+              "body": "```suggestion\r\n   Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.\r\n```",
+              "createdAt": "2025-06-06T08:16:34Z",
+              "updatedAt": "2025-06-06T08:17:38Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tLVca",
+          "commit": {
+            "abbreviatedOid": "529a3c8"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-06-06T16:28:46Z",
+          "updatedAt": "2025-06-06T16:30:27Z",
+          "comments": [
+            {
+              "originalPosition": 201,
+              "body": "`vlanid` is the actual object name.  So, I think it should stay, but maybe quote it.",
+              "createdAt": "2025-06-06T16:28:46Z",
+              "updatedAt": "2025-06-06T16:30:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tTav7",
+          "commit": {
+            "abbreviatedOid": "529a3c8"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-07T16:08:52Z",
+          "updatedAt": "2025-06-07T16:08:52Z",
+          "comments": [
+            {
+              "originalPosition": 201,
+              "body": "But vlan-id is the type.",
+              "createdAt": "2025-06-07T16:08:52Z",
+              "updatedAt": "2025-06-07T16:08:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tTi4P",
+          "commit": {
+            "abbreviatedOid": "529a3c8"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-07T16:55:35Z",
+          "updatedAt": "2025-06-07T16:55:35Z",
+          "comments": [
+            {
+              "originalPosition": 201,
+              "body": "Hmmm, okay.  I initially read this text (prior to this diff) and while I thought vlan-id read better, vlanid made sense in that the context felt like I was defining a leaf vs. a type.  But I'm okay either way.",
+              "createdAt": "2025-06-07T16:55:35Z",
+              "updatedAt": "2025-06-07T16:55:35Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tTrkh",
+          "commit": {
+            "abbreviatedOid": "529a3c8"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-07T17:19:50Z",
+          "updatedAt": "2025-06-07T17:19:50Z",
+          "comments": [
+            {
+              "originalPosition": 201,
+              "body": "Thank you @xorrkaz ! I thought about it hard as well, I can go either way and trust you more than me. But using \"vlan-id\" was the conclusion I got to.",
+              "createdAt": "2025-06-07T17:19:50Z",
+              "updatedAt": "2025-06-07T17:19:50Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 63,
+      "id": "PR_kwDOOWPBqs6Zh554",
+      "title": "Updating the operational technologies",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/63",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "This is an initial approach to updating the operational and management technologies.",
+      "createdAt": "2025-06-07T18:40:17Z",
+      "updatedAt": "2025-06-07T19:00:37Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "b2056806da2ba6b991899779c4809b272cfb5d7e",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-ops-technologies",
+      "headRefOid": "d94a6240b048e70872d3d28826042b2e74a3e62c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks @boucadair ! ",
+          "createdAt": "2025-06-07T19:00:36Z",
+          "updatedAt": "2025-06-07T19:00:36Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6tT4Qw",
+          "commit": {
+            "abbreviatedOid": "5cc9bc0"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-06-07T18:43:51Z",
+          "updatedAt": "2025-06-07T18:49:55Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\n   * Add a requirement for an \"Operational and Management Considerations\" section in all Internet-Drafts, along with specific guidance on its content.\r\n```",
+              "createdAt": "2025-06-07T18:43:51Z",
+              "updatedAt": "2025-06-07T18:49:55Z"
+            },
+            {
+              "originalPosition": 11,
+              "body": "```suggestion\r\n      * Provide focus and details on YANG-based standards, deprioritizing MIB Modules.\r\n```",
+              "createdAt": "2025-06-07T18:44:26Z",
+              "updatedAt": "2025-06-07T18:49:55Z"
+            },
+            {
+              "originalPosition": 21,
+              "body": "```suggestion\r\n   The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management data models. A non-exhaustive list of such protocols is provided below:\r\n```",
+              "createdAt": "2025-06-07T18:48:29Z",
+              "updatedAt": "2025-06-07T18:49:55Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 64,
+      "id": "PR_kwDOOWPBqs6Zh9S5",
+      "title": "Organize and sort the Terminology section (Carlos alpha beta terms)",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [],
+      "body": "Organize and sort the Terminology section \r\n\r\nFixes #62 ",
+      "createdAt": "2025-06-07T18:58:49Z",
+      "updatedAt": "2025-06-07T20:03:15Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "b2056806da2ba6b991899779c4809b272cfb5d7e",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-alpha-beta-terms",
+      "headRefOid": "e9ab79688fb4584782b2f12f316ec507b614e7cf",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6tT7vC",
+          "commit": {
+            "abbreviatedOid": "d77c733"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-06-07T19:04:04Z",
+          "updatedAt": "2025-06-07T19:10:44Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n   This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.\r\n```",
+              "createdAt": "2025-06-07T19:04:04Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 40,
+              "body": "```suggestion\r\n   *  Fault management: The process of interpreting fault notifications and other alerts\r\n```",
+              "createdAt": "2025-06-07T19:04:24Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 47,
+              "body": "```suggestion\r\n      independent of any specific software usage, protocol,\r\n```",
+              "createdAt": "2025-06-07T19:05:29Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 48,
+              "body": "```suggestion\r\n      or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for\r\n```",
+              "createdAt": "2025-06-07T19:07:23Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 52,
+              "body": "```suggestion\r\n      to identify entirely new protocols, new versions of existing\r\n```\r\navoid confusion with Internet protocol (IP) :-)",
+              "createdAt": "2025-06-07T19:08:15Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 48,
+              "body": "factorize + cite section numbers only",
+              "createdAt": "2025-06-07T19:08:42Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 53,
+              "body": "```suggestion\r\n      protocols, and extensions to protocols.\r\n```",
+              "createdAt": "2025-06-07T19:08:56Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 75,
+              "body": "```suggestion\r\n   *  Protocol Designer: An individual, a group of\r\n```",
+              "createdAt": "2025-06-07T19:09:39Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 76,
+              "body": "```suggestion\r\n      people, or an IETF WG involved in the development and specification\r\n```",
+              "createdAt": "2025-06-07T19:09:54Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            },
+            {
+              "originalPosition": 88,
+              "body": "```suggestion\r\n   *  Root Cause: Since one fault may give rise to another fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\r\n```",
+              "createdAt": "2025-06-07T19:10:12Z",
+              "updatedAt": "2025-06-07T19:10:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tUDiN",
+          "commit": {
+            "abbreviatedOid": "d77c733"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-07T19:39:32Z",
+          "updatedAt": "2025-06-07T19:53:43Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "Should it be \"Fault Management\" like other terms (with both words capitalized)?",
+              "createdAt": "2025-06-07T19:39:32Z",
+              "updatedAt": "2025-06-07T19:53:43Z"
+            },
+            {
+              "originalPosition": 47,
+              "body": "Repository might be more aligned to \"backend\" or \"database\".  Not sure even those terms are needed, though.",
+              "createdAt": "2025-06-07T19:53:40Z",
+              "updatedAt": "2025-06-07T19:53:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tUEug",
+          "commit": {
+            "abbreviatedOid": "d77c733"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-07T19:53:46Z",
+          "updatedAt": "2025-06-07T19:53:46Z",
+          "comments": [
+            {
+              "originalPosition": 47,
+              "body": "I'm happy to remove 'repository', but any specific reason?",
+              "createdAt": "2025-06-07T19:53:46Z",
+              "updatedAt": "2025-06-07T19:53:47Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tUFWn",
+          "commit": {
+            "abbreviatedOid": "d77c733"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-07T19:57:19Z",
+          "updatedAt": "2025-06-07T19:57:19Z",
+          "comments": [
+            {
+              "originalPosition": 47,
+              "body": "I mean, beyond the above -- the term is coming directly from RFC 5706 and not introduced by this effort.",
+              "createdAt": "2025-06-07T19:57:19Z",
+              "updatedAt": "2025-06-07T19:57:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tUGk5",
+          "commit": {
+            "abbreviatedOid": "d77c733"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-07T20:02:06Z",
+          "updatedAt": "2025-06-07T20:02:06Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "Yes, fixed.",
+              "createdAt": "2025-06-07T20:02:06Z",
+              "updatedAt": "2025-06-07T20:02:06Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
