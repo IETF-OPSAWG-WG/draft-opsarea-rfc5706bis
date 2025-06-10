@@ -389,7 +389,7 @@ author:
 
    *  Problem: See {{?I-D.ietf-nmop-terminology}}.
 
-   *  Proprietary Interfaces: An interface to manage a network element
+   *  Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
       semantics typically vary significantly between implementations.
       Examples of proprietary interfaces include Command Line
