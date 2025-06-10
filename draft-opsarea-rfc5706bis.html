@@ -1068,7 +1068,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 9 December 2025</td>
+<td class="center">Expires 12 December 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1084,12 +1084,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-06-07" class="published">7 June 2025</time>
+<time datetime="2025-06-10" class="published">10 June 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-12-09">9 December 2025</time></dd>
+<dd class="expires"><time datetime="2025-12-12">12 December 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1158,7 +1158,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 12 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1553,17 +1553,19 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-1.5-2.2.1">Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub<a href="#section-1.5-2.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.5-2.3">
-            <p id="section-1.5-2.3.1">Add a structured framing for the requirement of an "Operational and
- Management Considerations" section in Internet-Drafts<a href="#section-1.5-2.3.1" class="pilcrow">¶</a></p>
+            <p id="section-1.5-2.3.1">Add a requirement for an "Operational and Management Considerations" section in all Internet-Drafts, along with specific guidance on its content.<a href="#section-1.5-2.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.5-2.4">
-            <p id="section-1.5-2.4.1">Provide focus and details on NETCONF/YANG standards, deprioritizing MIB Modules.<a href="#section-1.5-2.4.1" class="pilcrow">¶</a></p>
+            <p id="section-1.5-2.4.1">Update the operational and manageability-related technologies to reflect over 15 years of advancements<a href="#section-1.5-2.4.1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-1.5-2.4.2.1">
-                <p id="section-1.5-2.4.2.1.1">Add a "YANG Data Model Considerations" section<a href="#section-1.5-2.4.2.1.1" class="pilcrow">¶</a></p>
+                <p id="section-1.5-2.4.2.1.1">Provide focus and details on YANG-based standards, deprioritizing MIB Modules.<a href="#section-1.5-2.4.2.1.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="section-1.5-2.4.2.2">
-                <p id="section-1.5-2.4.2.2.1">Update the "Available Management Technologies" landscape<a href="#section-1.5-2.4.2.2.1" class="pilcrow">¶</a></p>
+                <p id="section-1.5-2.4.2.2.1">Add a "YANG Data Model Considerations" section<a href="#section-1.5-2.4.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-1.5-2.4.2.3">
+                <p id="section-1.5-2.4.2.3.1">Update the "Available Management Technologies" landscape<a href="#section-1.5-2.4.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -1700,29 +1702,34 @@ to describe the original event that is the foundation of all related faults.<a h
         <h3 id="name-available-management-techno">
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-available-management-techno" class="section-name selfRef">Available Management Technologies</a>
         </h3>
-<p id="section-2.2-1">The IETF has a number of standard management protocols available that
-   are suitable for different purposes.  These include:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.2-1">The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in <span>[<a href="#RFC6632" class="cite xref">RFC6632</a>]</span>. Broadly, these include core network management protocols, purpose-specific management protocols, and network management data models. A non-exhaustive list of such protocols is provided below:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2.2-2.1">
-            <p id="section-2.2-2.1.1">Syslog <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span><a href="#section-2.2-2.1.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-2.1.1">Remote Authentication Dial In User Service (RADIUS) <span>[<a href="#RFC2865" class="cite xref">RFC2865</a>]</span><a href="#section-2.2-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-2.2">
-            <p id="section-2.2-2.2.1">Network Configuration Protocol - NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span><a href="#section-2.2-2.2.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-2.2.1">The Syslog Protocol <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span><a href="#section-2.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-2.3">
-            <p id="section-2.2-2.3.1">RESTCONF <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span><a href="#section-2.2-2.3.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-2.3.1">Packet Sampling (PSAMP) Protocol Specifications <span>[<a href="#RFC5476" class="cite xref">RFC5476</a>]</span><a href="#section-2.2-2.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-2.4">
-            <p id="section-2.2-2.4.1">Remote Authentication Dial-In User Service - RADIUS <span>[<a href="#RFC2865" class="cite xref">RFC2865</a>]</span><a href="#section-2.2-2.4.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-2.4.1">Network Configuration Protocol (NETCONF) <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span><a href="#section-2.2-2.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-2.5">
-            <p id="section-2.2-2.5.1">DIAMETER <span>[<a href="#RFC6733" class="cite xref">RFC6733</a>]</span><a href="#section-2.2-2.5.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-2.5.1">Diameter Base Protocol <span>[<a href="#RFC6733" class="cite xref">RFC6733</a>]</span><a href="#section-2.2-2.5.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-2.6">
-            <p id="section-2.2-2.6.1">IP Flow Information Export - IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span><a href="#section-2.2-2.6.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-2.6.1">Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span><a href="#section-2.2-2.6.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.2-2.7">
-            <p id="section-2.2-2.7.1">BGP Monitoring Protocol - BMP <span>[<a href="#RFC7854" class="cite xref">RFC7854</a>]</span><a href="#section-2.2-2.7.1" class="pilcrow">¶</a></p>
+            <p id="section-2.2-2.7.1">BGP Monitoring Protocol (BMP) <span>[<a href="#RFC7854" class="cite xref">RFC7854</a>]</span><a href="#section-2.2-2.7.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.2-2.8">
+            <p id="section-2.2-2.8.1">RESTCONF Protocol <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span><a href="#section-2.2-2.8.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.2-2.9">
+            <p id="section-2.2-2.9.1">Network Telemetry Framework <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span><a href="#section-2.2-2.9.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-2.2-3">The IETF previously also worked on the Simple Network Management Protocol
@@ -1730,10 +1737,6 @@ to describe the original event that is the foundation of all related faults.<a h
    but further use of this management protocol in new IETF documents has been constrained
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
    that do not support more resent management protocols <span>[<a href="#IESG-STATEMENT" class="cite xref">IESG-STATEMENT</a>]</span>.<a href="#section-2.2-3" class="pilcrow">¶</a></p>
-<p id="section-2.2-4">A planned supplement to this document will discuss these protocol
-   standards, discuss some standard information and Data Models for
-   specific functionality, and provide pointers to the documents that
-   define them.<a href="#section-2.2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -3096,6 +3099,10 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
       <dd>
 <span class="refAuthor">Gerhards, R.</span>, <span class="refTitle">"The Syslog Protocol"</span>, <span class="seriesInfo">RFC 5424</span>, <span class="seriesInfo">DOI 10.17487/RFC5424</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5424">https://www.rfc-editor.org/rfc/rfc5424</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC5476">[RFC5476]</dt>
+      <dd>
+<span class="refAuthor">Claise, B., Ed.</span>, <span class="refAuthor">Johnson, A.</span>, and <span class="refAuthor">J. Quittek</span>, <span class="refTitle">"Packet Sampling (PSAMP) Protocol Specifications"</span>, <span class="seriesInfo">RFC 5476</span>, <span class="seriesInfo">DOI 10.17487/RFC5476</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5476">https://www.rfc-editor.org/rfc/rfc5476</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC5706">[RFC5706]</dt>
       <dd>
 <span class="refAuthor">Harrington, D.</span>, <span class="refTitle">"Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions"</span>, <span class="seriesInfo">RFC 5706</span>, <span class="seriesInfo">DOI 10.17487/RFC5706</span>, <time datetime="2009-11" class="refDate">November 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5706">https://www.rfc-editor.org/rfc/rfc5706</a>&gt;</span>. </dd>
@@ -3115,6 +3122,10 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
 <dt id="RFC6298">[RFC6298]</dt>
       <dd>
 <span class="refAuthor">Paxson, V.</span>, <span class="refAuthor">Allman, M.</span>, <span class="refAuthor">Chu, J.</span>, and <span class="refAuthor">M. Sargent</span>, <span class="refTitle">"Computing TCP's Retransmission Timer"</span>, <span class="seriesInfo">RFC 6298</span>, <span class="seriesInfo">DOI 10.17487/RFC6298</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6298">https://www.rfc-editor.org/rfc/rfc6298</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6632">[RFC6632]</dt>
+      <dd>
+<span class="refAuthor">Ersue, M., Ed.</span> and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"An Overview of the IETF Network Management Standards"</span>, <span class="seriesInfo">RFC 6632</span>, <span class="seriesInfo">DOI 10.17487/RFC6632</span>, <time datetime="2012-06" class="refDate">June 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6632">https://www.rfc-editor.org/rfc/rfc6632</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6733">[RFC6733]</dt>
       <dd>
@@ -3171,6 +3182,10 @@ and extend the tools to meet their specific needs.<a href="#section-5-4.5.1" cla
 <dt id="RFC9182">[RFC9182]</dt>
       <dd>
 <span class="refAuthor">Barguil, S.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Munoz, L.</span>, and <span class="refAuthor">A. Aguado</span>, <span class="refTitle">"A YANG Network Data Model for Layer 3 VPNs"</span>, <span class="seriesInfo">RFC 9182</span>, <span class="seriesInfo">DOI 10.17487/RFC9182</span>, <time datetime="2022-02" class="refDate">February 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9182">https://www.rfc-editor.org/rfc/rfc9182</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9232">[RFC9232]</dt>
+      <dd>
+<span class="refAuthor">Song, H.</span>, <span class="refAuthor">Qin, F.</span>, <span class="refAuthor">Martinez-Julia, P.</span>, <span class="refAuthor">Ciavaglia, L.</span>, and <span class="refAuthor">A. Wang</span>, <span class="refTitle">"Network Telemetry Framework"</span>, <span class="seriesInfo">RFC 9232</span>, <span class="seriesInfo">DOI 10.17487/RFC9232</span>, <time datetime="2022-05" class="refDate">May 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9232">https://www.rfc-editor.org/rfc/rfc9232</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9291">[RFC9291]</dt>
       <dd>
