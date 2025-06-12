@@ -123,95 +123,42 @@ author:
    technologies used in operating and managing devices, networks, and
    services. See {{sec-changes-since-5706}} for more details.
 
-##  Designing for Operations and Management {#sec-designing}
 
-   The operational environment and manageability of a protocol should
-   be considered from the start when New Protocols are designed.
+
+##  Motivation: Designing for Operations and Management {#sec-designing}
 
    As the Internet has grown, IETF protocols have addressed a constantly growing set of
    needs, such as web servers, collaboration services, and applications.
    The number of IETF management technologies has been expanding and the
    IETF management strategy has been changing to address the emerging
    management requirements. In the past, most of the existing IETF management
-   standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based {{?STD58}}
-   data modeling language, to monitor and manage networking devices.
-   Currently, the YANG data modeling language {{?RFC7950}} is recommended to
-   monitor and manage the IETF protocols in devices, networks, and network services.
-   Management requirements continually evolve in the IETF. Therefore,
-   the management protocols used should track with current IETF
-   recommendations.
+   standards were focused on creating MIB modules using the Structure of Management
+   Information (SMI)-based {{?STD58}} data modeling language, to monitor and manage
+   networking devices. Currently, the YANG data modeling language {{?RFC7950}} is recommended
+   to monitor and manage the IETF protocols in devices, networks, and network services.
 
-   Protocol Designers should consider which operations and management
-   needs are relevant to their protocol, document how those needs could
-   be addressed, and suggest (preferably standard) management protocols
-   and data models that could be used to address those needs. This is
-   similar to a WG that considers which security threats are relevant to
-   their protocol, documents (in the required Security Considerations section, per RFC Style Guide {{?RFC7322}})
-   how threats should be mitigated, and then suggests appropriate standard
-   protocols that could mitigate the threats.
-
-   When a WG considers operation and management functionality for a
-   protocol, the document should contain enough information for readers
-   to understand how the protocol will be deployed and managed. The considerations
-   do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
-   should expect that considerations for operations and management may
-   need to be updated in the future, after further operational
-   experience has been gained.
-
-   A list of guidelines and a
-   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
-
-##  This Document {#sec-this-doc}
-
-   This document makes a distinction between "Operational
-   Considerations" and "Management Considerations", although the two are
-   closely related. The operational considerations apply to operating the protocol within a network, even
-   if there were no management protocol actively being used. The section on manageability is focused on
-   management technology, such as how to utilize management protocols
-   and how to design management data models.
-
-   The purpose of this document is to provide guidance about what to
-   consider when thinking about the management and deployment of a new
-   protocol, and to provide guidance about documenting the
-   considerations. The following guidelines are designed to help
-   writers provide a reasonably consistent format for such
-   documentation. Separate manageability and operational considerations
-   sections are desirable in many cases, but their structure and
-   location are a decision that can be made from case to case.
-
-   This document does not impose a solution, imply that a formal data
-   model is needed, or imply that using a specific management protocol
-   is mandatory. If Protocol Designers conclude that the technology can be managed
-   solely by using Proprietary Interfaces or that it does
-   not need any structured or standardized data model, this might be fine,
-   but it is a decision that should be explicit in a manageability discussion
-   -- that this is how the protocol will need to be operated and managed.
-   Protocol Designers should avoid having manageability pushed for a later
-   phase of the development of the standard.
-
-   A list of guidelines and a
-   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
-
-##  Motivation {#sec-motivation}
-
-   For years the IETF community has used the IETF Standard Management
-   Framework, including the Simple Network Management Protocol
-   {{?RFC3410}}, the Structure of Management Information (SMI) {{?STD58}}, and MIB
-   Data Models for managing New Protocols. As the Internet has evolved,
-   operators have found the reliance on one protocol and one schema
-   language for managing all aspects of the Internet inadequate. The
-   IESG policy to require working groups to write a MIB module to
-   provide manageability for New Protocols is being replaced by a policy
-   that is more open to using a variety of management protocols and data
-   models designed to achieve different goals. In 2014, the IESG wrote a
-   statement about "Writable MIB Module" {{IESG-STATEMENT}}.
+   In 2014, the IESG wrote a statement about "Writable MIB Module" {{IESG-STATEMENT}}.
    This statement stresses that IETF working groups are encouraged to use the NETCONF/YANG
    standards for configuration, especially in new charters.
 
+   In 2024, the IAB held the "Next Era of Network Management Operations (NEMOPS)"
+   workshop {{NEMOPS-WORKSHOP}}, building on the previous 2002 IAB workshop, which
+   led to the creation of {{?RFC3535}}. Given that much has changed
+   in the Internet’s operation and technological foundations since the first
+   workshop, the NEMOPS workshop reviewed the past outcomes and discussed any
+   operational barriers that prevented these technologies from being widely
+   implemented. With the industry, network operators, and protocol engineers
+   working in collaboration, the workshop developed a proposed plan of action
+   and provided network management recommendations for both the IETF and IRTF.
+   See {{I-D.iab-nemops-workshop-report}} for the detailed information.
+
+   As a matter of fact, the operational environment and manageability of a protocol should
+   be considered from the start when New Protocols are designed.
+
+##  This Document {#sec-this-doc}
+
    This document provides some initial guidelines for considering
-   operations and management in an IETF Management Framework that
+   operations and management in an IETF management framework that
    consists of multiple protocols and multiple data modeling languages,
    with an eye toward being flexible while also striving for
    interoperability.
@@ -232,65 +179,66 @@ author:
    deliberate decision, not the result of omission. This document
    provides some guidelines for those considerations.
 
-##  Background {#sec-background}
+   This document makes a distinction between "Operational
+   Considerations" and "Management Considerations", although the two are
+   closely related. The operational considerations apply to operating the protocol within a network, even
+   if there were no management protocol actively being used. The section on manageability is focused on
+   management technology, such as how to utilize management protocols
+   and how to design management data models.
 
-   There have been a significant number of efforts, meetings, and
-   documents that are related to Internet operations and management.
-   Some of them are mentioned here to help Protocol Designers find
-   documentation of previous efforts. Hopefully, providing these
-   references will help the IETF avoid rehashing old discussions and
-   reinventing old solutions.
+##  Audience {#sec-audience}
+  
+   The purpose of this document is to provide guidance about what to
+   consider when thinking about the management and deployment of a new
+   protocol, and to provide guidance about documenting the
+   considerations. As it is useful to anyone involved in the document lifecyle:
+   From the Protocol Designers writing their drafts but to anyone involved in evaluating the document
+   content (WG chair, WG advisor, Document Shepherd, the responsible AD, or the IESG).
+   
+   The following guidelines are designed to help
+   Protocol Designers provide a reasonably consistent format for such
+   documentation. Separate manageability and operational considerations
+   sections are desirable in many cases, but their structure and
+   location are a decision that can be made from case to case.
 
-   In 1988, the Internet Architecture Board (IAB) published "IAB Recommendations for the Development
-   of Internet Network Management Standards" {{?RFC1052}}, which
-   recommended a solution that, where possible, deliberately separates
-   modeling languages, data models, and the protocols that carry data.
-   The goal is to allow standardized information and data models to be
-   used by different protocols.
+   Protocol Designers should consider which operations and management
+   needs are relevant to their protocol, document how those needs could
+   be addressed, and suggest (preferably standard) management protocols
+   and data models that could be used to address those needs. This is
+   similar to a WG that considers which security threats are relevant to
+   their protocol, documents (in the required Security Considerations section, per RFC Style Guide {{?RFC7322}})
+   how threats should be mitigated, and then suggests appropriate standard
+   protocols that could mitigate the threats.
 
-   In 2001, Operations and Management Area design teams were created to
-   document requirements related to the configuration of IP-based
-   networks. One output was "Requirements for Configuration Management
-   of IP-based Networks" {{?RFC3139}}.
+   This document does not impose a solution, imply that a formal data
+   model is needed, or imply that using a specific management protocol
+   is mandatory. If Protocol Designers conclude that the technology can be managed
+   solely by using Proprietary Interfaces or that it does
+   not need any structured or standardized data model, this might be fine,
+   but it is a decision that should be explicit in a manageability discussion
+   -- that this is how the protocol will need to be operated and managed.
+   Protocol Designers should avoid having manageability pushed for a later
+   phase of the development of the standard.
 
-   In 2002, the IAB held a workshop on
-   Network Management {{?RFC3535}} that discussed the strengths and
-   weaknesses of some IETF network management protocols and compared
-   them to operational needs, especially configuration.
+   When a WG considers operation and management functionality for a
+   protocol, the document should contain enough information for readers
+   to understand how the protocol will be deployed and managed. The considerations
+   do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
+   should expect that considerations for operations and management may
+   need to be updated in the future, after further operational
+   experience has been gained.
 
-   One issue discussed was the user-unfriendliness of the binary format
-   of SNMP and Common Open Policy Service (COPS) Usage for
-   Policy Provisioning (COPS-PR) {{?RFC3084}}, and it was recommended that
-   the IETF explore an XML-based Structure of Management Information and
-   an XML-based protocol for configuration.
+   For the OPS Area Directors or the IESG, this document helps evaluating the
+   content of the new "Operational and Management Considerations" section. As an
+   Area Director busy creating a new charter, this document document some considerations
+   of the functionality needed to operate and manage new Protocol and Protocol Extensions.
 
-   Another conclusion was that the tools for event/alarm correlation and
-   for root cause analysis and logging are not sufficient and that there
-   is a need to support a human interface and a programmatic interface.
-   The IETF decided to standardize aspects of the de facto standard for
-   system-logging security and programmatic support.
+   The OPS directorate can use this document to guide the review. On top of that, a list of guidelines and a
+   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
+   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
-   In 2006, the IETF discussed whether the Management Framework should
-   be updated to accommodate multiple IETF schema languages for
-   describing the structure of management information and multiple IETF
-   standard protocols for performing management tasks. The IESG asked
-   that a document be written to discuss how Protocol Designers and
-   working groups should address management in this emerging multi-
-   protocol environment. This document and some planned companion
-   documents attempt to provide some guidelines for navigating the
-   rapidly shifting operating and management environments.
-
-   In 2014, the IESG wrote its statement on "Writable MIB Module" {{IESG-STATEMENT}}, as
-   mentioned above.
-
-   In 2024, the IAB held the "Next Era of Network Management Operations (NEMOPS)"
-   workshop {{NEMOPS-WORKSHOP}}, building on the previous 2002 IAB workshop. Given that much has changed
-   in the Internet’s operation and technological foundations since the first
-   workshop, the NEMOPS workshop reviewed the past outcomes and discussed any
-   operational barriers that prevented these technologies from being widely
-   implemented. With the industry, network operators, and protocol engineers
-   working in collaboration, the workshop developed a proposed plan of action
-   and provided network management recommendations for both the IETF and IRTF.
+   This document is also of interest to the broader community, who wants to understand, contribute to,
+   and review drafts, taking into OPS considerations into account.
 
 ## Changes Since RFC 5706 {#sec-changes-since-5706}
 
