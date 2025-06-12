@@ -140,7 +140,7 @@ author:
    management practices that are already well understood. However, the guidance
    in this document does not mandate providing a comprehensive inventory of
    all operational and manageability considerations. Instead, the guidance is to
-   focus on key aspects that are will ease deployability and are key to operate and maintain
+   focus on key aspects that will ease deployability and are essential for operating and maintaining
    the technology.
 
    Suitable management approaches may vary for different areas, working
