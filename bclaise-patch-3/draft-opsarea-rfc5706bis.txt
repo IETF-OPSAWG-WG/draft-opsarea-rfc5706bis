@@ -73,11 +73,10 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-     1.1.  Motivation: Designing for Operations and Management
-     1.2.  This Document
-     1.3.  Audience
-     1.4.  Changes Since RFC 5706
-     1.5.  TO DO LIST
+     1.1.  This Document
+     1.2.  Audience
+     1.3.  Changes Since RFC 5706
+     1.4.  TO DO LIST
    2.  Key Concepts, Terminology, and Technological Landscape
      2.1.  Terminology
      2.2.  Available Management Technologies
@@ -128,10 +127,14 @@ Table of Contents
    operated, and managed.  Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
-   management particularly hard.  This document provides guidelines to
-   help Protocol Designers and working groups (WGs) consider the
-   operations and management functionality for their New Protocol or
-   Protocol Extension at an earlier phase.
+   management particularly hard.  As a matter of fact, the operational
+   environment and manageability of a protocol should be considered from
+   the start when New Protocols are designed.
+
+   This document provides guidelines to help Protocol Designers and
+   working groups (WGs) consider the operations and management
+   functionality for their New Protocol or Protocol Extension at an
+   earlier phase.
 
    This document obsoletes [RFC5706] and fully updates its content with
    new operational and management techniques and mechanisms.  It also
@@ -140,45 +143,9 @@ Table of Contents
    progressed for publication as RFCs.  Also, the document removes
    outdated references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
-   services.  See Section 1.4 for more details.
+   services.  See Section 1.3 for more details.
 
-1.1.  Motivation: Designing for Operations and Management
-
-   As the Internet has grown, IETF protocols have addressed a constantly
-   growing set of needs, such as web servers, collaboration services,
-   and applications.  The number of IETF management technologies has
-   been expanding and the IETF management strategy has been changing to
-   address the emerging management requirements.  In the past, most of
-   the existing IETF management standards were focused on creating MIB
-   modules using the Structure of Management Information (SMI)-based
-   [STD58] data modeling language, to monitor and manage networking
-   devices.  Currently, the YANG data modeling language [RFC7950] is
-   recommended to monitor and manage the IETF protocols in devices,
-   networks, and network services.
-
-   In 2014, the IESG wrote a statement about "Writable MIB Module"
-   [IESG-STATEMENT].  This statement stresses that IETF working groups
-   are encouraged to use the NETCONF/YANG standards for configuration,
-   especially in new charters.
-
-   In 2024, the IAB held the "Next Era of Network Management Operations
-   (NEMOPS)" workshop [NEMOPS-WORKSHOP], building on the previous 2002
-   IAB workshop, which led to the creation of [RFC3535].  Given that
-   much has changed in the Internet’s operation and technological
-   foundations since the first workshop, the NEMOPS workshop reviewed
-   the past outcomes and discussed any operational barriers that
-   prevented these technologies from being widely implemented.  With the
-   industry, network operators, and protocol engineers working in
-   collaboration, the workshop developed a proposed plan of action and
-   provided network management recommendations for both the IETF and
-   IRTF.  See [I-D.iab-nemops-workshop-report] for the detailed
-   information.
-
-   As a matter of fact, the operational environment and manageability of
-   a protocol should be considered from the start when New Protocols are
-   designed.
-
-1.2.  This Document
+1.1.  This Document
 
    This document provides some initial guidelines for considering
    operations and management in an IETF specification that consists of
@@ -214,7 +181,7 @@ Table of Contents
    focused on management technology, such as how to utilize management
    protocols and how to design management data models.
 
-1.3.  Audience
+1.2.  Audience
 
    The purpose of this document is to provide guidance about what to
    consider when thinking about the management and deployment of a new
@@ -275,7 +242,7 @@ Table of Contents
    to understand, contribute to, and review drafts, taking into OPS
    considerations into account.
 
-1.4.  Changes Since RFC 5706
+1.3.  Changes Since RFC 5706
 
    The following changes have been made to the guidelines published in
    [RFC5706]:
@@ -301,7 +268,7 @@ Table of Contents
 
    *  Add an "Operational and Management Tooling Considerations" section
 
-1.5.  TO DO LIST
+1.4.  TO DO LIST
 
    See the list of open issues at https://github.com/IETF-OPSAWG-WG/
    draft-opsarea-rfc5706bis/issues
@@ -1593,14 +1560,6 @@ Table of Contents
               "Operations and Management Review Checklist", 2025,
               <https://github.com/IETF-OPS-DIR/Review-Template/tree/
               main>.
-
-   [I-D.iab-nemops-workshop-report]
-              Hardaker, W. and D. Dhody, "Report from the IAB Workshop
-              on the Next Era of Network Management Operations
-              (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
-              nemops-workshop-report-02, 19 May 2025,
-              <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
-              workshop-report-02>.
 
    [I-D.ietf-netmod-rfc8407bis]
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
