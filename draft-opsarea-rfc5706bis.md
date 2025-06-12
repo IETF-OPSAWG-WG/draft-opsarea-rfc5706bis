@@ -169,7 +169,7 @@ author:
    protocol, and to provide guidance about documenting the
    considerations. As it is useful to anyone involved in the document lifecyle:
    from the authors drafting the protocol to those reviewing and evaluating its draft
-   content (WG chair, WG advisor, Document Shepherd, the responsible AD, or the IESG).
+   content, including the WG chair, WG advisor, Document Shepherd, responsible AD, and the IESG.
 
    The following guidelines are designed to help
    Protocol Designers provide a reasonably consistent format for such
