@@ -166,7 +166,11 @@ author:
    Fully New Protocols may require significant consideration of expected
    operations and management, while extensions to existing, widely
    deployed protocols may have established de facto operations and
-   management practices that are already well understood.
+   management practices that are already well understood. However, the guidance
+   in this document does not mandate providing a comprehensive inventory of
+   all operational and manageability considerations. Instead, the guidance is to
+   focus on key aspects that are will ease deployability and are key to operate and maintain
+   the technology. 
 
    Suitable management approaches may vary for different areas, working
    groups, and protocols in the IETF. This document does not prescribe
