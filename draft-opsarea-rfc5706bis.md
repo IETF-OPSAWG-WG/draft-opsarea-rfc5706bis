@@ -134,7 +134,7 @@ author:
    with an eye toward being flexible while also striving for
    interoperability.
 
-   Fully New Protocols may require significant consideration of expected
+   Entirely New Protocols may require significant consideration of expected
    operations and management, while extensions to existing, widely
    deployed protocols may have established de facto operations and
    management practices that are already well understood. However, the guidance
