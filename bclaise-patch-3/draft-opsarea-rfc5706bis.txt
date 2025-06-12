@@ -171,7 +171,7 @@ Table of Contents
    industry, network operators, and protocol engineers working in
    collaboration, the workshop developed a proposed plan of action and
    provided network management recommendations for both the IETF and
-   IRTF.  See I-D.iab-nemops-workshop-report for the detailed
+   IRTF.  See [I-D.iab-nemops-workshop-report] for the detailed
    information.
 
    As a matter of fact, the operational environment and manageability of
@@ -1589,6 +1589,14 @@ Table of Contents
               "Operations and Management Review Checklist", 2025,
               <https://github.com/IETF-OPS-DIR/Review-Template/tree/
               main>.
+
+   [I-D.iab-nemops-workshop-report]
+              Hardaker, W. and D. Dhody, "Report from the IAB Workshop
+              on the Next Era of Network Management Operations
+              (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
+              nemops-workshop-report-02, 19 May 2025,
+              <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
+              workshop-report-02>.
 
    [I-D.ietf-netmod-rfc8407bis]
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
