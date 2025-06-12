@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-10T00:50:02.870328+00:00",
+  "timestamp": "2025-06-12T00:50:01.847947+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1045,7 +1045,7 @@
       "id": "I_kwDOOWPBqs66Z1RC",
       "title": "Sort the Terms",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/62",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1054,8 +1054,8 @@
       "labels": [],
       "body": "What is the most effective way to sort and organize the terms in the Terminology section 2.1?\nRight now they are in disorder :-)\n\nPersonally, I would do it alphabetically, rather than trying to figure out themes... \n\nThoughts?",
       "createdAt": "2025-06-07T18:09:12Z",
-      "updatedAt": "2025-06-07T18:23:42Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-10T23:42:51Z",
+      "closedAt": "2025-06-10T23:42:51Z",
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -1094,7 +1094,7 @@
     {
       "number": 66,
       "id": "I_kwDOOWPBqs66ckZe",
-      "title": "Applicability to protocols that are higher in the stack (DISCUSS from R. Sparks, 2009)",
+      "title": "Applicability to protocols that are higher in the stack",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/66",
       "state": "OPEN",
       "author": "boucadair",
@@ -1103,7 +1103,27 @@
       "labels": [],
       "body": "> [Ballot discuss] (Robert Sparks 2009-09-22)\n> This document contains a wealth of good advice and I am glad we are producing it. However, I have a few questions to work through before recommending publication:\n> \n> The document is still strongly influenced by its genesis in routing. It is easy to see how to apply its advice when it is natural to talk about an application or a deployment in terms of the protocol, particularly when a configuration action on a network element maps directly into a configuration action in the protocol.\n> \n> **It is less obvious how to apply much of the advice when the protocol is a component or framework - when there are layers between the outward interface of the managed elements and the knobs in the protocols (TLS, SASL, S/MIME, PIDF, PIDF-LO, RTP, ...). Would it be possible to add guidance on how to apply the recommendations in those kinds of documents?** Would it make sense to add/make more explicit a discussion on reveiwing managability of the interfaces that components expose to the to-be-managed applications that are going to use them?\n> \n> Similarly, some of the \"link\", \"node\", and \"packet\" vocabulary becomes awkward when you start applying this to protocols that are higher in the stack. Can the language be abstracted to make it clearer what consideration discussion you're trying to stimulate in those cases?\n> \n> I can be talked into waiting for future documents to address those concerns - the guidance here for the protocols that the recommendations can easily be applied to is worth publishing as soon as we can. But we need to address the above questions before we start to consider _requiring_ these considerations in all submissions.\n\n> [Ballot comment]\n> The last paragraph of 2.2 could be generalized - speed is not the only thing that time changes.\n> \n> The guidance in the last paragraph before section 3.1 starts should also point to the cases where focusing on instumenting servers might mask problems - instrumentation in clients may be the only thing that can provide information to the operator.\n> \n> In section 3.1 \"Information models should come from the protocol WGs\" -- not all protocols come from WGs.\n> \n> \"some planned companion documents\" is a phrase that will not age well once this is in RFC-stone. Can it be replaced with something a little less time-sensitive?\n> \n> Consider changing the \"must not\" on the second line of page 9 to \"MUST NOT\" (or not).",
       "createdAt": "2025-06-08T07:47:28Z",
-      "updatedAt": "2025-06-08T07:49:46Z",
+      "updatedAt": "2025-06-10T07:24:14Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 68,
+      "id": "I_kwDOOWPBqs6640YS",
+      "title": "Position \"Documentation Guidelines\" Section early in the document",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/68",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [
+        "documentation"
+      ],
+      "body": "I think that we need to better highlight the main recommendations. For that, we may rearrange the text so that the text with the main reco is provided first and then dive into specific Ops/Mgt cons in the following sections.\n\nOLD:\n\n>    4.  Operational Considerations - How Will the New Protocol Fit into\n>            the Current Environment?  . . . . . . . . . . . . . . . .   \n>      ...\n>    5.  Management Considerations - How Will the Protocol Be\n>            Managed?  . . . . . . . . . . . . . . . . . . . . . . . .  \n>      ...\n>    6.  Operational and Management Tooling Considerations . . . . . .  \n>    7.  Documentation Guidelines  . . . . . . . . . . . . . . . . . . \n\nNEW:\n\n>    4.  Documentation Guidelines  . . . . . . . . . . . . . . . . . . \n>    5.  Operational Considerations - How Will the New Protocol/Protocol Extension  Fit into\n>            the Current Environment?  . . . . . . . . . . . . . . . .   \n>      ...\n>    6.  Management Considerations - How Will the Protocol/Protocol Extension Be\n>            Managed?  . . . . . . . . . . . . . . . . . . . . . . . .  \n>      ...\n>    7.  Operational and Management Tooling Considerations . . . . . .  \n",
+      "createdAt": "2025-06-11T04:45:26Z",
+      "updatedAt": "2025-06-11T19:26:41Z",
       "closedAt": null,
       "comments": []
     }
@@ -4942,7 +4962,7 @@
       "id": "PR_kwDOOWPBqs6Zh554",
       "title": "Updating the operational technologies",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/63",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -4951,17 +4971,19 @@
       "labels": [],
       "body": "This is an initial approach to updating the operational and management technologies.",
       "createdAt": "2025-06-07T18:40:17Z",
-      "updatedAt": "2025-06-07T19:00:37Z",
+      "updatedAt": "2025-06-10T23:37:23Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "b2056806da2ba6b991899779c4809b272cfb5d7e",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-ops-technologies",
       "headRefOid": "d94a6240b048e70872d3d28826042b2e74a3e62c",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-06-10T23:37:21Z",
+      "mergedAt": "2025-06-10T23:37:21Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "91c4208a677768c0ac2cd9290707b9ae961b6004"
+      },
       "comments": [
         {
           "author": "cpignata",
@@ -4969,6 +4991,13 @@
           "body": "Thanks @boucadair ! ",
           "createdAt": "2025-06-07T19:00:36Z",
           "updatedAt": "2025-06-07T19:00:36Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This looks good to me.",
+          "createdAt": "2025-06-10T06:41:49Z",
+          "updatedAt": "2025-06-10T06:41:49Z"
         }
       ],
       "reviews": [
@@ -5011,7 +5040,7 @@
       "id": "PR_kwDOOWPBqs6Zh9S5",
       "title": "Organize and sort the Terminology section (Carlos alpha beta terms)",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -5020,18 +5049,42 @@
       "labels": [],
       "body": "Organize and sort the Terminology section \r\n\r\nFixes #62 ",
       "createdAt": "2025-06-07T18:58:49Z",
-      "updatedAt": "2025-06-07T20:03:15Z",
+      "updatedAt": "2025-06-10T23:42:52Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "b2056806da2ba6b991899779c4809b272cfb5d7e",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-alpha-beta-terms",
-      "headRefOid": "e9ab79688fb4584782b2f12f316ec507b614e7cf",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "a70211353add266a0b93eec9af086c8a82b9f88d",
+      "closedAt": "2025-06-10T23:42:50Z",
+      "mergedAt": "2025-06-10T23:42:50Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "5df8db3187dc93cd33d57f48f334900659a58577"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This looks good. \r\nI have one question for Adrian @AdrianFarrel. During our last meeting, we discussed the Root Cause definition.\r\nAfter a long debate, we avoided the term in draft-ietf-nmop-terminology-17, because we could never sure that this is THE Root Cause. \r\nIf draft-ietf-nmop-terminology-17 can not define it, should we define here?\r\nAnd if we find a suitable definition for our draft, why not have it in draft-ietf-nmop-terminology? Well b/c NMOP could not agree...\r\n\r\nDoes it make Root Cause a candidate for removal? I guess so.\r\n\r\n\r\n",
+          "createdAt": "2025-06-10T06:39:03Z",
+          "updatedAt": "2025-06-10T06:39:03Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Replying to @bclaise \r\nI'd certainly recommend not trying to get NMOP to converge on a meaning for \"root cause.\"\r\nSince this document uses \"root cause\", I included a definition in the terminology section.\r\nNot sure I'm happy about that, but possibly NMOP won't notice?\r\nThe alternative, as you say, is to remove all mention of \"root cause\".",
+          "createdAt": "2025-06-10T19:30:31Z",
+          "updatedAt": "2025-06-10T19:30:31Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Merging after incorporating all review comments from all reviews/reviewers.",
+          "createdAt": "2025-06-10T23:42:44Z",
+          "updatedAt": "2025-06-10T23:42:44Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs6tT7vC",
@@ -5192,6 +5245,112 @@
               "updatedAt": "2025-06-07T20:02:06Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6tvMXr",
+          "commit": {
+            "abbreviatedOid": "e9ab796"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "I think you got it.\r\n\r\nI see a nit:\r\ns/Proprietary Interfaces:/Proprietary Interface:/",
+          "createdAt": "2025-06-10T19:32:17Z",
+          "updatedAt": "2025-06-10T19:32:17Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 67,
+      "id": "PR_kwDOOWPBqs6ZzJfW",
+      "title": "Fix L2SM Reference",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/67",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "RFC8499 is about DNS.",
+      "createdAt": "2025-06-10T07:21:48Z",
+      "updatedAt": "2025-06-11T12:30:30Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "b2056806da2ba6b991899779c4809b272cfb5d7e",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Fix-L2SM-Reference",
+      "headRefOid": "eb22ffc24ddd1de80e89e899a64e8d16ce311d74",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6tw14n",
+          "commit": {
+            "abbreviatedOid": "eb22ffc"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-10T23:35:28Z",
+          "updatedAt": "2025-06-10T23:35:28Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6t3PHF",
+          "commit": {
+            "abbreviatedOid": "eb22ffc"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-11T12:30:30Z",
+          "updatedAt": "2025-06-11T12:30:30Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 69,
+      "id": "PR_kwDOOWPBqs6aBs3a",
+      "title": "Capitalize Terminology",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/69",
+      "state": "OPEN",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Symptom is present in Terminology but not used in the text. ",
+      "createdAt": "2025-06-11T12:46:54Z",
+      "updatedAt": "2025-06-11T19:27:56Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "5df8db3187dc93cd33d57f48f334900659a58577",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "capitalize-terminology",
+      "headRefOid": "33791598fbc22fe1dbdff6fe5b78ec0e0b7388a8",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6t88qZ",
+          "commit": {
+            "abbreviatedOid": "3379159"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-11T19:27:56Z",
+          "updatedAt": "2025-06-11T19:27:56Z",
+          "comments": []
         }
       ]
     }
