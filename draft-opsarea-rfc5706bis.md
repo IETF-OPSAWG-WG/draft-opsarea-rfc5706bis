@@ -177,7 +177,9 @@ author:
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
    considered for any IETF protocol because we develop technologies and
-   protocols to be deployed and operated in the real-world Internet. A WG
+   protocols to be deployed and operated in the real-world Internet.
+   
+    A WG
    may decide that its protocol does not need interoperable
    management or a standardized data model, but this should be a
    deliberate decision, not the result of omission. This document
