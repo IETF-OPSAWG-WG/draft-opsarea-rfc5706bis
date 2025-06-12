@@ -1600,23 +1600,20 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-2.1-1">This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2.1-2.1">
-            <p id="section-2.1-2.1.1">Anomaly: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2.1-2.1.1" class="pilcrow">¶</a></p>
+            <p id="section-2.1-2.1.1">Cause: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2.1-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-2.2">
-            <p id="section-2.1-2.2.1">Cause: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2.1-2.2.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-2.1-2.3">
-            <p id="section-2.1-2.3.1">CLI: Command Line Interface. Typically, a Proprietary Interface to
+            <p id="section-2.1-2.2.1">CLI: Command Line Interface. Typically, a Proprietary Interface to
 hardware or software devices (e.g., routers or operating systems)
 for use by human operators
 directly at a terminal or via scripts. The commands, their syntax,
 and the precise semantics of the parameters may vary considerably
 between different vendors, between products from the same
 vendor, and even between different versions or releases of a single
-product. No attempt at standardizing CLIs has been made by the IETF.<a href="#section-2.1-2.3.1" class="pilcrow">¶</a></p>
+product. No attempt at standardizing CLIs has been made by the IETF.<a href="#section-2.1-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-2.1-2.4">
-            <p id="section-2.1-2.4.1">Data Model: A set of mechanisms for representing, organizing, storing
+          <li class="normal" id="section-2.1-2.3">
+            <p id="section-2.1-2.3.1">Data Model: A set of mechanisms for representing, organizing, storing
 and handling data within a particular type of data store or repository.
 This usually comprises a collection of data structures such as lists, tables,
 relations, etc., a collection of operations that can be applied to the
@@ -1625,73 +1622,70 @@ integrity rules that define the legal states (set of values) or changes of
 state (operations on values). A data model may be derived by mapping the
 contents of an information model or may be developed ab initio. Further
 discussion of data models can be found in <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>, <a href="#sec-interop" class="auto internal xref">Section 4.1</a>,
-and <a href="#sec-mgmt-info" class="auto internal xref">Section 4.2</a>.<a href="#section-2.1-2.4.1" class="pilcrow">¶</a></p>
+and <a href="#sec-mgmt-info" class="auto internal xref">Section 4.2</a>.<a href="#section-2.1-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.1-2.4">
+            <p id="section-2.1-2.4.1">Fault: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2.1-2.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-2.5">
-            <p id="section-2.1-2.5.1">Fault: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2.1-2.5.1" class="pilcrow">¶</a></p>
+            <p id="section-2.1-2.5.1">Fault Management: The process of interpreting fault notifications and other alerts
+and alarms, isolating faults, correlating them, and decucing underlying
+Causes. See <a href="#sec-fm-mgmt" class="auto internal xref">Section 4.3</a> for more information.<a href="#section-2.1-2.5.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-2.6">
-            <p id="section-2.1-2.6.1">Fault Management: The process of interpreting fault notifications and other alerts
-and alarms, isolating faults, correlating them, and decucing underlying
-Causes. See <a href="#sec-fm-mgmt" class="auto internal xref">Section 4.3</a> for more information.<a href="#section-2.1-2.6.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-2.1-2.7">
-            <p id="section-2.1-2.7.1">Information Model: An abstraction and representation of the
+            <p id="section-2.1-2.6.1">Information Model: An abstraction and representation of the
 entities in a managed environment, their properties, attributes
 and operations, and the way that they relate to each other. The model is
 independent of any specific software usage, protocol,
 or platform <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>. See Sections <a href="#sec-interop" class="auto internal xref">4.1</a> and <a href="#sec-im-design" class="auto internal xref">4.2.1</a> for
-further discussion of information models.<a href="#section-2.1-2.7.1" class="pilcrow">¶</a></p>
+further discussion of information models.<a href="#section-2.1-2.6.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.1-2.7">
+            <p id="section-2.1-2.7.1">New Protocol and Protocol Extension: These terms are used in this document
+to identify entirely new protocols, new versions of existing
+protocols, and extensions to protocols.<a href="#section-2.1-2.7.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-2.8">
-            <p id="section-2.1-2.8.1">New Protocol and Protocol Extension: These terms are used in this document
-to identify entirely new protocols, new versions of existing
-protocols, and extensions to protocols.<a href="#section-2.1-2.8.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-2.1-2.9">
-            <p id="section-2.1-2.9.1">OAM: Operations, Administration, and Maintenance <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>
+            <p id="section-2.1-2.8.1">OAM: Operations, Administration, and Maintenance <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>
               <span>[<a href="#I-D.ietf-opsawg-oam-characterization" class="cite xref">I-D.ietf-opsawg-oam-characterization</a>]</span> is the term given to the
-combination of:<a href="#section-2.1-2.9.1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-2.1-2.9.2">
-<li id="section-2.1-2.9.2.1">
-                <p id="section-2.1-2.9.2.1.1">Operation activities that are undertaken to keep the
-network. They include monitoring of the network.<a href="#section-2.1-2.9.2.1.1" class="pilcrow">¶</a></p>
+combination of:<a href="#section-2.1-2.8.1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-2.1-2.8.2">
+<li id="section-2.1-2.8.2.1">
+                <p id="section-2.1-2.8.2.1.1">Operation activities that are undertaken to keep the
+network. They include monitoring of the network.<a href="#section-2.1-2.8.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li id="section-2.1-2.9.2.2">
-                <p id="section-2.1-2.9.2.2.1">Administration activities that keep track of resources in the
+              <li id="section-2.1-2.8.2.2">
+                <p id="section-2.1-2.8.2.2.1">Administration activities that keep track of resources in the
 network and how they are used. They include the bookkeeping necessary
-to track networking resources.<a href="#section-2.1-2.9.2.2.1" class="pilcrow">¶</a></p>
+to track networking resources.<a href="#section-2.1-2.8.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li id="section-2.1-2.9.2.3">
-                <p id="section-2.1-2.9.2.3.1">Maintenance activities focused on facilitating repairs and upgrades.
+              <li id="section-2.1-2.8.2.3">
+                <p id="section-2.1-2.8.2.3.1">Maintenance activities focused on facilitating repairs and upgrades.
 They also involve corrective and preventive measures to make the
-managed network run more effectively.<a href="#section-2.1-2.9.2.3.1" class="pilcrow">¶</a></p>
+managed network run more effectively.<a href="#section-2.1-2.8.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ol>
-<p id="section-2.1-2.9.3">
+<p id="section-2.1-2.8.3">
 The broader concept of "operations and management" that is the subject of
 this document encompasses OAM along with other management and provisioning
-tools and concepts.<a href="#section-2.1-2.9.3" class="pilcrow">¶</a></p>
+tools and concepts.<a href="#section-2.1-2.8.3" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.1-2.9">
+            <p id="section-2.1-2.9.1">Problem: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2.1-2.9.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-2.10">
-            <p id="section-2.1-2.10.1">Problem: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2.1-2.10.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-2.1-2.11">
-            <p id="section-2.1-2.11.1">Proprietary Interface: An interface to manage a network element
+            <p id="section-2.1-2.10.1">Proprietary Interface: An interface to manage a network element
 that is not standardized. As such, the user interface, syntax, and
 semantics typically vary significantly between implementations.
 Examples of proprietary interfaces include Command Line
 Interface (CLI), management web portal and Browser User Interface (BUI),
 Graphical User Interface (GUI), and vendor-specific application
-programming interface (API).<a href="#section-2.1-2.11.1" class="pilcrow">¶</a></p>
+programming interface (API).<a href="#section-2.1-2.10.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-2.1-2.12">
-            <p id="section-2.1-2.12.1">Protocol Designer: An individual, a group of
+          <li class="normal" id="section-2.1-2.11">
+            <p id="section-2.1-2.11.1">Protocol Designer: An individual, a group of
 people, or an IETF WG involved in the development and specification
-of New Protocols or Protocol Extensions.<a href="#section-2.1-2.12.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-2.1-2.13">
-            <p id="section-2.1-2.13.1">Symptom: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2.1-2.13.1" class="pilcrow">¶</a></p>
+of New Protocols or Protocol Extensions.<a href="#section-2.1-2.11.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>

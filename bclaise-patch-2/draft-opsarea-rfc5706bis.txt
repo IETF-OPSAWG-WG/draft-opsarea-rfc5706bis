@@ -370,8 +370,6 @@ Table of Contents
    of this document.  Where appropriate, references are provided for
    further reading or authoritative definitions.
 
-   *  Anomaly: See [I-D.ietf-nmop-terminology].
-
    *  Cause: See [I-D.ietf-nmop-terminology].
 
    *  CLI: Command Line Interface.  Typically, a Proprietary Interface
@@ -445,8 +443,6 @@ Table of Contents
    *  Protocol Designer: An individual, a group of people, or an IETF WG
       involved in the development and specification of New Protocols or
       Protocol Extensions.
-
-   *  Symptom: See [I-D.ietf-nmop-terminology].
 
 2.2.  Available Management Technologies
 
