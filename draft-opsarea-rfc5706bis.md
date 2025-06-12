@@ -187,14 +187,14 @@ author:
    and how to design management data models.
 
 ##  Audience {#sec-audience}
-  
+
    The purpose of this document is to provide guidance about what to
    consider when thinking about the management and deployment of a new
    protocol, and to provide guidance about documenting the
    considerations. As it is useful to anyone involved in the document lifecyle:
    From the Protocol Designers writing their drafts but to anyone involved in evaluating the document
    content (WG chair, WG advisor, Document Shepherd, the responsible AD, or the IESG).
-   
+
    The following guidelines are designed to help
    Protocol Designers provide a reasonably consistent format for such
    documentation. Separate manageability and operational considerations
