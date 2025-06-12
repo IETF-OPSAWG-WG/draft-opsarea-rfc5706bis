@@ -437,6 +437,80 @@ author:
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
    that do not support more resent management protocols {{IESG-STATEMENT}}.
 
+#  Documentation Guidelines {#sec-doc-guidelines}
+
+   This document outlines key considerations for Protocol Designers and
+   provides guidance on how these considerations ought to be documented.
+
+   This document does not describe interoperability requirements but
+   rather describes practices that are useful to follow when dealing
+   with operational and manageability aspects in IETF documents, so the capitalized
+   keywords from {{?RFC2119}} do not apply here. Any occurrence of words
+   like 'must' or 'should' needs to be interpreted only in the context
+   of their natural, English-language meaning.
+
+##  Recommended Discussions {#sec-rec-discuss}
+
+   After evaluating the operational and manageability aspects of a
+   protocol, a Protocol Extension, or an architecture, the resulting practices and
+   requirements should be documented
+   in an "Operations and Manageability Considerations" section within a
+   specification. Since protocols are intended for operational deployment and
+   management within real networks, it is expected that such considerations
+   will be present.
+
+   It is also recommended that operational and manageability considerations
+   be addressed early in the protocol design process. Consequently, early
+   revisions of Internet-Drafts are expected to include an "Operations and
+   Manageability Considerations" section.
+
+   It is also recommended to begin considering operational and manageability
+   considerations early within the protocol design, and consequently it is expected that early revisions of Internet-Drafts will contain such section.
+
+   An "Operations and Manageability Considerations" section should include discussion of
+   the management and operations topics raised in this document, and
+   when one or more of these topics is not relevant, it would be useful
+   to contain a simple statement explaining why the topic is not
+   relevant or applicable for the New Protocol or feature.
+   Of course, additional relevant operational and manageability topics
+   should be included as well.
+
+   Existing protocols and Data Models can provide the management
+   functions identified in the previous section. Protocol Designers
+   should consider how using existing protocols and Data Models might
+   impact network operations.
+
+##  Null Operations and Manageability Considerations Section {#sec-null-sec}
+
+   A Protocol Designer should consider the manageability
+   requirements of a New Protocol or Protocol Extension and determine that no management
+   functionality or operational best-practice clarifications are
+   needed by the protocol. It would be helpful to
+   those who may update or write extensions to the protocol in the
+   future, or to those deploying the protocol, to know the rationale
+   regarding the decisions on manageability of the protocol at the
+   time of its design.
+
+   If there are no new manageability or deployment considerations, it is
+   recommended that an "Operations and Manageability Considerations" section
+   contain a simple statement such as, "There are no new operations or manageability
+   requirements introduced by this document," followed by a brief explanation of
+   why that is the case. The presence of such a
+   section would indicate to the reader that due
+   consideration has been given to manageability and operations.
+
+   In cases where the New Protocol is an extension and the base protocol
+   already addresses the relevant operational and manageability
+   considerations, it is helpful to reference the considerations section
+   in the base document.
+
+##  Placement of Operations and Manageability Considerations Sections {#sec-placement-sec}
+
+   It is recommended that the section be
+   placed immediately before the Security Considerations section.
+   Reviewers interested in such sections will find it easily, and this
+   placement could simplify the development of tools to detect the
+   presence of such a section.
 
 # Operational Considerations - How Will the New Protocol Fit into the Current Environment? {#sec-oper-consid}
 
@@ -1429,81 +1503,6 @@ DM         DM        DM     --> concrete/detailed model
      with community involvement. Open-source tools lower the barrier to entry,
      encourage collaboration, and provide operators with the flexibility to customize
      and extend the tools to meet their specific needs.
-
-#  Documentation Guidelines {#sec-doc-guidelines}
-
-   This document outlines key considerations for Protocol Designers and
-   provides guidance on how these considerations ought to be documented.
-
-   This document does not describe interoperability requirements but
-   rather describes practices that are useful to follow when dealing
-   with operational and manageability aspects in IETF documents, so the capitalized
-   keywords from {{?RFC2119}} do not apply here. Any occurrence of words
-   like 'must' or 'should' needs to be interpreted only in the context
-   of their natural, English-language meaning.
-
-##  Recommended Discussions {#sec-rec-discuss}
-
-   After evaluating the operational and manageability aspects of a
-   protocol, a Protocol Extension, or an architecture, the resulting practices and
-   requirements should be documented
-   in an "Operations and Manageability Considerations" section within a
-   specification. Since protocols are intended for operational deployment and
-   management within real networks, it is expected that such considerations
-   will be present.
-
-   It is also recommended that operational and manageability considerations
-   be addressed early in the protocol design process. Consequently, early
-   revisions of Internet-Drafts are expected to include an "Operations and
-   Manageability Considerations" section.
-
-   It is also recommended to begin considering operational and manageability
-   considerations early within the protocol design, and consequently it is expected that early revisions of Internet-Drafts will contain such section.
-
-   An "Operations and Manageability Considerations" section should include discussion of
-   the management and operations topics raised in this document, and
-   when one or more of these topics is not relevant, it would be useful
-   to contain a simple statement explaining why the topic is not
-   relevant or applicable for the New Protocol or feature.
-   Of course, additional relevant operational and manageability topics
-   should be included as well.
-
-   Existing protocols and Data Models can provide the management
-   functions identified in the previous section. Protocol Designers
-   should consider how using existing protocols and Data Models might
-   impact network operations.
-
-##  Null Operations and Manageability Considerations Section {#sec-null-sec}
-
-   A Protocol Designer should consider the manageability
-   requirements of a New Protocol or Protocol Extension and determine that no management
-   functionality or operational best-practice clarifications are
-   needed by the protocol. It would be helpful to
-   those who may update or write extensions to the protocol in the
-   future, or to those deploying the protocol, to know the rationale
-   regarding the decisions on manageability of the protocol at the
-   time of its design.
-
-   If there are no new manageability or deployment considerations, it is
-   recommended that an "Operations and Manageability Considerations" section
-   contain a simple statement such as, "There are no new operations or manageability
-   requirements introduced by this document," followed by a brief explanation of
-   why that is the case. The presence of such a
-   section would indicate to the reader that due
-   consideration has been given to manageability and operations.
-
-   In cases where the New Protocol is an extension and the base protocol
-   already addresses the relevant operational and manageability
-   considerations, it is helpful to reference the considerations section
-   in the base document.
-
-##  Placement of Operations and Manageability Considerations Sections {#sec-placement-sec}
-
-   It is recommended that the section be
-   placed immediately before the Security Considerations section.
-   Reviewers interested in such sections will find it easily, and this
-   placement could simplify the development of tools to detect the
-   presence of such a section.
 
 #  IANA Considerations {#sec-iana}
 
