@@ -109,10 +109,13 @@ author:
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
-   management particularly hard. This document provides guidelines to
-   help Protocol Designers and working groups (WGs) consider the operations
-   and management functionality for their New Protocol or Protocol
-   Extension at an earlier phase.
+   management particularly hard. As a matter of fact, the operational
+   environment and manageability of a protocol should be considered from the
+   start when New Protocols are designed.
+
+   This document provides guidelines to help Protocol Designers and working
+   groups (WGs) consider the operations and management functionality for
+   their New Protocol or Protocol Extension at an earlier phase.
 
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
@@ -122,38 +125,6 @@ author:
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services. See {{sec-changes-since-5706}} for more details.
-
-
-
-##  Motivation: Designing for Operations and Management {#sec-designing}
-
-   As the Internet has grown, IETF protocols have addressed a constantly growing set of
-   needs, such as web servers, collaboration services, and applications.
-   The number of IETF management technologies has been expanding and the
-   IETF management strategy has been changing to address the emerging
-   management requirements. In the past, most of the existing IETF management
-   standards were focused on creating MIB modules using the Structure of Management
-   Information (SMI)-based {{?STD58}} data modeling language, to monitor and manage
-   networking devices. Currently, the YANG data modeling language {{?RFC7950}} is recommended
-   to monitor and manage the IETF protocols in devices, networks, and network services.
-
-   In 2014, the IESG wrote a statement about "Writable MIB Module" {{IESG-STATEMENT}}.
-   This statement stresses that IETF working groups are encouraged to use the NETCONF/YANG
-   standards for configuration, especially in new charters.
-
-   In 2024, the IAB held the "Next Era of Network Management Operations (NEMOPS)"
-   workshop {{NEMOPS-WORKSHOP}}, building on the previous 2002 IAB workshop, which
-   led to the creation of {{?RFC3535}}. Given that much has changed
-   in the Internet’s operation and technological foundations since the first
-   workshop, the NEMOPS workshop reviewed the past outcomes and discussed any
-   operational barriers that prevented these technologies from being widely
-   implemented. With the industry, network operators, and protocol engineers
-   working in collaboration, the workshop developed a proposed plan of action
-   and provided network management recommendations for both the IETF and IRTF.
-   See {{?I-D.iab-nemops-workshop-report}} for the detailed information.
-
-   As a matter of fact, the operational environment and manageability of a protocol should
-   be considered from the start when New Protocols are designed.
 
 ##  This Document {#sec-this-doc}
 
