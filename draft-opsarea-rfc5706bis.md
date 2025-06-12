@@ -265,7 +265,7 @@ author:
    an XML-based protocol for configuration.
 
    Another conclusion was that the tools for event/alarm correlation and
-   for root cause analysis and logging are not sufficient and that there
+   for Cause analysis and logging are not sufficient and that there
    is a need to support a human interface and a programmatic interface.
    The IETF decided to standardize aspects of the de facto standard for
    system-logging security and programmatic support.
@@ -356,7 +356,7 @@ author:
 
    *  Fault Management: The process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and decucing underlying
-      causes. See {{sec-fm-mgmt}} for more information.
+      Causes. See {{sec-fm-mgmt}} for more information.
 
    *  Information Model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
@@ -401,9 +401,6 @@ author:
    *  Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
-
-   *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant
-     to describe the original event that is the foundation of all related Faults.
 
    *  Symptom: See {{?I-D.ietf-nmop-terminology}}.
 
@@ -473,7 +470,7 @@ author:
 
    There may be a need to support both a human interface (e.g., for
    troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and root cause analysis). The application programming
+   monitoring and Cause analysis). The application programming
    interfaces (APIs) and the human interfaces might benefit from being similar
    to ensure that the information exposed by both is
    consistent when presented to an operator. Identifying consistent
@@ -1039,11 +1036,11 @@ DM         DM        DM     --> concrete/detailed model
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?
 
-###  Root Cause Analysis {#sec-root-cause-analysis}
+###  Cause Analysis {#sec-cause-analysis}
 
-   Root cause analysis is about working out where in the network the
+   Cause analysis is about working out where in the network the
    fault is. For example, if end-to-end data delivery is failing
-   (reported by a notification), root cause analysis can help find the
+   (reported by a notification), Cause analysis can help find the
    failed link or node in the end-to-end path.
 
 ###  Fault Isolation {#sec-fault-isol}
