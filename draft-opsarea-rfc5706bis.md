@@ -332,7 +332,7 @@ author:
 
    *  Cause: See {{?I-D.ietf-nmop-terminology}}.
 
-   *  CLI: Command Line Interface. Typically, a proprietary interface to
+   *  CLI: Command Line Interface. Typically, a Proprietary Interface to
       hardware or software devices (e.g., routers or operating systems)
       for use by human operators
       directly at a terminal or via scripts. The commands, their syntax,
@@ -402,8 +402,8 @@ author:
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-   *  Root Cause: Since one fault may give rise to another fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant
-     to describe the original event that is the foundation of all related faults.
+   *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant
+     to describe the original event that is the foundation of all related Faults.
 
    *  Symptom: See {{?I-D.ietf-nmop-terminology}}.
 
@@ -567,10 +567,10 @@ author:
    take it off the fast path! The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
-   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem
+   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this Problem
    for RSVP and other protocols that require the router to take some
    packets off the fast-forwarding path. Yet, router alert has its own
-   problems in impacting router performance.
+   Problems in impacting router performance.
 
 ##  Impact on Network Operation {#sec-impact}
 
@@ -723,7 +723,7 @@ author:
    can be managed individually using a command line interface or a web
    page interface, that such a solution is enough. But when equipment
    from multiple vendors is combined into a large network, scalability
-   of management may become a problem. It may be important to have
+   of management may become a Problem. It may be important to have
    consistency in the management protocol support so network-wide operational
    processes can be automated. For example, a single switch might be
    easily managed using an interactive web interface when installed in a
@@ -973,7 +973,7 @@ DM         DM        DM     --> concrete/detailed model
 
 ## Fault Management {#sec-fm-mgmt}
 
-   The Protocol Designer should document the basic faults and health
+   The Protocol Designer should document the basic Faults and health
    indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
    as the alarms and events that must be propagated to management
    applications or exposed through a Data Model.
@@ -985,11 +985,11 @@ DM         DM        DM     --> concrete/detailed model
    If notifications are used to alert operators to certain conditions,
    then the Protocol Designer should discuss mechanisms to throttle
    notifications to prevent congestion and duplications of event
-   notifications. Will there be a hierarchy of faults, and will the
-   fault reporting be done by each fault in the hierarchy, or will only
-   the lowest fault be reported and the higher levels be suppressed?
+   notifications. Will there be a hierarchy of Faults, and will the
+   Fault reporting be done by each Fault in the hierarchy, or will only
+   the lowest Fault be reported and the higher levels be suppressed?
    Should there be aggregated status indicators based on concatenation
-   of propagated faults from a given domain or device?
+   of propagated Faults from a given domain or device?
 
    SNMP notifications and syslog messages can alert an operator when an
    aspect of the New Protocol fails or encounters an error or failure
@@ -1006,7 +1006,7 @@ DM         DM        DM     --> concrete/detailed model
    enable and disable them.
 
    Mechanisms for monitoring the liveness of the protocol and for
-   detecting faults in protocol connectivity are usually built into
+   detecting Faults in protocol connectivity are usually built into
    protocols. In some cases, mechanisms already exist within other
    protocols responsible for maintaining lower-layer connectivity (e.g.,
    ICMP echo), but often new procedures are required to detect failures
@@ -1014,15 +1014,15 @@ DM         DM        DM     --> concrete/detailed model
 
    These liveness monitoring mechanisms do not typically require
    additional management capabilities. However, when a system detects a
-   fault, there is often a requirement to coordinate recovery action
+   Fault, there is often a requirement to coordinate recovery action
    through management applications or at least to record the fact in an
    event log.
 
 ### Fault Determination {#sec-fault-determ}
 
-   It can be helpful to describe how faults can be pinpointed using
+   It can be helpful to describe how Faults can be pinpointed using
    management information. For example, counters might record instances
-   of error conditions. Some faults might be able to be pinpointed by
+   of error conditions. Some Faults might be able to be pinpointed by
    comparing the outputs of one device and the inputs of another device,
    looking for anomalies. Protocol Designers should consider what
    counters should count. If a single counter provided by vendor A
@@ -1048,7 +1048,7 @@ DM         DM        DM     --> concrete/detailed model
 
 ###  Fault Isolation {#sec-fault-isol}
 
-   It might be useful to isolate or quarantine faults, such as isolating
+   It might be useful to isolate or quarantine Faults, such as isolating
    a device that emits malformed messages that are necessary to
    coordinate connections properly. This might be able to be done by
    configuring next-hop devices to drop the faulty messages to prevent
@@ -1271,7 +1271,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Consider the capability of determining the operational activity, such
    as the number of messages in and the messages out, the number of
-   received messages rejected due to format problems, and the expected
+   received messages rejected due to format Problems, and the expected
    behaviors when a malformed message is received.
 
    What are the principal performance factors that need to be considered
