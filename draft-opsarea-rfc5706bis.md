@@ -1432,16 +1432,6 @@ DM         DM        DM     --> concrete/detailed model
 
 #  Documentation Guidelines {#sec-doc-guidelines}
 
-   This document outlines key considerations for Protocol Designers and
-   provides guidance on how these considerations ought to be documented.
-
-   This document does not describe interoperability requirements but
-   rather describes practices that are useful to follow when dealing
-   with operational and manageability aspects in IETF documents, so the capitalized
-   keywords from {{?RFC2119}} do not apply here. Any occurrence of words
-   like 'must' or 'should' needs to be interpreted only in the context
-   of their natural, English-language meaning.
-
 ##  Recommended Discussions {#sec-rec-discuss}
 
    After evaluating the operational and manageability aspects of a
