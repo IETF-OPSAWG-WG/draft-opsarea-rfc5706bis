@@ -150,7 +150,7 @@ author:
    implemented. With the industry, network operators, and protocol engineers
    working in collaboration, the workshop developed a proposed plan of action
    and provided network management recommendations for both the IETF and IRTF.
-   See I-D.iab-nemops-workshop-report for the detailed information.
+   See {{?I-D.iab-nemops-workshop-report}} for the detailed information.
 
    As a matter of fact, the operational environment and manageability of a protocol should
    be considered from the start when New Protocols are designed.
