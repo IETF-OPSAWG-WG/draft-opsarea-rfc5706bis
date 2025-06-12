@@ -947,7 +947,7 @@ DM         DM        DM     --> concrete/detailed model
      business processes, these models should focus on common aspects of a service
      with strong multi-party consensus. Examples of service models include
      the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM)
-     {{?RFC8499}}.
+     {{?RFC8466}}.
 
   A common challenge in YANG Data Model development lies in defining the
   relationships between abstract service or network constructs and the
