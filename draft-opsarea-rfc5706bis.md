@@ -328,8 +328,6 @@ author:
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
-   *  Anomaly: See {{?I-D.ietf-nmop-terminology}}.
-
    *  Cause: See {{?I-D.ietf-nmop-terminology}}.
 
    *  CLI: Command Line Interface. Typically, a Proprietary Interface to
@@ -401,9 +399,6 @@ author:
    *  Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
-
-   *  Symptom: See {{?I-D.ietf-nmop-terminology}}.
-
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
