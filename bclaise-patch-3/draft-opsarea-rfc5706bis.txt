@@ -241,8 +241,8 @@ Table of Contents
    management needs, is provided in [CHECKLIST].
 
    This document is also of interest to the broader community, who wants
-   to understand, contribute to, and review drafts, taking into OPS
-   considerations into account.
+   to understand, contribute to, and review Internet-Drafts, taking into
+   OPS considerations into account.
 
 1.3.  Changes Since RFC 5706
 
