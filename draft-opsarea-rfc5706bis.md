@@ -214,7 +214,7 @@ author:
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
-   and review drafts, taking into OPS considerations into account.
+   and review Internet-Drafts, taking into OPS considerations into account.
 
 ## Changes Since RFC 5706 {#sec-changes-since-5706}
 
