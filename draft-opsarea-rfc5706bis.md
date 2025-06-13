@@ -209,7 +209,7 @@ author:
    Area Director who is in the process of creating a new WG Charter, this document lists some considerations
    of the functionality needed to operate and manage new Protocol and Protocol Extensions.
 
-   The OPS directorate can use this document to guide the review. On top of that, a list of guidelines and a
+   The OPS directorate can use this document to guide performing reviews. On top of that, a list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
