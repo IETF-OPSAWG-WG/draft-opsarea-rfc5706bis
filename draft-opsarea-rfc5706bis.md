@@ -168,7 +168,7 @@ author:
    consider when thinking about the management and deployment of a new
    protocol, and to provide guidance about documenting the
    considerations. As it is useful to anyone involved in the document lifecyle:
-   from the authors drafting the protocol to those reviewing and evaluating its draft
+   from the authors writing the protocol specification to those reviewing and evaluating its draft
    content, including the WG chair, WG advisor, Document Shepherd, responsible AD, and the IESG.
 
    The following guidelines are designed to help
