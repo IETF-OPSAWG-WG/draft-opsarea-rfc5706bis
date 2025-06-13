@@ -1068,7 +1068,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 14 December 2025</td>
+<td class="center">Expires 15 December 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1084,12 +1084,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-06-12" class="published">12 June 2025</time>
+<time datetime="2025-06-13" class="published">13 June 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-12-14">14 December 2025</time></dd>
+<dd class="expires"><time datetime="2025-12-15">15 December 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1158,7 +1158,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 14 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 15 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1191,22 +1191,16 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.1.1"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.1">
-                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="auto internal xref">1.1</a>.  <a href="#name-designing-for-operations-an" class="internal xref">Designing for Operations and Management</a></p>
+                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="auto internal xref">1.1</a>.  <a href="#name-this-document" class="internal xref">This Document</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.2">
-                <p id="section-toc.1-1.1.2.2.1" class="keepWithNext"><a href="#section-1.2" class="auto internal xref">1.2</a>.  <a href="#name-this-document" class="internal xref">This Document</a></p>
+                <p id="section-toc.1-1.1.2.2.1" class="keepWithNext"><a href="#section-1.2" class="auto internal xref">1.2</a>.  <a href="#name-audience" class="internal xref">Audience</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.3">
-                <p id="section-toc.1-1.1.2.3.1" class="keepWithNext"><a href="#section-1.3" class="auto internal xref">1.3</a>.  <a href="#name-motivation" class="internal xref">Motivation</a></p>
+                <p id="section-toc.1-1.1.2.3.1" class="keepWithNext"><a href="#section-1.3" class="auto internal xref">1.3</a>.  <a href="#name-changes-since-rfc-5706" class="internal xref">Changes Since RFC 5706</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.4">
-                <p id="section-toc.1-1.1.2.4.1"><a href="#section-1.4" class="auto internal xref">1.4</a>.  <a href="#name-background" class="internal xref">Background</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.5">
-                <p id="section-toc.1-1.1.2.5.1"><a href="#section-1.5" class="auto internal xref">1.5</a>.  <a href="#name-changes-since-rfc-5706" class="internal xref">Changes Since RFC 5706</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.6">
-                <p id="section-toc.1-1.1.2.6.1"><a href="#section-1.6" class="auto internal xref">1.6</a>.  <a href="#name-to-do-list" class="internal xref">TO DO LIST</a></p>
+                <p id="section-toc.1-1.1.2.4.1"><a href="#section-1.4" class="auto internal xref">1.4</a>.  <a href="#name-to-do-list" class="internal xref">TO DO LIST</a></p>
 </li>
             </ul>
 </li>
@@ -1360,77 +1354,80 @@ svg :is([fill="white"], [fill^="#fff"]) {
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
-   management particularly hard. This document provides guidelines to
-   help Protocol Designers and working groups (WGs) consider the operations
-   and management functionality for their New Protocol or Protocol
-   Extension at an earlier phase.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">This document obsoletes <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> and fully updates its content
+   management particularly hard. As a matter of fact, the operational
+   environment and manageability of a protocol should be considered from the
+   start when New Protocols are designed.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">This document provides guidelines to help Protocol Designers and working
+   groups (WGs) consider the operations and management functionality for
+   their New Protocol or Protocol Extension at an earlier phase.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">This document obsoletes <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> and fully updates its content
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational and Management
    Considerations" section in Internet-Drafts, before they are progressed
    for publication as RFCs. Also, the document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
-   services. See <a href="#sec-changes-since-5706" class="auto internal xref">Section 1.5</a> for more details.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<div id="sec-designing">
+   services. See <a href="#sec-changes-since-5706" class="auto internal xref">Section 1.3</a> for more details.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<div id="sec-this-doc">
 <section id="section-1.1">
-        <h3 id="name-designing-for-operations-an">
-<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-designing-for-operations-an" class="section-name selfRef">Designing for Operations and Management</a>
+        <h3 id="name-this-document">
+<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-this-document" class="section-name selfRef">This Document</a>
         </h3>
-<p id="section-1.1-1">The operational environment and manageability of a protocol should
-   be considered from the start when New Protocols are designed.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
-<p id="section-1.1-2">As the Internet has grown, IETF protocols have addressed a constantly growing set of
-   needs, such as web servers, collaboration services, and applications.
-   The number of IETF management technologies has been expanding and the
-   IETF management strategy has been changing to address the emerging
-   management requirements. In the past, most of the existing IETF management
-   standards were focused on creating MIB modules using the Structure of Management Information (SMI)-based <span>[<a href="#STD58" class="cite xref">STD58</a>]</span>
-   data modeling language, to monitor and manage networking devices.
-   Currently, the YANG data modeling language <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> is recommended to
-   monitor and manage the IETF protocols in devices, networks, and network services.
-   Management requirements continually evolve in the IETF. Therefore,
-   the management protocols used should track with current IETF
-   recommendations.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
-<p id="section-1.1-3">Protocol Designers should consider which operations and management
+<p id="section-1.1-1">This document provides a set of guidelines for considering
+   operations and management in an IETF specification
+   with an eye toward being flexible while also striving for
+   interoperability.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
+<p id="section-1.1-2">Entirely New Protocols may require significant consideration of expected
+   operations and management, while extensions to existing, widely
+   deployed protocols may have established de facto operations and
+   management practices that are already well understood. However, the guidance
+   in this document does not mandate providing a comprehensive inventory of
+   all operational and manageability considerations. Instead, the guidance is to
+   focus on key aspects that will ease deployability and are essential for operating and maintaining
+   the technology.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
+<p id="section-1.1-3">Suitable management approaches may vary for different areas, working
+   groups, and protocols in the IETF. This document does not prescribe
+   a fixed solution or format in dealing with operational and management
+   aspects of IETF protocols. However, these aspects should be
+   considered for any IETF protocol, given the IETF's role in developing technologies and
+   protocols to be deployed and operated in the real-world Internet.<a href="#section-1.1-3" class="pilcrow">¶</a></p>
+<p id="section-1.1-4">A WG may decide that its protocol does not need interoperable
+   management or a standardized data model, but this should be a
+   deliberate decision, not the result of omission. This document
+   provides some guidelines for those considerations.<a href="#section-1.1-4" class="pilcrow">¶</a></p>
+<p id="section-1.1-5">This document makes a distinction between "Operational
+   Considerations" and "Management Considerations", although the two are
+   closely related. The operational considerations apply to operating the protocol within a network, even
+   if there were no management protocol actively being used. The section on manageability is focused on
+   management technology, such as how to utilize management protocols
+   and how to design management data models.<a href="#section-1.1-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-audience">
+<section id="section-1.2">
+        <h3 id="name-audience">
+<a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-audience" class="section-name selfRef">Audience</a>
+        </h3>
+<p id="section-1.2-1">The purpose of this document is to provide guidance about what to
+   consider when thinking about the management and deployment of a new
+   protocol, and to provide guidance about documenting the
+   considerations. As it is useful to anyone involved in the document lifecyle:
+   from the authors writing the protocol specification to those reviewing and evaluating its draft
+   content, including WG chairs, WG advisors, Document Shepherd, Responsible Area Director, and the IESG.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+<p id="section-1.2-2">The following guidelines are designed to help
+   Protocol Designers provide a reasonably consistent format for such
+   documentation. Separate manageability and operational considerations
+   sections are desirable in many cases, but their structure and
+   location are a decision that can be made from case to case.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
+<p id="section-1.2-3">Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
    and data models that could be used to address those needs. This is
    similar to a WG that considers which security threats are relevant to
    their protocol, documents (in the required Security Considerations section, per RFC Style Guide <span>[<a href="#RFC7322" class="cite xref">RFC7322</a>]</span>)
    how threats should be mitigated, and then suggests appropriate standard
-   protocols that could mitigate the threats.<a href="#section-1.1-3" class="pilcrow">¶</a></p>
-<p id="section-1.1-4">When a WG considers operation and management functionality for a
-   protocol, the document should contain enough information for readers
-   to understand how the protocol will be deployed and managed. The considerations
-   do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
-   should expect that considerations for operations and management may
-   need to be updated in the future, after further operational
-   experience has been gained.<a href="#section-1.1-4" class="pilcrow">¶</a></p>
-<p id="section-1.1-5">A list of guidelines and a
-   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-1.1-5" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="sec-this-doc">
-<section id="section-1.2">
-        <h3 id="name-this-document">
-<a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-this-document" class="section-name selfRef">This Document</a>
-        </h3>
-<p id="section-1.2-1">This document makes a distinction between "Operational
-   Considerations" and "Management Considerations", although the two are
-   closely related. The operational considerations apply to operating the protocol within a network, even
-   if there were no management protocol actively being used. The section on manageability is focused on
-   management technology, such as how to utilize management protocols
-   and how to design management data models.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
-<p id="section-1.2-2">The purpose of this document is to provide guidance about what to
-   consider when thinking about the management and deployment of a new
-   protocol, and to provide guidance about documenting the
-   considerations. The following guidelines are designed to help
-   writers provide a reasonably consistent format for such
-   documentation. Separate manageability and operational considerations
-   sections are desirable in many cases, but their structure and
-   location are a decision that can be made from case to case.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
-<p id="section-1.2-3">This document does not impose a solution, imply that a formal data
+   protocols that could mitigate the threats.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
+<p id="section-1.2-4">This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
    is mandatory. If Protocol Designers conclude that the technology can be managed
    solely by using Proprietary Interfaces or that it does
@@ -1438,149 +1435,67 @@ svg :is([fill="white"], [fill^="#fff"]) {
    but it is a decision that should be explicit in a manageability discussion
    -- that this is how the protocol will need to be operated and managed.
    Protocol Designers should avoid having manageability pushed for a later
-   phase of the development of the standard.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
-<p id="section-1.2-4">A list of guidelines and a
+   phase of the development of the standard.<a href="#section-1.2-4" class="pilcrow">¶</a></p>
+<p id="section-1.2-5">When a WG considers operation and management functionality for a
+   protocol, the document should contain enough information for readers
+   to understand how the protocol will be deployed and managed. The considerations
+   do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
+   should expect that considerations for operations and management may
+   need to be updated in the future, after further operational
+   experience has been gained.<a href="#section-1.2-5" class="pilcrow">¶</a></p>
+<p id="section-1.2-6">For the OPS Area Directors or the IESG, this document helps evaluating the
+   content of the new "Operational and Management Considerations" section. As an
+   Area Director who is in the process of creating a new WG Charter, this document lists some considerations
+   of the functionality needed to operate and manage new Protocol and Protocol Extensions.<a href="#section-1.2-6" class="pilcrow">¶</a></p>
+<p id="section-1.2-7">The OPS directorate can use this document to guide performing reviews. On top of that, a list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-1.2-4" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="sec-motivation">
-<section id="section-1.3">
-        <h3 id="name-motivation">
-<a href="#section-1.3" class="section-number selfRef">1.3. </a><a href="#name-motivation" class="section-name selfRef">Motivation</a>
-        </h3>
-<p id="section-1.3-1">For years the IETF community has used the IETF Standard Management
-   Framework, including the Simple Network Management Protocol
-   <span>[<a href="#RFC3410" class="cite xref">RFC3410</a>]</span>, the Structure of Management Information (SMI) <span>[<a href="#STD58" class="cite xref">STD58</a>]</span>, and MIB
-   Data Models for managing New Protocols. As the Internet has evolved,
-   operators have found the reliance on one protocol and one schema
-   language for managing all aspects of the Internet inadequate. The
-   IESG policy to require working groups to write a MIB module to
-   provide manageability for New Protocols is being replaced by a policy
-   that is more open to using a variety of management protocols and data
-   models designed to achieve different goals. In 2014, the IESG wrote a
-   statement about "Writable MIB Module" <span>[<a href="#IESG-STATEMENT" class="cite xref">IESG-STATEMENT</a>]</span>.
-   This statement stresses that IETF working groups are encouraged to use the NETCONF/YANG
-   standards for configuration, especially in new charters.<a href="#section-1.3-1" class="pilcrow">¶</a></p>
-<p id="section-1.3-2">This document provides some initial guidelines for considering
-   operations and management in an IETF Management Framework that
-   consists of multiple protocols and multiple data modeling languages,
-   with an eye toward being flexible while also striving for
-   interoperability.<a href="#section-1.3-2" class="pilcrow">¶</a></p>
-<p id="section-1.3-3">Fully New Protocols may require significant consideration of expected
-   operations and management, while extensions to existing, widely
-   deployed protocols may have established de facto operations and
-   management practices that are already well understood.<a href="#section-1.3-3" class="pilcrow">¶</a></p>
-<p id="section-1.3-4">Suitable management approaches may vary for different areas, working
-   groups, and protocols in the IETF. This document does not prescribe
-   a fixed solution or format in dealing with operational and management
-   aspects of IETF protocols. However, these aspects should be
-   considered for any IETF protocol because we develop technologies and
-   protocols to be deployed and operated in the real-world Internet. A WG
-   may decide that its protocol does not need interoperable
-   management or a standardized data model, but this should be a
-   deliberate decision, not the result of omission. This document
-   provides some guidelines for those considerations.<a href="#section-1.3-4" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="sec-background">
-<section id="section-1.4">
-        <h3 id="name-background">
-<a href="#section-1.4" class="section-number selfRef">1.4. </a><a href="#name-background" class="section-name selfRef">Background</a>
-        </h3>
-<p id="section-1.4-1">There have been a significant number of efforts, meetings, and
-   documents that are related to Internet operations and management.
-   Some of them are mentioned here to help Protocol Designers find
-   documentation of previous efforts. Hopefully, providing these
-   references will help the IETF avoid rehashing old discussions and
-   reinventing old solutions.<a href="#section-1.4-1" class="pilcrow">¶</a></p>
-<p id="section-1.4-2">In 1988, the Internet Architecture Board (IAB) published "IAB Recommendations for the Development
-   of Internet Network Management Standards" <span>[<a href="#RFC1052" class="cite xref">RFC1052</a>]</span>, which
-   recommended a solution that, where possible, deliberately separates
-   modeling languages, data models, and the protocols that carry data.
-   The goal is to allow standardized information and data models to be
-   used by different protocols.<a href="#section-1.4-2" class="pilcrow">¶</a></p>
-<p id="section-1.4-3">In 2001, Operations and Management Area design teams were created to
-   document requirements related to the configuration of IP-based
-   networks. One output was "Requirements for Configuration Management
-   of IP-based Networks" <span>[<a href="#RFC3139" class="cite xref">RFC3139</a>]</span>.<a href="#section-1.4-3" class="pilcrow">¶</a></p>
-<p id="section-1.4-4">In 2002, the IAB held a workshop on
-   Network Management <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span> that discussed the strengths and
-   weaknesses of some IETF network management protocols and compared
-   them to operational needs, especially configuration.<a href="#section-1.4-4" class="pilcrow">¶</a></p>
-<p id="section-1.4-5">One issue discussed was the user-unfriendliness of the binary format
-   of SNMP and Common Open Policy Service (COPS) Usage for
-   Policy Provisioning (COPS-PR) <span>[<a href="#RFC3084" class="cite xref">RFC3084</a>]</span>, and it was recommended that
-   the IETF explore an XML-based Structure of Management Information and
-   an XML-based protocol for configuration.<a href="#section-1.4-5" class="pilcrow">¶</a></p>
-<p id="section-1.4-6">Another conclusion was that the tools for event/alarm correlation and
-   for root cause analysis and logging are not sufficient and that there
-   is a need to support a human interface and a programmatic interface.
-   The IETF decided to standardize aspects of the de facto standard for
-   system-logging security and programmatic support.<a href="#section-1.4-6" class="pilcrow">¶</a></p>
-<p id="section-1.4-7">In 2006, the IETF discussed whether the Management Framework should
-   be updated to accommodate multiple IETF schema languages for
-   describing the structure of management information and multiple IETF
-   standard protocols for performing management tasks. The IESG asked
-   that a document be written to discuss how Protocol Designers and
-   working groups should address management in this emerging multi-
-   protocol environment. This document and some planned companion
-   documents attempt to provide some guidelines for navigating the
-   rapidly shifting operating and management environments.<a href="#section-1.4-7" class="pilcrow">¶</a></p>
-<p id="section-1.4-8">In 2014, the IESG wrote its statement on "Writable MIB Module" <span>[<a href="#IESG-STATEMENT" class="cite xref">IESG-STATEMENT</a>]</span>, as
-   mentioned above.<a href="#section-1.4-8" class="pilcrow">¶</a></p>
-<p id="section-1.4-9">In 2024, the IAB held the "Next Era of Network Management Operations (NEMOPS)"
-   workshop <span>[<a href="#NEMOPS-WORKSHOP" class="cite xref">NEMOPS-WORKSHOP</a>]</span>, building on the previous 2002 IAB workshop. Given that much has changed
-   in the Internet’s operation and technological foundations since the first
-   workshop, the NEMOPS workshop reviewed the past outcomes and discussed any
-   operational barriers that prevented these technologies from being widely
-   implemented. With the industry, network operators, and protocol engineers
-   working in collaboration, the workshop developed a proposed plan of action
-   and provided network management recommendations for both the IETF and IRTF.<a href="#section-1.4-9" class="pilcrow">¶</a></p>
+   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-1.2-7" class="pilcrow">¶</a></p>
+<p id="section-1.2-8">This document is also of interest to the broader community, who wants to understand, contribute to,
+   and review Internet-Drafts, taking into OPS considerations into account.<a href="#section-1.2-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-changes-since-5706">
-<section id="section-1.5">
+<section id="section-1.3">
         <h3 id="name-changes-since-rfc-5706">
-<a href="#section-1.5" class="section-number selfRef">1.5. </a><a href="#name-changes-since-rfc-5706" class="section-name selfRef">Changes Since RFC 5706</a>
+<a href="#section-1.3" class="section-number selfRef">1.3. </a><a href="#name-changes-since-rfc-5706" class="section-name selfRef">Changes Since RFC 5706</a>
         </h3>
-<p id="section-1.5-1">The following changes have been made to the guidelines published in  <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span>:<a href="#section-1.5-1" class="pilcrow">¶</a></p>
+<p id="section-1.3-1">The following changes have been made to the guidelines published in  <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span>:<a href="#section-1.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-1.5-2.1">
-            <p id="section-1.5-2.1.1">Change intended status from Informational to Best Current Practice<a href="#section-1.5-2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-1.3-2.1">
+            <p id="section-1.3-2.1.1">Change intended status from Informational to Best Current Practice<a href="#section-1.3-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.5-2.2">
-            <p id="section-1.5-2.2.1">Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub<a href="#section-1.5-2.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-1.3-2.2">
+            <p id="section-1.3-2.2.1">Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub<a href="#section-1.3-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.5-2.3">
-            <p id="section-1.5-2.3.1">Add a requirement for an "Operational and Management Considerations" section in all Internet-Drafts, along with specific guidance on its content.<a href="#section-1.5-2.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-1.3-2.3">
+            <p id="section-1.3-2.3.1">Add a requirement for an "Operational and Management Considerations" section in all Internet-Drafts, along with specific guidance on its content.<a href="#section-1.3-2.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-1.5-2.4">
-            <p id="section-1.5-2.4.1">Update the operational and manageability-related technologies to reflect over 15 years of advancements<a href="#section-1.5-2.4.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-1.3-2.4">
+            <p id="section-1.3-2.4.1">Update the operational and manageability-related technologies to reflect over 15 years of advancements<a href="#section-1.3-2.4.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-1.5-2.4.2.1">
-                <p id="section-1.5-2.4.2.1.1">Provide focus and details on YANG-based standards, deprioritizing MIB Modules.<a href="#section-1.5-2.4.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-1.3-2.4.2.1">
+                <p id="section-1.3-2.4.2.1.1">Provide focus and details on YANG-based standards, deprioritizing MIB Modules.<a href="#section-1.3-2.4.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="section-1.5-2.4.2.2">
-                <p id="section-1.5-2.4.2.2.1">Add a "YANG Data Model Considerations" section<a href="#section-1.5-2.4.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="section-1.3-2.4.2.2">
+                <p id="section-1.3-2.4.2.2.1">Add a "YANG Data Model Considerations" section<a href="#section-1.3-2.4.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="section-1.5-2.4.2.3">
-                <p id="section-1.5-2.4.2.3.1">Update the "Available Management Technologies" landscape<a href="#section-1.5-2.4.2.3.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="section-1.3-2.4.2.3">
+                <p id="section-1.3-2.4.2.3.1">Update the "Available Management Technologies" landscape<a href="#section-1.3-2.4.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="section-1.5-2.5">
-            <p id="section-1.5-2.5.1">Add an "Operational and Management Tooling Considerations" section<a href="#section-1.5-2.5.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-1.3-2.5">
+            <p id="section-1.3-2.5.1">Add an "Operational and Management Tooling Considerations" section<a href="#section-1.3-2.5.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
 </div>
 <div id="sec-todo">
-<section id="section-1.6">
+<section id="section-1.4">
         <h3 id="name-to-do-list">
-<a href="#section-1.6" class="section-number selfRef">1.6. </a><a href="#name-to-do-list" class="section-name selfRef">TO DO LIST</a>
+<a href="#section-1.4" class="section-number selfRef">1.4. </a><a href="#name-to-do-list" class="section-name selfRef">TO DO LIST</a>
         </h3>
-<p id="section-1.6-1">See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues<a href="#section-1.6-1" class="pilcrow">¶</a></p>
+<p id="section-1.4-1">See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues<a href="#section-1.4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2998,10 +2913,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
       <dd>
 <span class="refAuthor">Mockapetris, P.</span>, <span class="refTitle">"Domain names - concepts and facilities"</span>, <span class="seriesInfo">STD 13</span>, <span class="seriesInfo">RFC 1034</span>, <span class="seriesInfo">DOI 10.17487/RFC1034</span>, <time datetime="1987-11" class="refDate">November 1987</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1034">https://www.rfc-editor.org/rfc/rfc1034</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC1052">[RFC1052]</dt>
-      <dd>
-<span class="refAuthor">Cerf, V.</span>, <span class="refTitle">"IAB recommendations for the development of Internet network management standards"</span>, <span class="seriesInfo">RFC 1052</span>, <span class="seriesInfo">DOI 10.17487/RFC1052</span>, <time datetime="1988-04" class="refDate">April 1988</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1052">https://www.rfc-editor.org/rfc/rfc1052</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC1958">[RFC1958]</dt>
       <dd>
 <span class="refAuthor">Carpenter, B., Ed.</span>, <span class="refTitle">"Architectural Principles of the Internet"</span>, <span class="seriesInfo">RFC 1958</span>, <span class="seriesInfo">DOI 10.17487/RFC1958</span>, <time datetime="1996-06" class="refDate">June 1996</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1958">https://www.rfc-editor.org/rfc/rfc1958</a>&gt;</span>. </dd>
@@ -3037,10 +2948,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC3060">[RFC3060]</dt>
       <dd>
 <span class="refAuthor">Moore, B.</span>, <span class="refAuthor">Ellesson, E.</span>, <span class="refAuthor">Strassner, J.</span>, and <span class="refAuthor">A. Westerinen</span>, <span class="refTitle">"Policy Core Information Model -- Version 1 Specification"</span>, <span class="seriesInfo">RFC 3060</span>, <span class="seriesInfo">DOI 10.17487/RFC3060</span>, <time datetime="2001-02" class="refDate">February 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3060">https://www.rfc-editor.org/rfc/rfc3060</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC3084">[RFC3084]</dt>
-      <dd>
-<span class="refAuthor">Chan, K.</span>, <span class="refAuthor">Seligson, J.</span>, <span class="refAuthor">Durham, D.</span>, <span class="refAuthor">Gai, S.</span>, <span class="refAuthor">McCloghrie, K.</span>, <span class="refAuthor">Herzog, S.</span>, <span class="refAuthor">Reichmeyer, F.</span>, <span class="refAuthor">Yavatkar, R.</span>, and <span class="refAuthor">A. Smith</span>, <span class="refTitle">"COPS Usage for Policy Provisioning (COPS-PR)"</span>, <span class="seriesInfo">RFC 3084</span>, <span class="seriesInfo">DOI 10.17487/RFC3084</span>, <time datetime="2001-03" class="refDate">March 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3084">https://www.rfc-editor.org/rfc/rfc3084</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC3139">[RFC3139]</dt>
       <dd>
