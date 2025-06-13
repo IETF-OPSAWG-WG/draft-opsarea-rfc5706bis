@@ -148,9 +148,8 @@ Table of Contents
 1.1.  This Document
 
    This document provides a set of guidelines for considering operations
-   and management in an IETF specification consists of multiple
-   protocols and multiple data modeling languages, with an eye toward
-   being flexible while also striving for interoperability.
+   and management in an IETF specification with an eye toward being
+   flexible while also striving for interoperability.
 
    Entirely New Protocols may require significant consideration of
    expected operations and management, while extensions to existing,
