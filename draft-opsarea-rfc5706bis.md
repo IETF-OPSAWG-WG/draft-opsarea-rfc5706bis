@@ -265,7 +265,7 @@ author:
    an XML-based protocol for configuration.
 
    Another conclusion was that the tools for event/alarm correlation and
-   for Cause analysis and logging are not sufficient and that there
+   for Cause analysis (etiology) and logging are not sufficient and that there
    is a need to support a human interface and a programmatic interface.
    The IETF decided to standardize aspects of the de facto standard for
    system-logging security and programmatic support.
