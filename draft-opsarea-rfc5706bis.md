@@ -206,7 +206,7 @@ author:
 
    For the OPS Area Directors or the IESG, this document helps evaluating the
    content of the new "Operational and Management Considerations" section. As an
-   Area Director busy creating a new charter, this document document some considerations
+   Area Director who is in the process of creating a new WG Charter, this document lists some considerations
    of the functionality needed to operate and manage new Protocol and Protocol Extensions.
 
    The OPS directorate can use this document to guide the review. On top of that, a list of guidelines and a
