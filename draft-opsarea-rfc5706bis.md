@@ -1020,7 +1020,7 @@ DM         DM        DM     --> concrete/detailed model
 
 ###  Cause Analysis {#sec-cause-analysis}
 
-   Cause analysis is about working out where in the network the
+   Cause analysis is about working out where the
    fault is. For example, if end-to-end data delivery is failing
    (reported by a notification, typically), Cause analysis can help find the
    failed link or node in the end-to-end path.
