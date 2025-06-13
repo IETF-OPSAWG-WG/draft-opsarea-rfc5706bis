@@ -129,7 +129,7 @@ author:
 ##  This Document {#sec-this-doc}
 
    This document provides a set of guidelines for considering
-   operations and management in an IETF specification that
+   operations and management in an IETF specification
    consists of multiple protocols and multiple data modeling languages,
    with an eye toward being flexible while also striving for
    interoperability.
