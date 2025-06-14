@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 15 December 2025                                      A. Farrel
+Expires: 16 December 2025                                      A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 15 December 2025                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            13 June 2025
+                                                            14 June 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 December 2025.
+   This Internet-Draft will expire on 16 December 2025.
 
 Copyright Notice
 
@@ -324,7 +324,7 @@ Table of Contents
 
    *  Fault Management: The process of interpreting fault notifications
       and other alerts and alarms, isolating faults, correlating them,
-      and decucing underlying causes.  See Section 5.3 for more
+      and deducing underlying causes.  See Section 5.3 for more
       information.
 
    *  Information Model: An abstraction and representation of the
@@ -797,7 +797,7 @@ Table of Contents
 
    *  NETCONF Configuration Protocol [RFC6241]
 
-   *  the IP Flow Information Export (IPFIX) Protocol [RFC7011]) for
+   *  the IP Flow Information Export (IPFIX) Protocol [RFC7011] for
       usage accounting
 
    *  the syslog protocol [RFC5424] for logging
