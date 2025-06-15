@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-12T00:50:01.847947+00:00",
+  "timestamp": "2025-06-15T00:55:53.267988+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -65,7 +65,7 @@
       "id": "I_kwDOOWPBqs6xqZST",
       "title": "More clarity on the terminology and leverage the work led by Adrian in NMOP",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -74,8 +74,8 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-08T18:48:58Z",
-      "updatedAt": "2025-06-05T13:47:31Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-12T13:40:55Z",
+      "closedAt": "2025-06-12T13:40:54Z",
       "comments": [
         {
           "author": "bclaise",
@@ -132,6 +132,13 @@
           "body": "Updated proposed text...\n\n   *  Problem: See {{?I-D.ietf-nmop-terminology}}.\n\n   *  Fault and Fault management: Fault is defined in {{?I-D.ietf-nmop-terminology}}.\n      Fault management is the process of interpreting fault notifications and other alerts\n      and alarms, isolating faults, correlating them, and decucing underlying causes. See\n      {{sec-fm-mgt}} for more information.\n\n   *  Anomaly: See {{?I-D.ietf-nmop-terminology}} and {{?I-D.ietf-nmop-network-anomaly-architecture}}.\n\n   *  Cause and Root cause: Cause is defined in ({{?I-D.ietf-nmop-terminology}}). Since one \n      fault may give rise to another, a root cause {{sec-root-cause-analysis}} is commonly meant\n      to describe the original event that is the foundation of all related faults.\n",
           "createdAt": "2025-06-05T13:47:30Z",
           "updatedAt": "2025-06-05T13:47:30Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "We believe all terms are addressed. (root) cause remains open for now, in a different issues. Closing this one.",
+          "createdAt": "2025-06-12T13:40:54Z",
+          "updatedAt": "2025-06-12T13:40:54Z"
         }
       ]
     },
@@ -767,7 +774,7 @@
       "id": "I_kwDOOWPBqs62wOiv",
       "title": "RFC 5706 versus RFC5706bis different audiences",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/37",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -778,8 +785,8 @@
       ],
       "body": "RFC 5706 mentioned\nAppendix A.  Operations and Management Review Checklist\n\n   This appendix provides a quick checklist of issues that protocol\n   designers should expect operations and management expert reviewers to\n   look for when reviewing a document being proposed for consideration\n   as a protocol standard.\n\nRFC 5706 audience was primarily for OPS-DIR (but also for authors writing an Operational Section.\n\nRFC 5706bis audience is wider, because the scope is wider: all draft authors, WG chairs, IESG",
       "createdAt": "2025-05-15T12:33:41Z",
-      "updatedAt": "2025-05-29T13:51:35Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-13T07:37:36Z",
+      "closedAt": "2025-06-13T07:37:36Z",
       "comments": [
         {
           "author": "bclaise",
@@ -1003,15 +1010,15 @@
       "id": "I_kwDOOWPBqs65_Q6U",
       "title": "Redundant motivation",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/55",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/blob/9bf61a92b48f517d3ab78747875330b1295ee9a0/draft-opsarea-rfc5706bis.md?plain=1#L223\n\nRedundant with what was already said in [1.2. ](https://ietf-opsawg-wg.github.io/draft-opsarea-rfc5706bis/draft-opsarea-rfc5706bis.html#section-1.2)[This Document](https://ietf-opsawg-wg.github.io/draft-opsarea-rfc5706bis/draft-opsarea-rfc5706bis.html#name-this-document)",
       "createdAt": "2025-06-05T08:47:59Z",
-      "updatedAt": "2025-06-06T09:07:26Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-12T13:37:13Z",
+      "closedAt": "2025-06-12T13:37:13Z",
       "comments": [
         {
           "author": "boucadair",
@@ -1112,20 +1119,114 @@
       "id": "I_kwDOOWPBqs6640YS",
       "title": "Position \"Documentation Guidelines\" Section early in the document",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/68",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
-        "cpignata"
+        "cpignata",
+        "sbarguil"
       ],
       "labels": [
         "documentation"
       ],
       "body": "I think that we need to better highlight the main recommendations. For that, we may rearrange the text so that the text with the main reco is provided first and then dive into specific Ops/Mgt cons in the following sections.\n\nOLD:\n\n>    4.  Operational Considerations - How Will the New Protocol Fit into\n>            the Current Environment?  . . . . . . . . . . . . . . . .   \n>      ...\n>    5.  Management Considerations - How Will the Protocol Be\n>            Managed?  . . . . . . . . . . . . . . . . . . . . . . . .  \n>      ...\n>    6.  Operational and Management Tooling Considerations . . . . . .  \n>    7.  Documentation Guidelines  . . . . . . . . . . . . . . . . . . \n\nNEW:\n\n>    4.  Documentation Guidelines  . . . . . . . . . . . . . . . . . . \n>    5.  Operational Considerations - How Will the New Protocol/Protocol Extension  Fit into\n>            the Current Environment?  . . . . . . . . . . . . . . . .   \n>      ...\n>    6.  Management Considerations - How Will the Protocol/Protocol Extension Be\n>            Managed?  . . . . . . . . . . . . . . . . . . . . . . . .  \n>      ...\n>    7.  Operational and Management Tooling Considerations . . . . . .  \n",
       "createdAt": "2025-06-11T04:45:26Z",
-      "updatedAt": "2025-06-11T19:26:41Z",
+      "updatedAt": "2025-06-12T14:20:04Z",
+      "closedAt": "2025-06-12T14:20:04Z",
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Agreed in the call of June 12th",
+          "createdAt": "2025-06-12T13:29:14Z",
+          "updatedAt": "2025-06-12T13:29:14Z"
+        },
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@boucadair the new order is this one: \n\n![Image](https://github.com/user-attachments/assets/8b3e2397-6808-43b5-8829-b97ed322d9e0)\n\nIn the issue you have 4 as Documentation Guidelines but in the PR it is 3.  Am I missing some section? ",
+          "createdAt": "2025-06-12T13:54:23Z",
+          "updatedAt": "2025-06-12T13:54:23Z"
+        }
+      ]
+    },
+    {
+      "number": 73,
+      "id": "I_kwDOOWPBqs67LZiC",
+      "title": "RFC 2119 keywords for this BCP required?",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/73",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "MUST include this new section?\nSHOULD include this new section?\nMUST be thinking about this...?",
+      "createdAt": "2025-06-12T13:35:18Z",
+      "updatedAt": "2025-06-13T01:26:55Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I believe keywords are required, but would defer to @boucadair .\nSHOULD include (there might be reasons why not including it, which ought to be documented)\nMUST consider the inclusion.",
+          "createdAt": "2025-06-13T01:26:55Z",
+          "updatedAt": "2025-06-13T01:26:55Z"
+        }
+      ]
+    },
+    {
+      "number": 75,
+      "id": "I_kwDOOWPBqs67WA99",
+      "title": "Any Perf-related guidance?",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/75",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Email thread to the pm-dir@ietf.org:\n\nHi Perfmetrdir colleagues,\n\nAre there specific performance-related OPS considerations that you think are useful to include in the guidelines? Maybe consider an advice to look at RFC 6390 and RFC 8911 for better interop?\n\nThank you.\n\nCheers,\n\nMed",
+      "createdAt": "2025-06-13T10:33:08Z",
+      "updatedAt": "2025-06-13T10:33:08Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 76,
+      "id": "I_kwDOOWPBqs67aWii",
+      "title": "Make it clear this is targeting  IETF Stream",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/76",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-13T17:29:21Z",
+      "updatedAt": "2025-06-13T18:17:29Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "That's fine. Although, it may be enough to say \"Standards Track protocol specification\"",
+          "createdAt": "2025-06-13T17:52:31Z",
+          "updatedAt": "2025-06-13T17:52:31Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "You may be right, @AdrianFarrel. That's may be enough, indeed. Other tracks can follow the guidance, if a WG decide that's worth to consider.\n\nMy initial concern was to clarify that IRTF/IAB/ISE streams are not impacted. ",
+          "createdAt": "2025-06-13T18:00:57Z",
+          "updatedAt": "2025-06-13T18:01:21Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "OK. It never hurts to make things clear",
+          "createdAt": "2025-06-13T18:17:29Z",
+          "updatedAt": "2025-06-13T18:17:29Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -5266,24 +5367,26 @@
       "id": "PR_kwDOOWPBqs6ZzJfW",
       "title": "Fix L2SM Reference",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/67",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "RFC8499 is about DNS.",
       "createdAt": "2025-06-10T07:21:48Z",
-      "updatedAt": "2025-06-11T12:30:30Z",
+      "updatedAt": "2025-06-12T08:26:15Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "b2056806da2ba6b991899779c4809b272cfb5d7e",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "Fix-L2SM-Reference",
       "headRefOid": "eb22ffc24ddd1de80e89e899a64e8d16ce311d74",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-06-12T08:26:13Z",
+      "mergedAt": "2025-06-12T08:26:13Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "23a726d95d2003c8ef8882f0edc55b08982e92a6"
+      },
       "comments": [],
       "reviews": [
         {
@@ -5319,24 +5422,26 @@
       "id": "PR_kwDOOWPBqs6aBs3a",
       "title": "Capitalize Terminology",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/69",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Symptom is present in Terminology but not used in the text. ",
       "createdAt": "2025-06-11T12:46:54Z",
-      "updatedAt": "2025-06-11T19:27:56Z",
+      "updatedAt": "2025-06-12T08:24:03Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "5df8db3187dc93cd33d57f48f334900659a58577",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "capitalize-terminology",
       "headRefOid": "33791598fbc22fe1dbdff6fe5b78ec0e0b7388a8",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-06-12T08:24:02Z",
+      "mergedAt": "2025-06-12T08:24:01Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "2ba490626490fbe32eb6b9a87d849e35de38d790"
+      },
       "comments": [],
       "reviews": [
         {
@@ -5350,6 +5455,514 @@
           "body": "",
           "createdAt": "2025-06-11T19:27:56Z",
           "updatedAt": "2025-06-11T19:27:56Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 70,
+      "id": "PR_kwDOOWPBqs6aK1kB",
+      "title": "Removed Root Cause from terminology",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/70",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Taking this feedback into account (from https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64)\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2957855762\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2960373446\r\n\r\nThe more I think about, the more I am convinced than we should not add Root Cause to our terminology section. On on side, the NMOP consensus was NOT to define that term. On the other side, the terminology fairy Adrian and the NMOP co-chair introduce it into another document. This does seem right, we can not say we were not aware. \r\n\r\nThis Root Cause is going to painfully come back at us at review time, I believe.\r\n\r\nLet's discuss today",
+      "createdAt": "2025-06-12T08:38:32Z",
+      "updatedAt": "2025-06-14T22:33:35Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "27a697ca94ed6bf953c8c568106055ecdf1f5c08",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "bclaise-patch-2",
+      "headRefOid": "c3295d96b9ac516c99a4b8d54638c62ffce5fa80",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "should we consider also removing Sympthon as it is not used in the text so far. ",
+          "createdAt": "2025-06-12T10:55:08Z",
+          "updatedAt": "2025-06-12T10:55:08Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> should we consider also removing Sympthon as it is not used in the text so far.\r\n\r\nIdem for \"Anomaly\" as it is not used as well?",
+          "createdAt": "2025-06-12T11:01:15Z",
+          "updatedAt": "2025-06-12T11:01:15Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Conclusion from the meeting June 6th\r\nRoot Cause => candidate for removal (b/c NMOP could not get consensus)\r\nBUT it was part of RFC5706\r\nBUT the change from \"Root Cause analysis\" to \"Cause analysis\" does not seem right\r\nSO we postpone the discussion, as there is no clear conclusion ... except that we spent enough time on this topic :-)",
+          "createdAt": "2025-06-12T14:19:48Z",
+          "updatedAt": "2025-06-12T14:19:48Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6uEoN1",
+          "commit": {
+            "abbreviatedOid": "7410d74"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Please find some comments below, mainly to:\r\n* Generalize the description for wider applicability (less network/router-centric)",
+          "createdAt": "2025-06-12T10:23:39Z",
+          "updatedAt": "2025-06-12T10:29:58Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n   for Cause analysis (etiology) and logging are not sufficient and that there\r\n```",
+              "createdAt": "2025-06-12T10:23:39Z",
+              "updatedAt": "2025-06-12T10:29:58Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\r\n   Cause analysis is about working out where the\r\n```",
+              "createdAt": "2025-06-12T10:26:34Z",
+              "updatedAt": "2025-06-12T10:29:58Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\r\n   Cause analysis is about working out where the\r\n```\r\n\r\nThis is not necessarily in the network.",
+              "createdAt": "2025-06-12T10:27:33Z",
+              "updatedAt": "2025-06-12T10:29:58Z"
+            },
+            {
+              "originalPosition": 48,
+              "body": "```suggestion\r\n   (reported by a notification, typically), Cause analysis can help find the\r\n```",
+              "createdAt": "2025-06-12T10:28:06Z",
+              "updatedAt": "2025-06-12T10:29:58Z"
+            },
+            {
+              "originalPosition": 49,
+              "body": "```suggestion\r\n   failed link, node, or configuration in the end-to-end path.\r\n```",
+              "createdAt": "2025-06-12T10:28:44Z",
+              "updatedAt": "2025-06-12T10:29:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uHUwA",
+          "commit": {
+            "abbreviatedOid": "9589604"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-12T13:28:22Z",
+          "updatedAt": "2025-06-12T13:28:22Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uO9_A",
+          "commit": {
+            "abbreviatedOid": "7410d74"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-13T01:25:03Z",
+          "updatedAt": "2025-06-13T01:25:03Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "What is a \"failed configuration\"? Maybe mis-configuration causing failures?",
+              "createdAt": "2025-06-13T01:25:03Z",
+              "updatedAt": "2025-06-13T01:25:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uQA1k",
+          "commit": {
+            "abbreviatedOid": "7410d74"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-13T05:08:51Z",
+          "updatedAt": "2025-06-13T05:08:51Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "\"mis-configuration\" would be fine. The key point is that I wanted avoid having something too-network-centric (reason about links and nodes). Investigation work when a failure occurs for services is slightly more \"complicated\". ",
+              "createdAt": "2025-06-13T05:08:51Z",
+              "updatedAt": "2025-06-13T05:08:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uk2f9",
+          "commit": {
+            "abbreviatedOid": "c3295d9"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-14T22:32:10Z",
+          "updatedAt": "2025-06-14T22:32:10Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "Failed configuration exists.  This is why you have validation in NMDA datastores.  But I do think \"mis-configuration\" is best here.",
+              "createdAt": "2025-06-14T22:32:10Z",
+              "updatedAt": "2025-06-14T22:32:10Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uk2qe",
+          "commit": {
+            "abbreviatedOid": "c3295d9"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-14T22:33:35Z",
+          "updatedAt": "2025-06-14T22:33:35Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "Was \"Cause\" added to the terminology?  You're now referring to this thing as an entity vs. a generic \"cause\".",
+              "createdAt": "2025-06-14T22:33:35Z",
+              "updatedAt": "2025-06-14T22:33:35Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 71,
+      "id": "PR_kwDOOWPBqs6aNkbY",
+      "title": "RFC 5706 versus RFC5706bis different audiences #37",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/71",
+      "state": "MERGED",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed in #37 ",
+      "createdAt": "2025-06-12T12:50:00Z",
+      "updatedAt": "2025-06-13T07:51:19Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "23a726d95d2003c8ef8882f0edc55b08982e92a6",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "bclaise-patch-3",
+      "headRefOid": "1951f322c0e23f5facab32e8986e7738dcf54916",
+      "closedAt": "2025-06-13T07:37:35Z",
+      "mergedAt": "2025-06-13T07:37:35Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "27a697ca94ed6bf953c8c568106055ecdf1f5c08"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I used this refernce but it fails: \r\n{{I-D.iab-nemops-workshop-report}}\r\n\r\ndraft-opsarea-rfc5706bis.xml(0): Error: IDREF attribute target references an unknown ID \"I-D.iab-nemops-workshop-report\", at None\r\n/github/workspace/draft-opsarea-rfc5706bis.xml(10): Error: Invalid document before running preptool.\r\n\r\nAny help to reduce this conflict appreciated. In the mean time, I remove it, so that you could see the diffs.\r\n",
+          "createdAt": "2025-06-12T12:53:44Z",
+          "updatedAt": "2025-06-12T12:53:44Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> I used this refernce but it fails:\r\n> {{I-D.iab-nemops-workshop-report}}\r\n\r\nI changed it to {{?I-D.iab-nemops-workshop-report}} in my review. I guess this will fix it, but ...",
+          "createdAt": "2025-06-12T13:03:33Z",
+          "updatedAt": "2025-06-12T13:03:33Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6uG1Ua",
+          "commit": {
+            "abbreviatedOid": "8c38dc6"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thanks. Please find below some first comments/suggestions",
+          "createdAt": "2025-06-12T12:53:38Z",
+          "updatedAt": "2025-06-12T13:01:23Z",
+          "comments": [
+            {
+              "originalPosition": 67,
+              "body": "```suggestion\r\n   operations and management in an IETF specification that\r\n```\r\n\r\nThe guidance should be applicable beyond",
+              "createdAt": "2025-06-12T12:53:38Z",
+              "updatedAt": "2025-06-12T13:01:23Z"
+            },
+            {
+              "originalPosition": 56,
+              "body": "```suggestion\r\n   See {{?I-D.iab-nemops-workshop-report}} for the detailed information.\r\n```",
+              "createdAt": "2025-06-12T12:56:44Z",
+              "updatedAt": "2025-06-12T13:01:23Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "I would avoid mentioning MIBs/YANG/SMI at this stage of the document.",
+              "createdAt": "2025-06-12T12:57:42Z",
+              "updatedAt": "2025-06-12T13:01:23Z"
+            },
+            {
+              "originalPosition": 75,
+              "body": "```suggestion\r\n   management practices that are already well understood. However, the guidance\r\n   in this document does not mandate providing a comprehensive inventory of\r\n   all operational and manageability considerations. Instead, the guidance is to\r\n   focus on key aspects that are will ease deployability and are key to operate and maintain\r\n   the technology. \r\n```",
+              "createdAt": "2025-06-12T13:00:01Z",
+              "updatedAt": "2025-06-12T13:01:23Z"
+            },
+            {
+              "originalPosition": 82,
+              "body": "```suggestion\r\n   protocols to be deployed and operated in the real-world Internet.\r\n   \r\n    A WG\r\n```",
+              "createdAt": "2025-06-12T13:00:33Z",
+              "updatedAt": "2025-06-12T13:01:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uIX_j",
+          "commit": {
+            "abbreviatedOid": "8c38dc6"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-12T14:20:50Z",
+          "updatedAt": "2025-06-12T14:20:51Z",
+          "comments": [
+            {
+              "originalPosition": 56,
+              "body": "outdated. Change made to the document directly",
+              "createdAt": "2025-06-12T14:20:51Z",
+              "updatedAt": "2025-06-12T14:20:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uJTwS",
+          "commit": {
+            "abbreviatedOid": "8f5abc5"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-12T15:23:52Z",
+          "updatedAt": "2025-06-12T15:31:51Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "```suggestion\r\n   Entirely New Protocols may require significant consideration of expected\r\n```",
+              "createdAt": "2025-06-12T15:23:52Z",
+              "updatedAt": "2025-06-12T15:31:51Z"
+            },
+            {
+              "originalPosition": 68,
+              "body": "```suggestion\r\n   focus on key aspects that will ease deployability and are essential for operating and maintaining\r\n```",
+              "createdAt": "2025-06-12T15:25:55Z",
+              "updatedAt": "2025-06-12T15:31:51Z"
+            },
+            {
+              "originalPosition": 78,
+              "body": "```suggestion\r\n   considered for any IETF protocol, given the IETF's role in developing technologies and\r\n```",
+              "createdAt": "2025-06-12T15:27:51Z",
+              "updatedAt": "2025-06-12T15:31:51Z"
+            },
+            {
+              "originalPosition": 101,
+              "body": "```suggestion\r\n   from the authors drafting the protocol to those reviewing and evaluating its draft\r\n```",
+              "createdAt": "2025-06-12T15:30:42Z",
+              "updatedAt": "2025-06-12T15:31:51Z"
+            },
+            {
+              "originalPosition": 102,
+              "body": "```suggestion\r\n   content, including the WG chair, WG advisor, Document Shepherd, responsible AD, and the IESG.\r\n```",
+              "createdAt": "2025-06-12T15:31:21Z",
+              "updatedAt": "2025-06-12T15:31:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uKDcl",
+          "commit": {
+            "abbreviatedOid": "ccfb1b1"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thank you Beno\u00eet.",
+          "createdAt": "2025-06-12T16:20:46Z",
+          "updatedAt": "2025-06-12T16:27:48Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "```suggestion\r\n   This document provides a set of guidelines for considering\r\n```",
+              "createdAt": "2025-06-12T16:20:46Z",
+              "updatedAt": "2025-06-12T16:27:48Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "```suggestion\r\n   operations and management in an IETF specification\r\n```",
+              "createdAt": "2025-06-12T16:21:29Z",
+              "updatedAt": "2025-06-12T16:27:48Z"
+            },
+            {
+              "originalPosition": 51,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-06-12T16:21:39Z",
+              "updatedAt": "2025-06-12T16:27:48Z"
+            },
+            {
+              "originalPosition": 101,
+              "body": "```suggestion\r\n   from the authors writing the protocol specification to those reviewing and evaluating its draft\r\n```",
+              "createdAt": "2025-06-12T16:24:31Z",
+              "updatedAt": "2025-06-12T16:27:48Z"
+            },
+            {
+              "originalPosition": 102,
+              "body": "```suggestion\r\n   content, including WG chairs, WG advisors, Document Shepherd, Responsible Area Director, and the IESG.\r\n```",
+              "createdAt": "2025-06-12T16:24:50Z",
+              "updatedAt": "2025-06-13T05:13:07Z"
+            },
+            {
+              "originalPosition": 165,
+              "body": "```suggestion\r\n   Area Director who is in the process of creating a new WG Charter, this document lists some considerations\r\n```",
+              "createdAt": "2025-06-12T16:26:44Z",
+              "updatedAt": "2025-06-12T16:27:48Z"
+            },
+            {
+              "originalPosition": 178,
+              "body": "```suggestion\r\n   The OPS directorate can use this document to guide performing reviews. On top of that, a list of guidelines and a\r\n```",
+              "createdAt": "2025-06-12T16:27:03Z",
+              "updatedAt": "2025-06-12T16:27:48Z"
+            },
+            {
+              "originalPosition": 242,
+              "body": "```suggestion\r\n   and review Internet-Drafts, taking into OPS considerations into account.\r\n```",
+              "createdAt": "2025-06-12T16:27:26Z",
+              "updatedAt": "2025-06-12T16:27:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uO83V",
+          "commit": {
+            "abbreviatedOid": "16e11eb"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-13T01:20:57Z",
+          "updatedAt": "2025-06-13T01:20:58Z",
+          "comments": [
+            {
+              "originalPosition": 102,
+              "body": "Why is \"Document Shepherd\" capitalized, when all the others are not?",
+              "createdAt": "2025-06-13T01:20:58Z",
+              "updatedAt": "2025-06-13T01:20:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6uQCVO",
+          "commit": {
+            "abbreviatedOid": "ccfb1b1"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-13T05:13:38Z",
+          "updatedAt": "2025-06-13T05:13:38Z",
+          "comments": [
+            {
+              "originalPosition": 102,
+              "body": "because I was sure that one is consistent with our conventions (RFC4858). For the others, I wasn't sure about the conventions out there.",
+              "createdAt": "2025-06-13T05:13:38Z",
+              "updatedAt": "2025-06-13T05:13:38Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 72,
+      "id": "PR_kwDOOWPBqs6aOGjI",
+      "title": "Highlight the main recommendations moving to 4th item on Index",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/72",
+      "state": "CLOSED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-12T13:34:48Z",
+      "updatedAt": "2025-06-12T13:40:28Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "23a726d95d2003c8ef8882f0edc55b08982e92a6",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Documentation-Guidelines-Early",
+      "headRefOid": "938c1d61d8d3d2b86c5a0ecb1eb6900f724bb051",
+      "closedAt": "2025-06-12T13:40:28Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 74,
+      "id": "PR_kwDOOWPBqs6aOPDy",
+      "title": "Documentation Guidelines Move",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/74",
+      "state": "MERGED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-12T13:44:44Z",
+      "updatedAt": "2025-06-13T01:30:34Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "23b7e07a4264e67a3af579083d8b3c0cf42185be",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Documentation-Guidelines-move",
+      "headRefOid": "477f88ed05bcdaa840e388653bb3bc6f659c870b",
+      "closedAt": "2025-06-12T14:20:03Z",
+      "mergedAt": "2025-06-12T14:20:03Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "340b80e01ba82bdb1692056076e4c7d127f03806"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6uH9n0",
+          "commit": {
+            "abbreviatedOid": "477f88e"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Thanks, Samier",
+          "createdAt": "2025-06-12T13:59:50Z",
+          "updatedAt": "2025-06-12T13:59:50Z",
           "comments": []
         }
       ]
