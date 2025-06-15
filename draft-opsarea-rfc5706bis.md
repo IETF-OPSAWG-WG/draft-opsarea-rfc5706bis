@@ -736,7 +736,7 @@ author:
 
    *  NETCONF Configuration Protocol {{?RFC6241}}
 
-   *  the IP Flow Information Export (IPFIX) Protocol {{?RFC7011}}) for
+   *  the IP Flow Information Export (IPFIX) Protocol {{?RFC7011}} for
       usage accounting
 
    *  the syslog protocol {{?RFC5424}} for logging
