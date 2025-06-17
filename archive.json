@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-15T00:55:53.267988+00:00",
+  "timestamp": "2025-06-17T00:50:36.680557+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -951,7 +951,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-05-22T13:55:54Z",
-      "updatedAt": "2025-05-29T13:37:52Z",
+      "updatedAt": "2025-06-15T14:56:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -967,6 +967,13 @@
           "body": "Sorry I @cpignata will not be in Madrid... actually I will be around Madrid, but I will not be attending IETF>",
           "createdAt": "2025-05-29T13:37:51Z",
           "updatedAt": "2025-05-29T13:37:51Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I have reached out to the RTG ADs, and I will be on the RTGAREA agenda.",
+          "createdAt": "2025-06-15T14:56:11Z",
+          "updatedAt": "2025-06-15T14:56:11Z"
         }
       ]
     },
@@ -5471,13 +5478,13 @@
       "labels": [],
       "body": "Taking this feedback into account (from https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64)\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2957855762\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2960373446\r\n\r\nThe more I think about, the more I am convinced than we should not add Root Cause to our terminology section. On on side, the NMOP consensus was NOT to define that term. On the other side, the terminology fairy Adrian and the NMOP co-chair introduce it into another document. This does seem right, we can not say we were not aware. \r\n\r\nThis Root Cause is going to painfully come back at us at review time, I believe.\r\n\r\nLet's discuss today",
       "createdAt": "2025-06-12T08:38:32Z",
-      "updatedAt": "2025-06-14T22:33:35Z",
+      "updatedAt": "2025-06-15T15:25:00Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "27a697ca94ed6bf953c8c568106055ecdf1f5c08",
+      "baseRefOid": "8f068207e7211d669803f92c9eb3a627cfc101d1",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "bclaise-patch-2",
-      "headRefOid": "c3295d96b9ac516c99a4b8d54638c62ffce5fa80",
+      "headRefOid": "3cfe1acc11c3330dd0e93a4da8d2c73255023192",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -5642,6 +5649,59 @@
               "updatedAt": "2025-06-14T22:33:35Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6ulZkm",
+          "commit": {
+            "abbreviatedOid": "c3295d9"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-15T08:15:37Z",
+          "updatedAt": "2025-06-15T08:15:37Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "rtfm ;-)\r\nYes, it is there by reference to draft-ietf-nmop-terminology",
+              "createdAt": "2025-06-15T08:15:37Z",
+              "updatedAt": "2025-06-15T08:15:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6un-n4",
+          "commit": {
+            "abbreviatedOid": "c3295d9"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-15T14:54:41Z",
+          "updatedAt": "2025-06-15T14:54:41Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "Serves me right to take a few weeks off.",
+              "createdAt": "2025-06-15T14:54:41Z",
+              "updatedAt": "2025-06-15T14:54:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6un_Bx",
+          "commit": {
+            "abbreviatedOid": "c3295d9"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-15T14:55:23Z",
+          "updatedAt": "2025-06-15T14:55:23Z",
+          "comments": []
         }
       ]
     },
