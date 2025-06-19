@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-17T00:50:36.680557+00:00",
+  "timestamp": "2025-06-19T00:50:46.902423+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1232,6 +1232,30 @@
           "body": "OK. It never hurts to make things clear",
           "createdAt": "2025-06-13T18:17:29Z",
           "updatedAt": "2025-06-13T18:17:29Z"
+        }
+      ]
+    },
+    {
+      "number": 77,
+      "id": "I_kwDOOWPBqs68HykI",
+      "title": "Titles for the Required Ops Considerations section",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/77",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Should:\n[3. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3)[Documentation Guidelines](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-documentation-guidelines)\n[3.1. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3.1)[Recommended Discussions](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-recommended-discussions)\nBe titled:\n[3. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3)[Documentation Requirements for IETF Specifications](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-documentation-guidelines)\n[3.1. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3.1)[Operations and Manageability Considerations Section](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-recommended-discussions)\n\n??",
+      "createdAt": "2025-06-18T09:32:10Z",
+      "updatedAt": "2025-06-18T13:15:39Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Your suggestions work for me.  I like the word \"discussions\" as topics WGs should discuss as a new specification evolves.  But this document is the inspiration for those discussions, so it probably doesn't need to be explicitly used.",
+          "createdAt": "2025-06-18T13:15:39Z",
+          "updatedAt": "2025-06-18T13:15:39Z"
         }
       ]
     }
