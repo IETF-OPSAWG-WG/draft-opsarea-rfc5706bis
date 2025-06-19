@@ -360,9 +360,9 @@ author:
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
    that do not support more resent management protocols {{IESG-STATEMENT}}.
 
-#  Documentation Guidelines {#sec-doc-guidelines}
+#  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
-##  Recommended Discussions {#sec-rec-discuss}
+##  Operations and Manageability Considerations Section {#sec-oper-manag-considerations}
 
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting practices and
