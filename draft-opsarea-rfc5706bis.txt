@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 16 December 2025                                      A. Farrel
+Expires: 22 December 2025                                      A. Farrel
                                                       Old Dog Consulting
                                                                  T. Graf
                                                                 Swisscom
@@ -16,7 +16,7 @@ Expires: 16 December 2025                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            14 June 2025
+                                                            20 June 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 December 2025.
+   This Internet-Draft will expire on 22 December 2025.
 
 Copyright Notice
 
@@ -80,8 +80,8 @@ Table of Contents
    2.  Key Concepts, Terminology, and Technological Landscape
      2.1.  Terminology
      2.2.  Available Management Technologies
-   3.  Documentation Guidelines
-     3.1.  Recommended Discussions
+   3.  Documentation Requirements for IETF Specifications
+     3.1.  Operations and Manageability Considerations Section
      3.2.  Null Operations and Manageability Considerations Section
      3.3.  Placement of Operations and Manageability Considerations
            Sections
@@ -411,9 +411,9 @@ Table of Contents
    modules and development of MIB modules for legacy devices that do not
    support more resent management protocols [IESG-STATEMENT].
 
-3.  Documentation Guidelines
+3.  Documentation Requirements for IETF Specifications
 
-3.1.  Recommended Discussions
+3.1.  Operations and Manageability Considerations Section
 
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting
@@ -1565,8 +1565,8 @@ Table of Contents
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
               Key Terms for Network Fault and Problem Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-terminology-
-              17, 18 May 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-nmop-terminology-17>.
+              19, 18 June 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-nmop-terminology-19>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
