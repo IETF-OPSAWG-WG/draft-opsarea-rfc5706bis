@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-19T00:50:46.902423+00:00",
+  "timestamp": "2025-06-22T00:55:41.901748+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1209,7 +1209,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-06-13T17:29:21Z",
-      "updatedAt": "2025-06-13T18:17:29Z",
+      "updatedAt": "2025-06-19T17:51:40Z",
       "closedAt": null,
       "comments": [
         {
@@ -1232,6 +1232,27 @@
           "body": "OK. It never hurts to make things clear",
           "createdAt": "2025-06-13T18:17:29Z",
           "updatedAt": "2025-06-13T18:17:29Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "IAB and IRTF,  I would agree with Med. ISE, we could discuss.\nLet's say I write RFC3954 today, I hope that ISE would tell me to have an Operational and Manageability section.\n\nFrom RFC2026\n  4.  THE INTERNET STANDARDS TRACK...................................10\n     4.1  Standards Track Maturity Levels.............................11\n       4.1.1  Proposed Standard.......................................11\n       4.1.2  Draft Standard..........................................12\n       4.1.3  Internet Standard.......................................13\n     4.2  Non-Standards Track Maturity Levels.........................13\n       4.2.1  Experimental............................................13\n       4.2.2  Informational...........................................14\n       4.2.3  Procedures for Experimental and Informational RFCs......14\n       4.2.4  Historic................................................15\n\nI hope that Experimental and Informational would be follow the guidelines. Note: Historic => let's not bother.\n\"Standards Track protocol specification\" is not sufficient in this case. \n\nHowever, publishing this document with \"Standards Track protocol specification\" would be a victory already, so fine with me.\n",
+          "createdAt": "2025-06-19T08:55:17Z",
+          "updatedAt": "2025-06-19T08:55:17Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I fully agree with Benoit's perspective. ",
+          "createdAt": "2025-06-19T13:28:11Z",
+          "updatedAt": "2025-06-19T13:28:11Z"
+        },
+        {
+          "author": "MikeBishop",
+          "authorAssociation": "NONE",
+          "body": "A change that affects anything outside of the IETF Stream would have to come through RSWG. That's not an argument for or against making any given change, only noting that the scope of the change affects the venue in which it can be discussed.",
+          "createdAt": "2025-06-19T17:51:40Z",
+          "updatedAt": "2025-06-19T17:51:40Z"
         }
       ]
     },
@@ -1240,15 +1261,15 @@
       "id": "I_kwDOOWPBqs68HykI",
       "title": "Titles for the Required Ops Considerations section",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/77",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Should:\n[3. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3)[Documentation Guidelines](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-documentation-guidelines)\n[3.1. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3.1)[Recommended Discussions](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-recommended-discussions)\nBe titled:\n[3. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3)[Documentation Requirements for IETF Specifications](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-documentation-guidelines)\n[3.1. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3.1)[Operations and Manageability Considerations Section](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-recommended-discussions)\n\n??",
       "createdAt": "2025-06-18T09:32:10Z",
-      "updatedAt": "2025-06-18T13:15:39Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-20T10:24:33Z",
+      "closedAt": "2025-06-20T10:24:33Z",
       "comments": [
         {
           "author": "xorrkaz",
@@ -1256,6 +1277,20 @@
           "body": "Your suggestions work for me.  I like the word \"discussions\" as topics WGs should discuss as a new specification evolves.  But this document is the inspiration for those discussions, so it probably doesn't need to be explicitly used.",
           "createdAt": "2025-06-18T13:15:39Z",
           "updatedAt": "2025-06-18T13:15:39Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Your suggestions make sense to me",
+          "createdAt": "2025-06-19T08:37:05Z",
+          "updatedAt": "2025-06-19T08:37:05Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree with your suggestions",
+          "createdAt": "2025-06-19T13:09:51Z",
+          "updatedAt": "2025-06-19T13:09:51Z"
         }
       ]
     }
@@ -6047,6 +6082,48 @@
           "body": "Thanks, Samier",
           "createdAt": "2025-06-12T13:59:50Z",
           "updatedAt": "2025-06-12T13:59:50Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 78,
+      "id": "PR_kwDOOWPBqs6bQd8y",
+      "title": "Changes to two section titles",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/78",
+      "state": "MERGED",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "OLD:\r\n[3. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3)[Documentation Guidelines](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-documentation-guidelines)\r\n[3.1. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3.1)[Recommended Discussions](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-recommended-discussions)\r\nNEW\r\n[3. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3)[Documentation Requirements for IETF Specifications](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-documentation-guidelines)\r\n[3.1. ](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#section-3.1)[Operations and Manageability Considerations Section](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis-02#name-recommended-discussions)",
+      "createdAt": "2025-06-19T13:07:59Z",
+      "updatedAt": "2025-06-20T10:24:34Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "8f068207e7211d669803f92c9eb3a627cfc101d1",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "bclaise-patch-4",
+      "headRefOid": "fee6f42b854b0bed9a24abd8bcb65aa82297a636",
+      "closedAt": "2025-06-20T10:24:32Z",
+      "mergedAt": "2025-06-20T10:24:32Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "1ea39361c042772587f5d789d2cce945c371bbfd"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6vh71n",
+          "commit": {
+            "abbreviatedOid": "fee6f42"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-20T07:49:59Z",
+          "updatedAt": "2025-06-20T07:49:59Z",
           "comments": []
         }
       ]
