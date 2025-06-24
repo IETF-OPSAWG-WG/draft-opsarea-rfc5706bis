@@ -703,6 +703,11 @@ Table of Contents
    number of active, reachable addresses in use within a network might
    need to be considered in the light of the impact on the scalability
    of the interior gateway protocols operating within the network.
+   Also, a protocol specification that require changes to end hosts
+   should describe whether the protocol supports guards to protect
+   networks from overload (e.g., a congestion control algorithm must
+   comply with [BCP133] to protect networks against congestion
+   collapse).
 
    A protocol could send active monitoring packets on the wire.  If we
    don't pay attention, we might get very good accuracy but could send
@@ -1630,6 +1635,15 @@ Table of Contents
    security aspects is important (see Section 5.7).
 
 10.  Informative References
+
+   [BCP133]   Best Current Practice 133,
+              <https://www.rfc-editor.org/info/bcp133>.
+              At the time of writing, this BCP comprises the following:
+
+              Duke, M., Ed. and G. Fairhurst, Ed., "Specifying New
+              Congestion Control Algorithms", BCP 133, RFC 9743,
+              DOI 10.17487/RFC9743, March 2025,
+              <https://www.rfc-editor.org/info/rfc9743>.
 
    [CHECKLIST]
               "Operations and Management Review Checklist", 2025,
