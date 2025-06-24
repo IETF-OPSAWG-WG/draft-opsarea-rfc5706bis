@@ -643,8 +643,8 @@ author:
 ##  Impact on Network Operation {#sec-impact}
 
    The introduction of a New Protocol or Protocol Extensions to an
-   existing protocol may have an impact on the operation of existing
-   networks. Protocol Designers should outline such impacts (which may
+   may have an impact on the operation of existing networks.
+   Protocol Designers should outline such impacts (which may
    be positive), including scaling concerns and interactions with other
    protocols. Protocol Designers should also describe the scenarios in
    which the New Protocol or its extensions are expected to be
