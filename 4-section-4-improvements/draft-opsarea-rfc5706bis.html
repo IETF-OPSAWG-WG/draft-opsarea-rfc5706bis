@@ -1967,47 +1967,48 @@ of New Protocols or Protocol Extensions.<a href="#section-2.1-2.12.1" class="pil
         <h3 id="name-impact-on-network-operation">
 <a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-impact-on-network-operation" class="section-name selfRef">Impact on Network Operation</a>
         </h3>
-<p id="section-4.5-1">The introduction of a New Protocol or Protocol Extensions to an
-   may have an impact on the operation of existing networks.
-   Protocol Designers should outline such impacts (which may
-   be positive), including scaling concerns and interactions with other
-   protocols. Protocol Designers should also describe the scenarios in
-   which the New Protocol or its extensions are expected to be
-   applicable or beneficial, including any specific deployment
-   environments, network topologies, or use cases that justify or
-   constrain its adoption. For example, a New Protocol that doubles the
-   number of active, reachable addresses in use within a network might
-   need to be considered in the light of the impact on the scalability
-   of the interior gateway protocols operating within the network.
-   Also, a protocol specification that require changes to end hosts should describe
-   whether the protocol supports guards to protect networks from
-   overload (e.g., a congestion control algorithm must comply with <span>[<a href="#BCP133" class="cite xref">BCP133</a>]</span>
-   to protect networks against congestion collapse).<a href="#section-4.5-1" class="pilcrow">¶</a></p>
-<p id="section-4.5-2">A protocol could send active monitoring packets on the wire. If we
+<p id="section-4.5-1">The introduction of a New Protocol or Protocol Extensions may
+   have an impact on the operation of existing networks. Protocol
+   Designers should outline such impacts (which may be positive),
+   including scaling concerns and interactions with other protocols.
+   Protocol Designers should describe the scenarios in which the New
+   Protocol or its extensions are expected to be applicable or
+   beneficial. This includes any relevant deployment environments,
+   network topologies, or use cases that justify or constrain adoption.
+   For example, a New Protocol that doubles the number of active,
+   reachable addresses in a network might have implications for the
+   scalability of interior gateway protocols, and such impacts should
+   be evaluated accordingly.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.5-2">If the protocol specification requires changes to end hosts, it should
+   also indicate whether safeguards exist to protect networks from
+   potential overload. For instance, a congestion control algorithm must
+   comply with <span>[<a href="#BCP133" class="cite xref">BCP133</a>]</span> to prevent congestion collapse and ensure
+   network stability.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.5-3">A protocol could send active monitoring packets on the wire. If we
    don't pay attention, we might get very good accuracy but could send
-   too many active monitoring packets.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
-<p id="section-4.5-3">The Protocol Designer should consider the potential impact on the
+   too many active monitoring packets.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
+<p id="section-4.5-4">The Protocol Designer should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
    and traffic patterns that might change, including specific types of
    traffic, such as multicast. Also, consider the need to install new
    components that are added to the network as a result of changes in
    the configuration, such as servers performing auto-configuration
-   operations.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
-<p id="section-4.5-4">The Protocol Designer should consider also the impact on
+   operations.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
+<p id="section-4.5-5">The Protocol Designer should consider also the impact on
    infrastructure applications like DNS <span>[<a href="#RFC1034" class="cite xref">RFC1034</a>]</span>, the registries, or
    the size of routing tables. For example, Simple Mail Transfer
    Protocol (SMTP) <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
    out incoming connection requests. When Berkeley installed a new spam
    filter, their mail server stopped functioning because of overload of
-   the DNS cache resolver.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
-<p id="section-4.5-5">The impact on performance may also be noted -- increased delay or
+   the DNS cache resolver.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
+<p id="section-4.5-6">The impact on performance may also be noted -- increased delay or
    jitter in real-time traffic applications, or increased response time
    in client-server applications when encryption or filtering are
-   applied.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
-<p id="section-4.5-6">It is important to minimize the impact caused by configuration
+   applied.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
+<p id="section-4.5-7">It is important to minimize the impact caused by configuration
    changes. Given configuration A and configuration B, it should be
    possible to generate the operations necessary to get from A to B with
-   minimal state changes and effects on network and systems.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
+   minimal state changes and effects on network and systems.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-oper-verify">
