@@ -607,7 +607,7 @@ author:
    Many protocols benefit from being incrementally deployable --
    operators may deploy aspects of a protocol before deploying the
    protocol fully. In those cases, the design considerations should
-   also specify whether whether the New Protocol requires changes to
+   also specify whether the New Protocol requires changes to
    the existing network.  If so, it should describe the nature of those
    changes, where they are required, and how they can be introduced in
    a manner that facilitates deployment.
