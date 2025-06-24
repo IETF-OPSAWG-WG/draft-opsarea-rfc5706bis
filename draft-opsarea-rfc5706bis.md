@@ -657,7 +657,7 @@ author:
    Also, a protocol specification that require changes to end hosts should describe
    whether the protocol supports guards to protect networks from
    overload (e.g., a congestion control algorithm must comply with {{?BCP133}}
-   to protect networks against congestion collapse). 
+   to protect networks against congestion collapse).
 
    A protocol could send active monitoring packets on the wire. If we
    don't pay attention, we might get very good accuracy but could send
