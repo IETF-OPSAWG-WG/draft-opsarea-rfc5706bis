@@ -599,16 +599,18 @@ author:
    replacing another technology, the Protocol Designer should consider
    how deployments should transition to the New Protocol or Protocol
    Extensions. This should include coexistence with previously deployed
-   protocols and/or previous versions of the same protocol,
+   protocols and/or previous versions of the same protocol, management of
    incompatibilities between versions, translation between versions,
-   and side effects that might occur. Are older protocols or versions
-   disabled, or do they coexist in the network with the New Protocol?
+   and consideration of potential side effects. A key question becomes:
+   Are older protocols or versions disabled, or do they coexist in the
+   network with the New Protocol?
 
    Many protocols benefit from being incrementally deployable --
    operators may deploy aspects of a protocol before deploying the
    protocol fully. In those cases, the design considerations should
-   also specify whether the New Protocol requires changes to
-   the existing network.  If so, it should describe the nature of those
+   also specify whether the New Protocol requires any changes to
+   the existing infrastructure, particularly the network.
+   If so, the protocol specification should describe the nature of those
    changes, where they are required, and how they can be introduced in
    a manner that facilitates deployment.
 
@@ -645,11 +647,12 @@ author:
    The introduction of a New Protocol or Protocol Extensions may
    have an impact on the operation of existing networks. Protocol
    Designers should outline such impacts (which may be positive),
-   including scaling concerns and interactions with other protocols.
+   including scaling benefits or concerns, and interactions with other protocols.
    Protocol Designers should describe the scenarios in which the New
    Protocol or its extensions are expected to be applicable or
    beneficial. This includes any relevant deployment environments,
-   network topologies, or use cases that justify or constrain adoption.
+   network topologies, usage constraints such as limited domains
+   {{?RFC8799}}, or use cases that justify or constrain adoption.
    For example, a New Protocol that doubles the number of active,
    reachable addresses in a network might have implications for the
    scalability of interior gateway protocols, and such impacts should
