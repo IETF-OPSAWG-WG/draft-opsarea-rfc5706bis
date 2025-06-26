@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-22T00:55:41.901748+00:00",
+  "timestamp": "2025-06-26T00:53:04.570467+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -5537,7 +5537,7 @@
       "labels": [],
       "body": "Taking this feedback into account (from https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64)\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2957855762\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2960373446\r\n\r\nThe more I think about, the more I am convinced than we should not add Root Cause to our terminology section. On on side, the NMOP consensus was NOT to define that term. On the other side, the terminology fairy Adrian and the NMOP co-chair introduce it into another document. This does seem right, we can not say we were not aware. \r\n\r\nThis Root Cause is going to painfully come back at us at review time, I believe.\r\n\r\nLet's discuss today",
       "createdAt": "2025-06-12T08:38:32Z",
-      "updatedAt": "2025-06-15T15:25:00Z",
+      "updatedAt": "2025-06-25T08:01:50Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "8f068207e7211d669803f92c9eb3a627cfc101d1",
@@ -5569,6 +5569,13 @@
           "body": "Conclusion from the meeting June 6th\r\nRoot Cause => candidate for removal (b/c NMOP could not get consensus)\r\nBUT it was part of RFC5706\r\nBUT the change from \"Root Cause analysis\" to \"Cause analysis\" does not seem right\r\nSO we postpone the discussion, as there is no clear conclusion ... except that we spent enough time on this topic :-)",
           "createdAt": "2025-06-12T14:19:48Z",
           "updatedAt": "2025-06-12T14:19:48Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I see the Probable Cause definition, part of https://datatracker.ietf.org/doc/draft-ietf-nmop-network-incident-yang/\r\n\r\n   Probable cause:  A factor is considered the probable cause of a\r\n      problem if removing it fully resolves an ongoing incident --\r\n      specifically regarding network or service impairments and their\r\n      related consequential failures and symptoms -- and prevents the\r\n      problem from recurring.  Causality is defined as the\r\n      implementation of an inductive process at the network or\r\n      processing element level [ITU-T-G-7710] and as a doubt removal\r\n      process at the Incident management system level [ITU-T-X-733].\r\n      The inductive process is based on the distinction made between\r\n      _primary failures_ (i.e., a failure that directly indicates the\r\n      fault location and initiate a repair action, such as a broken\r\n      cable or a misconnection) and _secondary failures_ (i.e., a\r\n      consequential failure, such as an upper level service that has\r\n      gone down) [ITU-T-G-7710].\r\n\r\n      Conversely, a causal factor is a contributing action that\r\n      influences the outcome of an incident or event but is not the\r\n      probably cause.\r\n\r\nWhat if we replace \"root cause\" from RFC5706 by \"probable cause\", with a reference to this term in the NMOP document. That would work for me",
+          "createdAt": "2025-06-25T08:01:50Z",
+          "updatedAt": "2025-06-25T08:01:50Z"
         }
       ],
       "reviews": [
@@ -6125,6 +6132,78 @@
           "createdAt": "2025-06-20T07:49:59Z",
           "updatedAt": "2025-06-20T07:49:59Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 79,
+      "id": "PR_kwDOOWPBqs6b2UKH",
+      "title": "Inspired by draft-ietf-tcpm-prr",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/79",
+      "state": "OPEN",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Adding the concepts of Incremental Deployment and Fairness",
+      "createdAt": "2025-06-24T11:29:49Z",
+      "updatedAt": "2025-06-24T20:11:50Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "1ea39361c042772587f5d789d2cce945c371bbfd",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "4-section-4-improvements",
+      "headRefOid": "9d3054ae788664575cb659da5023e6ca9b0e18e0",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6wCX81",
+          "commit": {
+            "abbreviatedOid": "c579728"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-24T11:36:27Z",
+          "updatedAt": "2025-06-24T11:36:27Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6wC4gM",
+          "commit": {
+            "abbreviatedOid": "c579728"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-06-24T12:13:05Z",
+          "updatedAt": "2025-06-24T12:21:45Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "```suggestion\r\n   also specify whether the New Protocol requires changes to\r\n```",
+              "createdAt": "2025-06-24T12:13:05Z",
+              "updatedAt": "2025-06-24T12:21:45Z"
+            },
+            {
+              "originalPosition": 41,
+              "body": "```suggestion\r\n  may have an impact on the operation of existing\r\n```",
+              "createdAt": "2025-06-24T12:13:38Z",
+              "updatedAt": "2025-06-24T12:21:45Z"
+            },
+            {
+              "originalPosition": 51,
+              "body": "```suggestion\r\n   of the interior gateway protocols operating within the network.\r\n   Also, a protocol specification that require changes to end hosts should describe\r\n   whether the protocol supports guards to protect networks from\r\n   overload (e.g., a congestion control algorithm must comply with {{?BCP133}}\r\n   to protect networks against congestion collapse). \r\n```",
+              "createdAt": "2025-06-24T12:21:30Z",
+              "updatedAt": "2025-06-24T12:21:45Z"
+            }
+          ]
         }
       ]
     }
