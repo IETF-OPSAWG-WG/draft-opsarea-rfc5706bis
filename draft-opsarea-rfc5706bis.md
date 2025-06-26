@@ -520,16 +520,22 @@ author:
 
    If the New Protocol is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
-   how deployments should transition to the New Protocol or Protocol Extensions. This should
-   include coexistence with previously deployed protocols and/or
-   previous versions of the same protocol, incompatibilities between
-   versions, translation between versions, and side effects that might
-   occur. Are older protocols or versions disabled, or do they coexist
-   in the network with the New Protocol?
+   how deployments should transition to the New Protocol or Protocol
+   Extensions. This should include coexistence with previously deployed
+   protocols and/or previous versions of the same protocol, management of
+   incompatibilities between versions, translation between versions,
+   and consideration of potential side effects. A key question becomes:
+   Are older protocols or versions disabled, or do they coexist in the
+   network with the New Protocol?
 
    Many protocols benefit from being incrementally deployable --
    operators may deploy aspects of a protocol before deploying the
-   protocol fully.
+   protocol fully. In those cases, the design considerations should
+   also specify whether the New Protocol requires any changes to
+   the existing infrastructure, particularly the network.
+   If so, the protocol specification should describe the nature of those
+   changes, where they are required, and how they can be introduced in
+   a manner that facilitates deployment.
 
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
 
@@ -561,14 +567,25 @@ author:
 
 ##  Impact on Network Operation {#sec-impact}
 
-   The introduction of a New Protocol or Protocol Extensions to an existing
-   protocol may have an impact on the operation of existing networks.
-   Protocol Designers should outline such impacts (which may be
-   positive), including scaling concerns and interactions with other
-   protocols. For example, a New Protocol that doubles the number of
-   active, reachable addresses in use within a network might need to be
-   considered in the light of the impact on the scalability of the
-   interior gateway protocols operating within the network.
+   The introduction of a New Protocol or Protocol Extensions may
+   have an impact on the operation of existing networks. Protocol
+   Designers should outline such impacts (which may be positive),
+   including scaling benefits or concerns, and interactions with other protocols.
+   Protocol Designers should describe the scenarios in which the New
+   Protocol or its extensions are expected to be applicable or
+   beneficial. This includes any relevant deployment environments,
+   network topologies, usage constraints such as limited domains
+   {{?RFC8799}}, or use cases that justify or constrain adoption.
+   For example, a New Protocol that doubles the number of active,
+   reachable addresses in a network might have implications for the
+   scalability of interior gateway protocols, and such impacts should
+   be evaluated accordingly.
+
+   If the protocol specification requires changes to end hosts, it should
+   also indicate whether safeguards exist to protect networks from
+   potential overload. For instance, a congestion control algorithm must
+   comply with {{?BCP133}} to prevent congestion collapse and ensure
+   network stability.
 
    A protocol could send active monitoring packets on the wire. If we
    don't pay attention, we might get very good accuracy but could send
