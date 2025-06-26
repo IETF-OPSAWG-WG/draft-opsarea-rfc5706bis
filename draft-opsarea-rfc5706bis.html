@@ -1068,7 +1068,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 22 December 2025</td>
+<td class="center">Expires 28 December 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1084,12 +1084,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-06-20" class="published">20 June 2025</time>
+<time datetime="2025-06-26" class="published">26 June 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-12-22">22 December 2025</time></dd>
+<dd class="expires"><time datetime="2025-12-28">28 December 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1158,7 +1158,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 22 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 28 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1832,15 +1832,21 @@ of New Protocols or Protocol Extensions.<a href="#section-2.1-2.12.1" class="pil
         </h3>
 <p id="section-4.3-1">If the New Protocol is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
-   how deployments should transition to the New Protocol or Protocol Extensions. This should
-   include coexistence with previously deployed protocols and/or
-   previous versions of the same protocol, incompatibilities between
-   versions, translation between versions, and side effects that might
-   occur. Are older protocols or versions disabled, or do they coexist
-   in the network with the New Protocol?<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+   how deployments should transition to the New Protocol or Protocol
+   Extensions. This should include coexistence with previously deployed
+   protocols and/or previous versions of the same protocol, management of
+   incompatibilities between versions, translation between versions,
+   and consideration of potential side effects. A key question becomes:
+   Are older protocols or versions disabled, or do they coexist in the
+   network with the New Protocol?<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <p id="section-4.3-2">Many protocols benefit from being incrementally deployable --
    operators may deploy aspects of a protocol before deploying the
-   protocol fully.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
+   protocol fully. In those cases, the design considerations should
+   also specify whether the New Protocol requires any changes to
+   the existing infrastructure, particularly the network.
+   If so, the protocol specification should describe the nature of those
+   changes, where they are required, and how they can be introduced in
+   a manner that facilitates deployment.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-other">
@@ -1878,39 +1884,49 @@ of New Protocols or Protocol Extensions.<a href="#section-2.1-2.12.1" class="pil
         <h3 id="name-impact-on-network-operation">
 <a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-impact-on-network-operation" class="section-name selfRef">Impact on Network Operation</a>
         </h3>
-<p id="section-4.5-1">The introduction of a New Protocol or Protocol Extensions to an existing
-   protocol may have an impact on the operation of existing networks.
-   Protocol Designers should outline such impacts (which may be
-   positive), including scaling concerns and interactions with other
-   protocols. For example, a New Protocol that doubles the number of
-   active, reachable addresses in use within a network might need to be
-   considered in the light of the impact on the scalability of the
-   interior gateway protocols operating within the network.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
-<p id="section-4.5-2">A protocol could send active monitoring packets on the wire. If we
+<p id="section-4.5-1">The introduction of a New Protocol or Protocol Extensions may
+   have an impact on the operation of existing networks. Protocol
+   Designers should outline such impacts (which may be positive),
+   including scaling benefits or concerns, and interactions with other protocols.
+   Protocol Designers should describe the scenarios in which the New
+   Protocol or its extensions are expected to be applicable or
+   beneficial. This includes any relevant deployment environments,
+   network topologies, usage constraints such as limited domains
+   <span>[<a href="#RFC8799" class="cite xref">RFC8799</a>]</span>, or use cases that justify or constrain adoption.
+   For example, a New Protocol that doubles the number of active,
+   reachable addresses in a network might have implications for the
+   scalability of interior gateway protocols, and such impacts should
+   be evaluated accordingly.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.5-2">If the protocol specification requires changes to end hosts, it should
+   also indicate whether safeguards exist to protect networks from
+   potential overload. For instance, a congestion control algorithm must
+   comply with <span>[<a href="#BCP133" class="cite xref">BCP133</a>]</span> to prevent congestion collapse and ensure
+   network stability.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.5-3">A protocol could send active monitoring packets on the wire. If we
    don't pay attention, we might get very good accuracy but could send
-   too many active monitoring packets.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
-<p id="section-4.5-3">The Protocol Designer should consider the potential impact on the
+   too many active monitoring packets.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
+<p id="section-4.5-4">The Protocol Designer should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
    and traffic patterns that might change, including specific types of
    traffic, such as multicast. Also, consider the need to install new
    components that are added to the network as a result of changes in
    the configuration, such as servers performing auto-configuration
-   operations.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
-<p id="section-4.5-4">The Protocol Designer should consider also the impact on
+   operations.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
+<p id="section-4.5-5">The Protocol Designer should consider also the impact on
    infrastructure applications like DNS <span>[<a href="#RFC1034" class="cite xref">RFC1034</a>]</span>, the registries, or
    the size of routing tables. For example, Simple Mail Transfer
    Protocol (SMTP) <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
    out incoming connection requests. When Berkeley installed a new spam
    filter, their mail server stopped functioning because of overload of
-   the DNS cache resolver.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
-<p id="section-4.5-5">The impact on performance may also be noted -- increased delay or
+   the DNS cache resolver.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
+<p id="section-4.5-6">The impact on performance may also be noted -- increased delay or
    jitter in real-time traffic applications, or increased response time
    in client-server applications when encryption or filtering are
-   applied.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
-<p id="section-4.5-6">It is important to minimize the impact caused by configuration
+   applied.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
+<p id="section-4.5-7">It is important to minimize the impact caused by configuration
    changes. Given configuration A and configuration B, it should be
    possible to generate the operations necessary to get from A to B with
-   minimal state changes and effects on network and systems.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
+   minimal state changes and effects on network and systems.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-oper-verify">
@@ -2873,6 +2889,14 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <a href="#section-10" class="section-number selfRef">10. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
       </h2>
 <dl class="references">
+<dt id="BCP133">[BCP133]</dt>
+      <dd>
+<div class="refInstance">Best Current Practice 133, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp133">https://www.rfc-editor.org/info/bcp133</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
+</div>
+<div class="refInstance" id="RFC9743">
+          <span class="refAuthor">Duke, M., Ed.</span> and <span class="refAuthor">G. Fairhurst, Ed.</span>, <span class="refTitle">"Specifying New Congestion Control Algorithms"</span>, <span class="seriesInfo">BCP 133</span>, <span class="seriesInfo">RFC 9743</span>, <span class="seriesInfo">DOI 10.17487/RFC9743</span>, <time datetime="2025-03" class="refDate">March 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9743">https://www.rfc-editor.org/info/rfc9743</a>&gt;</span>. </div>
+</dd>
+<dd class="break"></dd>
 <dt id="CHECKLIST">[CHECKLIST]</dt>
       <dd>
 <span class="refTitle">"Operations and Management Review Checklist"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://github.com/IETF-OPS-DIR/Review-Template/tree/main">https://github.com/IETF-OPS-DIR/Review-Template/tree/main</a>&gt;</span>. </dd>
@@ -2887,7 +2911,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-opsawg-oam-characterization">[I-D.ietf-opsawg-oam-characterization]</dt>
       <dd>
-<span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-07</span>, <time datetime="2025-06-11" class="refDate">11 June 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-07">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-07</a>&gt;</span>. </dd>
+<span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-08</span>, <time datetime="2025-06-24" class="refDate">24 June 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-08">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-08</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IESG-STATEMENT">[IESG-STATEMENT]</dt>
       <dd>
@@ -3080,6 +3104,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC8791">[RFC8791]</dt>
       <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Björklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"YANG Data Structure Extensions"</span>, <span class="seriesInfo">RFC 8791</span>, <span class="seriesInfo">DOI 10.17487/RFC8791</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8791">https://www.rfc-editor.org/rfc/rfc8791</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8799">[RFC8799]</dt>
+      <dd>
+<span class="refAuthor">Carpenter, B.</span> and <span class="refAuthor">B. Liu</span>, <span class="refTitle">"Limited Domains and Internet Protocols"</span>, <span class="seriesInfo">RFC 8799</span>, <span class="seriesInfo">DOI 10.17487/RFC8799</span>, <time datetime="2020-07" class="refDate">July 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8799">https://www.rfc-editor.org/rfc/rfc8799</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9182">[RFC9182]</dt>
       <dd>
