@@ -143,7 +143,7 @@ author:
 
    Suitable management approaches may vary for different areas, working
    groups, and protocols in the IETF. This document does not prescribe
-   a fixed solution or format in dealing with operational
+   a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
    considered for any IETF protocol, given the IETF's role in developing technologies and
    protocols to be deployed and operated in the real-world Internet.
