@@ -366,7 +366,7 @@ author:
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
-   in an "Operations Considerations" section within a
+   in an "Operational Considerations" section within a
    specification. Since protocols are intended for operational deployment and
    management within real networks, it is expected that such considerations
    will be present.
