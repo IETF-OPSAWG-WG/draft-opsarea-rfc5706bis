@@ -119,7 +119,7 @@ author:
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational Considerations"
-   section in Internet-Drafts, before they are progressed
+   section in all Proposed Standard Track RFCs.
    for publication as RFCs. Also, the document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
