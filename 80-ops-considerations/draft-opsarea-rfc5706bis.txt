@@ -112,7 +112,7 @@ Table of Contents
        5.6.3.  Monitoring the Network
        5.6.4.  Monitoring the Service
      5.7.  Security Management
-   6.  Operational Tooling Considerations
+   6.  Operational and Management Tooling Considerations
    7.  IANA Considerations
    8.  Operations and Manageability Considerations
    9.  Security Considerations
@@ -1447,7 +1447,7 @@ Table of Contents
    Protocol Designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
-6.  Operational Tooling Considerations
+6.  Operational and Management Tooling Considerations
 
    The operational community's ability to effectively adopt and use new
    specifications is significantly influenced by the availability and
