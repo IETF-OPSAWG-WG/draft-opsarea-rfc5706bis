@@ -139,10 +139,10 @@ Table of Contents
    This document obsoletes [RFC5706] and fully updates its content with
    new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational Considerations" section
-   in all Proposed Standard Track RFCs.  for publication as RFCs.  Also,
-   the document removes outdated references and aligns with current
-   practices, protocols, and technologies used in operating and managing
-   devices, networks, and services.  See Section 1.3 for more details.
+   in all Proposed Standard Track RFCs.  Also, the document removes
+   outdated references and aligns with current practices, protocols, and
+   technologies used in operating and managing devices, networks, and
+   services.  See Section 1.3 for more details.
 
 1.1.  This Document
 
@@ -161,10 +161,11 @@ Table of Contents
 
    Suitable management approaches may vary for different areas, working
    groups, and protocols in the IETF.  This document does not prescribe
-   a fixed solution or format in dealing with operational aspects of
-   IETF protocols.  However, these aspects should be considered for any
-   IETF protocol, given the IETF's role in developing technologies and
-   protocols to be deployed and operated in the real-world Internet.
+   a fixed solution or format in dealing with operational and management
+   aspects of IETF protocols.  However, these aspects should be
+   considered for any IETF protocol, given the IETF's role in developing
+   technologies and protocols to be deployed and operated in the real-
+   world Internet.
 
    A WG may decide that its protocol does not need interoperable
    management or a standardized data model, but this should be a
