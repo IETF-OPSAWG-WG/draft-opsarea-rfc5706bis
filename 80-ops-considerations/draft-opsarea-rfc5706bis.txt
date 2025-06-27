@@ -81,7 +81,7 @@ Table of Contents
      2.1.  Terminology
      2.2.  Available Management Technologies
    3.  Documentation Requirements for IETF Specifications
-     3.1.  Operations Considerations Section
+     3.1.  Operational Considerations Section
      3.2.  Null Operations and Manageability Considerations Section
      3.3.  Placement of Operations and Manageability Considerations
            Sections
@@ -253,7 +253,7 @@ Table of Contents
       maintained in GitHub
 
    *  Add a requirement for an "Operational Considerations" section in
-      all Internet-Drafts, along with specific guidance on its content.
+      all PS RFCs, along with specific guidance on its content.
 
    *  Update the operational and manageability-related technologies to
       reflect over 15 years of advancements
@@ -410,7 +410,7 @@ Table of Contents
 
 3.  Documentation Requirements for IETF Specifications
 
-3.1.  Operations Considerations Section
+3.1.  Operational Considerations Section
 
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting
