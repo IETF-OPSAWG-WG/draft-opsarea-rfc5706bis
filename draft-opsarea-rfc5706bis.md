@@ -118,8 +118,8 @@ author:
 
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
-   introduces a requirement for an "Operational and Management
-   Considerations" section in Internet-Drafts, before they are progressed
+   introduces a requirement for an "Operational Considerations"
+   section in Internet-Drafts, before they are progressed
    for publication as RFCs. Also, the document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
@@ -137,13 +137,13 @@ author:
    deployed protocols may have established de facto operations and
    management practices that are already well understood. However, the guidance
    in this document does not mandate providing a comprehensive inventory of
-   all operational and manageability considerations. Instead, the guidance is to
+   all operational considerations. Instead, the guidance is to
    focus on key aspects that will ease deployability and are essential for operating and maintaining
    the technology.
 
    Suitable management approaches may vary for different areas, working
    groups, and protocols in the IETF. This document does not prescribe
-   a fixed solution or format in dealing with operational and management
+   a fixed solution or format in dealing with operational
    aspects of IETF protocols. However, these aspects should be
    considered for any IETF protocol, given the IETF's role in developing technologies and
    protocols to be deployed and operated in the real-world Internet.
@@ -203,7 +203,7 @@ author:
    experience has been gained.
 
    For the OPS Area Directors or the IESG, this document helps evaluating the
-   content of the new "Operational and Management Considerations" section. As an
+   content of the new "Operational Considerations" section. As an
    Area Director who is in the process of creating a new WG Charter, this document lists some considerations
    of the functionality needed to operate and manage new Protocol and Protocol Extensions.
 
@@ -222,7 +222,7 @@ author:
 
    * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
 
-   * Add a requirement for an "Operational and Management Considerations" section in all Internet-Drafts, along with specific guidance on its content.
+   * Add a requirement for an "Operational Considerations" section in all Internet-Drafts, along with specific guidance on its content.
 
    * Update the operational and manageability-related technologies to reflect over 15 years of advancements
 
@@ -232,7 +232,7 @@ author:
 
       * Update the "Available Management Technologies" landscape
 
-   * Add an "Operational and Management Tooling Considerations" section
+   * Add an "Operational Tooling Considerations" section
 
 
 ##  TO DO LIST {#sec-todo}
@@ -361,12 +361,12 @@ author:
 
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
-##  Operations and Manageability Considerations Section {#sec-oper-manag-considerations}
+##  Operations Considerations Section {#sec-oper-manag-considerations}
 
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
-   in an "Operations and Manageability Considerations" section within a
+   in an "Operations Considerations" section within a
    specification. Since protocols are intended for operational deployment and
    management within real networks, it is expected that such considerations
    will be present.
@@ -1369,7 +1369,7 @@ DM         DM        DM     --> concrete/detailed model
    Protocol Designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
-# Operational and Management Tooling Considerations {#sec-oper-mgmt-tooling}
+# Operational Tooling Considerations {#sec-oper-mgmt-tooling}
 
    The operational community's ability to effectively adopt and
    use new specifications is significantly influenced by the availability
