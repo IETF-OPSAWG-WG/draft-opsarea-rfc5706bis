@@ -361,7 +361,7 @@ author:
 
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
-##  Operations Considerations Section {#sec-oper-manag-considerations}
+##  Operational Considerations Section {#sec-oper-manag-considerations}
 
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting practices and
