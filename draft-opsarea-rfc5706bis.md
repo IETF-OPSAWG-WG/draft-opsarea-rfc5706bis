@@ -232,7 +232,7 @@ author:
 
       * Update the "Available Management Technologies" landscape
 
-   * Add an "Operational Tooling Considerations" section
+   * Add an "Operational and Management Tooling Considerations" section
 
 
 ##  TO DO LIST {#sec-todo}
