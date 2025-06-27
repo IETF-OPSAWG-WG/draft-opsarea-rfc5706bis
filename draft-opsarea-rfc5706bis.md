@@ -1369,7 +1369,7 @@ DM         DM        DM     --> concrete/detailed model
    Protocol Designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
-# Operational Tooling Considerations {#sec-oper-mgmt-tooling}
+# Operational and Management Tooling Considerations {#sec-oper-mgmt-tooling}
 
    The operational community's ability to effectively adopt and
    use new specifications is significantly influenced by the availability
