@@ -86,7 +86,6 @@ contributor:
     organization: Swisscom
     email: thomas.graf@swisscom.com
 
-    
 --- abstract
 
    New Protocols or Protocol Extensions are best designed with due
