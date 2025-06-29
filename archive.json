@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-26T00:53:04.570467+00:00",
+  "timestamp": "2025-06-29T00:57:00.610311+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1165,11 +1165,13 @@
       "state": "OPEN",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "AdrianFarrel"
+      ],
       "labels": [],
       "body": "MUST include this new section?\nSHOULD include this new section?\nMUST be thinking about this...?",
       "createdAt": "2025-06-12T13:35:18Z",
-      "updatedAt": "2025-06-13T01:26:55Z",
+      "updatedAt": "2025-06-26T13:36:51Z",
       "closedAt": null,
       "comments": [
         {
@@ -1178,6 +1180,13 @@
           "body": "I believe keywords are required, but would defer to @boucadair .\nSHOULD include (there might be reasons why not including it, which ought to be documented)\nMUST consider the inclusion.",
           "createdAt": "2025-06-13T01:26:55Z",
           "updatedAt": "2025-06-13T01:26:55Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Conclusion from June 26th meeting:\nno required to use RFC 2119, as long as the language is clear (mainly section 3). For ex: the new section is mandatory\n\nNote: [IESG Statement on Clarifying the Use of BCP 14 Key Words](https://datatracker.ietf.org/doc/statement-iesg-statement-on-clarifying-the-use-of-bcp-14-key-words/)\n",
+          "createdAt": "2025-06-26T13:36:51Z",
+          "updatedAt": "2025-06-26T13:36:51Z"
         }
       ]
     },
@@ -1205,11 +1214,13 @@
       "state": "OPEN",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "bclaise"
+      ],
       "labels": [],
       "body": "",
       "createdAt": "2025-06-13T17:29:21Z",
-      "updatedAt": "2025-06-19T17:51:40Z",
+      "updatedAt": "2025-06-26T13:25:36Z",
       "closedAt": null,
       "comments": [
         {
@@ -1293,6 +1304,24 @@
           "updatedAt": "2025-06-19T13:09:51Z"
         }
       ]
+    },
+    {
+      "number": 80,
+      "id": "I_kwDOOWPBqs69fskK",
+      "title": "What's the right name for \"Operations and Manageability Considerations\"?",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/80",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "sbarguil"
+      ],
+      "labels": [],
+      "body": "1. Operations and Manageability Considerations\n2. Operational Considerations?\n3. Manageability Considerations?\n\nConclusion from the June 26th meeting\n- 2 is already used today\n- 2 does include both operational and manageability in the non OPS people mind\n\nSamier, Adrian, Benoit, Med => let's use 2?\n",
+      "createdAt": "2025-06-26T13:47:54Z",
+      "updatedAt": "2025-06-26T13:47:54Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -5537,7 +5566,7 @@
       "labels": [],
       "body": "Taking this feedback into account (from https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64)\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2957855762\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2960373446\r\n\r\nThe more I think about, the more I am convinced than we should not add Root Cause to our terminology section. On on side, the NMOP consensus was NOT to define that term. On the other side, the terminology fairy Adrian and the NMOP co-chair introduce it into another document. This does seem right, we can not say we were not aware. \r\n\r\nThis Root Cause is going to painfully come back at us at review time, I believe.\r\n\r\nLet's discuss today",
       "createdAt": "2025-06-12T08:38:32Z",
-      "updatedAt": "2025-06-25T08:01:50Z",
+      "updatedAt": "2025-06-26T13:15:10Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "8f068207e7211d669803f92c9eb3a627cfc101d1",
@@ -5576,6 +5605,13 @@
           "body": "I see the Probable Cause definition, part of https://datatracker.ietf.org/doc/draft-ietf-nmop-network-incident-yang/\r\n\r\n   Probable cause:  A factor is considered the probable cause of a\r\n      problem if removing it fully resolves an ongoing incident --\r\n      specifically regarding network or service impairments and their\r\n      related consequential failures and symptoms -- and prevents the\r\n      problem from recurring.  Causality is defined as the\r\n      implementation of an inductive process at the network or\r\n      processing element level [ITU-T-G-7710] and as a doubt removal\r\n      process at the Incident management system level [ITU-T-X-733].\r\n      The inductive process is based on the distinction made between\r\n      _primary failures_ (i.e., a failure that directly indicates the\r\n      fault location and initiate a repair action, such as a broken\r\n      cable or a misconnection) and _secondary failures_ (i.e., a\r\n      consequential failure, such as an upper level service that has\r\n      gone down) [ITU-T-G-7710].\r\n\r\n      Conversely, a causal factor is a contributing action that\r\n      influences the outcome of an incident or event but is not the\r\n      probably cause.\r\n\r\nWhat if we replace \"root cause\" from RFC5706 by \"probable cause\", with a reference to this term in the NMOP document. That would work for me",
           "createdAt": "2025-06-25T08:01:50Z",
           "updatedAt": "2025-06-25T08:01:50Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Conclusion from June 26th 2025\r\nProbable Root Cause? Maybe, to be solved in NMOP and there is maybe something to reused in this RFC5706bis draft.",
+          "createdAt": "2025-06-26T13:15:10Z",
+          "updatedAt": "2025-06-26T13:15:10Z"
         }
       ],
       "reviews": [
@@ -5617,9 +5653,9 @@
             },
             {
               "originalPosition": 49,
-              "body": "```suggestion\r\n   failed link, node, or configuration in the end-to-end path.\r\n```",
+              "body": "```suggestion\r\n   failed link or node, or mis-configuration in the end-to-end path.\r\n```",
               "createdAt": "2025-06-12T10:28:44Z",
-              "updatedAt": "2025-06-12T10:29:58Z"
+              "updatedAt": "2025-06-26T12:56:35Z"
             }
           ]
         },
@@ -6140,24 +6176,26 @@
       "id": "PR_kwDOOWPBqs6b2UKH",
       "title": "Inspired by draft-ietf-tcpm-prr",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/79",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Adding the concepts of Incremental Deployment and Fairness",
       "createdAt": "2025-06-24T11:29:49Z",
-      "updatedAt": "2025-06-24T20:11:50Z",
+      "updatedAt": "2025-06-26T13:18:05Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "1ea39361c042772587f5d789d2cce945c371bbfd",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "4-section-4-improvements",
       "headRefOid": "9d3054ae788664575cb659da5023e6ca9b0e18e0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-06-26T13:18:03Z",
+      "mergedAt": "2025-06-26T13:18:03Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "c2b9405cb7955e8b998eb33357ae0da061972a03"
+      },
       "comments": [],
       "reviews": [
         {
@@ -6204,6 +6242,169 @@
               "updatedAt": "2025-06-24T12:21:45Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6whnG2",
+          "commit": {
+            "abbreviatedOid": "9d3054a"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-26T10:32:48Z",
+          "updatedAt": "2025-06-26T10:32:48Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 81,
+      "id": "PR_kwDOOWPBqs6cYBFT",
+      "title": "Update operational considerations",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/81",
+      "state": "OPEN",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "#80 ",
+      "createdAt": "2025-06-27T08:10:06Z",
+      "updatedAt": "2025-06-27T11:09:19Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "424ac2ff627906d8a2e0d4767fb58f7b5f152a96",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "80-ops-considerations",
+      "headRefOid": "c1f91d2d982591406daf77ae852d0d25961c5640",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@boucadair Updated not only in the name of the section, but also in some references across the doc, is this fine? ",
+          "createdAt": "2025-06-27T08:10:52Z",
+          "updatedAt": "2025-06-27T08:10:52Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6wwu-T",
+          "commit": {
+            "abbreviatedOid": "7046066"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thanks, Samier. Please find some proposed changes.\r\n\r\nIt is OK to keep \"management\" in text. Adding a sentence that basically says that manageability considerations fall under Operational Considerations early in the document would help.",
+          "createdAt": "2025-06-27T09:07:09Z",
+          "updatedAt": "2025-06-27T09:14:06Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\r\n   section in all Proposed Standard Track RFCs.\r\n```",
+              "createdAt": "2025-06-27T09:08:28Z",
+              "updatedAt": "2025-06-27T09:14:07Z"
+            },
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   Also, the document removes outdated\r\n```",
+              "createdAt": "2025-06-27T09:08:38Z",
+              "updatedAt": "2025-06-27T09:14:07Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\n   a fixed solution or format in dealing with operational and management\r\n```",
+              "createdAt": "2025-06-27T09:09:53Z",
+              "updatedAt": "2025-06-27T09:14:07Z"
+            },
+            {
+              "originalPosition": 41,
+              "body": "```suggestion\r\n   * Add a requirement for an \"Operational Considerations\" section in all PS RFCs, along with specific guidance on its content.\r\n```",
+              "createdAt": "2025-06-27T09:10:28Z",
+              "updatedAt": "2025-06-27T09:14:07Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "```suggestion\r\n   * Add an \"Operational and Management Tooling Considerations\" section\r\n```",
+              "createdAt": "2025-06-27T09:10:54Z",
+              "updatedAt": "2025-06-27T09:14:07Z"
+            },
+            {
+              "originalPosition": 59,
+              "body": "```suggestion\r\n##  Operational Considerations Section {#sec-oper-manag-considerations}\r\n```",
+              "createdAt": "2025-06-27T09:11:21Z",
+              "updatedAt": "2025-06-27T09:14:07Z"
+            },
+            {
+              "originalPosition": 65,
+              "body": "```suggestion\r\n   in an \"Operational Considerations\" section within a\r\n```",
+              "createdAt": "2025-06-27T09:11:41Z",
+              "updatedAt": "2025-06-27T09:14:07Z"
+            },
+            {
+              "originalPosition": 74,
+              "body": "```suggestion\r\n# Operational and Management Tooling Considerations {#sec-oper-mgmt-tooling}\r\n```",
+              "createdAt": "2025-06-27T09:12:00Z",
+              "updatedAt": "2025-06-27T09:14:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6wynjD",
+          "commit": {
+            "abbreviatedOid": "c1f91d2"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-27T11:09:19Z",
+          "updatedAt": "2025-06-27T11:09:19Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 82,
+      "id": "PR_kwDOOWPBqs6cZgOB",
+      "title": "Authors and Contributors List",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/82",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As requested by Med, Thomas is moved to the contributors list",
+      "createdAt": "2025-06-27T10:28:20Z",
+      "updatedAt": "2025-06-27T11:08:00Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "424ac2ff627906d8a2e0d4767fb58f7b5f152a96",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "autho-and-contributors-list",
+      "headRefOid": "b2dd4bc1df3ad45bd5df147c999582f774391990",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6wymmc",
+          "commit": {
+            "abbreviatedOid": "b2dd4bc"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-27T11:08:00Z",
+          "updatedAt": "2025-06-27T11:08:00Z",
+          "comments": []
         }
       ]
     }
