@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-29T00:57:00.610311+00:00",
+  "timestamp": "2025-07-01T00:57:15.579071+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -6404,6 +6404,61 @@
           "body": "",
           "createdAt": "2025-06-27T11:08:00Z",
           "updatedAt": "2025-06-27T11:08:00Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 83,
+      "id": "PR_kwDOOWPBqs6csfKQ",
+      "title": "cripto-ML-DSA",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/83",
+      "state": "OPEN",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-30T13:18:55Z",
+      "updatedAt": "2025-06-30T13:46:01Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "424ac2ff627906d8a2e0d4767fb58f7b5f152a96",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "extend-section-4-considerations",
+      "headRefOid": "33696693ff1d1799fbd1270fafaddb86284cbee3",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Hmmm. This feels like it crosses too far over into Security Considerations and perhaps out of scope for what we want to do and maintain. This, perhaps, is one area for discussion on this week's call.\r\n\r\nThanks @xorrkaz , for the early review, I got some inpiration from here https://github.com/lamps-wg/dilithium-certificates/pull/150 to show that we are not router-centric. ",
+          "createdAt": "2025-06-30T13:41:20Z",
+          "updatedAt": "2025-06-30T13:41:20Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "> > Hmmm. This feels like it crosses too far over into Security Considerations and perhaps out of scope for what we want to do and maintain. This, perhaps, is one area for discussion on this week's call.\r\n> \r\n> Thanks @xorrkaz , for the early review, I got some inpiration from here [lamps-wg/dilithium-certificates#150](https://github.com/lamps-wg/dilithium-certificates/pull/150) to show that we are not router-centric.\r\n\r\nI don't doubt it's valuable.  I just worry that we'll collide with evolving security guidelines.",
+          "createdAt": "2025-06-30T13:46:01Z",
+          "updatedAt": "2025-06-30T13:46:01Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6xGSph",
+          "commit": {
+            "abbreviatedOid": "3369669"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "Hmmm.  This feels like it crosses too far over into Security Considerations and perhaps out of scope for what we want to do and maintain.  This, perhaps, is one area for discussion on this week's call.",
+          "createdAt": "2025-06-30T13:21:43Z",
+          "updatedAt": "2025-06-30T13:21:43Z",
           "comments": []
         }
       ]
