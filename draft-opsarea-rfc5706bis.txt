@@ -6,17 +6,15 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 28 December 2025                                      A. Farrel
+Expires: 4 January 2026                                        A. Farrel
                                                       Old Dog Consulting
-                                                                 T. Graf
-                                                                Swisscom
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            26 June 2025
+                                                             3 July 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 December 2025.
+   This Internet-Draft will expire on 4 January 2026.
 
 Copyright Notice
 
@@ -118,6 +116,7 @@ Table of Contents
    9.  Security Considerations
    10. Informative References
    Acknowledgements
+   Contributors
    Authors' Addresses
 
 1.  Introduction
@@ -1597,9 +1596,9 @@ Table of Contents
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-08, 24 June 2025,
+              draft-ietf-opsawg-oam-characterization-09, 2 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
-              oam-characterization-08>.
+              oam-characterization-09>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
@@ -1903,6 +1902,13 @@ Acknowledgements
       Adrian Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen
       Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
 
+Contributors
+
+   Thomas Graf
+   Swisscom
+   Email: thomas.graf@swisscom.com
+
+
 Authors' Addresses
 
    Benoit Claise
@@ -1918,11 +1924,6 @@ Authors' Addresses
    Adrian Farrel
    Old Dog Consulting
    Email: adrian@olddog.co.uk
-
-
-   Thomas Graf
-   Swisscom
-   Email: thomas.graf@swisscom.com
 
 
    Samier Barguil
