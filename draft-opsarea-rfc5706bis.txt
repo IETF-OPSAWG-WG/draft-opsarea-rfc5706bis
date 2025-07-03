@@ -567,6 +567,17 @@ Table of Contents
    speed or some other relevant factors.  This would help reduce the
    chance of problems caused by technology advancement.
 
+   For example, where protocols involve cryptographic keys, Protocol
+   Designers should consider not only key generation and validation
+   mechanisms but also the format in which private keys are stored,
+   transmitted, and restored.  Designers should specify any expected
+   consistency checks (e.g., recomputing an expanded key from the seed)
+   that help verify correctness and integrity.  Additionally, guidance
+   should be given on data retention, restoration limits, and
+   cryptographic module interoperability when importing/exporting
+   private key material.  See [I-D.ietf-lamps-dilithium-certificates]
+   for an example of how such considerations are incorporated.
+
 4.3.  Migration Path
 
    If the New Protocol is a new version of an existing one, or if it is
@@ -1605,6 +1616,15 @@ Table of Contents
               "Operations and Management Review Checklist", 2025,
               <https://github.com/IETF-OPS-DIR/Review-Template/tree/
               main>.
+
+   [I-D.ietf-lamps-dilithium-certificates]
+              Massimo, J., Kampanakis, P., Turner, S., and B.
+              Westerbaan, "Internet X.509 Public Key Infrastructure -
+              Algorithm Identifiers for the Module-Lattice-Based Digital
+              Signature Algorithm (ML-DSA)", Work in Progress, Internet-
+              Draft, draft-ietf-lamps-dilithium-certificates-12, 26 June
+              2025, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              lamps-dilithium-certificates-12>.
 
    [I-D.ietf-netmod-rfc8407bis]
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
