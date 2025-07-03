@@ -1311,7 +1311,7 @@ DM         DM        DM     --> concrete/detailed model
    associations, end-to-end application quality, service interruptions,
    or user experience (UX)?
 
-##  Security Management {#sec-secuity-mgmt}
+##  Security Management {#sec-security-mgmt}
 
    Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the New Protocol or Protocol Extension.
@@ -1490,7 +1490,7 @@ DM         DM        DM     --> concrete/detailed model
    concerted attack might be able to be mounted by causing an excess of
    these events. In other words, the security-management mechanisms
    could constitute a security vulnerability. The management of
-   security aspects is important (see {{sec-secuity-mgmt}}).
+   security aspects is important (see {{sec-security-mgmt}}).
 
 --- back
 
