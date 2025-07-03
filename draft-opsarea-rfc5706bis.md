@@ -65,10 +65,6 @@ author:
     organization: Old Dog Consulting
     email: adrian@olddog.co.uk
  -
-    fullname: Thomas Graf
-    organization: Swisscom
-    email: thomas.graf@swisscom.com
- -
     fullname: Samier Barguil
     organization: Nokia
     email: samier.barguil_giraldo@nokia.com
@@ -83,6 +79,13 @@ author:
     fullname: Ran Chen
     organization: ZTE
     email: chen.ran@zte.com.cn
+
+contributor:
+ -
+    fullname: Thomas Graf
+    organization: Swisscom
+    email: thomas.graf@swisscom.com
+
 --- abstract
 
    New Protocols or Protocol Extensions are best designed with due
