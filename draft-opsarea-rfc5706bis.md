@@ -183,7 +183,8 @@ contributor:
    be addressed, and suggest (preferably standard) management protocols
    and data models that could be used to address those needs. This is
    similar to a WG that considers which security threats are relevant to
-   their protocol, documents (in the required Security Considerations section, per RFC Style Guide {{?RFC7322}})
+   their protocol, documents (in the required Security Considerations section,
+   per Guidelines for Writing RFC Text on Security Considerations {{?BCP72}})
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
