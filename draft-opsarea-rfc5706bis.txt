@@ -202,9 +202,10 @@ Table of Contents
    and data models that could be used to address those needs.  This is
    similar to a WG that considers which security threats are relevant to
    their protocol, documents (in the required Security Considerations
-   section, per RFC Style Guide [RFC7322]) how threats should be
-   mitigated, and then suggests appropriate standard protocols that
-   could mitigate the threats.
+   section, per Guidelines for Writing RFC Text on Security
+   Considerations [BCP72]) how threats should be mitigated, and then
+   suggests appropriate standard protocols that could mitigate the
+   threats.
 
    This document does not impose a solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
@@ -1586,6 +1587,20 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
+   [BCP72]    Best Current Practice 72,
+              <https://www.rfc-editor.org/info/bcp72>.
+              At the time of writing, this BCP comprises the following:
+
+              Rescorla, E. and B. Korver, "Guidelines for Writing RFC
+              Text on Security Considerations", BCP 72, RFC 3552,
+              DOI 10.17487/RFC3552, July 2003,
+              <https://www.rfc-editor.org/info/rfc3552>.
+
+              Gont, F. and I. Arce, "Security Considerations for
+              Transient Numeric Identifiers Employed in Network
+              Protocols", BCP 72, RFC 9416, DOI 10.17487/RFC9416, July
+              2023, <https://www.rfc-editor.org/info/rfc9416>.
+
    [CHECKLIST]
               "Operations and Management Review Checklist", 2025,
               <https://github.com/IETF-OPS-DIR/Review-Template/tree/
@@ -1785,10 +1800,6 @@ Table of Contents
               Protocol for the Exchange of Flow Information", STD 77,
               RFC 7011, DOI 10.17487/RFC7011, September 2013,
               <https://www.rfc-editor.org/rfc/rfc7011>.
-
-   [RFC7322]  Flanagan, H. and S. Ginoza, "RFC Style Guide", RFC 7322,
-              DOI 10.17487/RFC7322, September 2014,
-              <https://www.rfc-editor.org/rfc/rfc7322>.
 
    [RFC7854]  Scudder, J., Ed., Fernando, R., and S. Stuart, "BGP
               Monitoring Protocol (BMP)", RFC 7854,
