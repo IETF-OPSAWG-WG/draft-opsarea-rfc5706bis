@@ -121,9 +121,9 @@ contributor:
 
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
-   introduces a requirement for an "Operational and Management
-   Considerations" section in Internet-Drafts, before they are progressed
-   for publication as RFCs. Also, the document removes outdated
+   introduces a requirement for an "Operational Considerations"
+   section in all new Standard Track RFCs.
+   Also, the document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services. See {{sec-changes-since-5706}} for more details.
@@ -140,7 +140,7 @@ contributor:
    deployed protocols may have established de facto operations and
    management practices that are already well understood. However, the guidance
    in this document does not mandate providing a comprehensive inventory of
-   all operational and manageability considerations. Instead, the guidance is to
+   all operational considerations. Instead, the guidance is to
    focus on key aspects that will ease deployability and are essential for operating and maintaining
    the technology.
 
@@ -206,7 +206,7 @@ contributor:
    experience has been gained.
 
    For the OPS Area Directors or the IESG, this document helps evaluating the
-   content of the new "Operational and Management Considerations" section. As an
+   content of the new "Operational Considerations" section. As an
    Area Director who is in the process of creating a new WG Charter, this document lists some considerations
    of the functionality needed to operate and manage new Protocol and Protocol Extensions.
 
@@ -225,7 +225,7 @@ contributor:
 
    * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
 
-   * Add a requirement for an "Operational and Management Considerations" section in all Internet-Drafts, along with specific guidance on its content.
+   * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
 
    * Update the operational and manageability-related technologies to reflect over 15 years of advancements
 
@@ -364,12 +364,12 @@ contributor:
 
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
-##  Operations and Manageability Considerations Section {#sec-oper-manag-considerations}
+##  Operational Considerations Section {#sec-oper-manag-considerations}
 
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
-   in an "Operations and Manageability Considerations" section within a
+   in an "Operational Considerations" section within a
    specification. Since protocols are intended for operational deployment and
    management within real networks, it is expected that such considerations
    will be present.
