@@ -93,8 +93,8 @@ contributor:
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
    reviewers of documents that define New Protocols or Protocol
-   Extensions regarding aspects of operations and management that should
-   be considered.
+   Extensions regarding aspects of operations and management that they
+   should consider and include in their documents.
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
@@ -111,19 +111,21 @@ contributor:
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
-   management particularly hard. As a matter of fact, the operational
-   environment and manageability of a protocol should be considered from the
-   start when New Protocols are designed.
+   management particularly difficult. In order to make sure that protocols can be
+   deployed and used, the operational environment and manageability of a
+   protocol should be considered when New Protocols or Protocol Extensions
+   are designed.
 
    This document provides guidelines to help Protocol Designers and working
    groups (WGs) consider the operations and management functionality for
-   their New Protocol or Protocol Extension at an earlier phase.
+   their New Protocol or Protocol Extension at an early phase in the design
+   process.
 
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational Considerations"
    section in all new Standard Track RFCs.
-   Also, the document removes outdated
+   This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services. See {{sec-changes-since-5706}} for more details.
@@ -131,12 +133,12 @@ contributor:
 ##  This Document {#sec-this-doc}
 
    This document provides a set of guidelines for considering
-   operations and management in an IETF specification
+   operations and management in an IETF specification on the Standards Track
    with an eye toward being flexible while also striving for
    interoperability.
 
    Entirely New Protocols may require significant consideration of expected
-   operations and management, while extensions to existing, widely
+   operations and management, while Protocol Extensions to existing, widely
    deployed protocols may have established de facto operations and
    management practices that are already well understood. However, the guidance
    in this document does not mandate providing a comprehensive inventory of
@@ -153,7 +155,7 @@ contributor:
 
    A WG may decide that its protocol does not need interoperable
    management or a standardized Data Model, but this should be a
-   deliberate decision, not the result of omission. This document
+   deliberate and documented decision, not the result of omission. This document
    provides some guidelines for those considerations.
 
    This document makes a distinction between "Operational
@@ -167,10 +169,11 @@ contributor:
 
    The purpose of this document is to provide guidance about what to
    consider when thinking about the management and deployment of a new
-   protocol, and to provide guidance about documenting the
-   considerations. As it is useful to anyone involved in the document lifecyle:
-   from the authors writing the protocol specification to those reviewing and evaluating its draft
-   content, including WG chairs, WG advisors, Document Shepherd, Responsible Area Director, and the IESG.
+   protocol, and to provide guidance about documenting those
+   considerations. These guidelines are intended to be useful to anyone involved in the document lifecyle:
+   from the authors writing the protocol specification, to those reviewing and evaluating drafts of those
+   specifications: including WG chairs, WG advisors, the Document Shepherd, the Responsible Area Director,
+   and the IESG.
 
    The following guidelines are designed to help
    Protocol Designers provide a reasonably consistent format for such
@@ -188,35 +191,35 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
-   This document does not impose a solution, imply that a formal data
+   This document does not impose a specific management or operational solution, imply that a formal data
    model is needed, or imply that using a specific management protocol
    is mandatory. If Protocol Designers conclude that the technology can be managed
    solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
    but it is a decision that should be explicit in a manageability discussion
    -- that this is how the protocol will need to be operated and managed.
-   Protocol Designers should avoid having manageability pushed for a later
-   phase of the development of the standard.
+   Protocol Designers should avoid deferring manageability to a later
+   phase of the development of the specification.
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
-   to understand how the protocol will be deployed and managed. The considerations
+   to understand how the protocol will be deployed, operated, and managed. The considerations
    do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
    should expect that considerations for operations and management may
    need to be updated in the future, after further operational
    experience has been gained.
 
-   For the OPS Area Directors or the IESG, this document helps evaluating the
+   For the OPS Area Directors and the IESG, this document will help with the evaluation of the
    content of the new "Operational Considerations" section. As an
    Area Director who is in the process of creating a new WG Charter, this document lists some considerations
-   of the functionality needed to operate and manage new Protocol and Protocol Extensions.
+   of the functionality needed to operate and manage New Protocols and Protocol Extensions.
 
-   The OPS directorate can use this document to guide performing reviews. On top of that, a list of guidelines and a
+   The OPS Directorate can use this document to guide performing reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
-   and review Internet-Drafts, taking into OPS considerations into account.
+   and review Internet-Drafts, taking OPS considerations into account.
 
 ## Changes Since RFC 5706 {#sec-changes-since-5706}
 
@@ -376,8 +379,8 @@ contributor:
    publication as Informational RFCs, for example, in protocol architecture
    and protocol requirements documents.
 
-   After evaluating the operational and manageability aspects of a
-   protocol, a Protocol Extension, or an architecture, the resulting practices and
+   After evaluating the operational and manageability aspects of a New
+   Protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
    in an "Operational Considerations" section within a
    specification. Since protocols are intended for operational deployment and
@@ -392,8 +395,8 @@ contributor:
    An "Operational Considerations" section should include discussion of
    the management and operations topics raised in this document, and
    when one or more of these topics is not relevant, it would be useful
-   to contain a simple statement explaining why the topic is not
-   relevant or applicable for the New Protocol or feature.
+   to include a simple statement explaining why the topic is not
+   relevant or applicable for the New Protocol or Protocol Extension.
    Of course, additional relevant operational and manageability topics
    should be included as well.
 
@@ -404,11 +407,11 @@ contributor:
 
 ##  Null Operations and Manageability Considerations Section {#sec-null-sec}
 
-   A Protocol Designer should consider the manageability
-   requirements of a New Protocol or Protocol Extension and determine that no management
-   functionality or operational best-practice clarifications are
-   needed by the protocol. It would be helpful to
-   those who may update or write extensions to the protocol in the
+   After a Protocol Designer has considered the manageability
+   requirements of a New Protocol or Protocol Extension, they may determine that no
+   management functionality or operational best-practice clarifications are
+   needed. It would be helpful to
+   reviewers, those who may update or write extensions to the protocol in the
    future, or to those deploying the protocol, to know the rationale
    regarding the decisions on manageability of the protocol at the
    time of its design.
@@ -421,7 +424,7 @@ contributor:
    section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
-   In cases where the New Protocol is an extension and the base protocol
+   In cases where the specification is a Protocol Extension and the base protocol
    already addresses the relevant operational and manageability
    considerations, it is helpful to reference the considerations section
    in the base document.
