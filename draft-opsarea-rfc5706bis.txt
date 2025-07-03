@@ -412,6 +412,15 @@ Table of Contents
 
 3.1.  Operational Considerations Section
 
+   All Internet-Drafts that are advanced for publication as Standards
+   Track IETF RFC are required to include an "Operational
+   Considerations" section.  It is recommended that Internet-Drafts
+   advanced for publication as Experimental protocol specifications also
+   include such sections.  "Operational Considerations" sections will
+   also often be appropriate in Internet-Drafts advanced for publication
+   as Informational RFCs, for example, in protocol architecture and
+   protocol requirements documents.
+
    After evaluating the operational and manageability aspects of a
    protocol, a Protocol Extension, or an architecture, the resulting
    practices and requirements should be documented in an "Operational
