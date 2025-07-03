@@ -521,7 +521,7 @@ author:
    (e.g., recomputing an expanded key from the seed) that help verify
    correctness and integrity. Additionally, guidance should be given on
    data retention, restoration limits, and cryptographic module
-   interoperability when importing/exporting private key material.
+   interoperability when importing/exporting private key material.  See {{?draft-ietf-lamps-dilithium-certificates}} for an example of how such considerations are incorporated.
 
 ##  Migration Path {#sec-migration}
 
