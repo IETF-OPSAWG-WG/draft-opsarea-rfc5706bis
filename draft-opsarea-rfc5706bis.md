@@ -152,7 +152,7 @@ contributor:
    protocols to be deployed and operated in the real-world Internet.
 
    A WG may decide that its protocol does not need interoperable
-   management or a standardized data model, but this should be a
+   management or a standardized Data Model, but this should be a
    deliberate decision, not the result of omission. This document
    provides some guidelines for those considerations.
 
@@ -161,7 +161,7 @@ contributor:
    closely related. The operational considerations apply to operating the protocol within a network, even
    if there were no management protocol actively being used. The section on manageability is focused on
    management technology, such as how to utilize management protocols
-   and how to design management data models.
+   and how to design management Data Models.
 
 ##  Audience {#sec-audience}
 
@@ -181,7 +181,7 @@ contributor:
    Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
-   and data models that could be used to address those needs. This is
+   and Data Models that could be used to address those needs. This is
    similar to a WG that considers which security threats are relevant to
    their protocol, documents (in the required Security Considerations section,
    per Guidelines for Writing RFC Text on Security Considerations {{?BCP72}})
@@ -192,7 +192,7 @@ contributor:
    model is needed, or imply that using a specific management protocol
    is mandatory. If Protocol Designers conclude that the technology can be managed
    solely by using Proprietary Interfaces or that it does
-   not need any structured or standardized data model, this might be fine,
+   not need any structured or standardized Data Model, this might be fine,
    but it is a decision that should be explicit in a manageability discussion
    -- that this is how the protocol will need to be operated and managed.
    Protocol Designers should avoid having manageability pushed for a later
@@ -273,9 +273,9 @@ contributor:
       relations, etc., a collection of operations that can be applied to the
       structures such as retrieval, update, summation, etc., and a collection of
       integrity rules that define the legal states (set of values) or changes of
-      state (operations on values). A data model may be derived by mapping the
-      contents of an information model or may be developed ab initio. Further
-      discussion of data models can be found in {{?RFC3444}}, {{sec-interop}},
+      state (operations on values). A Data Model may be derived by mapping the
+      contents of an Information Model or may be developed ab initio. Further
+      discussion of Data Models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgmt-info}}.
 
    *  Fault: See {{?I-D.ietf-nmop-terminology}}.
@@ -289,7 +289,7 @@ contributor:
       and operations, and the way that they relate to each other. The model is
       independent of any specific software usage, protocol,
       or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for
-      further discussion of information models.
+      further discussion of Information Models.
 
    *  New Protocol and Protocol Extension: These terms are used in this document
       to identify entirely new protocols, new versions of existing
@@ -336,7 +336,7 @@ contributor:
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
-   The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management data models. A non-exhaustive list of such protocols is provided below:
+   The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
 
    *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
 
@@ -1256,7 +1256,7 @@ DM         DM        DM     --> concrete/detailed model
    In other words, focus on what makes sense for the protocol being
    managed, not the protocol used for management. If a constraint
    is not specific to a management protocol, then it should be left
-   to data modelers of that protocol to determine how to handle it.
+   to Data Model designers of that protocol to determine how to handle it.
    For example, VLAN identifiers are defined by standard to range
    from 1 to 4094. Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
