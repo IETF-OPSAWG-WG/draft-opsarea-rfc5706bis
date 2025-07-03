@@ -1388,7 +1388,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    considered for any IETF protocol, given the IETF's role in developing technologies and
    protocols to be deployed and operated in the real-world Internet.<a href="#section-1.1-3" class="pilcrow">¶</a></p>
 <p id="section-1.1-4">A WG may decide that its protocol does not need interoperable
-   management or a standardized data model, but this should be a
+   management or a standardized Data Model, but this should be a
    deliberate decision, not the result of omission. This document
    provides some guidelines for those considerations.<a href="#section-1.1-4" class="pilcrow">¶</a></p>
 <p id="section-1.1-5">This document makes a distinction between "Operational
@@ -1396,7 +1396,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    closely related. The operational considerations apply to operating the protocol within a network, even
    if there were no management protocol actively being used. The section on manageability is focused on
    management technology, such as how to utilize management protocols
-   and how to design management data models.<a href="#section-1.1-5" class="pilcrow">¶</a></p>
+   and how to design management Data Models.<a href="#section-1.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-audience">
@@ -1418,7 +1418,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-1.2-3">Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
-   and data models that could be used to address those needs. This is
+   and Data Models that could be used to address those needs. This is
    similar to a WG that considers which security threats are relevant to
    their protocol, documents (in the required Security Considerations section,
    per Guidelines for Writing RFC Text on Security Considerations <span>[<a href="#BCP72" class="cite xref">BCP72</a>]</span>)
@@ -1428,7 +1428,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    model is needed, or imply that using a specific management protocol
    is mandatory. If Protocol Designers conclude that the technology can be managed
    solely by using Proprietary Interfaces or that it does
-   not need any structured or standardized data model, this might be fine,
+   not need any structured or standardized Data Model, this might be fine,
    but it is a decision that should be explicit in a manageability discussion
    -- that this is how the protocol will need to be operated and managed.
    Protocol Designers should avoid having manageability pushed for a later
@@ -1534,9 +1534,9 @@ This usually comprises a collection of data structures such as lists, tables,
 relations, etc., a collection of operations that can be applied to the
 structures such as retrieval, update, summation, etc., and a collection of
 integrity rules that define the legal states (set of values) or changes of
-state (operations on values). A data model may be derived by mapping the
-contents of an information model or may be developed ab initio. Further
-discussion of data models can be found in <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>, <a href="#sec-interop" class="auto internal xref">Section 5.1</a>,
+state (operations on values). A Data Model may be derived by mapping the
+contents of an Information Model or may be developed ab initio. Further
+discussion of Data Models can be found in <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>, <a href="#sec-interop" class="auto internal xref">Section 5.1</a>,
 and <a href="#sec-mgmt-info" class="auto internal xref">Section 5.2</a>.<a href="#section-2.1-2.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-2.5">
@@ -1553,7 +1553,7 @@ entities in a managed environment, their properties, attributes
 and operations, and the way that they relate to each other. The model is
 independent of any specific software usage, protocol,
 or platform <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>. See Sections <a href="#sec-interop" class="auto internal xref">5.1</a> and <a href="#sec-im-design" class="auto internal xref">5.2.1</a> for
-further discussion of information models.<a href="#section-2.1-2.7.1" class="pilcrow">¶</a></p>
+further discussion of Information Models.<a href="#section-2.1-2.7.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-2.1-2.8">
             <p id="section-2.1-2.8.1">New Protocol and Protocol Extension: These terms are used in this document
@@ -1617,7 +1617,7 @@ of New Protocols or Protocol Extensions.<a href="#section-2.1-2.12.1" class="pil
         <h3 id="name-available-management-techno">
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-available-management-techno" class="section-name selfRef">Available Management Technologies</a>
         </h3>
-<p id="section-2.2-1">The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in <span>[<a href="#RFC6632" class="cite xref">RFC6632</a>]</span>. Broadly, these include core network management protocols, purpose-specific management protocols, and network management data models. A non-exhaustive list of such protocols is provided below:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.2-1">The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in <span>[<a href="#RFC6632" class="cite xref">RFC6632</a>]</span>. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2.2-2.1">
             <p id="section-2.2-2.1.1">Remote Authentication Dial In User Service (RADIUS) <span>[<a href="#RFC2865" class="cite xref">RFC2865</a>]</span><a href="#section-2.2-2.1.1" class="pilcrow">¶</a></p>
@@ -2627,7 +2627,7 @@ performance reasons.<a href="#section-5.4-7.1.1" class="pilcrow">¶</a></p>
    In other words, focus on what makes sense for the protocol being
    managed, not the protocol used for management. If a constraint
    is not specific to a management protocol, then it should be left
-   to data modelers of that protocol to determine how to handle it.
+   to Data Model designers of that protocol to determine how to handle it.
    For example, VLAN identifiers are defined by standard to range
    from 1 to 4094. Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".<a href="#section-5.6.1-7" class="pilcrow">¶</a></p>
