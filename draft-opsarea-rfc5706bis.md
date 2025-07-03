@@ -514,7 +514,7 @@ author:
    speed or some other relevant factors. This would help reduce the
    chance of problems caused by technology advancement.
 
-   Where protocols involve cryptographic keys, Protocol Designers should
+   For example, where protocols involve cryptographic keys, Protocol Designers should
    consider not only key generation and validation mechanisms but also the
    format in which private keys are stored, transmitted, and restored.
    Designers should specify any expected consistency checks
