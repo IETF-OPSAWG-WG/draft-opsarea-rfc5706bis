@@ -247,7 +247,7 @@ contributor:
 
    This section introduces the key concepts and terminology used throughout the document and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
 
-   This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?RFC2119}} and {{?RFC8174}}.
+   This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?BCP14}}.
 
 ##  Terminology {#sec-terms}
 
