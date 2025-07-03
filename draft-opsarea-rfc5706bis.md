@@ -466,7 +466,6 @@ contributor:
    needs to operate well with any choice of values. If there are
    sensible defaults, these need to be stated.
 
-
    There may be a need to support both a human interface (e.g., for
    troubleshooting) and a programmatic interface (e.g., for automated
    monitoring and root cause analysis). The application programming
@@ -524,6 +523,15 @@ contributor:
    constant, try to set the default value as a function of the link
    speed or some other relevant factors. This would help reduce the
    chance of problems caused by technology advancement.
+
+   For example, where protocols involve cryptographic keys, Protocol Designers should
+   consider not only key generation and validation mechanisms but also the
+   format in which private keys are stored, transmitted, and restored.
+   Designers should specify any expected consistency checks
+   (e.g., recomputing an expanded key from the seed) that help verify
+   correctness and integrity. Additionally, guidance should be given on
+   data retention, restoration limits, and cryptographic module
+   interoperability when importing/exporting private key material. See {{?I-D.ietf-lamps-dilithium-certificates}} for an example of how such considerations are incorporated.
 
 ##  Migration Path {#sec-migration}
 
