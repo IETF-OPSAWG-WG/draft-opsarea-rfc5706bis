@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-01T00:57:15.579071+00:00",
+  "timestamp": "2025-07-03T00:50:50.571118+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1320,6 +1320,24 @@
       "body": "1. Operations and Manageability Considerations\n2. Operational Considerations?\n3. Manageability Considerations?\n\nConclusion from the June 26th meeting\n- 2 is already used today\n- 2 does include both operational and manageability in the non OPS people mind\n\nSamier, Adrian, Benoit, Med => let's use 2?\n",
       "createdAt": "2025-06-26T13:47:54Z",
       "updatedAt": "2025-06-26T13:47:54Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 84,
+      "id": "I_kwDOOWPBqs6-Oe7o",
+      "title": "Operational and Security Considerations Boundary",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/84",
+      "state": "OPEN",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "sbarguil"
+      ],
+      "labels": [],
+      "body": "The boundaries are not always strict, but it's useful to separate:\n\n\u201cHow to do it\u201d \u2192 Operational Considerations\n\n\u201cWhy it's safe\u201d \u2192 Security Considerations",
+      "createdAt": "2025-07-01T08:57:20Z",
+      "updatedAt": "2025-07-01T08:57:25Z",
       "closedAt": null,
       "comments": []
     }
@@ -6420,7 +6438,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-06-30T13:18:55Z",
-      "updatedAt": "2025-06-30T13:46:01Z",
+      "updatedAt": "2025-07-01T08:55:36Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "424ac2ff627906d8a2e0d4767fb58f7b5f152a96",
@@ -6445,6 +6463,13 @@
           "body": "> > Hmmm. This feels like it crosses too far over into Security Considerations and perhaps out of scope for what we want to do and maintain. This, perhaps, is one area for discussion on this week's call.\r\n> \r\n> Thanks @xorrkaz , for the early review, I got some inpiration from here [lamps-wg/dilithium-certificates#150](https://github.com/lamps-wg/dilithium-certificates/pull/150) to show that we are not router-centric.\r\n\r\nI don't doubt it's valuable.  I just worry that we'll collide with evolving security guidelines.",
           "createdAt": "2025-06-30T13:46:01Z",
           "updatedAt": "2025-06-30T13:46:01Z"
+        },
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> > > Hmmm. This feels like it crosses too far over into Security Considerations and perhaps out of scope for what we want to do and maintain. This, perhaps, is one area for discussion on this week's call.\r\n> > \r\n> > \r\n> > Thanks @xorrkaz , for the early review, I got some inpiration from here [lamps-wg/dilithium-certificates#150](https://github.com/lamps-wg/dilithium-certificates/pull/150) to show that we are not router-centric.\r\n> \r\n> I don't doubt it's valuable. I just worry that we'll collide with evolving security guidelines.\r\n\r\nYeah, I see your point. Since this is a cryptographic algorithm, the operational considerations section reflects the key formats and potential testing, while the security considerations explain why those formats and structures are secure. To help differentiate what falls outside of operational considerations; The boundaries are not always strict, but it's useful to separate:\r\n\r\n- \u201cHow to do it\u201d \u2192 Operational Considerations\r\n- \u201cWhy it's safe\u201d \u2192 Security Consideration\r\n\r\nI\u2019ll open an issue so we can discuss it during the meeting.",
+          "createdAt": "2025-07-01T08:55:36Z",
+          "updatedAt": "2025-07-01T08:55:36Z"
         }
       ],
       "reviews": [
