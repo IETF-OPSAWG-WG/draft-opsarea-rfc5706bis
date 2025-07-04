@@ -109,7 +109,7 @@ contributor:
    Often when New Protocols or Protocol Extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
    operated, and managed. Retrofitting operations and management
-   mechanisms is often hard and architecturally unpleasant, and certain
+   mechanisms are often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
    management particularly difficult. In order to make sure that protocols can be
    deployed and used, the operational environment and manageability of a
@@ -170,9 +170,9 @@ contributor:
    The purpose of this document is to provide guidance about what to
    consider when thinking about the management and deployment of a new
    protocol, and to provide guidance about documenting those
-   considerations. These guidelines are intended to be useful to anyone involved in the document lifecyle:
+   considerations. These guidelines are intended to be useful to anyone involved in the document lifecycle:
    from the authors writing the protocol specification, to those reviewing and evaluating drafts of those
-   specifications: including WG chairs, WG advisors, the Document Shepherd, the Responsible Area Director,
+   specifications, including WG Chairs, WG Advisors, the Document Shepherd, the Responsible Area Director,
    and the IESG.
 
    The following guidelines are designed to help
@@ -191,8 +191,8 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
-   This document does not impose a specific management or operational solution, imply that a formal data
-   model is needed, or imply that using a specific management protocol
+   This document does not impose a specific management or operational solution, imply that a formal Data
+   Model is needed, or imply that using a specific management protocol
    is mandatory. If Protocol Designers conclude that the technology can be managed
    solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
@@ -368,7 +368,7 @@ contributor:
 
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
-##  Operational Considerations Section {#sec-oper-manag-considerations}
+##  Operational Considerations {#sec-oper-manag-considerations}
 
    All Internet-Drafts that are advanced for publication as Standards Track
    IETF RFC are required to include an "Operational Considerations" section.
@@ -405,7 +405,7 @@ contributor:
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-##  Null Operations and Manageability Considerations Section {#sec-null-sec}
+##  Null Operations and Manageability Considerations {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may determine that no
@@ -429,7 +429,7 @@ contributor:
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-##  Placement of Operations and Manageability Considerations Sections {#sec-placement-sec}
+##  Placement of Operations and Manageability Considerations {#sec-placement-sec}
 
    It is recommended that the section be
    placed immediately before the Security Considerations section.
@@ -562,7 +562,7 @@ contributor:
    Protocol Designers should consider the requirements that the new
    protocol might put on other protocols and functional components and
    should also document the requirements from other protocols and
-   functional elements that have been considered in designing the new
+   functional components that have been considered in designing the new
    protocol.
 
    These considerations should generally remain illustrative to avoid
@@ -580,10 +580,18 @@ contributor:
    take it off the fast path! The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
-   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this Problem
+   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this p  For example, the design of the Resource ReSerVation Protocol (RSVP)
+   {{?RFC2205}} required each router to look at the RSVP PATH message and,
+   if the router understood RSVP, add its own address to the message to
+   enable automatic tunneling through non-RSVP routers. But in reality,
+   routers cannot look at an otherwise normal IP packet and potentially
+   take it off the fast path! The initial designers overlooked that a
+   new "deep packet inspection" requirement was being put on the
+   functional components of a router. The "router alert" option
+   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem
    for RSVP and other protocols that require the router to take some
-   packets off the fast-forwarding path. Yet, router alert has its own
-   Problems in impacting router performance.
+   packets off the fast-forwarding path. Yet, Router Alert has its own
+   problems in impacting router performance.
 
 ##  Impact on Network Operation {#sec-impact}
 
@@ -988,7 +996,7 @@ DM         DM        DM     --> concrete/detailed model
   device-level information. Similarly, it is beneficial to define
   events (and relevant triggered notifications) that indicate changes in an underlying state,
   enabling reliable detection and correlation of service-affecting
-  conditions. Including such mechanisms improves the robustness of
+  conditions. Including such mechanisms improve the robustness of
   integrations and helps ensure consistent behavior across
   implementations.
 
@@ -1125,8 +1133,8 @@ DM         DM        DM     --> concrete/detailed model
    are probably very similar. Many operators consider it desirable to
    extract, document, and standardize the common parts of these network-
    wide configuration database schemas. A Protocol Designer should
-   consider how to standardize the common parts of configuring the new
-   protocol, while recognizing that vendors may also have proprietary
+   consider how to standardize the common parts of configuring the New
+   Protocol, while recognizing that vendors may also have proprietary
    aspects of their configurations.
 
    It is important to enable operators to concentrate on the
