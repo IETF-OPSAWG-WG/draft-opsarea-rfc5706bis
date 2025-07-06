@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-03T00:50:50.571118+00:00",
+  "timestamp": "2025-07-06T00:56:09.036010+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -389,7 +389,7 @@
       "labels": [],
       "body": "Because this documents was produced in 2009, it missed some new OPS-related technologies (protocols and data models): BMP, Alt Mark, NETCONF/RESTCONF, YANG",
       "createdAt": "2025-04-09T12:51:05Z",
-      "updatedAt": "2025-05-08T08:27:27Z",
+      "updatedAt": "2025-07-03T13:40:40Z",
       "closedAt": null,
       "comments": [
         {
@@ -419,6 +419,13 @@
           "body": "While this started as issue 7 [New OPS-related technologies](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/7) , this might be more appropriate for [Background material vs. Guidance for author](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/21)\n    Once completed, we can complete [Operations and Manageability Consideration Section](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/9)",
           "createdAt": "2025-05-08T08:27:26Z",
           "updatedAt": "2025-05-08T08:27:26Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "See #89 for a suggestion on YANG with respect to SMI being mentioned.  Also, s/resent/recent/ in that section if the text remains.",
+          "createdAt": "2025-07-03T13:40:40Z",
+          "updatedAt": "2025-07-03T13:40:40Z"
         }
       ]
     },
@@ -1162,7 +1169,7 @@
       "id": "I_kwDOOWPBqs67LZiC",
       "title": "RFC 2119 keywords for this BCP required?",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/73",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1171,8 +1178,8 @@
       "labels": [],
       "body": "MUST include this new section?\nSHOULD include this new section?\nMUST be thinking about this...?",
       "createdAt": "2025-06-12T13:35:18Z",
-      "updatedAt": "2025-06-26T13:36:51Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-03T14:35:49Z",
+      "closedAt": "2025-07-03T14:35:49Z",
       "comments": [
         {
           "author": "cpignata",
@@ -1187,6 +1194,13 @@
           "body": "Conclusion from June 26th meeting:\nno required to use RFC 2119, as long as the language is clear (mainly section 3). For ex: the new section is mandatory\n\nNote: [IESG Statement on Clarifying the Use of BCP 14 Key Words](https://datatracker.ietf.org/doc/statement-iesg-statement-on-clarifying-the-use-of-bcp-14-key-words/)\n",
           "createdAt": "2025-06-26T13:36:51Z",
           "updatedAt": "2025-06-26T13:36:51Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See my separate email with minor text suggestions, but mainly saying OK to current text",
+          "createdAt": "2025-07-03T12:24:27Z",
+          "updatedAt": "2025-07-03T12:24:27Z"
         }
       ]
     },
@@ -1211,7 +1225,7 @@
       "id": "I_kwDOOWPBqs67aWii",
       "title": "Make it clear this is targeting  IETF Stream",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/76",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1220,8 +1234,8 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-06-13T17:29:21Z",
-      "updatedAt": "2025-06-26T13:25:36Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-03T13:09:18Z",
+      "closedAt": "2025-07-03T13:09:18Z",
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -1310,7 +1324,7 @@
       "id": "I_kwDOOWPBqs69fskK",
       "title": "What's the right name for \"Operations and Manageability Considerations\"?",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/80",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1319,8 +1333,8 @@
       "labels": [],
       "body": "1. Operations and Manageability Considerations\n2. Operational Considerations?\n3. Manageability Considerations?\n\nConclusion from the June 26th meeting\n- 2 is already used today\n- 2 does include both operational and manageability in the non OPS people mind\n\nSamier, Adrian, Benoit, Med => let's use 2?\n",
       "createdAt": "2025-06-26T13:47:54Z",
-      "updatedAt": "2025-06-26T13:47:54Z",
-      "closedAt": null,
+      "updatedAt": "2025-07-03T13:09:18Z",
+      "closedAt": "2025-07-03T13:09:18Z",
       "comments": []
     },
     {
@@ -1328,7 +1342,7 @@
       "id": "I_kwDOOWPBqs6-Oe7o",
       "title": "Operational and Security Considerations Boundary",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/84",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1337,7 +1351,164 @@
       "labels": [],
       "body": "The boundaries are not always strict, but it's useful to separate:\n\n\u201cHow to do it\u201d \u2192 Operational Considerations\n\n\u201cWhy it's safe\u201d \u2192 Security Considerations",
       "createdAt": "2025-07-01T08:57:20Z",
-      "updatedAt": "2025-07-01T08:57:25Z",
+      "updatedAt": "2025-07-03T13:56:29Z",
+      "closedAt": "2025-07-03T13:56:29Z",
+      "comments": []
+    },
+    {
+      "number": 85,
+      "id": "I_kwDOOWPBqs6-qyty",
+      "title": "Reference to RFC 7322 is a poor choice",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/85",
+      "state": "CLOSED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "There are two reasons:\n1. The RFC Editor Style Guide is now substantially a dynamic thing through a set of web pages\n2. The way we use it in #sec-audience is not a great reference. We would do better to use BCP72",
+      "createdAt": "2025-07-03T10:29:11Z",
+      "updatedAt": "2025-07-03T13:36:55Z",
+      "closedAt": "2025-07-03T13:36:55Z",
+      "comments": []
+    },
+    {
+      "number": 86,
+      "id": "I_kwDOOWPBqs6-q0z-",
+      "title": "\"data model\" should read \"Data Model\" throughout",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/86",
+      "state": "CLOSED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "In line with capitalisation of (e.g.) \"New Protocol\" and \"Protocol Designers\", we should capitalise \"Data Model\" in all places as it is one of our defined terms.",
+      "createdAt": "2025-07-03T10:32:00Z",
+      "updatedAt": "2025-07-03T13:44:38Z",
+      "closedAt": "2025-07-03T13:44:38Z",
+      "comments": []
+    },
+    {
+      "number": 87,
+      "id": "I_kwDOOWPBqs6-q6v3",
+      "title": "Replace reference to RFC 2119 and RFC 8174",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/87",
+      "state": "CLOSED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The text \"{{?RFC2119}} and {{?RFC8174}}\" should read \"{{?BCP14}}\"\n",
+      "createdAt": "2025-07-03T10:41:46Z",
+      "updatedAt": "2025-07-03T13:34:44Z",
+      "closedAt": "2025-07-03T13:34:44Z",
+      "comments": []
+    },
+    {
+      "number": 88,
+      "id": "I_kwDOOWPBqs6-q_c4",
+      "title": "Still not happy with the definition of \"Root Cause\"",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/88",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "We have:\n\n>    *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\n>        to describe the original event that is the foundation of all related Faults.\n\nMy problem is that sometimes (often?) it is the combination of events that causes a fault. There may be a straw that breaks the camel's back, but it is hard to call that the root cause. So, how to phrase this?\n\nHow about...\n\n>   *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\n>      to describe the original event or combination of circumstances that is the foundation of all related Faults.\n",
+      "createdAt": "2025-07-03T10:47:53Z",
+      "updatedAt": "2025-07-04T16:15:38Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "see #70 . I believe that , in the end, we should not define this term, and just reference what NMOP will come up with. \"Probable Root Cause\", if not perfect, might the less bad term IMO.\n\n",
+          "createdAt": "2025-07-03T10:52:43Z",
+          "updatedAt": "2025-07-03T10:54:33Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'd be really happy with referencing this from somewhere else, but today that reference is not (yet) available.",
+          "createdAt": "2025-07-03T11:15:58Z",
+          "updatedAt": "2025-07-03T11:15:58Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Changing this to \"Probable Root Cause\" would be even better.",
+          "createdAt": "2025-07-03T11:16:20Z",
+          "updatedAt": "2025-07-03T11:16:20Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Looks like #70 got closed, but this issue remains.\nThe incident-yang team are moving forward with a good definition at https://github.com/ietf-wg-nmop/draft-ietf-nmop-network-incident-yang/commit/6763c26f72df3de19bd7c8928d24349c0bb51423\n\nAs soon as they post a new revision, we can drop down to:\n\n> Probable Root Cause: See [I-D.nmop-network-incident-yang] \n\nWe would also need to check all the text for:\ns/root cause/Probable Root Cause/\ns/probable root cause/Probable Root Cause/",
+          "createdAt": "2025-07-04T16:15:38Z",
+          "updatedAt": "2025-07-04T16:15:38Z"
+        }
+      ]
+    },
+    {
+      "number": 89,
+      "id": "I_kwDOOWPBqs6-rB26",
+      "title": "Why is YANG not mentioned in #sec-mgmt-tech ?",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/89",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This section lists (non-exclusive) common IETF management technologies.\n\nIt concludes with a paragraph on SNMP and SMI. That paragraph is good, but the modern equivalent of SMI is, I think, YANG. Yet YANG is not in the list of common technologies.\n\n\nBTW, I stumbled on this section until I realised that t does not intend to list OAM technologies :-)",
+      "createdAt": "2025-07-03T10:51:48Z",
+      "updatedAt": "2025-07-03T10:51:48Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 90,
+      "id": "I_kwDOOWPBqs6-rDtG",
+      "title": "Remove duplicate text",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/90",
+      "state": "CLOSED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "#sec-oper-manag-considerations has:\n\n>    It is also recommended that operational and manageability considerations\n>    be addressed early in the protocol design process. Consequently, early\n>    revisions of Internet-Drafts are expected to include an \"Operations and\n>    Manageability Considerations\" section.\n> \n>    It is also recommended to begin considering operational and manageability\n>    considerations early within the protocol design, and consequently it is expected that early revisions of Internet-Drafts will contain such section.\n\nI think the second paragraph is orphan text\n\n",
+      "createdAt": "2025-07-03T10:54:40Z",
+      "updatedAt": "2025-07-03T13:15:02Z",
+      "closedAt": "2025-07-03T13:15:02Z",
+      "comments": []
+    },
+    {
+      "number": 91,
+      "id": "I_kwDOOWPBqs6-rH1n",
+      "title": "Restate the mandatory nature of Operations and Manageability Considerations sections",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/91",
+      "state": "CLOSED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "#sec-oper-manag-considerations provides a good place to restate the requirement we are introducing.\n\nI suggest beginning the section with text from the Introduction such as:\n\n   All Internet-Drafts that are advanced for publication as Standards Track\n   IETF RFC are required to include an \"Operational and Management\n   Considerations\" section. It is recommended that Internet-Drafts \n   advanced for publication as Experimental protocol specifications also\n   include such sections. \"Operational and Management Considerations\"\n   sections will also often be appropriate in Internet-Drafts advanced for\n   publication as Informational RFCs, for example in protocol architecture\n   and protocol requirements documents.",
+      "createdAt": "2025-07-03T11:00:42Z",
+      "updatedAt": "2025-07-03T13:32:43Z",
+      "closedAt": "2025-07-03T13:32:43Z",
+      "comments": []
+    },
+    {
+      "number": 92,
+      "id": "I_kwDOOWPBqs6-3Eds",
+      "title": "Protocol Designer or Protocol Designers",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/92",
+      "state": "OPEN",
+      "author": "Ranchen666",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The draft uses the terms **Protocol Designer** and **Protocol Designers** interchangeably. Is it recommended that they be uniformly changed to Protocol Designers?\nIn addition,  Protocol Designer  is singular, but \"they\" is used  later in draft, Please see below:\nsection3.2\nAfter **a Protocol Designe**r has considered the manageability requirements of a New Protocol or Protocol Extension, **they** may determine that no management functionality or operational best-practice clarifications are needed.  \n\n\n",
+      "createdAt": "2025-07-04T10:12:45Z",
+      "updatedAt": "2025-07-04T10:12:45Z",
       "closedAt": null,
       "comments": []
     }
@@ -5584,7 +5755,7 @@
       "labels": [],
       "body": "Taking this feedback into account (from https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64)\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2957855762\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2960373446\r\n\r\nThe more I think about, the more I am convinced than we should not add Root Cause to our terminology section. On on side, the NMOP consensus was NOT to define that term. On the other side, the terminology fairy Adrian and the NMOP co-chair introduce it into another document. This does seem right, we can not say we were not aware. \r\n\r\nThis Root Cause is going to painfully come back at us at review time, I believe.\r\n\r\nLet's discuss today",
       "createdAt": "2025-06-12T08:38:32Z",
-      "updatedAt": "2025-06-26T13:15:10Z",
+      "updatedAt": "2025-07-03T10:43:46Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "8f068207e7211d669803f92c9eb3a627cfc101d1",
@@ -5630,6 +5801,13 @@
           "body": "Conclusion from June 26th 2025\r\nProbable Root Cause? Maybe, to be solved in NMOP and there is maybe something to reused in this RFC5706bis draft.",
           "createdAt": "2025-06-26T13:15:10Z",
           "updatedAt": "2025-06-26T13:15:10Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Conclusion from June 26th 2025 Probable Root Cause? Maybe, to be solved in NMOP and there is maybe something to reused in this RFC5706bis draft.\r\n\r\nSee this https://mailarchive.ietf.org/arch/msg/nmop/z7psOU0SOU4-p0DM_NO6UVvEyWQ/ email thread",
+          "createdAt": "2025-07-03T10:43:46Z",
+          "updatedAt": "2025-07-03T10:43:46Z"
         }
       ],
       "reviews": [
@@ -6281,24 +6459,26 @@
       "id": "PR_kwDOOWPBqs6cYBFT",
       "title": "Update operational considerations",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/81",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "#80 ",
       "createdAt": "2025-06-27T08:10:06Z",
-      "updatedAt": "2025-06-27T11:09:19Z",
+      "updatedAt": "2025-07-03T13:09:19Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "424ac2ff627906d8a2e0d4767fb58f7b5f152a96",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "80-ops-considerations",
-      "headRefOid": "c1f91d2d982591406daf77ae852d0d25961c5640",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "8303969c6b7df43db9bf1a61ea32ec13728c65bc",
+      "closedAt": "2025-07-03T13:09:17Z",
+      "mergedAt": "2025-07-03T13:09:17Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "3f7a7a947b0fbdb8c495b79a108d91197eafac53"
+      },
       "comments": [
         {
           "author": "sbarguil",
@@ -6306,6 +6486,13 @@
           "body": "@boucadair Updated not only in the name of the section, but also in some references across the doc, is this fine? ",
           "createdAt": "2025-06-27T08:10:52Z",
           "updatedAt": "2025-06-27T08:10:52Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "All looks good to me.",
+          "createdAt": "2025-07-03T10:16:12Z",
+          "updatedAt": "2025-07-03T10:16:12Z"
         }
       ],
       "reviews": [
@@ -6383,6 +6570,59 @@
           "createdAt": "2025-06-27T11:09:19Z",
           "updatedAt": "2025-06-27T11:09:19Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6xzoRQ",
+          "commit": {
+            "abbreviatedOid": "c1f91d2"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T13:06:50Z",
+          "updatedAt": "2025-07-03T13:06:50Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   section in all new Standard Track RFCs.\r\n```",
+              "createdAt": "2025-07-03T13:06:50Z",
+              "updatedAt": "2025-07-03T13:06:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6xzpcv",
+          "commit": {
+            "abbreviatedOid": "d6d1937"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T13:08:13Z",
+          "updatedAt": "2025-07-03T13:08:13Z",
+          "comments": [
+            {
+              "originalPosition": 36,
+              "body": "```suggestion\r\n   * Add a requirement for an \"Operational Considerations\" section in all new Standard Track RFCs, along with specific guidance on its content.\r\n```",
+              "createdAt": "2025-07-03T13:08:13Z",
+              "updatedAt": "2025-07-03T13:08:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6xzp8x",
+          "commit": {
+            "abbreviatedOid": "8303969"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-03T13:08:48Z",
+          "updatedAt": "2025-07-03T13:08:48Z",
+          "comments": []
         }
       ]
     },
@@ -6391,24 +6631,26 @@
       "id": "PR_kwDOOWPBqs6cZgOB",
       "title": "Authors and Contributors List",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/82",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "As requested by Med, Thomas is moved to the contributors list",
       "createdAt": "2025-06-27T10:28:20Z",
-      "updatedAt": "2025-06-27T11:08:00Z",
+      "updatedAt": "2025-07-03T10:16:46Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "424ac2ff627906d8a2e0d4767fb58f7b5f152a96",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "autho-and-contributors-list",
       "headRefOid": "b2dd4bc1df3ad45bd5df147c999582f774391990",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-07-03T10:16:44Z",
+      "mergedAt": "2025-07-03T10:16:44Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "0514b21772b7cc53b405bc18d67e13548c2a454e"
+      },
       "comments": [],
       "reviews": [
         {
@@ -6431,24 +6673,26 @@
       "id": "PR_kwDOOWPBqs6csfKQ",
       "title": "cripto-ML-DSA",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/83",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-06-30T13:18:55Z",
-      "updatedAt": "2025-07-01T08:55:36Z",
+      "updatedAt": "2025-07-03T13:56:29Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "424ac2ff627906d8a2e0d4767fb58f7b5f152a96",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "extend-section-4-considerations",
-      "headRefOid": "33696693ff1d1799fbd1270fafaddb86284cbee3",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "1d6891a3d478632a6f1e47a35f575603b57c3598",
+      "closedAt": "2025-07-03T13:56:28Z",
+      "mergedAt": "2025-07-03T13:56:28Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "bb3268fe2694a89435877799147f7bbd09e08a10"
+      },
       "comments": [
         {
           "author": "sbarguil",
@@ -6470,6 +6714,13 @@
           "body": "> > > Hmmm. This feels like it crosses too far over into Security Considerations and perhaps out of scope for what we want to do and maintain. This, perhaps, is one area for discussion on this week's call.\r\n> > \r\n> > \r\n> > Thanks @xorrkaz , for the early review, I got some inpiration from here [lamps-wg/dilithium-certificates#150](https://github.com/lamps-wg/dilithium-certificates/pull/150) to show that we are not router-centric.\r\n> \r\n> I don't doubt it's valuable. I just worry that we'll collide with evolving security guidelines.\r\n\r\nYeah, I see your point. Since this is a cryptographic algorithm, the operational considerations section reflects the key formats and potential testing, while the security considerations explain why those formats and structures are secure. To help differentiate what falls outside of operational considerations; The boundaries are not always strict, but it's useful to separate:\r\n\r\n- \u201cHow to do it\u201d \u2192 Operational Considerations\r\n- \u201cWhy it's safe\u201d \u2192 Security Consideration\r\n\r\nI\u2019ll open an issue so we can discuss it during the meeting.",
           "createdAt": "2025-07-01T08:55:36Z",
           "updatedAt": "2025-07-01T08:55:36Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Hmmm. This feels like it crosses too far over into Security Considerations and perhaps out of scope for what we want to do and maintain. This, perhaps, is one area for discussion on this week's call.\r\n\r\nI tend to agree with Joe here. It will go into much scrutiny from the security experts. \r\nHowever, if your text is about: \"here is an example outside of traditional OPS ...\". I believe it might be beneficial.",
+          "createdAt": "2025-07-03T10:22:30Z",
+          "updatedAt": "2025-07-03T10:22:30Z"
         }
       ],
       "reviews": [
@@ -6484,6 +6735,210 @@
           "body": "Hmmm.  This feels like it crosses too far over into Security Considerations and perhaps out of scope for what we want to do and maintain.  This, perhaps, is one area for discussion on this week's call.",
           "createdAt": "2025-06-30T13:21:43Z",
           "updatedAt": "2025-06-30T13:21:43Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6x0UBl",
+          "commit": {
+            "abbreviatedOid": "3369669"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T13:50:31Z",
+          "updatedAt": "2025-07-03T13:50:32Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\r\n   For example, where protocols involve cryptographic keys, Protocol Designers should\r\n```",
+              "createdAt": "2025-07-03T13:50:31Z",
+              "updatedAt": "2025-07-03T13:50:32Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6x0WQU",
+          "commit": {
+            "abbreviatedOid": "3369669"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T13:53:12Z",
+          "updatedAt": "2025-07-03T13:53:12Z",
+          "comments": [
+            {
+              "originalPosition": 19,
+              "body": "```suggestion\r\n   interoperability when importing/exporting private key material.  See {{?draft-ietf-lamps-dilithium-certificates}} for an example of how such considerations are incorporated.\r\n```",
+              "createdAt": "2025-07-03T13:53:12Z",
+              "updatedAt": "2025-07-03T13:53:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6x0XAI",
+          "commit": {
+            "abbreviatedOid": "16d15e5"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-03T13:54:05Z",
+          "updatedAt": "2025-07-03T13:54:05Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6x0YFu",
+          "commit": {
+            "abbreviatedOid": "16d15e5"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-03T13:55:23Z",
+          "updatedAt": "2025-07-03T13:55:24Z",
+          "comments": [
+            {
+              "originalPosition": 19,
+              "body": "```suggestion\r\n   interoperability when importing/exporting private key material. See {{?I-D.ietf-lamps-dilithium-certificates}} for an example of how such considerations are incorporated.\r\n```",
+              "createdAt": "2025-07-03T13:55:24Z",
+              "updatedAt": "2025-07-03T13:55:24Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 93,
+      "id": "PR_kwDOOWPBqs6dbCtw",
+      "title": "Editorial update",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/93",
+      "state": "OPEN",
+      "author": "Ranchen666",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-07-04T11:10:08Z",
+      "updatedAt": "2025-07-04T13:52:21Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "cb18fa2db2e4df5e1790693ff95c86042b9e9707",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Ranchen666-patch-1",
+      "headRefOid": "55948597b27b356b482231b3992c0a03e4f1fe02",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6yBa3L",
+          "commit": {
+            "abbreviatedOid": "6248e57"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-04T11:13:13Z",
+          "updatedAt": "2025-07-04T11:13:51Z",
+          "comments": [
+            {
+              "originalPosition": 73,
+              "body": "```suggestion\r\n   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem,  For example, the design of the Resource ReSerVation Protocol (RSVP)\r\n```",
+              "createdAt": "2025-07-04T11:13:13Z",
+              "updatedAt": "2025-07-04T11:13:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yDwtm",
+          "commit": {
+            "abbreviatedOid": "5594859"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-07-04T13:48:55Z",
+          "updatedAt": "2025-07-04T13:52:21Z",
+          "comments": [
+            {
+              "originalPosition": 95,
+              "body": "\"improves\" is correct here.",
+              "createdAt": "2025-07-04T13:48:56Z",
+              "updatedAt": "2025-07-04T13:52:21Z"
+            },
+            {
+              "originalPosition": 75,
+              "body": "This text seems to duplicate the text before it.",
+              "createdAt": "2025-07-04T13:50:34Z",
+              "updatedAt": "2025-07-04T13:52:21Z"
+            },
+            {
+              "originalPosition": 37,
+              "body": "I think the word \"Section\" here is right.  We're specifically talking about the Operational Considerations Section in a draft _using_ this document.",
+              "createdAt": "2025-07-04T13:51:19Z",
+              "updatedAt": "2025-07-04T13:52:22Z"
+            },
+            {
+              "originalPosition": 46,
+              "body": "See above, but this should also read \"Null Operational Considerations Section\"",
+              "createdAt": "2025-07-04T13:51:39Z",
+              "updatedAt": "2025-07-04T13:52:22Z"
+            },
+            {
+              "originalPosition": 5,
+              "body": "\"is\" is correct here.  You are modifying \"Retrofitting\".",
+              "createdAt": "2025-07-04T13:52:17Z",
+              "updatedAt": "2025-07-04T13:52:22Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 94,
+      "id": "PR_kwDOOWPBqs6ddKsN",
+      "title": "Abstract to sync with the new OPS sec scope/name",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/94",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Remove manageability from the section name + update the intended RFC track.",
+      "createdAt": "2025-07-04T14:21:47Z",
+      "updatedAt": "2025-07-04T14:22:56Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "cb18fa2db2e4df5e1790693ff95c86042b9e9707",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "68644d5562e8b6fd36ace67e7d0f4dae14019ef6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6yEK5N",
+          "commit": {
+            "abbreviatedOid": "68644d5"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-04T14:22:56Z",
+          "updatedAt": "2025-07-04T14:22:56Z",
           "comments": []
         }
       ]
