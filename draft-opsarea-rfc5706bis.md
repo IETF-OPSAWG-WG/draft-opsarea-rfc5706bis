@@ -337,7 +337,7 @@ contributor:
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
-   The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
+   The IETF provides several standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
 
    *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
 
@@ -838,7 +838,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
-   relevant. There are a number of information models contained in
+   relevant. There are several information models contained in
    protocol WG RFCs. Some examples:
 
    *  {{?RFC3060}} - Policy Core Information Model -- Version 1 Specification
@@ -1095,7 +1095,7 @@ DM         DM        DM     --> concrete/detailed model
    compatibly on both ends? Is the IS-IS metric the same? ... Now
    answer those questions for 1,000 devices.
 
-   A number of efforts have existed in the IETF to develop policy-based
+   Several efforts have existed in the IETF to develop policy-based
    configuration management. "Terminology for Policy-Based Management"
    {{?RFC3198}} was written to standardize the terminology across these
    efforts.
@@ -1129,7 +1129,7 @@ DM         DM        DM     --> concrete/detailed model
 
    It is important to enable operators to concentrate on the
    configuration of the network as a whole, rather than individual
-   devices. Support for configuration transactions across a number of
+   devices. Support for configuration transactions across several
    devices could significantly simplify network configuration
    management. The ability to distribute configurations to multiple
    devices, or to modify candidate configurations on multiple devices,
