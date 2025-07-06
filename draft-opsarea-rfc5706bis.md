@@ -517,7 +517,7 @@ contributor:
    parameters.
 
    Default values should generally favor the conservative side over the
-   'optimizing performance' side (e.g., the initial RTT and RTTVAR values
+   "optimizing performance" side (e.g., the initial RTT and RTTVAR values
    of a TCP connection {{?RFC6298}}).
 
    For those parameters that are speed-dependent, instead of using a
