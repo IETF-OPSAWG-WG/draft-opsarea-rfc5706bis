@@ -140,11 +140,10 @@ contributor:
    Entirely New Protocols may require significant consideration of expected
    operations and management, while Protocol Extensions to existing, widely
    deployed protocols may have established de facto operations and
-   management practices that are already well understood. However, the guidance
-   in this document does not mandate providing a comprehensive inventory of
-   all operational considerations. Instead, the guidance is to
-   focus on key aspects that will ease deployability and are essential for operating and maintaining
-   the technology.
+   management practices that are already well understood. This document does
+   not mandate a comprehensive inventory of all operational considerations.
+   Instead, it guides authors to focus on key aspects that are essential for
+   the technology's deployability, operation, and maintenance.
 
    Suitable management approaches may vary for different areas, working
    groups, and protocols in the IETF. This document does not prescribe
@@ -261,10 +260,9 @@ contributor:
 
    *  Cause: See {{?I-D.ietf-nmop-terminology}}.
 
-   *  CLI: Command Line Interface. Typically, a Proprietary Interface to
-      hardware or software devices (e.g., routers or operating systems)
-      for use by human operators
-      directly at a terminal or via scripts. The commands, their syntax,
+   *  CLI: Command Line Interface. A human-oriented interface, typically
+      a Proprietary Interface, to hardware or software devices
+      (e.g., routers or operating systems). The commands, their syntax,
       and the precise semantics of the parameters may vary considerably
       between different vendors, between products from the same
       vendor, and even between different versions or releases of a single
@@ -314,7 +312,7 @@ contributor:
          managed network run more effectively.
 
       The broader concept of "operations and management" that is the subject of
-      this document encompasses OAM along with other management and provisioning
+      this document encompasses OAM, in addition to other management and provisioning
       tools and concepts.
 
    *  Problem: See {{?I-D.ietf-nmop-terminology}}.
@@ -339,7 +337,7 @@ contributor:
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
-   The IETF provides a number of standardized management protocols suitable for various operational purposes, as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
+   The IETF provides several standardized management protocols suitable for various operational purposes, for example as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
 
    *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
 
@@ -474,9 +472,9 @@ contributor:
    monitoring and root cause analysis). The application programming
    interfaces (APIs) and the human interfaces might benefit from being similar
    to ensure that the information exposed by both is
-   consistent when presented to an operator. Identifying consistent
-   methods for determining information, such as what is counted in a
-   specific counter, is relevant.
+   consistent when presented to an operator. It is also relevant to
+   identify consistent methods for determining information, such as
+   what is counted in specific counters.
 
    Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
@@ -518,9 +516,9 @@ contributor:
    It is extremely important to set a sensible default value for all
    parameters.
 
-   The default value should stay on the conservative side rather than on
-   the "optimizing performance" side (example: the initial RTT and
-   RTTVAR values of a TCP connection {{?RFC6298}}).
+   Default values should generally favor the conservative side over the
+   "optimizing performance" side (e.g., the initial RTT and RTTVAR values
+   of a TCP connection {{?RFC6298}}).
 
    For those parameters that are speed-dependent, instead of using a
    constant, try to set the default value as a function of the link
@@ -607,9 +605,9 @@ contributor:
    comply with {{?BCP133}} to prevent congestion collapse and ensure
    network stability.
 
-   A protocol could send active monitoring packets on the wire. If we
-   don't pay attention, we might get very good accuracy but could send
-   too many active monitoring packets.
+   A protocol could send active monitoring packets on the wire. Without careful
+   consideration, active monitoring might achieve high accuracy at the cost of
+   generating an excessive number of monitoring packets.
 
    The Protocol Designer should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
@@ -796,11 +794,10 @@ contributor:
    -- once you have the data, its meaning is a function of the managed
    entity.
 
-   Information models are helpful to try to focus interoperability on
-   the semantic level -- they define what information
-   should be gathered and how that information might be used,
-   regardless of which management protocol carries the data or which
-   vendor implementation produces the data. The use of an Information Model might
+   Information Models help focus interoperability on the semantic level
+   by defining what information should be gathered and how it might be used,
+   regardless of the underlying management protocol or vendor implementation.
+   The use of an Information Model might
    help improve the ability of operators to correlate messages in
    different protocols where the data overlaps, such as a YANG Data Model
    and IPFIX Information Elements about the same event. An Information Model
@@ -841,7 +838,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
-   relevant. There are a number of information models contained in
+   relevant. There are several Information Models contained in
    protocol WG RFCs. Some examples:
 
    *  {{?RFC3060}} - Policy Core Information Model -- Version 1 Specification
@@ -1091,13 +1088,15 @@ DM         DM        DM     --> concrete/detailed model
    {{?RFC3139}} discusses requirements for configuration management,
    including discussion of different levels of management, high-level
    policies, network-wide configuration data, and device-local
-   configuration. Network configuration is not just multi-device push
-   or pull. It is knowing that the configurations being pushed are
-   semantically compatible. Is the circuit between them configured
+   configuration. Network configuration extends beyond simple multi-device
+   push or pull operations. It also involves ensuring that the configurations
+   being pushed are semantically compatible across devices and that the resulting
+   behavior of all involved devices corresponds to the intended behavior.
+   Is the attachment between them configured
    compatibly on both ends? Is the IS-IS metric the same? ... Now
    answer those questions for 1,000 devices.
 
-   A number of efforts have existed in the IETF to develop policy-based
+   Several efforts have existed in the IETF to develop policy-based
    configuration management. "Terminology for Policy-Based Management"
    {{?RFC3198}} was written to standardize the terminology across these
    efforts.
@@ -1131,7 +1130,7 @@ DM         DM        DM     --> concrete/detailed model
 
    It is important to enable operators to concentrate on the
    configuration of the network as a whole, rather than individual
-   devices. Support for configuration transactions across a number of
+   devices. Support for configuration transactions across several
    devices could significantly simplify network configuration
    management. The ability to distribute configurations to multiple
    devices, or to modify candidate configurations on multiple devices,
@@ -1224,9 +1223,9 @@ DM         DM        DM     --> concrete/detailed model
    protocol. Search for "metric" in the RFC search tool. In some
    cases, new metrics need to be defined. It would be useful if the
    protocol documentation identified the need for such new metrics. For
-   performance monitoring, it is often important to report the time
-   spent in a state, rather than reporting the current state. Snapshots
-   are of less value for performance monitoring.
+   performance monitoring, it is often more important to report the time
+   spent in a state rather than just the current state. Snapshots alone
+   are typically of less value.
 
    There are several parts to performance management to be considered:
    protocol monitoring, device monitoring (the impact of the new
@@ -1476,9 +1475,9 @@ DM         DM        DM     --> concrete/detailed model
    such as authentication, message integrity checking, and
    authorization, should be used.
 
-   A standard description of the manageable knobs and whistles on a
-   protocol makes it easier for an attacker to understand what they may
-   try to control and how to tweak it.
+   While a standard description of a protocol's manageable parameters facilitates
+   legitimate operation, it may also inadvertently simplify an attacker's efforts
+   to understand and manipulate the protocol.
 
    A well-designed protocol is usually more stable and secure. A
    protocol that can be managed and inspected offers the operator a
