@@ -838,7 +838,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
-   relevant. There are several information models contained in
+   relevant. There are several Information Models contained in
    protocol WG RFCs. Some examples:
 
    *  {{?RFC3060}} - Policy Core Information Model -- Version 1 Specification
