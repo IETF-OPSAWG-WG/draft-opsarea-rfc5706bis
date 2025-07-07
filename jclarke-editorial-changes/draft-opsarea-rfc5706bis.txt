@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 7 January 2026                                        A. Farrel
+Expires: 8 January 2026                                        A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 7 January 2026                                        A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             6 July 2025
+                                                             7 July 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 January 2026.
+   This Internet-Draft will expire on 8 January 2026.
 
 Copyright Notice
 
@@ -895,7 +895,7 @@ Table of Contents
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
-   relevant.  There are several information models contained in protocol
+   relevant.  There are several Information Models contained in protocol
    WG RFCs.  Some examples:
 
    *  [RFC3060] - Policy Core Information Model -- Version 1
