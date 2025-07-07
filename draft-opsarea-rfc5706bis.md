@@ -580,7 +580,7 @@ contributor:
    take it off the fast path! The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
-   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem, 
+   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem,
    for RSVP and other protocols that require the router to take some
    packets off the fast-forwarding path. Yet, Router Alert has its own
    problems in impacting router performance.
