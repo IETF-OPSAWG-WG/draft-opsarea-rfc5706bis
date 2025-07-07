@@ -257,8 +257,6 @@ contributor:
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
-   *  Anomaly: See {{?I-D.ietf-nmop-terminology}}.
-
    *  Cause: See {{?I-D.ietf-nmop-terminology}}.
 
    *  CLI: Command Line Interface. Typically, a Proprietary Interface to
@@ -284,8 +282,8 @@ contributor:
    *  Fault: See {{?I-D.ietf-nmop-terminology}}.
 
    *  Fault Management: The process of interpreting fault notifications and other alerts
-      and alarms, isolating faults, correlating them, and deducing underlying
-      causes. See {{sec-fm-mgmt}} for more information.
+      and alarms, isolating faults, correlating them, and decucing underlying
+      Causes. See {{sec-fm-mgmt}} for more information.
 
    *  Information Model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
@@ -330,12 +328,6 @@ contributor:
    *  Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
-
-   *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant
-     to describe the original event that is the foundation of all related Faults.
-
-   *  Symptom: See {{?I-D.ietf-nmop-terminology}}.
-
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
@@ -471,7 +463,7 @@ contributor:
 
    There may be a need to support both a human interface (e.g., for
    troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and root cause analysis). The application programming
+   monitoring and Cause analysis). The application programming
    interfaces (APIs) and the human interfaces might benefit from being similar
    to ensure that the information exposed by both is
    consistent when presented to an operator. Identifying consistent
@@ -1063,11 +1055,11 @@ DM         DM        DM     --> concrete/detailed model
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?
 
-###  Root Cause Analysis {#sec-root-cause-analysis}
+###  Cause Analysis {#sec-cause-analysis}
 
-   Root cause analysis is about working out where in the network the
+   Cause analysis is about working out where the
    fault is. For example, if end-to-end data delivery is failing
-   (reported by a notification), root cause analysis can help find the
+   (reported by a notification, typically), Cause analysis can help find the
    failed link or node in the end-to-end path.
 
 ###  Fault Isolation {#sec-fault-isol}
