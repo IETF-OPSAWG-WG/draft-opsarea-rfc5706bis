@@ -1090,7 +1090,8 @@ DM         DM        DM     --> concrete/detailed model
    policies, network-wide configuration data, and device-local
    configuration. Network configuration extends beyond simple multi-device
    push or pull operations. It also involves ensuring that the configurations
-   being pushed are semantically compatible across devices.
+   being pushed are semantically compatible across devices and that the resulting
+   behavior of all involved devices corresponds to the intended behavior.
    Is the circuit between them configured
    compatibly on both ends? Is the IS-IS metric the same? ... Now
    answer those questions for 1,000 devices.
