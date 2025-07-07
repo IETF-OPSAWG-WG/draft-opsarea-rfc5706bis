@@ -109,7 +109,7 @@ contributor:
    Often when New Protocols or Protocol Extensions are developed, not
    enough consideration is given to how the protocol will be deployed,
    operated, and managed. Retrofitting operations and management
-   mechanisms are often hard and architecturally unpleasant, and certain
+   mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
    management particularly difficult. In order to make sure that protocols can be
    deployed and used, the operational environment and manageability of a
@@ -368,7 +368,7 @@ contributor:
 
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
-##  Operational Considerations {#sec-oper-manag-considerations}
+##  "Operational Considerations" Section {#sec-oper-manag-considerations}
 
    All Internet-Drafts that are advanced for publication as Standards Track
    IETF RFC are required to include an "Operational Considerations" section.
@@ -405,7 +405,7 @@ contributor:
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-##  Null Operations and Manageability Considerations {#sec-null-sec}
+##  Null "Operations and Manageability Considerations" Section {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may determine that no
@@ -580,15 +580,7 @@ contributor:
    take it off the fast path! The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
-   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem,  For example, the design of the Resource ReSerVation Protocol (RSVP)
-   {{?RFC2205}} required each router to look at the RSVP PATH message and,
-   if the router understood RSVP, add its own address to the message to
-   enable automatic tunneling through non-RSVP routers. But in reality,
-   routers cannot look at an otherwise normal IP packet and potentially
-   take it off the fast path! The initial designers overlooked that a
-   new "deep packet inspection" requirement was being put on the
-   functional components of a router. The "router alert" option
-   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem
+   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem, 
    for RSVP and other protocols that require the router to take some
    packets off the fast-forwarding path. Yet, Router Alert has its own
    problems in impacting router performance.
@@ -996,7 +988,7 @@ DM         DM        DM     --> concrete/detailed model
   device-level information. Similarly, it is beneficial to define
   events (and relevant triggered notifications) that indicate changes in an underlying state,
   enabling reliable detection and correlation of service-affecting
-  conditions. Including such mechanisms improve the robustness of
+  conditions. Including such mechanisms improves the robustness of
   integrations and helps ensure consistent behavior across
   implementations.
 
