@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-06T00:56:09.036010+00:00",
+  "timestamp": "2025-07-08T00:51:10.907697+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1415,7 +1415,7 @@
       "labels": [],
       "body": "We have:\n\n>    *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\n>        to describe the original event that is the foundation of all related Faults.\n\nMy problem is that sometimes (often?) it is the combination of events that causes a fault. There may be a straw that breaks the camel's back, but it is hard to call that the root cause. So, how to phrase this?\n\nHow about...\n\n>   *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\n>      to describe the original event or combination of circumstances that is the foundation of all related Faults.\n",
       "createdAt": "2025-07-03T10:47:53Z",
-      "updatedAt": "2025-07-04T16:15:38Z",
+      "updatedAt": "2025-07-07T08:52:52Z",
       "closedAt": null,
       "comments": [
         {
@@ -1445,6 +1445,13 @@
           "body": "Looks like #70 got closed, but this issue remains.\nThe incident-yang team are moving forward with a good definition at https://github.com/ietf-wg-nmop/draft-ietf-nmop-network-incident-yang/commit/6763c26f72df3de19bd7c8928d24349c0bb51423\n\nAs soon as they post a new revision, we can drop down to:\n\n> Probable Root Cause: See [I-D.nmop-network-incident-yang] \n\nWe would also need to check all the text for:\ns/root cause/Probable Root Cause/\ns/probable root cause/Probable Root Cause/",
           "createdAt": "2025-07-04T16:15:38Z",
           "updatedAt": "2025-07-04T16:15:38Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Per my previous comment. They have now posted https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-05\n\nSo we can make the changes.",
+          "createdAt": "2025-07-07T08:52:52Z",
+          "updatedAt": "2025-07-07T08:52:52Z"
         }
       ]
     },
@@ -6824,13 +6831,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-07-04T11:10:08Z",
-      "updatedAt": "2025-07-04T13:52:21Z",
+      "updatedAt": "2025-07-07T14:07:25Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "cb18fa2db2e4df5e1790693ff95c86042b9e9707",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "Ranchen666-patch-1",
-      "headRefOid": "55948597b27b356b482231b3992c0a03e4f1fe02",
+      "headRefOid": "3abd8a4828ceeeea3c0d02152414359d443e0dcb",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -6900,6 +6907,191 @@
               "updatedAt": "2025-07-04T13:52:22Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yYv5p",
+          "commit": {
+            "abbreviatedOid": "5594859"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T08:55:08Z",
+          "updatedAt": "2025-07-07T08:55:08Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "I agree.",
+              "createdAt": "2025-07-07T08:55:08Z",
+              "updatedAt": "2025-07-07T08:55:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yZAGX",
+          "commit": {
+            "abbreviatedOid": "5594859"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T09:14:24Z",
+          "updatedAt": "2025-07-07T09:14:24Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "I agree.",
+              "createdAt": "2025-07-07T09:14:24Z",
+              "updatedAt": "2025-07-07T09:14:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yZFhL",
+          "commit": {
+            "abbreviatedOid": "5594859"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T09:20:42Z",
+          "updatedAt": "2025-07-07T09:20:42Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "Yes, but there is an inconsistency between the section title and the text that follows.\r\n  All Internet-Drafts that are advanced for publication as Standards Track IETF RFC are required to include an **\"Operational Considerations\" section**.  It is recommended that Internet-Drafts\r\nProbably change the section title to:\r\n               \u201cOperational Considerations\u201d Section",
+              "createdAt": "2025-07-07T09:20:42Z",
+              "updatedAt": "2025-07-07T09:20:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yZF6i",
+          "commit": {
+            "abbreviatedOid": "5594859"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T09:21:12Z",
+          "updatedAt": "2025-07-07T09:21:12Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "And, again, as above, change it to:\r\n               Null \u201cOperational Considerations\u201d Section",
+              "createdAt": "2025-07-07T09:21:12Z",
+              "updatedAt": "2025-07-07T09:21:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yZNBD",
+          "commit": {
+            "abbreviatedOid": "5594859"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T09:29:58Z",
+          "updatedAt": "2025-07-07T09:29:59Z",
+          "comments": [
+            {
+              "originalPosition": 75,
+              "body": "Yes. Apologies for the duplicate content.",
+              "createdAt": "2025-07-07T09:29:58Z",
+              "updatedAt": "2025-07-07T09:29:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yb6Hr",
+          "commit": {
+            "abbreviatedOid": "a8d3c4d"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-07T12:37:37Z",
+          "updatedAt": "2025-07-07T12:37:37Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yb6st",
+          "commit": {
+            "abbreviatedOid": "a8d3c4d"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T12:38:10Z",
+          "updatedAt": "2025-07-07T12:38:10Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "```suggestion\r\n   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem,\r\n```",
+              "createdAt": "2025-07-07T12:38:10Z",
+              "updatedAt": "2025-07-07T12:38:10Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yEDkv",
+          "commit": {
+            "abbreviatedOid": "3abd8a4"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-07-04T14:12:42Z",
+          "updatedAt": "2025-07-07T12:50:57Z",
+          "comments": [
+            {
+              "originalPosition": 55,
+              "body": "```suggestion\r\n##  Placement of the Operational Considerations Section {#sec-placement-sec}\r\n```",
+              "createdAt": "2025-07-04T14:12:42Z",
+              "updatedAt": "2025-07-07T14:38:26Z"
+            },
+            {
+              "originalPosition": 46,
+              "body": "```suggestion\r\n##  Null Operational Considerations Section {#sec-null-sec}\r\n```",
+              "createdAt": "2025-07-04T14:13:33Z",
+              "updatedAt": "2025-07-07T12:50:57Z"
+            },
+            {
+              "originalPosition": 37,
+              "body": "```suggestion\r\n##  Null \"Operational Considerations\" Section {#sec-null-sec}\r\n```",
+              "createdAt": "2025-07-07T12:50:17Z",
+              "updatedAt": "2025-07-07T12:50:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6ydcnM",
+          "commit": {
+            "abbreviatedOid": "5594859"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T14:07:25Z",
+          "updatedAt": "2025-07-07T14:07:25Z",
+          "comments": [
+            {
+              "originalPosition": 55,
+              "body": "If you drop the plural, you need to add an article. Prefer definite article.\r\nThus:\r\nPlacement of the Operational Considerations Section",
+              "createdAt": "2025-07-07T14:07:25Z",
+              "updatedAt": "2025-07-07T14:07:25Z"
+            }
+          ]
         }
       ]
     },
@@ -6908,24 +7100,26 @@
       "id": "PR_kwDOOWPBqs6ddKsN",
       "title": "Abstract to sync with the new OPS sec scope/name",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/94",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Remove manageability from the section name + update the intended RFC track.",
       "createdAt": "2025-07-04T14:21:47Z",
-      "updatedAt": "2025-07-04T14:22:56Z",
+      "updatedAt": "2025-07-06T15:00:53Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "cb18fa2db2e4df5e1790693ff95c86042b9e9707",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "boucadair-patch-1",
       "headRefOid": "68644d5562e8b6fd36ace67e7d0f4dae14019ef6",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-07-06T15:00:51Z",
+      "mergedAt": "2025-07-06T15:00:51Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "031a654d76fa073b7d4da3ce69812d0c6e50542b"
+      },
       "comments": [],
       "reviews": [
         {
@@ -6939,6 +7133,146 @@
           "body": "",
           "createdAt": "2025-07-04T14:22:56Z",
           "updatedAt": "2025-07-04T14:22:56Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 95,
+      "id": "PR_kwDOOWPBqs6do2r_",
+      "title": "Reword some parts.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/95",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Focus on clarity, readability, and less colloquial terminology.",
+      "createdAt": "2025-07-06T15:21:29Z",
+      "updatedAt": "2025-07-07T15:11:39Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "031a654d76fa073b7d4da3ce69812d0c6e50542b",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "jclarke-editorial-changes",
+      "headRefOid": "37fb9575dd03dd83b0680bfa7dd7bf0cfd12d34a",
+      "closedAt": "2025-07-07T15:11:38Z",
+      "mergedAt": "2025-07-07T15:11:38Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "9dc95b8308d09c1d94017b89a3b42077eb5abfba"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6yWU65",
+          "commit": {
+            "abbreviatedOid": "4b3cf1b"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thanks Joe. Please find some few proposals below.",
+          "createdAt": "2025-07-07T05:19:32Z",
+          "updatedAt": "2025-07-07T05:25:05Z",
+          "comments": [
+            {
+              "originalPosition": 108,
+              "body": "```suggestion\r\n   relevant. There are several Information Models contained in\r\n```",
+              "createdAt": "2025-07-07T05:19:33Z",
+              "updatedAt": "2025-07-07T05:25:05Z"
+            },
+            {
+              "originalPosition": 121,
+              "body": "```suggestion\r\n   being pushed are semantically compatible across devices and that the resulting\r\n   behavior of all involved devices corresponds to the intended behavior.\r\n```",
+              "createdAt": "2025-07-07T05:22:43Z",
+              "updatedAt": "2025-07-07T05:25:05Z"
+            },
+            {
+              "originalPosition": 122,
+              "body": "```suggestion\r\n   Is the attachment between them configured\r\n```",
+              "createdAt": "2025-07-07T05:23:16Z",
+              "updatedAt": "2025-07-07T05:25:05Z"
+            },
+            {
+              "originalPosition": 44,
+              "body": "```suggestion\r\n   The IETF provides several standardized management protocols suitable for various operational purposes, as outlined for example in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:\r\n```",
+              "createdAt": "2025-07-07T05:24:25Z",
+              "updatedAt": "2025-07-07T05:25:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6ybzoq",
+          "commit": {
+            "abbreviatedOid": "4b3cf1b"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T12:31:44Z",
+          "updatedAt": "2025-07-07T12:31:44Z",
+          "comments": [
+            {
+              "originalPosition": 44,
+              "body": "I think \"for example as outlined\" reads better?",
+              "createdAt": "2025-07-07T12:31:44Z",
+              "updatedAt": "2025-07-07T12:31:45Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yb3-F",
+          "commit": {
+            "abbreviatedOid": "4b3cf1b"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T12:35:59Z",
+          "updatedAt": "2025-07-07T12:35:59Z",
+          "comments": [
+            {
+              "originalPosition": 44,
+              "body": "Better. Go for it. Thanks. ",
+              "createdAt": "2025-07-07T12:35:59Z",
+              "updatedAt": "2025-07-07T12:35:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6yb9zA",
+          "commit": {
+            "abbreviatedOid": "fa0c6b5"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-07T12:41:17Z",
+          "updatedAt": "2025-07-07T12:41:17Z",
+          "comments": [
+            {
+              "originalPosition": 44,
+              "body": "```suggestion\r\n   The IETF provides several standardized management protocols suitable for various operational purposes, for example as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:\r\n```",
+              "createdAt": "2025-07-07T12:41:17Z",
+              "updatedAt": "2025-07-07T12:41:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6ycFZi",
+          "commit": {
+            "abbreviatedOid": "37fb957"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-07-07T12:49:31Z",
+          "updatedAt": "2025-07-07T12:49:31Z",
           "comments": []
         }
       ]
