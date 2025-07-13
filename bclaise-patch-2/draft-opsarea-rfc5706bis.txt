@@ -357,10 +357,7 @@ Table of Contents
       subject of this document encompasses OAM along with other
       management and provisioning tools and concepts.
 
-   *  Probable Root Cause: Since one Fault may give rise to another
-      Fault or Problem, a probable root cause is commonly meant to
-      describe the original event or combination of circumstances that
-      is the foundation or source of all related Faults.
+   *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang]
 
    *  Problem: See [I-D.ietf-nmop-terminology].
 
@@ -1104,11 +1101,16 @@ Table of Contents
 
 5.3.3.  Probable Root Cause Analysis
 
-   Probable Root Cause analysis is about working out where the fault
-   might be.  For example, if end-to-end data delivery is failing
-   (reported by a notification, typically), Probable Root Cause analysis
-   can help find the failed link or node, or mis-configuration, within
-   the end-to-end path.
+   Probable Root Cause analysis is about working out where the
+   foundational Fault or Problem might be.  Since one Fault may give
+   rise to another Fault or Problem, a probable root cause is commonly
+   meant to describe the original, source event or combination of
+   circumstances that is the foundation of all related Faults.
+
+   For example, if end-to-end data delivery is failing (e.g., reported
+   by a notification), Probable Root Cause analysis can help find the
+   failed link or node, or mis-configuration, within the end-to-end
+   path.
 
 5.3.4.  Fault Isolation
 
@@ -1560,6 +1562,14 @@ Table of Contents
               netmod-rfc8407bis-28, 5 June 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
               rfc8407bis-28>.
+
+   [I-D.ietf-nmop-network-incident-yang]
+              Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
+              "A YANG Data Model for Network Incident Management", Work
+              in Progress, Internet-Draft, draft-ietf-nmop-network-
+              incident-yang-05, 6 July 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
+              network-incident-yang-05>.
 
    [I-D.ietf-nmop-terminology]
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
