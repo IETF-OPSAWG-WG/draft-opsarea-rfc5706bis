@@ -1023,7 +1023,7 @@ DM         DM        DM     --> concrete/detailed model
    Cause analysis is about working out where the
    fault is. For example, if end-to-end data delivery is failing
    (reported by a notification, typically), Cause analysis can help find the
-   failed link or node in the end-to-end path.
+   failed link or node, or mis-configuration in the end-to-end path.
 
 ###  Fault Isolation {#sec-fault-isol}
 
