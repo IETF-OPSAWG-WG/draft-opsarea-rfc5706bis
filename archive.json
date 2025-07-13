@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-08T00:51:10.907697+00:00",
+  "timestamp": "2025-07-13T00:57:51.204955+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -57,6 +57,16 @@
       "name": "text-needed",
       "description": "",
       "color": "f9d0c4"
+    },
+    {
+      "name": "external_review",
+      "description": "",
+      "color": "f583fd"
+    },
+    {
+      "name": "Need_Split_Individual_Issues",
+      "description": "",
+      "color": "828776"
     }
   ],
   "issues": [
@@ -1516,6 +1526,44 @@
       "body": "The draft uses the terms **Protocol Designer** and **Protocol Designers** interchangeably. Is it recommended that they be uniformly changed to Protocol Designers?\nIn addition,  Protocol Designer  is singular, but \"they\" is used  later in draft, Please see below:\nsection3.2\nAfter **a Protocol Designe**r has considered the manageability requirements of a New Protocol or Protocol Extension, **they** may determine that no management functionality or operational best-practice clarifications are needed.  \n\n\n",
       "createdAt": "2025-07-04T10:12:45Z",
       "updatedAt": "2025-07-04T10:12:45Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 96,
+      "id": "I_kwDOOWPBqs7ANuTT",
+      "title": "Chongfeng's Review (07/07/2025)",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/96",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "external_review",
+        "Need_Split_Individual_Issues"
+      ],
+      "body": "at: https://mailarchive.ietf.org/arch/msg/opsawg/cq0sk1Avb4FCOm3iOKD5wij69es/\n\n> Hi Benoit, authors,\n> \n> I have given a review to RFC5706-bis, which provides guidlines on writing \"Considering Operations and Management\" in future IETF drafts, I think this effort will make the IETF output to be more aligned with the operational requirements of operators, therefore it is very valuable. I also have the following comments for your consideration,\n> \n> \n> 1) In Section 2.1, there is   \"Operation activities that are undertaken to keep the network.\"\n> \n> It seems that this sentence is incomplete, can it be changed to the following or something like that?\n>   \"Operation activities that are undertaken to keep the network run normally.\"\n> \n> 2) Section 2.2 mentions Radius as a management technology, Based on RFC2865  \"Radius is a protocol for carrying authentication,  authorization, and configuration information between a Network Access\u201d\n>  \n> However, I think the  term of \"management\" in this document is mainly about how to manage \u201cNew Protocols or Protocol Extensions\uff0cI don't think Radius belongs to this categoy,  so it is not related to the subject of this document. \n> \n> 3) In section 3.2,  there is \"There are no new operations or manageability requirements introduced by this document,\"\n> \n> Since RFC5706-bis mainly deals the mangement and operation issus of new standard, instead of new draft , so it is possible to be changed to the following?\n> \"There are no specific operations or manageability requirements introduced by this protocol (or protocol extension),\"\n> \n> 4) In Section 5, there is  \n> \"The management model should take into account factors such as: What type of management entities will be involved (agents, network management systems)?\"\n> \n> I propose to add \"network Controller\" to the list, so the setence is change to \"The management model should take into account factors such as: What type of management entities will be involved (agents, network controller, network management systems)?\"\n> \n> 5) Section 5.3 is about fault management, \n> \n> With the increasing number of protocols in the network, operators are particularly concerned about the stability and impact of new protocols (including extensions of existing protocols). They are concerned about whether issuing protocol configuration instructions will have an impact on the normal operation of the network. The impact of different protocols on network stability and security varies during deployment. Improper configuration of one instruction may lead to widespread network failures and even serious losses. Therefore, it is recommended to analyze and explain the possible impact of new protocols or extensions, if there is a fault, What is its impact level (single-device level, AS level, operator level, neighour operators level,  or the whole Internet)?  and provide necessary reminders in the documentation on how to avoid such wrong configurations.\n> \n> 6) Section 5.6.1 is about the performance management of protocol. I think performance is heavily decided by the resource provided, in particular, hardware resource provided, for instance, for the same protocol, hardware based implementation usually has better performance than that of software-based, so I think the term of \"performance\" works for equipment, instead of protocol. Since this draft is about how to write\u201c Considering Operations and Management in IETF specifications\u201d, from the perspective of protocol, do we need to keep the section of perfromance\uff1f \n> \n> 7) Section 6 is about\"Operational and Management Tooling Considerations\", I suggest adding AI-based system here\uff0csuch as AI agent.\n> \n> This is because the adoption of AI technology in network management and operation has become an important trend. Considering that an RFC will serve for many years in the future, we should mention it in this section.\n> \n> 8) The purpose of RFC5706-bis is to instruct authors on how to write \"Considering Operations and Management\" in their IETF standard. Currently, its length is a bit long, and in order to facilitate its use, I suggest that the final version can reduce its length and mainly list instructions on how to write \"considerations\". Analytical or supportive content can be moved to the auxiliary section.\n> \n> \n> \n> Thank you!\n> \n> \n> Best regards\n> Chongfeng",
+      "createdAt": "2025-07-12T04:46:33Z",
+      "updatedAt": "2025-07-12T04:54:12Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 97,
+      "id": "I_kwDOOWPBqs7ANulp",
+      "title": "Initial Shepherd Review of draft-opsarea-rfc5706bis-03 (11/07/2025)",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/97",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "external_review",
+        "Need_Split_Individual_Issues"
+      ],
+      "body": "Posted at: https://mailarchive.ietf.org/arch/msg/opsawg/dT_YXmTxy4OIaAYN_7G3YS-HpQA/\n\n>  Dear authors:\n> \n> First of all, thanks for taking on this work!\n> \n> I started reading the document, but before getting into the substantive\n> sections (4 and 5), I want to initiate a conversation on a couple of points\n> where the draft could be clearer and provide better guidance.  Some of\n> these points require a wider discussion.\n> \n> \n> (1) When is the Operational Considerations section required?\n> \n>    The document \"introduces a requirement to include an \"Operational\n>    Considerations\" section in new IETF Standard Track RFCs.\"  Section \u00a73.1\n>    (Operational Considerations Section) is more descriptive:\n> \n>     All Internet-Drafts that are advanced for publication as Standards\n>     Track IETF RFC are required to include an \"Operational\n>     Considerations\" section.  It is recommended that Internet-Drafts\n>     advanced for publication as Experimental protocol specifications also\n>     include such sections.  \"Operational Considerations\" sections will\n>     also often be appropriate in Internet-Drafts advanced for publication\n>     as Informational RFCs, for example, in protocol architecture and\n>     protocol requirements documents.\n> \n> \n>    Documents of any status can define New Protocols or Protocol Extensions,\n> so\n>    it is not clear to me why only documents on the Standards Track are\n>    required to include an \"Operational Considerations\" section.  The\n>    document's status doesn't eliminate the need to consider how New\n> Protocols\n>    or Protocol Extensions will fit into the network or be managed.\n> \n>    Also, does \"often be appropriate in...Informational RFCs\" mean that\n>    including the \"Operational Considerations\" section is optional, or that\n>    there may be cases where it is required?\n> \n>    IMO, the \"Operational Considerations\" section should be required in all\n>    RFCs.  \u00a73.2 (Null Operations and Manageability Considerations Section)\n>    offers text to be used in cases where it is truly determined that no\n>    \"Operational Considerations\" are needed.\n> \n> \n> (2) rfc2119 keywords\n> \n>    \u00a72 (Key Concepts, Terminology, and Technological Landscape) says:\n> \n>     This document does not describe interoperability requirements.  As\n>     such, it does not use the capitalized keywords defined in [BCP14].\n> \n>    I agree with not using rfc2119 keywords when talking about the\n>    considerations themselves.  However, they should be used when defining\n> the\n>    specific requirements for when the Operational Considerations section is\n>    needed (see above) to avoid confusion.\n> \n> \n> (3) Null Considerations section not required?\n> \n>    \u00a73.2 (Null Operations and Manageability Considerations Section) says\n> that\n>    \"[i]f there are no new manageability or deployment considerations, it is\n>    recommended that an \"Operations and Manageability Considerations\"\n> section\n>    contain a simple statement...\"\n> \n>    Populating a null section is not required.  Does this mean that an RFC\n> can\n>    be published without Operational Considerations?  Even in the Standards\n>    Track?\n> \n> \n> (4) What is the name of the new section?  Is it one section or two?\n> \n>    The title of \u00a73.2, for example, calls out what appears to be one section\n>    (\"Operations and Manageability Considerations Section\"), but they are\n>    mentioned independently in other places.  And still in other cases, only\n>    the Operational Considerations section is mentioned (in \u00a73.1, for\n> example).\n>    Is the intent that one section covers both topics?  If so, please be\n> clear\n>    and consistent about it.\n> \n>    Also, most of the document talks about \"manageability considerations\",\n> but\n>    a couple of places use \"management considerations\".  The same for\n>    \"operations\" and \"operational\".\n> \n> \n> (5) Scope creep?\n> \n>    \u00a71.2 (Audience) mentions several potential uses of this document beyond\n>    documenting the operational and manageability considerations for New\n>    Protocols or Protocol Extensions, for example: \"Area Director who is in\n> the\n>    process of creating a new WG Charter...OPS Directorate can use this\n>    document to guide performing reviews\".  But there is no guidance on how\n> ADs\n>    should use the document when chartering.  A reference is provided to the\n>    OPS Dir checklist.  IMO, both potential uses should be outside the scope\n> of\n>    the document.\n> \n>    [May be related to\n> https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/65]\n> \n> \n> \n> I included below a couple of nits.\n> \n> Thanks!!\n> \n> Alvaro.\n> \n> \n> [Line numbers from idnits.]\n> \n> ...\n> 309   *  Data Model: A set of mechanisms for representing, organizing,\n> 310      storing and handling data within a particular type of data store\n> 311      or repository.  This usually comprises a collection of data\n> 312      structures such as lists, tables, relations, etc., a collection of\n> 313      operations that can be applied to the structures such as\n> 314      retrieval, update, summation, etc., and a collection of integrity\n> 315      rules that define the legal states (set of values) or changes of\n> 316      state (operations on values).  A Data Model may be derived by\n> 317      mapping the contents of an Information Model or may be developed\n> 318      ab initio.  Further discussion of Data Models can be found in\n> 319      [RFC3444], Section 5.1, and Section 5.2.\n> \n> [] s/found in [RFC3444], Section 5.1, and Section 5.2./found in Section\n> 5.1, Section 5.2 and [RFC3444].\n> \n> I first read this as pointing at Sections 5.1 and 5.2 of rfc3444, which\n> don't exist.\n> \n> \n> \n> ...\n> 452   After a Protocol Designer has considered the manageability\n> 453   requirements of a New Protocol or Protocol Extension, they may\n> 454   determine that no management functionality or operational best-\n> 455   practice clarifications are needed.  It would be helpful to\n> 456   reviewers, those who may update or write extensions to the protocol\n> 457   in the future, or to those deploying the protocol, to know the\n> 458   rationale regarding the decisions on manageability of the protocol at\n> 459   the time of its design.\n> \n> [] \"management functionality or operational best-practice clarifications\"\n> \n> Not all operational considerations are best practices (and the term may get\n> confused with a BCP).\n> \n> s/.../manageability or operational considerations",
+      "createdAt": "2025-07-12T04:48:33Z",
+      "updatedAt": "2025-07-12T04:54:31Z",
       "closedAt": null,
       "comments": []
     }
