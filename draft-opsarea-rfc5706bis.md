@@ -311,7 +311,7 @@ author:
       this document encompasses OAM along with other management and provisioning
       tools and concepts.
 
-   *  Probable Root Cause: Since one Fault may give rise to another Fault or Problem, a probable root cause is commonly meant to describe the original event or combination of circumstances that is the foundation or source of all related Faults.
+   *  Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}
 
    *  Problem: See {{?I-D.ietf-nmop-terminology}}.
 
@@ -1024,10 +1024,15 @@ DM         DM        DM     --> concrete/detailed model
 
 ###  Probable Root Cause Analysis {#sec-cause-analysis}
 
-   Probable Root Cause analysis is about working out where the
-   fault might be. For example, if end-to-end data delivery is failing
-   (reported by a notification, typically), Probable Root Cause analysis can help find the
-   failed link or node, or mis-configuration, within the end-to-end path.
+   Probable Root Cause analysis is about working out where the foundational
+   Fault or Problem might be. Since one Fault may give rise to another Fault or
+   Problem, a probable root cause is commonly meant to describe the original,
+   source event or combination of circumstances that is the foundation of all
+   related Faults.
+
+   For example, if end-to-end data delivery is failing (e.g., reported by a
+   notification), Probable Root Cause analysis can help find the failed link
+   or node, or mis-configuration, within the end-to-end path.
 
 ###  Fault Isolation {#sec-fault-isol}
 
