@@ -251,6 +251,8 @@ author:
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
+   *  Anomaly: See {{?I-D.ietf-nmop-terminology}}.
+
    *  Cause: See {{?I-D.ietf-nmop-terminology}}.
 
    *  CLI: Command Line Interface. Typically, a Proprietary Interface to
@@ -308,6 +310,8 @@ author:
       The broader concept of "operations and management" that is the subject of
       this document encompasses OAM along with other management and provisioning
       tools and concepts.
+
+   *  Probable Root Cause: Since one Fault may give rise to another Fault or Problem, a probable root cause is commonly meant to describe the original event or combination of circumstances that is the foundation or source of all related Faults.
 
    *  Problem: See {{?I-D.ietf-nmop-terminology}}.
 
@@ -1018,12 +1022,12 @@ DM         DM        DM     --> concrete/detailed model
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?
 
-###  Cause Analysis {#sec-cause-analysis}
+###  Probable Root Cause Analysis {#sec-cause-analysis}
 
-   Cause analysis is about working out where the
-   fault is. For example, if end-to-end data delivery is failing
-   (reported by a notification, typically), Cause analysis can help find the
-   failed link or node, or mis-configuration in the end-to-end path.
+   Probable Root Cause analysis is about working out where the
+   fault might be. For example, if end-to-end data delivery is failing
+   (reported by a notification, typically), Probable Root Cause analysis can help find the
+   failed link or node, or mis-configuration, within the end-to-end path.
 
 ###  Fault Isolation {#sec-fault-isol}
 
