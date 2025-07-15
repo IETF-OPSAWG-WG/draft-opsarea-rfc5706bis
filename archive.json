@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-13T00:57:51.204955+00:00",
+  "timestamp": "2025-07-15T00:54:09.160569+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1425,7 +1425,7 @@
       "labels": [],
       "body": "We have:\n\n>    *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\n>        to describe the original event that is the foundation of all related Faults.\n\nMy problem is that sometimes (often?) it is the combination of events that causes a fault. There may be a straw that breaks the camel's back, but it is hard to call that the root cause. So, how to phrase this?\n\nHow about...\n\n>   *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\n>      to describe the original event or combination of circumstances that is the foundation of all related Faults.\n",
       "createdAt": "2025-07-03T10:47:53Z",
-      "updatedAt": "2025-07-07T08:52:52Z",
+      "updatedAt": "2025-07-13T22:33:33Z",
       "closedAt": null,
       "comments": [
         {
@@ -1462,6 +1462,13 @@
           "body": "Per my previous comment. They have now posted https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-05\n\nSo we can make the changes.",
           "createdAt": "2025-07-07T08:52:52Z",
           "updatedAt": "2025-07-07T08:52:52Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Provided an update pointing to Probable Root Cause in [I-D.ietf-nmop-network-incident-yang](https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-05), and checked all text for related uses.",
+          "createdAt": "2025-07-13T22:33:33Z",
+          "updatedAt": "2025-07-13T22:33:33Z"
         }
       ]
     },
@@ -5806,17 +5813,19 @@
       "state": "OPEN",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "cpignata"
+      ],
       "labels": [],
       "body": "Taking this feedback into account (from https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64)\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2957855762\r\n- https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/64#issuecomment-2960373446\r\n\r\nThe more I think about, the more I am convinced than we should not add Root Cause to our terminology section. On on side, the NMOP consensus was NOT to define that term. On the other side, the terminology fairy Adrian and the NMOP co-chair introduce it into another document. This does seem right, we can not say we were not aware. \r\n\r\nThis Root Cause is going to painfully come back at us at review time, I believe.\r\n\r\nLet's discuss today",
       "createdAt": "2025-06-12T08:38:32Z",
-      "updatedAt": "2025-07-03T10:43:46Z",
+      "updatedAt": "2025-07-13T22:36:37Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "8f068207e7211d669803f92c9eb3a627cfc101d1",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "bclaise-patch-2",
-      "headRefOid": "3cfe1acc11c3330dd0e93a4da8d2c73255023192",
+      "headRefOid": "4994a2ef6ab3d3f66d87f26f7909908fb66ee3a4",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -5863,6 +5872,13 @@
           "body": "> Conclusion from June 26th 2025 Probable Root Cause? Maybe, to be solved in NMOP and there is maybe something to reused in this RFC5706bis draft.\r\n\r\nSee this https://mailarchive.ietf.org/arch/msg/nmop/z7psOU0SOU4-p0DM_NO6UVvEyWQ/ email thread",
           "createdAt": "2025-07-03T10:43:46Z",
           "updatedAt": "2025-07-03T10:43:46Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Solves #88 \r\nAfter the discussion in June 26th 2025 and associated follow-ups here and in Issue #88, I just added a pointer to Probable Root Cause in [I-D.ietf-nmop-network-incident-yang](https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-05), and checked all text for related uses. \r\nLet's re-review.",
+          "createdAt": "2025-07-13T22:35:18Z",
+          "updatedAt": "2025-07-13T22:35:18Z"
         }
       ],
       "reviews": [
@@ -6879,7 +6895,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-07-04T11:10:08Z",
-      "updatedAt": "2025-07-07T14:07:25Z",
+      "updatedAt": "2025-07-13T22:48:15Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "cb18fa2db2e4df5e1790693ff95c86042b9e9707",
@@ -7138,6 +7154,106 @@
               "body": "If you drop the plural, you need to add an article. Prefer definite article.\r\nThus:\r\nPlacement of the Operational Considerations Section",
               "createdAt": "2025-07-07T14:07:25Z",
               "updatedAt": "2025-07-07T14:07:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6zq8iT",
+          "commit": {
+            "abbreviatedOid": "3abd8a4"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-13T22:45:34Z",
+          "updatedAt": "2025-07-13T22:45:34Z",
+          "comments": [
+            {
+              "originalPosition": 28,
+              "body": "```suggestion\r\n##  \"Operational and Management Considerations\" Section {#sec-oper-manag-considerations}\r\n```",
+              "createdAt": "2025-07-13T22:45:34Z",
+              "updatedAt": "2025-07-13T22:45:34Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6zq8sD",
+          "commit": {
+            "abbreviatedOid": "3abd8a4"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-13T22:46:20Z",
+          "updatedAt": "2025-07-13T22:46:21Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "```suggestion\r\n##  Null \"Operational and Management Considerations\" Section {#sec-null-sec}\r\n```",
+              "createdAt": "2025-07-13T22:46:21Z",
+              "updatedAt": "2025-07-13T22:46:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6zq817",
+          "commit": {
+            "abbreviatedOid": "3abd8a4"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-13T22:46:47Z",
+          "updatedAt": "2025-07-13T22:46:48Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "```suggestion\r\n##  Null \"Operational and Management Considerations\" Section {#sec-null-sec}\r\n```",
+              "createdAt": "2025-07-13T22:46:47Z",
+              "updatedAt": "2025-07-13T22:46:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6zq86E",
+          "commit": {
+            "abbreviatedOid": "3abd8a4"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-13T22:47:44Z",
+          "updatedAt": "2025-07-13T22:47:44Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "```suggestion\r\n##  Placement of the Operational and Management Considerations Section {#sec-placement-sec}\r\n```",
+              "createdAt": "2025-07-13T22:47:44Z",
+              "updatedAt": "2025-07-13T22:47:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6zq87o",
+          "commit": {
+            "abbreviatedOid": "3abd8a4"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-13T22:48:15Z",
+          "updatedAt": "2025-07-13T22:48:15Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "```suggestion\r\n   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this Problem,\r\n```",
+              "createdAt": "2025-07-13T22:48:15Z",
+              "updatedAt": "2025-07-13T22:48:15Z"
             }
           ]
         }
