@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-15T00:54:09.160569+00:00",
+  "timestamp": "2025-07-17T00:53:41.347665+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -6895,7 +6895,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-07-04T11:10:08Z",
-      "updatedAt": "2025-07-13T22:48:15Z",
+      "updatedAt": "2025-07-15T06:24:30Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "cb18fa2db2e4df5e1790693ff95c86042b9e9707",
@@ -7254,6 +7254,26 @@
               "body": "```suggestion\r\n   ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this Problem,\r\n```",
               "createdAt": "2025-07-13T22:48:15Z",
               "updatedAt": "2025-07-13T22:48:15Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6z7_eo",
+          "commit": {
+            "abbreviatedOid": "3abd8a4"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-15T06:24:30Z",
+          "updatedAt": "2025-07-15T06:24:30Z",
+          "comments": [
+            {
+              "originalPosition": 28,
+              "body": "@cpignata: Please check the conclusion at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/80 ",
+              "createdAt": "2025-07-15T06:24:30Z",
+              "updatedAt": "2025-07-15T06:24:30Z"
             }
           ]
         }
