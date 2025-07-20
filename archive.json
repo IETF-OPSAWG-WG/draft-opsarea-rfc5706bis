@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-17T00:53:41.347665+00:00",
+  "timestamp": "2025-07-20T00:58:57.008175+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -6895,7 +6895,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-07-04T11:10:08Z",
-      "updatedAt": "2025-07-15T06:24:30Z",
+      "updatedAt": "2025-07-17T08:30:15Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "cb18fa2db2e4df5e1790693ff95c86042b9e9707",
@@ -7274,6 +7274,46 @@
               "body": "@cpignata: Please check the conclusion at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/80 ",
               "createdAt": "2025-07-15T06:24:30Z",
               "updatedAt": "2025-07-15T06:24:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs60f9ts",
+          "commit": {
+            "abbreviatedOid": "5594859"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-17T07:32:22Z",
+          "updatedAt": "2025-07-17T07:32:22Z",
+          "comments": [
+            {
+              "originalPosition": 55,
+              "body": "Agreed",
+              "createdAt": "2025-07-17T07:32:22Z",
+              "updatedAt": "2025-07-17T07:36:26Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs60gwJQ",
+          "commit": {
+            "abbreviatedOid": "3abd8a4"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-17T08:27:53Z",
+          "updatedAt": "2025-07-17T08:27:54Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "Agreed",
+              "createdAt": "2025-07-17T08:27:53Z",
+              "updatedAt": "2025-07-17T08:27:54Z"
             }
           ]
         }
