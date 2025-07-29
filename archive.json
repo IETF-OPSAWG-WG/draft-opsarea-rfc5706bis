@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-24T00:53:50.443397+00:00",
+  "timestamp": "2025-07-29T00:59:09.347189+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -7529,6 +7529,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 98,
+      "id": "PR_kwDOOWPBqs6hAUfm",
+      "title": "Update draft-opsarea-rfc5706bis.md",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/98",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Change Benoit's affiliation",
+      "createdAt": "2025-07-28T15:32:11Z",
+      "updatedAt": "2025-07-28T15:39:35Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "50dbb6e53edc55bef7a3c935d341e93e1cb66f20",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "bclaise-patch-4",
+      "headRefOid": "0608f73481f658dda5cd6d82f71c8261cb213c47",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
