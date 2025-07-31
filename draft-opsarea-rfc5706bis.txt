@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                                    Huawei
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 8 January 2026                                        A. Farrel
+Expires: 1 February 2026                                       A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 8 January 2026                                        A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             7 July 2025
+                                                            31 July 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 January 2026.
+   This Internet-Draft will expire on 1 February 2026.
 
 Copyright Notice
 
@@ -98,7 +98,7 @@ Table of Contents
      5.3.  Fault Management
        5.3.1.  Liveness Detection and Monitoring
        5.3.2.  Fault Determination
-       5.3.3.  Root Cause Analysis
+       5.3.3.  Probable Root Cause Analysis
        5.3.4.  Fault Isolation
      5.4.  Configuration Management
        5.4.1.  Verifying Correct Operation
@@ -324,7 +324,7 @@ Table of Contents
 
    *  Fault Management: The process of interpreting fault notifications
       and other alerts and alarms, isolating faults, correlating them,
-      and deducing underlying causes.  See Section 5.3 for more
+      and deducing underlying Causes.  See Section 5.3 for more
       information.
 
    *  Information Model: An abstraction and representation of the
@@ -357,6 +357,8 @@ Table of Contents
       subject of this document encompasses OAM, in addition to other
       management and provisioning tools and concepts.
 
+   *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang]
+
    *  Problem: See [I-D.ietf-nmop-terminology].
 
    *  Proprietary Interface: An interface to manage a network element
@@ -370,12 +372,6 @@ Table of Contents
    *  Protocol Designer: An individual, a group of people, or an IETF WG
       involved in the development and specification of New Protocols or
       Protocol Extensions.
-
-   *  Root Cause: Since one Fault may give rise to another Fault or
-      Problem, a root cause Section 5.3.3 is commonly meant to describe
-      the original event that is the foundation of all related Faults.
-
-   *  Symptom: See [I-D.ietf-nmop-terminology].
 
 2.2.  Available Management Technologies
 
@@ -515,7 +511,7 @@ Table of Contents
 
    There may be a need to support both a human interface (e.g., for
    troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and root cause analysis).  The application programming
+   monitoring and Cause analysis).  The application programming
    interfaces (APIs) and the human interfaces might benefit from being
    similar to ensure that the information exposed by both is consistent
    when presented to an operator.  It is also relevant to identify
@@ -1133,12 +1129,18 @@ Table of Contents
    are there some "standard" notifications that could be used?  Or can
    relevant counters be polled as needed?
 
-5.3.3.  Root Cause Analysis
+5.3.3.  Probable Root Cause Analysis
 
-   Root cause analysis is about working out where in the network the
-   fault is.  For example, if end-to-end data delivery is failing
-   (reported by a notification), root cause analysis can help find the
-   failed link or node in the end-to-end path.
+   Probable Root Cause analysis is about working out where the
+   foundational Fault or Problem might be.  Since one Fault may give
+   rise to another Fault or Problem, a probable root cause is commonly
+   meant to describe the original, source event or combination of
+   circumstances that is the foundation of all related Faults.
+
+   For example, if end-to-end data delivery is failing (e.g., reported
+   by a notification), Probable Root Cause analysis can help find the
+   failed link or node, or mis-configuration, within the end-to-end
+   path.
 
 5.3.4.  Fault Isolation
 
@@ -1638,6 +1640,14 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
               rfc8407bis-28>.
 
+   [I-D.ietf-nmop-network-incident-yang]
+              Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
+              "A YANG Data Model for Network Incident Management", Work
+              in Progress, Internet-Draft, draft-ietf-nmop-network-
+              incident-yang-05, 6 July 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
+              network-incident-yang-05>.
+
    [I-D.ietf-nmop-terminology]
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
               Key Terms for Network Fault and Problem Management", Work
@@ -1668,9 +1678,9 @@ Table of Contents
    [NEMOPS]   Hardaker, W. and D. Dhody, "Report from the IAB Workshop
               on the Next Era of Network Management Operations
               (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
-              nemops-workshop-report-02, 19 May 2025,
+              nemops-workshop-report-03, 21 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
-              workshop-report-02>.
+              workshop-report-03>.
 
    [NEMOPS-WORKSHOP]
               IAB, "IAB workshop on the Next Era of Network Management
