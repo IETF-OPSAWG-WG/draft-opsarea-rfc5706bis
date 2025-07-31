@@ -429,7 +429,7 @@ contributor:
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-##  Placement of Operations and Manageability Considerations {#sec-placement-sec}
+##  Placement of the Operational Considerations Section {#sec-placement-sec}
 
    It is recommended that the section be
    placed immediately before the Security Considerations section.
