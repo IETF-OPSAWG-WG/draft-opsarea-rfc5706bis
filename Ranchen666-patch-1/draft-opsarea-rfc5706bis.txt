@@ -81,7 +81,7 @@ Table of Contents
    3.  Documentation Requirements for IETF Specifications
      3.1.  "Operational Considerations" Section
      3.2.  Null "Operational Considerations" Section
-     3.3.  Placement of Operations and Manageability Considerations
+     3.3.  Placement of the Operational Considerations Section
    4.  Operational Considerations - How Will the New Protocol Fit into
            the Current Environment?
      4.1.  Operations
@@ -473,7 +473,7 @@ Table of Contents
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-3.3.  Placement of Operations and Manageability Considerations
+3.3.  Placement of the Operational Considerations Section
 
    It is recommended that the section be placed immediately before the
    Security Considerations section.  Reviewers interested in such
