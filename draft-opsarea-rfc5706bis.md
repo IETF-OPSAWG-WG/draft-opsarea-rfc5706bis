@@ -405,7 +405,7 @@ contributor:
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-##  Null "Operations and Manageability Considerations" Section {#sec-null-sec}
+##  Null "Operational Considerations" Section {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may determine that no
