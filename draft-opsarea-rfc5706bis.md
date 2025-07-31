@@ -278,7 +278,7 @@ author:
    *  Fault: See {{?I-D.ietf-nmop-terminology}}.
 
    *  Fault Management: The process of interpreting fault notifications and other alerts
-      and alarms, isolating faults, correlating them, and decucing underlying
+      and alarms, isolating faults, correlating them, and deducing underlying
       Causes. See {{sec-fm-mgmt}} for more information.
 
    *  Information Model: An abstraction and representation of the
