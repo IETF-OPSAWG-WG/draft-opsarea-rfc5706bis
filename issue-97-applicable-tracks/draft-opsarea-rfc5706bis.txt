@@ -138,10 +138,10 @@ Table of Contents
    This document obsoletes [RFC5706] and fully updates its content with
    new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational Considerations" section
-   in new RFCs.  This document also removes outdated references and
-   aligns with current practices, protocols, and technologies used in
-   operating and managing devices, networks, and services.  See
-   Section 1.3 for more details.
+   in new RFCs in the IETF Stream.  This document also removes outdated
+   references and aligns with current practices, protocols, and
+   technologies used in operating and managing devices, networks, and
+   services.  See Section 1.3 for more details.
 
 1.1.  This Document
 
