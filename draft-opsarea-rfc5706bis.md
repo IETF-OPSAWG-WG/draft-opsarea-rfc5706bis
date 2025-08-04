@@ -99,7 +99,7 @@ contributor:
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    introduces a requirement to include an "Operational Considerations"
-   section in new IETF RFCs.
+   section in new RFCs in the IETF Stream.
 
 --- middle
 
