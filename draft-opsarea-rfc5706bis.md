@@ -415,7 +415,6 @@ contributor:
     by this document. <-- Insert a brief explanation here.-->"
 ~~~~
 
-   Followed by a brief explanation of
    why that is the case. The presence of such a
    section would indicate to the reader that due
    consideration has been given to manageability and operations.
