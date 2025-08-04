@@ -409,7 +409,10 @@ contributor:
    If there are no new manageability or deployment considerations, "Operations Considerations" section
    must contain the following simple statement:
 
-   "There are no new operations or manageability
+~~~~
+  "There are no new operations or manageability requirements introduced
+    by this document. <-- Insert a brief explanation here.-->"
+~~~~
    requirements introduced by this document."
 
    Followed by a brief explanation of
