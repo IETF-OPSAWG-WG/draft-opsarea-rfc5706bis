@@ -460,9 +460,8 @@ Table of Contents
    "There are no new operations or manageability requirements introduced
      by this document. <-- Insert a brief explanation here.-->"
 
-   why that is the case.  The presence of such a section would indicate
-   to the reader that due consideration has been given to manageability
-   and operations.
+   The presence of such a section would indicate to the reader that due
+   consideration has been given to manageability and operations.
 
    In cases where the specification is a Protocol Extension and the base
    protocol already addresses the relevant operational and manageability
