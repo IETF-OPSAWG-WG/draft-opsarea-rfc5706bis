@@ -3,10 +3,10 @@
 
 
 Network Working Group                                          B. Claise
-Internet-Draft                                                    Huawei
+Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 5 January 2026                                        A. Farrel
+Expires: 5 February 2026                                       A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 5 January 2026                                        A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             4 July 2025
+                                                           4 August 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -34,7 +34,7 @@ Abstract
    This document obsoletes RFC 5706, replacing it completely and
    updating it with new operational and management techniques and
    mechanisms.  It also introduces a requirement to include an
-   "Operational Considerations" section in new IETF Standard Track RFCs.
+   "Operational Considerations" section in new IETF RFCs.
 
 Status of This Memo
 
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 January 2026.
+   This Internet-Draft will expire on 5 February 2026.
 
 Copyright Notice
 
@@ -78,10 +78,10 @@ Table of Contents
      2.1.  Terminology
      2.2.  Available Management Technologies
    3.  Documentation Requirements for IETF Specifications
-     3.1.  Operational Considerations Section
-     3.2.  Null Operations and Manageability Considerations Section
-     3.3.  Placement of Operations and Manageability Considerations
-           Sections
+     3.1.  "Operational Considerations" Section
+     3.2.  "Operational Considerations" Section Boilerplate When No
+           New Considerations Exist
+     3.3.  Placement of the Operational Considerations Section
    4.  Operational Considerations - How Will the New Protocol Fit into
            the Current Environment?
      4.1.  Operations
@@ -98,7 +98,7 @@ Table of Contents
      5.3.  Fault Management
        5.3.1.  Liveness Detection and Monitoring
        5.3.2.  Fault Determination
-       5.3.3.  Root Cause Analysis
+       5.3.3.  Probable Root Cause Analysis
        5.3.4.  Fault Isolation
      5.4.  Configuration Management
        5.4.1.  Verifying Correct Operation
@@ -138,26 +138,25 @@ Table of Contents
    This document obsoletes [RFC5706] and fully updates its content with
    new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational Considerations" section
-   in all new Standard Track RFCs.  This document also removes outdated
-   references and aligns with current practices, protocols, and
-   technologies used in operating and managing devices, networks, and
-   services.  See Section 1.3 for more details.
+   in new RFCs.  This document also removes outdated references and
+   aligns with current practices, protocols, and technologies used in
+   operating and managing devices, networks, and services.  See
+   Section 1.3 for more details.
 
 1.1.  This Document
 
    This document provides a set of guidelines for considering operations
-   and management in an IETF specification on the Standards Track with
-   an eye toward being flexible while also striving for
-   interoperability.
+   and management in an IETF technical specification with an eye toward
+   being flexible while also striving for interoperability.
 
    Entirely New Protocols may require significant consideration of
    expected operations and management, while Protocol Extensions to
    existing, widely deployed protocols may have established de facto
    operations and management practices that are already well understood.
-   However, the guidance in this document does not mandate providing a
-   comprehensive inventory of all operational considerations.  Instead,
-   the guidance is to focus on key aspects that will ease deployability
-   and are essential for operating and maintaining the technology.
+   This document does not mandate a comprehensive inventory of all
+   operational considerations.  Instead, it guides authors to focus on
+   key aspects that are essential for the technology's deployability,
+   operation, and maintenance.
 
    Suitable management approaches may vary for different areas, working
    groups, and protocols in the IETF.  This document does not prescribe
@@ -186,9 +185,9 @@ Table of Contents
    consider when thinking about the management and deployment of a new
    protocol, and to provide guidance about documenting those
    considerations.  These guidelines are intended to be useful to anyone
-   involved in the document lifecyle: from the authors writing the
+   involved in the document lifecycle: from the authors writing the
    protocol specification, to those reviewing and evaluating drafts of
-   those specifications: including WG chairs, WG advisors, the Document
+   those specifications, including WG Chairs, WG Advisors, the Document
    Shepherd, the Responsible Area Director, and the IESG.
 
    The following guidelines are designed to help Protocol Designers
@@ -209,7 +208,7 @@ Table of Contents
    threats.
 
    This document does not impose a specific management or operational
-   solution, imply that a formal data model is needed, or imply that
+   solution, imply that a formal Data Model is needed, or imply that
    using a specific management protocol is mandatory.  If Protocol
    Designers conclude that the technology can be managed solely by using
    Proprietary Interfaces or that it does not need any structured or
@@ -256,8 +255,7 @@ Table of Contents
       maintained in GitHub
 
    *  Add a requirement for an "Operational Considerations" section in
-      all new Standard Track RFCs, along with specific guidance on its
-      content.
+      new IETF RFCs, along with specific guidance on its content.
 
    *  Update the operational and manageability-related technologies to
       reflect over 15 years of advancements
@@ -299,14 +297,14 @@ Table of Contents
 
    *  Cause: See [I-D.ietf-nmop-terminology].
 
-   *  CLI: Command Line Interface.  Typically, a Proprietary Interface
-      to hardware or software devices (e.g., routers or operating
-      systems) for use by human operators directly at a terminal or via
-      scripts.  The commands, their syntax, and the precise semantics of
-      the parameters may vary considerably between different vendors,
-      between products from the same vendor, and even between different
-      versions or releases of a single product.  No attempt at
-      standardizing CLIs has been made by the IETF.
+   *  CLI: Command Line Interface.  A human-oriented interface,
+      typically a Proprietary Interface, to hardware or software devices
+      (e.g., routers or operating systems).  The commands, their syntax,
+      and the precise semantics of the parameters may vary considerably
+      between different vendors, between products from the same vendor,
+      and even between different versions or releases of a single
+      product.  No attempt at standardizing CLIs has been made by the
+      IETF.
 
    *  Data Model: A set of mechanisms for representing, organizing,
       storing and handling data within a particular type of data store
@@ -324,7 +322,7 @@ Table of Contents
 
    *  Fault Management: The process of interpreting fault notifications
       and other alerts and alarms, isolating faults, correlating them,
-      and deducing underlying causes.  See Section 5.3 for more
+      and deducing underlying Causes.  See Section 5.3 for more
       information.
 
    *  Information Model: An abstraction and representation of the
@@ -354,8 +352,10 @@ Table of Contents
           measures to make the managed network run more effectively.
 
       The broader concept of "operations and management" that is the
-      subject of this document encompasses OAM along with other
+      subject of this document encompasses OAM, in addition to other
       management and provisioning tools and concepts.
+
+   *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang]
 
    *  Problem: See [I-D.ietf-nmop-terminology].
 
@@ -371,19 +371,13 @@ Table of Contents
       involved in the development and specification of New Protocols or
       Protocol Extensions.
 
-   *  Root Cause: Since one Fault may give rise to another Fault or
-      Problem, a root cause Section 5.3.3 is commonly meant to describe
-      the original event that is the foundation of all related Faults.
-
-   *  Symptom: See [I-D.ietf-nmop-terminology].
-
 2.2.  Available Management Technologies
 
-   The IETF provides a number of standardized management protocols
-   suitable for various operational purposes, as outlined in [RFC6632].
-   Broadly, these include core network management protocols, purpose-
-   specific management protocols, and network management Data Models.  A
-   non-exhaustive list of such protocols is provided below:
+   The IETF provides several standardized management protocols suitable
+   for various operational purposes, for example as outlined in
+   [RFC6632].  Broadly, these include core network management protocols,
+   purpose-specific management protocols, and network management Data
+   Models.  A non-exhaustive list of such protocols is provided below:
 
    *  Remote Authentication Dial In User Service (RADIUS) [RFC2865]
 
@@ -413,16 +407,13 @@ Table of Contents
 
 3.  Documentation Requirements for IETF Specifications
 
-3.1.  Operational Considerations Section
+3.1.  "Operational Considerations" Section
 
-   All Internet-Drafts that are advanced for publication as Standards
-   Track IETF RFC are required to include an "Operational
-   Considerations" section.  It is recommended that Internet-Drafts
-   advanced for publication as Experimental protocol specifications also
-   include such sections.  "Operational Considerations" sections will
-   also often be appropriate in Internet-Drafts advanced for publication
-   as Informational RFCs, for example, in protocol architecture and
-   protocol requirements documents.
+   All Internet-Drafts that document a technical specification and are
+   advanced for publication as IETF RFCs are required to include an
+   "Operational Considerations" section.  Drafts that do not document
+   technical specifications such as policy or administrative drafts do
+   not require this section.
 
    After evaluating the operational and manageability aspects of a New
    Protocol, a Protocol Extension, or an architecture, the resulting
@@ -449,7 +440,8 @@ Table of Contents
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-3.2.  Null Operations and Manageability Considerations Section
+3.2.  "Operational Considerations" Section Boilerplate When No New
+      Considerations Exist
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may
@@ -460,12 +452,15 @@ Table of Contents
    rationale regarding the decisions on manageability of the protocol at
    the time of its design.
 
-   If there are no new manageability or deployment considerations, it is
-   recommended that an "Operations and Manageability Considerations"
-   section contain a simple statement such as, "There are no new
-   operations or manageability requirements introduced by this
-   document," followed by a brief explanation of why that is the case.
-   The presence of such a section would indicate to the reader that due
+   If there are no new manageability or deployment considerations,
+   "Operations Considerations" section must contain the following simple
+   statement:
+
+   "There are no new operations or manageability requirements introduced
+   by this document."
+
+   Followed by a brief explanation of why that is the case.  The
+   presence of such a section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
    In cases where the specification is a Protocol Extension and the base
@@ -473,7 +468,7 @@ Table of Contents
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-3.3.  Placement of Operations and Manageability Considerations Sections
+3.3.  Placement of the Operational Considerations Section
 
    It is recommended that the section be placed immediately before the
    Security Considerations section.  Reviewers interested in such
@@ -515,12 +510,12 @@ Table of Contents
 
    There may be a need to support both a human interface (e.g., for
    troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and root cause analysis).  The application programming
+   monitoring and Cause analysis).  The application programming
    interfaces (APIs) and the human interfaces might benefit from being
    similar to ensure that the information exposed by both is consistent
-   when presented to an operator.  Identifying consistent methods for
-   determining information, such as what is counted in a specific
-   counter, is relevant.
+   when presented to an operator.  It is also relevant to identify
+   consistent methods for determining information, such as what is
+   counted in specific counters.
 
    Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
@@ -562,9 +557,9 @@ Table of Contents
    It is extremely important to set a sensible default value for all
    parameters.
 
-   The default value should stay on the conservative side rather than on
-   the "optimizing performance" side (example: the initial RTT and
-   RTTVAR values of a TCP connection [RFC6298]).
+   Default values should generally favor the conservative side over the
+   "optimizing performance" side (e.g., the initial RTT and RTTVAR
+   values of a TCP connection [RFC6298]).
 
    For those parameters that are speed-dependent, instead of using a
    constant, try to set the default value as a function of the link
@@ -608,7 +603,7 @@ Table of Contents
    Protocol Designers should consider the requirements that the new
    protocol might put on other protocols and functional components and
    should also document the requirements from other protocols and
-   functional elements that have been considered in designing the new
+   functional components that have been considered in designing the new
    protocol.
 
    These considerations should generally remain illustrative to avoid
@@ -626,10 +621,10 @@ Table of Contents
    take it off the fast path!  The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router.  The "router alert" option
-   ([RFC2113], [RFC2711]) was finally developed to solve this Problem
+   ([RFC2113], [RFC2711]) was finally developed to solve this problem,
    for RSVP and other protocols that require the router to take some
-   packets off the fast-forwarding path.  Yet, router alert has its own
-   Problems in impacting router performance.
+   packets off the fast-forwarding path.  Yet, Router Alert has its own
+   problems in impacting router performance.
 
 4.5.  Impact on Network Operation
 
@@ -653,9 +648,9 @@ Table of Contents
    algorithm must comply with [BCP133] to prevent congestion collapse
    and ensure network stability.
 
-   A protocol could send active monitoring packets on the wire.  If we
-   don't pay attention, we might get very good accuracy but could send
-   too many active monitoring packets.
+   A protocol could send active monitoring packets on the wire.  Without
+   careful consideration, active monitoring might achieve high accuracy
+   at the cost of generating an excessive number of monitoring packets.
 
    The Protocol Designer should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
@@ -844,19 +839,17 @@ Table of Contents
    -- once you have the data, its meaning is a function of the managed
    entity.
 
-   Information models are helpful to try to focus interoperability on
-   the semantic level -- they define what information should be gathered
-   and how that information might be used, regardless of which
-   management protocol carries the data or which vendor implementation
-   produces the data.  The use of an Information Model might help
-   improve the ability of operators to correlate messages in different
-   protocols where the data overlaps, such as a YANG Data Model and
-   IPFIX Information Elements about the same event.  An Information
-   Model might identify which error conditions should be counted
-   separately, and which error conditions can be recorded together in a
-   single counter.  Then, whether the counter is gathered via, e.g.,
-   NETCONF or exported via IPFIX, the counter will have the same
-   meaning.
+   Information Models help focus interoperability on the semantic level
+   by defining what information should be gathered and how it might be
+   used, regardless of the underlying management protocol or vendor
+   implementation.  The use of an Information Model might help improve
+   the ability of operators to correlate messages in different protocols
+   where the data overlaps, such as a YANG Data Model and IPFIX
+   Information Elements about the same event.  An Information Model
+   might identify which error conditions should be counted separately,
+   and which error conditions can be recorded together in a single
+   counter.  Then, whether the counter is gathered via, e.g., NETCONF or
+   exported via IPFIX, the counter will have the same meaning.
 
    Protocol Designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
@@ -897,8 +890,8 @@ Table of Contents
 
    Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
-   relevant.  There are a number of information models contained in
-   protocol WG RFCs.  Some examples:
+   relevant.  There are several Information Models contained in protocol
+   WG RFCs.  Some examples:
 
    *  [RFC3060] - Policy Core Information Model -- Version 1
       Specification
@@ -1135,12 +1128,18 @@ Table of Contents
    are there some "standard" notifications that could be used?  Or can
    relevant counters be polled as needed?
 
-5.3.3.  Root Cause Analysis
+5.3.3.  Probable Root Cause Analysis
 
-   Root cause analysis is about working out where in the network the
-   fault is.  For example, if end-to-end data delivery is failing
-   (reported by a notification), root cause analysis can help find the
-   failed link or node in the end-to-end path.
+   Probable Root Cause analysis is about working out where the
+   foundational Fault or Problem might be.  Since one Fault may give
+   rise to another Fault or Problem, a probable root cause is commonly
+   meant to describe the original, source event or combination of
+   circumstances that is the foundation of all related Faults.
+
+   For example, if end-to-end data delivery is failing (e.g., reported
+   by a notification), Probable Root Cause analysis can help find the
+   failed link or node, or mis-configuration, within the end-to-end
+   path.
 
 5.3.4.  Fault Isolation
 
@@ -1164,13 +1163,15 @@ Table of Contents
    [RFC3139] discusses requirements for configuration management,
    including discussion of different levels of management, high-level
    policies, network-wide configuration data, and device-local
-   configuration.  Network configuration is not just multi-device push
-   or pull.  It is knowing that the configurations being pushed are
-   semantically compatible.  Is the circuit between them configured
-   compatibly on both ends?  Is the IS-IS metric the same? ... Now
-   answer those questions for 1,000 devices.
+   configuration.  Network configuration extends beyond simple multi-
+   device push or pull operations.  It also involves ensuring that the
+   configurations being pushed are semantically compatible across
+   devices and that the resulting behavior of all involved devices
+   corresponds to the intended behavior.  Is the attachment between them
+   configured compatibly on both ends?  Is the IS-IS metric the same?
+   ... Now answer those questions for 1,000 devices.
 
-   A number of efforts have existed in the IETF to develop policy-based
+   Several efforts have existed in the IETF to develop policy-based
    configuration management.  "Terminology for Policy-Based Management"
    [RFC3198] was written to standardize the terminology across these
    efforts.
@@ -1201,12 +1202,12 @@ Table of Contents
    consider it desirable to extract, document, and standardize the
    common parts of these network- wide configuration database schemas.
    A Protocol Designer should consider how to standardize the common
-   parts of configuring the new protocol, while recognizing that vendors
+   parts of configuring the New Protocol, while recognizing that vendors
    may also have proprietary aspects of their configurations.
 
    It is important to enable operators to concentrate on the
    configuration of the network as a whole, rather than individual
-   devices.  Support for configuration transactions across a number of
+   devices.  Support for configuration transactions across several
    devices could significantly simplify network configuration
    management.  The ability to distribute configurations to multiple
    devices, or to modify candidate configurations on multiple devices,
@@ -1299,9 +1300,9 @@ Table of Contents
    protocol.  Search for "metric" in the RFC search tool.  In some
    cases, new metrics need to be defined.  It would be useful if the
    protocol documentation identified the need for such new metrics.  For
-   performance monitoring, it is often important to report the time
-   spent in a state, rather than reporting the current state.  Snapshots
-   are of less value for performance monitoring.
+   performance monitoring, it is often more important to report the time
+   spent in a state rather than just the current state.  Snapshots alone
+   are typically of less value.
 
    There are several parts to performance management to be considered:
    protocol monitoring, device monitoring (the impact of the new
@@ -1562,9 +1563,9 @@ Table of Contents
    such as authentication, message integrity checking, and
    authorization, should be used.
 
-   A standard description of the manageable knobs and whistles on a
-   protocol makes it easier for an attacker to understand what they may
-   try to control and how to tweak it.
+   While a standard description of a protocol's manageable parameters
+   facilitates legitimate operation, it may also inadvertently simplify
+   an attacker's efforts to understand and manipulate the protocol.
 
    A well-designed protocol is usually more stable and secure.  A
    protocol that can be managed and inspected offers the operator a
@@ -1638,6 +1639,14 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
               rfc8407bis-28>.
 
+   [I-D.ietf-nmop-network-incident-yang]
+              Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
+              "A YANG Data Model for Network Incident Management", Work
+              in Progress, Internet-Draft, draft-ietf-nmop-network-
+              incident-yang-05, 6 July 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
+              network-incident-yang-05>.
+
    [I-D.ietf-nmop-terminology]
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
               Key Terms for Network Fault and Problem Management", Work
@@ -1668,9 +1677,9 @@ Table of Contents
    [NEMOPS]   Hardaker, W. and D. Dhody, "Report from the IAB Workshop
               on the Next Era of Network Management Operations
               (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
-              nemops-workshop-report-02, 19 May 2025,
+              nemops-workshop-report-03, 21 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
-              workshop-report-02>.
+              workshop-report-03>.
 
    [NEMOPS-WORKSHOP]
               IAB, "IAB workshop on the Next Era of Network Management
@@ -1951,8 +1960,8 @@ Contributors
 Authors' Addresses
 
    Benoit Claise
-   Huawei
-   Email: benoit.claise@huawei.com
+   Everything OPS
+   Email: benoit@everything-ops.net
 
 
    Joe Clarke
