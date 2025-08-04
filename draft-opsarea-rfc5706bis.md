@@ -407,7 +407,8 @@ contributor:
    time of its design.
 
    If there are no new manageability or deployment considerations, "Operations Considerations" section
-   must contain the following simple statement:
+   must contain the following simple statement, followed by a brief explanation of
+   why that is the case.
 
 ~~~~
   "There are no new operations or manageability requirements introduced
