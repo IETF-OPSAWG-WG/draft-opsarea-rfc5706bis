@@ -124,7 +124,7 @@ contributor:
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational Considerations"
-   section in new RFCs.
+   section in new RFCs in the IETF Stream.
    This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
