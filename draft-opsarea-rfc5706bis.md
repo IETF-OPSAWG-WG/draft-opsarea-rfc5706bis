@@ -367,7 +367,7 @@ contributor:
    All Internet-Drafts that document a technical specification and are advanced for publication
    as IETF RFCs are required to include an "Operational Considerations" section.
    Internet-Drafts that do not document technical specifications such as process, policy, or administrative
-   drafts do not require this section.
+   Internet-Drafts are not required to include such a section.
 
    After evaluating the operational and manageability aspects of a New
    Protocol, a Protocol Extension, or an architecture, the resulting practices and
