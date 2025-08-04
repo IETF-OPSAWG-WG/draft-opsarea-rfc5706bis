@@ -414,7 +414,6 @@ contributor:
   "There are no new operations or manageability requirements introduced
     by this document. <-- Insert a brief explanation here.-->"
 ~~~~
-   requirements introduced by this document."
 
    Followed by a brief explanation of
    why that is the case. The presence of such a
