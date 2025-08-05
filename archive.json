@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-03T00:59:56.015951+00:00",
+  "timestamp": "2025-08-05T00:56:03.407044+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -7623,6 +7623,153 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 99,
+      "id": "PR_kwDOOWPBqs6iAaVJ",
+      "title": "Make the Operational Considerations section mandatory for all tracks.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/99",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "* Exclude obvious documents from this requirement\r\n* Provide a better description of a \"null\" section\r\n\r\nThis aims to address points raised in #97.",
+      "createdAt": "2025-08-04T13:33:47Z",
+      "updatedAt": "2025-08-04T13:56:11Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5424135650c0d12dca2b0eadd39c6966d15b440",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "issue-97-applicable-tracks",
+      "headRefOid": "721aaa6e8d65e24edab4f7badb8256551baa3be9",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs631k8l",
+          "commit": {
+            "abbreviatedOid": "d35d91f"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Thanks Joe. Some proposals, fwiw.",
+          "createdAt": "2025-08-04T13:40:39Z",
+          "updatedAt": "2025-08-04T13:49:23Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n   section in new RFCs in the IETF Stream.\r\n```",
+              "createdAt": "2025-08-04T13:40:39Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\r\n   section in new RFCs in the IETF Stream.\r\n```",
+              "createdAt": "2025-08-04T13:40:52Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "```suggestion\r\n   Internet-Drafts that do not document technical specifications such as process, policy, or administrative\r\n```",
+              "createdAt": "2025-08-04T13:42:02Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 51,
+              "body": "```suggestion\r\n   Internet-Drafts do not require to include such section.\r\n```",
+              "createdAt": "2025-08-04T13:42:27Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 75,
+              "body": "```suggestion\r\n~~~~\r\n  \"There are no new operations or manageability requirements introduced\r\n    by this document. <-- Insert a brief explanation here.-->\"\r\n~~~~\r\n```",
+              "createdAt": "2025-08-04T13:44:11Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 73,
+              "body": "```suggestion\r\n   must contain the following simple statement, followed by a brief explanation of\r\n   why that is the case.\r\n```",
+              "createdAt": "2025-08-04T13:46:12Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 76,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-08-04T13:47:21Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 78,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2025-08-04T13:47:29Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 79,
+              "body": "```suggestion\r\n   The presence of such a\r\n```",
+              "createdAt": "2025-08-04T13:47:38Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 5,
+              "body": "Let's avoid interference with other streams (IAB, etc.)",
+              "createdAt": "2025-08-04T13:48:10Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            },
+            {
+              "originalPosition": 14,
+              "body": "Same reason as above",
+              "createdAt": "2025-08-04T13:48:19Z",
+              "updatedAt": "2025-08-04T13:49:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs631u0w",
+          "commit": {
+            "abbreviatedOid": "d35d91f"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-04T13:51:25Z",
+          "updatedAt": "2025-08-04T13:51:25Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "That's why I left in the \"IETF\".  But I suppose adding \"Stream\" makes that clearer.",
+              "createdAt": "2025-08-04T13:51:25Z",
+              "updatedAt": "2025-08-04T13:51:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs631xCI",
+          "commit": {
+            "abbreviatedOid": "d35d91f"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-04T13:54:03Z",
+          "updatedAt": "2025-08-04T13:54:03Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "```suggestion\r\n   Internet-Drafts are not required to include such a section.\r\n```",
+              "createdAt": "2025-08-04T13:54:03Z",
+              "updatedAt": "2025-08-04T13:54:03Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
