@@ -220,32 +220,6 @@ contributor:
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking OPS considerations into account.
 
-## Changes Since RFC 5706 {#sec-changes-since-5706}
-
-   The following changes have been made to the guidelines published in  {{?RFC5706}}:
-
-   * Change intended status from Informational to Best Current Practice
-
-   * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
-
-   * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
-
-   * Update the operational and manageability-related technologies to reflect over 15 years of advancements
-
-      * Provide focus and details on YANG-based standards, deprioritizing MIB Modules.
-
-      * Add a "YANG Data Model Considerations" section
-
-      * Update the "Available Management Technologies" landscape
-
-   * Add an "Operational and Management Tooling Considerations" section
-
-
-##  TO DO LIST {#sec-todo}
-
-   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
-
-
 # Key Concepts, Terminology, and Technological Landscape {#sec-key-concepts}
 
    This section introduces the key concepts and terminology used throughout the document and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
@@ -1494,6 +1468,30 @@ DM         DM        DM     --> concrete/detailed model
 
 --- back
 
+## Changes Since RFC 5706 {#sec-changes-since-5706}
+
+   The following changes have been made to the guidelines published in  {{?RFC5706}}:
+
+   * Change intended status from Informational to Best Current Practice
+
+   * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
+
+   * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
+
+   * Update the operational and manageability-related technologies to reflect over 15 years of advancements
+
+      * Provide focus and details on YANG-based standards, deprioritizing MIB Modules.
+
+      * Add a "YANG Data Model Considerations" section
+
+      * Update the "Available Management Technologies" landscape
+
+   * Add an "Operational and Management Tooling Considerations" section
+
+
+##  TO DO LIST {#sec-todo}
+
+   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 #  Acknowledgements {#sec-ack}
 {:numbered="false"}
