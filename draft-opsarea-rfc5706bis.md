@@ -373,7 +373,7 @@ contributor:
    publication as Informational RFCs, for example, in protocol architecture
    and protocol requirements documents.
 
-   After evaluating the operational and manageability aspects of a New
+   After evaluating the operational ({{sec-oper-consid}}) and manageability aspects ({{sec-mgmt-consid}}) of a New
    Protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
    in an "Operational Considerations" section within a
@@ -423,7 +423,7 @@ contributor:
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-##  Placement of the Operational Considerations Section {#sec-placement-sec}
+##  Placement of the "Operational Considerations" Section {#sec-placement-sec}
 
    It is recommended that the section be
    placed immediately before the Security Considerations section.
@@ -431,7 +431,7 @@ contributor:
    placement could simplify the development of tools to detect the
    presence of such a section.
 
-# Operational Considerations - How Will the New Protocol Fit into the Current Environment? {#sec-oper-consid}
+# How Will the New Protocol Fit into the Current Environment? {#sec-oper-consid}
 
    Designers of a New Protocol should carefully consider the operational
    aspects. To ensure that a protocol will be practical to deploy in
@@ -645,7 +645,7 @@ contributor:
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
-# Management Considerations - How Will the Protocol Be Managed? {#sec-mgmt-consid}
+#  How Will the Protocol Be Managed? {#sec-mgmt-consid}
 
    The considerations of manageability should start from identifying the
    entities to be managed, as well as how the managed protocol is
@@ -1458,13 +1458,13 @@ DM         DM        DM     --> concrete/detailed model
 
    This document does not have any IANA actions required.
 
-# Operations and Manageability Considerations {#sec-oper-mgmt-consid}
+# Operational Considerations {#sec-oper-mgmt-consid}
 
    Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
 
 #  Security Considerations {#sec-security}
 
-   This document is informational and provides guidelines for
+   This document provides guidelines for
    considering manageability and operations. It introduces no new
    security concerns.
 
