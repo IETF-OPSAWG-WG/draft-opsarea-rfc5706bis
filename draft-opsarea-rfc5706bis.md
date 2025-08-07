@@ -1457,7 +1457,7 @@ DM         DM        DM     --> concrete/detailed model
 
 --- back
 
-## Changes Since RFC 5706 {#sec-changes-since-5706}
+# Changes Since RFC 5706 {#sec-changes-since-5706}
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
