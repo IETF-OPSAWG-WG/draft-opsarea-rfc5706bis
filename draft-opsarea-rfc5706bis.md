@@ -170,8 +170,8 @@ contributor:
    writing protocol specification, providing guidance about what to
    consider when thinking about the management and deployment of a new
    protocol, to provide guidance about documenting those
-   considerations, and helping them provide a reasonably 
-   consistent format for such documentation. 
+   considerations, and helping them provide a reasonably
+   consistent format for such documentation.
 
    Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
