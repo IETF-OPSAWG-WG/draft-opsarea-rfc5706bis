@@ -183,10 +183,6 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
-   Separate manageability and operational considerations sections are desirable
-   in many cases,  but their structure and location are a decision that can be
-   made from case to case.
-
    This document does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
    protocol is mandatory. If Protocol Designers conclude that the technology can be
@@ -210,7 +206,7 @@ contributor:
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
-   and review Internet-Drafts, taking OPS considerations into account.
+   and review Internet-Drafts, taking operational considerations into account.
 
 ## Changes Since RFC 5706 {#sec-changes-since-5706}
 
