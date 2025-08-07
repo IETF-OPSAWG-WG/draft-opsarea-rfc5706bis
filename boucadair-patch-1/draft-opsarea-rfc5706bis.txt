@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 7 February 2026                                       A. Farrel
+Expires: 8 February 2026                                       A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 7 February 2026                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           6 August 2025
+                                                           7 August 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -34,7 +34,7 @@ Abstract
    This document obsoletes RFC 5706, replacing it completely and
    updating it with new operational and management techniques and
    mechanisms.  It also introduces a requirement to include an
-   "Operational Considerations" section in new IETF Standard Track RFCs.
+   "Operational Considerations" section in new RFCs in the IETF Stream.
 
 Status of This Memo
 
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 February 2026.
+   This Internet-Draft will expire on 8 February 2026.
 
 Copyright Notice
 
@@ -72,22 +72,20 @@ Table of Contents
    1.  Introduction
      1.1.  This Document
      1.2.  Audience
-     1.3.  Changes Since RFC 5706
-     1.4.  TO DO LIST
    2.  Terminology
    3.  Documentation Requirements for IETF Specifications
      3.1.  "Operational Considerations" Section
-     3.2.  Null "Operational Considerations" Section
-     3.3.  Placement of the Operational Considerations Section
-   4.  Operational Considerations - How Will the New Protocol Fit into
-           the Current Environment?
+     3.2.  "Operational Considerations" Section Boilerplate When No
+           New Considerations Exist
+     3.3.  Placement of the "Operational Considerations" Section
+   4.  How Will the New Protocol Fit into the Current Environment?
      4.1.  Operations
      4.2.  Installation and Initial Setup
      4.3.  Migration Path
      4.4.  Requirements on Other Protocols and Functional Components
      4.5.  Impact on Network Operation
      4.6.  Verifying Correct Operation
-   5.  Management Considerations - How Will the Protocol Be Managed?
+   5.  How Will the Protocol Be Managed?
      5.1.  Available Management Technologies
      5.2.  Interoperability
      5.3.  Management Information
@@ -109,9 +107,11 @@ Table of Contents
      5.8.  Security Management
    6.  Operational and Management Tooling Considerations
    7.  IANA Considerations
-   8.  Operations and Manageability Considerations
+   8.  Operational Considerations
    9.  Security Considerations
    10. Informative References
+   Appendix A.  Changes Since RFC 5706
+     A.1.  TO DO LIST
    Acknowledgements
    Contributors
    Authors' Addresses
@@ -136,17 +136,16 @@ Table of Contents
    This document obsoletes [RFC5706] and fully updates its content with
    new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational Considerations" section
-   in all new Standard Track RFCs.  This document also removes outdated
+   in new RFCs in the IETF Stream.  This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
-   services.  See Section 1.3 for more details.
+   services.  See Appendix A for more details.
 
 1.1.  This Document
 
    This document provides a set of guidelines for considering operations
-   and management in an IETF specification on the Standards Track with
-   an eye toward being flexible while also striving for
-   interoperability.
+   and management in an IETF technical specification with an eye toward
+   being flexible while also striving for interoperability.
 
    Entirely New Protocols may require significant consideration of
    expected operations and management, while Protocol Extensions to
@@ -243,37 +242,6 @@ Table of Contents
    to understand, contribute to, and review Internet-Drafts, taking OPS
    considerations into account.
 
-1.3.  Changes Since RFC 5706
-
-   The following changes have been made to the guidelines published in
-   [RFC5706]:
-
-   *  Change intended status from Informational to Best Current Practice
-
-   *  Move the "Operational Considerations" Appendix A to a Checklist
-      maintained in GitHub
-
-   *  Add a requirement for an "Operational Considerations" section in
-      all new Standard Track RFCs, along with specific guidance on its
-      content.
-
-   *  Update the operational and manageability-related technologies to
-      reflect over 15 years of advancements
-
-      -  Provide focus and details on YANG-based standards,
-         deprioritizing MIB Modules.
-
-      -  Add a "YANG Data Model Considerations" section
-
-      -  Update the "Available Management Technologies" landscape
-
-   *  Add an "Operational and Management Tooling Considerations" section
-
-1.4.  TO DO LIST
-
-   See the list of open issues at https://github.com/IETF-OPSAWG-WG/
-   draft-opsarea-rfc5706bis/issues
-
 2.  Terminology
 
    This document does not describe interoperability requirements.  As
@@ -367,21 +335,20 @@ Table of Contents
 
 3.1.  "Operational Considerations" Section
 
-   All Internet-Drafts that are advanced for publication as Standards
-   Track IETF RFC are required to include an "Operational
-   Considerations" section.  It is recommended that Internet-Drafts
-   advanced for publication as Experimental protocol specifications also
-   include such sections.  "Operational Considerations" sections will
-   also often be appropriate in Internet-Drafts advanced for publication
-   as Informational RFCs, for example, in protocol architecture and
-   protocol requirements documents.
+   All Internet-Drafts that document a technical specification and are
+   advanced for publication as IETF RFCs are required to include an
+   "Operational Considerations" section.  Internet-Drafts that do not
+   document technical specifications such as process, policy, or
+   administrative Internet-Drafts are not required to include such a
+   section.
 
-   After evaluating the operational and manageability aspects of a New
-   Protocol, a Protocol Extension, or an architecture, the resulting
-   practices and requirements should be documented in an "Operational
-   Considerations" section within a specification.  Since protocols are
-   intended for operational deployment and management within real
-   networks, it is expected that such considerations will be present.
+   After evaluating the operational (Section 4) and manageability
+   aspects (Section 5) of a New Protocol, a Protocol Extension, or an
+   architecture, the resulting practices and requirements should be
+   documented in an "Operational Considerations" section within a
+   specification.  Since protocols are intended for operational
+   deployment and management within real networks, it is expected that
+   such considerations will be present.
 
    It is also recommended that operational and manageability
    considerations be addressed early in the protocol design process.
@@ -401,7 +368,8 @@ Table of Contents
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-3.2.  Null "Operational Considerations" Section
+3.2.  "Operational Considerations" Section Boilerplate When No New
+      Considerations Exist
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may
@@ -412,11 +380,13 @@ Table of Contents
    rationale regarding the decisions on manageability of the protocol at
    the time of its design.
 
-   If there are no new manageability or deployment considerations, it is
-   recommended that an "Operations and Manageability Considerations"
-   section contain a simple statement such as, "There are no new
-   operations or manageability requirements introduced by this
-   document," followed by a brief explanation of why that is the case.
+   If there are no new manageability or deployment considerations,
+   "Operations Considerations" section must contain the following simple
+   statement, followed by a brief explanation of why that is the case.
+
+   "There are no new operations or manageability requirements introduced
+     by this document. <-- Insert a brief explanation here.-->"
+
    The presence of such a section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
@@ -425,15 +395,14 @@ Table of Contents
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-3.3.  Placement of the Operational Considerations Section
+3.3.  Placement of the "Operational Considerations" Section
 
    It is recommended that the section be placed immediately before the
    Security Considerations section.  Reviewers interested in such
    sections will find it easily, and this placement could simplify the
    development of tools to detect the presence of such a section.
 
-4.  Operational Considerations - How Will the New Protocol Fit into the
-    Current Environment?
+4.  How Will the New Protocol Fit into the Current Environment?
 
    Designers of a New Protocol should carefully consider the operational
    aspects.  To ensure that a protocol will be practical to deploy in
@@ -650,7 +619,7 @@ Table of Contents
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
-5.  Management Considerations - How Will the Protocol Be Managed?
+5.  How Will the Protocol Be Managed?
 
    The considerations of manageability should start from identifying the
    entities to be managed, as well as how the managed protocol is
@@ -1537,7 +1506,7 @@ Table of Contents
 
    This document does not have any IANA actions required.
 
-8.  Operations and Manageability Considerations
+8.  Operational Considerations
 
    Although this document focuses on operations and manageability
    guidance, it does not define a New Protocol, a Protocol Extension, or
@@ -1546,9 +1515,8 @@ Table of Contents
 
 9.  Security Considerations
 
-   This document is informational and provides guidelines for
-   considering manageability and operations.  It introduces no new
-   security concerns.
+   This document provides guidelines for considering manageability and
+   operations.  It introduces no new security concerns.
 
    The provision of a management portal to a network device provides a
    doorway through which an attack on the device may be launched.
@@ -1646,8 +1614,8 @@ Table of Contents
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
               Key Terms for Network Fault and Problem Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-terminology-
-              19, 18 June 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-nmop-terminology-19>.
+              21, 6 August 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-nmop-terminology-21>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
@@ -1912,6 +1880,37 @@ Table of Contents
               0: Primer Second Edition", W3C REC REC-xmlschema-
               0-20041028, W3C REC-xmlschema-0-20041028, 28 October 2004,
               <https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/>.
+
+Appendix A.  Changes Since RFC 5706
+
+   The following changes have been made to the guidelines published in
+   [RFC5706]:
+
+   *  Change intended status from Informational to Best Current Practice
+
+   *  Move the "Operational Considerations" Appendix A to a Checklist
+      maintained in GitHub
+
+   *  Add a requirement for an "Operational Considerations" section in
+      all new Standard Track RFCs, along with specific guidance on its
+      content.
+
+   *  Update the operational and manageability-related technologies to
+      reflect over 15 years of advancements
+
+      -  Provide focus and details on YANG-based standards,
+         deprioritizing MIB Modules.
+
+      -  Add a "YANG Data Model Considerations" section
+
+      -  Update the "Available Management Technologies" landscape
+
+   *  Add an "Operational and Management Tooling Considerations" section
+
+A.1.  TO DO LIST
+
+   See the list of open issues at https://github.com/IETF-OPSAWG-WG/
+   draft-opsarea-rfc5706bis/issues
 
 Acknowledgements
 
