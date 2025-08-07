@@ -99,7 +99,7 @@ contributor:
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    introduces a requirement to include an "Operational Considerations"
-   section in new IETF Standard Track RFCs.
+   section in new RFCs in the IETF Stream.
 
 --- middle
 
@@ -124,7 +124,7 @@ contributor:
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational Considerations"
-   section in all new Standard Track RFCs.
+   section in new RFCs in the IETF Stream.
    This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
@@ -133,7 +133,7 @@ contributor:
 ##  This Document {#sec-this-doc}
 
    This document provides a set of guidelines for considering
-   operations and management in an IETF specification on the Standards Track
+   operations and management in an IETF technical specification
    with an eye toward being flexible while also striving for
    interoperability.
 
@@ -228,7 +228,7 @@ contributor:
 
    * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
 
-   * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
+   * Add a requirement for an "Operational Considerations" section in new IETF RFCs, along with specific guidance on its content.
 
    * Update the operational and manageability-related technologies to reflect over 15 years of advancements
 
@@ -364,14 +364,10 @@ contributor:
 
 ##  "Operational Considerations" Section {#sec-oper-manag-considerations}
 
-   All Internet-Drafts that are advanced for publication as Standards Track
-   IETF RFC are required to include an "Operational Considerations" section.
-   It is recommended that Internet-Drafts
-   advanced for publication as Experimental protocol specifications also
-   include such sections. "Operational Considerations"
-   sections will also often be appropriate in Internet-Drafts advanced for
-   publication as Informational RFCs, for example, in protocol architecture
-   and protocol requirements documents.
+   All Internet-Drafts that document a technical specification and are advanced for publication
+   as IETF RFCs are required to include an "Operational Considerations" section.
+   Internet-Drafts that do not document technical specifications such as process, policy, or administrative
+   Internet-Drafts are not required to include such a section.
 
    After evaluating the operational and manageability aspects of a New
    Protocol, a Protocol Extension, or an architecture, the resulting practices and
@@ -399,7 +395,7 @@ contributor:
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-##  Null "Operational Considerations" Section {#sec-null-sec}
+##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may determine that no
@@ -410,11 +406,16 @@ contributor:
    regarding the decisions on manageability of the protocol at the
    time of its design.
 
-   If there are no new manageability or deployment considerations, it is
-   recommended that an "Operations and Manageability Considerations" section
-   contain a simple statement such as, "There are no new operations or manageability
-   requirements introduced by this document," followed by a brief explanation of
-   why that is the case. The presence of such a
+   If there are no new manageability or deployment considerations, "Operations Considerations" section
+   must contain the following simple statement, followed by a brief explanation of
+   why that is the case.
+
+~~~~
+  "There are no new operations or manageability requirements introduced
+    by this document. <-- Insert a brief explanation here.-->"
+~~~~
+
+   The presence of such a
    section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
