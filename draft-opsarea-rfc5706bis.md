@@ -261,7 +261,7 @@ This document does not describe interoperability requirements. As such, it does 
       combination of:
 
       1. Operation activities that are undertaken to keep the
-         network. They include monitoring of the network.
+         network running as intended. They include monitoring of the network.
 
       2. Administration activities that keep track of resources in the
          network and how they are used. They include the bookkeeping necessary
