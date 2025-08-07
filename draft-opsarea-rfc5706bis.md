@@ -166,19 +166,12 @@ contributor:
 
 ##  Audience {#sec-audience}
 
-   The purpose of this document is to provide guidance about what to
+   The guidelines are intended to be useful to authors
+   writing protocol specification, providing guidance about what to
    consider when thinking about the management and deployment of a new
-   protocol, and to provide guidance about documenting those
-   considerations. These guidelines are intended to be useful to anyone involved in the document lifecycle:
-   from the authors writing the protocol specification, to those reviewing and evaluating drafts of those
-   specifications, including WG Chairs, WG Advisors, the Document Shepherd, the Responsible Area Director,
-   and the IESG.
-
-   The following guidelines are designed to help
-   Protocol Designers provide a reasonably consistent format for such
-   documentation. Separate manageability and operational considerations
-   sections are desirable in many cases, but their structure and
-   location are a decision that can be made from case to case.
+   protocol, to provide guidance about documenting those
+   considerations, and helping them provide a reasonably
+   consistent format for such documentation.
 
    Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -190,10 +183,10 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
-   This document does not impose a specific management or operational solution, imply that a formal Data
-   Model is needed, or imply that using a specific management protocol
-   is mandatory. If Protocol Designers conclude that the technology can be managed
-   solely by using Proprietary Interfaces or that it does
+   This document does not impose a specific management or operational solution,
+   imply that a formal Data Model is needed, or imply that using a specific management
+   protocol is mandatory. If Protocol Designers conclude that the technology can be
+   managed solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
    but it is a decision that should be explicit in a manageability discussion
    -- that this is how the protocol will need to be operated and managed.
@@ -208,17 +201,12 @@ contributor:
    need to be updated in the future, after further operational
    experience has been gained.
 
-   For the OPS Area Directors and the IESG, this document will help with the evaluation of the
-   content of the new "Operational Considerations" section. As an
-   Area Director who is in the process of creating a new WG Charter, this document lists some considerations
-   of the functionality needed to operate and manage New Protocols and Protocol Extensions.
-
-   The OPS Directorate can use this document to guide performing reviews. A list of guidelines and a
+   The OPS Directorate can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
-   and review Internet-Drafts, taking OPS considerations into account.
+   and review Internet-Drafts, taking operational considerations into account.
 
 
 
