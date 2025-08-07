@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 1 February 2026                                       A. Farrel
+Expires: 8 February 2026                                       A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 1 February 2026                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            31 July 2025
+                                                           7 August 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -34,7 +34,7 @@ Abstract
    This document obsoletes RFC 5706, replacing it completely and
    updating it with new operational and management techniques and
    mechanisms.  It also introduces a requirement to include an
-   "Operational Considerations" section in new IETF Standard Track RFCs.
+   "Operational Considerations" section in new RFCs in the IETF Stream.
 
 Status of This Memo
 
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 February 2026.
+   This Internet-Draft will expire on 8 February 2026.
 
 Copyright Notice
 
@@ -79,7 +79,8 @@ Table of Contents
      2.2.  Available Management Technologies
    3.  Documentation Requirements for IETF Specifications
      3.1.  "Operational Considerations" Section
-     3.2.  Null "Operational Considerations" Section
+     3.2.  "Operational Considerations" Section Boilerplate When No
+           New Considerations Exist
      3.3.  Placement of the Operational Considerations Section
    4.  Operational Considerations - How Will the New Protocol Fit into
            the Current Environment?
@@ -137,7 +138,7 @@ Table of Contents
    This document obsoletes [RFC5706] and fully updates its content with
    new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational Considerations" section
-   in all new Standard Track RFCs.  This document also removes outdated
+   in new RFCs in the IETF Stream.  This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services.  See Section 1.3 for more details.
@@ -145,9 +146,8 @@ Table of Contents
 1.1.  This Document
 
    This document provides a set of guidelines for considering operations
-   and management in an IETF specification on the Standards Track with
-   an eye toward being flexible while also striving for
-   interoperability.
+   and management in an IETF technical specification with an eye toward
+   being flexible while also striving for interoperability.
 
    Entirely New Protocols may require significant consideration of
    expected operations and management, while Protocol Extensions to
@@ -255,8 +255,7 @@ Table of Contents
       maintained in GitHub
 
    *  Add a requirement for an "Operational Considerations" section in
-      all new Standard Track RFCs, along with specific guidance on its
-      content.
+      new IETF RFCs, along with specific guidance on its content.
 
    *  Update the operational and manageability-related technologies to
       reflect over 15 years of advancements
@@ -410,14 +409,12 @@ Table of Contents
 
 3.1.  "Operational Considerations" Section
 
-   All Internet-Drafts that are advanced for publication as Standards
-   Track IETF RFC are required to include an "Operational
-   Considerations" section.  It is recommended that Internet-Drafts
-   advanced for publication as Experimental protocol specifications also
-   include such sections.  "Operational Considerations" sections will
-   also often be appropriate in Internet-Drafts advanced for publication
-   as Informational RFCs, for example, in protocol architecture and
-   protocol requirements documents.
+   All Internet-Drafts that document a technical specification and are
+   advanced for publication as IETF RFCs are required to include an
+   "Operational Considerations" section.  Internet-Drafts that do not
+   document technical specifications such as process, policy, or
+   administrative Internet-Drafts are not required to include such a
+   section.
 
    After evaluating the operational and manageability aspects of a New
    Protocol, a Protocol Extension, or an architecture, the resulting
@@ -444,7 +441,8 @@ Table of Contents
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-3.2.  Null "Operational Considerations" Section
+3.2.  "Operational Considerations" Section Boilerplate When No New
+      Considerations Exist
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may
@@ -455,11 +453,13 @@ Table of Contents
    rationale regarding the decisions on manageability of the protocol at
    the time of its design.
 
-   If there are no new manageability or deployment considerations, it is
-   recommended that an "Operations and Manageability Considerations"
-   section contain a simple statement such as, "There are no new
-   operations or manageability requirements introduced by this
-   document," followed by a brief explanation of why that is the case.
+   If there are no new manageability or deployment considerations,
+   "Operations Considerations" section must contain the following simple
+   statement, followed by a brief explanation of why that is the case.
+
+   "There are no new operations or manageability requirements introduced
+     by this document. <-- Insert a brief explanation here.-->"
+
    The presence of such a section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
@@ -1651,8 +1651,8 @@ Table of Contents
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
               Key Terms for Network Fault and Problem Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-terminology-
-              19, 18 June 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-nmop-terminology-19>.
+              21, 6 August 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-nmop-terminology-21>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
