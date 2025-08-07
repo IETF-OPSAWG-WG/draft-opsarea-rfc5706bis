@@ -220,13 +220,11 @@ contributor:
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking OPS considerations into account.
 
-# Key Concepts, Terminology, and Technological Landscape {#sec-key-concepts}
 
-   This section introduces the key concepts and terminology used throughout the document and provides an overview of the relevant technological landscape. It is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
 
-   This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?BCP14}}.
+#  Terminology {#sec-terms}
 
-##  Terminology {#sec-terms}
+This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?BCP14}}.
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
@@ -304,35 +302,6 @@ contributor:
    *  Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
-
-##  Available Management Technologies {#sec-mgmt-tech}
-
-   The IETF provides several standardized management protocols suitable for various operational purposes, for example as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
-
-   *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
-
-   *  The Syslog Protocol {{?RFC5424}}
-
-   *  Packet Sampling (PSAMP) Protocol Specifications {{?RFC5476}}
-
-   *  Network Configuration Protocol (NETCONF) {{?RFC6241}}
-
-   *  Diameter Base Protocol {{?RFC6733}}
-
-   *  Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information {{?RFC7011}}
-
-   *  BGP Monitoring Protocol (BMP) {{?RFC7854}}
-
-   *  RESTCONF Protocol {{?RFC8040}}
-
-   *  Network Telemetry Framework {{?RFC9232}}
-
-
-   The IETF previously also worked on the Simple Network Management Protocol
-   (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
-   but further use of this management protocol in new IETF documents has been constrained
-   to maintenance of existing MIB modules and development of MIB modules for legacy devices
-   that do not support more resent management protocols {{IESG-STATEMENT}}.
 
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
@@ -699,6 +668,37 @@ contributor:
    the server end of a protocol than the client end, since the
    performance of the server might impact more nodes than the
    performance of a specific client.
+
+##  Available Management Technologies {#sec-mgmt-tech}
+
+   The IETF provides several standardized management protocols suitable for various operational purposes, for example as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
+
+   *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
+
+   *  The Syslog Protocol {{?RFC5424}}
+
+   *  Packet Sampling (PSAMP) Protocol Specifications {{?RFC5476}}
+
+   *  Network Configuration Protocol (NETCONF) {{?RFC6241}}
+
+   *  Diameter Base Protocol {{?RFC6733}}
+
+   *  Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information {{?RFC7011}}
+
+   *  BGP Monitoring Protocol (BMP) {{?RFC7854}}
+
+   *  RESTCONF Protocol {{?RFC8040}}
+
+   *  Network Telemetry Framework {{?RFC9232}}
+
+
+   The IETF previously also worked on the Simple Network Management Protocol
+   (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
+   but further use of this management protocol in new IETF documents has been constrained
+   to maintenance of existing MIB modules and development of MIB modules for legacy devices
+   that do not support more resent management protocols {{IESG-STATEMENT}}.
+
+   This section is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
 
 ##  Interoperability {#sec-interop}
 
