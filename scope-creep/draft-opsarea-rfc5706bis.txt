@@ -3,10 +3,10 @@
 
 
 Network Working Group                                          B. Claise
-Internet-Draft                                                    Huawei
+Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 8 January 2026                                        A. Farrel
+Expires: 8 February 2026                                       A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 8 January 2026                                        A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                             7 July 2025
+                                                           7 August 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 January 2026.
+   This Internet-Draft will expire on 8 February 2026.
 
 Copyright Notice
 
@@ -78,10 +78,9 @@ Table of Contents
      2.1.  Terminology
      2.2.  Available Management Technologies
    3.  Documentation Requirements for IETF Specifications
-     3.1.  Operational Considerations Section
-     3.2.  Null Operations and Manageability Considerations Section
-     3.3.  Placement of Operations and Manageability Considerations
-           Sections
+     3.1.  "Operational Considerations" Section
+     3.2.  Null "Operational Considerations" Section
+     3.3.  Placement of the Operational Considerations Section
    4.  Operational Considerations - How Will the New Protocol Fit into
            the Current Environment?
      4.1.  Operations
@@ -98,7 +97,7 @@ Table of Contents
      5.3.  Fault Management
        5.3.1.  Liveness Detection and Monitoring
        5.3.2.  Fault Determination
-       5.3.3.  Root Cause Analysis
+       5.3.3.  Probable Root Cause Analysis
        5.3.4.  Fault Isolation
      5.4.  Configuration Management
        5.4.1.  Verifying Correct Operation
@@ -182,20 +181,11 @@ Table of Contents
 
 1.2.  Audience
 
-   The purpose of this document is to provide guidance about what to
-   consider when thinking about the management and deployment of a new
-   protocol, and to provide guidance about documenting those
-   considerations.  These guidelines are intended to be useful to anyone
-   involved in the document lifecyle: from the authors writing the
-   protocol specification, to those reviewing and evaluating drafts of
-   those specifications: including WG chairs, WG advisors, the Document
-   Shepherd, the Responsible Area Director, and the IESG.
-
-   The following guidelines are designed to help Protocol Designers
-   provide a reasonably consistent format for such documentation.
-   Separate manageability and operational considerations sections are
-   desirable in many cases, but their structure and location are a
-   decision that can be made from case to case.
+   The guidelines are intended to be useful to authors writing protocol
+   specification, providing guidance about what to consider when
+   thinking about the management and deployment of a new protocol, to
+   provide guidance about documenting those considerations, and helping
+   them provide a reasonably consistent format for such documentation.
 
    Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -208,8 +198,12 @@ Table of Contents
    suggests appropriate standard protocols that could mitigate the
    threats.
 
+   Separate manageability and operational considerations sections are
+   desirable in many cases, but their structure and location are a
+   decision that can be made from case to case.
+
    This document does not impose a specific management or operational
-   solution, imply that a formal data model is needed, or imply that
+   solution, imply that a formal Data Model is needed, or imply that
    using a specific management protocol is mandatory.  If Protocol
    Designers conclude that the technology can be managed solely by using
    Proprietary Interfaces or that it does not need any structured or
@@ -227,13 +221,6 @@ Table of Contents
    that considerations for operations and management may need to be
    updated in the future, after further operational experience has been
    gained.
-
-   For the OPS Area Directors and the IESG, this document will help with
-   the evaluation of the content of the new "Operational Considerations"
-   section.  As an Area Director who is in the process of creating a new
-   WG Charter, this document lists some considerations of the
-   functionality needed to operate and manage New Protocols and Protocol
-   Extensions.
 
    The OPS Directorate can use this document to guide performing
    reviews.  A list of guidelines and a checklist of questions to
@@ -324,7 +311,7 @@ Table of Contents
 
    *  Fault Management: The process of interpreting fault notifications
       and other alerts and alarms, isolating faults, correlating them,
-      and deducing underlying causes.  See Section 5.3 for more
+      and deducing underlying Causes.  See Section 5.3 for more
       information.
 
    *  Information Model: An abstraction and representation of the
@@ -357,6 +344,8 @@ Table of Contents
       subject of this document encompasses OAM, in addition to other
       management and provisioning tools and concepts.
 
+   *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang]
+
    *  Problem: See [I-D.ietf-nmop-terminology].
 
    *  Proprietary Interface: An interface to manage a network element
@@ -370,12 +359,6 @@ Table of Contents
    *  Protocol Designer: An individual, a group of people, or an IETF WG
       involved in the development and specification of New Protocols or
       Protocol Extensions.
-
-   *  Root Cause: Since one Fault may give rise to another Fault or
-      Problem, a root cause Section 5.3.3 is commonly meant to describe
-      the original event that is the foundation of all related Faults.
-
-   *  Symptom: See [I-D.ietf-nmop-terminology].
 
 2.2.  Available Management Technologies
 
@@ -413,7 +396,7 @@ Table of Contents
 
 3.  Documentation Requirements for IETF Specifications
 
-3.1.  Operational Considerations Section
+3.1.  "Operational Considerations" Section
 
    All Internet-Drafts that are advanced for publication as Standards
    Track IETF RFC are required to include an "Operational
@@ -449,7 +432,7 @@ Table of Contents
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-3.2.  Null Operations and Manageability Considerations Section
+3.2.  Null "Operational Considerations" Section
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may
@@ -473,7 +456,7 @@ Table of Contents
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-3.3.  Placement of Operations and Manageability Considerations Sections
+3.3.  Placement of the Operational Considerations Section
 
    It is recommended that the section be placed immediately before the
    Security Considerations section.  Reviewers interested in such
@@ -515,7 +498,7 @@ Table of Contents
 
    There may be a need to support both a human interface (e.g., for
    troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and root cause analysis).  The application programming
+   monitoring and Cause analysis).  The application programming
    interfaces (APIs) and the human interfaces might benefit from being
    similar to ensure that the information exposed by both is consistent
    when presented to an operator.  It is also relevant to identify
@@ -608,7 +591,7 @@ Table of Contents
    Protocol Designers should consider the requirements that the new
    protocol might put on other protocols and functional components and
    should also document the requirements from other protocols and
-   functional elements that have been considered in designing the new
+   functional components that have been considered in designing the new
    protocol.
 
    These considerations should generally remain illustrative to avoid
@@ -626,10 +609,10 @@ Table of Contents
    take it off the fast path!  The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router.  The "router alert" option
-   ([RFC2113], [RFC2711]) was finally developed to solve this Problem
+   ([RFC2113], [RFC2711]) was finally developed to solve this problem,
    for RSVP and other protocols that require the router to take some
-   packets off the fast-forwarding path.  Yet, router alert has its own
-   Problems in impacting router performance.
+   packets off the fast-forwarding path.  Yet, Router Alert has its own
+   problems in impacting router performance.
 
 4.5.  Impact on Network Operation
 
@@ -1133,12 +1116,18 @@ Table of Contents
    are there some "standard" notifications that could be used?  Or can
    relevant counters be polled as needed?
 
-5.3.3.  Root Cause Analysis
+5.3.3.  Probable Root Cause Analysis
 
-   Root cause analysis is about working out where in the network the
-   fault is.  For example, if end-to-end data delivery is failing
-   (reported by a notification), root cause analysis can help find the
-   failed link or node in the end-to-end path.
+   Probable Root Cause analysis is about working out where the
+   foundational Fault or Problem might be.  Since one Fault may give
+   rise to another Fault or Problem, a probable root cause is commonly
+   meant to describe the original, source event or combination of
+   circumstances that is the foundation of all related Faults.
+
+   For example, if end-to-end data delivery is failing (e.g., reported
+   by a notification), Probable Root Cause analysis can help find the
+   failed link or node, or mis-configuration, within the end-to-end
+   path.
 
 5.3.4.  Fault Isolation
 
@@ -1201,7 +1190,7 @@ Table of Contents
    consider it desirable to extract, document, and standardize the
    common parts of these network- wide configuration database schemas.
    A Protocol Designer should consider how to standardize the common
-   parts of configuring the new protocol, while recognizing that vendors
+   parts of configuring the New Protocol, while recognizing that vendors
    may also have proprietary aspects of their configurations.
 
    It is important to enable operators to concentrate on the
@@ -1638,12 +1627,20 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
               rfc8407bis-28>.
 
+   [I-D.ietf-nmop-network-incident-yang]
+              Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
+              "A YANG Data Model for Network Incident Management", Work
+              in Progress, Internet-Draft, draft-ietf-nmop-network-
+              incident-yang-05, 6 July 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
+              network-incident-yang-05>.
+
    [I-D.ietf-nmop-terminology]
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
               Key Terms for Network Fault and Problem Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-terminology-
-              19, 18 June 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-nmop-terminology-19>.
+              21, 6 August 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-nmop-terminology-21>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
@@ -1668,9 +1665,9 @@ Table of Contents
    [NEMOPS]   Hardaker, W. and D. Dhody, "Report from the IAB Workshop
               on the Next Era of Network Management Operations
               (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
-              nemops-workshop-report-02, 19 May 2025,
+              nemops-workshop-report-03, 21 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
-              workshop-report-02>.
+              workshop-report-03>.
 
    [NEMOPS-WORKSHOP]
               IAB, "IAB workshop on the Next Era of Network Management
@@ -1951,8 +1948,8 @@ Contributors
 Authors' Addresses
 
    Benoit Claise
-   Huawei
-   Email: benoit.claise@huawei.com
+   Everything OPS
+   Email: benoit@everything-ops.net
 
 
    Joe Clarke
