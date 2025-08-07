@@ -79,16 +79,15 @@ Table of Contents
      3.1.  "Operational Considerations" Section
      3.2.  "Operational Considerations" Section Boilerplate When No
            New Considerations Exist
-     3.3.  Placement of the Operational Considerations Section
-   4.  Operational Considerations - How Will the New Protocol Fit into
-           the Current Environment?
+     3.3.  Placement of the "Operational Considerations" Section
+   4.  How Will the New Protocol Fit into the Current Environment?
      4.1.  Operations
      4.2.  Installation and Initial Setup
      4.3.  Migration Path
      4.4.  Requirements on Other Protocols and Functional Components
      4.5.  Impact on Network Operation
      4.6.  Verifying Correct Operation
-   5.  Management Considerations - How Will the Protocol Be Managed?
+   5.  How Will the Protocol Be Managed?
      5.1.  Interoperability
      5.2.  Management Information
        5.2.1.  Information Model Design
@@ -109,7 +108,7 @@ Table of Contents
      5.7.  Security Management
    6.  Operational and Management Tooling Considerations
    7.  IANA Considerations
-   8.  Operations and Manageability Considerations
+   8.  Operational Considerations
    9.  Security Considerations
    10. Informative References
    Appendix A.  Changes Since RFC 5706
@@ -386,12 +385,13 @@ Table of Contents
    administrative Internet-Drafts are not required to include such a
    section.
 
-   After evaluating the operational and manageability aspects of a New
-   Protocol, a Protocol Extension, or an architecture, the resulting
-   practices and requirements should be documented in an "Operational
-   Considerations" section within a specification.  Since protocols are
-   intended for operational deployment and management within real
-   networks, it is expected that such considerations will be present.
+   After evaluating the operational (Section 4) and manageability
+   aspects (Section 5) of a New Protocol, a Protocol Extension, or an
+   architecture, the resulting practices and requirements should be
+   documented in an "Operational Considerations" section within a
+   specification.  Since protocols are intended for operational
+   deployment and management within real networks, it is expected that
+   such considerations will be present.
 
    It is also recommended that operational and manageability
    considerations be addressed early in the protocol design process.
@@ -438,15 +438,14 @@ Table of Contents
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-3.3.  Placement of the Operational Considerations Section
+3.3.  Placement of the "Operational Considerations" Section
 
    It is recommended that the section be placed immediately before the
    Security Considerations section.  Reviewers interested in such
    sections will find it easily, and this placement could simplify the
    development of tools to detect the presence of such a section.
 
-4.  Operational Considerations - How Will the New Protocol Fit into the
-    Current Environment?
+4.  How Will the New Protocol Fit into the Current Environment?
 
    Designers of a New Protocol should carefully consider the operational
    aspects.  To ensure that a protocol will be practical to deploy in
@@ -663,7 +662,7 @@ Table of Contents
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
-5.  Management Considerations - How Will the Protocol Be Managed?
+5.  How Will the Protocol Be Managed?
 
    The considerations of manageability should start from identifying the
    entities to be managed, as well as how the managed protocol is
@@ -1512,7 +1511,7 @@ Table of Contents
 
    This document does not have any IANA actions required.
 
-8.  Operations and Manageability Considerations
+8.  Operational Considerations
 
    Although this document focuses on operations and manageability
    guidance, it does not define a New Protocol, a Protocol Extension, or
@@ -1521,9 +1520,8 @@ Table of Contents
 
 9.  Security Considerations
 
-   This document is informational and provides guidelines for
-   considering manageability and operations.  It introduces no new
-   security concerns.
+   This document provides guidelines for considering manageability and
+   operations.  It introduces no new security concerns.
 
    The provision of a management portal to a network device provides a
    doorway through which an attack on the device may be launched.
