@@ -72,9 +72,7 @@ Table of Contents
    1.  Introduction
      1.1.  This Document
      1.2.  Audience
-   2.  Key Concepts, Terminology, and Technological Landscape
-     2.1.  Terminology
-     2.2.  Available Management Technologies
+   2.  Terminology
    3.  Documentation Requirements for IETF Specifications
      3.1.  "Operational Considerations" Section
      3.2.  "Operational Considerations" Section Boilerplate When No
@@ -88,24 +86,25 @@ Table of Contents
      4.5.  Impact on Network Operation
      4.6.  Verifying Correct Operation
    5.  How Will the Protocol Be Managed?
-     5.1.  Interoperability
-     5.2.  Management Information
-       5.2.1.  Information Model Design
-       5.2.2.  YANG Data Model Considerations
-     5.3.  Fault Management
-       5.3.1.  Liveness Detection and Monitoring
-       5.3.2.  Fault Determination
-       5.3.3.  Probable Root Cause Analysis
-       5.3.4.  Fault Isolation
-     5.4.  Configuration Management
-       5.4.1.  Verifying Correct Operation
-     5.5.  Accounting Management
-     5.6.  Performance Management
-       5.6.1.  Monitoring the Protocol
-       5.6.2.  Monitoring the Device
-       5.6.3.  Monitoring the Network
-       5.6.4.  Monitoring the Service
-     5.7.  Security Management
+     5.1.  Available Management Technologies
+     5.2.  Interoperability
+     5.3.  Management Information
+       5.3.1.  Information Model Design
+       5.3.2.  YANG Data Model Considerations
+     5.4.  Fault Management
+       5.4.1.  Liveness Detection and Monitoring
+       5.4.2.  Fault Determination
+       5.4.3.  Probable Root Cause Analysis
+       5.4.4.  Fault Isolation
+     5.5.  Configuration Management
+       5.5.1.  Verifying Correct Operation
+     5.6.  Accounting Management
+     5.7.  Performance Management
+       5.7.1.  Monitoring the Protocol
+       5.7.2.  Monitoring the Device
+       5.7.3.  Monitoring the Network
+       5.7.4.  Monitoring the Service
+     5.8.  Security Management
    6.  Operational and Management Tooling Considerations
    7.  IANA Considerations
    8.  Operational Considerations
@@ -243,18 +242,10 @@ Table of Contents
    to understand, contribute to, and review Internet-Drafts, taking OPS
    considerations into account.
 
-2.  Key Concepts, Terminology, and Technological Landscape
-
-   This section introduces the key concepts and terminology used
-   throughout the document and provides an overview of the relevant
-   technological landscape.  It is not intended to offer in-depth
-   definitions or explanations; readers seeking more detail should
-   consult the referenced materials.
+2.  Terminology
 
    This document does not describe interoperability requirements.  As
    such, it does not use the capitalized keywords defined in [BCP14].
-
-2.1.  Terminology
 
    This section defines key terms used throughout the document to ensure
    clarity and consistency.  Some terms are drawn from existing RFCs and
@@ -285,20 +276,20 @@ Table of Contents
       state (operations on values).  A Data Model may be derived by
       mapping the contents of an Information Model or may be developed
       ab initio.  Further discussion of Data Models can be found in
-      [RFC3444], Section 5.1, and Section 5.2.
+      [RFC3444], Section 5.2, and Section 5.3.
 
    *  Fault: See [I-D.ietf-nmop-terminology].
 
    *  Fault Management: The process of interpreting fault notifications
       and other alerts and alarms, isolating faults, correlating them,
-      and deducing underlying Causes.  See Section 5.3 for more
+      and deducing underlying Causes.  See Section 5.4 for more
       information.
 
    *  Information Model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other.  The
       model is independent of any specific software usage, protocol, or
-      platform [RFC3444].  See Sections 5.1 and 5.2.1 for further
+      platform [RFC3444].  See Sections 5.2 and 5.3.1 for further
       discussion of Information Models.
 
    *  New Protocol and Protocol Extension: These terms are used in this
@@ -339,40 +330,6 @@ Table of Contents
    *  Protocol Designer: An individual, a group of people, or an IETF WG
       involved in the development and specification of New Protocols or
       Protocol Extensions.
-
-2.2.  Available Management Technologies
-
-   The IETF provides several standardized management protocols suitable
-   for various operational purposes, for example as outlined in
-   [RFC6632].  Broadly, these include core network management protocols,
-   purpose-specific management protocols, and network management Data
-   Models.  A non-exhaustive list of such protocols is provided below:
-
-   *  Remote Authentication Dial In User Service (RADIUS) [RFC2865]
-
-   *  The Syslog Protocol [RFC5424]
-
-   *  Packet Sampling (PSAMP) Protocol Specifications [RFC5476]
-
-   *  Network Configuration Protocol (NETCONF) [RFC6241]
-
-   *  Diameter Base Protocol [RFC6733]
-
-   *  Specification of the IP Flow Information Export (IPFIX) Protocol
-      for the Exchange of Flow Information [RFC7011]
-
-   *  BGP Monitoring Protocol (BMP) [RFC7854]
-
-   *  RESTCONF Protocol [RFC8040]
-
-   *  Network Telemetry Framework [RFC9232]
-
-   The IETF previously also worked on the Simple Network Management
-   Protocol (SNMP) [RFC3410] and the Structure of Management Information
-   (SMI) [STD58], but further use of this management protocol in new
-   IETF documents has been constrained to maintenance of existing MIB
-   modules and development of MIB modules for legacy devices that do not
-   support more resent management protocols [IESG-STATEMENT].
 
 3.  Documentation Requirements for IETF Specifications
 
@@ -742,7 +699,45 @@ Table of Contents
    performance of the server might impact more nodes than the
    performance of a specific client.
 
-5.1.  Interoperability
+5.1.  Available Management Technologies
+
+   The IETF provides several standardized management protocols suitable
+   for various operational purposes, for example as outlined in
+   [RFC6632].  Broadly, these include core network management protocols,
+   purpose-specific management protocols, and network management Data
+   Models.  A non-exhaustive list of such protocols is provided below:
+
+   *  Remote Authentication Dial In User Service (RADIUS) [RFC2865]
+
+   *  The Syslog Protocol [RFC5424]
+
+   *  Packet Sampling (PSAMP) Protocol Specifications [RFC5476]
+
+   *  Network Configuration Protocol (NETCONF) [RFC6241]
+
+   *  Diameter Base Protocol [RFC6733]
+
+   *  Specification of the IP Flow Information Export (IPFIX) Protocol
+      for the Exchange of Flow Information [RFC7011]
+
+   *  BGP Monitoring Protocol (BMP) [RFC7854]
+
+   *  RESTCONF Protocol [RFC8040]
+
+   *  Network Telemetry Framework [RFC9232]
+
+   The IETF previously also worked on the Simple Network Management
+   Protocol (SNMP) [RFC3410] and the Structure of Management Information
+   (SMI) [STD58], but further use of this management protocol in new
+   IETF documents has been constrained to maintenance of existing MIB
+   modules and development of MIB modules for legacy devices that do not
+   support more resent management protocols [IESG-STATEMENT].
+
+   This section is not intended to offer in-depth definitions or
+   explanations; readers seeking more detail should consult the
+   referenced materials.
+
+5.2.  Interoperability
 
    Just as when deploying protocols that will inter-connect devices,
    management interoperability should be considered -- whether across
@@ -881,7 +876,7 @@ Table of Contents
    Manageability considerations should include discussion of which level
    of compliance is expected to be supported for interoperability.
 
-5.2.  Management Information
+5.3.  Management Information
 
    Languages used to describe an Information Model can influence the
    nature of the model.  Using a particular data modeling language, such
@@ -937,7 +932,7 @@ Table of Contents
    between objects have an impact on fate sharing?  YANG's relationships
    and constraints can help express and enforce these relationships.
 
-5.2.1.  Information Model Design
+5.3.1.  Information Model Design
 
    This document recommends keeping the Information Model as simple as
    possible by applying the following criteria:
@@ -971,7 +966,7 @@ Table of Contents
        Diagrams [RFC8340] to provide a simple, standardized, and
        implementation-neutral model structure.
 
-5.2.2.  YANG Data Model Considerations
+5.3.2.  YANG Data Model Considerations
 
    When considering YANG Data Models for a new specification, there are
    multiple types of Data Models that may be applicable.  The hierarchy
@@ -1028,7 +1023,7 @@ Table of Contents
    Specific guidelines to consider when authoring any type of YANG
    modules are described in [I-D.ietf-netmod-rfc8407bis].
 
-5.3.  Fault Management
+5.4.  Fault Management
 
    The Protocol Designer should document the basic Faults and health
    indicators that need to be instrumented for the New Protocol or
@@ -1056,7 +1051,7 @@ Table of Contents
    the event information within a given (high) margin of confidence?
    Can we poll the latest events in the box?
 
-5.3.1.  Liveness Detection and Monitoring
+5.4.1.  Liveness Detection and Monitoring
 
    Protocol Designers should always build in basic testing features
    (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
@@ -1076,7 +1071,7 @@ Table of Contents
    through management applications or at least to record the fact in an
    event log.
 
-5.3.2.  Fault Determination
+5.4.2.  Fault Determination
 
    It can be helpful to describe how Faults can be pinpointed using
    management information.  For example, counters might record instances
@@ -1097,7 +1092,7 @@ Table of Contents
    are there some "standard" notifications that could be used?  Or can
    relevant counters be polled as needed?
 
-5.3.3.  Probable Root Cause Analysis
+5.4.3.  Probable Root Cause Analysis
 
    Probable Root Cause analysis is about working out where the
    foundational Fault or Problem might be.  Since one Fault may give
@@ -1110,7 +1105,7 @@ Table of Contents
    failed link or node, or mis-configuration, within the end-to-end
    path.
 
-5.3.4.  Fault Isolation
+5.4.4.  Fault Isolation
 
    It might be useful to isolate or quarantine Faults, such as isolating
    a device that emits malformed messages that are necessary to
@@ -1118,7 +1113,7 @@ Table of Contents
    configuring next-hop devices to drop the faulty messages to prevent
    them from entering the rest of the network.
 
-5.4.  Configuration Management
+5.5.  Configuration Management
 
    A Protocol Designer should document the basic configuration
    parameters that need to be instrumented for a New Protocol or
@@ -1207,7 +1202,7 @@ Table of Contents
    should have default values suggested in the protocol specification
    and may not need to be otherwise configurable.
 
-5.4.1.  Verifying Correct Operation
+5.5.1.  Verifying Correct Operation
 
    An important function that should be provided is guidance on how to
    verify the correct operation of a protocol.  A Protocol Designer
@@ -1223,7 +1218,7 @@ Table of Contents
    each network element.  This may be achieved through status and
    statistical information gathered from devices.
 
-5.5.  Accounting Management
+5.6.  Accounting Management
 
    A Protocol Designer should consider whether it would be appropriate
    to collect usage information related to this protocol and, if so,
@@ -1237,7 +1232,7 @@ Table of Contents
    designing a protocol whose usage might need to be monitored or when
    recommending a protocol to do usage accounting.
 
-5.6.  Performance Management
+5.7.  Performance Management
 
    From a manageability point of view, it is important to determine how
    well a network deploying the protocol or technology defined in the
@@ -1278,7 +1273,7 @@ Table of Contents
    protocol / service activation on the device), network monitoring, and
    service monitoring (the impact of service activation on the network).
 
-5.6.1.  Monitoring the Protocol
+5.7.1.  Monitoring the Protocol
 
    Certain properties of protocols are useful to monitor.  The number of
    protocol packets received, the number of packets sent, and the number
@@ -1317,7 +1312,7 @@ Table of Contents
    Therefore, a YANG "vlan-id" definition representing the 12-bit VLAN
    ID used in the VLAN Tag header uses a range of "1..4094".
 
-5.6.2.  Monitoring the Device
+5.7.2.  Monitoring the Device
 
    Consider whether device performance will be affected by the number of
    protocol entities being instantiated on the device.  Designers of an
@@ -1333,7 +1328,7 @@ Table of Contents
    number of instances, and the expected behavior when the current
    instances exceed the capacity of the device.
 
-5.6.3.  Monitoring the Network
+5.7.3.  Monitoring the Network
 
    Consider whether network performance will be affected by the number
    of protocol entities being deployed.
@@ -1348,7 +1343,7 @@ Table of Contents
    the protocol?  Is it important to measure setup times, end-to-end
    connectivity, hop-by-hop connectivity, or network throughput?
 
-5.6.4.  Monitoring the Service
+5.7.4.  Monitoring the Service
 
    What are the principal performance factors that need to be considered
    when measuring the performance of a service using the protocol?  Is
@@ -1356,7 +1351,7 @@ Table of Contents
    server associations, end-to-end application quality, service
    interruptions, or user experience (UX)?
 
-5.7.  Security Management
+5.8.  Security Management
 
    Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the New Protocol or Protocol
@@ -1545,7 +1540,7 @@ Table of Contents
    concerted attack might be able to be mounted by causing an excess of
    these events.  In other words, the security-management mechanisms
    could constitute a security vulnerability.  The management of
-   security aspects is important (see Section 5.7).
+   security aspects is important (see Section 5.8).
 
 10.  Informative References
 
