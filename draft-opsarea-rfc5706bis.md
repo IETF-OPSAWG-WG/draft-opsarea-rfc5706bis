@@ -99,7 +99,7 @@ contributor:
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    introduces a requirement to include an "Operational Considerations"
-   section in new IETF Standard Track RFCs.
+   section in new RFCs in the IETF Stream.
 
 --- middle
 
@@ -124,7 +124,7 @@ contributor:
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational Considerations"
-   section in all new Standard Track RFCs.
+   section in new RFCs in the IETF Stream.
    This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
@@ -133,7 +133,7 @@ contributor:
 ##  This Document {#sec-this-doc}
 
    This document provides a set of guidelines for considering
-   operations and management in an IETF specification on the Standards Track
+   operations and management in an IETF technical specification
    with an eye toward being flexible while also striving for
    interoperability.
 
@@ -220,30 +220,6 @@ contributor:
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking OPS considerations into account.
 
-## Changes Since RFC 5706 {#sec-changes-since-5706}
-
-   The following changes have been made to the guidelines published in  {{?RFC5706}}:
-
-   * Change intended status from Informational to Best Current Practice
-
-   * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
-
-   * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
-
-   * Update the operational and manageability-related technologies to reflect over 15 years of advancements
-
-      * Provide focus and details on YANG-based standards, deprioritizing MIB Modules.
-
-      * Add a "YANG Data Model Considerations" section
-
-      * Update the "Available Management Technologies" landscape
-
-   * Add an "Operational and Management Tooling Considerations" section
-
-
-##  TO DO LIST {#sec-todo}
-
-   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 
 #  Terminology {#sec-terms}
@@ -331,16 +307,12 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  "Operational Considerations" Section {#sec-oper-manag-considerations}
 
-   All Internet-Drafts that are advanced for publication as Standards Track
-   IETF RFC are required to include an "Operational Considerations" section.
-   It is recommended that Internet-Drafts
-   advanced for publication as Experimental protocol specifications also
-   include such sections. "Operational Considerations"
-   sections will also often be appropriate in Internet-Drafts advanced for
-   publication as Informational RFCs, for example, in protocol architecture
-   and protocol requirements documents.
+   All Internet-Drafts that document a technical specification and are advanced for publication
+   as IETF RFCs are required to include an "Operational Considerations" section.
+   Internet-Drafts that do not document technical specifications such as process, policy, or administrative
+   Internet-Drafts are not required to include such a section.
 
-   After evaluating the operational and manageability aspects of a New
+   After evaluating the operational ({{sec-oper-consid}}) and manageability aspects ({{sec-mgmt-consid}}) of a New
    Protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
    in an "Operational Considerations" section within a
@@ -366,7 +338,7 @@ This document does not describe interoperability requirements. As such, it does 
    should consider how using existing protocols and Data Models might
    impact network operations.
 
-##  Null "Operational Considerations" Section {#sec-null-sec}
+##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may determine that no
@@ -377,11 +349,16 @@ This document does not describe interoperability requirements. As such, it does 
    regarding the decisions on manageability of the protocol at the
    time of its design.
 
-   If there are no new manageability or deployment considerations, it is
-   recommended that an "Operations and Manageability Considerations" section
-   contain a simple statement such as, "There are no new operations or manageability
-   requirements introduced by this document," followed by a brief explanation of
-   why that is the case. The presence of such a
+   If there are no new manageability or deployment considerations, "Operations Considerations" section
+   must contain the following simple statement, followed by a brief explanation of
+   why that is the case.
+
+~~~~
+  "There are no new operations or manageability requirements introduced
+    by this document. <-- Insert a brief explanation here.-->"
+~~~~
+
+   The presence of such a
    section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
@@ -390,7 +367,7 @@ This document does not describe interoperability requirements. As such, it does 
    considerations, it is helpful to reference the considerations section
    in the base document.
 
-##  Placement of the Operational Considerations Section {#sec-placement-sec}
+##  Placement of the "Operational Considerations" Section {#sec-placement-sec}
 
    It is recommended that the section be
    placed immediately before the Security Considerations section.
@@ -398,7 +375,7 @@ This document does not describe interoperability requirements. As such, it does 
    placement could simplify the development of tools to detect the
    presence of such a section.
 
-# Operational Considerations - How Will the New Protocol Fit into the Current Environment? {#sec-oper-consid}
+# How Will the New Protocol Fit into the Current Environment? {#sec-oper-consid}
 
    Designers of a New Protocol should carefully consider the operational
    aspects. To ensure that a protocol will be practical to deploy in
@@ -612,7 +589,7 @@ This document does not describe interoperability requirements. As such, it does 
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
-# Management Considerations - How Will the Protocol Be Managed? {#sec-mgmt-consid}
+#  How Will the Protocol Be Managed? {#sec-mgmt-consid}
 
    The considerations of manageability should start from identifying the
    entities to be managed, as well as how the managed protocol is
@@ -1456,13 +1433,13 @@ DM         DM        DM     --> concrete/detailed model
 
    This document does not have any IANA actions required.
 
-# Operations and Manageability Considerations {#sec-oper-mgmt-consid}
+# Operational Considerations {#sec-oper-mgmt-consid}
 
    Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
 
 #  Security Considerations {#sec-security}
 
-   This document is informational and provides guidelines for
+   This document provides guidelines for
    considering manageability and operations. It introduces no new
    security concerns.
 
@@ -1492,6 +1469,30 @@ DM         DM        DM     --> concrete/detailed model
 
 --- back
 
+## Changes Since RFC 5706 {#sec-changes-since-5706}
+
+   The following changes have been made to the guidelines published in  {{?RFC5706}}:
+
+   * Change intended status from Informational to Best Current Practice
+
+   * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
+
+   * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
+
+   * Update the operational and manageability-related technologies to reflect over 15 years of advancements
+
+      * Provide focus and details on YANG-based standards, deprioritizing MIB Modules.
+
+      * Add a "YANG Data Model Considerations" section
+
+      * Update the "Available Management Technologies" landscape
+
+   * Add an "Operational and Management Tooling Considerations" section
+
+
+##  TO DO LIST {#sec-todo}
+
+   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 #  Acknowledgements {#sec-ack}
 {:numbered="false"}
