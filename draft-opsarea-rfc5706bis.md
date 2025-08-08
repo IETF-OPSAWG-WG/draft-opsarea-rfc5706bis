@@ -236,8 +236,8 @@ This document does not describe interoperability requirements. As such, it does 
       integrity rules that define the legal states (set of values) or changes of
       state (operations on values). A Data Model may be derived by mapping the
       contents of an Information Model or may be developed ab initio. Further
-      discussion of Data Models can be found in {{?RFC3444}}, {{sec-interop}},
-      and {{sec-mgmt-info}}.
+      discussion of Data Models can be found in {{?RFC3444}} and Sections {{<sec-interop}},
+      and {{<sec-mgmt-info}} of this document.
 
    *  Fault: See {{?I-D.ietf-nmop-terminology}}.
 
