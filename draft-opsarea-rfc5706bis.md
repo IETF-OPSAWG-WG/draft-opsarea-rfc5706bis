@@ -1353,6 +1353,10 @@ DM         DM        DM     --> concrete/detailed model
    Protocol Designers should consider both data-oriented and task-
    oriented authority levels and policy.
 
+   Protocol specifications should consider cryptographic agility, where appropriate, so that network operators are able to fulfil the appropriate security requirements. With the requirement for operators to introduce Post-Quantum Cryptography (PQC), considerations should be given to ease migration, for example considering Maximum Transmission Unit (MTU) and field sizes when designing a New Protocol. Similarly, considering support for algorithm negotiation, and the ability to register new algorithms without changing the protocol would help network operators manage changing security requirements following deployment of a New Protocol. 
+
+   In addition, Protocol Designers should consider how to manage shared secret information that their New Protocol relies upon. For example, specifications that use Pre-Shared Keys (PSKs) should include operational considerations regarding the management of such keys to guide network operators on the handling, sharing, provisioning and configuration of security criticial artefacts. 
+
 # Operational and Management Tooling Considerations {#sec-oper-mgmt-tooling}
 
    The operational community's ability to effectively adopt and
