@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-07T00:55:38.201958+00:00",
+  "timestamp": "2025-08-10T00:58:12.028598+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -67,6 +67,11 @@
       "name": "Need_Split_Individual_Issues",
       "description": "",
       "color": "828776"
+    },
+    {
+      "name": "external-input-solicited",
+      "description": "",
+      "color": "ec1378"
     }
   ],
   "issues": [
@@ -394,12 +399,13 @@
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
+        "bclaise",
         "graf3net"
       ],
       "labels": [],
       "body": "Because this documents was produced in 2009, it missed some new OPS-related technologies (protocols and data models): BMP, Alt Mark, NETCONF/RESTCONF, YANG",
       "createdAt": "2025-04-09T12:51:05Z",
-      "updatedAt": "2025-07-03T13:40:40Z",
+      "updatedAt": "2025-08-07T14:01:31Z",
       "closedAt": null,
       "comments": [
         {
@@ -436,6 +442,20 @@
           "body": "See #89 for a suggestion on YANG with respect to SMI being mentioned.  Also, s/resent/recent/ in that section if the text remains.",
           "createdAt": "2025-07-03T13:40:40Z",
           "updatedAt": "2025-07-03T13:40:40Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Conclusion from the call on August 7th:\n- mixed of protocol, data model, and framework (telemetry). Clean up the list and/or the text introducing it.",
+          "createdAt": "2025-08-07T13:25:04Z",
+          "updatedAt": "2025-08-07T13:25:04Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Next step: Benoit to investigate, what about removing this section?",
+          "createdAt": "2025-08-07T14:01:31Z",
+          "updatedAt": "2025-08-07T14:01:31Z"
         }
       ]
     },
@@ -961,15 +981,15 @@
       "id": "I_kwDOOWPBqs63yi55",
       "title": "Discuss the Madrid presentations.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/49",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-05-22T13:55:54Z",
-      "updatedAt": "2025-06-15T14:56:11Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-07T12:41:44Z",
+      "closedAt": "2025-08-07T12:41:44Z",
       "comments": [
         {
           "author": "bclaise",
@@ -1112,13 +1132,15 @@
       "state": "OPEN",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "Ranchen666"
+      ],
       "labels": [
         "documentation"
       ],
       "body": "* IETF LC: https://mailarchive.ietf.org/arch/msg/opsawg/9VJ_hfUsM8tsFuAyHsw1zF8GH3c/\n* A summary provided: https://mailarchive.ietf.org/arch/msg/opsawg/1LwH_p2EsJ5NdZ7Q0-AgXQBaSEg/\n\n@bclaise, the new section about audience and intended use may clarify some of these concerns. \n\n",
       "createdAt": "2025-06-08T07:42:34Z",
-      "updatedAt": "2025-06-08T07:42:34Z",
+      "updatedAt": "2025-08-08T09:34:23Z",
       "closedAt": null,
       "comments": []
     },
@@ -1223,10 +1245,12 @@
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "external-input-solicited"
+      ],
       "body": "Email thread to the pm-dir@ietf.org:\n\nHi Perfmetrdir colleagues,\n\nAre there specific performance-related OPS considerations that you think are useful to include in the guidelines? Maybe consider an advice to look at RFC 6390 and RFC 8911 for better interop?\n\nThank you.\n\nCheers,\n\nMed",
       "createdAt": "2025-06-13T10:33:08Z",
-      "updatedAt": "2025-06-13T10:33:08Z",
+      "updatedAt": "2025-08-07T13:50:08Z",
       "closedAt": null,
       "comments": []
     },
@@ -1418,15 +1442,15 @@
       "id": "I_kwDOOWPBqs6-q_c4",
       "title": "Still not happy with the definition of \"Root Cause\"",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/88",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "We have:\n\n>    *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\n>        to describe the original event that is the foundation of all related Faults.\n\nMy problem is that sometimes (often?) it is the combination of events that causes a fault. There may be a straw that breaks the camel's back, but it is hard to call that the root cause. So, how to phrase this?\n\nHow about...\n\n>   *  Root Cause: Since one Fault may give rise to another Fault or Problem, a root cause {{sec-root-cause-analysis}} is commonly meant\n>      to describe the original event or combination of circumstances that is the foundation of all related Faults.\n",
       "createdAt": "2025-07-03T10:47:53Z",
-      "updatedAt": "2025-07-31T13:37:58Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-07T13:39:56Z",
+      "closedAt": "2025-08-07T13:39:56Z",
       "comments": [
         {
           "author": "bclaise",
@@ -1476,6 +1500,13 @@
           "body": "@AdrianFarrel , during the July 31st 2025, we accepted #70 . Hope you are happy with that.",
           "createdAt": "2025-07-31T13:37:58Z",
           "updatedAt": "2025-07-31T13:37:58Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I am as happy as I ever get",
+          "createdAt": "2025-08-07T13:10:01Z",
+          "updatedAt": "2025-08-07T13:10:01Z"
         }
       ]
     },
@@ -1535,11 +1566,15 @@
       "state": "OPEN",
       "author": "Ranchen666",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
-      "labels": [],
+      "assignees": [
+        "Ranchen666"
+      ],
+      "labels": [
+        "nits"
+      ],
       "body": "The draft uses the terms **Protocol Designer** and **Protocol Designers** interchangeably. Is it recommended that they be uniformly changed to Protocol Designers?\nIn addition,  Protocol Designer  is singular, but \"they\" is used  later in draft, Please see below:\nsection3.2\nAfter **a Protocol Designe**r has considered the manageability requirements of a New Protocol or Protocol Extension, **they** may determine that no management functionality or operational best-practice clarifications are needed.  \n\n\n",
       "createdAt": "2025-07-04T10:12:45Z",
-      "updatedAt": "2025-07-04T10:12:45Z",
+      "updatedAt": "2025-08-07T13:51:19Z",
       "closedAt": null,
       "comments": []
     },
@@ -1551,22 +1586,32 @@
       "state": "OPEN",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "xorrkaz",
+        "sbarguil"
+      ],
       "labels": [
         "external_review",
         "Need_Split_Individual_Issues"
       ],
       "body": "at: https://mailarchive.ietf.org/arch/msg/opsawg/cq0sk1Avb4FCOm3iOKD5wij69es/\n\n> Hi Benoit, authors,\n> \n> I have given a review to RFC5706-bis, which provides guidlines on writing \"Considering Operations and Management\" in future IETF drafts, I think this effort will make the IETF output to be more aligned with the operational requirements of operators, therefore it is very valuable. I also have the following comments for your consideration,\n> \n> \n> 1) In Section 2.1, there is   \"Operation activities that are undertaken to keep the network.\"\n> \n> It seems that this sentence is incomplete, can it be changed to the following or something like that?\n>   \"Operation activities that are undertaken to keep the network run normally.\"\n> \n> 2) Section 2.2 mentions Radius as a management technology, Based on RFC2865  \"Radius is a protocol for carrying authentication,  authorization, and configuration information between a Network Access\u201d\n>  \n> However, I think the  term of \"management\" in this document is mainly about how to manage \u201cNew Protocols or Protocol Extensions\uff0cI don't think Radius belongs to this categoy,  so it is not related to the subject of this document. \n> \n> 3) In section 3.2,  there is \"There are no new operations or manageability requirements introduced by this document,\"\n> \n> Since RFC5706-bis mainly deals the mangement and operation issus of new standard, instead of new draft , so it is possible to be changed to the following?\n> \"There are no specific operations or manageability requirements introduced by this protocol (or protocol extension),\"\n> \n> 4) In Section 5, there is  \n> \"The management model should take into account factors such as: What type of management entities will be involved (agents, network management systems)?\"\n> \n> I propose to add \"network Controller\" to the list, so the setence is change to \"The management model should take into account factors such as: What type of management entities will be involved (agents, network controller, network management systems)?\"\n> \n> 5) Section 5.3 is about fault management, \n> \n> With the increasing number of protocols in the network, operators are particularly concerned about the stability and impact of new protocols (including extensions of existing protocols). They are concerned about whether issuing protocol configuration instructions will have an impact on the normal operation of the network. The impact of different protocols on network stability and security varies during deployment. Improper configuration of one instruction may lead to widespread network failures and even serious losses. Therefore, it is recommended to analyze and explain the possible impact of new protocols or extensions, if there is a fault, What is its impact level (single-device level, AS level, operator level, neighour operators level,  or the whole Internet)?  and provide necessary reminders in the documentation on how to avoid such wrong configurations.\n> \n> 6) Section 5.6.1 is about the performance management of protocol. I think performance is heavily decided by the resource provided, in particular, hardware resource provided, for instance, for the same protocol, hardware based implementation usually has better performance than that of software-based, so I think the term of \"performance\" works for equipment, instead of protocol. Since this draft is about how to write\u201c Considering Operations and Management in IETF specifications\u201d, from the perspective of protocol, do we need to keep the section of perfromance\uff1f \n> \n> 7) Section 6 is about\"Operational and Management Tooling Considerations\", I suggest adding AI-based system here\uff0csuch as AI agent.\n> \n> This is because the adoption of AI technology in network management and operation has become an important trend. Considering that an RFC will serve for many years in the future, we should mention it in this section.\n> \n> 8) The purpose of RFC5706-bis is to instruct authors on how to write \"Considering Operations and Management\" in their IETF standard. Currently, its length is a bit long, and in order to facilitate its use, I suggest that the final version can reduce its length and mainly list instructions on how to write \"considerations\". Analytical or supportive content can be moved to the auxiliary section.\n> \n> \n> \n> Thank you!\n> \n> \n> Best regards\n> Chongfeng",
       "createdAt": "2025-07-12T04:46:33Z",
-      "updatedAt": "2025-07-31T14:19:16Z",
+      "updatedAt": "2025-08-07T13:58:26Z",
       "closedAt": null,
       "comments": [
         {
           "author": "bclaise",
           "authorAssociation": "COLLABORATOR",
-          "body": "July 31st 2025 conclusions\n1) will correct\n2) https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/7\n3) there are multiple cases: \n- operational considerations is not applicable (policy, requirements draft, etc), \n- There are no specific operations or manageability requirements introduced by this protocol (or protocol extension),\n- This is an OPS-related document. Ex: v6ops. What is the guidance here? \"this document is all about operations & management, therefore ...\"\n5) we understand Chongfeng's message. We face difficulties to translate it into recommendations for 5706bis? Let's review section 5.3\n6) If there are some hardware performance implications for this XXX to be implemented, consider explaining those considerations\n7) yes, AI is pervasive but any operational specifics from a protocol standpoint. Joe to answer on the list\n8) point well taken.\n\n\n\n",
+          "body": "July 31st 2025 conclusions\n1) will correct\n2) https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/7\n\n- [ ] 3) there are multiple cases: \n\n- [ ] operational considerations is not applicable (policy, requirements draft, etc), \n\n- [ ] There are no specific operations or manageability requirements introduced by this protocol (or protocol extension),\n\n- [ ] This is an OPS-related document. Ex: v6ops. What is the guidance here? \"this document is all about operations & management, therefore ...\"\n\n- [ ] 5) we understand Chongfeng's message. We face difficulties to translate it into recommendations for 5706bis? Let's review section 5.3\n\n- [ ] 6) If there are some hardware performance implications for this XXX to be implemented, consider explaining those considerations\n\n- [ ] 7) yes, AI is pervasive but any operational specifics from a protocol standpoint. Joe to answer on the list\n\n8) point well taken.\n\n\n\n",
           "createdAt": "2025-07-31T14:19:16Z",
-          "updatedAt": "2025-07-31T14:19:16Z"
+          "updatedAt": "2025-08-07T13:58:26Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Conclusion from the August 7th call, regarding AI.\nChengfong proposed some AI-related text, on the OPSAWG mailing list. \nWhich guidelines are specific to AI?\nWe could write text arpi,d \"might consider AI\". And the volume of data can be mentioned (AI is data hungry, consider telemetry, consider not overwhelming the management plane). Maybe in the performance section, as it relates to scalability.",
+          "createdAt": "2025-08-07T13:54:53Z",
+          "updatedAt": "2025-08-07T13:54:53Z"
         }
       ]
     },
@@ -1575,7 +1620,7 @@
       "id": "I_kwDOOWPBqs7ANulp",
       "title": "Initial Shepherd Review of draft-opsarea-rfc5706bis-03 (11/07/2025)",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/97",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -1585,8 +1630,8 @@
       ],
       "body": "Posted at: https://mailarchive.ietf.org/arch/msg/opsawg/dT_YXmTxy4OIaAYN_7G3YS-HpQA/\n\n>  Dear authors:\n> \n> First of all, thanks for taking on this work!\n> \n> I started reading the document, but before getting into the substantive\n> sections (4 and 5), I want to initiate a conversation on a couple of points\n> where the draft could be clearer and provide better guidance.  Some of\n> these points require a wider discussion.\n> \n> \n> (1) When is the Operational Considerations section required?\n> \n>    The document \"introduces a requirement to include an \"Operational\n>    Considerations\" section in new IETF Standard Track RFCs.\"  Section \u00a73.1\n>    (Operational Considerations Section) is more descriptive:\n> \n>     All Internet-Drafts that are advanced for publication as Standards\n>     Track IETF RFC are required to include an \"Operational\n>     Considerations\" section.  It is recommended that Internet-Drafts\n>     advanced for publication as Experimental protocol specifications also\n>     include such sections.  \"Operational Considerations\" sections will\n>     also often be appropriate in Internet-Drafts advanced for publication\n>     as Informational RFCs, for example, in protocol architecture and\n>     protocol requirements documents.\n> \n> \n>    Documents of any status can define New Protocols or Protocol Extensions,\n> so\n>    it is not clear to me why only documents on the Standards Track are\n>    required to include an \"Operational Considerations\" section.  The\n>    document's status doesn't eliminate the need to consider how New\n> Protocols\n>    or Protocol Extensions will fit into the network or be managed.\n> \n>    Also, does \"often be appropriate in...Informational RFCs\" mean that\n>    including the \"Operational Considerations\" section is optional, or that\n>    there may be cases where it is required?\n> \n>    IMO, the \"Operational Considerations\" section should be required in all\n>    RFCs.  \u00a73.2 (Null Operations and Manageability Considerations Section)\n>    offers text to be used in cases where it is truly determined that no\n>    \"Operational Considerations\" are needed.\n> \n> \n> (2) rfc2119 keywords\n> \n>    \u00a72 (Key Concepts, Terminology, and Technological Landscape) says:\n> \n>     This document does not describe interoperability requirements.  As\n>     such, it does not use the capitalized keywords defined in [BCP14].\n> \n>    I agree with not using rfc2119 keywords when talking about the\n>    considerations themselves.  However, they should be used when defining\n> the\n>    specific requirements for when the Operational Considerations section is\n>    needed (see above) to avoid confusion.\n> \n> \n> (3) Null Considerations section not required?\n> \n>    \u00a73.2 (Null Operations and Manageability Considerations Section) says\n> that\n>    \"[i]f there are no new manageability or deployment considerations, it is\n>    recommended that an \"Operations and Manageability Considerations\"\n> section\n>    contain a simple statement...\"\n> \n>    Populating a null section is not required.  Does this mean that an RFC\n> can\n>    be published without Operational Considerations?  Even in the Standards\n>    Track?\n> \n> \n> (4) What is the name of the new section?  Is it one section or two?\n> \n>    The title of \u00a73.2, for example, calls out what appears to be one section\n>    (\"Operations and Manageability Considerations Section\"), but they are\n>    mentioned independently in other places.  And still in other cases, only\n>    the Operational Considerations section is mentioned (in \u00a73.1, for\n> example).\n>    Is the intent that one section covers both topics?  If so, please be\n> clear\n>    and consistent about it.\n> \n>    Also, most of the document talks about \"manageability considerations\",\n> but\n>    a couple of places use \"management considerations\".  The same for\n>    \"operations\" and \"operational\".\n> \n> \n> (5) Scope creep?\n> \n>    \u00a71.2 (Audience) mentions several potential uses of this document beyond\n>    documenting the operational and manageability considerations for New\n>    Protocols or Protocol Extensions, for example: \"Area Director who is in\n> the\n>    process of creating a new WG Charter...OPS Directorate can use this\n>    document to guide performing reviews\".  But there is no guidance on how\n> ADs\n>    should use the document when chartering.  A reference is provided to the\n>    OPS Dir checklist.  IMO, both potential uses should be outside the scope\n> of\n>    the document.\n> \n>    [May be related to\n> https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/65]\n> \n> \n> \n> I included below a couple of nits.\n> \n> Thanks!!\n> \n> Alvaro.\n> \n> \n> [Line numbers from idnits.]\n> \n> ...\n> 309   *  Data Model: A set of mechanisms for representing, organizing,\n> 310      storing and handling data within a particular type of data store\n> 311      or repository.  This usually comprises a collection of data\n> 312      structures such as lists, tables, relations, etc., a collection of\n> 313      operations that can be applied to the structures such as\n> 314      retrieval, update, summation, etc., and a collection of integrity\n> 315      rules that define the legal states (set of values) or changes of\n> 316      state (operations on values).  A Data Model may be derived by\n> 317      mapping the contents of an Information Model or may be developed\n> 318      ab initio.  Further discussion of Data Models can be found in\n> 319      [RFC3444], Section 5.1, and Section 5.2.\n> \n> [] s/found in [RFC3444], Section 5.1, and Section 5.2./found in Section\n> 5.1, Section 5.2 and [RFC3444].\n> \n> I first read this as pointing at Sections 5.1 and 5.2 of rfc3444, which\n> don't exist.\n> \n> \n> \n> ...\n> 452   After a Protocol Designer has considered the manageability\n> 453   requirements of a New Protocol or Protocol Extension, they may\n> 454   determine that no management functionality or operational best-\n> 455   practice clarifications are needed.  It would be helpful to\n> 456   reviewers, those who may update or write extensions to the protocol\n> 457   in the future, or to those deploying the protocol, to know the\n> 458   rationale regarding the decisions on manageability of the protocol at\n> 459   the time of its design.\n> \n> [] \"management functionality or operational best-practice clarifications\"\n> \n> Not all operational considerations are best practices (and the term may get\n> confused with a BCP).\n> \n> s/.../manageability or operational considerations",
       "createdAt": "2025-07-12T04:48:33Z",
-      "updatedAt": "2025-07-31T13:22:19Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-07T15:26:45Z",
+      "closedAt": "2025-08-07T15:26:45Z",
       "comments": [
         {
           "author": "bclaise",
@@ -1622,6 +1667,71 @@
           "body": "July 31st 2025 conclusions:\nJoe will take care of Alvaro's point 1 (standard track) and 3 (null section, but also where it's not applicable based on the document content)\nBenoit will take care of Alvaro's point 5 (Scope Creep)\nAlvaro's point #4 about section name: Operational Considerations",
           "createdAt": "2025-07-31T13:22:19Z",
           "updatedAt": "2025-07-31T13:22:19Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Scope creep #103",
+          "createdAt": "2025-08-07T12:26:39Z",
+          "updatedAt": "2025-08-07T12:26:39Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "New draft version 4 posted.\nAll points are addressed. Except number 2, to which we answer on the OPSAWG mailing list. \nClosing.",
+          "createdAt": "2025-08-07T15:26:45Z",
+          "updatedAt": "2025-08-07T15:26:45Z"
+        }
+      ]
+    },
+    {
+      "number": 105,
+      "id": "I_kwDOOWPBqs7EuWM5",
+      "title": "RFC5706 difference: change of focus -> more on doc authors, less on OPS reviewers",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/105",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "bclaise"
+      ],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-08-07T13:17:11Z",
+      "updatedAt": "2025-08-07T13:17:11Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 106,
+      "id": "I_kwDOOWPBqs7Eu82R",
+      "title": "Acknowledgment section",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/106",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "AdrianFarrel"
+      ],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-08-07T13:59:10Z",
+      "updatedAt": "2025-08-08T21:15:27Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "OLD\n#  Acknowledgements {#sec-ack}\n{:numbered=\"false\"}\n\nThe authors wish to thank the following individuals and groups.\n\n\nThe IETF Ops Directorate:\n   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.\n\n\nThe AD championing the update:\n   : Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.\n\n\nThe author of RFC 5706:\n: David Harrington\n\nAcknowledgments from RFC 5706:\n\n   : This document started from an earlier document edited by Adrian\n     Farrel, which itself was based on work exploring the need for\n     Manageability Considerations sections in all Internet-Drafts produced\n     within the Routing Area of the IETF. That earlier work was produced\n     by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable\n     feedback provided by Pekka Savola and Bert Wijnen.\n\n   : Some of the discussion about designing for manageability came from\n     private discussions between Dan Romascanu, Bert Wijnen, J\u00fcrgen Sch\u00f6nw\u00e4lder, Andy Bierman, and David Harrington.\n\n   : Thanks to reviewers who helped fashion this document, including\n     Harald Alvestrand, Ron Bonica, Brian Carpenter, Beno\u00eet Claise, Adrian\n     Farrel, David Kessens, Dan Romascanu, Pekka Savola, J\u00fcrgen Sch\u00f6nw\u00e4lder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.\nNEW\n#  Acknowledgements {#sec-ack}\n{:numbered=\"false\"}\n\nThe authors wish to thank the following individuals and groups.\n\nThe IETF Ops Directorate:\n   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.\n\nThe AD championing the update:\n   : Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.\n\nReviewers of this document:\n   : Thanks Mahesh Jethanandani, Chongfeng Xie, and Alvaro Retana to for review comments and contributions.\n\nThe author of RFC 5706:\n: David Harrington\n\nAcknowledgments from RFC 5706:\n\n   : This document started from an earlier document edited by Adrian\n     Farrel, which itself was based on work exploring the need for\n     Manageability Considerations sections in all Internet-Drafts produced\n     within the Routing Area of the IETF. That earlier work was produced\n     by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable\n     feedback provided by Pekka Savola and Bert Wijnen.\n\n   : Some of the discussion about designing for manageability came from\n     private discussions between Dan Romascanu, Bert Wijnen, J\u00fcrgen Sch\u00f6nw\u00e4lder, Andy Bierman, and David Harrington.\n\n   : Thanks to reviewers who helped fashion this document, including\n     Harald Alvestrand, Ron Bonica, Brian Carpenter, Beno\u00eet Claise, Adrian\n     Farrel, David Kessens, Dan Romascanu, Pekka Savola, J\u00fcrgen Sch\u00f6nw\u00e4lder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.\nEND",
+          "createdAt": "2025-08-07T16:24:52Z",
+          "updatedAt": "2025-08-07T16:24:52Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Update that to add \"Michael P\"",
+          "createdAt": "2025-08-08T21:15:27Z",
+          "updatedAt": "2025-08-08T21:15:27Z"
         }
       ]
     }
@@ -7629,24 +7739,26 @@
       "id": "PR_kwDOOWPBqs6iAaVJ",
       "title": "Make the Operational Considerations section mandatory for all tracks.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/99",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "* Exclude obvious documents from this requirement\r\n* Provide a better description of a \"null\" section\r\n\r\nThis aims to address points raised in #97.",
       "createdAt": "2025-08-04T13:33:47Z",
-      "updatedAt": "2025-08-04T13:56:11Z",
+      "updatedAt": "2025-08-07T13:12:20Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5424135650c0d12dca2b0eadd39c6966d15b440",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "issue-97-applicable-tracks",
       "headRefOid": "721aaa6e8d65e24edab4f7badb8256551baa3be9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-08-07T13:12:19Z",
+      "mergedAt": "2025-08-07T13:12:19Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "59246b5c8e902e21ffa7b466e25bfcb659eeff6b"
+      },
       "comments": [],
       "reviews": [
         {
@@ -7768,6 +7880,19 @@
               "updatedAt": "2025-08-04T13:54:03Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs64mgVw",
+          "commit": {
+            "abbreviatedOid": "721aaa6"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-08-07T13:11:48Z",
+          "updatedAt": "2025-08-07T13:11:48Z",
+          "comments": []
         }
       ]
     },
@@ -7776,25 +7901,35 @@
       "id": "PR_kwDOOWPBqs6iTxJl",
       "title": "Move changes vs 5706 to an appendix",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/100",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "This is to shorten what a reader has to read before getting to the main reco :-)",
       "createdAt": "2025-08-06T05:30:56Z",
-      "updatedAt": "2025-08-06T05:30:56Z",
+      "updatedAt": "2025-08-07T13:18:53Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "e5424135650c0d12dca2b0eadd39c6966d15b440",
+      "baseRefOid": "59246b5c8e902e21ffa7b466e25bfcb659eeff6b",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "move-changes-to-appendix",
-      "headRefOid": "cc7e44efd887df8bd5b32bc969acfdf47229bae9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "173798a9c94e5bc06f07b78f6d3bc932521cdb98",
+      "closedAt": "2025-08-07T13:18:51Z",
+      "mergedAt": "2025-08-07T13:18:51Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "de775c17510e7c65b06ea49e085149a38d2d6ae7"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I am a fan to see the diff with the previous RFC earlier in the document (specifically when this RFC is well know among the OPS community) but I can live with that. Specifically, what I believe is the main change for this bis RFC is that we refocus this document from being an OPS-DIR focused document to being a document authors guidance-focused document. And I don't see that changes in the text.  I'd like to propose a sentence or two about it. \r\n\r\nLooking in more details, I see\r\nRFC 5706: \"The purpose of this document is to provide guidance to authors and\r\n   reviewers of documents that define new protocols or protocol\r\n   extensions regarding aspects of operations and management that should\r\n   be considered.\"\r\n\r\nAnd the current draft, \"\"The OPS Directorate can use this document to guide performing reviews. A list of guidelines and a checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and documentation address common operations and management needs, is provided in {{CHECKLIST}}.\"\r\n\r\nSo I am not sure any longer... but I wanted to express that the OPS-DIR checklist is moved out of the document. ",
+          "createdAt": "2025-08-07T11:55:49Z",
+          "updatedAt": "2025-08-07T12:07:38Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -7802,20 +7937,245 @@
       "id": "PR_kwDOOWPBqs6iT1A6",
       "title": "fix internal mgt/ops section inconsistency",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/101",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "As we have one singe operational section, the discussion about \"management considerations section\" and so on are confusing for readers.",
       "createdAt": "2025-08-06T05:41:20Z",
-      "updatedAt": "2025-08-06T05:41:20Z",
+      "updatedAt": "2025-08-07T13:21:34Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5424135650c0d12dca2b0eadd39c6966d15b440",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "remve-mgt-ops-sections-mentions",
       "headRefOid": "590fb0226208a655e51621fe4245c0b5c7aee26c",
+      "closedAt": "2025-08-07T13:21:32Z",
+      "mergedAt": "2025-08-07T13:21:32Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "823eaf86303a6020e2435c1c4be8b389af1d9d35"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "changes look good",
+          "createdAt": "2025-08-07T11:50:31Z",
+          "updatedAt": "2025-08-07T11:50:31Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 102,
+      "id": "PR_kwDOOWPBqs6iT4im",
+      "title": "Move Mgt protocol samples to be under \"management\" section",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/102",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "the list of available technologies fits where the doc discusses how a protocol is managed.",
+      "createdAt": "2025-08-06T05:50:31Z",
+      "updatedAt": "2025-08-07T13:25:50Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "823eaf86303a6020e2435c1c4be8b389af1d9d35",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "ccbe1081026bce8207e656dc1d41b5d838332482",
+      "closedAt": "2025-08-07T13:25:49Z",
+      "mergedAt": "2025-08-07T13:25:49Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "74f7d26ada6f2375e00ee8c9b9cf9f877ea5140e"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "changes look good",
+          "createdAt": "2025-08-07T11:50:45Z",
+          "updatedAt": "2025-08-07T11:50:45Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs64mvl_",
+          "commit": {
+            "abbreviatedOid": "709c61c"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-08-07T13:25:42Z",
+          "updatedAt": "2025-08-07T13:25:42Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 103,
+      "id": "PR_kwDOOWPBqs6ik9TJ",
+      "title": "Scope creep",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/103",
+      "state": "MERGED",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Feedback provided by Alvaro. Let's refocus this document to draft authors.",
+      "createdAt": "2025-08-07T12:20:33Z",
+      "updatedAt": "2025-08-07T13:35:56Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5424135650c0d12dca2b0eadd39c6966d15b440",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "scope-creep",
+      "headRefOid": "85fc5b9eb86fe285fa89428c3f03071b8f7c072a",
+      "closedAt": "2025-08-07T13:35:55Z",
+      "mergedAt": "2025-08-07T13:35:55Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "074119dc5ac924cf92a65ab11fc32aab43c64390"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Let's discuss live whether we want to keep the following two paragraphs:\r\n   The OPS Directorate can use this document to guide performing reviews. A list of guidelines and a\r\n   checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and\r\n   documentation address common operations and management needs, is provided in {{CHECKLIST}}.\r\n\r\n   This document is also of interest to the broader community, who wants to understand, contribute to,\r\n   and review Internet-Drafts, taking OPS considerations into account.",
+          "createdAt": "2025-08-07T12:21:00Z",
+          "updatedAt": "2025-08-07T12:21:00Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs64mEWO",
+          "commit": {
+            "abbreviatedOid": "805c22b"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-07T12:43:55Z",
+          "updatedAt": "2025-08-07T12:43:55Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "I think we need to delete this sentence is we have all in one single section, with a recommended location in the document. \r\n\r\nReasoning about separate sections will confuse readers.",
+              "createdAt": "2025-08-07T12:43:55Z",
+              "updatedAt": "2025-08-07T12:43:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs64ml9R",
+          "commit": {
+            "abbreviatedOid": "805c22b"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-07T13:17:09Z",
+          "updatedAt": "2025-08-07T13:17:09Z",
+          "comments": [
+            {
+              "originalPosition": 53,
+              "body": "```suggestion\r\n   The OPS Directorate can use this document to inform their reviews. A list of guidelines and a\r\n```",
+              "createdAt": "2025-08-07T13:17:09Z",
+              "updatedAt": "2025-08-07T13:17:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs64m5Ap",
+          "commit": {
+            "abbreviatedOid": "85fc5b9"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-08-07T13:35:50Z",
+          "updatedAt": "2025-08-07T13:35:50Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 104,
+      "id": "PR_kwDOOWPBqs6ilHz_",
+      "title": "Chongfeng issue 1",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/104",
+      "state": "MERGED",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/97\r\n\r\n\r\n    In Section 2.1, there is \"Operation activities that are undertaken to keep the network.\"\r\n\r\nIt seems that this sentence is incomplete, can it be changed to the following or something like that? \"Operation activities that are undertaken to keep the network run normally.\"",
+      "createdAt": "2025-08-07T12:34:42Z",
+      "updatedAt": "2025-08-07T13:36:54Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5424135650c0d12dca2b0eadd39c6966d15b440",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "fongcheng-issue-1",
+      "headRefOid": "c8e41a835b68c47ce73cd475817e0e0abf75cf18",
+      "closedAt": "2025-08-07T13:36:52Z",
+      "mergedAt": "2025-08-07T13:36:52Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "0501bf35375979eb5b4afb36baf998da5c447c08"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs64mFWJ",
+          "commit": {
+            "abbreviatedOid": "6a1cee3"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-07T12:45:15Z",
+          "updatedAt": "2025-08-07T12:45:16Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n         network running as intended. They include monitoring of the network.\r\n```\r\n\r\n\"normally\" is vague. ",
+              "createdAt": "2025-08-07T12:45:16Z",
+              "updatedAt": "2025-08-07T12:45:16Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 107,
+      "id": "PR_kwDOOWPBqs6ix5Eb",
+      "title": "Impact on Security Operations",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/107",
+      "state": "OPEN",
+      "author": "michael-p-1",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Please see suggested text for a section on Impact on Security Operations",
+      "createdAt": "2025-08-08T14:37:52Z",
+      "updatedAt": "2025-08-08T14:37:52Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
+      "headRepository": "michael-p-1/draft-opsarea-rfc5706bis",
+      "headRefName": "security-operations",
+      "headRefOid": "8f052bcd7d5273adc6d87affea2533367880178c",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -7824,24 +8184,24 @@
       "reviews": []
     },
     {
-      "number": 102,
-      "id": "PR_kwDOOWPBqs6iT4im",
-      "title": "Move Mgt protocol samples to be under \"management\" section",
-      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/102",
+      "number": 108,
+      "id": "PR_kwDOOWPBqs6ix6Wh",
+      "title": "Adding to security management section",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/108",
       "state": "OPEN",
-      "author": "boucadair",
-      "authorAssociation": "COLLABORATOR",
+      "author": "michael-p-1",
+      "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
-      "body": "the list of available technologies fits where the doc discusses how a protocol is managed.",
-      "createdAt": "2025-08-06T05:50:31Z",
-      "updatedAt": "2025-08-06T05:50:31Z",
+      "body": "Some suggested additions to security management section following draft review ",
+      "createdAt": "2025-08-08T14:40:06Z",
+      "updatedAt": "2025-08-08T14:40:06Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "e5424135650c0d12dca2b0eadd39c6966d15b440",
-      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
-      "headRefName": "boucadair-patch-1",
-      "headRefOid": "709c61c3ffba04660e32b8b461be64a197ed0e9b",
+      "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
+      "headRepository": "michael-p-1/draft-opsarea-rfc5706bis",
+      "headRefName": "security-management",
+      "headRefOid": "a5ae5d172b375fa45b01b36e2517b9c151d34876",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
