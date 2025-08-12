@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-10T00:58:12.028598+00:00",
+  "timestamp": "2025-08-12T00:50:26.475588+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -8207,6 +8207,40 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 109,
+      "id": "PR_kwDOOWPBqs6i9kJX",
+      "title": "Protocol Designer or Protocol Designers #92",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/109",
+      "state": "OPEN",
+      "author": "Ranchen666",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-08-11T03:25:21Z",
+      "updatedAt": "2025-08-11T03:36:05Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Ranchen666-patch-1",
+      "headRefOid": "777f6f28ba0d5db164b8650e693aab2e9113bde6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "body": "section 2 gives the definition of Protocol Designer:  An individual, a group of people, or an IETF WG involved in the development and specification of New Protocols or Protocol Extensions. The whole draft uses: protocol designers, A protocol designer, and the protocol designer. I agree that the definition does not need to be revised, but for the sake of readability and clarity, I understand that the entire draft uses different expressions. I think the entire draft needs to be revised based on the principle that \"Protocol Designer represents an individual, and Protocol Designers represent a group of people.\" Plese check the update. Thanks",
+          "createdAt": "2025-08-11T03:36:05Z",
+          "updatedAt": "2025-08-11T03:36:05Z"
+        }
+      ],
       "reviews": []
     }
   ]
