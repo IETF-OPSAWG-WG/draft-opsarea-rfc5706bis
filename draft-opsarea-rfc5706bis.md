@@ -954,13 +954,17 @@ DM         DM        DM     --> concrete/detailed model
 ## Fault Management {#sec-fm-mgmt}
 
    The Protocol Designer should document the basic Faults and health
-   indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
-   as the alarms and events that must be propagated to management
-   applications or exposed through a Data Model.
+   indicators that need to be instrumented for the New Protocol or
+   Protocol Extension, as well as the alarms and events that must be
+   propagated to management applications or exposed through a Data
+   Model. It is also recommended to describe how the Protocol Extension
+   will affect the existing alarms and notification structure of the
+   base Protocol, and to outline the potential impact of misconfigurations
+   of the protocol extensions.
 
    The Protocol Designer should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
-   polling of health indicators?
+   polling of health indicators? 
 
    If notifications are used to alert operators to certain conditions,
    then the Protocol Designer should discuss mechanisms to throttle
@@ -1193,8 +1197,15 @@ DM         DM        DM     --> concrete/detailed model
 
    There are several parts to performance management to be considered:
    protocol monitoring, device monitoring (the impact of the new
-   protocol / service activation on the device), network monitoring, and
-   service monitoring (the impact of service activation on the network).
+   protocol / service activation on the device), network monitoring,
+   and service monitoring (the impact of service activation on the
+   network). It is also recommended that, if the implementation of the
+   new protocol extension has any hardware performance implications
+   (e.g., increased CPU utilization, memory consumption, or forwarding
+   performance degradation), the protocol designers should clearly
+   describe these impacts in the specification, along with any
+   conditions under which they may occur and possible mitigation
+   strategies.
 
 ###  Monitoring the Protocol {#sec-monitor-proto}
 
