@@ -1420,11 +1420,11 @@ DM         DM        DM     --> concrete/detailed model
 ## AI/ML Tooling Considerations {#sec-ai-ml-tooling}
 
    With the increasing adoption of Artificial Intelligence (AI) and
-   Machine Learning (ML) in network operations, protocol designers
+   Machine Learning (ML) in network operations, Protocol Designers
    must consider the implications for manageability and tooling. AI/ML
    models often require extensive and granular data for training and
    inference, requiring efficient, scalable, and secure mechanisms
-   for telemetry, logging, and state information collection. Designers
+   for telemetry, logging, and state information collection. Protocol Designers
    should anticipate that AI-powered management tools may generate
    frequent and potentially aggressive querying patterns on network
    devices and controllers. Therefore, protocols should be designed with clear data
