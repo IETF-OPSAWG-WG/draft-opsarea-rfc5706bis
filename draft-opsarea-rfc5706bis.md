@@ -964,7 +964,7 @@ DM         DM        DM     --> concrete/detailed model
 
    The Protocol Designer should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
-   polling of health indicators? 
+   polling of health indicators?
 
    If notifications are used to alert operators to certain conditions,
    then the Protocol Designer should discuss mechanisms to throttle
