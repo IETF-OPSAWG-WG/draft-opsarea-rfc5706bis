@@ -1417,6 +1417,24 @@ DM         DM        DM     --> concrete/detailed model
      encourage collaboration, and provide operators with the flexibility to customize
      and extend the tools to meet their specific needs.
 
+## AI/ML Tooling Considerations {#sec-ai-ml-tooling}
+
+   With the increasing adoption of Artificial Intelligence (AI) and
+   Machine Learning (ML) in network operations, protocol designers
+   must consider the implications for manageability and tooling. AI/ML
+   models often require extensive and granular data for training and
+   inference, requiring efficient, scalable, and secure mechanisms
+   for telemetry, logging, and state information collection. Designers
+   should anticipate that AI-powered management tools may generate
+   frequent and potentially aggressive querying patterns on network
+   devices and controllers. Therefore, protocols should be designed with clear data
+   models and mechanisms to prevent overload from automated
+   interactions, while also accounting for AI-specific security
+   considerations such as data integrity and protection against
+   adversarial attacks on management interfaces. These considerations
+   are also relevant to Performance Management (Section {{<sec-perf-mgmt}})
+   and Security Management (Section {{<sec-security-mgmt}}).
+
 #  IANA Considerations {#sec-iana}
 
    This document does not have any IANA actions required.
