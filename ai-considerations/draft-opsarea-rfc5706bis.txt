@@ -1491,19 +1491,19 @@ Table of Contents
 
    With the increasing adoption of Artificial Intelligence (AI) and
    Machine Learning (ML) in network operations, Protocol Designers must
-   consider the implications for manageability and tooling.  AI/ML
-   models often require extensive and granular data for training and
-   inference, requiring efficient, scalable, and secure mechanisms for
-   telemetry, logging, and state information collection.  Protocol
-   Designers should anticipate that AI-powered management tools may
-   generate frequent and potentially aggressive querying patterns on
-   network devices and controllers.  Therefore, protocols should be
-   designed with clear data models and mechanisms to prevent overload
-   from automated interactions, while also accounting for AI-specific
-   security considerations such as data integrity and protection against
-   adversarial attacks on management interfaces.  These considerations
-   are also relevant to Performance Management (Section 5.7) and
-   Security Management (Section 5.8).
+   consider the implication such functions may have on protocols and
+   protocol extensions.  AI/ML models often require extensive and
+   granular data for training and inference, requiring efficient,
+   scalable, and secure mechanisms for telemetry, logging, and state
+   information collection.  Protocol Designers should anticipate that
+   AI-powered management tools may generate frequent and potentially
+   aggressive querying patterns on network devices and controllers.
+   Therefore, protocols should be designed with clear data models and
+   mechanisms to prevent overload from automated interactions, while
+   also accounting for AI-specific security considerations such as data
+   integrity and protection against adversarial attacks on management
+   interfaces.  These considerations are also relevant to Performance
+   Management (Section 5.7) and Security Management (Section 5.8).
 
 7.  IANA Considerations
 
