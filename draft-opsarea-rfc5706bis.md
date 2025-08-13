@@ -1421,7 +1421,8 @@ DM         DM        DM     --> concrete/detailed model
 
    With the increasing adoption of Artificial Intelligence (AI) and
    Machine Learning (ML) in network operations, Protocol Designers
-   must consider the implications for manageability and tooling. AI/ML
+   must consider the implication such functions may have on protocols
+   and protocol extensions. AI/ML
    models often require extensive and granular data for training and
    inference, requiring efficient, scalable, and secure mechanisms
    for telemetry, logging, and state information collection. Protocol Designers
