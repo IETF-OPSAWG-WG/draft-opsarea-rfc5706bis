@@ -106,7 +106,7 @@ Table of Contents
        5.7.4.  Monitoring the Service
      5.8.  Security Management
    6.  Operational and Management Tooling Considerations
-     6.1.  AI/ML Tooling Considerations
+     6.1.  AI Tooling Considerations
    7.  IANA Considerations
    8.  Operational Considerations
    9.  Security Considerations
@@ -1487,7 +1487,7 @@ Table of Contents
       provide operators with the flexibility to customize and extend the
       tools to meet their specific needs.
 
-6.1.  AI/ML Tooling Considerations
+6.1.  AI Tooling Considerations
 
    With the increasing adoption of Artificial Intelligence (AI) in
    network operations, Protocol Designers must consider the implication
