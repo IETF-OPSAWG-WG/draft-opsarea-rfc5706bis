@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 14 February 2026                                      A. Farrel
+Expires: 15 February 2026                                      A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 14 February 2026                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                          13 August 2025
+                                                          14 August 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 February 2026.
+   This Internet-Draft will expire on 15 February 2026.
 
 Copyright Notice
 
@@ -1489,21 +1489,21 @@ Table of Contents
 
 6.1.  AI/ML Tooling Considerations
 
-   With the increasing adoption of Artificial Intelligence (AI) and
-   Machine Learning (ML) in network operations, Protocol Designers must
-   consider the implication such functions may have on protocols and
-   protocol extensions.  AI/ML models often require extensive and
-   granular data for training and inference, requiring efficient,
-   scalable, and secure mechanisms for telemetry, logging, and state
-   information collection.  Protocol Designers should anticipate that
-   AI-powered management tools may generate frequent and potentially
-   aggressive querying patterns on network devices and controllers.
-   Therefore, protocols should be designed with clear data models and
-   mechanisms to prevent overload from automated interactions, while
-   also accounting for AI-specific security considerations such as data
-   integrity and protection against adversarial attacks on management
-   interfaces.  These considerations are also relevant to Performance
-   Management (Section 5.7) and Security Management (Section 5.8).
+   With the increasing adoption of Artificial Intelligence (AI) in
+   network operations, Protocol Designers must consider the implication
+   such functions may have on protocols and protocol extensions.  AI
+   models often require extensive and granular data for training and
+   inference, requiring efficient, scalable, and secure mechanisms for
+   telemetry, logging, and state information collection.  Protocol
+   Designers should anticipate that AI-powered management tools may
+   generate frequent and potentially aggressive querying patterns on
+   network devices and controllers.  Therefore, protocols should be
+   designed with clear data models and mechanisms to prevent overload
+   from automated interactions, while also accounting for AI-specific
+   security considerations such as data integrity and protection against
+   adversarial attacks on management interfaces.  These considerations
+   are also relevant to Performance Management (Section 5.7) and
+   Security Management (Section 5.8).
 
 7.  IANA Considerations
 
@@ -1623,9 +1623,9 @@ Table of Contents
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-09, 2 July 2025,
+              draft-ietf-opsawg-oam-characterization-10, 13 August 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
-              oam-characterization-09>.
+              oam-characterization-10>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
