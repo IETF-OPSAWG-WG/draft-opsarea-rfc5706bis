@@ -1417,7 +1417,7 @@ DM         DM        DM     --> concrete/detailed model
      encourage collaboration, and provide operators with the flexibility to customize
      and extend the tools to meet their specific needs.
 
-## AI/ML Tooling Considerations {#sec-ai-ml-tooling}
+## AI Tooling Considerations {#sec-ai-tooling}
 
    With the increasing adoption of Artificial Intelligence (AI)
    in network operations, Protocol Designers
