@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-14T00:51:37.618059+00:00",
+  "timestamp": "2025-08-17T00:55:19.079537+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -8205,7 +8205,7 @@
       "labels": [],
       "body": "Please see suggested text for a section on Impact on Security Operations",
       "createdAt": "2025-08-08T14:37:52Z",
-      "updatedAt": "2025-08-08T14:37:52Z",
+      "updatedAt": "2025-08-15T14:45:03Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
@@ -8217,7 +8217,46 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs66NNKH",
+          "commit": {
+            "abbreviatedOid": "8f052bc"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-08-15T14:41:06Z",
+          "updatedAt": "2025-08-15T14:45:03Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\n   Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations (SecOps) in networks that the protocol will be deployed in. Security operators detect malicious activity and respond to threats and are a crucial part of defending networks from attacks. \r\n```",
+              "createdAt": "2025-08-15T14:41:06Z",
+              "updatedAt": "2025-08-15T14:45:03Z"
+            },
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   Indicators of Compromise (IoCs) {{?RFC9424}} is relied upon by security operators to identify and block malicious activity. A New Protocol or Protocol Extension may have implications for the types, locations or availability of IoCs and Protocol Designers should outline such impacts. Similarly, to be most effective, IoCs are required to be shared at scale so consideration should be given to ensure this is possible. \r\n```",
+              "createdAt": "2025-08-15T14:41:40Z",
+              "updatedAt": "2025-08-15T14:45:03Z"
+            },
+            {
+              "originalPosition": 10,
+              "body": "I am in favor of SecOps text in here, but IMHO there is a fine line between SecOps considerations and Security Considerations.  _This_ point feels more the latter to me.",
+              "createdAt": "2025-08-15T14:42:51Z",
+              "updatedAt": "2025-08-15T14:45:03Z"
+            },
+            {
+              "originalPosition": 12,
+              "body": "Same as above.",
+              "createdAt": "2025-08-15T14:43:10Z",
+              "updatedAt": "2025-08-15T14:45:03Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 108,
@@ -8317,19 +8356,75 @@
       "labels": [],
       "body": "Attempt to address #112 ",
       "createdAt": "2025-08-13T15:55:53Z",
-      "updatedAt": "2025-08-13T15:58:54Z",
+      "updatedAt": "2025-08-14T17:39:03Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "ai-considerations",
-      "headRefOid": "f1e76af37bb6f52d4f1241021da4124dd19d23f0",
+      "headRefOid": "d993c2abf5772ca4decf5d242158c3c0d0eeb181",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "mcr",
+          "authorAssociation": "NONE",
+          "body": "\"AI\" is not a technical term.",
+          "createdAt": "2025-08-14T16:29:57Z",
+          "updatedAt": "2025-08-14T16:29:57Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "> \"AI\" is not a technical term.\r\n\r\nHey, @mcr .  I disagree that AI (as an abbreviation for Artificial Intelligence) is not technical in nature.  It's being used in several spots in technical groups of the IETF and IRTF (such as aipref and nmrg).  That said, it may be ill-defined here.  I couldn't find a canonical definition to which IETF documents refer.  They simply refer to AI and then describe some of its characteristics.  And that is the goal here.  To put forth considerations on what training and inference for these AI models might mean when it comes to protocol design.",
+          "createdAt": "2025-08-14T17:39:03Z",
+          "updatedAt": "2025-08-14T17:39:03Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs656iba",
+          "commit": {
+            "abbreviatedOid": "f1e76af"
+          },
+          "author": "xiechf974",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-14T06:00:28Z",
+          "updatedAt": "2025-08-14T06:02:43Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "I think this text is fine. Just one suggestion, since Machine learning(ML) is a subset of AI, there is not need to mention ML, it can be removed. Thanks.",
+              "createdAt": "2025-08-14T06:00:28Z",
+              "updatedAt": "2025-08-14T06:02:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs65_BEw",
+          "commit": {
+            "abbreviatedOid": "0a40b83"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-14T11:56:01Z",
+          "updatedAt": "2025-08-14T11:56:02Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "Done!",
+              "createdAt": "2025-08-14T11:56:01Z",
+              "updatedAt": "2025-08-14T11:56:02Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
