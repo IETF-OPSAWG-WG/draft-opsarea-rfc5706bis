@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-17T00:55:19.079537+00:00",
+  "timestamp": "2025-08-19T00:49:54.985275+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -8205,7 +8205,7 @@
       "labels": [],
       "body": "Please see suggested text for a section on Impact on Security Operations",
       "createdAt": "2025-08-08T14:37:52Z",
-      "updatedAt": "2025-08-15T14:45:03Z",
+      "updatedAt": "2025-08-18T13:21:10Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
@@ -8253,6 +8253,66 @@
               "body": "Same as above.",
               "createdAt": "2025-08-15T14:43:10Z",
               "updatedAt": "2025-08-15T14:45:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs66bhB0",
+          "commit": {
+            "abbreviatedOid": "8f052bc"
+          },
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-18T10:22:52Z",
+          "updatedAt": "2025-08-18T10:22:52Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "Thank you for the review. The purpose of this line was meant to be \"New Protocol may change attacker activity, which will impact how security operators perform their work\", rather than \"New Protocol may change attacker activity, which impact the security/threat model\" (which, of course, are related). I agree that the sentence currently says the latter so does stray out of the Operational Considerations. \r\nEither way, I'd be happy to update to make that clearer, or drop from this section.  ",
+              "createdAt": "2025-08-18T10:22:52Z",
+              "updatedAt": "2025-08-18T10:34:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs66biST",
+          "commit": {
+            "abbreviatedOid": "8f052bc"
+          },
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-18T10:24:48Z",
+          "updatedAt": "2025-08-18T10:24:48Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "As above, though given traffic management is covered in section 4.5, I'm more in agreement to drop ",
+              "createdAt": "2025-08-18T10:24:48Z",
+              "updatedAt": "2025-08-18T10:24:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs66dsr1",
+          "commit": {
+            "abbreviatedOid": "8f052bc"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-18T13:21:09Z",
+          "updatedAt": "2025-08-18T13:21:10Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "Maybe a restatement, as I think your former point is important.  And I was trying to drive some more discussion to this text.  We appreciate the contribution!",
+              "createdAt": "2025-08-18T13:21:09Z",
+              "updatedAt": "2025-08-18T13:21:10Z"
             }
           ]
         }
@@ -8356,7 +8416,7 @@
       "labels": [],
       "body": "Attempt to address #112 ",
       "createdAt": "2025-08-13T15:55:53Z",
-      "updatedAt": "2025-08-14T17:39:03Z",
+      "updatedAt": "2025-08-17T14:01:48Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
@@ -8423,6 +8483,19 @@
               "updatedAt": "2025-08-14T11:56:02Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs66WFs1",
+          "commit": {
+            "abbreviatedOid": "d993c2a"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-08-17T14:01:48Z",
+          "updatedAt": "2025-08-17T14:01:48Z",
+          "comments": []
         }
       ]
     }
