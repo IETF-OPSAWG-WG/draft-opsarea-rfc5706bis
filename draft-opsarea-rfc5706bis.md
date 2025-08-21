@@ -537,7 +537,7 @@ This document does not describe interoperability requirements. As such, it does 
    consideration, active monitoring might achieve high accuracy at the cost of
    generating an excessive number of monitoring packets.
 
-   The Protocol Designer should consider the potential impact on the
+   Protocol Designers should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
    and traffic patterns that might change, including specific types of
    traffic, such as multicast. Also, consider the need to install new
@@ -545,7 +545,7 @@ This document does not describe interoperability requirements. As such, it does 
    the configuration, such as servers performing auto-configuration
    operations.
 
-   The Protocol Designer should consider also the impact on
+   Protocol Designers should consider also the impact on
    infrastructure applications like DNS {{?RFC1034}}, the registries, or
    the size of routing tables. For example, Simple Mail Transfer
    Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
@@ -565,7 +565,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  Verifying Correct Operation {#sec-oper-verify}
 
-   The Protocol Designer should consider techniques for testing the
+   Protocol Designers should consider techniques for testing the
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct end-
@@ -953,7 +953,8 @@ DM         DM        DM     --> concrete/detailed model
 
 ## Fault Management {#sec-fm-mgmt}
 
-   The Protocol Designer should document the basic Faults and health
+
+   Protocol Designers should document the basic Faults and health
    indicators that need to be instrumented for the New Protocol or
    Protocol Extension, as well as the alarms and events that must be
    propagated to management applications or exposed through a Data
@@ -962,12 +963,12 @@ DM         DM        DM     --> concrete/detailed model
    base Protocol, and to outline the potential impact of misconfigurations
    of the Protocol Extensions.
 
-   The Protocol Designer should consider how fault information will be
+   Protocol Designers should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?
 
    If notifications are used to alert operators to certain conditions,
-   then the Protocol Designer should discuss mechanisms to throttle
+   then Protocol Designers should discuss mechanisms to throttle
    notifications to prevent congestion and duplications of event
    notifications. Will there be a hierarchy of Faults, and will the
    Fault reporting be done by each Fault in the hierarchy, or will only
@@ -1427,6 +1428,25 @@ DM         DM        DM     --> concrete/detailed model
      with community involvement. Open-source tools lower the barrier to entry,
      encourage collaboration, and provide operators with the flexibility to customize
      and extend the tools to meet their specific needs.
+
+## AI Tooling Considerations {#sec-ai-tooling}
+
+   With the increasing adoption of Artificial Intelligence (AI)
+   in network operations, Protocol Designers
+   must consider the implication such functions may have on protocols
+   and protocol extensions. AI
+   models often require extensive and granular data for training and
+   inference, requiring efficient, scalable, and secure mechanisms
+   for telemetry, logging, and state information collection. Protocol Designers
+   should anticipate that AI-powered management tools may generate
+   frequent and potentially aggressive querying patterns on network
+   devices and controllers. Therefore, protocols should be designed with data
+   models and mechanisms intended to prevent overload from automated
+   interactions, while also accounting for AI-specific security
+   considerations such as data integrity and protection against
+   adversarial attacks on management interfaces. These considerations
+   are also relevant to Performance Management (Section {{<sec-perf-mgmt}})
+   and Security Management (Section {{<sec-security-mgmt}}).
 
 #  IANA Considerations {#sec-iana}
 
