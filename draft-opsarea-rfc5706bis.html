@@ -1303,6 +1303,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
             <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-operational-and-management-" class="internal xref">Operational and Management Tooling Considerations</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-ai-tooling-considerations" class="internal xref">AI Tooling Considerations</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
@@ -2785,6 +2790,29 @@ encourage collaboration, and provide operators with the flexibility to customize
 and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
+<div id="sec-ai-tooling">
+<section id="section-6.1">
+        <h3 id="name-ai-tooling-considerations">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-ai-tooling-considerations" class="section-name selfRef">AI Tooling Considerations</a>
+        </h3>
+<p id="section-6.1-1">With the increasing adoption of Artificial Intelligence (AI)
+   in network operations, Protocol Designers
+   must consider the implication such functions may have on protocols
+   and protocol extensions. AI
+   models often require extensive and granular data for training and
+   inference, requiring efficient, scalable, and secure mechanisms
+   for telemetry, logging, and state information collection. Protocol Designers
+   should anticipate that AI-powered management tools may generate
+   frequent and potentially aggressive querying patterns on network
+   devices and controllers. Therefore, protocols should be designed with data
+   models and mechanisms intended to prevent overload from automated
+   interactions, while also accounting for AI-specific security
+   considerations such as data integrity and protection against
+   adversarial attacks on management interfaces. These considerations
+   are also relevant to Performance Management (Section <a href="#sec-perf-mgmt" class="auto internal xref">5.7</a>)
+   and Security Management (Section <a href="#sec-security-mgmt" class="auto internal xref">5.8</a>).<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="sec-iana">

@@ -106,6 +106,7 @@ Table of Contents
        5.7.4.  Monitoring the Service
      5.8.  Security Management
    6.  Operational and Management Tooling Considerations
+     6.1.  AI Tooling Considerations
    7.  IANA Considerations
    8.  Operational Considerations
    9.  Security Considerations
@@ -1485,6 +1486,24 @@ Table of Contents
       tools lower the barrier to entry, encourage collaboration, and
       provide operators with the flexibility to customize and extend the
       tools to meet their specific needs.
+
+6.1.  AI Tooling Considerations
+
+   With the increasing adoption of Artificial Intelligence (AI) in
+   network operations, Protocol Designers must consider the implication
+   such functions may have on protocols and protocol extensions.  AI
+   models often require extensive and granular data for training and
+   inference, requiring efficient, scalable, and secure mechanisms for
+   telemetry, logging, and state information collection.  Protocol
+   Designers should anticipate that AI-powered management tools may
+   generate frequent and potentially aggressive querying patterns on
+   network devices and controllers.  Therefore, protocols should be
+   designed with data models and mechanisms intended to prevent overload
+   from automated interactions, while also accounting for AI-specific
+   security considerations such as data integrity and protection against
+   adversarial attacks on management interfaces.  These considerations
+   are also relevant to Performance Management (Section 5.7) and
+   Security Management (Section 5.8).
 
 7.  IANA Considerations
 
