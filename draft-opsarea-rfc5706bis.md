@@ -1428,7 +1428,7 @@ DM         DM        DM     --> concrete/detailed model
    for telemetry, logging, and state information collection. Protocol Designers
    should anticipate that AI-powered management tools may generate
    frequent and potentially aggressive querying patterns on network
-   devices and controllers. Therefore, protocols should be designed with clear data
+   devices and controllers. Therefore, protocols should be designed with data
    models and mechanisms intended to prevent overload from automated
    interactions, while also accounting for AI-specific security
    considerations such as data integrity and protection against
