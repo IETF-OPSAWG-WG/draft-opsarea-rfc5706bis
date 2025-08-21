@@ -1200,7 +1200,7 @@ DM         DM        DM     --> concrete/detailed model
    protocol / service activation on the device), network monitoring,
    and service monitoring (the impact of service activation on the
    network). Hence, it is recommended that, if the implementation of the
-   new protocol extension has any hardware/software performance implications
+   new Protocol Extension has any hardware/software performance implications
    (e.g., increased CPU utilization, memory consumption, or forwarding
    performance degradation), the Protocol Designers should clearly
    describe these impacts in the specification, along with any
