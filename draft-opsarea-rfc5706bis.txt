@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 8 February 2026                                       A. Farrel
+Expires: 22 February 2026                                      A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 8 February 2026                                       A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           7 August 2025
+                                                          21 August 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 February 2026.
+   This Internet-Draft will expire on 22 February 2026.
 
 Copyright Notice
 
@@ -562,7 +562,7 @@ Table of Contents
    careful consideration, active monitoring might achieve high accuracy
    at the cost of generating an excessive number of monitoring packets.
 
-   The Protocol Designer should consider the potential impact on the
+   Protocol Designers should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
    and traffic patterns that might change, including specific types of
    traffic, such as multicast.  Also, consider the need to install new
@@ -570,13 +570,13 @@ Table of Contents
    the configuration, such as servers performing auto-configuration
    operations.
 
-   The Protocol Designer should consider also the impact on
-   infrastructure applications like DNS [RFC1034], the registries, or
-   the size of routing tables.  For example, Simple Mail Transfer
-   Protocol (SMTP) [RFC5321] servers use a reverse DNS lookup to filter
-   out incoming connection requests.  When Berkeley installed a new spam
-   filter, their mail server stopped functioning because of overload of
-   the DNS cache resolver.
+   Protocol Designers should consider also the impact on infrastructure
+   applications like DNS [RFC1034], the registries, or the size of
+   routing tables.  For example, Simple Mail Transfer Protocol (SMTP)
+   [RFC5321] servers use a reverse DNS lookup to filter out incoming
+   connection requests.  When Berkeley installed a new spam filter,
+   their mail server stopped functioning because of overload of the DNS
+   cache resolver.
 
    The impact on performance may also be noted -- increased delay or
    jitter in real-time traffic applications, or increased response time
@@ -590,15 +590,15 @@ Table of Contents
 
 4.6.  Verifying Correct Operation
 
-   The Protocol Designer should consider techniques for testing the
-   effect that the protocol has had on the network by sending data
-   through the network and observing its behavior (a.k.a., active
-   monitoring).  Protocol Designers should consider how the correct end-
-   to-end operation of the New Protocol or Protocol Extension in the
-   network can be tested actively and passively, and how the correct
-   data or forwarding plane function of each network element can be
-   verified to be working properly with the New Protocol.  Which metrics
-   are of interest?
+   Protocol Designers should consider techniques for testing the effect
+   that the protocol has had on the network by sending data through the
+   network and observing its behavior (a.k.a., active monitoring).
+   Protocol Designers should consider how the correct end- to-end
+   operation of the New Protocol or Protocol Extension in the network
+   can be tested actively and passively, and how the correct data or
+   forwarding plane function of each network element can be verified to
+   be working properly with the New Protocol.  Which metrics are of
+   interest?
 
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
@@ -1009,18 +1009,18 @@ Table of Contents
 
 5.4.  Fault Management
 
-   The Protocol Designer should document the basic Faults and health
+   Protocol Designers should document the basic Faults and health
    indicators that need to be instrumented for the New Protocol or
    Protocol Extension, as well as the alarms and events that must be
    propagated to management applications or exposed through a Data
    Model.
 
-   The Protocol Designer should consider how fault information will be
+   Protocol Designers should consider how fault information will be
    propagated.  Will it be done using asynchronous notifications or
    polling of health indicators?
 
    If notifications are used to alert operators to certain conditions,
-   then the Protocol Designer should discuss mechanisms to throttle
+   then Protocol Designers should discuss mechanisms to throttle
    notifications to prevent congestion and duplications of event
    notifications.  Will there be a hierarchy of Faults, and will the
    Fault reporting be done by each Fault in the hierarchy, or will only
@@ -1598,15 +1598,16 @@ Table of Contents
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
               Key Terms for Network Fault and Problem Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-terminology-
-              21, 6 August 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-nmop-terminology-21>.
+              23, 18 August 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
+              terminology-23>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-09, 2 July 2025,
+              draft-ietf-opsawg-oam-characterization-10, 13 August 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
-              oam-characterization-09>.
+              oam-characterization-10>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
