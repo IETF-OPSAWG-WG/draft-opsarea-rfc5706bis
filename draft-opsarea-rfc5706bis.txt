@@ -1932,12 +1932,16 @@ Acknowledgements
 
    The IETF Ops Directorate:  The IETF Ops Directorate [IETF-OPS-Dir]
       reviewer team, who has been providing document reviews for over a
-      decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and
-      Bo Wu.
+      decade, and its Chairs past and present: Gunter Van de Velde,
+      Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.
 
    The AD championing the update:  Med Boucadair initiated the effort to
       refresh RFC 5706, 15 years after its publication, building on an
       idea originally suggested by Carlos Pignataro.
+
+   Reviewers of this document:  Thanks Mahesh Jethanandani, Chongfeng
+      Xie, Alvaro Retana, and Michael P. to for review comments and
+      contributions.
 
    The author of RFC 5706:  David Harrington
 
