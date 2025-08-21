@@ -1514,7 +1514,6 @@ DM         DM        DM     --> concrete/detailed model
    See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 #  Acknowledgements {#sec-ack}
-
 {:numbered="false"}
 
 The authors wish to thank the following individuals and groups.
