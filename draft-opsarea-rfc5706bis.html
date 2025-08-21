@@ -2295,9 +2295,13 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <a href="#section-5.4" class="section-number selfRef">5.4. </a><a href="#name-fault-management" class="section-name selfRef">Fault Management</a>
         </h3>
 <p id="section-5.4-1">Protocol Designers should document the basic Faults and health
-   indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
-   as the alarms and events that must be propagated to management
-   applications or exposed through a Data Model.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
+   indicators that need to be instrumented for the New Protocol or
+   Protocol Extension, as well as the alarms and events that must be
+   propagated to management applications or exposed through a Data
+   Model. It is also recommended to describe how the Protocol Extension
+   will affect the existing alarms and notification structure of the
+   base Protocol, and to outline the potential impact of misconfigurations
+   of the Protocol Extensions.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
 <p id="section-5.4-2">Protocol Designers should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?<a href="#section-5.4-2" class="pilcrow">¶</a></p>
@@ -2546,8 +2550,15 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    are typically of less value.<a href="#section-5.7-3" class="pilcrow">¶</a></p>
 <p id="section-5.7-4">There are several parts to performance management to be considered:
    protocol monitoring, device monitoring (the impact of the new
-   protocol / service activation on the device), network monitoring, and
-   service monitoring (the impact of service activation on the network).<a href="#section-5.7-4" class="pilcrow">¶</a></p>
+   protocol / service activation on the device), network monitoring,
+   and service monitoring (the impact of service activation on the
+   network). Hence, it is recommended that, if the implementation of the
+   new Protocol Extension has any hardware/software performance implications
+   (e.g., increased CPU utilization, memory consumption, or forwarding
+   performance degradation), the Protocol Designers should clearly
+   describe these impacts in the specification, along with any
+   conditions under which they may occur and possible mitigation
+   strategies.<a href="#section-5.7-4" class="pilcrow">¶</a></p>
 <div id="sec-monitor-proto">
 <section id="section-5.7.1">
           <h4 id="name-monitoring-the-protocol">
