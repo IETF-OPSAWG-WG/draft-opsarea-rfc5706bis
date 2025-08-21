@@ -953,10 +953,15 @@ DM         DM        DM     --> concrete/detailed model
 
 ## Fault Management {#sec-fm-mgmt}
 
+
    Protocol Designers should document the basic Faults and health
-   indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
-   as the alarms and events that must be propagated to management
-   applications or exposed through a Data Model.
+   indicators that need to be instrumented for the New Protocol or
+   Protocol Extension, as well as the alarms and events that must be
+   propagated to management applications or exposed through a Data
+   Model. It is also recommended to describe how the Protocol Extension
+   will affect the existing alarms and notification structure of the
+   base Protocol, and to outline the potential impact of misconfigurations
+   of the Protocol Extensions.
 
    Protocol Designers should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
@@ -1193,8 +1198,15 @@ DM         DM        DM     --> concrete/detailed model
 
    There are several parts to performance management to be considered:
    protocol monitoring, device monitoring (the impact of the new
-   protocol / service activation on the device), network monitoring, and
-   service monitoring (the impact of service activation on the network).
+   protocol / service activation on the device), network monitoring,
+   and service monitoring (the impact of service activation on the
+   network). Hence, it is recommended that, if the implementation of the
+   new Protocol Extension has any hardware/software performance implications
+   (e.g., increased CPU utilization, memory consumption, or forwarding
+   performance degradation), the Protocol Designers should clearly
+   describe these impacts in the specification, along with any
+   conditions under which they may occur and possible mitigation
+   strategies.
 
 ###  Monitoring the Protocol {#sec-monitor-proto}
 
