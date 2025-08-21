@@ -1518,30 +1518,30 @@ DM         DM        DM     --> concrete/detailed model
 
 The authors wish to thank the following individuals and groups.
 
-
 The IETF Ops Directorate:
-   : The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.
-
+: The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.
 
 The AD championing the update:
-   : Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
+: Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
+Reviewers of this document:
+: Thanks Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, and Michael P. to for review comments and contributions.
 
 The author of RFC 5706:
 : David Harrington
 
 Acknowledgments from RFC 5706:
 
-   : This document started from an earlier document edited by Adrian
-     Farrel, which itself was based on work exploring the need for
-     Manageability Considerations sections in all Internet-Drafts produced
-     within the Routing Area of the IETF. That earlier work was produced
-     by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable
-     feedback provided by Pekka Savola and Bert Wijnen.
+: This document started from an earlier document edited by Adrian
+Farrel, which itself was based on work exploring the need for
+Manageability Considerations sections in all Internet-Drafts produced
+within the Routing Area of the IETF. That earlier work was produced
+by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable
+feedback provided by Pekka Savola and Bert Wijnen.
 
-   : Some of the discussion about designing for manageability came from
-     private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.
+: Some of the discussion about designing for manageability came from
+private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.
 
-   : Thanks to reviewers who helped fashion this document, including
-     Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
-     Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
+: Thanks to reviewers who helped fashion this document, including
+Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
+Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
