@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 14 February 2026                                      A. Farrel
+Expires: 22 February 2026                                      A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 14 February 2026                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                          13 August 2025
+                                                          21 August 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 February 2026.
+   This Internet-Draft will expire on 22 February 2026.
 
 Copyright Notice
 
@@ -1016,7 +1016,7 @@ Table of Contents
    Model.  It is also recommended to describe how the Protocol Extension
    will affect the existing alarms and notification structure of the
    base Protocol, and to outline the potential impact of
-   misconfigurations of the protocol extensions.
+   misconfigurations of the Protocol Extensions.
 
    The Protocol Designer should consider how fault information will be
    propagated.  Will it be done using asynchronous notifications or
@@ -1608,15 +1608,16 @@ Table of Contents
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
               Key Terms for Network Fault and Problem Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-terminology-
-              21, 6 August 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-nmop-terminology-21>.
+              23, 18 August 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
+              terminology-23>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-09, 2 July 2025,
+              draft-ietf-opsawg-oam-characterization-10, 13 August 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
-              oam-characterization-09>.
+              oam-characterization-10>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
