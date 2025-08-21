@@ -106,6 +106,7 @@ Table of Contents
        5.7.4.  Monitoring the Service
      5.8.  Security Management
    6.  Operational and Management Tooling Considerations
+     6.1.  AI Tooling Considerations
    7.  IANA Considerations
    8.  Operational Considerations
    9.  Security Considerations
@@ -562,7 +563,7 @@ Table of Contents
    careful consideration, active monitoring might achieve high accuracy
    at the cost of generating an excessive number of monitoring packets.
 
-   The Protocol Designer should consider the potential impact on the
+   Protocol Designers should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
    and traffic patterns that might change, including specific types of
    traffic, such as multicast.  Also, consider the need to install new
@@ -570,13 +571,13 @@ Table of Contents
    the configuration, such as servers performing auto-configuration
    operations.
 
-   The Protocol Designer should consider also the impact on
-   infrastructure applications like DNS [RFC1034], the registries, or
-   the size of routing tables.  For example, Simple Mail Transfer
-   Protocol (SMTP) [RFC5321] servers use a reverse DNS lookup to filter
-   out incoming connection requests.  When Berkeley installed a new spam
-   filter, their mail server stopped functioning because of overload of
-   the DNS cache resolver.
+   Protocol Designers should consider also the impact on infrastructure
+   applications like DNS [RFC1034], the registries, or the size of
+   routing tables.  For example, Simple Mail Transfer Protocol (SMTP)
+   [RFC5321] servers use a reverse DNS lookup to filter out incoming
+   connection requests.  When Berkeley installed a new spam filter,
+   their mail server stopped functioning because of overload of the DNS
+   cache resolver.
 
    The impact on performance may also be noted -- increased delay or
    jitter in real-time traffic applications, or increased response time
@@ -590,15 +591,15 @@ Table of Contents
 
 4.6.  Verifying Correct Operation
 
-   The Protocol Designer should consider techniques for testing the
-   effect that the protocol has had on the network by sending data
-   through the network and observing its behavior (a.k.a., active
-   monitoring).  Protocol Designers should consider how the correct end-
-   to-end operation of the New Protocol or Protocol Extension in the
-   network can be tested actively and passively, and how the correct
-   data or forwarding plane function of each network element can be
-   verified to be working properly with the New Protocol.  Which metrics
-   are of interest?
+   Protocol Designers should consider techniques for testing the effect
+   that the protocol has had on the network by sending data through the
+   network and observing its behavior (a.k.a., active monitoring).
+   Protocol Designers should consider how the correct end- to-end
+   operation of the New Protocol or Protocol Extension in the network
+   can be tested actively and passively, and how the correct data or
+   forwarding plane function of each network element can be verified to
+   be working properly with the New Protocol.  Which metrics are of
+   interest?
 
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
@@ -1009,7 +1010,7 @@ Table of Contents
 
 5.4.  Fault Management
 
-   The Protocol Designer should document the basic Faults and health
+   Protocol Designers should document the basic Faults and health
    indicators that need to be instrumented for the New Protocol or
    Protocol Extension, as well as the alarms and events that must be
    propagated to management applications or exposed through a Data
@@ -1018,12 +1019,12 @@ Table of Contents
    base Protocol, and to outline the potential impact of
    misconfigurations of the Protocol Extensions.
 
-   The Protocol Designer should consider how fault information will be
+   Protocol Designers should consider how fault information will be
    propagated.  Will it be done using asynchronous notifications or
    polling of health indicators?
 
    If notifications are used to alert operators to certain conditions,
-   then the Protocol Designer should discuss mechanisms to throttle
+   then Protocol Designers should discuss mechanisms to throttle
    notifications to prevent congestion and duplications of event
    notifications.  Will there be a hierarchy of Faults, and will the
    Fault reporting be done by each Fault in the hierarchy, or will only
@@ -1495,6 +1496,24 @@ Table of Contents
       tools lower the barrier to entry, encourage collaboration, and
       provide operators with the flexibility to customize and extend the
       tools to meet their specific needs.
+
+6.1.  AI Tooling Considerations
+
+   With the increasing adoption of Artificial Intelligence (AI) in
+   network operations, Protocol Designers must consider the implication
+   such functions may have on protocols and protocol extensions.  AI
+   models often require extensive and granular data for training and
+   inference, requiring efficient, scalable, and secure mechanisms for
+   telemetry, logging, and state information collection.  Protocol
+   Designers should anticipate that AI-powered management tools may
+   generate frequent and potentially aggressive querying patterns on
+   network devices and controllers.  Therefore, protocols should be
+   designed with data models and mechanisms intended to prevent overload
+   from automated interactions, while also accounting for AI-specific
+   security considerations such as data integrity and protection against
+   adversarial attacks on management interfaces.  These considerations
+   are also relevant to Performance Management (Section 5.7) and
+   Security Management (Section 5.8).
 
 7.  IANA Considerations
 

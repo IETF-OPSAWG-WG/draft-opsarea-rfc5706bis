@@ -1303,6 +1303,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
             <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-operational-and-management-" class="internal xref">Operational and Management Tooling Considerations</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-ai-tooling-considerations" class="internal xref">AI Tooling Considerations</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
@@ -1807,14 +1812,14 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
 <p id="section-4.5-3">A protocol could send active monitoring packets on the wire. Without careful
    consideration, active monitoring might achieve high accuracy at the cost of
    generating an excessive number of monitoring packets.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
-<p id="section-4.5-4">The Protocol Designer should consider the potential impact on the
+<p id="section-4.5-4">Protocol Designers should consider the potential impact on the
    behavior of other protocols in the network and on the traffic levels
    and traffic patterns that might change, including specific types of
    traffic, such as multicast. Also, consider the need to install new
    components that are added to the network as a result of changes in
    the configuration, such as servers performing auto-configuration
    operations.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
-<p id="section-4.5-5">The Protocol Designer should consider also the impact on
+<p id="section-4.5-5">Protocol Designers should consider also the impact on
    infrastructure applications like DNS <span>[<a href="#RFC1034" class="cite xref">RFC1034</a>]</span>, the registries, or
    the size of routing tables. For example, Simple Mail Transfer
    Protocol (SMTP) <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
@@ -1836,7 +1841,7 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
         <h3 id="name-verifying-correct-operation">
 <a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-verifying-correct-operation" class="section-name selfRef">Verifying Correct Operation</a>
         </h3>
-<p id="section-4.6-1">The Protocol Designer should consider techniques for testing the
+<p id="section-4.6-1">Protocol Designers should consider techniques for testing the
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct end-
@@ -2289,7 +2294,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
         <h3 id="name-fault-management">
 <a href="#section-5.4" class="section-number selfRef">5.4. </a><a href="#name-fault-management" class="section-name selfRef">Fault Management</a>
         </h3>
-<p id="section-5.4-1">The Protocol Designer should document the basic Faults and health
+<p id="section-5.4-1">Protocol Designers should document the basic Faults and health
    indicators that need to be instrumented for the New Protocol or
    Protocol Extension, as well as the alarms and events that must be
    propagated to management applications or exposed through a Data
@@ -2297,11 +2302,11 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    will affect the existing alarms and notification structure of the
    base Protocol, and to outline the potential impact of misconfigurations
    of the Protocol Extensions.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
-<p id="section-5.4-2">The Protocol Designer should consider how fault information will be
+<p id="section-5.4-2">Protocol Designers should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?<a href="#section-5.4-2" class="pilcrow">¶</a></p>
 <p id="section-5.4-3">If notifications are used to alert operators to certain conditions,
-   then the Protocol Designer should discuss mechanisms to throttle
+   then Protocol Designers should discuss mechanisms to throttle
    notifications to prevent congestion and duplications of event
    notifications. Will there be a hierarchy of Faults, and will the
    Fault reporting be done by each Fault in the hierarchy, or will only
@@ -2796,6 +2801,29 @@ encourage collaboration, and provide operators with the flexibility to customize
 and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
+<div id="sec-ai-tooling">
+<section id="section-6.1">
+        <h3 id="name-ai-tooling-considerations">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-ai-tooling-considerations" class="section-name selfRef">AI Tooling Considerations</a>
+        </h3>
+<p id="section-6.1-1">With the increasing adoption of Artificial Intelligence (AI)
+   in network operations, Protocol Designers
+   must consider the implication such functions may have on protocols
+   and protocol extensions. AI
+   models often require extensive and granular data for training and
+   inference, requiring efficient, scalable, and secure mechanisms
+   for telemetry, logging, and state information collection. Protocol Designers
+   should anticipate that AI-powered management tools may generate
+   frequent and potentially aggressive querying patterns on network
+   devices and controllers. Therefore, protocols should be designed with data
+   models and mechanisms intended to prevent overload from automated
+   interactions, while also accounting for AI-specific security
+   considerations such as data integrity and protection against
+   adversarial attacks on management interfaces. These considerations
+   are also relevant to Performance Management (Section <a href="#sec-perf-mgmt" class="auto internal xref">5.7</a>)
+   and Security Management (Section <a href="#sec-security-mgmt" class="auto internal xref">5.8</a>).<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="sec-iana">
