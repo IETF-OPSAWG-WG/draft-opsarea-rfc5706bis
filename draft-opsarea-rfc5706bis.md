@@ -960,7 +960,7 @@ DM         DM        DM     --> concrete/detailed model
    Model. It is also recommended to describe how the Protocol Extension
    will affect the existing alarms and notification structure of the
    base Protocol, and to outline the potential impact of misconfigurations
-   of the protocol extensions.
+   of the Protocol Extensions.
 
    The Protocol Designer should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
