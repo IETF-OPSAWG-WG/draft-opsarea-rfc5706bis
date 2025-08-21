@@ -1429,7 +1429,7 @@ DM         DM        DM     --> concrete/detailed model
    should anticipate that AI-powered management tools may generate
    frequent and potentially aggressive querying patterns on network
    devices and controllers. Therefore, protocols should be designed with clear data
-   models and mechanisms to prevent overload from automated
+   models and mechanisms intended to prevent overload from automated
    interactions, while also accounting for AI-specific security
    considerations such as data integrity and protection against
    adversarial attacks on management interfaces. These considerations
