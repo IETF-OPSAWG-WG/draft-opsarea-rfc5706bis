@@ -54,6 +54,7 @@ informative:
   SECOPS:
     target: https://niccs.cisa.gov/resources/glossary
     title: NICCS Glossary
+    date: 2025-08
 
 author:
  -
