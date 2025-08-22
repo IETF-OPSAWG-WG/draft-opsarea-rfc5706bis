@@ -565,9 +565,9 @@ This document does not describe interoperability requirements. As such, it does 
 
 ## Impact on Security Operations {#sec-impact-secops}
 
-   As well as outlining the impacts on the operations of existing Networks, Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations (SecOps) in networks that the protocol will be deployed in. Security operators detect malicious activity and respond to threats and are a crucial part of defending networks from attacks. 
+   Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations (SecOps) in networks that the protocol will be deployed in. Security operators detect malicious activity and respond to threats and are a crucial part of defending networks from attacks. 
 
-   The discovery of Indicators of Compromise (IoCs) {{?RFC9424}} is relied upon by security operators to identify and block malicious activity. A New Protocol or Protocol Extension may have implications for the types, locations or availability of IoCs and Protocol Designers should outline such impacts. Similarly, to be most effective, IoCs are required to be shared at scale so consideration should be given to ensure this is possible. 
+   Indicators of Compromise (IoCs) {{?RFC9424}} are relied upon by security operators to identify and block malicious activity. A New Protocol or Protocol Extension may have implications for the types, locations or availability of IoCs and Protocol Designers should outline such impacts. Similarly, to be most effective, IoCs are required to be shared at scale so consideration should be given to ensure this is possible. 
 
    The protocol specification should consider any impact to the ability of attackers to perform malicious activities, such as Command and Control (C2) communications, network traversal or facilitation of exfiltration of data from the network. A New Protocol may offer different opportunities for performing such malicious activity or could prevent current techniques, and this should be captured. 
 
