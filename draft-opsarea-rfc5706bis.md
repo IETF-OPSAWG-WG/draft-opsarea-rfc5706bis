@@ -50,6 +50,10 @@ informative:
     author:
     - org: IAB
     date: 2024-12
+  
+  SECOPS:
+    target: https://niccs.cisa.gov/resources/glossary
+    title: NICCS Glossary
 
 author:
  -
@@ -565,7 +569,9 @@ This document does not describe interoperability requirements. As such, it does 
 
 ## Impact on Security Operations {#sec-impact-secops}
 
-   Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations (SecOps) in networks that the protocol will be deployed in. Security operators detect malicious activity and respond to threats and are a crucial part of defending networks from attacks. 
+   Security Operations (SecOps) is a collaborative approach that combines security and operational teams to protect networks and digital assets {{SECOPS}}. Historically, these functions were performed separately, with siloed teams having different priorities. SecOps combines these roles to improve the ability of operators to protect and manage the network effectively and efficiently. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.  
+
+   Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations (SecOps) in networks that the protocol will be deployed in. 
 
    Indicators of Compromise (IoCs) {{?RFC9424}} are relied upon by security operators to identify and block malicious activity. A New Protocol or Protocol Extension may have implications for the types, locations or availability of IoCs and Protocol Designers should outline such impacts. Similarly, to be most effective, IoCs are required to be shared at scale so consideration should be given to ensure this is possible. 
 
