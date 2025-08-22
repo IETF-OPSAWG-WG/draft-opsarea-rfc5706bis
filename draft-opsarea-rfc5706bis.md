@@ -50,6 +50,11 @@ informative:
     author:
     - org: IAB
     date: 2024-12
+  
+  SECOPS:
+    target: https://niccs.cisa.gov/resources/glossary
+    title: NICCS Glossary
+    date: 2025-08
 
 author:
  -
@@ -562,6 +567,30 @@ This document does not describe interoperability requirements. As such, it does 
    changes. Given configuration A and configuration B, it should be
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
+
+## Impact on Security Operations {#sec-impact-secops}
+
+   Security Operations (SecOps) is a collaborative approach that combines security and operational teams to protect networks and digital assets {{SECOPS}}. Historically, these functions were performed separately, with siloed teams having different priorities. SecOps combines these roles to improve the ability of operators to protect and manage the network effectively and efficiently. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.  
+
+   Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations (SecOps) in networks that the protocol will be deployed in. 
+
+   Indicators of Compromise (IoCs) {{?RFC9424}} are relied upon by security operators to identify and block malicious activity. A New Protocol or Protocol Extension may have implications for the types, locations or availability of IoCs and Protocol Designers should outline such impacts. Similarly, to be most effective, IoCs are required to be shared at scale so consideration should be given to ensure this is possible. 
+
+   Security operators are required to understand, detect and counter malicious activity, and adapt to changing threats. New Protocol or Protocol Extension may change attacker activity, which would change how a security operator would detect and defend against such activity. As such, the protocol specification should consider any impact to the ability of attackers to perform malicious activities, such as Command and Control (C2) communications, network traversal or facilitation of exfiltration of data from the network. A New Protocol may offer different opportunities for performing such malicious activity or could prevent current techniques, which would impact how a security operator manages their network. 
+
+   As in {{sec-impact}}, Protocol Designers should also consider the impact of traffic levels and traffic patterns from a security perspective, for example, factoring in the ability to defend against malicious distributed denial-of-service (DDoS) attacks. Protocol Designers should also consider whether New Protocol could be used to create DDoS attacks, for example amplication attacks in DNS or NTP. Operators may require new tooling or methods for managing network traffic in response to a change in potential risk to ensure consistent availability and performance of the network. 
+
+   Many security operation tools are automated to detect threats, and implications of New Protocols and Protocol Extensions for such tooling should be captured, for example aiming to minimise the likelihood of false positives which can lead to operators to be desensitised to alerts when deploying a New Protocol.
+
+   In order to reduce the effects of compromise, security operators may also require digital forensics from the network or endpoints to enable effective incident response or threat hunting. Key sources of this information may be found in logs which could provide details of authentication or authorization events, network traffic or endpoint-detection events, for example. In particular, where a New Protocol changes the properties or topology of the network, Protocol Designers should consider the requirement for digital forensics and whether logs for the network, endpoints or any new intermediaries introduced are impacted positively or negatively. {{?I-D.ietf-quic-qlog-main-schema}} is an example of structured logging for network protocols, and new ways of providing logging should be considered when designing a New Protocol.  
+
+   As above, any impact on forensic tooling should be considered. Updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators.
+
+   Protocol Designers will often consider building in flexibility for future versions and extensions from the outset so that code can easily be written to handle, identify and differentiate between versions. This practice will also be beneficial for security operators so should be considered. 
+
+   Incentivising good security operational practices should be considered in the design of New Protocol or Protocol Extension. For example, enabling patching is fundamental for security operations and should be incentivised so Protocol Designers should consider supporting cheap and fast connection handoffs and reconnections. 
+
+   If protocols are being updated or replaced, consideration should be given to the current techniques employed by operators of the deployed protocol and corresponding infrastructure to provide operational security. Specifications should ensure that mitigations are included, where possible, so that consistent security operations and management can be achieved.
 
 ##  Verifying Correct Operation {#sec-oper-verify}
 
