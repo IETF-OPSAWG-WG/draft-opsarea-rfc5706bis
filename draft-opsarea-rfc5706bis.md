@@ -588,7 +588,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    Protocol Designers will often consider building in flexibility for future versions and extensions from the outset so that code can easily be written to handle, identify and differentiate between versions. This practice will also be beneficial for security operators so should be considered. 
 
-   Incentivising good security operational practices should be considered in the design of New Protocol or Protocol Extension. For example, enabling patching is fundamental for security operations and should be incentivised so Protocol Designers should consider supporting cheap and fast connection handoffs and reconnections. 
+   Incentivizing good security operational practices should be considered in the design of New Protocol or Protocol Extension. For example, patching is fundamental for security operations and can be incentivised if Protocol Designers consider supporting cheap and fast connection handoffs and reconnections. 
 
    If protocols are being updated or replaced, consideration should be given to the current techniques employed by operators of the deployed protocol and corresponding infrastructure to provide operational security. Specifications should ensure that mitigations are included, where possible, so that consistent security operations and management can be achieved.
 
