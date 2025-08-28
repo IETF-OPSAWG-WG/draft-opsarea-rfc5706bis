@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-24T00:53:32.116281+00:00",
+  "timestamp": "2025-08-28T00:45:29.709587+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -8228,13 +8228,13 @@
       "labels": [],
       "body": "Please see suggested text for a section on Impact on Security Operations",
       "createdAt": "2025-08-08T14:37:52Z",
-      "updatedAt": "2025-08-22T15:11:04Z",
+      "updatedAt": "2025-08-27T13:41:57Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
       "headRepository": "michael-p-1/draft-opsarea-rfc5706bis",
       "headRefName": "security-operations",
-      "headRefOid": "43de0ab4fde2f89d35b30082f05d0180280dc3d5",
+      "headRefOid": "7849a65071bc0d4c0d7f292ac60ada5a8843ea50",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -8260,6 +8260,13 @@
           "body": "Thank you for the review, and for making time to discuss this during your calls. \r\n\r\nI agree with making sure that we don't stray into Security Considerations, so will refactor to draw out operational considerations. \r\n\r\nOn definitions, I agree that the text can be more verbose in explaining the definition SecOps, so I will add that at the beginning of this section. Thank you for the suggested text - that is consistent with my understanding and the definitions on the websites of some of the major cyber security companies (Palo Alto/Fortinet/Microsoft/SentinelOne/Crowdstike/CyberArk all agree). Rather than use those websites as a reference, I will include this glossary entry from CISA which is consistent too https://niccs.cisa.gov/resources/glossary \r\n\r\n @bclaise - I wanted to make sure I understood your comments on references, as I'm not sure I'm reading it correctly. Are you saying that you would want more specific actions linked to those references? Or do you mean the opposite in that the references should be informative, rather than overly specific/actionable? In which case I can edit to make that clear.\r\nWith the IoCs reference; IoCs are very much part of how security operators work, so very much see that paragraph and reference as fundamental to operations - sharing is one such use, there's a full lifecycle outlined in that document on how they are used, so I can point to that as an action if that's what you would like. \r\nWith the I-D.ietf-quic-qlog-main-schema, that was less meant as an action for a reader to use specifically, but an example of where changes to logging has been considered in the protocol design process. \r\n\r\n   ",
           "createdAt": "2025-08-22T13:18:43Z",
           "updatedAt": "2025-08-22T14:23:41Z"
+        },
+        {
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "body": "> Thank you for the review, and for making time to discuss this during your calls.\r\n> \r\n> I agree with making sure that we don't stray into Security Considerations, so will refactor to draw out operational considerations.\r\n> \r\n> On definitions, I agree that the text can be more verbose in explaining the definition SecOps, so I will add that at the beginning of this section. Thank you for the suggested text - that is consistent with my understanding and the definitions on the websites of some of the major cyber security companies (Palo Alto/Fortinet/Microsoft/SentinelOne/Crowdstike/CyberArk all agree). Rather than use those websites as a reference, I will include this glossary entry from CISA which is consistent too https://niccs.cisa.gov/resources/glossary\r\n> \r\n> @bclaise - I wanted to make sure I understood your comments on references, as I'm not sure I'm reading it correctly. Are you saying that you would want more specific actions linked to those references? Or do you mean the opposite in that the references should be informative, rather than overly specific/actionable? In which case I can edit to make that clear. With the IoCs reference; IoCs are very much part of how security operators work, so very much see that paragraph and reference as fundamental to operations - sharing is one such use, there's a full lifecycle outlined in that document on how they are used, so I can point to that as an action if that's what you would like. With the I-D.ietf-quic-qlog-main-schema, that was less meant as an action for a reader to use specifically, but an example of where changes to logging has been considered in the protocol design process.\r\n\r\nUpdate - I have updated both the paragraphs with the references ",
+          "createdAt": "2025-08-27T13:41:57Z",
+          "updatedAt": "2025-08-27T13:41:57Z"
         }
       ],
       "reviews": [
@@ -8410,6 +8417,46 @@
               "body": "Maybe an example of implications and what \"at scale\" in this case means would be helpful.",
               "createdAt": "2025-08-22T15:10:53Z",
               "updatedAt": "2025-08-22T15:11:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs68V2MO",
+          "commit": {
+            "abbreviatedOid": "43de0ab"
+          },
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-27T13:38:37Z",
+          "updatedAt": "2025-08-27T13:38:38Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "I've updated this section to address this comment ",
+              "createdAt": "2025-08-27T13:38:38Z",
+              "updatedAt": "2025-08-27T13:38:38Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs68V2wK",
+          "commit": {
+            "abbreviatedOid": "43de0ab"
+          },
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-27T13:39:14Z",
+          "updatedAt": "2025-08-27T13:39:14Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "I've updated this section to address this comment (along with overarching point of making sure its operationally focused, rather than security focused)",
+              "createdAt": "2025-08-27T13:39:14Z",
+              "updatedAt": "2025-08-27T13:39:14Z"
             }
           ]
         }
