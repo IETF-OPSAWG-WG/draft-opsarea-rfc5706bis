@@ -207,7 +207,7 @@ contributor:
    The OPS Directorate can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}. Ultimately,
-   the decision to incorporate this BCP's advice into their work remains with Protocol Designers and working groups themselves.
+   the decision to incorporate this dociument's advice into their work remains with Protocol Designers and working groups themselves.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
