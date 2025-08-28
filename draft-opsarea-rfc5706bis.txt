@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 22 February 2026                                      A. Farrel
+Expires: 1 March 2026                                          A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 22 February 2026                                      A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                          21 August 2025
+                                                          28 August 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 February 2026.
+   This Internet-Draft will expire on 1 March 2026.
 
 Copyright Notice
 
@@ -180,11 +180,16 @@ Table of Contents
 
 1.2.  Audience
 
-   The guidelines are intended to be useful to authors writing protocol
-   specification, providing guidance about what to consider when
-   thinking about the management and deployment of a new protocol, to
-   provide guidance about documenting those considerations, and helping
-   them provide a reasonably consistent format for such documentation.
+   The guidelines are intended to be useful to authors writing a
+   protocol specification, providing guidance on what to consider when
+   thinking about the management and deployment of new protocols,
+   documenting key considerations, and helping to provide a reasonably
+   consistent format for such documentation.  This document is intended
+   to offer a flexible set of guiding principles applicable to various
+   circumstances.  It provides a framework for working groups to ensure
+   that manageability considerations are an integral part of the
+   protocol design process, and its use should not be misinterpreted as
+   imposing new hurdles on work in other areas.
 
    Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -197,16 +202,18 @@ Table of Contents
    suggests appropriate standard protocols that could mitigate the
    threats.
 
-   This document does not impose a specific management or operational
-   solution, imply that a formal Data Model is needed, or imply that
-   using a specific management protocol is mandatory.  If Protocol
-   Designers conclude that the technology can be managed solely by using
-   Proprietary Interfaces or that it does not need any structured or
-   standardized Data Model, this might be fine, but it is a decision
-   that should be explicit in a manageability discussion -- that this is
-   how the protocol will need to be operated and managed.  Protocol
-   Designers should avoid deferring manageability to a later phase of
-   the development of the specification.
+   A core principle of this document is to encourage early on
+   discussions rather than mandating any specific solution.  It does not
+   impose a specific management or operational solution, imply that a
+   formal Data Model is needed, or imply that using a specific
+   management protocol is mandatory.  If Protocol Designers conclude
+   that the technology can be managed solely by using Proprietary
+   Interfaces or that it does not need any structured or standardized
+   Data Model, this might be fine, but it is a decision that should be
+   explicit in a manageability discussion -- that this is how the
+   protocol will need to be operated and managed.  Protocol Designers
+   should avoid deferring manageability to a later phase of the
+   development of the specification.
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
@@ -221,7 +228,9 @@ Table of Contents
    list of guidelines and a checklist of questions to consider, which a
    reviewer can use to evaluate whether the protocol and documentation
    address common operations and management needs, is provided in
-   [CHECKLIST].
+   [CHECKLIST].  Ultimately, the decision to incorporate this
+   dociument's advice into their work remains with Protocol Designers
+   and working groups themselves.
 
    This document is also of interest to the broader community, who wants
    to understand, contribute to, and review Internet-Drafts, taking
