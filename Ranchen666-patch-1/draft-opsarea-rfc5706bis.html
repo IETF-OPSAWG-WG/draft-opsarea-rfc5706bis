@@ -1066,7 +1066,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 12 February 2026</td>
+<td class="center">Expires 1 March 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1082,12 +1082,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-08-11" class="published">11 August 2025</time>
+<time datetime="2025-08-28" class="published">28 August 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-02-12">12 February 2026</time></dd>
+<dd class="expires"><time datetime="2026-03-01">1 March 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1151,7 +1151,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 12 February 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 1 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1303,6 +1303,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
             <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-operational-and-management-" class="internal xref">Operational and Management Tooling Considerations</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-ai-tooling-considerations" class="internal xref">AI Tooling Considerations</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
@@ -1403,11 +1408,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-audience" class="section-name selfRef">Audience</a>
         </h3>
 <p id="section-1.2-1">The guidelines are intended to be useful to authors
-   writing protocol specification, providing guidance about what to
-   consider when thinking about the management and deployment of a new
-   protocol, to provide guidance about documenting those
-   considerations, and helping them provide a reasonably
-   consistent format for such documentation.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+   writing a protocol specification, providing guidance on what to
+   consider when thinking about the management and deployment of new
+   protocols, documenting key considerations, and helping to provide a reasonably
+   consistent format for such documentation. This document is intended to offer a flexible set of
+   guiding principles applicable to various circumstances. It provides a framework for working groups
+   to ensure that manageability considerations are an integral part of the protocol design process, and
+   its use should not be misinterpreted as imposing new hurdles on work in other areas.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
 <p id="section-1.2-2">Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
@@ -1417,7 +1424,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
    per Guidelines for Writing RFC Text on Security Considerations <span>[<a href="#BCP72" class="cite xref">BCP72</a>]</span>)
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
-<p id="section-1.2-3">This document does not impose a specific management or operational solution,
+<p id="section-1.2-3">A core principle of this document is to encourage early on discussions rather than mandating any specific solution.
+   It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
    protocol is mandatory. If Protocol Designers conclude that the technology can be
    managed solely by using Proprietary Interfaces or that it does
@@ -1435,7 +1443,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
    experience has been gained.<a href="#section-1.2-4" class="pilcrow">¶</a></p>
 <p id="section-1.2-5">The OPS Directorate can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-1.2-5" class="pilcrow">¶</a></p>
+   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>. Ultimately,
+   the decision to incorporate this dociument's advice into their work remains with Protocol Designers and working groups themselves.<a href="#section-1.2-5" class="pilcrow">¶</a></p>
 <p id="section-1.2-6">This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.<a href="#section-1.2-6" class="pilcrow">¶</a></p>
 </section>
@@ -2290,9 +2299,13 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <a href="#section-5.4" class="section-number selfRef">5.4. </a><a href="#name-fault-management" class="section-name selfRef">Fault Management</a>
         </h3>
 <p id="section-5.4-1">Protocol Designers should document the basic Faults and health
-   indicators that need to be instrumented for the New Protocol or Protocol Extension, as well
-   as the alarms and events that must be propagated to management
-   applications or exposed through a Data Model.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
+   indicators that need to be instrumented for the New Protocol or
+   Protocol Extension, as well as the alarms and events that must be
+   propagated to management applications or exposed through a Data
+   Model. It is also recommended to describe how the Protocol Extension
+   will affect the existing alarms and notification structure of the
+   base Protocol, and to outline the potential impact of misconfigurations
+   of the Protocol Extensions.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
 <p id="section-5.4-2">Protocol Designers should consider how fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?<a href="#section-5.4-2" class="pilcrow">¶</a></p>
@@ -2541,8 +2554,15 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    are typically of less value.<a href="#section-5.7-3" class="pilcrow">¶</a></p>
 <p id="section-5.7-4">There are several parts to performance management to be considered:
    protocol monitoring, device monitoring (the impact of the new
-   protocol / service activation on the device), network monitoring, and
-   service monitoring (the impact of service activation on the network).<a href="#section-5.7-4" class="pilcrow">¶</a></p>
+   protocol / service activation on the device), network monitoring,
+   and service monitoring (the impact of service activation on the
+   network). Hence, it is recommended that, if the implementation of the
+   new Protocol Extension has any hardware/software performance implications
+   (e.g., increased CPU utilization, memory consumption, or forwarding
+   performance degradation), the Protocol Designers should clearly
+   describe these impacts in the specification, along with any
+   conditions under which they may occur and possible mitigation
+   strategies.<a href="#section-5.7-4" class="pilcrow">¶</a></p>
 <div id="sec-monitor-proto">
 <section id="section-5.7.1">
           <h4 id="name-monitoring-the-protocol">
@@ -2785,6 +2805,29 @@ encourage collaboration, and provide operators with the flexibility to customize
 and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
+<div id="sec-ai-tooling">
+<section id="section-6.1">
+        <h3 id="name-ai-tooling-considerations">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-ai-tooling-considerations" class="section-name selfRef">AI Tooling Considerations</a>
+        </h3>
+<p id="section-6.1-1">With the increasing adoption of Artificial Intelligence (AI)
+   in network operations, Protocol Designers
+   must consider the implication such functions may have on protocols
+   and protocol extensions. AI
+   models often require extensive and granular data for training and
+   inference, requiring efficient, scalable, and secure mechanisms
+   for telemetry, logging, and state information collection. Protocol Designers
+   should anticipate that AI-powered management tools may generate
+   frequent and potentially aggressive querying patterns on network
+   devices and controllers. Therefore, protocols should be designed with data
+   models and mechanisms intended to prevent overload from automated
+   interactions, while also accounting for AI-specific security
+   considerations such as data integrity and protection against
+   adversarial attacks on management interfaces. These considerations
+   are also relevant to Performance Management (Section <a href="#sec-perf-mgmt" class="auto internal xref">5.7</a>)
+   and Security Management (Section <a href="#sec-security-mgmt" class="auto internal xref">5.8</a>).<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="sec-iana">
@@ -2885,11 +2928,11 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-nmop-terminology">[I-D.ietf-nmop-terminology]</dt>
       <dd>
-<span class="refAuthor">Davis, N.</span>, <span class="refAuthor">Farrel, A.</span>, <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Wu, Q.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"Some Key Terms for Network Fault and Problem Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-terminology-21</span>, <time datetime="2025-08-06" class="refDate">6 August 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-terminology-21">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-terminology-21</a>&gt;</span>. </dd>
+<span class="refAuthor">Davis, N.</span>, <span class="refAuthor">Farrel, A.</span>, <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Wu, Q.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"Some Key Terms for Network Fault and Problem Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-terminology-23</span>, <time datetime="2025-08-18" class="refDate">18 August 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-terminology-23">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-terminology-23</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-opsawg-oam-characterization">[I-D.ietf-opsawg-oam-characterization]</dt>
       <dd>
-<span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-09</span>, <time datetime="2025-07-02" class="refDate">2 July 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-09">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-09</a>&gt;</span>. </dd>
+<span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-10</span>, <time datetime="2025-08-13" class="refDate">13 August 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-10">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-10</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IESG-STATEMENT">[IESG-STATEMENT]</dt>
       <dd>
@@ -3159,7 +3202,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <span class="break"></span><dl class="dlParallel" id="appendix-B-2">
         <dt id="appendix-B-2.1">The IETF Ops Directorate:</dt>
         <dd style="margin-left: 1.5em" id="appendix-B-2.2">
-          <p id="appendix-B-2.2.1">The IETF Ops Directorate <span>[<a href="#IETF-OPS-Dir" class="cite xref">IETF-OPS-Dir</a>]</span> reviewer team, who has been providing document reviews for over a decade, and its Chairs, Gunter Van de Velde, Carlos Pignataro, and Bo Wu.<a href="#appendix-B-2.2.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.2.1">The IETF Ops Directorate <span>[<a href="#IETF-OPS-Dir" class="cite xref">IETF-OPS-Dir</a>]</span> reviewer team, who has been providing document reviews for over a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.<a href="#appendix-B-2.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="appendix-B-2.3">The AD championing the update:</dt>
@@ -3167,32 +3210,37 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
           <p id="appendix-B-2.4.1">Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.<a href="#appendix-B-2.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-B-2.5">The author of RFC 5706:</dt>
+<dt id="appendix-B-2.5">Reviewers of this document:</dt>
         <dd style="margin-left: 1.5em" id="appendix-B-2.6">
-          <p id="appendix-B-2.6.1">David Harrington<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.6.1">Thanks Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, and Michael P. to for review comments and contributions.<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-B-2.7">Acknowledgments from RFC 5706:</dt>
+<dt id="appendix-B-2.7">The author of RFC 5706:</dt>
         <dd style="margin-left: 1.5em" id="appendix-B-2.8">
-          <p id="appendix-B-2.8.1">This document started from an earlier document edited by Adrian
+          <p id="appendix-B-2.8.1">David Harrington<a href="#appendix-B-2.8.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="appendix-B-2.9">Acknowledgments from RFC 5706:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-B-2.10">
+          <p id="appendix-B-2.10.1">This document started from an earlier document edited by Adrian
 Farrel, which itself was based on work exploring the need for
 Manageability Considerations sections in all Internet-Drafts produced
 within the Routing Area of the IETF. That earlier work was produced
 by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable
-feedback provided by Pekka Savola and Bert Wijnen.<a href="#appendix-B-2.8.1" class="pilcrow">¶</a></p>
-</dd>
-        <dd class="break"></dd>
-<dt id="appendix-B-2.9"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-B-2.10">
-          <p id="appendix-B-2.10.1">Some of the discussion about designing for manageability came from
-private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.<a href="#appendix-B-2.10.1" class="pilcrow">¶</a></p>
+feedback provided by Pekka Savola and Bert Wijnen.<a href="#appendix-B-2.10.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="appendix-B-2.11"></dt>
         <dd style="margin-left: 1.5em" id="appendix-B-2.12">
-          <p id="appendix-B-2.12.1">Thanks to reviewers who helped fashion this document, including
+          <p id="appendix-B-2.12.1">Some of the discussion about designing for manageability came from
+private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.<a href="#appendix-B-2.12.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="appendix-B-2.13"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-B-2.14">
+          <p id="appendix-B-2.14.1">Thanks to reviewers who helped fashion this document, including
 Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
-Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.<a href="#appendix-B-2.12.1" class="pilcrow">¶</a></p>
+Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.<a href="#appendix-B-2.14.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>
