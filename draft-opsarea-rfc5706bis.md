@@ -170,7 +170,7 @@ contributor:
    writing a protocol specification, providing guidance on what to
    consider when thinking about the management and deployment of new
    protocols, documenting key considerations, and helping to provide a reasonably
-   consistent format for such documentation. This Best Current Practice (BCP) is intended to offer a flexible set of
+   consistent format for such documentation. This document is intended to offer a flexible set of
    guiding principles applicable to various circumstances. It provides a framework for working groups
    to ensure that manageability considerations are an integral part of the protocol design process, and 
    its use should not be misinterpreted as imposing new hurdles on work in other areas.
