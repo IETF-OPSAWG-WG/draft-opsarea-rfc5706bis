@@ -174,7 +174,7 @@ contributor:
    guiding principles applicable to various circumstances. It provides a framework for working groups
    to ensure that manageability considerations are an integral part of the protocol design process, and
    its use should not be misinterpreted as imposing new hurdles on work in other areas.
-  
+
    Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
