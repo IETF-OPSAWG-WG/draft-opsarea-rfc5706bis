@@ -167,12 +167,14 @@ contributor:
 ##  Audience {#sec-audience}
 
    The guidelines are intended to be useful to authors
-   writing protocol specification, providing guidance about what to
-   consider when thinking about the management and deployment of a new
-   protocol, to provide guidance about documenting those
-   considerations, and helping them provide a reasonably
-   consistent format for such documentation.
-
+   writing a protocol specification, providing guidance on what to
+   consider when thinking about the management and deployment of new
+   protocols, documenting key considerations, and helping to provide a reasonably
+   consistent format for such documentation. This Best Current Practice (BCP) is intended to offer a flexible set of
+   guiding principles applicable to various circumstances. It provides a framework for working groups
+   to ensure that manageability considerations are an integral part of the protocol design process, and 
+   its use should not be misinterpreted as imposing new hurdles on work in other areas.
+  
    Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
    be addressed, and suggest (preferably standard) management protocols
@@ -183,7 +185,8 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
-   This document does not impose a specific management or operational solution,
+   A core principle of this BCP is to encourage discussion and explicit decision-making rather than mandating any specific solution.
+   It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
    protocol is mandatory. If Protocol Designers conclude that the technology can be
    managed solely by using Proprietary Interfaces or that it does
@@ -203,7 +206,8 @@ contributor:
 
    The OPS Directorate can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
+   documentation address common operations and management needs, is provided in {{CHECKLIST}}. Ultimately,
+   the decision to incorporate this BCP's advice into their work remains with Protocol Designers and working groups themselves.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
