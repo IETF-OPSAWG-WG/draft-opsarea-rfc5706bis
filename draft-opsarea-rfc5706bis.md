@@ -185,7 +185,7 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
-   A core principle of this BCP is to encourage discussion and explicit decision-making rather than mandating any specific solution.
+   A core principle of this document is to encourage early on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
    protocol is mandatory. If Protocol Designers conclude that the technology can be
