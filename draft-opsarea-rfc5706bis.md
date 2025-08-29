@@ -295,7 +295,6 @@ This document does not describe interoperability requirements. As such, it does 
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
 ##  "Operational Considerations" Section {#sec-oper-manag-considerations}
