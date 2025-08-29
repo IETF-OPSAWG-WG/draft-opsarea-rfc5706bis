@@ -1226,7 +1226,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Consider the expected behaviors for counters -- what is a reasonable
    maximum value for expected usage? Should they stop counting at the
-   maximum value retaining it, or should they rollover?
+   maximum value and retain it, or should they rollover?
    Guidance should explain how rollovers are detected, including multiple
    occurrences.
 
