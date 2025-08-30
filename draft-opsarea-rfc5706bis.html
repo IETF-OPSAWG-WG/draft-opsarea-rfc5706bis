@@ -16,9 +16,8 @@
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
-   reviewers of documents that define New Protocols or Protocol
-   Extensions regarding aspects of operations and management that they
-   should consider and include in their documents. 
+   reviewers on what operational and management aspects should be
+   addressed when defining New Protocols or Protocol Extensions. 
        This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    introduces a requirement to include an "Operational Considerations"
@@ -1066,7 +1065,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 1 March 2026</td>
+<td class="center">Expires 3 March 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1082,12 +1081,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-08-28" class="published">28 August 2025</time>
+<time datetime="2025-08-30" class="published">30 August 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-03-01">1 March 2026</time></dd>
+<dd class="expires"><time datetime="2026-03-03">3 March 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1124,9 +1123,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
-   reviewers of documents that define New Protocols or Protocol
-   Extensions regarding aspects of operations and management that they
-   should consider and include in their documents.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+   reviewers on what operational and management aspects should be
+   addressed when defining New Protocols or Protocol Extensions.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    introduces a requirement to include an "Operational Considerations"
@@ -1151,7 +1149,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 1 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 3 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1352,10 +1350,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
-   management particularly difficult. In order to make sure that protocols can be
-   deployed and used, the operational environment and manageability of a
-   protocol should be considered when New Protocols or Protocol Extensions
-   are designed.<a href="#section-1-1" class="pilcrow">¶</a></p>
+   management particularly difficult.
+   To ensure deployability, the operational environment and manageability
+   must be considered during design.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">This document provides guidelines to help Protocol Designers and working
    groups (WGs) consider the operations and management functionality for
    their New Protocol or Protocol Extension at an early phase in the design
@@ -1408,10 +1405,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-audience" class="section-name selfRef">Audience</a>
         </h3>
 <p id="section-1.2-1">The guidelines are intended to be useful to authors
-   writing a protocol specification, providing guidance on what to
-   consider when thinking about the management and deployment of new
-   protocols, documenting key considerations, and helping to provide a reasonably
-   consistent format for such documentation. This document is intended to offer a flexible set of
+   writing protocol specifications.
+   They outline what to consider for management and deployment, how to document
+   those aspects, and how to present them in a consistent format.
+    This document is intended to offer a flexible set of
    guiding principles applicable to various circumstances. It provides a framework for working groups
    to ensure that manageability considerations are an integral part of the protocol design process, and
    its use should not be misinterpreted as imposing new hurdles on work in other areas.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
@@ -1612,7 +1609,9 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
 <div class="alignLeft art-text artwork" id="section-3.2-3">
 <pre>
   "There are no new operations or manageability requirements introduced
-    by this document. &lt;-- Insert a brief explanation here.--&gt;"
+    by this document.
+
+    Explanation: [brief rationale goes here]"
 </pre><a href="#section-3.2-3" class="pilcrow">¶</a>
 </div>
 <p id="section-3.2-4">The presence of such a
@@ -2067,9 +2066,9 @@ usage accounting<a href="#section-5.2-7.2.1" class="pilcrow">¶</a></p>
    state, or statistical information will be relevant for effectively
    monitoring, controlling, or troubleshooting a New Protocol and its Protocol
    Extensions. This includes identifying key parameters that reflect the
-   protocol’s behavior, performance metrics, error indicators, and any
+   protocol's behavior, performance metrics, error indicators, and any
    contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.<a href="#section-5.2-11" class="pilcrow">¶</a></p>
-<span id="name-information-modelsimsand-da"></span><div id="fig-im-dm">
+<span id="name-information-models-ims-and-"></span><div id="fig-im-dm">
 <figure id="figure-1">
           <div id="section-5.2-12.1">
             <div class="alignCenter art-svg artwork" id="section-5.2-12.1.1">
@@ -2102,7 +2101,7 @@ usage accounting<a href="#section-5.2-7.2.1" class="pilcrow">¶</a></p>
 </div>
 </div>
 <figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
-<a href="#name-information-modelsimsand-da" class="selfRef">Information Models（IMs）and Data Models（DMs）</a>
+<a href="#name-information-models-ims-and-" class="selfRef">Information Models (IMs) and Data Models (DMs)</a>
           </figcaption></figure>
 </div>
 <p id="section-5.2-13">"On the Difference between Information Models and Data Models"
@@ -2298,9 +2297,8 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
         <h3 id="name-fault-management">
 <a href="#section-5.4" class="section-number selfRef">5.4. </a><a href="#name-fault-management" class="section-name selfRef">Fault Management</a>
         </h3>
-<p id="section-5.4-1">Protocol Designers should document the basic Faults and health
-   indicators that need to be instrumented for the New Protocol or
-   Protocol Extension, as well as the alarms and events that must be
+<p id="section-5.4-1">Protocol Designers should idenitify and documented
+   essential Faults, health indicators, alarms, and events that must be
    propagated to management applications or exposed through a Data
    Model. It is also recommended to describe how the Protocol Extension
    will affect the existing alarms and notification structure of the
@@ -2578,9 +2576,9 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    the count and what is not included in the count.<a href="#section-5.7.1-3" class="pilcrow">¶</a></p>
 <p id="section-5.7.1-4">Consider the expected behaviors for counters -- what is a reasonable
    maximum value for expected usage? Should they stop counting at the
-   maximum value and retain the maximum value, or should they rollover?
-   How can users determine if a rollover has occurred, and how can users
-   determine if more than one rollover has occurred?<a href="#section-5.7.1-4" class="pilcrow">¶</a></p>
+   maximum value and retain it, or should they rollover?
+   Guidance should explain how rollovers are detected, including multiple
+   occurrences.<a href="#section-5.7.1-4" class="pilcrow">¶</a></p>
 <p id="section-5.7.1-5">Consider whether multiple management applications will share a
    counter; if so, then no one management application should be allowed
    to reset the value to zero since this will impact other applications.<a href="#section-5.7.1-5" class="pilcrow">¶</a></p>
@@ -2670,11 +2668,9 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    with invalid timestamps? If such statistics are collected, is it
    important to count them separately for each sender to help identify
    the source of attacks?<a href="#section-5.8-4" class="pilcrow">¶</a></p>
-<p id="section-5.8-5">Manageability considerations that are security-oriented might include
-   discussion of the security implications when no monitoring is in
-   place, the regulatory implications of absence of audit-trail or logs
-   in enterprises, exceeding the capacity of logs, and security
-   exposures present in chosen/recommended management mechanisms.<a href="#section-5.8-5" class="pilcrow">¶</a></p>
+<p id="section-5.8-5">Security-oriented manageability topics may include risks of insufficient
+   monitoring, regulatory issues with missing audit trails, log capacity
+   limits, and security exposures in recommended management mechanisms.<a href="#section-5.8-5" class="pilcrow">¶</a></p>
 <p id="section-5.8-6">Consider security threats that may be introduced by management
    operations. For example, Control and Provisioning of Wireless Access
    Points (CAPWAP) breaks the structure of monolithic Access Points
@@ -2948,7 +2944,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="NEMOPS">[NEMOPS]</dt>
       <dd>
-<span class="refAuthor">Hardaker, W.</span> and <span class="refAuthor">D. Dhody</span>, <span class="refTitle">"Report from the IAB Workshop on the Next Era of Network Management Operations (NEMOPS)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-iab-nemops-workshop-report-03</span>, <time datetime="2025-07-21" class="refDate">21 July 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-iab-nemops-workshop-report-03">https://datatracker.ietf.org/doc/html/draft-iab-nemops-workshop-report-03</a>&gt;</span>. </dd>
+<span class="refAuthor">Hardaker, W.</span> and <span class="refAuthor">D. Dhody</span>, <span class="refTitle">"Report from the IAB Workshop on the Next Era of Network Management Operations (NEMOPS)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-iab-nemops-workshop-report-04</span>, <time datetime="2025-08-29" class="refDate">29 August 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-iab-nemops-workshop-report-04">https://datatracker.ietf.org/doc/html/draft-iab-nemops-workshop-report-04</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="NEMOPS-WORKSHOP">[NEMOPS-WORKSHOP]</dt>
       <dd>
