@@ -92,9 +92,8 @@ contributor:
    consideration of the functionality needed to operate and manage the
    protocols.  Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
-   reviewers of documents that define New Protocols or Protocol
-   Extensions regarding aspects of operations and management that they
-   should consider and include in their documents.
+   reviewers on what operational and management aspects should be
+   addressed when defining New Protocols or Protocol Extensions.
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
@@ -111,10 +110,9 @@ contributor:
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
-   management particularly difficult. In order to make sure that protocols can be
-   deployed and used, the operational environment and manageability of a
-   protocol should be considered when New Protocols or Protocol Extensions
-   are designed.
+   management particularly difficult.
+   To ensure deployability, the operational environment and manageability
+   must be considered during design.
 
    This document provides guidelines to help Protocol Designers and working
    groups (WGs) consider the operations and management functionality for
@@ -167,10 +165,10 @@ contributor:
 ##  Audience {#sec-audience}
 
    The guidelines are intended to be useful to authors
-   writing a protocol specification, providing guidance on what to
-   consider when thinking about the management and deployment of new
-   protocols, documenting key considerations, and helping to provide a reasonably
-   consistent format for such documentation. This document is intended to offer a flexible set of
+   writing protocol specifications.
+   They outline what to consider for management and deployment, how to document
+   those aspects, and how to present them in a consistent format.
+    This document is intended to offer a flexible set of
    guiding principles applicable to various circumstances. It provides a framework for working groups
    to ensure that manageability considerations are an integral part of the protocol design process, and
    its use should not be misinterpreted as imposing new hurdles on work in other areas.
@@ -347,7 +345,9 @@ This document does not describe interoperability requirements. As such, it does 
 
 ~~~~
   "There are no new operations or manageability requirements introduced
-    by this document. <-- Insert a brief explanation here.-->"
+    by this document.
+
+    Explanation: [brief rationale goes here]"
 ~~~~
 
    The presence of such a
@@ -773,7 +773,7 @@ This document does not describe interoperability requirements. As such, it does 
    state, or statistical information will be relevant for effectively
    monitoring, controlling, or troubleshooting a New Protocol and its Protocol
    Extensions. This includes identifying key parameters that reflect the
-   protocol’s behavior, performance metrics, error indicators, and any
+   protocol's behavior, performance metrics, error indicators, and any
    contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
 
 ~~~~ aasvg
@@ -785,7 +785,7 @@ DM         DM        DM     --> concrete/detailed model
                                    for implementers
 
 ~~~~
-{: #fig-im-dm title="Information Models（IMs）and Data Models（DMs）" artwork-align="center"}
+{: #fig-im-dm title="Information Models (IMs) and Data Models (DMs)" artwork-align="center"}
 
    "On the Difference between Information Models and Data Models"
    {{?RFC3444}} is helpful in determining what information to consider
@@ -958,9 +958,8 @@ DM         DM        DM     --> concrete/detailed model
 ## Fault Management {#sec-fm-mgmt}
 
 
-   Protocol Designers should document the basic Faults and health
-   indicators that need to be instrumented for the New Protocol or
-   Protocol Extension, as well as the alarms and events that must be
+   Protocol Designers should idenitify and documented
+   essential Faults, health indicators, alarms, and events that must be
    propagated to management applications or exposed through a Data
    Model. It is also recommended to describe how the Protocol Extension
    will affect the existing alarms and notification structure of the
@@ -1227,9 +1226,9 @@ DM         DM        DM     --> concrete/detailed model
 
    Consider the expected behaviors for counters -- what is a reasonable
    maximum value for expected usage? Should they stop counting at the
-   maximum value and retain the maximum value, or should they rollover?
-   How can users determine if a rollover has occurred, and how can users
-   determine if more than one rollover has occurred?
+   maximum value and retain it, or should they rollover?
+   Guidance should explain how rollovers are detected, including multiple
+   occurrences.
 
    Consider whether multiple management applications will share a
    counter; if so, then no one management application should be allowed
@@ -1311,11 +1310,9 @@ DM         DM        DM     --> concrete/detailed model
    important to count them separately for each sender to help identify
    the source of attacks?
 
-   Manageability considerations that are security-oriented might include
-   discussion of the security implications when no monitoring is in
-   place, the regulatory implications of absence of audit-trail or logs
-   in enterprises, exceeding the capacity of logs, and security
-   exposures present in chosen/recommended management mechanisms.
+   Security-oriented manageability topics may include risks of insufficient
+   monitoring, regulatory issues with missing audit trails, log capacity
+   limits, and security exposures in recommended management mechanisms.
 
    Consider security threats that may be introduced by management
    operations. For example, Control and Provisioning of Wireless Access
