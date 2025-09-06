@@ -1517,16 +1517,17 @@ DM         DM        DM     --> concrete/detailed model
 #  Acknowledgements {#sec-ack}
 {:numbered="false"}
 
-The authors wish to thank the following individuals and groups.
+The authors thank the following individuals and groups, 
+whose efforts have helped to improve this document:
 
-The IETF Ops Directorate:
-: The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.
+The IETF Operations Directorate (OpsDir):
+: The IETF OpsDir {{IETF-OPS-Dir}} reviewer team, which has been providing document reviews for more than a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.
 
 The AD championing the update:
-: Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
+: Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document:
-: Thanks Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, and Michael P. to for review comments and contributions.
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, and Michael P., for their review comments and contributions.
 
 The author of RFC 5706:
 : David Harrington
