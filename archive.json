@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-31T00:50:36.087297+00:00",
+  "timestamp": "2025-09-07T00:49:55.504207+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -632,11 +632,13 @@
       "state": "OPEN",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "sbarguil"
+      ],
       "labels": [],
       "body": "This is not a tutorial on ops/management, but a tool for authors to help them identify what needs to be supplied in a spec for mgt/ops purposes.\n\nPointers to documents such as [RFC 6632](https://datatracker.ietf.org/doc/rfc6632/) may be considered.\n\nWe need to Identify at least what belongs to background and decide how to structure that (e.g., move to an appendix, offload, etc.)\n",
       "createdAt": "2025-04-24T04:27:24Z",
-      "updatedAt": "2025-04-24T04:27:24Z",
+      "updatedAt": "2025-09-04T13:44:18Z",
       "closedAt": null,
       "comments": []
     },
@@ -1160,11 +1162,13 @@
       "state": "OPEN",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "AdrianFarrel"
+      ],
       "labels": [],
       "body": "> [Ballot discuss] (Robert Sparks 2009-09-22)\n> This document contains a wealth of good advice and I am glad we are producing it. However, I have a few questions to work through before recommending publication:\n> \n> The document is still strongly influenced by its genesis in routing. It is easy to see how to apply its advice when it is natural to talk about an application or a deployment in terms of the protocol, particularly when a configuration action on a network element maps directly into a configuration action in the protocol.\n> \n> **It is less obvious how to apply much of the advice when the protocol is a component or framework - when there are layers between the outward interface of the managed elements and the knobs in the protocols (TLS, SASL, S/MIME, PIDF, PIDF-LO, RTP, ...). Would it be possible to add guidance on how to apply the recommendations in those kinds of documents?** Would it make sense to add/make more explicit a discussion on reveiwing managability of the interfaces that components expose to the to-be-managed applications that are going to use them?\n> \n> Similarly, some of the \"link\", \"node\", and \"packet\" vocabulary becomes awkward when you start applying this to protocols that are higher in the stack. Can the language be abstracted to make it clearer what consideration discussion you're trying to stimulate in those cases?\n> \n> I can be talked into waiting for future documents to address those concerns - the guidance here for the protocols that the recommendations can easily be applied to is worth publishing as soon as we can. But we need to address the above questions before we start to consider _requiring_ these considerations in all submissions.\n\n> [Ballot comment]\n> The last paragraph of 2.2 could be generalized - speed is not the only thing that time changes.\n> \n> The guidance in the last paragraph before section 3.1 starts should also point to the cases where focusing on instumenting servers might mask problems - instrumentation in clients may be the only thing that can provide information to the operator.\n> \n> In section 3.1 \"Information models should come from the protocol WGs\" -- not all protocols come from WGs.\n> \n> \"some planned companion documents\" is a phrase that will not age well once this is in RFC-stone. Can it be replaced with something a little less time-sensitive?\n> \n> Consider changing the \"must not\" on the second line of page 9 to \"MUST NOT\" (or not).",
       "createdAt": "2025-06-08T07:47:28Z",
-      "updatedAt": "2025-06-10T07:24:14Z",
+      "updatedAt": "2025-09-04T13:39:10Z",
       "closedAt": null,
       "comments": []
     },
@@ -1252,13 +1256,15 @@
       "state": "OPEN",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "bclaise"
+      ],
       "labels": [
         "external-input-solicited"
       ],
       "body": "Email thread to the pm-dir@ietf.org:\n\nHi Perfmetrdir colleagues,\n\nAre there specific performance-related OPS considerations that you think are useful to include in the guidelines? Maybe consider an advice to look at RFC 6390 and RFC 8911 for better interop?\n\nThank you.\n\nCheers,\n\nMed",
       "createdAt": "2025-06-13T10:33:08Z",
-      "updatedAt": "2025-08-07T13:50:08Z",
+      "updatedAt": "2025-09-04T13:37:47Z",
       "closedAt": null,
       "comments": []
     },
@@ -8980,6 +8986,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 118,
+      "id": "PR_kwDOOWPBqs6nI2cX",
+      "title": "Another simple editorial pass -- Carlos patch",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/118",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Another simple editorial pass -- Carlos patch",
+      "createdAt": "2025-09-06T03:50:20Z",
+      "updatedAt": "2025-09-06T03:50:20Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "70ca3efaeb97701116715832265f2b85fed6698d",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-patch",
+      "headRefOid": "d5c24160795a0ea3a19b7f4e2f8dd04ab1696d63",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
