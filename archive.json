@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-07T00:49:55.504207+00:00",
+  "timestamp": "2025-09-09T00:44:59.854046+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -8999,7 +8999,7 @@
       "labels": [],
       "body": "Another simple editorial pass -- Carlos patch",
       "createdAt": "2025-09-06T03:50:20Z",
-      "updatedAt": "2025-09-06T03:50:20Z",
+      "updatedAt": "2025-09-07T23:01:40Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "70ca3efaeb97701116715832265f2b85fed6698d",
@@ -9011,7 +9011,21 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs6-alIy",
+          "commit": {
+            "abbreviatedOid": "d5c2416"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-07T23:01:40Z",
+          "updatedAt": "2025-09-07T23:01:40Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
