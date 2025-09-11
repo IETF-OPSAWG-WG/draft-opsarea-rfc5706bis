@@ -250,12 +250,12 @@ Table of Contents
 
    *  CLI: Command Line Interface.  A human-oriented interface,
       typically a Proprietary Interface, to hardware or software devices
-      (e.g., routers or operating systems).  The commands, their syntax,
-      and the precise semantics of the parameters may vary considerably
-      between different vendors, between products from the same vendor,
-      and even between different versions or releases of a single
-      product.  No attempt at standardizing CLIs has been made by the
-      IETF.
+      (e.g., hosts, routers, or operating systems).  The commands, their
+      syntax, and the precise semantics of the parameters may vary
+      considerably between different vendors, between products from the
+      same vendor, and even between different versions or releases of a
+      single product.  No attempt at standardizing CLIs has been made by
+      the IETF.
 
    *  Data Model: A set of mechanisms for representing, organizing,
       storing and handling data within a particular type of data store
@@ -1649,9 +1649,9 @@ Table of Contents
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-11, 10 September
+              draft-ietf-opsawg-oam-characterization-12, 11 September
               2025, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              opsawg-oam-characterization-11>.
+              opsawg-oam-characterization-12>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
