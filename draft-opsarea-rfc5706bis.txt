@@ -591,9 +591,9 @@ Table of Contents
    applications like DNS [RFC1034], the registries, or the size of
    routing tables.  For example, Simple Mail Transfer Protocol (SMTP)
    [RFC5321] servers use a reverse DNS lookup to filter out incoming
-   connection requests.  When Berkeley installed a new spam filter,
-   their mail server stopped functioning because of overload of the DNS
-   cache resolver.
+   connection requests: when Berkeley installed a new spam filter, their
+   mail server stopped functioning because of overload of the DNS cache
+   resolver.
 
    The impact on performance may also be noted -- increased delay or
    jitter in real-time traffic applications, or increased response time
