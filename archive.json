@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-09T00:44:59.854046+00:00",
+  "timestamp": "2025-09-11T00:44:57.361127+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -405,7 +405,7 @@
       "labels": [],
       "body": "Because this documents was produced in 2009, it missed some new OPS-related technologies (protocols and data models): BMP, Alt Mark, NETCONF/RESTCONF, YANG",
       "createdAt": "2025-04-09T12:51:05Z",
-      "updatedAt": "2025-08-07T14:01:31Z",
+      "updatedAt": "2025-09-10T20:20:28Z",
       "closedAt": null,
       "comments": [
         {
@@ -456,6 +456,20 @@
           "body": "Next step: Benoit to investigate, what about removing this section?",
           "createdAt": "2025-08-07T14:01:31Z",
           "updatedAt": "2025-08-07T14:01:31Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "While we're here, is RFC 7276 something to reference?",
+          "createdAt": "2025-09-10T20:16:18Z",
+          "updatedAt": "2025-09-10T20:16:18Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "> While we're here, is RFC 7276 something to reference?\n\nSeems like a good reference for the tooling section for sure!",
+          "createdAt": "2025-09-10T20:20:28Z",
+          "updatedAt": "2025-09-10T20:20:28Z"
         }
       ]
     },
@@ -1168,9 +1182,31 @@
       "labels": [],
       "body": "> [Ballot discuss] (Robert Sparks 2009-09-22)\n> This document contains a wealth of good advice and I am glad we are producing it. However, I have a few questions to work through before recommending publication:\n> \n> The document is still strongly influenced by its genesis in routing. It is easy to see how to apply its advice when it is natural to talk about an application or a deployment in terms of the protocol, particularly when a configuration action on a network element maps directly into a configuration action in the protocol.\n> \n> **It is less obvious how to apply much of the advice when the protocol is a component or framework - when there are layers between the outward interface of the managed elements and the knobs in the protocols (TLS, SASL, S/MIME, PIDF, PIDF-LO, RTP, ...). Would it be possible to add guidance on how to apply the recommendations in those kinds of documents?** Would it make sense to add/make more explicit a discussion on reveiwing managability of the interfaces that components expose to the to-be-managed applications that are going to use them?\n> \n> Similarly, some of the \"link\", \"node\", and \"packet\" vocabulary becomes awkward when you start applying this to protocols that are higher in the stack. Can the language be abstracted to make it clearer what consideration discussion you're trying to stimulate in those cases?\n> \n> I can be talked into waiting for future documents to address those concerns - the guidance here for the protocols that the recommendations can easily be applied to is worth publishing as soon as we can. But we need to address the above questions before we start to consider _requiring_ these considerations in all submissions.\n\n> [Ballot comment]\n> The last paragraph of 2.2 could be generalized - speed is not the only thing that time changes.\n> \n> The guidance in the last paragraph before section 3.1 starts should also point to the cases where focusing on instumenting servers might mask problems - instrumentation in clients may be the only thing that can provide information to the operator.\n> \n> In section 3.1 \"Information models should come from the protocol WGs\" -- not all protocols come from WGs.\n> \n> \"some planned companion documents\" is a phrase that will not age well once this is in RFC-stone. Can it be replaced with something a little less time-sensitive?\n> \n> Consider changing the \"must not\" on the second line of page 9 to \"MUST NOT\" (or not).",
       "createdAt": "2025-06-08T07:47:28Z",
-      "updatedAt": "2025-09-04T13:39:10Z",
+      "updatedAt": "2025-09-10T20:23:05Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "- 2025-09-05 Sent request for help to WIT ADs and ART ADs\n    - 2025-09-10 Andy Newton suggests...\n        - 2025-09-10 Sent request to Richard Shockey for SIP-specific view\n        - 2025-09-10 Sent request to Scott Hollenbeck for Applications-specific view\n            - 2025-09-10 Scott says will do a review (suggests Pete Resnick and Ted Hardie)\n- 2025-09-05 Sent request for QUIC-specific review to Brian Trammel\n    - 2025-09-06 Brian says will do a review\n- 2025-09-10\n   - Ask authors of draft-ietf-teas-yang-te-mpls-topology to consider experimenting\n   - Ask authors of draft-ietf-pce-pcep-extension-pce-controller-srv6 to consider experimenting\n   - Ask authors of Experimental draft-ietf-idr-vpn-prefix-orf to consider experimenting",
+          "createdAt": "2025-09-10T16:50:12Z",
+          "updatedAt": "2025-09-10T20:23:05Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Conclusion after review is that the examples are somewhat routing heavy. It's not very, very bad. But it is notable.\n\nOn the other hand, a search of \"OAM\" in the RFC archive shows only RTG RFCs.\n\nWe have to wait for our reviewers to make better suggestions.\n\nA specific change that would be helpful is:\n\nSection 2. CLI Definition\nOLD\n(e.g., routers or operating systems)\nNEW\n(e.g., hosts, routers, or operating systems)\nEND\n\n\n",
+          "createdAt": "2025-09-10T20:19:22Z",
+          "updatedAt": "2025-09-10T20:19:22Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I like that change.",
+          "createdAt": "2025-09-10T20:21:14Z",
+          "updatedAt": "2025-09-10T20:21:14Z"
+        }
+      ]
     },
     {
       "number": 68,
@@ -1807,6 +1843,37 @@
       "updatedAt": "2025-08-21T13:34:53Z",
       "closedAt": "2025-08-21T13:34:53Z",
       "comments": []
+    },
+    {
+      "number": 119,
+      "id": "I_kwDOOWPBqs7K2Zxm",
+      "title": "Nit",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/119",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Section 4.5\n\nOLD\n   For example, Simple Mail Transfer Protocol (SMTP)\n   [RFC5321] servers use a reverse DNS lookup to filter out incoming\n   connection requests.  When Berkeley installed a new spam filter,\n   their mail server stopped functioning because of overload of the DNS\n   cache resolver.\nNEW\n   For example, Simple Mail Transfer Protocol (SMTP)\n   [RFC5321] servers use a reverse DNS lookup to filter out incoming\n   connection requests: when Berkeley installed a new spam filter,\n   their mail server stopped functioning because of overload of the DNS\n   cache resolver.\nEND\n\nExplanation: in the middle of a paragraph that discusses many things, it is necessary to make these two sentences more closely linked.",
+      "createdAt": "2025-09-10T17:24:58Z",
+      "updatedAt": "2025-09-10T19:24:31Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "That makes sense.",
+          "createdAt": "2025-09-10T17:58:25Z",
+          "updatedAt": "2025-09-10T17:58:25Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I didn't immediately grok that use of the colon, but the more I read it, the more I'm okay with it.",
+          "createdAt": "2025-09-10T19:24:31Z",
+          "updatedAt": "2025-09-10T19:24:31Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -8999,7 +9066,7 @@
       "labels": [],
       "body": "Another simple editorial pass -- Carlos patch",
       "createdAt": "2025-09-06T03:50:20Z",
-      "updatedAt": "2025-09-07T23:01:40Z",
+      "updatedAt": "2025-09-10T17:56:41Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "70ca3efaeb97701116715832265f2b85fed6698d",
@@ -9023,6 +9090,45 @@
           "body": "",
           "createdAt": "2025-09-07T23:01:40Z",
           "updatedAt": "2025-09-07T23:01:40Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6_JzTv",
+          "commit": {
+            "abbreviatedOid": "d5c2416"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-10T16:57:51Z",
+          "updatedAt": "2025-09-10T16:57:51Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6_J0u4",
+          "commit": {
+            "abbreviatedOid": "d5c2416"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-10T16:59:16Z",
+          "updatedAt": "2025-09-10T16:59:16Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs6_Kr4_",
+          "commit": {
+            "abbreviatedOid": "d5c2416"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-10T17:56:41Z",
+          "updatedAt": "2025-09-10T17:56:41Z",
           "comments": []
         }
       ]
