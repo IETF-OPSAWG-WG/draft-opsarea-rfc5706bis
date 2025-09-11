@@ -725,27 +725,21 @@ This document does not describe interoperability requirements. As such, it does 
 
    Getting everybody to agree on a single syntax and an associated
    protocol to do all management has proven to be difficult. So,
-   management systems tend to speak whatever the boxes support, whether
-   the IETF likes this. The IETF is moving from support for one
-   schema language for modeling the structure of management information
-   (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
-   languages and additional management protocols suited to different
-   purposes. Other Standard Development Organizations (e.g., the
-   Distributed Management Task Force - DMTF, the Tele-Management Forum -
-   TMF) also define schemas and protocols for management and these may
-   be more suitable than IETF schemas and protocols in some cases. Some
-   of the alternatives being considered include:
-
-   *  XML Schema Definition {{?W3C.REC-xmlschema-0-20041028}}
-
-   and
-
-   *  NETCONF Configuration Protocol {{?RFC6241}}
-
-   *  the IP Flow Information Export (IPFIX) Protocol {{?RFC7011}} for
-      usage accounting
-
-   *  the syslog protocol {{?RFC5424}} for logging
+   management systems tend to speak whatever the boxes support,
+   whether the IETF likes this. The IETF is moving from support for
+   one schema language for modeling the structure of management
+   information(SMIv2) and one simple network management protocol
+   (SNMP) towards support for additional schema languages and
+   additional management protocols suited to different purposes.
+   Other Standard Development Organizations (e.g., the Distributed
+   Management Task Force - DMTF, the Tele-Management Forum - TMF)
+   also define schemas and protocols for management and these may be
+   more suitable than IETF schemas and protocols in some cases. Some
+   of the alternatives being considered include XML Schema
+   Definition {{?W3C.REC-xmlschema-0-20041028}} and several of the
+   management protocols listed in Section {{<sec-mgmt-tech>}}, such
+   as NETCONF, IPFIX (for usage accounting), and Syslog
+   (for logging).
 
    Interoperability needs to be considered on the syntactic level and
    the semantic level. While it can be irritating and time-consuming,
