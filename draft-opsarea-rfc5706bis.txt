@@ -406,7 +406,8 @@ Table of Contents
    interactions with existing solutions, a difficult upgrade path,
    difficulty of debugging problems, difficulty configuring from a
    central database, or a complicated state diagram that operations
-   staff will find difficult to understand.
+   staff will find difficult to understand.  [RFC5218] provides a more
+   detailed discussion on what makes for a successful protocol.
 
    BGP flap damping [RFC2439] is an example.  It was designed to block
    high-frequency route flaps; however, the design did not consider the
@@ -519,6 +520,9 @@ Table of Contents
    where they are required, and how they can be introduced in a manner
    that facilitates deployment.
 
+   Refer to [RFC8170] for a detailed discussed on transition versus
+   coexistence.
+
 4.4.  Requirements on Other Protocols and Functional Components
 
    Protocol Designers should consider the requirements that the New
@@ -550,8 +554,10 @@ Table of Contents
 4.5.  Impact on Network Operation
 
    The introduction of a New Protocol or Protocol Extensions may have an
-   impact on the operation of existing networks.  Protocol Designers
-   should outline such impacts (which may be positive), including
+   impact on the operation of existing networks.  As discussed in
+   Section 2.1 of [RFC6709] major extensions may have characteristics
+   leading to a risk of operational problems.  Protocol Designers should
+   outline such operational impacts (which may be positive), including
    scaling benefits or concerns, and interactions with other protocols.
    Protocol Designers should describe the scenarios in which the New
    Protocol or its extensions are expected to be applicable or
@@ -1765,6 +1771,10 @@ Table of Contents
               Protocol Architecture", RFC 4251, DOI 10.17487/RFC4251,
               January 2006, <https://www.rfc-editor.org/rfc/rfc4251>.
 
+   [RFC5218]  Thaler, D. and B. Aboba, "What Makes for a Successful
+              Protocol?", RFC 5218, DOI 10.17487/RFC5218, July 2008,
+              <https://www.rfc-editor.org/rfc/rfc5218>.
+
    [RFC5321]  Klensin, J., "Simple Mail Transfer Protocol", RFC 5321,
               DOI 10.17487/RFC5321, October 2008,
               <https://www.rfc-editor.org/rfc/rfc5321>.
@@ -1809,6 +1819,11 @@ Table of Contents
               DOI 10.17487/RFC6632, June 2012,
               <https://www.rfc-editor.org/rfc/rfc6632>.
 
+   [RFC6709]  Carpenter, B., Aboba, B., Ed., and S. Cheshire, "Design
+              Considerations for Protocol Extensions", RFC 6709,
+              DOI 10.17487/RFC6709, September 2012,
+              <https://www.rfc-editor.org/rfc/rfc6709>.
+
    [RFC6733]  Fajardo, V., Ed., Arkko, J., Loughney, J., and G. Zorn,
               Ed., "Diameter Base Protocol", RFC 6733,
               DOI 10.17487/RFC6733, October 2012,
@@ -1832,6 +1847,10 @@ Table of Contents
    [RFC8040]  Bierman, A., Bjorklund, M., and K. Watsen, "RESTCONF
               Protocol", RFC 8040, DOI 10.17487/RFC8040, January 2017,
               <https://www.rfc-editor.org/rfc/rfc8040>.
+
+   [RFC8170]  Thaler, D., Ed., "Planning for Protocol Adoption and
+              Subsequent Transitions", RFC 8170, DOI 10.17487/RFC8170,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8170>.
 
    [RFC8199]  Bogdanovic, D., Claise, B., and C. Moberg, "YANG Module
               Classification", RFC 8199, DOI 10.17487/RFC8199, July
