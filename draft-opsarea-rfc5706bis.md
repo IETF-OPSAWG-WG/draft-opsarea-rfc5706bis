@@ -487,6 +487,8 @@ This document does not describe interoperability requirements. As such, it does 
    changes, where they are required, and how they can be introduced in
    a manner that facilitates deployment.
 
+   Refer to {{?RFC8170}} for a detailed discussed on transition vs. coexistence.
+
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
 
    Protocol Designers should consider the requirements that the new
