@@ -518,7 +518,7 @@ Table of Contents
    where they are required, and how they can be introduced in a manner
    that facilitates deployment.
 
-   Refer to [RFC8170] for a detailed discussed on transition vs.
+   Refer to [RFC8170] for a detailed discussed on transition versus
    coexistence.
 
 4.4.  Requirements on Other Protocols and Functional Components
