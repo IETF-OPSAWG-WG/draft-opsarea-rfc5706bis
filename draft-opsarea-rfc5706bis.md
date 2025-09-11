@@ -377,7 +377,8 @@ This document does not describe interoperability requirements. As such, it does 
    interactions with existing solutions, a difficult upgrade path,
    difficulty of debugging problems, difficulty configuring from a
    central database, or a complicated state diagram that operations
-   staff will find difficult to understand.
+   staff will find difficult to understand. {{?RFC5218}} provides
+   a more detailed discussion on what makes for a successful protocol.
 
    BGP flap damping {{?RFC2439}} is an example. It was designed to block
    high-frequency route flaps; however, the design did not consider the
@@ -487,6 +488,8 @@ This document does not describe interoperability requirements. As such, it does 
    changes, where they are required, and how they can be introduced in
    a manner that facilitates deployment.
 
+   Refer to {{?RFC8170}} for a detailed discussed on transition versus coexistence.
+
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
 
    Protocol Designers should consider the requirements that the New
@@ -518,8 +521,11 @@ This document does not describe interoperability requirements. As such, it does 
 ##  Impact on Network Operation {#sec-impact}
 
    The introduction of a New Protocol or Protocol Extensions may
-   have an impact on the operation of existing networks. Protocol
-   Designers should outline such impacts (which may be positive),
+   have an impact on the operation of existing networks. As discussed in {{Section 2.1 of ?RFC6709}}
+   major extensions may have characteristics leading to a risk of
+   operational
+   problems. Protocol
+   Designers should outline such operational impacts (which may be positive),
    including scaling benefits or concerns, and interactions with other protocols.
    Protocol Designers should describe the scenarios in which the New
    Protocol or its extensions are expected to be applicable or
