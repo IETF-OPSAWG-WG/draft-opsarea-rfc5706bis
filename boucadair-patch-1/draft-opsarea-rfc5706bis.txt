@@ -517,6 +517,9 @@ Table of Contents
    where they are required, and how they can be introduced in a manner
    that facilitates deployment.
 
+   Refer to [RFC8170] for a detailed discussed on transition vs.
+   coexistence.
+
 4.4.  Requirements on Other Protocols and Functional Components
 
    Protocol Designers should consider the requirements that the new
@@ -1837,6 +1840,10 @@ Table of Contents
    [RFC8040]  Bierman, A., Bjorklund, M., and K. Watsen, "RESTCONF
               Protocol", RFC 8040, DOI 10.17487/RFC8040, January 2017,
               <https://www.rfc-editor.org/rfc/rfc8040>.
+
+   [RFC8170]  Thaler, D., Ed., "Planning for Protocol Adoption and
+              Subsequent Transitions", RFC 8170, DOI 10.17487/RFC8170,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8170>.
 
    [RFC8199]  Bogdanovic, D., Claise, B., and C. Moberg, "YANG Module
               Classification", RFC 8199, DOI 10.17487/RFC8199, July
