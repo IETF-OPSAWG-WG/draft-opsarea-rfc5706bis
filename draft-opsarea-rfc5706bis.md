@@ -958,7 +958,7 @@ DM         DM        DM     --> concrete/detailed model
 ## Fault Management {#sec-fm-mgmt}
 
 
-   Protocol Designers should idenitify and document
+   Protocol Designers should identify and document
    essential Faults, health indicators, alarms, and events that must be
    propagated to management applications or exposed through a Data
    Model. It is also recommended to describe how the Protocol Extension
