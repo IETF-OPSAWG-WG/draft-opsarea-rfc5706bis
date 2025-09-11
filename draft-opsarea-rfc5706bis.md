@@ -202,10 +202,10 @@ contributor:
    need to be updated in the future, after further operational
    experience has been gained.
 
-   The OPS Directorate can use this document to inform their reviews. A list of guidelines and a
+   The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}. Ultimately,
-   the decision to incorporate this dociument's advice into their work remains with Protocol Designers and working groups themselves.
+   the decision to incorporate this document's advice into their work remains with Protocol Designers and working groups themselves.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
@@ -339,7 +339,7 @@ This document does not describe interoperability requirements. As such, it does 
    regarding the decisions on manageability of the protocol at the
    time of its design.
 
-   If there are no new manageability or deployment considerations, "Operations Considerations" section
+   If there are no new manageability or deployment considerations, the "Operational Considerations" section
    must contain the following simple statement, followed by a brief explanation of
    why that is the case.
 
@@ -410,7 +410,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
-   protocol -- such as whether write operations will be allowed on
+   protocol -- for example whether write operations are permitted on
    routers and on hosts, or whether notifications for alarms or other
    events will be expected.
 
@@ -688,7 +688,7 @@ This document does not describe interoperability requirements. As such, it does 
    (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
    but further use of this management protocol in new IETF documents has been constrained
    to maintenance of existing MIB modules and development of MIB modules for legacy devices
-   that do not support more resent management protocols {{IESG-STATEMENT}}.
+   that do not support more recent management protocols {{IESG-STATEMENT}}.
 
    This section is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
 
@@ -747,11 +747,11 @@ This document does not describe interoperability requirements. As such, it does 
 
    *  the syslog protocol {{?RFC5424}} for logging
 
-   Interoperability needs to be considered on the syntactic level and
-   the semantic level. While it can be irritating and time-consuming,
-   application designers, including operators who write their own
-   scripts, can make their processing conditional to accommodate
-   syntactic differences across vendors, models, or releases of product.
+   Interoperability needs to be considered at both the syntactic and
+   semantic levels. Although handling syntactic differences across vendors,
+   models, or product releases can be time-consuming and frustrating,
+   application designers, including operators who develop their own scripts,
+   can implement conditional processing to accommodate them.
 
    Semantic differences are much harder to deal with on the manager side
    -- once you have the data, its meaning is a function of the managed
@@ -958,7 +958,7 @@ DM         DM        DM     --> concrete/detailed model
 ## Fault Management {#sec-fm-mgmt}
 
 
-   Protocol Designers should idenitify and documented
+   Protocol Designers should identify and document
    essential Faults, health indicators, alarms, and events that must be
    propagated to management applications or exposed through a Data
    Model. It is also recommended to describe how the Protocol Extension
@@ -1495,7 +1495,7 @@ DM         DM        DM     --> concrete/detailed model
 
    * Change intended status from Informational to Best Current Practice
 
-   * Move the "Operational Considerations" Appendix A to a Checklist maintained in GitHub
+   * Move the "Operational Considerations" Appendix A to a Checklist {{CHECKLIST}} maintained in GitHub
 
    * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
 
@@ -1517,16 +1517,17 @@ DM         DM        DM     --> concrete/detailed model
 #  Acknowledgements {#sec-ack}
 {:numbered="false"}
 
-The authors wish to thank the following individuals and groups.
+The authors thank the following individuals and groups,
+whose efforts have helped to improve this document:
 
-The IETF Ops Directorate:
-: The IETF Ops Directorate {{IETF-OPS-Dir}} reviewer team, who has been providing document reviews for over a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.
+The IETF Ops Directorate (OpsDir):
+: The IETF OpsDir {{IETF-OPS-Dir}} reviewer team, which has been providing document reviews for more than a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.
 
 The AD championing the update:
-: Med Boucadair initiated the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
+: Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document:
-: Thanks Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, and Michael P. to for review comments and contributions.
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, and Michael P., for their review comments and contributions.
 
 The author of RFC 5706:
 : David Harrington
