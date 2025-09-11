@@ -523,7 +523,7 @@ This document does not describe interoperability requirements. As such, it does 
    The introduction of a New Protocol or Protocol Extensions may
    have an impact on the operation of existing networks. As discussed in {{Section 2.1 of ?RFC6709}}
    major extensions may have characteristics leading to a risk of
-   interoperability failures, security vulnerabilities, or operational
+   operational
    problems. Protocol
    Designers should outline such operational impacts (which may be positive),
    including scaling benefits or concerns, and interactions with other protocols.
