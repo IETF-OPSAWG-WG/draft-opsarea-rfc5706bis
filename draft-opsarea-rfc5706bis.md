@@ -377,7 +377,8 @@ This document does not describe interoperability requirements. As such, it does 
    interactions with existing solutions, a difficult upgrade path,
    difficulty of debugging problems, difficulty configuring from a
    central database, or a complicated state diagram that operations
-   staff will find difficult to understand.
+   staff will find difficult to understand. {{?RFC5218}} provides
+   a more detailed discussion on what makes for a successful protocol.
 
    BGP flap damping {{?RFC2439}} is an example. It was designed to block
    high-frequency route flaps; however, the design did not consider the
