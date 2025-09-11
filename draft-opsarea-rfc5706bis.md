@@ -737,7 +737,7 @@ This document does not describe interoperability requirements. As such, it does 
    more suitable than IETF schemas and protocols in some cases. Some
    of the alternatives being considered include XML Schema
    Definition {{?W3C.REC-xmlschema-0-20041028}} and several of the
-   management protocols listed in Section {{<sec-mgmt-tech>}}, such
+   management protocols listed in Section {{sec-mgmt-tech}}, such
    as NETCONF, IPFIX (for usage accounting), and Syslog
    (for logging).
 
