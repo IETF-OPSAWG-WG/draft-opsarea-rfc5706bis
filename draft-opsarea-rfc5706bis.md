@@ -224,7 +224,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    *  CLI: Command Line Interface. A human-oriented interface, typically
       a Proprietary Interface, to hardware or software devices
-      (e.g., routers or operating systems). The commands, their syntax,
+      (e.g., hosts, routers, or operating systems). The commands, their syntax,
       and the precise semantics of the parameters may vary considerably
       between different vendors, between products from the same
       vendor, and even between different versions or releases of a single
