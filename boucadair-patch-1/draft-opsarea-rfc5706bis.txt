@@ -405,7 +405,8 @@ Table of Contents
    interactions with existing solutions, a difficult upgrade path,
    difficulty of debugging problems, difficulty configuring from a
    central database, or a complicated state diagram that operations
-   staff will find difficult to understand.
+   staff will find difficult to understand.  [RFC5218] provides a more
+   detailed discussion on what makes for a successful protocol.
 
    BGP flap damping [RFC2439] is an example.  It was designed to block
    high-frequency route flaps; however, the design did not consider the
@@ -1767,6 +1768,10 @@ Table of Contents
    [RFC4251]  Ylonen, T. and C. Lonvick, Ed., "The Secure Shell (SSH)
               Protocol Architecture", RFC 4251, DOI 10.17487/RFC4251,
               January 2006, <https://www.rfc-editor.org/rfc/rfc4251>.
+
+   [RFC5218]  Thaler, D. and B. Aboba, "What Makes for a Successful
+              Protocol?", RFC 5218, DOI 10.17487/RFC5218, July 2008,
+              <https://www.rfc-editor.org/rfc/rfc5218>.
 
    [RFC5321]  Klensin, J., "Simple Mail Transfer Protocol", RFC 5321,
               DOI 10.17487/RFC5321, October 2008,
