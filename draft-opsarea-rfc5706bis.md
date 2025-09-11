@@ -518,8 +518,11 @@ This document does not describe interoperability requirements. As such, it does 
 ##  Impact on Network Operation {#sec-impact}
 
    The introduction of a New Protocol or Protocol Extensions may
-   have an impact on the operation of existing networks. Protocol
-   Designers should outline such impacts (which may be positive),
+   have an impact on the operation of existing networks. As discussed in {{Section 2.1 of ?RFC6709}}
+   major extensions may have characteristics leading to a risk of
+   interoperability failures, security vulnerabilities, or operational
+   problems. Protocol
+   Designers should outline such operational impacts (which may be positive),
    including scaling benefits or concerns, and interactions with other protocols.
    Protocol Designers should describe the scenarios in which the New
    Protocol or its extensions are expected to be applicable or
