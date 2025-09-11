@@ -449,8 +449,8 @@ This document does not describe interoperability requirements. As such, it does 
    parameters.
 
    Default values should generally favor the conservative side over the
-   "optimizing performance" side (e.g., the initial RTT and RTTVAR values
-   of a TCP connection {{?RFC6298}}).
+   "optimizing performance" side (e.g., the initial Round-Trip Time (RTT) and 
+   Round-Trip Time Variance (RTTVAR) values of a TCP connection {{?RFC6298}}).
 
    For those parameters that are speed-dependent, instead of using a
    constant, try to set the default value as a function of the link
@@ -489,11 +489,11 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
 
-   Protocol Designers should consider the requirements that the new
-   protocol might put on other protocols and functional components and
+   Protocol Designers should consider the requirements that the New
+   Protocol might put on other protocols and functional components and
    should also document the requirements from other protocols and
-   functional components that have been considered in designing the new
-   protocol.
+   functional components that have been considered in designing the New
+   Protocol.
 
    These considerations should generally remain illustrative to avoid
    creating restrictions or dependencies, or potentially impacting the
@@ -1204,7 +1204,7 @@ DM         DM        DM     --> concrete/detailed model
    protocol / service activation on the device), network monitoring,
    and service monitoring (the impact of service activation on the
    network). Hence, it is recommended that, if the implementation of the
-   new Protocol Extension has any hardware/software performance implications
+   New Protocol Extension has any hardware/software performance implications
    (e.g., increased CPU utilization, memory consumption, or forwarding
    performance degradation), the Protocol Designers should clearly
    describe these impacts in the specification, along with any
@@ -1303,8 +1303,8 @@ DM         DM        DM     --> concrete/detailed model
    occurrence, or should an operator-defined threshold control when a
    notification is sent to an operator?
 
-   Should certain statistics be collected about the operation of the new
-   protocol that might be useful for detecting attacks, such as the
+   Should certain statistics be collected about the operation of the New
+   Protocol that might be useful for detecting attacks, such as the
    receipt of malformed messages, messages out of order, or messages
    with invalid timestamps? If such statistics are collected, is it
    important to count them separately for each sender to help identify
@@ -1330,8 +1330,8 @@ DM         DM        DM     --> concrete/detailed model
    perform a required task.
 
    Some operators wish to do consistency checks of access control lists
-   across devices. Protocol Designers should consider information
-   models to promote comparisons across devices and across vendors to
+   across devices. Protocol Designers should consider Information
+   Models to promote comparisons across devices and across vendors to
    permit checking the consistency of security configurations.
 
    Protocol Designers should consider how to provide a secure transport,
@@ -1345,8 +1345,8 @@ DM         DM        DM     --> concrete/detailed model
 
    Standard SNMP notifications or syslog messages might
    already exist, or can be defined, to alert operators to the
-   conditions identified in the security considerations for the new
-   protocol. For example, you can log all the commands entered by the
+   conditions identified in the security considerations for the New
+   Protocol. For example, you can log all the commands entered by the
    operator using syslog (giving you some degree of audit trail), or you
    can see who has logged on/off using the Secure Shell (SSH) Protocol {{?RFC4251}}
    and from where; failed SSH logins can be logged using syslog, etc.
@@ -1434,15 +1434,15 @@ DM         DM        DM     --> concrete/detailed model
 
    With the increasing adoption of Artificial Intelligence (AI)
    in network operations, Protocol Designers
-   must consider the implication such functions may have on protocols
-   and protocol extensions. AI
+   must consider the implication such functions may have on New Protocols
+   and Protocol Extensions. AI
    models often require extensive and granular data for training and
    inference, requiring efficient, scalable, and secure mechanisms
    for telemetry, logging, and state information collection. Protocol Designers
    should anticipate that AI-powered management tools may generate
    frequent and potentially aggressive querying patterns on network
-   devices and controllers. Therefore, protocols should be designed with data
-   models and mechanisms intended to prevent overload from automated
+   devices and controllers. Therefore, protocols should be designed with Data
+   Models and mechanisms intended to prevent overload from automated
    interactions, while also accounting for AI-specific security
    considerations such as data integrity and protection against
    adversarial attacks on management interfaces. These considerations
