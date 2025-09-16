@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-14T00:48:27.374704+00:00",
+  "timestamp": "2025-09-16T00:43:21.422426+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1221,15 +1221,15 @@
       ],
       "body": "> [Ballot discuss] (Robert Sparks 2009-09-22)\n> This document contains a wealth of good advice and I am glad we are producing it. However, I have a few questions to work through before recommending publication:\n> \n> The document is still strongly influenced by its genesis in routing. It is easy to see how to apply its advice when it is natural to talk about an application or a deployment in terms of the protocol, particularly when a configuration action on a network element maps directly into a configuration action in the protocol.\n> \n> **It is less obvious how to apply much of the advice when the protocol is a component or framework - when there are layers between the outward interface of the managed elements and the knobs in the protocols (TLS, SASL, S/MIME, PIDF, PIDF-LO, RTP, ...). Would it be possible to add guidance on how to apply the recommendations in those kinds of documents?** Would it make sense to add/make more explicit a discussion on reveiwing managability of the interfaces that components expose to the to-be-managed applications that are going to use them?\n> \n> Similarly, some of the \"link\", \"node\", and \"packet\" vocabulary becomes awkward when you start applying this to protocols that are higher in the stack. Can the language be abstracted to make it clearer what consideration discussion you're trying to stimulate in those cases?\n> \n> I can be talked into waiting for future documents to address those concerns - the guidance here for the protocols that the recommendations can easily be applied to is worth publishing as soon as we can. But we need to address the above questions before we start to consider _requiring_ these considerations in all submissions.\n\n> [Ballot comment]\n> The last paragraph of 2.2 could be generalized - speed is not the only thing that time changes.\n> \n> The guidance in the last paragraph before section 3.1 starts should also point to the cases where focusing on instumenting servers might mask problems - instrumentation in clients may be the only thing that can provide information to the operator.\n> \n> In section 3.1 \"Information models should come from the protocol WGs\" -- not all protocols come from WGs.\n> \n> \"some planned companion documents\" is a phrase that will not age well once this is in RFC-stone. Can it be replaced with something a little less time-sensitive?\n> \n> Consider changing the \"must not\" on the second line of page 9 to \"MUST NOT\" (or not).",
       "createdAt": "2025-06-08T07:47:28Z",
-      "updatedAt": "2025-09-11T15:18:53Z",
+      "updatedAt": "2025-09-14T20:16:02Z",
       "closedAt": null,
       "comments": [
         {
           "author": "AdrianFarrel",
           "authorAssociation": "COLLABORATOR",
-          "body": "- 2025-09-05 Sent request for help to WIT ADs and ART ADs\n    - 2025-09-10 Andy Newton suggests...\n        - 2025-09-10 Sent request to Richard Shockey for SIP-specific view\n            - 2025-09-11 Richard says will do a review\n        - 2025-09-10 Sent request to Scott Hollenbeck for Applications-specific view\n            - 2025-09-10 Scott says will do a review (suggests Pete Resnick and Ted Hardie)\n- 2025-09-05 Sent request for QUIC-specific review to Brian Trammel\n    - 2025-09-06 Brian says will do a review\n- 2020-09-08 Benoit asked authors of draft-ietf-intarea-rfc8335bis for input \n- 2025-09-10\n   - Ask authors of draft-ietf-teas-yang-te-mpls-topology to consider experimenting\n   - Ask authors of draft-ietf-pce-pcep-extension-pce-controller-srv6 to consider experimenting\n   - Ask authors of Experimental draft-ietf-idr-vpn-prefix-orf to consider experimenting",
+          "body": "- 2025-09-05 Sent request for help to WIT ADs and ART ADs\n    - 2025-09-10 Andy Newton suggests...\n        - 2025-09-10 Sent request to Richard Shockey for SIP-specific view\n            - 2025-09-11 Richard says will do a review\n        - 2025-09-10 Sent request to Scott Hollenbeck for Applications-specific view\n            - 2025-09-10 Scott says will do a review (suggests Pete Resnick and Ted Hardie)\n- 2025-09-05 Sent request for QUIC-specific review to Brian Trammel\n    - 2025-09-06 Brian says will do a review\n- 2020-09-08 Benoit asked authors of draft-ietf-intarea-rfc8335bis (PROBE) for input \n    - 2025-14-09 Ron Bonica says \"Good, but too long.\" See #126 \n- 2025-09-10\n   - Ask authors of draft-ietf-teas-yang-te-mpls-topology to consider experimenting\n   - Ask authors of draft-ietf-pce-pcep-extension-pce-controller-srv6 to consider experimenting\n   - Ask authors of Experimental draft-ietf-idr-vpn-prefix-orf to consider experimenting\n- 2025-09-14 Ask authors of draft-ietf-rtgwg-dst-src-routing-revive for opinions",
           "createdAt": "2025-09-10T16:50:12Z",
-          "updatedAt": "2025-09-11T15:18:53Z"
+          "updatedAt": "2025-09-14T20:16:02Z"
         },
         {
           "author": "AdrianFarrel",
@@ -1954,6 +1954,22 @@
           "updatedAt": "2025-09-11T13:16:26Z"
         }
       ]
+    },
+    {
+      "number": 126,
+      "id": "I_kwDOOWPBqs7Limzn",
+      "title": "Ron Bonica review - document too long",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/126",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Ron was asked to do a review in the context of PROBE. He wrote:\n\n> I think this is a very important draft. However, its readership will decline as a function of its length.\n> \n> It might be best to provide a list of questions that an author should consider:\n> \n> \u2022\tQuestion 1 \n> \u2022\tQuestion 2 \n> \u2022\tQuestion n \n> \n> If the answers to any of these questions are non-trivial, they should be provided in a sub-section of the operational considerations section. \n> \n> If the operational consideration section is empty, it can be omitted.\n> \n> The document probably should exceed 15 pages.",
+      "createdAt": "2025-09-14T10:04:32Z",
+      "updatedAt": "2025-09-14T10:04:32Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
