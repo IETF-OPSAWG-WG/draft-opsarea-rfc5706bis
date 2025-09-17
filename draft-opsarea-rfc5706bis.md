@@ -89,8 +89,8 @@ contributor:
 --- abstract
 
    New Protocols or Protocol Extensions are best designed with due
-   consideration of the functionality needed to operate and manage the
-   protocols.  Retrofitting operations and management is sub-optimal.
+   consideration of the functionality needed to operate and manage them.
+   Retrofitting operations and management is sub-optimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
    addressed when defining New Protocols or Protocol Extensions.
@@ -105,8 +105,8 @@ contributor:
 
 #  Introduction {#sec-intro}
 
-   Often when New Protocols or Protocol Extensions are developed, not
-   enough consideration is given to how the protocol will be deployed,
+   Often, when New Protocols or Protocol Extensions are developed, not
+   enough consideration is given to how they will be deployed,
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
@@ -147,8 +147,8 @@ contributor:
    groups, and protocols in the IETF. This document does not prescribe
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
-   considered for any IETF protocol, given the IETF's role in developing technologies and
-   protocols to be deployed and operated in the real-world Internet.
+   considered for any IETF protocol, given the IETF's role in developing technologies, New Protocols, and Protocol Extensions
+   to be deployed and operated in the real-world Internet.
 
    A WG may decide that its protocol does not need interoperable
    management or a standardized Data Model, but this should be a
@@ -157,8 +157,8 @@ contributor:
 
    This document makes a distinction between "Operational
    Considerations" and "Management Considerations", although the two are
-   closely related. The operational considerations apply to operating the protocol within a network, even
-   if there were no management protocol actively being used. The section on manageability is focused on
+   closely related. The operational considerations apply to operating protocols within a network, even
+   if there was no management protocol actively being used. The section on manageability is focused on
    management technology, such as how to utilize management protocols
    and how to design management Data Models.
 
