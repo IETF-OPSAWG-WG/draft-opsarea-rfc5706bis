@@ -14,7 +14,7 @@
 <meta content='
        New Protocols or Protocol Extensions are best designed with due
    consideration of the functionality needed to operate and manage them.
-   Retrofitting operations and management is sub-optimal.
+   Retrofitting operations and management considerations later is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
    addressed when defining New Protocols or Protocol Extensions. 
@@ -1065,7 +1065,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 21 March 2026</td>
+<td class="center">Expires 22 March 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1081,12 +1081,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-09-17" class="published">17 September 2025</time>
+<time datetime="2025-09-18" class="published">18 September 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-03-21">21 March 2026</time></dd>
+<dd class="expires"><time datetime="2026-03-22">22 March 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1121,7 +1121,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">New Protocols or Protocol Extensions are best designed with due
    consideration of the functionality needed to operate and manage them.
-   Retrofitting operations and management is sub-optimal.
+   Retrofitting operations and management considerations later is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
    addressed when defining New Protocols or Protocol Extensions.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
@@ -1149,7 +1149,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 21 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 22 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1472,7 +1472,7 @@ vendor, and even between different versions or releases of a single
 product. No attempt at standardizing CLIs has been made by the IETF.<a href="#section-2-3.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.4">
-          <p id="section-2-3.4.1">Data Model: A set of mechanisms for representing, organizing, storing
+          <p id="section-2-3.4.1">Data Model: A set of mechanisms for representing, organizing, storing,
 and handling data within a particular type of data store or repository.
 This usually comprises a collection of data structures such as lists, tables,
 relations, etc., a collection of operations that can be applied to the
@@ -1707,15 +1707,16 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
    concentrate on the configuration of the network as a whole rather
    than on individual devices. Of course, how one accomplishes this is
    the hard part.<a href="#section-4.2-3" class="pilcrow">¶</a></p>
-<p id="section-4.2-4">It is desirable to discuss the background of chosen default values,
-   or perhaps why a range of values makes sense. In many cases, as
+<p id="section-4.2-4">Protocol Designers should explain the background of chosen default
+   values and provide the rationale, especially when those choices may
+   affect operations. In many cases, as
    technology changes, the values in an RFC might make less and less
    sense. It is very useful to understand whether defaults are based on
    best current practice and are expected to change as technologies
    advance or whether they have a more universal value that should not
    be changed lightly. For example, the default interface speed might
    be expected to change over time due to increased speeds in the
-   network, and cryptographical algorithms might be expected to change
+   network, and cryptographic algorithms might be expected to change
    over time as older algorithms are "broken".<a href="#section-4.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.2-5">It is extremely important to set a sensible default value for all
    parameters.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
@@ -2429,7 +2430,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    some cases (such as access control lists (ACLs)), the order of data
    items is significant and comprises part of the configured data. If a
    Protocol Designer defines mechanisms for configuration, it would be
-   desirable to standardize the order of elements for consistency of
+   preferable to standardize the order of elements for consistency of
    configuration and of reporting across vendors and across releases
    from vendors.<a href="#section-5.5-5" class="pilcrow">¶</a></p>
 <p id="section-5.5-6">There are two parts to this:<a href="#section-5.5-6" class="pilcrow">¶</a></p>
@@ -2447,7 +2448,7 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    generating sequences of CLI commands or complete textual configuration files
    that are pushed to devices. There is no common database schema for
    network configuration, although the models used by various operators
-   are probably very similar. Many operators consider it desirable to
+   are probably very similar. It is operationally beneficial to
    extract, document, and standardize the common parts of these network-
    wide configuration database schemas. A Protocol Designer should
    consider how to standardize the common parts of configuring the New
@@ -2467,9 +2468,9 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    configuration files should be able to contain international
    characters. Human-readable strings should utilize UTF-8, and
    protocol elements should be in case-insensitive ASCII.<a href="#section-5.5-10" class="pilcrow">¶</a></p>
-<p id="section-5.5-11">A mechanism to dump and restore configurations is a primitive
+<p id="section-5.5-11">A mechanism to dump-and-restore configurations is a primitive
    operation needed by operators. Standards for pulling and pushing
-   configurations from/to devices are desirable.<a href="#section-5.5-11" class="pilcrow">¶</a></p>
+   configurations from/to devices are highly beneficial.<a href="#section-5.5-11" class="pilcrow">¶</a></p>
 <p id="section-5.5-12">Given configuration A and configuration B, it should be possible to
    generate the operations necessary to get from A to B with minimal
    state changes and effects on network and systems. It is important to
@@ -2615,11 +2616,9 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    the current number of instances, and the expected behavior when the
    current instances exceed the capacity of the implementation or the
    capacity of the device.<a href="#section-5.7.2-1" class="pilcrow">¶</a></p>
-<p id="section-5.7.2-2">Designers of an Information Model should model information,
-   accessible at runtime, about the maximum number of protocol entity
-   instances an implementation can support on a device, the current
-   number of instances, and the expected behavior when the current
-   instances exceed the capacity of the device.<a href="#section-5.7.2-2" class="pilcrow">¶</a></p>
+<p id="section-5.7.2-2">Designers of an Information Model should provide runtime information
+   about the maximum supported instances, the current number of instances,
+   and expected behavior when capacity is exceeded.<a href="#section-5.7.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-monitor-net">
