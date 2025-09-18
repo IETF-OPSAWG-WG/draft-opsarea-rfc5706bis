@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-16T00:43:21.422426+00:00",
+  "timestamp": "2025-09-18T00:43:27.919400+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -9449,6 +9449,58 @@
       "mergeCommit": {
         "oid": "9e5973030c3937baffa31cae0cb37ad7a90a2719"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 127,
+      "id": "PR_kwDOOWPBqs6pLGaG",
+      "title": "Sections 5.1 and 5.2, New OPS-related technologies, Fixes #7",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/127",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Team, is this too drastic?",
+      "createdAt": "2025-09-18T00:01:20Z",
+      "updatedAt": "2025-09-18T00:01:20Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "new-ops-related-technologies",
+      "headRefOid": "ed07e7caf4c08cf76e3e4dfb318a5babeb08e9be",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 128,
+      "id": "PR_kwDOOWPBqs6pLNyv",
+      "title": "Yet-another set of editorial improvements",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/128",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-09-18T00:18:15Z",
+      "updatedAt": "2025-09-18T00:18:15Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-another-patch",
+      "headRefOid": "d3951d9e14565f1f31a45087d0ab552ff05382f5",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
