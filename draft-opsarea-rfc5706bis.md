@@ -90,7 +90,7 @@ contributor:
 
    New Protocols or Protocol Extensions are best designed with due
    consideration of the functionality needed to operate and manage them.
-   Retrofitting operations and management is sub-optimal.
+   Retrofitting operations and management considerations later is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
    addressed when defining New Protocols or Protocol Extensions.
@@ -230,7 +230,7 @@ This document does not describe interoperability requirements. As such, it does 
       vendor, and even between different versions or releases of a single
       product. No attempt at standardizing CLIs has been made by the IETF.
 
-   *  Data Model: A set of mechanisms for representing, organizing, storing
+   *  Data Model: A set of mechanisms for representing, organizing, storing,
       and handling data within a particular type of data store or repository.
       This usually comprises a collection of data structures such as lists, tables,
       relations, etc., a collection of operations that can be applied to the
@@ -435,15 +435,16 @@ This document does not describe interoperability requirements. As such, it does 
    than on individual devices. Of course, how one accomplishes this is
    the hard part.
 
-   It is desirable to discuss the background of chosen default values,
-   or perhaps why a range of values makes sense. In many cases, as
+   Protocol Designers should explain the background of chosen default
+   values and provide the rationale, especially when those choices may
+   affect operations. In many cases, as
    technology changes, the values in an RFC might make less and less
    sense. It is very useful to understand whether defaults are based on
    best current practice and are expected to change as technologies
    advance or whether they have a more universal value that should not
    be changed lightly. For example, the default interface speed might
    be expected to change over time due to increased speeds in the
-   network, and cryptographical algorithms might be expected to change
+   network, and cryptographic algorithms might be expected to change
    over time as older algorithms are "broken".
 
    It is extremely important to set a sensible default value for all
@@ -1083,7 +1084,7 @@ DM         DM        DM     --> concrete/detailed model
    some cases (such as access control lists (ACLs)), the order of data
    items is significant and comprises part of the configured data. If a
    Protocol Designer defines mechanisms for configuration, it would be
-   desirable to standardize the order of elements for consistency of
+   preferable to standardize the order of elements for consistency of
    configuration and of reporting across vendors and across releases
    from vendors.
 
@@ -1099,7 +1100,7 @@ DM         DM        DM     --> concrete/detailed model
    generating sequences of CLI commands or complete textual configuration files
    that are pushed to devices. There is no common database schema for
    network configuration, although the models used by various operators
-   are probably very similar. Many operators consider it desirable to
+   are probably very similar. It is operationally beneficial to
    extract, document, and standardize the common parts of these network-
    wide configuration database schemas. A Protocol Designer should
    consider how to standardize the common parts of configuring the New
@@ -1122,9 +1123,9 @@ DM         DM        DM     --> concrete/detailed model
    characters. Human-readable strings should utilize UTF-8, and
    protocol elements should be in case-insensitive ASCII.
 
-   A mechanism to dump and restore configurations is a primitive
+   A mechanism to dump-and-restore configurations is a primitive
    operation needed by operators. Standards for pulling and pushing
-   configurations from/to devices are desirable.
+   configurations from/to devices are highly beneficial.
 
    Given configuration A and configuration B, it should be possible to
    generate the operations necessary to get from A to B with minimal
@@ -1266,11 +1267,9 @@ DM         DM        DM     --> concrete/detailed model
    current instances exceed the capacity of the implementation or the
    capacity of the device.
 
-   Designers of an Information Model should model information,
-   accessible at runtime, about the maximum number of protocol entity
-   instances an implementation can support on a device, the current
-   number of instances, and the expected behavior when the current
-   instances exceed the capacity of the device.
+   Designers of an Information Model should provide runtime information
+   about the maximum supported instances, the current number of instances,
+   and expected behavior when capacity is exceeded.
 
 ###  Monitoring the Network {#sec-monitor-net}
 
