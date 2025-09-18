@@ -669,48 +669,25 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
-   The IETF provides several standardized management protocols suitable for various operational purposes, for example as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
+   The IETF provides several standardized management protocols suitable for
+   various operational purposes, for example as outlined in {{?RFC6632}}.
 
-   *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
-
-   *  The Syslog Protocol {{?RFC5424}}
-
-   *  Packet Sampling (PSAMP) Protocol Specifications {{?RFC5476}}
-
-   *  Network Configuration Protocol (NETCONF) {{?RFC6241}}
-
-   *  Diameter Base Protocol {{?RFC6733}}
-
-   *  Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information {{?RFC7011}}
-
-   *  BGP Monitoring Protocol (BMP) {{?RFC7854}}
-
-   *  RESTCONF Protocol {{?RFC8040}}
-
-   *  Network Telemetry Framework {{?RFC9232}}
-
-
-   The IETF previously also worked on the Simple Network Management Protocol
-   (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
-   but further use of this management protocol in new IETF documents has been constrained
-   to maintenance of existing MIB modules and development of MIB modules for legacy devices
-   that do not support more recent management protocols {{IESG-STATEMENT}}.
-
-   This section is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
+   Readers seeking more in-depth definitions or explanations should consult
+   the referenced materials.
 
 ##  Interoperability {#sec-interop}
 
    Just as when deploying protocols that will inter-connect devices,
    management interoperability should be considered -- whether across
    devices from different vendors, across models from the same vendor,
-   or across different releases of the same product. Management
+   or across different releases of the same product or offer. Management
    interoperability refers to allowing information sharing and
-   operations between multiple devices and multiple management
+   operations and automation between multiple devices and multiple management
    applications, often from different vendors. Interoperability allows
    for the use of third-party applications and the outsourcing of
    management services.
 
-   Some product designers and Protocol Designers assume that if a device
+   Some product developers and Protocol Designers assume that if a device
    can be managed individually using a command line interface or a web
    page interface, that such a solution is enough. But when equipment
    from multiple vendors is combined into a large network, scalability
@@ -729,29 +706,11 @@ This document does not describe interoperability requirements. As such, it does 
    where one understands the network impact (as part of the total cost
    of operations) of that service.
 
-   Getting everybody to agree on a single syntax and an associated
-   protocol to do all management has proven to be difficult. So,
-   management systems tend to speak whatever the boxes support, whether
-   the IETF likes this. The IETF is moving from support for one
-   schema language for modeling the structure of management information
-   (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
-   languages and additional management protocols suited to different
-   purposes. Other Standard Development Organizations (e.g., the
-   Distributed Management Task Force - DMTF, the Tele-Management Forum -
-   TMF) also define schemas and protocols for management and these may
-   be more suitable than IETF schemas and protocols in some cases. Some
-   of the alternatives being considered include:
-
-   *  XML Schema Definition {{?W3C.REC-xmlschema-0-20041028}}
-
-   and
-
-   *  NETCONF Configuration Protocol {{?RFC6241}}
-
-   *  the IP Flow Information Export (IPFIX) Protocol {{?RFC7011}} for
-      usage accounting
-
-   *  the syslog protocol {{?RFC5424}} for logging
+   Achieving consensus on a single syntax and protocol for all management tasks
+   has proven impractical. As a result, management systems typically use
+   whatever mechanisms devices support, regardless of IETF preferences.
+   The IETF has moved to support YANG Data Model and IPFIX
+   Information Elements.
 
    Interoperability needs to be considered at both the syntactic and
    semantic levels. Although handling syntactic differences across vendors,
