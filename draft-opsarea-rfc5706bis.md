@@ -700,87 +700,46 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  Interoperability {#sec-interop}
 
-   Just as when deploying protocols that will inter-connect devices,
-   management interoperability should be considered -- whether across
-   devices from different vendors, across models from the same vendor,
-   or across different releases of the same product. Management
-   interoperability refers to allowing information sharing and
-   operations between multiple devices and multiple management
-   applications, often from different vendors. Interoperability allows
-   for the use of third-party applications and the outsourcing of
-   management services.
+   Management interoperability is vital for enabling information exchange
+   and operations across diverse network devices and management applications,
+   regardless of vendor, model, or software release. It facilitates the use
+   of third-party applications and outsourced management services.
 
-   Some product designers and Protocol Designers assume that if a device
-   can be managed individually using a command line interface or a web
-   page interface, that such a solution is enough. But when equipment
-   from multiple vendors is combined into a large network, scalability
-   of management may become a Problem. It may be important to have
-   consistency in the management protocol support so network-wide operational
-   processes can be automated. For example, a single switch might be
-   easily managed using an interactive web interface when installed in a
-   single-office small business, but when, say, a fast-food company
-   installs similar switches from multiple vendors in hundreds or
-   thousands of individual branches and wants to automate monitoring
-   them from a central location, monitoring vendor- and model-specific
-   web pages would be difficult to automate.
+   While individual device management via command line or web interfaces may
+   suffice for small deployments, large-scale networks comprising equipment
+   from multiple vendors necessitate consistent, automated management.
+   Relying on vendor- and model-specific interfaces for extensive deployments,
+   such as hundreds of branch offices, severely impedes scalability and automation
+   of operational processes. The primary goal of management interoperability is to
+   enable the scalable deployment and lifecycle management of new network functions
+   and services, while ensuring a clear understanding of their operational impact
+   and total cost of ownership.
 
-   The primary goal is the ability to roll out new useful functions and
-   services in a way in which they can be managed in a scalable manner,
-   where one understands the network impact (as part of the total cost
-   of operations) of that service.
+   Achieving universal agreement on a single management syntax and protocol is challenging.
+   However, the IETF has significantly changed its approach to network management, moving
+   beyond SMIv2 and SNMP. Modern IETF management solutions primarily leverage YANG {{?RFC7950}}
+   for Data Modeling and NETCONF {{?RFC6241}} or RESTCONF {{?RFC8040}} for protocol interactions.
+   This shift, as further elaborated in {{?RFC6632}}, emphasizes structured data models and
+   programmatic interfaces to enhance automation and interoperability. Other protocols like
+   IPFIX {{?RFC7011}} for flow accounting and syslog {{?RFC5424}} for logging continue to play
+   specific roles in comprehensive network management.
 
-   Getting everybody to agree on a single syntax and an associated
-   protocol to do all management has proven to be difficult. So,
-   management systems tend to speak whatever the boxes support, whether
-   the IETF likes this. The IETF is moving from support for one
-   schema language for modeling the structure of management information
-   (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
-   languages and additional management protocols suited to different
-   purposes. Other Standard Development Organizations (e.g., the
-   Distributed Management Task Force - DMTF, the Tele-Management Forum -
-   TMF) also define schemas and protocols for management and these may
-   be more suitable than IETF schemas and protocols in some cases. Some
-   of the alternatives being considered include:
+   Interoperability must address both syntactic and semantic aspects. While syntactic variations
+   across implementations can be managed through adaptive processing, semantic differences pose a
+   greater challenge, as the meaning of data is intrinsically tied to the managed entity.
 
-   *  XML Schema Definition {{?W3C.REC-xmlschema-0-20041028}}
+   Information Models (IMs) are vital for achieving semantic interoperability. An IM defines the
+   conceptual understanding of managed information, independent of specific protocols or vendor
+   implementations. This allows for consistent interpretation and correlation of data across different
+   management protocols, such as a YANG Data Model and IPFIX Information Elements concerning the same
+   event. For instance, an IM can standardize how error conditions are counted, ensuring that a counter
+   has the same meaning whether collected via NETCONF or exported via IPFIX.
 
-   and
-
-   *  NETCONF Configuration Protocol {{?RFC6241}}
-
-   *  the IP Flow Information Export (IPFIX) Protocol {{?RFC7011}} for
-      usage accounting
-
-   *  the syslog protocol {{?RFC5424}} for logging
-
-   Interoperability needs to be considered at both the syntactic and
-   semantic levels. Although handling syntactic differences across vendors,
-   models, or product releases can be time-consuming and frustrating,
-   application designers, including operators who develop their own scripts,
-   can implement conditional processing to accommodate them.
-
-   Semantic differences are much harder to deal with on the manager side
-   -- once you have the data, its meaning is a function of the managed
-   entity.
-
-   Information Models help focus interoperability on the semantic level
-   by defining what information should be gathered and how it might be used,
-   regardless of the underlying management protocol or vendor implementation.
-   The use of an Information Model might
-   help improve the ability of operators to correlate messages in
-   different protocols where the data overlaps, such as a YANG Data Model
-   and IPFIX Information Elements about the same event. An Information Model
-   might identify which error conditions should be counted separately,
-   and which error conditions can be recorded together in a single
-   counter. Then, whether the counter is gathered via, e.g., NETCONF or
-   exported via IPFIX, the counter will have the same meaning.
-
-   Protocol Designers must consider what operational, configuration,
-   state, or statistical information will be relevant for effectively
-   monitoring, controlling, or troubleshooting a New Protocol and its Protocol
-   Extensions. This includes identifying key parameters that reflect the
-   protocol's behavior, performance metrics, error indicators, and any
-   contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.
+   Protocol Designers should consider developing an IM, particularly when multiple Data Model (DM)
+   representations (e.g., YANG {{?RFC7950}} and/or IPFIX {{?RFC7011}}) are required, to ensure lossless
+   semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in Figure 1, an
+   IM serves as a conceptual blueprint for designers and operators, from which concrete DMs are derived
+   for implementers. {{?RFC3444}} provides further guidance on distinguishing IMs from DMs.
 
 ~~~~ aasvg
            IM               --> conceptual/abstract model
@@ -793,39 +752,17 @@ DM         DM        DM     --> concrete/detailed model
 ~~~~
 {: #fig-im-dm title="Information Models (IMs) and Data Models (DMs)" artwork-align="center"}
 
-   "On the Difference between Information Models and Data Models"
-   {{?RFC3444}} is helpful in determining what information to consider
-   regarding Information Models (IMs), as compared to Data Models (DMs).
+   While Protocol Designers may directly develop DMs in simple cases (e.g., IPFIX-only scenarios),
+   using an IM is recommended for describing managed elements in protocols or extensions that require
+   broader applicability and semantic consistency.
 
-   Protocol Designers may directly develop Data Models without first producing an Information Model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).
+   Protocol Designers must identify the essential operational, configuration, state, and statistical
+   information required for effective monitoring, control, and troubleshooting of new protocols and
+   their extensions. This includes defining relevant parameters, performance metrics, error indicators,
+   and contextual data crucial for diagnostics and lifecycle management.
 
-   Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or Protocol Extension. The protocol Designers then use the Information Model to develop Data Models that will be used for managing the protocol.
-
-   Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG {{?RFC6020}}{{?RFC7950}} and/or IPFIX {{?RFC7011}}) are to be produced, to ensure lossless semantic mapping. Protocol Designers may create an Information Model if the resulting Data Models are complex or numerous.
-
-
-
-   Information models should come from the protocol WGs and include
-   lists of events, counters, and configuration parameters that are
-   relevant. There are several Information Models contained in
-   protocol WG RFCs. Some examples:
-
-   *  {{?RFC3060}} - Policy Core Information Model -- Version 1 Specification
-
-   *  {{?RFC3290}} - An Informal Management Model for Diffserv Routers
-
-   *  {{?RFC3460}} - Policy Core Information Model (PCIM) Extensions
-
-   *  {{?RFC3585}} - IPsec Configuration Policy Information Model
-
-   *  {{?RFC3644}} - Policy Quality of Service (QoS) Information Model
-
-   *  {{?RFC3670}} - Information Model for Describing Network Device QoS Datapath Mechanisms
-
-   Management protocol standards and management Data Model standards
-   often contain compliance clauses to ensure interoperability.
-   Manageability considerations should include discussion of which level
-   of compliance is expected to be supported for interoperability.
+   To ensure interoperability, management protocol and Data Model standards should incorporate clear
+   compliance clauses, specifying the expected level of support.
 
 ##  Management Information {#sec-mgmt-info}
 
