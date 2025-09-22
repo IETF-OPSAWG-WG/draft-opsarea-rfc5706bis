@@ -431,7 +431,7 @@ This document does not describe interoperability requirements. As such, it does 
    least an indication that known default values are being used.
 
    Protocol Designers should consider how to enable operators to
-   concentrate on the configuration of the network as a whole rather
+   concentrate on the configuration of the network or service infrastructure as a whole rather
    than on individual devices. Of course, how one accomplishes this is
    the hard part.
 
@@ -1107,7 +1107,7 @@ DM         DM        DM     --> concrete/detailed model
    aspects of their configurations.
 
    It is important to enable operators to concentrate on the
-   configuration of the network as a whole, rather than individual
+   configuration of the network or service as a whole, rather than individual
    devices. Support for configuration transactions across several
    devices could significantly simplify network configuration
    management. The ability to distribute configurations to multiple
