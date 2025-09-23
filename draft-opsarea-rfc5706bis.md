@@ -705,7 +705,7 @@ This document does not describe interoperability requirements. As such, it does 
    regardless of vendor, model, or software release. It facilitates the use
    of third-party applications and outsourced management services.
 
-   While individual device management via command line or web interfaces may
+   While individual device management via Proprietary Interfaces may
    suffice for small deployments, large-scale networks comprising equipment
    from multiple vendors necessitate consistent, automated management.
    Relying on vendor- and model-specific interfaces for extensive deployments,
