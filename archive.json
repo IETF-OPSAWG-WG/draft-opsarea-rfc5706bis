@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-21T00:50:18.840691+00:00",
+  "timestamp": "2025-09-23T00:43:57.080628+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -9519,6 +9519,86 @@
       "mergeCommit": null,
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 130,
+      "id": "PR_kwDOOWPBqs6ptT8g",
+      "title": "Rewrite the interoperability section.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/130",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Focus on brevity and removing outdated references.\r\n\r\nThis is part of the changes requested in #7 .",
+      "createdAt": "2025-09-21T15:27:36Z",
+      "updatedAt": "2025-09-22T08:08:52Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "interoperability-rewrite",
+      "headRefOid": "e243445b7181aba59158a533960bca33e2de3bde",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7Bx5T1",
+          "commit": {
+            "abbreviatedOid": "e243445"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "I like the changes. Thanks Joe.",
+          "createdAt": "2025-09-22T08:08:52Z",
+          "updatedAt": "2025-09-22T08:08:52Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 131,
+      "id": "PR_kwDOOWPBqs6pxkYZ",
+      "title": "\"networks\" may be restrictive for some",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/131",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "A protocol may target servers and other similar entities that might not be usually covered under \"operator network\".",
+      "createdAt": "2025-09-22T08:06:59Z",
+      "updatedAt": "2025-09-22T14:00:04Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "networks-and-infrastructures",
+      "headRefOid": "9749387b7902b827a5389d70f9e32b06aee73333",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7B5KPf",
+          "commit": {
+            "abbreviatedOid": "9749387"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-22T14:00:04Z",
+          "updatedAt": "2025-09-22T14:00:04Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
