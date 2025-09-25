@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-23T00:43:57.080628+00:00",
+  "timestamp": "2025-09-25T00:44:35.421141+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -9532,13 +9532,13 @@
       "labels": [],
       "body": "Focus on brevity and removing outdated references.\r\n\r\nThis is part of the changes requested in #7 .",
       "createdAt": "2025-09-21T15:27:36Z",
-      "updatedAt": "2025-09-22T08:08:52Z",
+      "updatedAt": "2025-09-23T01:03:50Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "interoperability-rewrite",
-      "headRefOid": "e243445b7181aba59158a533960bca33e2de3bde",
+      "headRefOid": "143a8c551b433f3660d422c3abcfb3808f7852d1",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
