@@ -90,7 +90,7 @@ contributor:
 
    New Protocols or Protocol Extensions are best designed with due
    consideration of the functionality needed to operate and manage them.
-   Retrofitting operations and management considerations later is suboptimal.
+   Retrofitting operations and management considerations is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
    addressed when defining New Protocols or Protocol Extensions.
