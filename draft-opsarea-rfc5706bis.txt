@@ -459,9 +459,9 @@ Table of Contents
    least an indication that known default values are being used.
 
    Protocol Designers should consider how to enable operators to
-   concentrate on the configuration of the network as a whole rather
-   than on individual devices.  Of course, how one accomplishes this is
-   the hard part.
+   concentrate on the configuration of the network or service
+   infrastructure as a whole rather than on individual devices.  Of
+   course, how one accomplishes this is the hard part.
 
    Protocol Designers should explain the background of chosen default
    values and provide the rationale, especially when those choices may
@@ -1174,9 +1174,9 @@ Table of Contents
    have proprietary aspects of their configurations.
 
    It is important to enable operators to concentrate on the
-   configuration of the network as a whole, rather than individual
-   devices.  Support for configuration transactions across several
-   devices could significantly simplify network configuration
+   configuration of the network or service as a whole, rather than
+   individual devices.  Support for configuration transactions across
+   several devices could significantly simplify network configuration
    management.  The ability to distribute configurations to multiple
    devices, or to modify candidate configurations on multiple devices,
    and then activate them in a near-simultaneous manner might help.
