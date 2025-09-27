@@ -1986,20 +1986,45 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    services in a way in which they can be managed in a scalable manner,
    where one understands the network impact (as part of the total cost
    of operations) of that service.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
-<p id="section-5.2-4">Achieving consensus on a single syntax and protocol for all management tasks
-   has proven impractical. As a result, management systems typically use
-   whatever mechanisms devices support, regardless of IETF preferences.
-   The IETF has moved to support YANG Data Model and IPFIX
-   Information Elements.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
-<p id="section-5.2-5">Interoperability needs to be considered at both the syntactic and
+<p id="section-5.2-4">Getting everybody to agree on a single syntax and an associated
+   protocol to do all management has proven to be difficult. So,
+   management systems tend to speak whatever the boxes support, whether
+   the IETF likes this. The IETF is moving from support for one
+   schema language for modeling the structure of management information
+   (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
+   languages and additional management protocols suited to different
+   purposes. Other Standard Development Organizations (e.g., the
+   Distributed Management Task Force - DMTF, the Tele-Management Forum -
+   TMF) also define schemas and protocols for management and these may
+   be more suitable than IETF schemas and protocols in some cases. Some
+   of the alternatives being considered include:<a href="#section-5.2-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2-5.1">
+            <p id="section-5.2-5.1.1">XML Schema Definition <span>[<a href="#W3C.REC-xmlschema-0-20041028" class="cite xref">W3C.REC-xmlschema-0-20041028</a>]</span><a href="#section-5.2-5.1.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-5.2-6">and<a href="#section-5.2-6" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2-7.1">
+            <p id="section-5.2-7.1.1">NETCONF Configuration Protocol <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span><a href="#section-5.2-7.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.2-7.2">
+            <p id="section-5.2-7.2.1">the IP Flow Information Export (IPFIX) Protocol <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span> for
+usage accounting<a href="#section-5.2-7.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-5.2-7.3">
+            <p id="section-5.2-7.3.1">the syslog protocol <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span> for logging<a href="#section-5.2-7.3.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-5.2-8">Interoperability needs to be considered at both the syntactic and
    semantic levels. Although handling syntactic differences across vendors,
    models, or product releases can be time-consuming and frustrating,
    application designers, including operators who develop their own scripts,
-   can implement conditional processing to accommodate them.<a href="#section-5.2-5" class="pilcrow">¶</a></p>
-<p id="section-5.2-6">Semantic differences are much harder to deal with on the manager side
+   can implement conditional processing to accommodate them.<a href="#section-5.2-8" class="pilcrow">¶</a></p>
+<p id="section-5.2-9">Semantic differences are much harder to deal with on the manager side
    -- once you have the data, its meaning is a function of the managed
-   entity.<a href="#section-5.2-6" class="pilcrow">¶</a></p>
-<p id="section-5.2-7">Information Models help focus interoperability on the semantic level
+   entity.<a href="#section-5.2-9" class="pilcrow">¶</a></p>
+<p id="section-5.2-10">Information Models help focus interoperability on the semantic level
    by defining what information should be gathered and how it might be used,
    regardless of the underlying management protocol or vendor implementation.
    The use of an Information Model might
@@ -2009,17 +2034,17 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    might identify which error conditions should be counted separately,
    and which error conditions can be recorded together in a single
    counter. Then, whether the counter is gathered via, e.g., NETCONF or
-   exported via IPFIX, the counter will have the same meaning.<a href="#section-5.2-7" class="pilcrow">¶</a></p>
-<p id="section-5.2-8">Protocol Designers must consider what operational, configuration,
+   exported via IPFIX, the counter will have the same meaning.<a href="#section-5.2-10" class="pilcrow">¶</a></p>
+<p id="section-5.2-11">Protocol Designers must consider what operational, configuration,
    state, or statistical information will be relevant for effectively
    monitoring, controlling, or troubleshooting a New Protocol and its Protocol
    Extensions. This includes identifying key parameters that reflect the
    protocol's behavior, performance metrics, error indicators, and any
-   contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.<a href="#section-5.2-8" class="pilcrow">¶</a></p>
+   contextual data that would aid in diagnostic, troubleshooting, or lifecycle management.<a href="#section-5.2-11" class="pilcrow">¶</a></p>
 <span id="name-information-models-ims-and-"></span><div id="fig-im-dm">
 <figure id="figure-1">
-          <div id="section-5.2-9.1">
-            <div class="alignCenter art-svg artwork" id="section-5.2-9.1.1">
+          <div id="section-5.2-12.1">
+            <div class="alignCenter art-svg artwork" id="section-5.2-12.1.1">
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="144" width="464" viewBox="0 0 464 144" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
                 <path d="M 8,64 L 8,80" fill="none" stroke="black"></path>
                 <path d="M 96,48 L 96,80" fill="none" stroke="black"></path>
@@ -2045,47 +2070,47 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
                   <text x="296" y="116">for</text>
                   <text x="364" y="116">implementers</text>
                 </g>
-              </svg><a href="#section-5.2-9.1.1" class="pilcrow">¶</a>
+              </svg><a href="#section-5.2-12.1.1" class="pilcrow">¶</a>
 </div>
 </div>
 <figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
 <a href="#name-information-models-ims-and-" class="selfRef">Information Models (IMs) and Data Models (DMs)</a>
           </figcaption></figure>
 </div>
-<p id="section-5.2-10">"On the Difference between Information Models and Data Models"
+<p id="section-5.2-13">"On the Difference between Information Models and Data Models"
    <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span> is helpful in determining what information to consider
-   regarding Information Models (IMs), as compared to Data Models (DMs).<a href="#section-5.2-10" class="pilcrow">¶</a></p>
-<p id="section-5.2-11">Protocol Designers may directly develop Data Models without first producing an Information Model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).<a href="#section-5.2-11" class="pilcrow">¶</a></p>
-<p id="section-5.2-12">Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or Protocol Extension. The protocol Designers then use the Information Model to develop Data Models that will be used for managing the protocol.<a href="#section-5.2-12" class="pilcrow">¶</a></p>
-<p id="section-5.2-13">Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol Designers may create an Information Model if the resulting Data Models are complex or numerous.<a href="#section-5.2-13" class="pilcrow">¶</a></p>
-<p id="section-5.2-14">Information models should come from the protocol WGs and include
+   regarding Information Models (IMs), as compared to Data Models (DMs).<a href="#section-5.2-13" class="pilcrow">¶</a></p>
+<p id="section-5.2-14">Protocol Designers may directly develop Data Models without first producing an Information Model. For example, such a decision can be taken when it is given that the data component is not used by distinct protocols (e.g., IPFIX-only).<a href="#section-5.2-14" class="pilcrow">¶</a></p>
+<p id="section-5.2-15">Alternatively, Protocol Designers may decide to use an Information Model to describe the managed elements in a protocol or Protocol Extension. The protocol Designers then use the Information Model to develop Data Models that will be used for managing the protocol.<a href="#section-5.2-15" class="pilcrow">¶</a></p>
+<p id="section-5.2-16">Specifically, Protocol Designers should develop an Information Model if multiple Data Model representations (e.g., YANG <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span><span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and/or IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>) are to be produced, to ensure lossless semantic mapping. Protocol Designers may create an Information Model if the resulting Data Models are complex or numerous.<a href="#section-5.2-16" class="pilcrow">¶</a></p>
+<p id="section-5.2-17">Information models should come from the protocol WGs and include
    lists of events, counters, and configuration parameters that are
    relevant. There are several Information Models contained in
-   protocol WG RFCs. Some examples:<a href="#section-5.2-14" class="pilcrow">¶</a></p>
+   protocol WG RFCs. Some examples:<a href="#section-5.2-17" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.2-15.1">
-            <p id="section-5.2-15.1.1"><span>[<a href="#RFC3060" class="cite xref">RFC3060</a>]</span> - Policy Core Information Model -- Version 1 Specification<a href="#section-5.2-15.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-5.2-18.1">
+            <p id="section-5.2-18.1.1"><span>[<a href="#RFC3060" class="cite xref">RFC3060</a>]</span> - Policy Core Information Model -- Version 1 Specification<a href="#section-5.2-18.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.2-15.2">
-            <p id="section-5.2-15.2.1"><span>[<a href="#RFC3290" class="cite xref">RFC3290</a>]</span> - An Informal Management Model for Diffserv Routers<a href="#section-5.2-15.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.2-18.2">
+            <p id="section-5.2-18.2.1"><span>[<a href="#RFC3290" class="cite xref">RFC3290</a>]</span> - An Informal Management Model for Diffserv Routers<a href="#section-5.2-18.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.2-15.3">
-            <p id="section-5.2-15.3.1"><span>[<a href="#RFC3460" class="cite xref">RFC3460</a>]</span> - Policy Core Information Model (PCIM) Extensions<a href="#section-5.2-15.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.2-18.3">
+            <p id="section-5.2-18.3.1"><span>[<a href="#RFC3460" class="cite xref">RFC3460</a>]</span> - Policy Core Information Model (PCIM) Extensions<a href="#section-5.2-18.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.2-15.4">
-            <p id="section-5.2-15.4.1"><span>[<a href="#RFC3585" class="cite xref">RFC3585</a>]</span> - IPsec Configuration Policy Information Model<a href="#section-5.2-15.4.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.2-18.4">
+            <p id="section-5.2-18.4.1"><span>[<a href="#RFC3585" class="cite xref">RFC3585</a>]</span> - IPsec Configuration Policy Information Model<a href="#section-5.2-18.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.2-15.5">
-            <p id="section-5.2-15.5.1"><span>[<a href="#RFC3644" class="cite xref">RFC3644</a>]</span> - Policy Quality of Service (QoS) Information Model<a href="#section-5.2-15.5.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.2-18.5">
+            <p id="section-5.2-18.5.1"><span>[<a href="#RFC3644" class="cite xref">RFC3644</a>]</span> - Policy Quality of Service (QoS) Information Model<a href="#section-5.2-18.5.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.2-15.6">
-            <p id="section-5.2-15.6.1"><span>[<a href="#RFC3670" class="cite xref">RFC3670</a>]</span> - Information Model for Describing Network Device QoS Datapath Mechanisms<a href="#section-5.2-15.6.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.2-18.6">
+            <p id="section-5.2-18.6.1"><span>[<a href="#RFC3670" class="cite xref">RFC3670</a>]</span> - Information Model for Describing Network Device QoS Datapath Mechanisms<a href="#section-5.2-18.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-5.2-16">Management protocol standards and management Data Model standards
+<p id="section-5.2-19">Management protocol standards and management Data Model standards
    often contain compliance clauses to ensure interoperability.
    Manageability considerations should include discussion of which level
-   of compliance is expected to be supported for interoperability.<a href="#section-5.2-16" class="pilcrow">¶</a></p>
+   of compliance is expected to be supported for interoperability.<a href="#section-5.2-19" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-mgmt-info">
@@ -2978,6 +3003,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
       <dd>
 <span class="refAuthor">Klensin, J.</span>, <span class="refTitle">"Simple Mail Transfer Protocol"</span>, <span class="seriesInfo">RFC 5321</span>, <span class="seriesInfo">DOI 10.17487/RFC5321</span>, <time datetime="2008-10" class="refDate">October 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5321">https://www.rfc-editor.org/rfc/rfc5321</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC5424">[RFC5424]</dt>
+      <dd>
+<span class="refAuthor">Gerhards, R.</span>, <span class="refTitle">"The Syslog Protocol"</span>, <span class="seriesInfo">RFC 5424</span>, <span class="seriesInfo">DOI 10.17487/RFC5424</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5424">https://www.rfc-editor.org/rfc/rfc5424</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC5706">[RFC5706]</dt>
       <dd>
 <span class="refAuthor">Harrington, D.</span>, <span class="refTitle">"Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions"</span>, <span class="seriesInfo">RFC 5706</span>, <span class="seriesInfo">DOI 10.17487/RFC5706</span>, <time datetime="2009-11" class="refDate">November 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5706">https://www.rfc-editor.org/rfc/rfc5706</a>&gt;</span>. </dd>
@@ -2985,6 +3014,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC6020">[RFC6020]</dt>
       <dd>
 <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"YANG - A Data Modeling Language for the Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6020</span>, <span class="seriesInfo">DOI 10.17487/RFC6020</span>, <time datetime="2010-10" class="refDate">October 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6020">https://www.rfc-editor.org/rfc/rfc6020</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6241">[RFC6241]</dt>
+      <dd>
+<span class="refAuthor">Enns, R., Ed.</span>, <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refAuthor">Schoenwaelder, J., Ed.</span>, and <span class="refAuthor">A. Bierman, Ed.</span>, <span class="refTitle">"Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6241</span>, <span class="seriesInfo">DOI 10.17487/RFC6241</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6241">https://www.rfc-editor.org/rfc/rfc6241</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6291">[RFC6291]</dt>
       <dd>
@@ -3047,8 +3080,12 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <span class="refAuthor">Barguil, S.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Munoz, L.</span>, and <span class="refAuthor">A. Aguado</span>, <span class="refTitle">"A YANG Network Data Model for Layer 3 VPNs"</span>, <span class="seriesInfo">RFC 9182</span>, <span class="seriesInfo">DOI 10.17487/RFC9182</span>, <time datetime="2022-02" class="refDate">February 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9182">https://www.rfc-editor.org/rfc/rfc9182</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9291">[RFC9291]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Barguil, S.</span>, and <span class="refAuthor">L. Munoz</span>, <span class="refTitle">"A YANG Network Data Model for Layer 2 VPNs"</span>, <span class="seriesInfo">RFC 9291</span>, <span class="seriesInfo">DOI 10.17487/RFC9291</span>, <time datetime="2022-09" class="refDate">September 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9291">https://www.rfc-editor.org/rfc/rfc9291</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="W3C.REC-xmlschema-0-20041028">[W3C.REC-xmlschema-0-20041028]</dt>
+    <dd>
+<span class="refAuthor">Fallside, D., Ed.</span> and <span class="refAuthor">P. Walmsley, Ed.</span>, <span class="refTitle">"XML Schema Part 0: Primer Second Edition"</span>, <span class="seriesInfo">W3C REC REC-xmlschema-0-20041028</span>, <span class="seriesInfo">W3C REC-xmlschema-0-20041028</span>, <time datetime="2004-10-28" class="refDate">28 October 2004</time>, <span>&lt;<a href="https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/">https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>

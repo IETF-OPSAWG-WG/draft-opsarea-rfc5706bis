@@ -740,11 +740,30 @@ Table of Contents
    where one understands the network impact (as part of the total cost
    of operations) of that service.
 
-   Achieving consensus on a single syntax and protocol for all
-   management tasks has proven impractical.  As a result, management
-   systems typically use whatever mechanisms devices support, regardless
-   of IETF preferences.  The IETF has moved to support YANG Data Model
-   and IPFIX Information Elements.
+   Getting everybody to agree on a single syntax and an associated
+   protocol to do all management has proven to be difficult.  So,
+   management systems tend to speak whatever the boxes support, whether
+   the IETF likes this.  The IETF is moving from support for one schema
+   language for modeling the structure of management information (SMIv2)
+   and one simple network management protocol (SNMP) towards support for
+   additional schema languages and additional management protocols
+   suited to different purposes.  Other Standard Development
+   Organizations (e.g., the Distributed Management Task Force - DMTF,
+   the Tele-Management Forum - TMF) also define schemas and protocols
+   for management and these may be more suitable than IETF schemas and
+   protocols in some cases.  Some of the alternatives being considered
+   include:
+
+   *  XML Schema Definition [W3C.REC-xmlschema-0-20041028]
+
+   and
+
+   *  NETCONF Configuration Protocol [RFC6241]
+
+   *  the IP Flow Information Export (IPFIX) Protocol [RFC7011] for
+      usage accounting
+
+   *  the syslog protocol [RFC5424] for logging
 
    Interoperability needs to be considered at both the syntactic and
    semantic levels.  Although handling syntactic differences across
@@ -1720,6 +1739,10 @@ Table of Contents
               DOI 10.17487/RFC5321, October 2008,
               <https://www.rfc-editor.org/rfc/rfc5321>.
 
+   [RFC5424]  Gerhards, R., "The Syslog Protocol", RFC 5424,
+              DOI 10.17487/RFC5424, March 2009,
+              <https://www.rfc-editor.org/rfc/rfc5424>.
+
    [RFC5706]  Harrington, D., "Guidelines for Considering Operations and
               Management of New Protocols and Protocol Extensions",
               RFC 5706, DOI 10.17487/RFC5706, November 2009,
@@ -1729,6 +1752,11 @@ Table of Contents
               the Network Configuration Protocol (NETCONF)", RFC 6020,
               DOI 10.17487/RFC6020, October 2010,
               <https://www.rfc-editor.org/rfc/rfc6020>.
+
+   [RFC6241]  Enns, R., Ed., Bjorklund, M., Ed., Schoenwaelder, J., Ed.,
+              and A. Bierman, Ed., "Network Configuration Protocol
+              (NETCONF)", RFC 6241, DOI 10.17487/RFC6241, June 2011,
+              <https://www.rfc-editor.org/rfc/rfc6241>.
 
    [RFC6291]  Andersson, L., van Helvoort, H., Bonica, R., Romascanu,
               D., and S. Mansfield, "Guidelines for the Use of the "OAM"
@@ -1804,6 +1832,12 @@ Table of Contents
               S., and L. Munoz, "A YANG Network Data Model for Layer 2
               VPNs", RFC 9291, DOI 10.17487/RFC9291, September 2022,
               <https://www.rfc-editor.org/rfc/rfc9291>.
+
+   [W3C.REC-xmlschema-0-20041028]
+              Fallside, D., Ed. and P. Walmsley, Ed., "XML Schema Part
+              0: Primer Second Edition", W3C REC REC-xmlschema-
+              0-20041028, W3C REC-xmlschema-0-20041028, 28 October 2004,
+              <https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/>.
 
 Appendix A.  Changes Since RFC 5706
 
