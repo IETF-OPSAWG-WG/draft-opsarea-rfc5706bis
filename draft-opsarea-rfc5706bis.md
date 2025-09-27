@@ -680,7 +680,7 @@ This document does not describe interoperability requirements. As such, it does 
    Just as when deploying protocols that will inter-connect devices,
    management interoperability should be considered -- whether across
    devices from different vendors, across models from the same vendor,
-   or across different releases of the same product or offer. Management
+   or across different releases of the same product or service. Management
    interoperability refers to allowing information sharing and
    operations and automation between multiple devices and multiple management
    applications, often from different vendors. Interoperability allows
