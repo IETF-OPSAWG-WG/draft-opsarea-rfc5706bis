@@ -706,6 +706,30 @@ This document does not describe interoperability requirements. As such, it does 
    where one understands the network impact (as part of the total cost
    of operations) of that service.
 
+   Getting everybody to agree on a single syntax and an associated
+   protocol to do all management has proven to be difficult. So,
+   management systems tend to speak whatever the boxes support, whether
+   the IETF likes this. The IETF is moving from support for one
+   schema language for modeling the structure of management information
+   (SMIv2) and one simple network management protocol (SNMP) towards support for additional schema
+   languages and additional management protocols suited to different
+   purposes. Other Standard Development Organizations (e.g., the
+   Distributed Management Task Force - DMTF, the Tele-Management Forum -
+   TMF) also define schemas and protocols for management and these may
+   be more suitable than IETF schemas and protocols in some cases. Some
+   of the alternatives being considered include:
+
+   *  XML Schema Definition {{?W3C.REC-xmlschema-0-20041028}}
+
+   and
+
+   *  NETCONF Configuration Protocol {{?RFC6241}}
+
+   *  the IP Flow Information Export (IPFIX) Protocol {{?RFC7011}} for
+      usage accounting
+
+   *  the syslog protocol {{?RFC5424}} for logging
+
    Achieving consensus on a single syntax and protocol for all management tasks
    has proven impractical. As a result, management systems typically use
    whatever mechanisms devices support, regardless of IETF preferences.
