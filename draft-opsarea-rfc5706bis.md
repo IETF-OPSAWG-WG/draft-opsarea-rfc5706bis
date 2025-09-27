@@ -730,12 +730,6 @@ This document does not describe interoperability requirements. As such, it does 
 
    *  the syslog protocol {{?RFC5424}} for logging
 
-   Achieving consensus on a single syntax and protocol for all management tasks
-   has proven impractical. As a result, management systems typically use
-   whatever mechanisms devices support, regardless of IETF preferences.
-   The IETF has moved to support YANG Data Model and IPFIX
-   Information Elements.
-
    Interoperability needs to be considered at both the syntactic and
    semantic levels. Although handling syntactic differences across vendors,
    models, or product releases can be time-consuming and frustrating,
