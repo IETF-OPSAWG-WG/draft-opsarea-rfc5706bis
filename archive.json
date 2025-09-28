@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-25T00:44:35.421141+00:00",
+  "timestamp": "2025-09-28T00:51:27.319302+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -400,7 +400,7 @@
       "id": "I_kwDOOWPBqs6xyNza",
       "title": "New OPS-related technologies",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/7",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -413,8 +413,8 @@
       "labels": [],
       "body": "Because this documents was produced in 2009, it missed some new OPS-related technologies (protocols and data models): BMP, Alt Mark, NETCONF/RESTCONF, YANG",
       "createdAt": "2025-04-09T12:51:05Z",
-      "updatedAt": "2025-09-11T13:38:42Z",
-      "closedAt": null,
+      "updatedAt": "2025-09-27T16:00:29Z",
+      "closedAt": "2025-09-27T16:00:28Z",
       "comments": [
         {
           "author": "graf3net",
@@ -9473,52 +9473,150 @@
       "id": "PR_kwDOOWPBqs6pLGaG",
       "title": "Sections 5.1 and 5.2, New OPS-related technologies, Fixes #7",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/127",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Team, is this too drastic?",
       "createdAt": "2025-09-18T00:01:20Z",
-      "updatedAt": "2025-09-18T00:01:20Z",
+      "updatedAt": "2025-09-27T16:00:28Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "new-ops-related-technologies",
-      "headRefOid": "ed07e7caf4c08cf76e3e4dfb318a5babeb08e9be",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "228bfe11fa44553714b913caf44c9188d6c4dad1",
+      "closedAt": "2025-09-27T16:00:27Z",
+      "mergedAt": "2025-09-27T16:00:27Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7DJND5",
+          "commit": {
+            "abbreviatedOid": "ed07e7c"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-09-26T21:13:18Z",
+          "updatedAt": "2025-09-26T21:14:31Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "```suggestion\r\n   or across different releases of the same product or service. Management\r\n```\r\n\r\nOffer seems too business-centric.",
+              "createdAt": "2025-09-26T21:13:18Z",
+              "updatedAt": "2025-09-26T21:14:31Z"
+            },
+            {
+              "originalPosition": 60,
+              "body": "Can you cut this change out as I have re-written this section from scratch?",
+              "createdAt": "2025-09-26T21:14:20Z",
+              "updatedAt": "2025-09-26T21:14:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7DNBGO",
+          "commit": {
+            "abbreviatedOid": "ed07e7c"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-27T14:43:46Z",
+          "updatedAt": "2025-09-27T14:43:46Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "Reverted it back, @xorrkaz ",
+              "createdAt": "2025-09-27T14:43:46Z",
+              "updatedAt": "2025-09-27T14:43:46Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7DNBM1",
+          "commit": {
+            "abbreviatedOid": "228bfe1"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-27T14:45:00Z",
+          "updatedAt": "2025-09-27T14:45:00Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 128,
       "id": "PR_kwDOOWPBqs6pLNyv",
       "title": "Yet-another set of editorial improvements",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/128",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-09-18T00:18:15Z",
-      "updatedAt": "2025-09-18T00:18:15Z",
+      "updatedAt": "2025-09-25T13:35:46Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-another-patch",
-      "headRefOid": "d3951d9e14565f1f31a45087d0ab552ff05382f5",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "097fa20976e60ef1eb60f09bddc343a5df727d63",
+      "closedAt": "2025-09-25T13:35:45Z",
+      "mergedAt": "2025-09-25T13:35:45Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "15c07d37a23b6fc18264d4fe5c5c61bfba1bdc31"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7CxUhA",
+          "commit": {
+            "abbreviatedOid": "d3951d9"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-25T13:34:28Z",
+          "updatedAt": "2025-09-25T13:34:29Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\r\n   Retrofitting operations and management considerations is suboptimal.\r\n```",
+              "createdAt": "2025-09-25T13:34:28Z",
+              "updatedAt": "2025-09-25T13:34:29Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7CxVWj",
+          "commit": {
+            "abbreviatedOid": "097fa20"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-25T13:34:54Z",
+          "updatedAt": "2025-09-25T13:34:54Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 130,
@@ -9532,18 +9630,33 @@
       "labels": [],
       "body": "Focus on brevity and removing outdated references.\r\n\r\nThis is part of the changes requested in #7 .",
       "createdAt": "2025-09-21T15:27:36Z",
-      "updatedAt": "2025-09-23T01:03:50Z",
+      "updatedAt": "2025-09-25T15:23:10Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "interoperability-rewrite",
-      "headRefOid": "143a8c551b433f3660d422c3abcfb3808f7852d1",
+      "headRefOid": "1212214419040c5585465f71a565b5f24c597077",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks Joe, good start. Let's discuss this \r\n\r\nWhile Protocol Designers may directly develop DMs in simple cases (e.g., IPFIX-only scenarios),\r\n   {{?RFC3444}} is helpful in determining what information to consider\r\n   using an IM is recommended for describing managed elements in protocols or extensions that require\r\n   regarding Information Models (IMs), as compared to Data Models (DMs).\r\n   broader applicability and semantic consistency.\r\n\r\n... which is not aligned with \"Protocol Designers should consider developing an IM, particularly\"\r\n",
+          "createdAt": "2025-09-25T12:57:52Z",
+          "updatedAt": "2025-09-25T12:57:52Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "My point was that for simple things, a direct DM may be enough.  More complex or more abstract concepts (maybe even those needing more discussion or work to make a concrete DM), then an IM is needed.",
+          "createdAt": "2025-09-25T13:04:11Z",
+          "updatedAt": "2025-09-25T13:04:11Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs7Bx5T1",
@@ -9565,25 +9678,35 @@
       "id": "PR_kwDOOWPBqs6pxkYZ",
       "title": "\"networks\" may be restrictive for some",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/131",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "A protocol may target servers and other similar entities that might not be usually covered under \"operator network\".",
       "createdAt": "2025-09-22T08:06:59Z",
-      "updatedAt": "2025-09-22T14:00:04Z",
+      "updatedAt": "2025-09-25T13:38:52Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "networks-and-infrastructures",
       "headRefOid": "9749387b7902b827a5389d70f9e32b06aee73333",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "closedAt": "2025-09-25T13:38:50Z",
+      "mergedAt": "2025-09-25T13:38:50Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "e3ba16251590cd0caf827b6712264ab074cfbd32"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The changes make sense",
+          "createdAt": "2025-09-25T12:48:54Z",
+          "updatedAt": "2025-09-25T12:48:54Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs7B5KPf",
