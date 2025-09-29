@@ -697,7 +697,7 @@ This document does not describe interoperability requirements. As such, it does 
    However, the IETF has significantly changed its approach to network management, moving
    beyond SMIv2 and SNMP. Modern IETF management solutions primarily leverage YANG {{?RFC7950}}
    for Data Modeling and NETCONF {{?RFC6241}} or RESTCONF {{?RFC8040}} for protocol interactions.
-   This shift, as further elaborated in {{?RFC6632}}, emphasizes structured data models and
+   This shift, as further elaborated in {{?RFC6632}}, emphasizes structured Data Models and
    programmatic interfaces to enhance automation and interoperability. Other protocols like
    IPFIX {{?RFC7011}} for flow accounting and syslog {{?RFC5424}} for logging continue to play
    specific roles in comprehensive network management.
@@ -714,7 +714,7 @@ This document does not describe interoperability requirements. As such, it does 
    has the same meaning whether collected via NETCONF or exported via IPFIX.
 
    Protocol Designers should consider developing an IM, particularly when multiple Data Model (DM)
-   representations (e.g., YANG {{?RFC7950}} and/or IPFIX {{?RFC7011}}) are required, to ensure lossless
+   representations (e.g., YANG and/or IPFIX) are required, to ensure lossless
    semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in Figure 1, an
    IM serves as a conceptual blueprint for designers and operators, from which concrete DMs are derived
    for implementers. {{?RFC3444}} provides further guidance on distinguishing IMs from DMs.
@@ -730,10 +730,6 @@ DM         DM        DM     --> concrete/detailed model
 
 ~~~~
 {: #fig-im-dm title="Information Models (IMs) and Data Models (DMs)" artwork-align="center"}
-
-   While Protocol Designers may directly develop DMs in simple cases (e.g., IPFIX-only scenarios),
-   using an IM is recommended for describing managed elements in protocols or extensions that require
-   broader applicability and semantic consistency.
 
    Protocol Designers must identify the essential operational, configuration, state, and statistical
    information required for effective monitoring, control, and troubleshooting of new protocols and
