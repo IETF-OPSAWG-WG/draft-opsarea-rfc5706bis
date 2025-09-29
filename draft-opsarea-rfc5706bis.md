@@ -670,34 +670,11 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
-   The IETF provides several standardized management protocols suitable for various operational purposes, for example as outlined in {{?RFC6632}}. Broadly, these include core network management protocols, purpose-specific management protocols, and network management Data Models. A non-exhaustive list of such protocols is provided below:
+   The IETF provides several standardized management protocols suitable for
+   various operational purposes, for example as outlined in {{?RFC6632}}.
 
-   *  Remote Authentication Dial In User Service (RADIUS) {{?RFC2865}}
-
-   *  The Syslog Protocol {{?RFC5424}}
-
-   *  Packet Sampling (PSAMP) Protocol Specifications {{?RFC5476}}
-
-   *  Network Configuration Protocol (NETCONF) {{?RFC6241}}
-
-   *  Diameter Base Protocol {{?RFC6733}}
-
-   *  Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information {{?RFC7011}}
-
-   *  BGP Monitoring Protocol (BMP) {{?RFC7854}}
-
-   *  RESTCONF Protocol {{?RFC8040}}
-
-   *  Network Telemetry Framework {{?RFC9232}}
-
-
-   The IETF previously also worked on the Simple Network Management Protocol
-   (SNMP) {{?RFC3410}} and the Structure of Management Information (SMI) {{?STD58}},
-   but further use of this management protocol in new IETF documents has been constrained
-   to maintenance of existing MIB modules and development of MIB modules for legacy devices
-   that do not support more recent management protocols {{IESG-STATEMENT}}.
-
-   This section is not intended to offer in-depth definitions or explanations; readers seeking more detail should consult the referenced materials.
+   Readers seeking more in-depth definitions or explanations should consult
+   the referenced materials.
 
 ##  Interoperability {#sec-interop}
 
@@ -741,6 +718,7 @@ This document does not describe interoperability requirements. As such, it does 
    semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in Figure 1, an
    IM serves as a conceptual blueprint for designers and operators, from which concrete DMs are derived
    for implementers. {{?RFC3444}} provides further guidance on distinguishing IMs from DMs.
+
 
 ~~~~ aasvg
            IM               --> conceptual/abstract model
