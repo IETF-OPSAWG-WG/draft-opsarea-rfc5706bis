@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 29 March 2026                                         A. Farrel
+Expires: 2 April 2026                                          A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 29 March 2026                                         A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                       25 September 2025
+                                                       29 September 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 March 2026.
+   This Internet-Draft will expire on 2 April 2026.
 
 Copyright Notice
 
@@ -704,39 +704,10 @@ Table of Contents
 
    The IETF provides several standardized management protocols suitable
    for various operational purposes, for example as outlined in
-   [RFC6632].  Broadly, these include core network management protocols,
-   purpose-specific management protocols, and network management Data
-   Models.  A non-exhaustive list of such protocols is provided below:
+   [RFC6632].
 
-   *  Remote Authentication Dial In User Service (RADIUS) [RFC2865]
-
-   *  The Syslog Protocol [RFC5424]
-
-   *  Packet Sampling (PSAMP) Protocol Specifications [RFC5476]
-
-   *  Network Configuration Protocol (NETCONF) [RFC6241]
-
-   *  Diameter Base Protocol [RFC6733]
-
-   *  Specification of the IP Flow Information Export (IPFIX) Protocol
-      for the Exchange of Flow Information [RFC7011]
-
-   *  BGP Monitoring Protocol (BMP) [RFC7854]
-
-   *  RESTCONF Protocol [RFC8040]
-
-   *  Network Telemetry Framework [RFC9232]
-
-   The IETF previously also worked on the Simple Network Management
-   Protocol (SNMP) [RFC3410] and the Structure of Management Information
-   (SMI) [STD58], but further use of this management protocol in new
-   IETF documents has been constrained to maintenance of existing MIB
-   modules and development of MIB modules for legacy devices that do not
-   support more recent management protocols [IESG-STATEMENT].
-
-   This section is not intended to offer in-depth definitions or
-   explanations; readers seeking more detail should consult the
-   referenced materials.
+   Readers seeking more in-depth definitions or explanations should
+   consult the referenced materials.
 
 5.2.  Interoperability
 
@@ -1642,11 +1613,6 @@ Table of Contents
               RFC 2711, DOI 10.17487/RFC2711, October 1999,
               <https://www.rfc-editor.org/rfc/rfc2711>.
 
-   [RFC2865]  Rigney, C., Willens, S., Rubens, A., and W. Simpson,
-              "Remote Authentication Dial In User Service (RADIUS)",
-              RFC 2865, DOI 10.17487/RFC2865, June 2000,
-              <https://www.rfc-editor.org/rfc/rfc2865>.
-
    [RFC2975]  Aboba, B., Arkko, J., and D. Harrington, "Introduction to
               Accounting Management", RFC 2975, DOI 10.17487/RFC2975,
               October 2000, <https://www.rfc-editor.org/rfc/rfc2975>.
@@ -1661,12 +1627,6 @@ Table of Contents
               J., and S. Waldbusser, "Terminology for Policy-Based
               Management", RFC 3198, DOI 10.17487/RFC3198, November
               2001, <https://www.rfc-editor.org/rfc/rfc3198>.
-
-   [RFC3410]  Case, J., Mundy, R., Partain, D., and B. Stewart,
-              "Introduction and Applicability Statements for Internet-
-              Standard Management Framework", RFC 3410,
-              DOI 10.17487/RFC3410, December 2002,
-              <https://www.rfc-editor.org/rfc/rfc3410>.
 
    [RFC3444]  Pras, A. and J. Schoenwaelder, "On the Difference between
               Information Models and Data Models", RFC 3444,
@@ -1692,11 +1652,6 @@ Table of Contents
    [RFC5424]  Gerhards, R., "The Syslog Protocol", RFC 5424,
               DOI 10.17487/RFC5424, March 2009,
               <https://www.rfc-editor.org/rfc/rfc5424>.
-
-   [RFC5476]  Claise, B., Ed., Johnson, A., and J. Quittek, "Packet
-              Sampling (PSAMP) Protocol Specifications", RFC 5476,
-              DOI 10.17487/RFC5476, March 2009,
-              <https://www.rfc-editor.org/rfc/rfc5476>.
 
    [RFC5706]  Harrington, D., "Guidelines for Considering Operations and
               Management of New Protocols and Protocol Extensions",
@@ -1734,21 +1689,11 @@ Table of Contents
               DOI 10.17487/RFC6709, September 2012,
               <https://www.rfc-editor.org/rfc/rfc6709>.
 
-   [RFC6733]  Fajardo, V., Ed., Arkko, J., Loughney, J., and G. Zorn,
-              Ed., "Diameter Base Protocol", RFC 6733,
-              DOI 10.17487/RFC6733, October 2012,
-              <https://www.rfc-editor.org/rfc/rfc6733>.
-
    [RFC7011]  Claise, B., Ed., Trammell, B., Ed., and P. Aitken,
               "Specification of the IP Flow Information Export (IPFIX)
               Protocol for the Exchange of Flow Information", STD 77,
               RFC 7011, DOI 10.17487/RFC7011, September 2013,
               <https://www.rfc-editor.org/rfc/rfc7011>.
-
-   [RFC7854]  Scudder, J., Ed., Fernando, R., and S. Stuart, "BGP
-              Monitoring Protocol (BMP)", RFC 7854,
-              DOI 10.17487/RFC7854, June 2016,
-              <https://www.rfc-editor.org/rfc/rfc7854>.
 
    [RFC7950]  Bjorklund, M., Ed., "The YANG 1.1 Data Modeling Language",
               RFC 7950, DOI 10.17487/RFC7950, August 2016,
@@ -1797,35 +1742,10 @@ Table of Contents
               for Layer 3 VPNs", RFC 9182, DOI 10.17487/RFC9182,
               February 2022, <https://www.rfc-editor.org/rfc/rfc9182>.
 
-   [RFC9232]  Song, H., Qin, F., Martinez-Julia, P., Ciavaglia, L., and
-              A. Wang, "Network Telemetry Framework", RFC 9232,
-              DOI 10.17487/RFC9232, May 2022,
-              <https://www.rfc-editor.org/rfc/rfc9232>.
-
    [RFC9291]  Boucadair, M., Ed., Gonzalez de Dios, O., Ed., Barguil,
               S., and L. Munoz, "A YANG Network Data Model for Layer 2
               VPNs", RFC 9291, DOI 10.17487/RFC9291, September 2022,
               <https://www.rfc-editor.org/rfc/rfc9291>.
-
-   [STD58]    Internet Standard 58,
-              <https://www.rfc-editor.org/info/std58>.
-              At the time of writing, this STD comprises the following:
-
-              McCloghrie, K., Ed., Perkins, D., Ed., and J.
-              Schoenwaelder, Ed., "Structure of Management Information
-              Version 2 (SMIv2)", STD 58, RFC 2578,
-              DOI 10.17487/RFC2578, April 1999,
-              <https://www.rfc-editor.org/info/rfc2578>.
-
-              McCloghrie, K., Ed., Perkins, D., Ed., and J.
-              Schoenwaelder, Ed., "Textual Conventions for SMIv2",
-              STD 58, RFC 2579, DOI 10.17487/RFC2579, April 1999,
-              <https://www.rfc-editor.org/info/rfc2579>.
-
-              McCloghrie, K., Ed., Perkins, D., Ed., and J.
-              Schoenwaelder, Ed., "Conformance Statements for SMIv2",
-              STD 58, RFC 2580, DOI 10.17487/RFC2580, April 1999,
-              <https://www.rfc-editor.org/info/rfc2580>.
 
 Appendix A.  Changes Since RFC 5706
 
