@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-28T00:51:27.319302+00:00",
+  "timestamp": "2025-09-30T00:45:30.016773+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1967,9 +1967,24 @@
       "labels": [],
       "body": "Ron was asked to do a review in the context of PROBE. He wrote:\n\n> I think this is a very important draft. However, its readership will decline as a function of its length.\n> \n> It might be best to provide a list of questions that an author should consider:\n> \n> \u2022\tQuestion 1 \n> \u2022\tQuestion 2 \n> \u2022\tQuestion n \n> \n> If the answers to any of these questions are non-trivial, they should be provided in a sub-section of the operational considerations section. \n> \n> If the operational consideration section is empty, it can be omitted.\n> \n> The document probably should exceed 15 pages.",
       "createdAt": "2025-09-14T10:04:32Z",
-      "updatedAt": "2025-09-14T10:04:32Z",
+      "updatedAt": "2025-09-29T13:31:48Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "As a \"fun\" exercise, I took the text version of the draft from my interop-rewrite branch (after rebasing to main) and asked Gemini the following:\n\n>Attached is an IETF internet draft revision RFC5706 with modern management and operational considerations.  This draft is packed with useful advice, but it has received feedback from the internet community that it is too long.  Specifically, \n\n>I think this is a very important draft. However, its readership will decline as a function of its length.\n\n>It might be best to provide a list of questions that an author should consider:\n\n>Question 1 \n>Question 2 \n>Question n \n\n>If the answers to any of these questions are non-trivial, they should be provided in a sub-section of the operational considerations section. \n\n>If the operational consideration section is empty, it can be omitted.\n\n>The document probably should exceed 15 pages.\n\n>Taking that feedback into account, provide the following:\n\n>* Provide a set of core questions protocol designers in the routing and applications spaces should consider\n>* Create a new internet draft in kramdown format with those questions and the relevant sub-sections\n\n>Finally, for the authors' consideration, offer suggestions on how we might ourselves shorten the document by removing text, rephrasing parts of the document, or moving text to appendices.\n\nAttached is what it produced in terms of a revised I-D.  The intent of this was to produce something for discussion and provide an alternative representation of the existing work.\n\n[draft-rfc5706bis_ai.txt](https://github.com/user-attachments/files/22598708/draft-rfc5706bis_ai.txt)",
+          "createdAt": "2025-09-29T13:29:46Z",
+          "updatedAt": "2025-09-29T13:29:46Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "The other artifact the AI spit out was these suggestions.  Some of which are useless, but others are useful and likely things we wanted to do anyway.\n\n## Suggestions for Shortening the Original Document (`draft-opsarea-rfc5706bis.txt`)\n\nTo significantly reduce the length of the original document and improve its readability and adoption, consider the following strategies:\n\n1.  **Adopt a Question-Based Structure:**\n    *   Refactor the detailed prose of Sections 4, 5, and 6 into a concise list of high-level questions, similar to the \"Core Questions\" section provided in the new draft above.\n    *   Instruct authors that if the answer to a question is non-trivial, they should provide the detailed explanation in a sub-section within their \"Operational Considerations\" section, rather than having the guidelines document itself provide exhaustive examples for every scenario. This shifts the burden of detail to the specification being written.\n\n2.  **Create a Separate \"Companion Guide\" or \"Best Practices\" Document:**\n    *   Move much of the extensive explanatory text, detailed examples (e.g., BGP flap damping, RSVP Router Alert, TCP RTT/RTTVAR, cryptographic key handling, ACL reordering, specific MIB module issues), and in-depth discussions of *why* certain considerations are important into a separate, more detailed companion document.\n    *   The main RFC (`rfc5706bis`) would then serve as a high-level reference, pointing to the companion guide for deeper understanding and specific examples.\n\n3.  **Externalize the \"Checklist\":**\n    *   The document already mentions `[CHECKLIST]`. Fully separate this into a standalone, living document (e.g., on GitHub) that can be updated more frequently than an RFC. The main RFC should simply reference this checklist as a tool for reviewers and authors.\n\n4.  **Streamline Terminology:**\n    *   Reduce the \"Terminology\" section to only the most essential terms directly used and defined within the concise guidelines. For terms that are well-defined in other RFCs, simply provide the reference without repeating the full definition (e.g., for \"Anomaly,\" \"Cause,\" \"Fault,\" \"Problem,\" \"Probable Root Cause\").\n\n5.  **Condense General Introduction and Scope:**\n    *   Make the \"Introduction\" and \"This Document\" sections more direct and succinct, focusing on the purpose and scope of the guidelines without extensive background narrative.\n\n6.  **Summarize Management Technologies:**\n    *   In \"Available Management Technologies\" (Section 5.1), instead of describing each technology (SNMP, NETCONF, RESTCONF, IPFIX, syslog), briefly state that IETF provides various standardized management protocols and refer to a dedicated overview document like [RFC6632] for details.\n\n7.  **Refer to Dedicated YANG Guidelines:**\n    *   For detailed YANG Data Model Considerations (Section 5.3.2) and Information Model Design (Section 5.3.1), primarily refer to the existing and evolving YANG authoring guidelines like `[I-D.ietf-netmod-rfc8407bis]` rather than duplicating extensive advice within this document. Keep only the high-level questions about *what type* of YANG model to consider.\n\n8.  **Selective Informative References:**\n    *   Review the \"Informative References\" section and drastically reduce it. Include only references directly cited in the concise text or those absolutely foundational to the understanding of the core guidelines. Many current references are for specific examples or deeper dives that would be more appropriate for a companion guide.\n\n9.  **Compact Acknowledgements and Contributors:**\n    *   While important, these sections can be formatted more compactly to save space.\n\nBy implementing these suggestions, the `draft-opsarea-rfc5706bis.txt` could be transformed into a highly readable and actionable document well within the 15-page target, making it more effective for its intended audience.",
+          "createdAt": "2025-09-29T13:31:48Z",
+          "updatedAt": "2025-09-29T13:31:48Z"
+        }
+      ]
     },
     {
       "number": 129,
@@ -1984,6 +1999,22 @@
       "body": "We asked Scott for a review from the perspective of the Applications Area.\n\nHe writes:\n\n```\nThe draft looks solid. The one and only thing that came to me from an applications perspective is the need to address internationalization considerations for human interactions. Unfortunately, there are no published guidelines for writing an \"Internationalization Considerations\" section, but there is some guidance in RFC 6365/BCP 166 that can be helpful. Here's an example of such a section found in Standard 69 (meaning that it passed multiple IETF last calls and IESG evaluations):\n \nhttps://www.rfc-editor.org/rfc/rfc5730.html#section-5\n \nI hope this helps! I need to warn you, though - i18n is a touchy subject because it's one of those things for which we don't have a lot of expertise in the IETF, but the need is great, and that often leads to confusion. Including it in the draft will draw attention that you need to be prepared for.\n\nWe used to have an i18n directorate in the applications area. It was disbanded a few years ago, with the members (including me) being absorbed into a larger APPAREA review team. People are still available to help. Just be prepared to deal with some deep discussions.\n\n```\n\nSuggestion:\nWe add something small like...\n\n```\nWhere protocol specifications result in messages (such as errors or warnings) being carried as text strings or output for consumption by human operators, consideration should be given to making it possible for implementations to be configured so that the messages can be viewed in the local language. In such cases, it may be helpful to transmit a specific message code (i.e., a number) along with the default English language message, so that implementations may easily map the code to a local text string.\n\nFurther discussion of Internationalization issues may be found in [BCP166].\n```",
       "createdAt": "2025-09-18T16:08:13Z",
       "updatedAt": "2025-09-18T16:08:13Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 134,
+      "id": "I_kwDOOWPBqs7Obf81",
+      "title": "(IETF124) Status Update in OPSAREA Session",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/134",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "See current draft agenda at https://github.com/IETF-OPS-AD/OPSAREA-meetings/blob/main/ietf124.md",
+      "createdAt": "2025-09-29T05:28:03Z",
+      "updatedAt": "2025-09-29T05:28:03Z",
       "closedAt": null,
       "comments": []
     }
@@ -9630,13 +9661,13 @@
       "labels": [],
       "body": "Focus on brevity and removing outdated references.\r\n\r\nThis is part of the changes requested in #7 .",
       "createdAt": "2025-09-21T15:27:36Z",
-      "updatedAt": "2025-09-25T15:23:10Z",
+      "updatedAt": "2025-09-29T13:40:51Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
+      "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "interoperability-rewrite",
-      "headRefOid": "1212214419040c5585465f71a565b5f24c597077",
+      "headRefOid": "3556350caa44a65576c998f2f2e29b3976c8cfdc",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -9655,6 +9686,13 @@
           "body": "My point was that for simple things, a direct DM may be enough.  More complex or more abstract concepts (maybe even those needing more discussion or work to make a concrete DM), then an IM is needed.",
           "createdAt": "2025-09-25T13:04:11Z",
           "updatedAt": "2025-09-25T13:04:11Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "> Thanks Joe, good start. Let's discuss this\r\n> \r\n> While Protocol Designers may directly develop DMs in simple cases (e.g., IPFIX-only scenarios), {{?RFC3444}} is helpful in determining what information to consider using an IM is recommended for describing managed elements in protocols or extensions that require regarding Information Models (IMs), as compared to Data Models (DMs). broader applicability and semantic consistency.\r\n> \r\n> ... which is not aligned with \"Protocol Designers should consider developing an IM, particularly\"\r\n\r\nI removed this paragraph as I don't think it's needed since the preceding paragraph is already \"soft\" on the requirement to create an IM.",
+          "createdAt": "2025-09-29T13:40:51Z",
+          "updatedAt": "2025-09-29T13:40:51Z"
         }
       ],
       "reviews": [
