@@ -574,7 +574,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in. 
 
-   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of New Protocol or Protocol Extension may change the type, locations or availability of IoCs and Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.    
+   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.    
    
    For example, consider the operators' requirement for digital forensics from the network or endpoints with vital sources of this information found in logs. The requirement for providing protocol-specific logging formats, logging events schema and guidance for operators should be considered when designing a New Protocol to ensure that operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging for network protocols, which has been extended as new protocols have been designed in IETF.      
 
