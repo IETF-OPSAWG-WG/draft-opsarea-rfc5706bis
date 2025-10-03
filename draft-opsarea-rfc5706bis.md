@@ -709,7 +709,7 @@ This document does not describe interoperability requirements. As such, it does 
    Information Models (IMs) are vital for achieving semantic interoperability. An IM defines the
    conceptual understanding of managed information, independent of specific protocols or vendor
    implementations. This allows for consistent interpretation and correlation of data across different
-   management protocols, such as a YANG Data Model and IPFIX Information Elements concerning the same
+   data models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same
    event. For instance, an IM can standardize how error conditions are counted, ensuring that a counter
    has the same meaning whether collected via NETCONF or exported via IPFIX.
 
