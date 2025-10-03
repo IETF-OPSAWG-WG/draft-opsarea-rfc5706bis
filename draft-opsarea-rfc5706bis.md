@@ -713,7 +713,7 @@ This document does not describe interoperability requirements. As such, it does 
    event. For instance, an IM can standardize how error conditions are counted, ensuring that a counter
    has the same meaning whether collected via NETCONF or exported via IPFIX.
 
-   Protocol Designers should consider developing an IM, particularly when multiple Data Model (DM)
+   Protocol Designers should consider developing an IM, when multiple Data Model (DM)
    representations (e.g., YANG and/or IPFIX) are required, to ensure lossless
    semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in Figure 1, an
    IM serves as a conceptual blueprint for designers and operators, from which concrete DMs are derived
