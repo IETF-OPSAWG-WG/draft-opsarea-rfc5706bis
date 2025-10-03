@@ -678,7 +678,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  Interoperability {#sec-interop}
 
-   Management interoperability is vital for enabling information exchange
+   Management interoperability is critical for enabling information exchange
    and operations across diverse network devices and management applications,
    regardless of vendor, model, or software release. It facilitates the use
    of third-party applications and outsourced management services.
