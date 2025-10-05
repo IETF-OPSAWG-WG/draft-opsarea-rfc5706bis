@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-02T00:43:42.773160+00:00",
+  "timestamp": "2025-10-05T00:50:25.934236+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1346,9 +1346,17 @@
       ],
       "body": "Email thread to the pm-dir@ietf.org:\n\nHi Perfmetrdir colleagues,\n\nAre there specific performance-related OPS considerations that you think are useful to include in the guidelines? Maybe consider an advice to look at RFC 6390 and RFC 8911 for better interop?\n\nThank you.\n\nCheers,\n\nMed",
       "createdAt": "2025-06-13T10:33:08Z",
-      "updatedAt": "2025-09-04T13:37:47Z",
+      "updatedAt": "2025-10-02T12:57:01Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "On re-reading, and considering the need to keep the total amount of text within reasonable bounds, it seems that the document is in relatively good shape wrt performance. However, one proposed change:\n\nIn {#sec-impact}\nOLD\n   The impact on performance may also be noted -- increased delay or\n   jitter in real-time traffic applications, or increased response time\n   in client-server applications when encryption or filtering are\n   applied.\nNEW\n   The impact of New Protocols or Protocol Extensions, and the results \n   of new OAM tools developed for the New Protocols or Protocol\n   Extensions, must be considered with respect to the performance of\n   traffic delivery and the availability of ongoing manageability. For\n   example, it must be noted if the New Protocols or Protocol Extensions\n   or the OAM tools cause increased delay or jitter in real-time traffic\n   applications, or increased response time in client-server\n   applications. Further, if the additional traffic caused by OAM tools\n   and data collection could result in the management plane becoming \n   swamped, then this must be called out, and suitable mechanisms to\n   rate limit the OAM must be provided. Consider three examples: in \n   Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is \n   possible to configure very rapid BFD transmissions (of the order of\n   3ms) on a very large number of parallel Label Switched Paths (LSPs)\n   with the result that the management systems and end nodes may become \n   overwhelmed -- this can be protected by limiting applying limits to \n   the number of LSPs that may be tested at once; notifications or logs\n   from systems (through YANG or other means) should be rate-limited so\n   that they do not flood the receiving management station; the \n   application of sophisticated encryption or filtering rules need to\n   be considered in the light of the additional processing they may\n   impose on the \"fast path\" for traffic.\nEND",
+          "createdAt": "2025-10-02T12:57:01Z",
+          "updatedAt": "2025-10-02T12:57:01Z"
+        }
+      ]
     },
     {
       "number": 76,
@@ -1967,7 +1975,7 @@
       "labels": [],
       "body": "Ron was asked to do a review in the context of PROBE. He wrote:\n\n> I think this is a very important draft. However, its readership will decline as a function of its length.\n> \n> It might be best to provide a list of questions that an author should consider:\n> \n> \u2022\tQuestion 1 \n> \u2022\tQuestion 2 \n> \u2022\tQuestion n \n> \n> If the answers to any of these questions are non-trivial, they should be provided in a sub-section of the operational considerations section. \n> \n> If the operational consideration section is empty, it can be omitted.\n> \n> The document probably should exceed 15 pages.",
       "createdAt": "2025-09-14T10:04:32Z",
-      "updatedAt": "2025-09-29T13:31:48Z",
+      "updatedAt": "2025-10-02T13:58:39Z",
       "closedAt": null,
       "comments": [
         {
@@ -1983,6 +1991,13 @@
           "body": "The other artifact the AI spit out was these suggestions.  Some of which are useless, but others are useful and likely things we wanted to do anyway.\n\n## Suggestions for Shortening the Original Document (`draft-opsarea-rfc5706bis.txt`)\n\nTo significantly reduce the length of the original document and improve its readability and adoption, consider the following strategies:\n\n1.  **Adopt a Question-Based Structure:**\n    *   Refactor the detailed prose of Sections 4, 5, and 6 into a concise list of high-level questions, similar to the \"Core Questions\" section provided in the new draft above.\n    *   Instruct authors that if the answer to a question is non-trivial, they should provide the detailed explanation in a sub-section within their \"Operational Considerations\" section, rather than having the guidelines document itself provide exhaustive examples for every scenario. This shifts the burden of detail to the specification being written.\n\n2.  **Create a Separate \"Companion Guide\" or \"Best Practices\" Document:**\n    *   Move much of the extensive explanatory text, detailed examples (e.g., BGP flap damping, RSVP Router Alert, TCP RTT/RTTVAR, cryptographic key handling, ACL reordering, specific MIB module issues), and in-depth discussions of *why* certain considerations are important into a separate, more detailed companion document.\n    *   The main RFC (`rfc5706bis`) would then serve as a high-level reference, pointing to the companion guide for deeper understanding and specific examples.\n\n3.  **Externalize the \"Checklist\":**\n    *   The document already mentions `[CHECKLIST]`. Fully separate this into a standalone, living document (e.g., on GitHub) that can be updated more frequently than an RFC. The main RFC should simply reference this checklist as a tool for reviewers and authors.\n\n4.  **Streamline Terminology:**\n    *   Reduce the \"Terminology\" section to only the most essential terms directly used and defined within the concise guidelines. For terms that are well-defined in other RFCs, simply provide the reference without repeating the full definition (e.g., for \"Anomaly,\" \"Cause,\" \"Fault,\" \"Problem,\" \"Probable Root Cause\").\n\n5.  **Condense General Introduction and Scope:**\n    *   Make the \"Introduction\" and \"This Document\" sections more direct and succinct, focusing on the purpose and scope of the guidelines without extensive background narrative.\n\n6.  **Summarize Management Technologies:**\n    *   In \"Available Management Technologies\" (Section 5.1), instead of describing each technology (SNMP, NETCONF, RESTCONF, IPFIX, syslog), briefly state that IETF provides various standardized management protocols and refer to a dedicated overview document like [RFC6632] for details.\n\n7.  **Refer to Dedicated YANG Guidelines:**\n    *   For detailed YANG Data Model Considerations (Section 5.3.2) and Information Model Design (Section 5.3.1), primarily refer to the existing and evolving YANG authoring guidelines like `[I-D.ietf-netmod-rfc8407bis]` rather than duplicating extensive advice within this document. Keep only the high-level questions about *what type* of YANG model to consider.\n\n8.  **Selective Informative References:**\n    *   Review the \"Informative References\" section and drastically reduce it. Include only references directly cited in the concise text or those absolutely foundational to the understanding of the core guidelines. Many current references are for specific examples or deeper dives that would be more appropriate for a companion guide.\n\n9.  **Compact Acknowledgements and Contributors:**\n    *   While important, these sections can be formatted more compactly to save space.\n\nBy implementing these suggestions, the `draft-opsarea-rfc5706bis.txt` could be transformed into a highly readable and actionable document well within the 15-page target, making it more effective for its intended audience.",
           "createdAt": "2025-09-29T13:31:48Z",
           "updatedAt": "2025-09-29T13:31:48Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Another possibility is to re-read the draft and see which (educational) sections can be removed or moved to the appendix.",
+          "createdAt": "2025-10-02T13:58:39Z",
+          "updatedAt": "2025-10-02T13:58:39Z"
         }
       ]
     },
@@ -2015,6 +2030,22 @@
       "body": "See current draft agenda at https://github.com/IETF-OPS-AD/OPSAREA-meetings/blob/main/ietf124.md",
       "createdAt": "2025-09-29T05:28:03Z",
       "updatedAt": "2025-09-29T05:28:03Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 135,
+      "id": "I_kwDOOWPBqs7PRyZI",
+      "title": "Save more words!",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/135",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The text would be shortened if we had a new (one-word) term that means \"New Protocol or Protocol Extension\"\n\nIs it worth it?\n\nBTW, we should probably not use \"New Protocol\" or \"Protocol Extension\" in isolation",
+      "createdAt": "2025-10-02T13:30:38Z",
+      "updatedAt": "2025-10-02T13:30:38Z",
       "closedAt": null,
       "comments": []
     }
@@ -8452,13 +8483,13 @@
       "labels": [],
       "body": "Please see suggested text for a section on Impact on Security Operations",
       "createdAt": "2025-08-08T14:37:52Z",
-      "updatedAt": "2025-10-01T16:21:10Z",
+      "updatedAt": "2025-10-02T15:10:44Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
       "headRepository": "michael-p-1/draft-opsarea-rfc5706bis",
       "headRefName": "security-operations",
-      "headRefOid": "2f5ed975381bcfec71c296a841a91d854e239a1c",
+      "headRefOid": "5420c15946c8fd46b20f42cd33d45e446e63cd92",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -8498,6 +8529,41 @@
           "body": "I have updated text to highlight a few specific considerations and ensure more operationally focused following last week's call ",
           "createdAt": "2025-10-01T16:21:10Z",
           "updatedAt": "2025-10-01T16:21:10Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> I have updated text to highlight a few specific considerations and ensure more operationally focused following last week's call\r\n\r\n@ Michael, thanks.\r\nRegarding the following paragraph, I am not sure what the guidance is for document authors & protocol designers?\r\n\r\n\"Similarly, tooling required by security operators should be considered in the design and deployment of a New Protocol. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.\"\r\n\r\nYour statement is certainly correct but should be included in the \"operational considerations\" section? ",
+          "createdAt": "2025-10-02T12:46:22Z",
+          "updatedAt": "2025-10-02T12:46:22Z"
+        },
+        {
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "body": "> > I have updated text to highlight a few specific considerations and ensure more operationally focused following last week's call\r\n> \r\n> @ Michael, thanks. Regarding the following paragraph, I am not sure what the guidance is for document authors & protocol designers?\r\n> \r\n> \"Similarly, tooling required by security operators should be considered in the design and deployment of a New Protocol. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.\"\r\n> \r\n> Your statement is certainly correct but should be included in the \"operational considerations\" section?\r\n\r\nThanks for the review Benoit!\r\n\r\nThe point here is similar to the point made in section 6 on Tooling Considerations but with a SecOps focus (if it makes sense to move this text to that section, that's fine by me, just a matter of preference. I'd personally keep it with SecOps to ensure context isn't lost, but happy to leave that choice to the authors). In particular, Protocol Designers should think about protocol extensions, rather than completely new versions of existing protocols to reduce the impact on existing tooling. Similarly, if the new specification can provide examples using existing SecOps tooling, such as traffic management tooling or protocol dissectors that would be beneficial for operators",
+          "createdAt": "2025-10-02T13:07:38Z",
+          "updatedAt": "2025-10-02T13:07:38Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "\r\n> \r\n> Thanks for the review Benoit!\r\n> \r\n> The point here is similar to the point made in section 6 on Tooling Considerations but with a SecOps focus (if it makes sense to move this text to that section, that's fine by me, just a matter of preference. I'd personally keep it with SecOps to ensure context isn't lost, but happy to leave that choice to the authors). In particular, Protocol Designers should think about protocol extensions, rather than completely new versions of existing protocols to reduce the impact on existing tooling. Similarly, if the new specification can provide examples using existing SecOps tooling, such as traffic management tooling or protocol dissectors that would be beneficial for operators\r\n\r\nDuring our call today, we arrived to this conclusion: the key point is \"documented\"\r\nSee our proposal\r\nTooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. \r\n\r\nDoes it work for you?\r\n\r\n\r\n\r\n\r\n> > > I have updated text to highlight a few specific considerations and ensure more operationally focused following last week's call\r\n> > \r\n> > \r\n> > @ Michael, thanks. Regarding the following paragraph, I am not sure what the guidance is for document authors & protocol designers?\r\n> > \"Similarly, tooling required by security operators should be considered in the design and deployment of a New Protocol. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.\"\r\n> > Your statement is certainly correct but should be included in the \"operational considerations\" section?\r\n> \r\n> Thanks for the review Benoit!\r\n> \r\n> The point here is similar to the point made in section 6 on Tooling Considerations but with a SecOps focus (if it makes sense to move this text to that section, that's fine by me, just a matter of preference. I'd personally keep it with SecOps to ensure context isn't lost, but happy to leave that choice to the authors). In particular, Protocol Designers should think about protocol extensions, rather than completely new versions of existing protocols to reduce the impact on existing tooling. Similarly, if the new specification can provide examples using existing SecOps tooling, such as traffic management tooling or protocol dissectors that would be beneficial for operators\r\n\r\n",
+          "createdAt": "2025-10-02T13:30:37Z",
+          "updatedAt": "2025-10-02T13:30:37Z"
+        },
+        {
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "body": "> > Thanks for the review Benoit!\r\n> > The point here is similar to the point made in section 6 on Tooling Considerations but with a SecOps focus (if it makes sense to move this text to that section, that's fine by me, just a matter of preference. I'd personally keep it with SecOps to ensure context isn't lost, but happy to leave that choice to the authors). In particular, Protocol Designers should think about protocol extensions, rather than completely new versions of existing protocols to reduce the impact on existing tooling. Similarly, if the new specification can provide examples using existing SecOps tooling, such as traffic management tooling or protocol dissectors that would be beneficial for operators\r\n> \r\n> During our call today, we arrived to this conclusion: the key point is \"documented\" See our proposal Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.\r\n> \r\n> Does it work for you?\r\n\r\nYes, that works for me. Is the action on me to push that change?",
+          "createdAt": "2025-10-02T13:32:31Z",
+          "updatedAt": "2025-10-02T13:32:31Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> > > Thanks for the review Benoit!\r\n> > > The point here is similar to the point made in section 6 on Tooling Considerations but with a SecOps focus (if it makes sense to move this text to that section, that's fine by me, just a matter of preference. I'd personally keep it with SecOps to ensure context isn't lost, but happy to leave that choice to the authors). In particular, Protocol Designers should think about protocol extensions, rather than completely new versions of existing protocols to reduce the impact on existing tooling. Similarly, if the new specification can provide examples using existing SecOps tooling, such as traffic management tooling or protocol dissectors that would be beneficial for operators\r\n> > \r\n> > \r\n> > During our call today, we arrived to this conclusion: the key point is \"documented\" See our proposal Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.\r\n> > Does it work for you?\r\n> \r\n> Yes, that works for me. Is the action on me to push that change?\r\n\r\nI committed that changes.\r\nWe finished reviewing your PR (thanks for this). Please review the changes and the comments",
+          "createdAt": "2025-10-02T13:39:43Z",
+          "updatedAt": "2025-10-02T13:39:43Z"
         }
       ],
       "reviews": [
@@ -8690,6 +8756,102 @@
               "updatedAt": "2025-08-27T13:39:14Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7EXtAx",
+          "commit": {
+            "abbreviatedOid": "2f5ed97"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T13:09:02Z",
+          "updatedAt": "2025-10-02T13:38:21Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\n   Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently{{SECOPS}}. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.  \r\n```",
+              "createdAt": "2025-10-02T13:09:02Z",
+              "updatedAt": "2025-10-02T13:38:21Z"
+            },
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\r\n   Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in. \r\n```",
+              "createdAt": "2025-10-02T13:09:47Z",
+              "updatedAt": "2025-10-02T13:38:21Z"
+            },
+            {
+              "originalPosition": 22,
+              "body": "```suggestion\r\n   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.    \r\n```",
+              "createdAt": "2025-10-02T13:10:23Z",
+              "updatedAt": "2025-10-02T13:38:21Z"
+            },
+            {
+              "originalPosition": 24,
+              "body": "```suggestion\r\nConsider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure that operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging.\r\n```",
+              "createdAt": "2025-10-02T13:23:03Z",
+              "updatedAt": "2025-10-02T13:38:21Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\r\nTooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. \r\n```",
+              "createdAt": "2025-10-02T13:26:19Z",
+              "updatedAt": "2025-10-02T13:38:21Z"
+            },
+            {
+              "originalPosition": 28,
+              "body": "CANDIDATE FOR REMOVAL. How does it fit with the section 4.3 Migration Path.\r\nIs there a sentence or two you want to add to 4.3, stressing the need for security operations?",
+              "createdAt": "2025-10-02T13:35:25Z",
+              "updatedAt": "2025-10-02T13:38:21Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "CANDIDATE FOR REMOVAL. How does it fit with the section 4.3 Migration Path.\r\nIs there a sentence or two you want to add to 4.3, stressing the need for security operations?\r\n",
+              "createdAt": "2025-10-02T13:37:26Z",
+              "updatedAt": "2025-10-02T13:38:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7EZ33v",
+          "commit": {
+            "abbreviatedOid": "2f5ed97"
+          },
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T15:08:35Z",
+          "updatedAt": "2025-10-02T15:08:35Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "As above, 4.3 Migration path is currently before the definition of Security Operations.\r\n\r\nThe point on current techniques fits very well in section 4.3. How's this for text?\r\n\r\n\"When Protocol Designers are considering how deployments should transition to the New Protocol, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved\"  ",
+              "createdAt": "2025-10-02T15:08:35Z",
+              "updatedAt": "2025-10-02T15:08:35Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7EZ4Ha",
+          "commit": {
+            "abbreviatedOid": "2f5ed97"
+          },
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T15:08:45Z",
+          "updatedAt": "2025-10-02T15:08:45Z",
+          "comments": [
+            {
+              "originalPosition": 28,
+              "body": "4.3 Migration path is currently before the definition of Security Operations, so more context or swapping order of sections might be required (the latter would keep word count down).  \r\n\r\nHow's this for updated text to fit with that section?\r\n\r\n\"Incentivizing good security operational practices when migrating to New Protocol should be encouraged. For example, patching is fundamental for security operations and can be incentivised if Protocol Designers consider supporting cheap and fast connection handoffs and reconnections.\" ",
+              "createdAt": "2025-10-02T15:08:45Z",
+              "updatedAt": "2025-10-02T15:08:45Z"
+            }
+          ]
         }
       ]
     },
@@ -8698,21 +8860,21 @@
       "id": "PR_kwDOOWPBqs6ix6Wh",
       "title": "Adding to security management section",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/108",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "michael-p-1",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "Some suggested additions to security management section following draft review ",
       "createdAt": "2025-08-08T14:40:06Z",
-      "updatedAt": "2025-08-22T13:34:57Z",
+      "updatedAt": "2025-10-02T13:40:59Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
       "headRepository": "michael-p-1/draft-opsarea-rfc5706bis",
       "headRefName": "security-management",
       "headRefOid": "a5ae5d172b375fa45b01b36e2517b9c151d34876",
-      "closedAt": null,
+      "closedAt": "2025-10-02T13:40:57Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -8730,6 +8892,20 @@
           "body": "The comment in #107 was to update the text to draw out the operational considerations as it was too close to the line of security considerations. Is that the case here too or was the conclusion that this PR is too far across that line?",
           "createdAt": "2025-08-22T13:34:57Z",
           "updatedAt": "2025-08-22T13:34:57Z"
+        },
+        {
+          "author": "michael-p-1",
+          "authorAssociation": "NONE",
+          "body": "As per last week's authors call, happy for this PR to be closed ",
+          "createdAt": "2025-10-02T08:55:34Z",
+          "updatedAt": "2025-10-02T08:55:34Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This PR content will be the basis for a new draft, potentially in the OPSAWG, as discussed live with Michael.",
+          "createdAt": "2025-10-02T13:40:58Z",
+          "updatedAt": "2025-10-02T13:40:58Z"
         }
       ],
       "reviews": []
@@ -9668,13 +9844,13 @@
       "labels": [],
       "body": "Focus on brevity and removing outdated references.\r\n\r\nThis is part of the changes requested in #7 .",
       "createdAt": "2025-09-21T15:27:36Z",
-      "updatedAt": "2025-09-29T13:40:51Z",
+      "updatedAt": "2025-10-03T13:48:02Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "interoperability-rewrite",
-      "headRefOid": "3556350caa44a65576c998f2f2e29b3976c8cfdc",
+      "headRefOid": "067b713dcd2f28f33a29cfdefb9b996b0b5e6545",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -9700,6 +9876,13 @@
           "body": "> Thanks Joe, good start. Let's discuss this\r\n> \r\n> While Protocol Designers may directly develop DMs in simple cases (e.g., IPFIX-only scenarios), {{?RFC3444}} is helpful in determining what information to consider using an IM is recommended for describing managed elements in protocols or extensions that require regarding Information Models (IMs), as compared to Data Models (DMs). broader applicability and semantic consistency.\r\n> \r\n> ... which is not aligned with \"Protocol Designers should consider developing an IM, particularly\"\r\n\r\nI removed this paragraph as I don't think it's needed since the preceding paragraph is already \"soft\" on the requirement to create an IM.",
           "createdAt": "2025-09-29T13:40:51Z",
           "updatedAt": "2025-09-29T13:40:51Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I question whether the syslog reference should RFC 5434 or RFC 3164. I know that 5434 obsoletes 3164 but in practice, it's barely deployed. IMO 5434 should even be historic, however, I will not fight that fight. \r\nProposal: What about having both references? ",
+          "createdAt": "2025-10-02T12:56:56Z",
+          "updatedAt": "2025-10-02T12:56:56Z"
         }
       ],
       "reviews": [
@@ -9715,6 +9898,77 @@
           "createdAt": "2025-09-22T08:08:52Z",
           "updatedAt": "2025-09-22T08:08:52Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7EXpc5",
+          "commit": {
+            "abbreviatedOid": "3556350"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Nit: s/vital/critical/",
+          "createdAt": "2025-10-02T13:05:53Z",
+          "updatedAt": "2025-10-02T13:05:53Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7EXbBw",
+          "commit": {
+            "abbreviatedOid": "3556350"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T12:51:37Z",
+          "updatedAt": "2025-10-02T13:50:07Z",
+          "comments": [
+            {
+              "originalPosition": 116,
+              "body": "```suggestion\r\n   data models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same\r\n```",
+              "createdAt": "2025-10-02T12:53:11Z",
+              "updatedAt": "2025-10-02T13:50:07Z"
+            },
+            {
+              "originalPosition": 85,
+              "body": "```suggestion\r\n   Management interoperability is critical for enabling information exchange\r\n```",
+              "createdAt": "2025-10-02T13:42:20Z",
+              "updatedAt": "2025-10-02T13:50:07Z"
+            },
+            {
+              "originalPosition": 113,
+              "body": "```suggestion\r\n   An Information Model (IM) defines the\r\n```",
+              "createdAt": "2025-10-02T13:47:38Z",
+              "updatedAt": "2025-10-02T13:50:07Z"
+            },
+            {
+              "originalPosition": 120,
+              "body": "```suggestion\r\n   Protocol Designers should consider developing an IM, when multiple Data Model (DM)\r\n```",
+              "createdAt": "2025-10-02T13:48:58Z",
+              "updatedAt": "2025-10-02T13:50:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7Eo8bx",
+          "commit": {
+            "abbreviatedOid": "1ec2cc5"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-03T13:46:38Z",
+          "updatedAt": "2025-10-03T13:46:38Z",
+          "comments": [
+            {
+              "originalPosition": 113,
+              "body": "I wanted to emphasize the semantic interoperability.  What if we drop all the adverbs and just say:\r\n\r\n>Information Models (IMs) provide semantic interoperability...",
+              "createdAt": "2025-10-03T13:46:38Z",
+              "updatedAt": "2025-10-03T13:46:38Z"
+            }
+          ]
         }
       ]
     },
