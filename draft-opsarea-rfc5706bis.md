@@ -588,6 +588,12 @@ This document does not describe interoperability requirements. As such, it does 
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
+## Message Formats {#sec-messages}
+
+Where protocol specifications result in messages (such as errors or warnings) being carried as text strings or output for consumption by human operators, consideration should be given to making it possible for implementations to be configured so that the messages can be viewed in the local language. In such cases, it may be helpful to transmit a specific message code (i.e., a number) along with the default English language message, so that implementations may easily map the code to a local text string.
+
+Further discussion of Internationalization issues may be found in {{?BCP166}}.
+
 #  How Will the Protocol Be Managed? {#sec-mgmt-consid}
 
    The considerations of manageability should start from identifying the
