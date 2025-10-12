@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-09T00:44:51.764264+00:00",
+  "timestamp": "2025-10-12T00:47:18.853487+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1221,15 +1221,15 @@
       ],
       "body": "> [Ballot discuss] (Robert Sparks 2009-09-22)\n> This document contains a wealth of good advice and I am glad we are producing it. However, I have a few questions to work through before recommending publication:\n> \n> The document is still strongly influenced by its genesis in routing. It is easy to see how to apply its advice when it is natural to talk about an application or a deployment in terms of the protocol, particularly when a configuration action on a network element maps directly into a configuration action in the protocol.\n> \n> **It is less obvious how to apply much of the advice when the protocol is a component or framework - when there are layers between the outward interface of the managed elements and the knobs in the protocols (TLS, SASL, S/MIME, PIDF, PIDF-LO, RTP, ...). Would it be possible to add guidance on how to apply the recommendations in those kinds of documents?** Would it make sense to add/make more explicit a discussion on reveiwing managability of the interfaces that components expose to the to-be-managed applications that are going to use them?\n> \n> Similarly, some of the \"link\", \"node\", and \"packet\" vocabulary becomes awkward when you start applying this to protocols that are higher in the stack. Can the language be abstracted to make it clearer what consideration discussion you're trying to stimulate in those cases?\n> \n> I can be talked into waiting for future documents to address those concerns - the guidance here for the protocols that the recommendations can easily be applied to is worth publishing as soon as we can. But we need to address the above questions before we start to consider _requiring_ these considerations in all submissions.\n\n> [Ballot comment]\n> The last paragraph of 2.2 could be generalized - speed is not the only thing that time changes.\n> \n> The guidance in the last paragraph before section 3.1 starts should also point to the cases where focusing on instumenting servers might mask problems - instrumentation in clients may be the only thing that can provide information to the operator.\n> \n> In section 3.1 \"Information models should come from the protocol WGs\" -- not all protocols come from WGs.\n> \n> \"some planned companion documents\" is a phrase that will not age well once this is in RFC-stone. Can it be replaced with something a little less time-sensitive?\n> \n> Consider changing the \"must not\" on the second line of page 9 to \"MUST NOT\" (or not).",
       "createdAt": "2025-06-08T07:47:28Z",
-      "updatedAt": "2025-10-07T16:01:03Z",
+      "updatedAt": "2025-10-09T13:18:49Z",
       "closedAt": null,
       "comments": [
         {
           "author": "AdrianFarrel",
           "authorAssociation": "COLLABORATOR",
-          "body": "- 2025-09-05 Sent request for help to WIT ADs and ART ADs\n    - 2025-09-10 Andy Newton suggests...\n        - 2025-09-10 Sent request to Richard Shockey for SIP-specific view\n            - 2025-09-11 Richard says will do a review\n            - 2025-10-05 Send reminder\n        - 2025-09-10 Sent request to Scott Hollenbeck for Applications-specific view\n            - 2025-09-10 Scott says will do a review (suggests Pete Resnick and Ted Hardie)\n            - 2025-09-18 Scott says \"Consider Internationalization\". See #129 \n- 2025-09-05 Sent request for QUIC-specific review to Brian Trammel\n    - 2025-09-06 Brian says will do a review\n        - 2025-10-05 Send reminder\n        - 2015-10-05 Brian says \"Everything up to section 3.3 seems thoroughly reasonable to me. If I haven\u2019t given you a final set of comments by the end of this week please ping again.\n- 2020-09-08 Benoit asked authors of draft-ietf-intarea-rfc8335bis (PROBE) for input \n    - 2025-14-09 Ron Bonica says \"Good, but too long.\" See #126 \n- 2025-09-10\n    - Ask authors of draft-ietf-teas-yang-te-mpls-topology to consider experimenting\n        - 2025-10-05 Send reminder\n           - 2025-10-06 Italo Busi sends review. See #136 \n    - Ask authors of draft-ietf-pce-pcep-extension-pce-controller-srv6 to consider experimenting\n        - 2025-10-05 Send reminder\n    - Ask authors of Experimental draft-ietf-idr-vpn-prefix-orf to consider experimenting\n        - 2025-10-05 Send reminder\n- 2025-09-14 Ask authors of draft-ietf-rtgwg-dst-src-routing-revive for opinions",
+          "body": "- 2025-09-05 Sent request for help to WIT ADs and ART ADs\n    - 2025-09-10 Andy Newton suggests...\n        - 2025-09-10 Sent request to Richard Shockey for SIP-specific view\n            - 2025-09-11 Richard says will do a review\n            - 2025-10-05 Send reminder\n            - 2025-10-08 Long response from Richard. Drafts is basically OK as is.\n        - 2025-09-10 Sent request to Scott Hollenbeck for Applications-specific view\n            - 2025-09-10 Scott says will do a review (suggests Pete Resnick and Ted Hardie)\n            - 2025-09-18 Scott says \"Consider Internationalization\". See #129 \n- 2025-09-05 Sent request for QUIC-specific review to Brian Trammel\n    - 2025-09-06 Brian says will do a review\n        - 2025-10-05 Send reminder\n        - 2015-10-05 Brian says \"Everything up to section 3.3 seems thoroughly reasonable to me. If I haven\u2019t given you a final set of comments by the end of this week please ping again.\n- 2020-09-08 Benoit asked authors of draft-ietf-intarea-rfc8335bis (PROBE) for input \n    - 2025-14-09 Ron Bonica says \"Good, but too long.\" See #126 \n- 2025-09-10\n    - Ask authors of draft-ietf-teas-yang-te-mpls-topology to consider experimenting\n        - 2025-10-05 Send reminder\n           - 2025-10-06 Italo Busi sends review. See #136 \n    - Ask authors of draft-ietf-pce-pcep-extension-pce-controller-srv6 to consider experimenting\n        - 2025-10-05 Send reminder\n    - Ask authors of Experimental draft-ietf-idr-vpn-prefix-orf to consider experimenting\n        - 2025-10-05 Send reminder\n- 2025-09-14 Ask authors of draft-ietf-rtgwg-dst-src-routing-revive for opinions",
           "createdAt": "2025-09-10T16:50:12Z",
-          "updatedAt": "2025-10-07T16:01:03Z"
+          "updatedAt": "2025-10-09T13:18:49Z"
         },
         {
           "author": "AdrianFarrel",
@@ -1346,7 +1346,7 @@
       ],
       "body": "Email thread to the pm-dir@ietf.org:\n\nHi Perfmetrdir colleagues,\n\nAre there specific performance-related OPS considerations that you think are useful to include in the guidelines? Maybe consider an advice to look at RFC 6390 and RFC 8911 for better interop?\n\nThank you.\n\nCheers,\n\nMed",
       "createdAt": "2025-06-13T10:33:08Z",
-      "updatedAt": "2025-10-02T12:57:01Z",
+      "updatedAt": "2025-10-09T13:53:40Z",
       "closedAt": null,
       "comments": [
         {
@@ -1355,6 +1355,13 @@
           "body": "On re-reading, and considering the need to keep the total amount of text within reasonable bounds, it seems that the document is in relatively good shape wrt performance. However, one proposed change:\n\nIn {#sec-impact}\nOLD\n   The impact on performance may also be noted -- increased delay or\n   jitter in real-time traffic applications, or increased response time\n   in client-server applications when encryption or filtering are\n   applied.\nNEW\n   The impact of New Protocols or Protocol Extensions, and the results \n   of new OAM tools developed for the New Protocols or Protocol\n   Extensions, must be considered with respect to the performance of\n   traffic delivery and the availability of ongoing manageability. For\n   example, it must be noted if the New Protocols or Protocol Extensions\n   or the OAM tools cause increased delay or jitter in real-time traffic\n   applications, or increased response time in client-server\n   applications. Further, if the additional traffic caused by OAM tools\n   and data collection could result in the management plane becoming \n   swamped, then this must be called out, and suitable mechanisms to\n   rate limit the OAM must be provided. Consider three examples: in \n   Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is \n   possible to configure very rapid BFD transmissions (of the order of\n   3ms) on a very large number of parallel Label Switched Paths (LSPs)\n   with the result that the management systems and end nodes may become \n   overwhelmed -- this can be protected by limiting applying limits to \n   the number of LSPs that may be tested at once; notifications or logs\n   from systems (through YANG or other means) should be rate-limited so\n   that they do not flood the receiving management station; the \n   application of sophisticated encryption or filtering rules need to\n   be considered in the light of the additional processing they may\n   impose on the \"fast path\" for traffic.\nEND",
           "createdAt": "2025-10-02T12:57:01Z",
           "updatedAt": "2025-10-02T12:57:01Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See #138 ",
+          "createdAt": "2025-10-09T13:53:40Z",
+          "updatedAt": "2025-10-09T13:53:40Z"
         }
       ]
     },
@@ -2013,9 +2020,17 @@
       "labels": [],
       "body": "We asked Scott for a review from the perspective of the Applications Area.\n\nHe writes:\n\n```\nThe draft looks solid. The one and only thing that came to me from an applications perspective is the need to address internationalization considerations for human interactions. Unfortunately, there are no published guidelines for writing an \"Internationalization Considerations\" section, but there is some guidance in RFC 6365/BCP 166 that can be helpful. Here's an example of such a section found in Standard 69 (meaning that it passed multiple IETF last calls and IESG evaluations):\n \nhttps://www.rfc-editor.org/rfc/rfc5730.html#section-5\n \nI hope this helps! I need to warn you, though - i18n is a touchy subject because it's one of those things for which we don't have a lot of expertise in the IETF, but the need is great, and that often leads to confusion. Including it in the draft will draw attention that you need to be prepared for.\n\nWe used to have an i18n directorate in the applications area. It was disbanded a few years ago, with the members (including me) being absorbed into a larger APPAREA review team. People are still available to help. Just be prepared to deal with some deep discussions.\n\n```\n\nSuggestion:\nWe add something small like...\n\n```\nWhere protocol specifications result in messages (such as errors or warnings) being carried as text strings or output for consumption by human operators, consideration should be given to making it possible for implementations to be configured so that the messages can be viewed in the local language. In such cases, it may be helpful to transmit a specific message code (i.e., a number) along with the default English language message, so that implementations may easily map the code to a local text string.\n\nFurther discussion of Internationalization issues may be found in [BCP166].\n```",
       "createdAt": "2025-09-18T16:08:13Z",
-      "updatedAt": "2025-09-18T16:08:13Z",
+      "updatedAt": "2025-10-09T13:45:38Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See PR #137 ",
+          "createdAt": "2025-10-09T13:45:37Z",
+          "updatedAt": "2025-10-09T13:45:37Z"
+        }
+      ]
     },
     {
       "number": 134,
@@ -10034,6 +10049,204 @@
           "body": "",
           "createdAt": "2025-09-22T14:00:04Z",
           "updatedAt": "2025-09-22T14:00:04Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 137,
+      "id": "PR_kwDOOWPBqs6s5vD1",
+      "title": "Text internationalisation from Scott",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/137",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add a new section at the bottom of Section 4.",
+      "createdAt": "2025-10-09T13:44:14Z",
+      "updatedAt": "2025-10-09T18:22:27Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-1",
+      "headRefOid": "b236e11bcaa927bc00c260884431573b834d27c3",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7F5XyE",
+          "commit": {
+            "abbreviatedOid": "b236e11"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Looks good. Thanks, Adrian. \r\n\r\nPlease don't forget to ACK Scott Hollenbeck.",
+          "createdAt": "2025-10-09T18:21:59Z",
+          "updatedAt": "2025-10-09T18:21:59Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7F5YME",
+          "commit": {
+            "abbreviatedOid": "b236e11"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-09T18:22:27Z",
+          "updatedAt": "2025-10-09T18:22:27Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 138,
+      "id": "PR_kwDOOWPBqs6s51SP",
+      "title": "Performance guidance",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/138",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Expand on text on performance considerations",
+      "createdAt": "2025-10-09T13:52:14Z",
+      "updatedAt": "2025-10-09T15:03:55Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-2",
+      "headRefOid": "c04fdb3bb2a381735fb10c8513357f9dc8638069",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7F2iXb",
+          "commit": {
+            "abbreviatedOid": "c04fdb3"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "Mostly I'm leaving comments, but I did notice one typo.",
+          "createdAt": "2025-10-09T15:00:02Z",
+          "updatedAt": "2025-10-09T15:03:55Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "These days I never can tell.  Is \"swamped\" a well enough known term?  Maybe \"overwhelemed\"?",
+              "createdAt": "2025-10-09T15:00:02Z",
+              "updatedAt": "2025-10-09T15:03:55Z"
+            },
+            {
+              "originalPosition": 17,
+              "body": "Ha!  You use it below.  Maybe \"saturated\"?  Or maybe I'm over-thinking it.",
+              "createdAt": "2025-10-09T15:02:06Z",
+              "updatedAt": "2025-10-09T15:03:55Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\noverwhelmed -- this can be protected by applying limits to\r\n```",
+              "createdAt": "2025-10-09T15:02:28Z",
+              "updatedAt": "2025-10-09T15:03:55Z"
+            },
+            {
+              "originalPosition": 29,
+              "body": "\"fast path\" or hardware path?  Again, maybe I'm being overly pedantic.",
+              "createdAt": "2025-10-09T15:03:27Z",
+              "updatedAt": "2025-10-09T15:03:55Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 139,
+      "id": "PR_kwDOOWPBqs6s7J6_",
+      "title": "Fix md reference nit",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/139",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Use correct md notation for reference",
+      "createdAt": "2025-10-09T15:41:29Z",
+      "updatedAt": "2025-10-09T16:53:10Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-3",
+      "headRefOid": "1928bd374a9ad29e0d9b9e2c5eb026e0e6d402fe",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7F4Kg9",
+          "commit": {
+            "abbreviatedOid": "1928bd3"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-09T16:53:10Z",
+          "updatedAt": "2025-10-09T16:53:10Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 140,
+      "id": "PR_kwDOOWPBqs6tE5Kv",
+      "title": "Update the Acknowledgements",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/140",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add in the reviewers who were specifically targeted for \"higher layer\" reviews and who provided some form of answer.",
+      "createdAt": "2025-10-10T12:10:55Z",
+      "updatedAt": "2025-10-10T15:26:16Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-4",
+      "headRefOid": "1ee115bed68ddac763fbaff980979541af49b261",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7GJHJS",
+          "commit": {
+            "abbreviatedOid": "1ee115b"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-10T15:26:16Z",
+          "updatedAt": "2025-10-10T15:26:16Z",
           "comments": []
         }
       ]
