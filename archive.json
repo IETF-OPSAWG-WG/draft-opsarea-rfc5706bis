@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-12T00:47:18.853487+00:00",
+  "timestamp": "2025-10-14T00:45:00.754517+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2060,9 +2060,17 @@
       "labels": [],
       "body": "The text would be shortened if we had a new (one-word) term that means \"New Protocol or Protocol Extension\"\n\nIs it worth it?\n\nBTW, we should probably not use \"New Protocol\" or \"Protocol Extension\" in isolation",
       "createdAt": "2025-10-02T13:30:38Z",
-      "updatedAt": "2025-10-02T13:30:38Z",
+      "updatedAt": "2025-10-13T20:34:11Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I do not think it is worth trying to find a term tht encompases \"New Protocol or Protocol Extension\". \nI absolutely agree we should avoid using \"New Protocol\" or \"Protocol Extension\" by themselves.",
+          "createdAt": "2025-10-13T20:34:11Z",
+          "updatedAt": "2025-10-13T20:34:11Z"
+        }
+      ]
     },
     {
       "number": 136,
