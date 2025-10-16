@@ -1884,8 +1884,9 @@ Acknowledgements
       Pignataro.
 
    Reviewers of this document:  Mahesh Jethanandani, Chongfeng Xie,
-      Alvaro Retana, and Michael P., for their review comments and
-      contributions.
+      Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo
+      Busi, Brian Trammel, Aijun Wang, and Richard Shockey for their
+      review comments and contributions.
 
    The author of RFC 5706:  David Harrington
 
