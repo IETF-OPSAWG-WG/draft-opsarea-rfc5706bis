@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 12 April 2026                                         A. Farrel
+Expires: 19 April 2026                                         A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 12 April 2026                                         A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                          9 October 2025
+                                                         16 October 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 April 2026.
+   This Internet-Draft will expire on 19 April 2026.
 
 Copyright Notice
 
@@ -617,6 +617,10 @@ Table of Contents
    application of sophisticated encryption or filtering rules need to be
    considered in the light of the additional processing they may impose
    on the "fast path" for traffic.
+
+   New metrics may be required to assess traffic performance.  Protocol
+   Designers may refer to [RFC6390] for guidelines for considering new
+   performance metrics.
 
    It is important to minimize the impact caused by configuration
    changes.  Given configuration A and configuration B, it should be
@@ -1621,9 +1625,9 @@ Table of Contents
               Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
               "A YANG Data Model for Network Incident Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-network-
-              incident-yang-05, 6 July 2025,
+              incident-yang-06, 12 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              network-incident-yang-05>.
+              network-incident-yang-06>.
 
    [I-D.ietf-nmop-terminology]
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
@@ -1789,6 +1793,11 @@ Table of Contents
               "Computing TCP's Retransmission Timer", RFC 6298,
               DOI 10.17487/RFC6298, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6298>.
+
+   [RFC6390]  Clark, A. and B. Claise, "Guidelines for Considering New
+              Performance Metric Development", BCP 170, RFC 6390,
+              DOI 10.17487/RFC6390, October 2011,
+              <https://www.rfc-editor.org/rfc/rfc6390>.
 
    [RFC6632]  Ersue, M., Ed. and B. Claise, "An Overview of the IETF
               Network Management Standards", RFC 6632,
