@@ -606,7 +606,7 @@ This document does not describe interoperability requirements. As such, it does 
    the \*service\* (which includes a lot of stuff that is very far away
    from the box). This scenario reflects a common operational
    concern: the inability to manage both ends of a connection
-   effectively. As noted in [RFC3535], "MIB modules can often be
+   effectively. As noted in {{?RFC3535}}, "MIB modules can often be
    characterized as a list of ingredients without a recipe".
 
    The management model should take into account factors such as:
