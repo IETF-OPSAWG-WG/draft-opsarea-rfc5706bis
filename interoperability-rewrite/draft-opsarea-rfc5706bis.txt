@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 6 April 2026                                          A. Farrel
+Expires: 19 April 2026                                         A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 6 April 2026                                          A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                          3 October 2025
+                                                         16 October 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 April 2026.
+   This Internet-Draft will expire on 19 April 2026.
 
 Copyright Notice
 
@@ -746,16 +746,15 @@ Table of Contents
    challenge, as the meaning of data is intrinsically tied to the
    managed entity.
 
-   Information Models (IMs) are vital for achieving semantic
-   interoperability.  An IM defines the conceptual understanding of
-   managed information, independent of specific protocols or vendor
-   implementations.  This allows for consistent interpretation and
-   correlation of data across different data models (and hence
-   management protocols), such as a YANG Data Model and IPFIX
-   Information Elements concerning the same event.  For instance, an IM
-   can standardize how error conditions are counted, ensuring that a
-   counter has the same meaning whether collected via NETCONF or
-   exported via IPFIX.
+   Information Models (IMs) semantic interoperability.  An IM defines
+   the conceptual understanding of managed information, independent of
+   specific protocols or vendor implementations.  This allows for
+   consistent interpretation and correlation of data across different
+   data models (and hence management protocols), such as a YANG Data
+   Model and IPFIX Information Elements concerning the same event.  For
+   instance, an IM can standardize how error conditions are counted,
+   ensuring that a counter has the same meaning whether collected via
+   NETCONF or exported via IPFIX.
 
    Protocol Designers should consider developing an IM, when multiple
    Data Model (DM) representations (e.g., YANG and/or IPFIX) are
@@ -1539,9 +1538,9 @@ Table of Contents
               Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
               "A YANG Data Model for Network Incident Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-network-
-              incident-yang-05, 6 July 2025,
+              incident-yang-06, 12 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              network-incident-yang-05>.
+              network-incident-yang-06>.
 
    [I-D.ietf-nmop-terminology]
               Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
