@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-14T00:45:00.754517+00:00",
+  "timestamp": "2025-10-16T00:46:09.842295+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2084,7 +2084,33 @@
       "labels": [],
       "body": "> I have read draft-opsarea-rfc5706bis and think this provides good guidelines for protocol design but I am still struggling about its applicability to YANG data models (like this draft or the network inventory YANG model).\n> \n> I am not sure whether section 5.3.2 is intended to provide the guidelines specific to YANG data models.\n> \n> I agree to mandate indicating whether a YANG data model is defined as a device model, network model or service model which, as reported in draft-opsarea-rfc5706bis, is already required by RFC8407-bis. In many documents (e.g., in the network inventory YANG model), this information is provided in the Introduction section. This information is missing from draft-ietf-teas-yang-te-mpls-topology but I think we should add it in the next update and it could be added to the Introduction session like in other drafts.\n> \n> I agree with the need to describe the relationship between the abstract or distributed constructs and the information available within the network. I am wondering whether this description should be in the scope of an Operational Sections or of the main body where the model and modelling choices are described.\n> ",
       "createdAt": "2025-10-07T15:59:38Z",
-      "updatedAt": "2025-10-07T15:59:38Z",
+      "updatedAt": "2025-10-15T10:21:56Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "italobusi",
+          "authorAssociation": "NONE",
+          "body": "You can seen an example of how text has been moved from other parts within the document to this section here:\n\nhttps://author-tools.ietf.org/iddiff?url1=draft-ietf-ivy-network-inventory-yang-09&url2=draft-ietf-ivy-network-inventory-yang-11&difftype=--html",
+          "createdAt": "2025-10-15T10:21:56Z",
+          "updatedAt": "2025-10-15T10:21:56Z"
+        }
+      ]
+    },
+    {
+      "number": 141,
+      "id": "I_kwDOOWPBqs7RcEQW",
+      "title": "An RFC example that follows 5706/Template",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/141",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "documentation"
+      ],
+      "body": "Maybe consider citing https://datatracker.ietf.org/doc/html/rfc9552#section-8 as it exemplifies how the template is followed?",
+      "createdAt": "2025-10-14T12:51:12Z",
+      "updatedAt": "2025-10-14T12:51:12Z",
       "closedAt": null,
       "comments": []
     }
@@ -10126,7 +10152,7 @@
       "labels": [],
       "body": "Expand on text on performance considerations",
       "createdAt": "2025-10-09T13:52:14Z",
-      "updatedAt": "2025-10-09T15:03:55Z",
+      "updatedAt": "2025-10-14T12:54:54Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
@@ -10174,6 +10200,26 @@
               "body": "\"fast path\" or hardware path?  Again, maybe I'm being overly pedantic.",
               "createdAt": "2025-10-09T15:03:27Z",
               "updatedAt": "2025-10-09T15:03:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7GzyWx",
+          "commit": {
+            "abbreviatedOid": "c04fdb3"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-10-14T12:54:44Z",
+          "updatedAt": "2025-10-14T12:54:54Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\nimpose on the \"fast path\" for traffic.\r\n\r\nNew metrics may be required to assess traffic performance. Protocol designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.\r\n```",
+              "createdAt": "2025-10-14T12:54:44Z",
+              "updatedAt": "2025-10-14T12:54:55Z"
             }
           ]
         }
