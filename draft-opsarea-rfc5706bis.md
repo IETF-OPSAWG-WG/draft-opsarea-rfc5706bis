@@ -587,6 +587,8 @@ application of sophisticated encryption or filtering rules need to
 be considered in the light of the additional processing they may
 impose on the "fast path" for traffic.
 
+New metrics may be required to assess traffic performance. Protocol Designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.
+
    It is important to minimize the impact caused by configuration
    changes. Given configuration A and configuration B, it should be
    possible to generate the operations necessary to get from A to B with
