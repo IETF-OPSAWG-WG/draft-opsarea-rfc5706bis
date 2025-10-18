@@ -700,19 +700,19 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    and total cost of ownership.
 
    Achieving universal agreement on a single management syntax and protocol is challenging.
-   However, the IETF has significantly changed its approach to network management, moving
+   However, the IETF has significantly evolved its approach to network management, moving
    beyond SMIv2 and SNMP. Modern IETF management solutions primarily leverage YANG {{?RFC7950}}
    for Data Modeling and NETCONF {{?RFC6241}} or RESTCONF {{?RFC8040}} for protocol interactions.
    This shift, as further elaborated in {{?RFC6632}}, emphasizes structured Data Models and
-   programmatic interfaces to enhance automation and interoperability. Other protocols like
-   IPFIX {{?RFC7011}} for flow accounting and syslog {{?RFC5424}} for logging continue to play
+   programmatic interfaces to enhance automation and interoperability. Other protocols, such as
+   IPFIX {{?RFC7011}} for flow accounting and syslog {{?RFC5424}} for logging, continue to play
    specific roles in comprehensive network management.
 
    Interoperability must address both syntactic and semantic aspects. While syntactic variations
-   across implementations can be managed through adaptive processing, semantic differences pose a
+   across implementations can often be handled through adaptive processing, semantic differences pose a
    greater challenge, as the meaning of data is intrinsically tied to the managed entity.
 
-   Information Models (IMs) semantic interoperability. An IM defines the
+   Information Models (IMs) enable and provide the foundation for semantic interoperability. An IM defines the
    conceptual understanding of managed information, independent of specific protocols or vendor
    implementations. This allows for consistent interpretation and correlation of data across different
    data models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same
@@ -1448,8 +1448,8 @@ The IETF Ops Directorate (OpsDir):
 The AD championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
-Reviewers of this document:
-: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, and Richard Shockey for their review comments and contributions.
+Reviewers of this document, in chronological order:
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, and Richard Shockey for their review, comments, and contributions.
 
 The author of RFC 5706:
 : David Harrington
