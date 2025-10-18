@@ -712,7 +712,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    across implementations can be managed through adaptive processing, semantic differences pose a
    greater challenge, as the meaning of data is intrinsically tied to the managed entity.
 
-   Information Models (IMs) semantic interoperability. An IM defines the
+   Information Models (IMs) enable and provide the foundation for semantic interoperability. An IM defines the
    conceptual understanding of managed information, independent of specific protocols or vendor
    implementations. This allows for consistent interpretation and correlation of data across different
    data models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same
