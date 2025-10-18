@@ -761,15 +761,16 @@ Table of Contents
    challenge, as the meaning of data is intrinsically tied to the
    managed entity.
 
-   Information Models (IMs) semantic interoperability.  An IM defines
-   the conceptual understanding of managed information, independent of
-   specific protocols or vendor implementations.  This allows for
-   consistent interpretation and correlation of data across different
-   data models (and hence management protocols), such as a YANG Data
-   Model and IPFIX Information Elements concerning the same event.  For
-   instance, an IM can standardize how error conditions are counted,
-   ensuring that a counter has the same meaning whether collected via
-   NETCONF or exported via IPFIX.
+   Information Models (IMs) enable and provide the foundation for
+   semantic interoperability.  An IM defines the conceptual
+   understanding of managed information, independent of specific
+   protocols or vendor implementations.  This allows for consistent
+   interpretation and correlation of data across different data models
+   (and hence management protocols), such as a YANG Data Model and IPFIX
+   Information Elements concerning the same event.  For instance, an IM
+   can standardize how error conditions are counted, ensuring that a
+   counter has the same meaning whether collected via NETCONF or
+   exported via IPFIX.
 
    Protocol Designers should consider developing an IM, when multiple
    Data Model (DM) representations (e.g., YANG and/or IPFIX) are
