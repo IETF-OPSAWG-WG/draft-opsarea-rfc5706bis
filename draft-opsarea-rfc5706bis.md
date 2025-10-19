@@ -367,9 +367,9 @@ This document does not describe interoperability requirements. As such, it does 
    placement could simplify the development of tools to detect the
    presence of such a section.
 
-# How Will the New Protocol Fit into the Current Environment? {#sec-oper-consid}
+# How Will the New Protocol or Protocol Extension Fit into the Current Environment? {#sec-oper-consid}
 
-   Designers of a New Protocol should carefully consider the operational
+   Designers of a New Protocol or Protocol Extension should carefully consider the operational
    aspects. To ensure that a protocol will be practical to deploy in
    the real world, it is not enough to merely define it very precisely
    in a well-written document. Operational aspects will have a serious
@@ -470,7 +470,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  Migration Path {#sec-migration}
 
-   If the New Protocol is a new version of an existing one, or if it is
+   If the New Protocol or Protocol Extension is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
    how deployments should transition to the New Protocol or Protocol
    Extensions. This should include coexistence with previously deployed
@@ -478,12 +478,12 @@ This document does not describe interoperability requirements. As such, it does 
    incompatibilities between versions, translation between versions,
    and consideration of potential side effects. A key question becomes:
    Are older protocols or versions disabled, or do they coexist in the
-   network with the New Protocol?
+   network with the New Protocol or Protocol Extension?
 
    Many protocols benefit from being incrementally deployable --
    operators may deploy aspects of a protocol before deploying the
    protocol fully. In those cases, the design considerations should
-   also specify whether the New Protocol requires any changes to
+   also specify whether the New Protocol or Protocol Extension requires any changes to
    the existing infrastructure, particularly the network.
    If so, the protocol specification should describe the nature of those
    changes, where they are required, and how they can be introduced in
@@ -533,7 +533,7 @@ This document does not describe interoperability requirements. As such, it does 
    beneficial. This includes any relevant deployment environments,
    network topologies, usage constraints such as limited domains
    {{?RFC8799}}, or use cases that justify or constrain adoption.
-   For example, a New Protocol that doubles the number of active,
+   For example, a New Protocol or Protocol Extension that doubles the number of active,
    reachable addresses in a network might have implications for the
    scalability of interior gateway protocols, and such impacts should
    be evaluated accordingly.
@@ -583,7 +583,7 @@ This document does not describe interoperability requirements. As such, it does 
    to-end operation of the New Protocol or Protocol Extension in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
-   properly with the New Protocol. Which metrics are of interest?
+   properly with the New Protocol or Protocol Extension. Which metrics are of interest?
 
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
@@ -634,16 +634,16 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    Protocol Designers should consider how the New Protocol or Protocol Extension will be
    managed in different deployment scales. It might be sensible to use
-   a local management interface to manage the New Protocol on a single
+   a local management interface to manage the New Protocol or Protocol Extension on a single
    device, but in a large network, remote management using a centralized
    server and/or using distributed management functionality might make
    more sense. Auto-configuration and default parameters might be
-   possible for some New Protocols.
+   possible for some New Protocols or Protocol Extensions.
 
    Management needs to be considered not only from the perspective of a
    device, but also from the perspective of network and service
    management. A service might be network and operational functionality
-   derived from the implementation and deployment of a New Protocol.
+   derived from the implementation and deployment of a New Protocol or Protocol Exension.
    Often an individual network element is not aware of the service being
    delivered.
 
@@ -738,7 +738,7 @@ DM         DM        DM     --> concrete/detailed model
 {: #fig-im-dm title="Information Models (IMs) and Data Models (DMs)" artwork-align="center"}
 
    Protocol Designers must identify the essential operational, configuration, state, and statistical
-   information required for effective monitoring, control, and troubleshooting of new protocols and
+   information required for effective monitoring, control, and troubleshooting of New Protocols or Protocol Extensions and
    their extensions. This includes defining relevant parameters, performance metrics, error indicators,
    and contextual data crucial for diagnostics and lifecycle management.
 
@@ -904,7 +904,7 @@ DM         DM        DM     --> concrete/detailed model
    of propagated Faults from a given domain or device?
 
    SNMP notifications and syslog messages can alert an operator when an
-   aspect of the New Protocol fails or encounters an error or failure
+   aspect of the New Protocol or Protocol Extension fails or encounters an error or failure
    condition, and SNMP is frequently used as a heartbeat monitor.
    Should the event reporting provide guaranteed accurate delivery of
    the event information within a given (high) margin of confidence?
@@ -1128,7 +1128,7 @@ DM         DM        DM     --> concrete/detailed model
    protocol / service activation on the device), network monitoring,
    and service monitoring (the impact of service activation on the
    network). Hence, it is recommended that, if the implementation of the
-   New Protocol Extension has any hardware/software performance implications
+   New Protocol or Protocol Extension has any hardware/software performance implications
    (e.g., increased CPU utilization, memory consumption, or forwarding
    performance degradation), the Protocol Designers should clearly
    describe these impacts in the specification, along with any
@@ -1216,7 +1216,7 @@ DM         DM        DM     --> concrete/detailed model
    Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the New Protocol or Protocol Extension.
 
-   There will be security considerations related to the New Protocol.
+   There will be security considerations related to the New Protocol or Protocol Extension.
    To make it possible for operators to be aware of security-related
    events, it is recommended that system logs should record events, such
    as failed logins, but the logs must be secured.
@@ -1335,9 +1335,9 @@ DM         DM        DM     --> concrete/detailed model
   *  IETF Hackathons for Manageability Testing:
      IETF Hackathons {{IETF-HACKATHONS}}
      provide an opportunity to test the functionality, interoperability,
-     and manageability of New Protocols. These events can be specifically
+     and manageability of New Protocols or Protocol Extensions. These events can be specifically
      leveraged to assess the operational (including manageability) implications
-     of a New Protocol by focusing tasks on:
+     of a New Protocol or Protocol Extension by focusing tasks on:
 
      *  Adapting existing tools to interact with the new specification.
      *  Developing example management scripts or modules for existing management
