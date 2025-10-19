@@ -579,7 +579,7 @@ Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
 possible to configure very rapid BFD transmissions (of the order of
 3ms) on a very large number of parallel Label Switched Paths (LSPs)
 with the result that the management systems and end nodes may become
-overwhelmed -- this can be protected by limiting applying limits to
+overwhelmed -- this can be protected by applying limits to
 the number of LSPs that may be tested at once; notifications or logs
 from systems (through YANG or other means) should be rate-limited so
 that they do not flood the receiving management station; the
