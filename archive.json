@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-16T00:46:09.842295+00:00",
+  "timestamp": "2025-10-19T00:52:33.858526+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1982,7 +1982,7 @@
       "labels": [],
       "body": "Ron was asked to do a review in the context of PROBE. He wrote:\n\n> I think this is a very important draft. However, its readership will decline as a function of its length.\n> \n> It might be best to provide a list of questions that an author should consider:\n> \n> \u2022\tQuestion 1 \n> \u2022\tQuestion 2 \n> \u2022\tQuestion n \n> \n> If the answers to any of these questions are non-trivial, they should be provided in a sub-section of the operational considerations section. \n> \n> If the operational consideration section is empty, it can be omitted.\n> \n> The document probably should exceed 15 pages.",
       "createdAt": "2025-09-14T10:04:32Z",
-      "updatedAt": "2025-10-02T13:58:39Z",
+      "updatedAt": "2025-10-16T13:41:07Z",
       "closedAt": null,
       "comments": [
         {
@@ -2005,6 +2005,13 @@
           "body": "Another possibility is to re-read the draft and see which (educational) sections can be removed or moved to the appendix.",
           "createdAt": "2025-10-02T13:58:39Z",
           "updatedAt": "2025-10-02T13:58:39Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "From Alvaro: Consider putting the question list as an appendix referencing the relevant sections.  Refer to the appendix up front for those that want to jump the checklist.",
+          "createdAt": "2025-10-16T13:41:07Z",
+          "updatedAt": "2025-10-16T13:41:07Z"
         }
       ]
     },
@@ -2013,15 +2020,15 @@
       "id": "I_kwDOOWPBqs7MgZyy",
       "title": "Scott Hollenbeck review - Flag that internationalisation needs to be considered",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/129",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "We asked Scott for a review from the perspective of the Applications Area.\n\nHe writes:\n\n```\nThe draft looks solid. The one and only thing that came to me from an applications perspective is the need to address internationalization considerations for human interactions. Unfortunately, there are no published guidelines for writing an \"Internationalization Considerations\" section, but there is some guidance in RFC 6365/BCP 166 that can be helpful. Here's an example of such a section found in Standard 69 (meaning that it passed multiple IETF last calls and IESG evaluations):\n \nhttps://www.rfc-editor.org/rfc/rfc5730.html#section-5\n \nI hope this helps! I need to warn you, though - i18n is a touchy subject because it's one of those things for which we don't have a lot of expertise in the IETF, but the need is great, and that often leads to confusion. Including it in the draft will draw attention that you need to be prepared for.\n\nWe used to have an i18n directorate in the applications area. It was disbanded a few years ago, with the members (including me) being absorbed into a larger APPAREA review team. People are still available to help. Just be prepared to deal with some deep discussions.\n\n```\n\nSuggestion:\nWe add something small like...\n\n```\nWhere protocol specifications result in messages (such as errors or warnings) being carried as text strings or output for consumption by human operators, consideration should be given to making it possible for implementations to be configured so that the messages can be viewed in the local language. In such cases, it may be helpful to transmit a specific message code (i.e., a number) along with the default English language message, so that implementations may easily map the code to a local text string.\n\nFurther discussion of Internationalization issues may be found in [BCP166].\n```",
       "createdAt": "2025-09-18T16:08:13Z",
-      "updatedAt": "2025-10-09T13:45:38Z",
-      "closedAt": null,
+      "updatedAt": "2025-10-16T12:52:19Z",
+      "closedAt": "2025-10-16T12:52:19Z",
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -2044,9 +2051,24 @@
       "labels": [],
       "body": "See current draft agenda at https://github.com/IETF-OPS-AD/OPSAREA-meetings/blob/main/ietf124.md",
       "createdAt": "2025-09-29T05:28:03Z",
-      "updatedAt": "2025-09-29T05:28:03Z",
+      "updatedAt": "2025-10-16T13:49:10Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "In addition to OPSAREA, we should do an intro/update to SAAG on Friday morning.  We need an author willing to reach out to the ADs and do the presentation (note: saag conflicts with netmod).",
+          "createdAt": "2025-10-16T13:48:18Z",
+          "updatedAt": "2025-10-16T13:48:18Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Also, check with WIT ADs to see if they would provide time in WITAREA.",
+          "createdAt": "2025-10-16T13:49:10Z",
+          "updatedAt": "2025-10-16T13:49:10Z"
+        }
+      ]
     },
     {
       "number": 135,
@@ -2080,11 +2102,13 @@
       "state": "OPEN",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "xorrkaz"
+      ],
       "labels": [],
       "body": "> I have read draft-opsarea-rfc5706bis and think this provides good guidelines for protocol design but I am still struggling about its applicability to YANG data models (like this draft or the network inventory YANG model).\n> \n> I am not sure whether section 5.3.2 is intended to provide the guidelines specific to YANG data models.\n> \n> I agree to mandate indicating whether a YANG data model is defined as a device model, network model or service model which, as reported in draft-opsarea-rfc5706bis, is already required by RFC8407-bis. In many documents (e.g., in the network inventory YANG model), this information is provided in the Introduction section. This information is missing from draft-ietf-teas-yang-te-mpls-topology but I think we should add it in the next update and it could be added to the Introduction session like in other drafts.\n> \n> I agree with the need to describe the relationship between the abstract or distributed constructs and the information available within the network. I am wondering whether this description should be in the scope of an Operational Sections or of the main body where the model and modelling choices are described.\n> ",
       "createdAt": "2025-10-07T15:59:38Z",
-      "updatedAt": "2025-10-15T10:21:56Z",
+      "updatedAt": "2025-10-16T13:34:55Z",
       "closedAt": null,
       "comments": [
         {
@@ -2093,6 +2117,13 @@
           "body": "You can seen an example of how text has been moved from other parts within the document to this section here:\n\nhttps://author-tools.ietf.org/iddiff?url1=draft-ietf-ivy-network-inventory-yang-09&url2=draft-ietf-ivy-network-inventory-yang-11&difftype=--html",
           "createdAt": "2025-10-15T10:21:56Z",
           "updatedAt": "2025-10-15T10:21:56Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "We should capture that YANG module authors should strive to document as much of the operational aspects of YANG modeled data within the module itself.  They need not duplicate text in the draft if that text is already in the YANG module.\n\nThese recommendations should be generalized with YANG as an example.  That is, if the operational considerations are already defined in a given document's code artifacts (e.g., it defines a schema in protobufs, YANG, JSON, YAML, etc.), there is no need to rewrite it within the draft text.",
+          "createdAt": "2025-10-16T13:32:11Z",
+          "updatedAt": "2025-10-16T13:34:55Z"
         }
       ]
     },
@@ -2104,15 +2135,25 @@
       "state": "OPEN",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "xorrkaz"
+      ],
       "labels": [
         "documentation"
       ],
       "body": "Maybe consider citing https://datatracker.ietf.org/doc/html/rfc9552#section-8 as it exemplifies how the template is followed?",
       "createdAt": "2025-10-14T12:51:12Z",
-      "updatedAt": "2025-10-14T12:51:12Z",
+      "updatedAt": "2025-10-17T14:26:08Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "An example of RFC in the application area that follows the 5706 template: Peer-to-Peer Streaming Peer Protocol (PPSPP) (https://datatracker.ietf.org/doc/html/rfc7574#section-11)",
+          "createdAt": "2025-10-17T14:26:08Z",
+          "updatedAt": "2025-10-17T14:26:08Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -8548,7 +8589,7 @@
       "labels": [],
       "body": "Please see suggested text for a section on Impact on Security Operations",
       "createdAt": "2025-08-08T14:37:52Z",
-      "updatedAt": "2025-10-02T15:10:44Z",
+      "updatedAt": "2025-10-16T12:53:08Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
@@ -8917,6 +8958,19 @@
               "updatedAt": "2025-10-02T15:08:45Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7HXAMo",
+          "commit": {
+            "abbreviatedOid": "5420c15"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-16T12:53:08Z",
+          "updatedAt": "2025-10-16T12:53:08Z",
+          "comments": []
         }
       ]
     },
@@ -9902,24 +9956,26 @@
       "id": "PR_kwDOOWPBqs6ptT8g",
       "title": "Rewrite the interoperability section.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/130",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Focus on brevity and removing outdated references.\r\n\r\nThis is part of the changes requested in #7 .",
       "createdAt": "2025-09-21T15:27:36Z",
-      "updatedAt": "2025-10-03T13:48:02Z",
+      "updatedAt": "2025-10-16T13:07:11Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "interoperability-rewrite",
-      "headRefOid": "067b713dcd2f28f33a29cfdefb9b996b0b5e6545",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "827e109d7224bc902d7e1b87d80a4cf2817b6227",
+      "closedAt": "2025-10-16T13:07:09Z",
+      "mergedAt": "2025-10-16T13:07:09Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "3390a11f41740b271d1c9dc8b400d83d0036651b"
+      },
       "comments": [
         {
           "author": "bclaise",
@@ -10034,6 +10090,46 @@
               "updatedAt": "2025-10-03T13:46:38Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7HXHoo",
+          "commit": {
+            "abbreviatedOid": "067b713"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-16T13:00:05Z",
+          "updatedAt": "2025-10-16T13:05:37Z",
+          "comments": [
+            {
+              "originalPosition": 113,
+              "body": "That works for me",
+              "createdAt": "2025-10-16T13:00:06Z",
+              "updatedAt": "2025-10-16T13:05:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7HXNdf",
+          "commit": {
+            "abbreviatedOid": "067b713"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-16T13:06:07Z",
+          "updatedAt": "2025-10-16T13:06:08Z",
+          "comments": [
+            {
+              "originalPosition": 113,
+              "body": "```suggestion\r\n   Information Models (IMs) semantic interoperability. An IM defines the\r\n```",
+              "createdAt": "2025-10-16T13:06:07Z",
+              "updatedAt": "2025-10-16T13:06:08Z"
+            }
+          ]
         }
       ]
     },
@@ -10092,24 +10188,26 @@
       "id": "PR_kwDOOWPBqs6s5vD1",
       "title": "Text internationalisation from Scott",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/137",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Add a new section at the bottom of Section 4.",
       "createdAt": "2025-10-09T13:44:14Z",
-      "updatedAt": "2025-10-09T18:22:27Z",
+      "updatedAt": "2025-10-16T12:52:19Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-1",
       "headRefOid": "b236e11bcaa927bc00c260884431573b834d27c3",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-10-16T12:52:18Z",
+      "mergedAt": "2025-10-16T12:52:18Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "015e42e4b4878ee012f618d90c52cb3b73c3130f"
+      },
       "comments": [],
       "reviews": [
         {
@@ -10152,18 +10250,33 @@
       "labels": [],
       "body": "Expand on text on performance considerations",
       "createdAt": "2025-10-09T13:52:14Z",
-      "updatedAt": "2025-10-14T12:54:54Z",
+      "updatedAt": "2025-10-16T15:31:11Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-2",
-      "headRefOid": "c04fdb3bb2a381735fb10c8513357f9dc8638069",
+      "headRefOid": "5eccc6239f6019d916a1a44f2e86fc83ba5aa3d0",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "\"suitable mechanisms to rate limit the OAM must be provided.\"\r\n\r\nI am always hesitant with \"must\" and this type of guidelines\r\nTaking two of your examples into consideration:\r\n\"notifications or logs\r\nfrom systems (through YANG or other means) should be rate-limited so\r\nthat they do not flood the receiving management station; the\r\napplication of sophisticated encryption or filtering rules need to\r\nbe considered in the light of the additional processing they may\r\nimpose on the \"fast path\" for traffic.\"\r\n\r\nNote that the example mentions \"should be rate-limited\", as opposed to must.\r\n\r\nThe \"system\" of tomorrow will have better performance/bandwidth/processing/whatever-it-needs.\r\nIf THIS guidance was in place 20 years ago, would we limit the number of syslog msg to ... 100 or 1000 or 10000 msgs/sec kind of arbitrarily.\r\nSimilarly, I can take the evolution from NetFlow flow records, which could go x millions/sec easily these days.\r\n\r\nI scratch my head on what is the guideline here behind \"suitable mechanisms to rate limit the OAM must be provided.\"\r\n- you should think about it and document the limitations\r\n- you should think about it, document the limitation, and propose solutions\r\n- your specifications must include and mandate the solution, ex: a rate-limiting feature\r\n- your specifications must include the solution, optionally.\r\n",
+          "createdAt": "2025-10-16T12:58:09Z",
+          "updatedAt": "2025-10-16T12:58:09Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "> \"suitable mechanisms to rate limit the OAM must be provided.\"\r\n> \r\n> I am always hesitant with \"must\" and this type of guidelines Taking two of your examples into consideration: \"notifications or logs from systems (through YANG or other means) should be rate-limited so that they do not flood the receiving management station; the application of sophisticated encryption or filtering rules need to be considered in the light of the additional processing they may impose on the \"fast path\" for traffic.\"\r\n> \r\n> Note that the example mentions \"should be rate-limited\", as opposed to must.\r\n> \r\n> The \"system\" of tomorrow will have better performance/bandwidth/processing/whatever-it-needs. If THIS guidance was in place 20 years ago, would we limit the number of syslog msg to ... 100 or 1000 or 10000 msgs/sec kind of arbitrarily. Similarly, I can take the evolution from NetFlow flow records, which could go x millions/sec easily these days.\r\n> \r\n> I scratch my head on what is the guideline here behind \"suitable mechanisms to rate limit the OAM must be provided.\"\r\n> \r\n>     * you should think about it and document the limitations\r\n> \r\n>     * you should think about it, document the limitation, and propose solutions\r\n> \r\n>     * your specifications must include and mandate the solution, ex: a rate-limiting feature\r\n> \r\n>     * your specifications must include the solution, optionally.\r\n\r\nDiscussion centered around changing must be provided to must be considered with some examples from the bulleted list.",
+          "createdAt": "2025-10-16T13:14:33Z",
+          "updatedAt": "2025-10-16T13:14:33Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs7F2iXb",
@@ -10217,9 +10330,29 @@
           "comments": [
             {
               "originalPosition": 29,
-              "body": "```suggestion\r\nimpose on the \"fast path\" for traffic.\r\n\r\nNew metrics may be required to assess traffic performance. Protocol designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.\r\n```",
+              "body": "```suggestion\r\nimpose on the \"fast path\" for traffic.\r\n\r\nNew metrics may be required to assess traffic performance. Protocol Designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.\r\n```",
               "createdAt": "2025-10-14T12:54:44Z",
-              "updatedAt": "2025-10-14T12:54:55Z"
+              "updatedAt": "2025-10-16T13:16:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7HaVYs",
+          "commit": {
+            "abbreviatedOid": "5eccc62"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-16T15:29:58Z",
+          "updatedAt": "2025-10-16T15:31:11Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\nrate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.  Consider three examples: in\r\n```",
+              "createdAt": "2025-10-16T15:29:58Z",
+              "updatedAt": "2025-10-16T15:31:11Z"
             }
           ]
         }
@@ -10230,24 +10363,26 @@
       "id": "PR_kwDOOWPBqs6s7J6_",
       "title": "Fix md reference nit",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/139",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Use correct md notation for reference",
       "createdAt": "2025-10-09T15:41:29Z",
-      "updatedAt": "2025-10-09T16:53:10Z",
+      "updatedAt": "2025-10-16T12:47:01Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-3",
       "headRefOid": "1928bd374a9ad29e0d9b9e2c5eb026e0e6d402fe",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-10-16T12:47:00Z",
+      "mergedAt": "2025-10-16T12:47:00Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "f510bbc7847e28907cc8c4d511352b6477946e71"
+      },
       "comments": [],
       "reviews": [
         {
@@ -10262,6 +10397,19 @@
           "createdAt": "2025-10-09T16:53:10Z",
           "updatedAt": "2025-10-09T16:53:10Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7HW25Y",
+          "commit": {
+            "abbreviatedOid": "1928bd3"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-16T12:43:59Z",
+          "updatedAt": "2025-10-16T12:43:59Z",
+          "comments": []
         }
       ]
     },
@@ -10270,24 +10418,26 @@
       "id": "PR_kwDOOWPBqs6tE5Kv",
       "title": "Update the Acknowledgements",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/140",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Add in the reviewers who were specifically targeted for \"higher layer\" reviews and who provided some form of answer.",
       "createdAt": "2025-10-10T12:10:55Z",
-      "updatedAt": "2025-10-10T15:26:16Z",
+      "updatedAt": "2025-10-16T12:50:16Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-4",
       "headRefOid": "1ee115bed68ddac763fbaff980979541af49b261",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-10-16T12:50:15Z",
+      "mergedAt": "2025-10-16T12:50:15Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "0a0ec7fdecdea1cd8b62144b626f3301a30b138b"
+      },
       "comments": [],
       "reviews": [
         {
@@ -10301,6 +10451,59 @@
           "body": "",
           "createdAt": "2025-10-10T15:26:16Z",
           "updatedAt": "2025-10-10T15:26:16Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7HW2Mg",
+          "commit": {
+            "abbreviatedOid": "1ee115b"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-16T12:43:20Z",
+          "updatedAt": "2025-10-16T12:43:20Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 142,
+      "id": "PR_kwDOOWPBqs6ubY2J",
+      "title": "Carlos review of the most recent PRs",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/142",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Hi,\r\nPlease find some suggested fixes to text introduced by the most recently merged PRs.\r\nBest,\r\nCarlos.",
+      "createdAt": "2025-10-18T09:00:53Z",
+      "updatedAt": "2025-10-18T09:29:02Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "3390a11f41740b271d1c9dc8b400d83d0036651b",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-various",
+      "headRefOid": "1abf0b0de91a471e0d8e12462c6ad2ba70b058ca",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7H2crQ",
+          "commit": {
+            "abbreviatedOid": "1abf0b0"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-18T09:29:02Z",
+          "updatedAt": "2025-10-18T09:29:02Z",
           "comments": []
         }
       ]
