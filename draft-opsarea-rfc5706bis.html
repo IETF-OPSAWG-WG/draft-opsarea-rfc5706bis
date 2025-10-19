@@ -23,25 +23,24 @@
    introduces a requirement to include an "Operational Considerations"
    section in new RFCs in the IETF Stream. 
     ' name="description">
-<meta content="xml2rfc 3.30.2" name="generator">
+<meta content="xml2rfc 3.31.0" name="generator">
 <meta content="management" name="keyword">
 <meta content="operations" name="keyword">
 <meta content="operations and management" name="keyword">
 <meta content="ops considerations" name="keyword">
 <meta content="draft-opsarea-rfc5706bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.30.2
-    Python 3.12.11
+  xml2rfc 3.31.0
+    Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
     lxml 5.3.1
-    platformdirs 4.4.0
+    platformdirs 4.5.0
     pycountry 24.6.1
     PyYAML 6.0.2
     requests 2.32.5
-    setuptools 80.9.0
     wcwidth 0.2.14
 -->
 <link href="draft-opsarea-rfc5706bis.xml" rel="alternate" type="application/rfc+xml">
@@ -1065,7 +1064,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 19 April 2026</td>
+<td class="center">Expires 22 April 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1081,12 +1080,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-10-16" class="published">16 October 2025</time>
+<time datetime="2025-10-19" class="published">19 October 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-04-19">19 April 2026</time></dd>
+<dd class="expires"><time datetime="2026-04-22">22 April 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1149,7 +1148,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 19 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 22 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1987,17 +1986,17 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    and services, while ensuring a clear understanding of their operational impact
    and total cost of ownership.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
 <p id="section-5.2-3">Achieving universal agreement on a single management syntax and protocol is challenging.
-   However, the IETF has significantly changed its approach to network management, moving
+   However, the IETF has significantly evolved its approach to network management, moving
    beyond SMIv2 and SNMP. Modern IETF management solutions primarily leverage YANG <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>
    for Data Modeling and NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> or RESTCONF <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span> for protocol interactions.
    This shift, as further elaborated in <span>[<a href="#RFC6632" class="cite xref">RFC6632</a>]</span>, emphasizes structured Data Models and
-   programmatic interfaces to enhance automation and interoperability. Other protocols like
-   IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span> for flow accounting and syslog <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span> for logging continue to play
+   programmatic interfaces to enhance automation and interoperability. Other protocols, such as
+   IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span> for flow accounting and syslog <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span> for logging, continue to play
    specific roles in comprehensive network management.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
 <p id="section-5.2-4">Interoperability must address both syntactic and semantic aspects. While syntactic variations
-   across implementations can be managed through adaptive processing, semantic differences pose a
+   across implementations can often be handled through adaptive processing, semantic differences pose a
    greater challenge, as the meaning of data is intrinsically tied to the managed entity.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
-<p id="section-5.2-5">Information Models (IMs) semantic interoperability. An IM defines the
+<p id="section-5.2-5">Information Models (IMs) enable and provide the foundation for semantic interoperability. An IM defines the
    conceptual understanding of managed information, independent of specific protocols or vendor
    implementations. This allows for consistent interpretation and correlation of data across different
    data models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same
@@ -3073,9 +3072,9 @@ whose efforts have helped to improve this document:<a href="#appendix-B-1" class
           <p id="appendix-B-2.4.1">Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.<a href="#appendix-B-2.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-B-2.5">Reviewers of this document:</dt>
+<dt id="appendix-B-2.5">Reviewers of this document, in chronological order:</dt>
         <dd style="margin-left: 1.5em" id="appendix-B-2.6">
-          <p id="appendix-B-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, and Richard Shockey for their review comments and contributions.<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, and Richard Shockey for their review, comments, and contributions.<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="appendix-B-2.7">The author of RFC 5706:</dt>

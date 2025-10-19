@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 19 April 2026                                         A. Farrel
+Expires: 22 April 2026                                         A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 19 April 2026                                         A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                         16 October 2025
+                                                         19 October 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 April 2026.
+   This Internet-Draft will expire on 22 April 2026.
 
 Copyright Notice
 
@@ -744,32 +744,33 @@ Table of Contents
    impact and total cost of ownership.
 
    Achieving universal agreement on a single management syntax and
-   protocol is challenging.  However, the IETF has significantly changed
+   protocol is challenging.  However, the IETF has significantly evolved
    its approach to network management, moving beyond SMIv2 and SNMP.
    Modern IETF management solutions primarily leverage YANG [RFC7950]
    for Data Modeling and NETCONF [RFC6241] or RESTCONF [RFC8040] for
    protocol interactions.  This shift, as further elaborated in
    [RFC6632], emphasizes structured Data Models and programmatic
    interfaces to enhance automation and interoperability.  Other
-   protocols like IPFIX [RFC7011] for flow accounting and syslog
-   [RFC5424] for logging continue to play specific roles in
+   protocols, such as IPFIX [RFC7011] for flow accounting and syslog
+   [RFC5424] for logging, continue to play specific roles in
    comprehensive network management.
 
    Interoperability must address both syntactic and semantic aspects.
-   While syntactic variations across implementations can be managed
-   through adaptive processing, semantic differences pose a greater
-   challenge, as the meaning of data is intrinsically tied to the
-   managed entity.
+   While syntactic variations across implementations can often be
+   handled through adaptive processing, semantic differences pose a
+   greater challenge, as the meaning of data is intrinsically tied to
+   the managed entity.
 
-   Information Models (IMs) semantic interoperability.  An IM defines
-   the conceptual understanding of managed information, independent of
-   specific protocols or vendor implementations.  This allows for
-   consistent interpretation and correlation of data across different
-   data models (and hence management protocols), such as a YANG Data
-   Model and IPFIX Information Elements concerning the same event.  For
-   instance, an IM can standardize how error conditions are counted,
-   ensuring that a counter has the same meaning whether collected via
-   NETCONF or exported via IPFIX.
+   Information Models (IMs) enable and provide the foundation for
+   semantic interoperability.  An IM defines the conceptual
+   understanding of managed information, independent of specific
+   protocols or vendor implementations.  This allows for consistent
+   interpretation and correlation of data across different data models
+   (and hence management protocols), such as a YANG Data Model and IPFIX
+   Information Elements concerning the same event.  For instance, an IM
+   can standardize how error conditions are counted, ensuring that a
+   counter has the same meaning whether collected via NETCONF or
+   exported via IPFIX.
 
    Protocol Designers should consider developing an IM, when multiple
    Data Model (DM) representations (e.g., YANG and/or IPFIX) are
@@ -1811,10 +1812,10 @@ Acknowledgements
       publication, building on an idea originally suggested by Carlos
       Pignataro.
 
-   Reviewers of this document:  Mahesh Jethanandani, Chongfeng Xie,
-      Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo
-      Busi, Brian Trammel, Aijun Wang, and Richard Shockey for their
-      review comments and contributions.
+   Reviewers of this document, in chronological order:  Mahesh
+      Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott
+      Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, and
+      Richard Shockey for their review, comments, and contributions.
 
    The author of RFC 5706:  David Harrington
 
