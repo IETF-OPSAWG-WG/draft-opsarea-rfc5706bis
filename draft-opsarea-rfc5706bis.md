@@ -585,7 +585,7 @@ from systems (through YANG or other means) should be rate-limited so
 that they do not flood the receiving management station; the
 application of sophisticated encryption or filtering rules need to
 be considered in the light of the additional processing they may
-impose on the "fast path" for traffic.
+impose on the hardware forwarding path for traffic.
 
 New metrics may be required to assess traffic performance. Protocol Designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.
 
