@@ -488,6 +488,10 @@ This document does not describe interoperability requirements. As such, it does 
    changes, where they are required, and how they can be introduced in
    a manner that facilitates deployment.
 
+   Incentivizing good security operation practices when migrating to New Protocol should be encouraged. For example, patching is fundamental for security operations and can be incentivised if Protocol Designers consider supporting cheap and fast connection handoffs and reconnections. 
+
+   When Protocol Designers are considering how deployments should transition to New Protocol, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.
+
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
 
    Protocol Designers should consider the requirements that the new
@@ -580,9 +584,6 @@ Consider the operators' requirement for digital forensics from the network or en
 
 Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. 
 
-   Incentivizing good security operational practices should be considered in the design of New Protocol or Protocol Extension. For example, patching is fundamental for security operations and can be incentivised if Protocol Designers consider supporting cheap and fast connection handoffs and reconnections. 
-
-   If protocols are being updated or replaced, consideration should be given to the current techniques employed by operators of the deployed protocol and corresponding infrastructure to provide operational security. Specifications should ensure that mitigations are included, where possible, so that consistent security operations and management can be achieved.
 
 ##  Verifying Correct Operation {#sec-oper-verify}
 
