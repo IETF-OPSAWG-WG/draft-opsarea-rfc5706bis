@@ -572,10 +572,30 @@ This document does not describe interoperability requirements. As such, it does 
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
 
-   The impact on performance may also be noted -- increased delay or
-   jitter in real-time traffic applications, or increased response time
-   in client-server applications when encryption or filtering are
-   applied.
+The impact of New Protocols or Protocol Extensions, and the results
+of new OAM tools developed for the New Protocols or Protocol
+Extensions, must be considered with respect to the performance of
+traffic delivery and the availability of ongoing manageability. For
+example, it must be noted if the New Protocols or Protocol Extensions
+or the OAM tools cause increased delay or jitter in real-time traffic
+applications, or increased response time in client-server
+applications. Further, if the additional traffic caused by OAM tools
+and data collection could result in the management plane becoming
+overwhelmed, then this must be called out, and suitable mechanisms to
+rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.  Consider three examples: in
+Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
+possible to configure very rapid BFD transmissions (of the order of
+3ms) on a very large number of parallel Label Switched Paths (LSPs)
+with the result that the management systems and end nodes may become
+overwhelmed -- this can be protected by applying limits to
+the number of LSPs that may be tested at once; notifications or logs
+from systems (through YANG or other means) should be rate-limited so
+that they do not flood the receiving management station; the
+application of sophisticated encryption or filtering rules need to
+be considered in the light of the additional processing they may
+impose on the hardware forwarding path for traffic.
+
+New metrics may be required to assess traffic performance. Protocol Designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.
 
    It is important to minimize the impact caused by configuration
    changes. Given configuration A and configuration B, it should be
