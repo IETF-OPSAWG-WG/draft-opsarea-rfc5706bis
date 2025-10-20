@@ -1064,7 +1064,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 22 April 2026</td>
+<td class="center">Expires 23 April 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1080,12 +1080,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-10-19" class="published">19 October 2025</time>
+<time datetime="2025-10-20" class="published">20 October 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-04-22">22 April 2026</time></dd>
+<dd class="expires"><time datetime="2026-04-23">23 April 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1148,7 +1148,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 22 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 23 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1224,10 +1224,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.4.2.5.1"><a href="#section-4.5" class="auto internal xref">4.5</a>.  <a href="#name-impact-on-network-operation" class="internal xref">Impact on Network Operation</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.6">
-                <p id="section-toc.1-1.4.2.6.1"><a href="#section-4.6" class="auto internal xref">4.6</a>.  <a href="#name-verifying-correct-operation" class="internal xref">Verifying Correct Operation</a></p>
+                <p id="section-toc.1-1.4.2.6.1"><a href="#section-4.6" class="auto internal xref">4.6</a>.  <a href="#name-impact-on-security-operatio" class="internal xref">Impact on Security Operations</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.7">
-                <p id="section-toc.1-1.4.2.7.1"><a href="#section-4.7" class="auto internal xref">4.7</a>.  <a href="#name-message-formats" class="internal xref">Message Formats</a></p>
+                <p id="section-toc.1-1.4.2.7.1"><a href="#section-4.7" class="auto internal xref">4.7</a>.  <a href="#name-verifying-correct-operation" class="internal xref">Verifying Correct Operation</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.8">
+                <p id="section-toc.1-1.4.2.8.1"><a href="#section-4.8" class="auto internal xref">4.8</a>.  <a href="#name-message-formats" class="internal xref">Message Formats</a></p>
 </li>
             </ul>
 </li>
@@ -1761,7 +1764,9 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
    If so, the protocol specification should describe the nature of those
    changes, where they are required, and how they can be introduced in
    a manner that facilitates deployment.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
-<p id="section-4.3-3">Refer to <span>[<a href="#RFC8170" class="cite xref">RFC8170</a>]</span> for a detailed discussed on transition versus coexistence.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.3-3">Incentivizing good security operation practices when migrating to the New Protocol or Protocol Extension should be encouraged. For example, patching is fundamental for security operations and can be incentivized if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.3-4">When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.
+   Refer to <span>[<a href="#RFC8170" class="cite xref">RFC8170</a>]</span> for a detailed discussed on transition versus coexistence.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-other">
@@ -1837,40 +1842,71 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
    out incoming connection requests: when Berkeley installed a new spam filter,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
-<p id="section-4.5-6">The impact on performance may also be noted -- increased delay or
-   jitter in real-time traffic applications, or increased response time
-   in client-server applications when encryption or filtering are
-   applied.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
-<p id="section-4.5-7">It is important to minimize the impact caused by configuration
+<p id="section-4.5-6">The impact of New Protocols or Protocol Extensions, and the results
+of new OAM tools developed for the New Protocols or Protocol
+Extensions, must be considered with respect to the performance of
+traffic delivery and the availability of ongoing manageability. For
+example, it must be noted if the New Protocols or Protocol Extensions
+or the OAM tools cause increased delay or jitter in real-time traffic
+applications, or increased response time in client-server
+applications. Further, if the additional traffic caused by OAM tools
+and data collection could result in the management plane becoming
+overwhelmed, then this must be called out, and suitable mechanisms to
+rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.  Consider three examples: in
+Bidirectional Forwarding Detection for MPLS <span>[<a href="#RFC5884" class="cite xref">RFC5884</a>]</span> it is
+possible to configure very rapid BFD transmissions (of the order of
+3ms) on a very large number of parallel Label Switched Paths (LSPs)
+with the result that the management systems and end nodes may become
+overwhelmed -- this can be protected by applying limits to
+the number of LSPs that may be tested at once; notifications or logs
+from systems (through YANG or other means) should be rate-limited so
+that they do not flood the receiving management station; the
+application of sophisticated encryption or filtering rules need to
+be considered in the light of the additional processing they may
+impose on the hardware forwarding path for traffic.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
+<p id="section-4.5-7">New metrics may be required to assess traffic performance. Protocol Designers may refer to <span>[<a href="#RFC6390" class="cite xref">RFC6390</a>]</span> for guidelines for considering new performance metrics.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
+<p id="section-4.5-8">It is important to minimize the impact caused by configuration
    changes. Given configuration A and configuration B, it should be
    possible to generate the operations necessary to get from A to B with
-   minimal state changes and effects on network and systems.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
+   minimal state changes and effects on network and systems.<a href="#section-4.5-8" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="sec-impact-secops">
+<section id="section-4.6">
+        <h3 id="name-impact-on-security-operatio">
+<a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-impact-on-security-operatio" class="section-name selfRef">Impact on Security Operations</a>
+        </h3>
+<p id="section-4.6-1">Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently<span>[<a href="#SECOPS" class="cite xref">SECOPS</a>]</span>. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.<a href="#section-4.6-1" class="pilcrow">¶</a></p>
+<p id="section-4.6-2">Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.<a href="#section-4.6-2" class="pilcrow">¶</a></p>
+<p id="section-4.6-3">Security operators extensively rely upon Indicators of Compromise (IoCs) <span>[<a href="#RFC9424" class="cite xref">RFC9424</a>]</span>. The deployment of New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.
+Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure that operators have the information they need. <span>[<a href="#I-D.ietf-quic-qlog-main-schema" class="cite xref">I-D.ietf-quic-qlog-main-schema</a>]</span> is an example of extensible structured logging.<a href="#section-4.6-3" class="pilcrow">¶</a></p>
+<p id="section-4.6-4">Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.<a href="#section-4.6-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-oper-verify">
-<section id="section-4.6">
+<section id="section-4.7">
         <h3 id="name-verifying-correct-operation">
-<a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-verifying-correct-operation" class="section-name selfRef">Verifying Correct Operation</a>
+<a href="#section-4.7" class="section-number selfRef">4.7. </a><a href="#name-verifying-correct-operation" class="section-name selfRef">Verifying Correct Operation</a>
         </h3>
-<p id="section-4.6-1">Protocol Designers should consider techniques for testing the
+<p id="section-4.7-1">Protocol Designers should consider techniques for testing the
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct end-
    to-end operation of the New Protocol or Protocol Extension in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
-   properly with the New Protocol or Protocol Extension. Which metrics are of interest?<a href="#section-4.6-1" class="pilcrow">¶</a></p>
-<p id="section-4.6-2">Having simple protocol status and health indicators on network
-   devices is a recommended means to check correct operation.<a href="#section-4.6-2" class="pilcrow">¶</a></p>
+   properly with the New Protocol or Protocol Extension. Which metrics are of interest?<a href="#section-4.7-1" class="pilcrow">¶</a></p>
+<p id="section-4.7-2">Having simple protocol status and health indicators on network
+   devices is a recommended means to check correct operation.<a href="#section-4.7-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-messages">
-<section id="section-4.7">
+<section id="section-4.8">
         <h3 id="name-message-formats">
-<a href="#section-4.7" class="section-number selfRef">4.7. </a><a href="#name-message-formats" class="section-name selfRef">Message Formats</a>
+<a href="#section-4.8" class="section-number selfRef">4.8. </a><a href="#name-message-formats" class="section-name selfRef">Message Formats</a>
         </h3>
-<p id="section-4.7-1">Where protocol specifications result in messages (such as errors or warnings) being carried as text strings or output for consumption by human operators, consideration should be given to making it possible for implementations to be configured so that the messages can be viewed in the local language. In such cases, it may be helpful to transmit a specific message code (i.e., a number) along with the default English language message, so that implementations may easily map the code to a local text string.<a href="#section-4.7-1" class="pilcrow">¶</a></p>
-<p id="section-4.7-2">Further discussion of Internationalization issues may be found in <span>[<a href="#BCP166" class="cite xref">BCP166</a>]</span>.<a href="#section-4.7-2" class="pilcrow">¶</a></p>
+<p id="section-4.8-1">Where protocol specifications result in messages (such as errors or warnings) being carried as text strings or output for consumption by human operators, consideration should be given to making it possible for implementations to be configured so that the messages can be viewed in the local language. In such cases, it may be helpful to transmit a specific message code (i.e., a number) along with the default English language message, so that implementations may easily map the code to a local text string.<a href="#section-4.8-1" class="pilcrow">¶</a></p>
+<p id="section-4.8-2">Further discussion of Internationalization issues may be found in <span>[<a href="#BCP166" class="cite xref">BCP166</a>]</span>.<a href="#section-4.8-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2845,7 +2881,11 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-opsawg-oam-characterization">[I-D.ietf-opsawg-oam-characterization]</dt>
       <dd>
-<span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-12</span>, <time datetime="2025-09-11" class="refDate">11 September 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-12">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-12</a>&gt;</span>. </dd>
+<span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-13</span>, <time datetime="2025-10-20" class="refDate">20 October 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-13">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-13</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-quic-qlog-main-schema">[I-D.ietf-quic-qlog-main-schema]</dt>
+      <dd>
+<span class="refAuthor">Marx, R.</span>, <span class="refAuthor">Niccolini, L.</span>, <span class="refAuthor">Seemann, M.</span>, and <span class="refAuthor">L. Pardue</span>, <span class="refTitle">"qlog: Structured Logging for Network Protocols"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-qlog-main-schema-13</span>, <time datetime="2025-10-20" class="refDate">20 October 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-qlog-main-schema-13">https://datatracker.ietf.org/doc/html/draft-ietf-quic-qlog-main-schema-13</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IESG-STATEMENT">[IESG-STATEMENT]</dt>
       <dd>
@@ -2931,6 +2971,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
       <dd>
 <span class="refAuthor">Harrington, D.</span>, <span class="refTitle">"Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions"</span>, <span class="seriesInfo">RFC 5706</span>, <span class="seriesInfo">DOI 10.17487/RFC5706</span>, <time datetime="2009-11" class="refDate">November 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5706">https://www.rfc-editor.org/rfc/rfc5706</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC5884">[RFC5884]</dt>
+      <dd>
+<span class="refAuthor">Aggarwal, R.</span>, <span class="refAuthor">Kompella, K.</span>, <span class="refAuthor">Nadeau, T.</span>, and <span class="refAuthor">G. Swallow</span>, <span class="refTitle">"Bidirectional Forwarding Detection (BFD) for MPLS Label Switched Paths (LSPs)"</span>, <span class="seriesInfo">RFC 5884</span>, <span class="seriesInfo">DOI 10.17487/RFC5884</span>, <time datetime="2010-06" class="refDate">June 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5884">https://www.rfc-editor.org/rfc/rfc5884</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC6020">[RFC6020]</dt>
       <dd>
 <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"YANG - A Data Modeling Language for the Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6020</span>, <span class="seriesInfo">DOI 10.17487/RFC6020</span>, <time datetime="2010-10" class="refDate">October 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6020">https://www.rfc-editor.org/rfc/rfc6020</a>&gt;</span>. </dd>
@@ -2946,6 +2990,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC6298">[RFC6298]</dt>
       <dd>
 <span class="refAuthor">Paxson, V.</span>, <span class="refAuthor">Allman, M.</span>, <span class="refAuthor">Chu, J.</span>, and <span class="refAuthor">M. Sargent</span>, <span class="refTitle">"Computing TCP's Retransmission Timer"</span>, <span class="seriesInfo">RFC 6298</span>, <span class="seriesInfo">DOI 10.17487/RFC6298</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6298">https://www.rfc-editor.org/rfc/rfc6298</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6390">[RFC6390]</dt>
+      <dd>
+<span class="refAuthor">Clark, A.</span> and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"Guidelines for Considering New Performance Metric Development"</span>, <span class="seriesInfo">BCP 170</span>, <span class="seriesInfo">RFC 6390</span>, <span class="seriesInfo">DOI 10.17487/RFC6390</span>, <time datetime="2011-10" class="refDate">October 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6390">https://www.rfc-editor.org/rfc/rfc6390</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6632">[RFC6632]</dt>
       <dd>
@@ -3004,8 +3052,16 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <span class="refAuthor">Barguil, S.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Munoz, L.</span>, and <span class="refAuthor">A. Aguado</span>, <span class="refTitle">"A YANG Network Data Model for Layer 3 VPNs"</span>, <span class="seriesInfo">RFC 9182</span>, <span class="seriesInfo">DOI 10.17487/RFC9182</span>, <time datetime="2022-02" class="refDate">February 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9182">https://www.rfc-editor.org/rfc/rfc9182</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9291">[RFC9291]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Barguil, S.</span>, and <span class="refAuthor">L. Munoz</span>, <span class="refTitle">"A YANG Network Data Model for Layer 2 VPNs"</span>, <span class="seriesInfo">RFC 9291</span>, <span class="seriesInfo">DOI 10.17487/RFC9291</span>, <time datetime="2022-09" class="refDate">September 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9291">https://www.rfc-editor.org/rfc/rfc9291</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9424">[RFC9424]</dt>
+      <dd>
+<span class="refAuthor">Paine, K.</span>, <span class="refAuthor">Whitehouse, O.</span>, <span class="refAuthor">Sellwood, J.</span>, and <span class="refAuthor">A. Shaw</span>, <span class="refTitle">"Indicators of Compromise (IoCs) and Their Role in Attack Defence"</span>, <span class="seriesInfo">RFC 9424</span>, <span class="seriesInfo">DOI 10.17487/RFC9424</span>, <time datetime="2023-08" class="refDate">August 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9424">https://www.rfc-editor.org/rfc/rfc9424</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="SECOPS">[SECOPS]</dt>
+    <dd>
+<span class="refTitle">"NICCS Glossary"</span>, <time datetime="2025-08" class="refDate">August 2025</time>, <span>&lt;<a href="https://niccs.cisa.gov/resources/glossary">https://niccs.cisa.gov/resources/glossary</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>

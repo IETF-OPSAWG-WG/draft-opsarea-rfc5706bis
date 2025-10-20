@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 22 April 2026                                         A. Farrel
+Expires: 23 April 2026                                         A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 22 April 2026                                         A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                         19 October 2025
+                                                         20 October 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 April 2026.
+   This Internet-Draft will expire on 23 April 2026.
 
 Copyright Notice
 
@@ -84,8 +84,9 @@ Table of Contents
      4.3.  Migration Path
      4.4.  Requirements on Other Protocols and Functional Components
      4.5.  Impact on Network Operation
-     4.6.  Verifying Correct Operation
-     4.7.  Message Formats
+     4.6.  Impact on Security Operations
+     4.7.  Verifying Correct Operation
+     4.8.  Message Formats
    5.  How Will the Protocol Be Managed?
      5.1.  Available Management Technologies
      5.2.  Interoperability
@@ -525,8 +526,18 @@ Table of Contents
    changes, where they are required, and how they can be introduced in a
    manner that facilitates deployment.
 
-   Refer to [RFC8170] for a detailed discussed on transition versus
-   coexistence.
+   Incentivizing good security operation practices when migrating to the
+   New Protocol or Protocol Extension should be encouraged.  For
+   example, patching is fundamental for security operations and can be
+   incentivized if Protocol Designers consider supporting cheap and fast
+   connection hand-offs and reconnections.
+
+   When Protocol Designers are considering how deployments should
+   transition to the New Protocol or Protocol Extension, impacts to
+   current techniques employed by operators should be documented and
+   mitigations included, where possible, so that consistent security
+   operations and management can be achieved.  Refer to [RFC8170] for a
+   detailed discussed on transition versus coexistence.
 
 4.4.  Requirements on Other Protocols and Functional Components
 
@@ -600,17 +611,77 @@ Table of Contents
    mail server stopped functioning because of overload of the DNS cache
    resolver.
 
-   The impact on performance may also be noted -- increased delay or
-   jitter in real-time traffic applications, or increased response time
-   in client-server applications when encryption or filtering are
-   applied.
+   The impact of New Protocols or Protocol Extensions, and the results
+   of new OAM tools developed for the New Protocols or Protocol
+   Extensions, must be considered with respect to the performance of
+   traffic delivery and the availability of ongoing manageability.  For
+   example, it must be noted if the New Protocols or Protocol Extensions
+   or the OAM tools cause increased delay or jitter in real-time traffic
+   applications, or increased response time in client-server
+   applications.  Further, if the additional traffic caused by OAM tools
+   and data collection could result in the management plane becoming
+   overwhelmed, then this must be called out, and suitable mechanisms to
+   rate limit the OAM must be considered.  Potential options include:
+   document the limitations, propose solution track(s), include an
+   optional rate limiting feature in the specifications, or impose a
+   rate limiting feature in the specifications.  Consider three
+   examples: in Bidirectional Forwarding Detection for MPLS [RFC5884] it
+   is possible to configure very rapid BFD transmissions (of the order
+   of 3ms) on a very large number of parallel Label Switched Paths
+   (LSPs) with the result that the management systems and end nodes may
+   become overwhelmed -- this can be protected by applying limits to the
+   number of LSPs that may be tested at once; notifications or logs from
+   systems (through YANG or other means) should be rate-limited so that
+   they do not flood the receiving management station; the application
+   of sophisticated encryption or filtering rules need to be considered
+   in the light of the additional processing they may impose on the
+   hardware forwarding path for traffic.
+
+   New metrics may be required to assess traffic performance.  Protocol
+   Designers may refer to [RFC6390] for guidelines for considering new
+   performance metrics.
 
    It is important to minimize the impact caused by configuration
    changes.  Given configuration A and configuration B, it should be
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-4.6.  Verifying Correct Operation
+4.6.  Impact on Security Operations
+
+   Security Operations (SecOps) is a collaborative approach that
+   combines security and operational teams to improve the ability of
+   operators to protect and manage the network effectively and
+   efficiently[SECOPS].  Security operators detect malicious activity
+   and respond to threats and are a crucial part of defending against
+   attacks alongside the management and operation of the network.
+
+   Protocol Designers should consider the impacts of a New Protocol or
+   Protocol Extension on Security Operations in networks that the
+   protocol will be deployed in.
+
+   Security operators extensively rely upon Indicators of Compromise
+   (IoCs) [RFC9424].  The deployment of New Protocol or Protocol
+   Extension may change the type, locations, or availability of IoCs.
+   Protocol Designers should outline such changes to ensure operators
+   can manage and defend their network consistently.  Consider the
+   operators' requirement for digital forensics from the network or
+   endpoints with critical information found in logs.  Logging events
+   schema and guidance for operators should be considered when designing
+   a New Protocol or Protocol Extension to ensure that operators have
+   the information they need.  [I-D.ietf-quic-qlog-main-schema] is an
+   example of extensible structured logging.
+
+   Tooling required by security operators should be documented in the
+   design and deployment of a New Protocol or Protocol Extension.
+   Operators may require new tooling or methods for managing network
+   traffic in response to protocol changes to ensure consistent
+   availability and performance of networks.  Similarly, updating and
+   augmenting existing forensic tools such as protocol dissectors is
+   expected when a New Protocol is deployed, but having to completely
+   rebuild such tooling would greatly reduce the effectiveness of
+   security operators, so protocol extensibility should be considered.
+
+4.7.  Verifying Correct Operation
 
    Protocol Designers should consider techniques for testing the effect
    that the protocol has had on the network by sending data through the
@@ -625,7 +696,7 @@ Table of Contents
    Having simple protocol status and health indicators on network
    devices is a recommended means to check correct operation.
 
-4.7.  Message Formats
+4.8.  Message Formats
 
    Where protocol specifications result in messages (such as errors or
    warnings) being carried as text strings or output for consumption by
@@ -1584,9 +1655,17 @@ Table of Contents
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-12, 11 September
+              draft-ietf-opsawg-oam-characterization-13, 20 October
               2025, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              opsawg-oam-characterization-12>.
+              opsawg-oam-characterization-13>.
+
+   [I-D.ietf-quic-qlog-main-schema]
+              Marx, R., Niccolini, L., Seemann, M., and L. Pardue,
+              "qlog: Structured Logging for Network Protocols", Work in
+              Progress, Internet-Draft, draft-ietf-quic-qlog-main-
+              schema-13, 20 October 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
+              qlog-main-schema-13>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
@@ -1683,6 +1762,11 @@ Table of Contents
               RFC 5706, DOI 10.17487/RFC5706, November 2009,
               <https://www.rfc-editor.org/rfc/rfc5706>.
 
+   [RFC5884]  Aggarwal, R., Kompella, K., Nadeau, T., and G. Swallow,
+              "Bidirectional Forwarding Detection (BFD) for MPLS Label
+              Switched Paths (LSPs)", RFC 5884, DOI 10.17487/RFC5884,
+              June 2010, <https://www.rfc-editor.org/rfc/rfc5884>.
+
    [RFC6020]  Bjorklund, M., Ed., "YANG - A Data Modeling Language for
               the Network Configuration Protocol (NETCONF)", RFC 6020,
               DOI 10.17487/RFC6020, October 2010,
@@ -1703,6 +1787,11 @@ Table of Contents
               "Computing TCP's Retransmission Timer", RFC 6298,
               DOI 10.17487/RFC6298, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6298>.
+
+   [RFC6390]  Clark, A. and B. Claise, "Guidelines for Considering New
+              Performance Metric Development", BCP 170, RFC 6390,
+              DOI 10.17487/RFC6390, October 2011,
+              <https://www.rfc-editor.org/rfc/rfc6390>.
 
    [RFC6632]  Ersue, M., Ed. and B. Claise, "An Overview of the IETF
               Network Management Standards", RFC 6632,
@@ -1771,6 +1860,14 @@ Table of Contents
               S., and L. Munoz, "A YANG Network Data Model for Layer 2
               VPNs", RFC 9291, DOI 10.17487/RFC9291, September 2022,
               <https://www.rfc-editor.org/rfc/rfc9291>.
+
+   [RFC9424]  Paine, K., Whitehouse, O., Sellwood, J., and A. Shaw,
+              "Indicators of Compromise (IoCs) and Their Role in Attack
+              Defence", RFC 9424, DOI 10.17487/RFC9424, August 2023,
+              <https://www.rfc-editor.org/rfc/rfc9424>.
+
+   [SECOPS]   "NICCS Glossary", August 2025,
+              <https://niccs.cisa.gov/resources/glossary>.
 
 Appendix A.  Changes Since RFC 5706
 
