@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 22 April 2026                                         A. Farrel
+Expires: 23 April 2026                                         A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 22 April 2026                                         A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                         19 October 2025
+                                                         20 October 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 April 2026.
+   This Internet-Draft will expire on 23 April 2026.
 
 Copyright Notice
 
@@ -604,7 +604,7 @@ Table of Contents
    applications, or increased response time in client-server
    applications.  Further, if the additional traffic caused by OAM tools
    and data collection could result in the management plane becoming
-   swamped, then this must be called out, and suitable mechanisms to
+   overwhelmed, then this must be called out, and suitable mechanisms to
    rate limit the OAM must be considered.  Potential options include:
    document the limitations, propose solution track(s), include an
    optional rate limiting feature in the specifications, or impose a
@@ -1643,9 +1643,9 @@ Table of Contents
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-12, 11 September
+              draft-ietf-opsawg-oam-characterization-13, 20 October
               2025, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              opsawg-oam-characterization-12>.
+              opsawg-oam-characterization-13>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
