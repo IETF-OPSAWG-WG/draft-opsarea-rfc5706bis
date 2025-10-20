@@ -50,6 +50,11 @@ informative:
     author:
     - org: IAB
     date: 2024-12
+  
+  SECOPS:
+    target: https://niccs.cisa.gov/resources/glossary
+    title: NICCS Glossary
+    date: 2025-08
 
 author:
  -
@@ -489,6 +494,9 @@ This document does not describe interoperability requirements. As such, it does 
    changes, where they are required, and how they can be introduced in
    a manner that facilitates deployment.
 
+   Incentivizing good security operation practices when migrating to the New Protocol or Protocol Extension should be encouraged. For example, patching is fundamental for security operations and can be incentivized if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.
+
+   When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.
    Refer to {{?RFC8170}} for a detailed discussed on transition versus coexistence.
 
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
@@ -573,6 +581,18 @@ This document does not describe interoperability requirements. As such, it does 
    changes. Given configuration A and configuration B, it should be
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
+
+## Impact on Security Operations {#sec-impact-secops}
+
+   Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently{{SECOPS}}. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.
+
+   Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.
+
+   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.
+Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure that operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging.
+
+Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.
+
 
 ##  Verifying Correct Operation {#sec-oper-verify}
 
