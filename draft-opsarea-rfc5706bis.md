@@ -496,7 +496,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    Incentivizing good security operation practices when migrating to New Protocol should be encouraged. For example, patching is fundamental for security operations and can be incentivised if Protocol Designers consider supporting cheap and fast connection handoffs and reconnections. 
 
-   When Protocol Designers are considering how deployments should transition to New Protocol, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.
+   When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.
    Refer to {{?RFC8170}} for a detailed discussed on transition versus coexistence.
 
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
