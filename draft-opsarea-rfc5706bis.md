@@ -50,7 +50,7 @@ informative:
     author:
     - org: IAB
     date: 2024-12
-  
+
   SECOPS:
     target: https://niccs.cisa.gov/resources/glossary
     title: NICCS Glossary
