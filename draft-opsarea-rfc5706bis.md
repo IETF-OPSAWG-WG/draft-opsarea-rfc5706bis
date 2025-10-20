@@ -573,7 +573,7 @@ or the OAM tools cause increased delay or jitter in real-time traffic
 applications, or increased response time in client-server
 applications. Further, if the additional traffic caused by OAM tools
 and data collection could result in the management plane becoming
-swamped, then this must be called out, and suitable mechanisms to
+overwhelmed, then this must be called out, and suitable mechanisms to
 rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.  Consider three examples: in
 Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
 possible to configure very rapid BFD transmissions (of the order of
