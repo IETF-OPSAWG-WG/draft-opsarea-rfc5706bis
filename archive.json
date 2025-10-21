@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-19T00:52:33.858526+00:00",
+  "timestamp": "2025-10-21T00:47:07.368082+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -1210,7 +1210,7 @@
       "id": "I_kwDOOWPBqs66ckZe",
       "title": "Applicability to protocols that are higher in the stack",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/66",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1221,8 +1221,8 @@
       ],
       "body": "> [Ballot discuss] (Robert Sparks 2009-09-22)\n> This document contains a wealth of good advice and I am glad we are producing it. However, I have a few questions to work through before recommending publication:\n> \n> The document is still strongly influenced by its genesis in routing. It is easy to see how to apply its advice when it is natural to talk about an application or a deployment in terms of the protocol, particularly when a configuration action on a network element maps directly into a configuration action in the protocol.\n> \n> **It is less obvious how to apply much of the advice when the protocol is a component or framework - when there are layers between the outward interface of the managed elements and the knobs in the protocols (TLS, SASL, S/MIME, PIDF, PIDF-LO, RTP, ...). Would it be possible to add guidance on how to apply the recommendations in those kinds of documents?** Would it make sense to add/make more explicit a discussion on reveiwing managability of the interfaces that components expose to the to-be-managed applications that are going to use them?\n> \n> Similarly, some of the \"link\", \"node\", and \"packet\" vocabulary becomes awkward when you start applying this to protocols that are higher in the stack. Can the language be abstracted to make it clearer what consideration discussion you're trying to stimulate in those cases?\n> \n> I can be talked into waiting for future documents to address those concerns - the guidance here for the protocols that the recommendations can easily be applied to is worth publishing as soon as we can. But we need to address the above questions before we start to consider _requiring_ these considerations in all submissions.\n\n> [Ballot comment]\n> The last paragraph of 2.2 could be generalized - speed is not the only thing that time changes.\n> \n> The guidance in the last paragraph before section 3.1 starts should also point to the cases where focusing on instumenting servers might mask problems - instrumentation in clients may be the only thing that can provide information to the operator.\n> \n> In section 3.1 \"Information models should come from the protocol WGs\" -- not all protocols come from WGs.\n> \n> \"some planned companion documents\" is a phrase that will not age well once this is in RFC-stone. Can it be replaced with something a little less time-sensitive?\n> \n> Consider changing the \"must not\" on the second line of page 9 to \"MUST NOT\" (or not).",
       "createdAt": "2025-06-08T07:47:28Z",
-      "updatedAt": "2025-10-09T13:18:49Z",
-      "closedAt": null,
+      "updatedAt": "2025-10-20T19:45:43Z",
+      "closedAt": "2025-10-20T19:45:43Z",
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -1251,6 +1251,27 @@
           "body": "> Conclusion after review is that the examples are somewhat routing heavy. It's not very, very bad. But it is notable.\n\nWe may soften this by adding some more non-rtg examples. Consider for example this recent spec in the app area that includes an Ops cons section: [https://datatracker.ietf.org/doc/html/draft-ietf-core-dns-over-coap-19](https://datatracker.ietf.org/doc/html/draft-ietf-core-dns-over-coap-19#name-operational-considerations#name-operational-considerations). \n\nOther recent examples:\n* [https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-geofeed-14](https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-geofeed-14#name-operational-considerations#name-operational-considerations)\n* [https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-rir-search-19](https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-rir-search-19#name-operational-considerations#name-operational-considerations)\n\n",
           "createdAt": "2025-09-11T05:19:23Z",
           "updatedAt": "2025-09-11T05:47:47Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Unless @boucadair wants to propose a change for his comment on rdap and dns-over-coap, I think we are done with this issue and can close it. Separate issues were raised for the reviews we managed to get.",
+          "createdAt": "2025-10-19T20:16:38Z",
+          "updatedAt": "2025-10-19T20:16:38Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree with Adrian, we can close this one. I cut and pasted the examples in #141 , to be added in the appendix",
+          "createdAt": "2025-10-19T20:28:01Z",
+          "updatedAt": "2025-10-19T20:28:01Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I cut and pasted the examples in https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/141 , to be added in the appendix",
+          "createdAt": "2025-10-20T19:45:43Z",
+          "updatedAt": "2025-10-20T19:45:43Z"
         }
       ]
     },
@@ -1335,7 +1356,7 @@
       "id": "I_kwDOOWPBqs67WA99",
       "title": "Any Perf-related guidance?",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/75",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1346,8 +1367,8 @@
       ],
       "body": "Email thread to the pm-dir@ietf.org:\n\nHi Perfmetrdir colleagues,\n\nAre there specific performance-related OPS considerations that you think are useful to include in the guidelines? Maybe consider an advice to look at RFC 6390 and RFC 8911 for better interop?\n\nThank you.\n\nCheers,\n\nMed",
       "createdAt": "2025-06-13T10:33:08Z",
-      "updatedAt": "2025-10-09T13:53:40Z",
-      "closedAt": null,
+      "updatedAt": "2025-10-20T21:20:53Z",
+      "closedAt": "2025-10-20T21:20:53Z",
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -2075,15 +2096,15 @@
       "id": "I_kwDOOWPBqs7PRyZI",
       "title": "Save more words!",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/135",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "The text would be shortened if we had a new (one-word) term that means \"New Protocol or Protocol Extension\"\n\nIs it worth it?\n\nBTW, we should probably not use \"New Protocol\" or \"Protocol Extension\" in isolation",
       "createdAt": "2025-10-02T13:30:38Z",
-      "updatedAt": "2025-10-13T20:34:11Z",
-      "closedAt": null,
+      "updatedAt": "2025-10-19T20:36:00Z",
+      "closedAt": "2025-10-19T20:36:00Z",
       "comments": [
         {
           "author": "cpignata",
@@ -2091,6 +2112,13 @@
           "body": "I do not think it is worth trying to find a term tht encompases \"New Protocol or Protocol Extension\". \nI absolutely agree we should avoid using \"New Protocol\" or \"Protocol Extension\" by themselves.",
           "createdAt": "2025-10-13T20:34:11Z",
           "updatedAt": "2025-10-13T20:34:11Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Agreeing with Carlos on this, I have been through the text to fix up to use the full long term (except where explicitly not) on #143",
+          "createdAt": "2025-10-19T20:13:46Z",
+          "updatedAt": "2025-10-19T20:13:46Z"
         }
       ]
     },
@@ -2143,7 +2171,7 @@
       ],
       "body": "Maybe consider citing https://datatracker.ietf.org/doc/html/rfc9552#section-8 as it exemplifies how the template is followed?",
       "createdAt": "2025-10-14T12:51:12Z",
-      "updatedAt": "2025-10-17T14:26:08Z",
+      "updatedAt": "2025-10-19T20:30:27Z",
       "closedAt": null,
       "comments": [
         {
@@ -2152,6 +2180,51 @@
           "body": "An example of RFC in the application area that follows the 5706 template: Peer-to-Peer Streaming Peer Protocol (PPSPP) (https://datatracker.ietf.org/doc/html/rfc7574#section-11)",
           "createdAt": "2025-10-17T14:26:08Z",
           "updatedAt": "2025-10-17T14:26:08Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Add these references to an \"examples\" appendix.",
+          "createdAt": "2025-10-19T14:38:53Z",
+          "updatedAt": "2025-10-19T14:38:53Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Some more examples, for the appendix\n[https://datatracker.ietf.org/doc/html/draft-ietf-core-dns-over-coap-19](https://datatracker.ietf.org/doc/html/draft-ietf-core-dns-over-coap-19#name-operational-considerations#name-operational-considerations).\n\nOther recent examples:\n\n    [https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-geofeed-14](https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-geofeed-14#name-operational-considerations#name-operational-considerations)\n    [https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-rir-search-19](https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-rir-search-19#name-operational-considerations#name-operational-considerations)",
+          "createdAt": "2025-10-19T20:27:41Z",
+          "updatedAt": "2025-10-19T20:27:41Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This would close off the last piece of #66",
+          "createdAt": "2025-10-19T20:29:36Z",
+          "updatedAt": "2025-10-19T20:30:27Z"
+        }
+      ]
+    },
+    {
+      "number": 144,
+      "id": "I_kwDOOWPBqs7SnYTA",
+      "title": "Brian Trammel review",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/144",
+      "state": "CLOSED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I asked Brian to do a review with a \"QUIC Management\" hat. He writes...\n\n```\nApologies again for the delay. I\u2019ve now read all the way through this document with a view toward \u201chow this document would apply to the design, implementation, and deployment of QUIC(-like protocols).\n\ntl;dr I have one tiny \u201cyou didn\u2019t cite my favorite RFC nit\u201d, otherwise this looks good to me and you should publish it.\n\nThanks for writing this! It\u2019s a really good runthrough of things one should consider when designing a protocol in this space, and seems quite thorough. I had a few \u201cbut did you think of X\u2026 oh, of course you did\u201d moments. Before reviewing this I was expecting the management advice in particular to be more tied to the assumptions of the YANG-and-Netconf milieu than it is, which was a pleasant surprise. All the advice given is generalized enough that I can see how to apply it to QUIC, or that it\u2019s obviously non-applicable in scope.\n\nI enjoyed as well the existence of section 8.\n\nSpecific nit below:\n\nI was surprised that section 4.3 didn\u2019t reference RFC 8170, which is (at least as I teach it) the gold standard for non-coordinated transitional protocol engineering.\n\n```\nI'll raise a PR for the \"nit\"",
+      "createdAt": "2025-10-20T18:51:39Z",
+      "updatedAt": "2025-10-20T18:55:34Z",
+      "closedAt": "2025-10-20T18:55:34Z",
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Inspection of the latest version of the text shows that 8170 has already been added to the relevant section.",
+          "createdAt": "2025-10-20T18:55:34Z",
+          "updatedAt": "2025-10-20T18:55:34Z"
         }
       ]
     }
@@ -8582,24 +8655,26 @@
       "id": "PR_kwDOOWPBqs6ix5Eb",
       "title": "Impact on Security Operations",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/107",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "michael-p-1",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Please see suggested text for a section on Impact on Security Operations",
       "createdAt": "2025-08-08T14:37:52Z",
-      "updatedAt": "2025-10-16T12:53:08Z",
+      "updatedAt": "2025-10-20T12:48:06Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "60dc0b1b36b2269e5a3d2ac3e6c187f3b0d3f905",
+      "baseRefOid": "2a60729de002df6a014248f2e9120b4d744e95b1",
       "headRepository": "michael-p-1/draft-opsarea-rfc5706bis",
       "headRefName": "security-operations",
-      "headRefOid": "5420c15946c8fd46b20f42cd33d45e446e63cd92",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "b97ddcc5b6f3981521913c505ef76eb8adfc9137",
+      "closedAt": "2025-10-20T12:48:06Z",
+      "mergedAt": "2025-10-20T12:48:06Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "049e6b869fb8eaae9f04737c7183f4316c5750a3"
+      },
       "comments": [
         {
           "author": "bclaise",
@@ -8617,21 +8692,21 @@
         },
         {
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Thank you for the review, and for making time to discuss this during your calls. \r\n\r\nI agree with making sure that we don't stray into Security Considerations, so will refactor to draw out operational considerations. \r\n\r\nOn definitions, I agree that the text can be more verbose in explaining the definition SecOps, so I will add that at the beginning of this section. Thank you for the suggested text - that is consistent with my understanding and the definitions on the websites of some of the major cyber security companies (Palo Alto/Fortinet/Microsoft/SentinelOne/Crowdstike/CyberArk all agree). Rather than use those websites as a reference, I will include this glossary entry from CISA which is consistent too https://niccs.cisa.gov/resources/glossary \r\n\r\n @bclaise - I wanted to make sure I understood your comments on references, as I'm not sure I'm reading it correctly. Are you saying that you would want more specific actions linked to those references? Or do you mean the opposite in that the references should be informative, rather than overly specific/actionable? In which case I can edit to make that clear.\r\nWith the IoCs reference; IoCs are very much part of how security operators work, so very much see that paragraph and reference as fundamental to operations - sharing is one such use, there's a full lifecycle outlined in that document on how they are used, so I can point to that as an action if that's what you would like. \r\nWith the I-D.ietf-quic-qlog-main-schema, that was less meant as an action for a reader to use specifically, but an example of where changes to logging has been considered in the protocol design process. \r\n\r\n   ",
           "createdAt": "2025-08-22T13:18:43Z",
           "updatedAt": "2025-08-22T14:23:41Z"
         },
         {
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "> Thank you for the review, and for making time to discuss this during your calls.\r\n> \r\n> I agree with making sure that we don't stray into Security Considerations, so will refactor to draw out operational considerations.\r\n> \r\n> On definitions, I agree that the text can be more verbose in explaining the definition SecOps, so I will add that at the beginning of this section. Thank you for the suggested text - that is consistent with my understanding and the definitions on the websites of some of the major cyber security companies (Palo Alto/Fortinet/Microsoft/SentinelOne/Crowdstike/CyberArk all agree). Rather than use those websites as a reference, I will include this glossary entry from CISA which is consistent too https://niccs.cisa.gov/resources/glossary\r\n> \r\n> @bclaise - I wanted to make sure I understood your comments on references, as I'm not sure I'm reading it correctly. Are you saying that you would want more specific actions linked to those references? Or do you mean the opposite in that the references should be informative, rather than overly specific/actionable? In which case I can edit to make that clear. With the IoCs reference; IoCs are very much part of how security operators work, so very much see that paragraph and reference as fundamental to operations - sharing is one such use, there's a full lifecycle outlined in that document on how they are used, so I can point to that as an action if that's what you would like. With the I-D.ietf-quic-qlog-main-schema, that was less meant as an action for a reader to use specifically, but an example of where changes to logging has been considered in the protocol design process.\r\n\r\nUpdate - I have updated both the paragraphs with the references ",
           "createdAt": "2025-08-27T13:41:57Z",
           "updatedAt": "2025-08-27T13:41:57Z"
         },
         {
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I have updated text to highlight a few specific considerations and ensure more operationally focused following last week's call ",
           "createdAt": "2025-10-01T16:21:10Z",
           "updatedAt": "2025-10-01T16:21:10Z"
@@ -8645,7 +8720,7 @@
         },
         {
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "> > I have updated text to highlight a few specific considerations and ensure more operationally focused following last week's call\r\n> \r\n> @ Michael, thanks. Regarding the following paragraph, I am not sure what the guidance is for document authors & protocol designers?\r\n> \r\n> \"Similarly, tooling required by security operators should be considered in the design and deployment of a New Protocol. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.\"\r\n> \r\n> Your statement is certainly correct but should be included in the \"operational considerations\" section?\r\n\r\nThanks for the review Benoit!\r\n\r\nThe point here is similar to the point made in section 6 on Tooling Considerations but with a SecOps focus (if it makes sense to move this text to that section, that's fine by me, just a matter of preference. I'd personally keep it with SecOps to ensure context isn't lost, but happy to leave that choice to the authors). In particular, Protocol Designers should think about protocol extensions, rather than completely new versions of existing protocols to reduce the impact on existing tooling. Similarly, if the new specification can provide examples using existing SecOps tooling, such as traffic management tooling or protocol dissectors that would be beneficial for operators",
           "createdAt": "2025-10-02T13:07:38Z",
           "updatedAt": "2025-10-02T13:07:38Z"
@@ -8659,7 +8734,7 @@
         },
         {
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "> > Thanks for the review Benoit!\r\n> > The point here is similar to the point made in section 6 on Tooling Considerations but with a SecOps focus (if it makes sense to move this text to that section, that's fine by me, just a matter of preference. I'd personally keep it with SecOps to ensure context isn't lost, but happy to leave that choice to the authors). In particular, Protocol Designers should think about protocol extensions, rather than completely new versions of existing protocols to reduce the impact on existing tooling. Similarly, if the new specification can provide examples using existing SecOps tooling, such as traffic management tooling or protocol dissectors that would be beneficial for operators\r\n> \r\n> During our call today, we arrived to this conclusion: the key point is \"documented\" See our proposal Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.\r\n> \r\n> Does it work for you?\r\n\r\nYes, that works for me. Is the action on me to push that change?",
           "createdAt": "2025-10-02T13:32:31Z",
           "updatedAt": "2025-10-02T13:32:31Z"
@@ -8717,7 +8792,7 @@
             "abbreviatedOid": "8f052bc"
           },
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-08-18T10:22:52Z",
@@ -8737,7 +8812,7 @@
             "abbreviatedOid": "8f052bc"
           },
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-08-18T10:24:48Z",
@@ -8777,7 +8852,7 @@
             "abbreviatedOid": "8f052bc"
           },
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-08-20T07:05:59Z",
@@ -8829,7 +8904,7 @@
             "abbreviatedOid": "43de0ab"
           },
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-08-27T13:38:37Z",
@@ -8849,7 +8924,7 @@
             "abbreviatedOid": "43de0ab"
           },
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-08-27T13:39:14Z",
@@ -8925,7 +9000,7 @@
             "abbreviatedOid": "2f5ed97"
           },
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T15:08:35Z",
@@ -8945,7 +9020,7 @@
             "abbreviatedOid": "2f5ed97"
           },
           "author": "michael-p-1",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T15:08:45Z",
@@ -8971,6 +9046,244 @@
           "createdAt": "2025-10-16T12:53:08Z",
           "updatedAt": "2025-10-16T12:53:08Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7H9AVn",
+          "commit": {
+            "abbreviatedOid": "5420c15"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-19T20:20:21Z",
+          "updatedAt": "2025-10-19T20:56:05Z",
+          "comments": [
+            {
+              "originalPosition": 28,
+              "body": "Hi Michael, I propose not to swap section order.\r\nYour new text is fine. Feel free to apply the changes.\r\n",
+              "createdAt": "2025-10-19T20:20:21Z",
+              "updatedAt": "2025-10-19T20:56:05Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "Michael, your new text is fine. Feel free to apply the changes.",
+              "createdAt": "2025-10-19T20:20:58Z",
+              "updatedAt": "2025-10-19T20:56:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IBDkb",
+          "commit": {
+            "abbreviatedOid": "2f5ed97"
+          },
+          "author": "michael-p-1",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T09:32:30Z",
+          "updatedAt": "2025-10-20T09:32:30Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "I have applied these changes\r\n",
+              "createdAt": "2025-10-20T09:32:30Z",
+              "updatedAt": "2025-10-20T09:32:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IBD2v",
+          "commit": {
+            "abbreviatedOid": "2f5ed97"
+          },
+          "author": "michael-p-1",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T09:32:43Z",
+          "updatedAt": "2025-10-20T09:32:43Z",
+          "comments": [
+            {
+              "originalPosition": 28,
+              "body": "I have applied these changes",
+              "createdAt": "2025-10-20T09:32:43Z",
+              "updatedAt": "2025-10-20T09:32:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IBM1R",
+          "commit": {
+            "abbreviatedOid": "e240d8b"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-20T09:40:32Z",
+          "updatedAt": "2025-10-20T09:40:32Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IC8Aj",
+          "commit": {
+            "abbreviatedOid": "c29d25c"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-10-20T12:01:00Z",
+          "updatedAt": "2025-10-20T12:01:55Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "```suggestion\r\n   Incentivizing good security operation practices when migrating to the New Protocol or Protocol Extension should be encouraged. For example, patching is fundamental for security operations and can be incentivized if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections. \r\n```",
+              "createdAt": "2025-10-20T12:01:00Z",
+              "updatedAt": "2025-10-20T12:01:55Z"
+            },
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\n   When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.\r\n```",
+              "createdAt": "2025-10-20T12:01:27Z",
+              "updatedAt": "2025-10-20T12:01:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IDU4t",
+          "commit": {
+            "abbreviatedOid": "941a856"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-20T12:39:57Z",
+          "updatedAt": "2025-10-20T12:39:57Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IDV11",
+          "commit": {
+            "abbreviatedOid": "941a856"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T12:41:21Z",
+          "updatedAt": "2025-10-20T12:41:21Z",
+          "comments": [
+            {
+              "originalPosition": 36,
+              "body": "```suggestion\r\nTooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.\r\n```",
+              "createdAt": "2025-10-20T12:41:21Z",
+              "updatedAt": "2025-10-20T12:41:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IDWw-",
+          "commit": {
+            "abbreviatedOid": "ddaed30"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T12:42:39Z",
+          "updatedAt": "2025-10-20T12:42:40Z",
+          "comments": [
+            {
+              "originalPosition": 32,
+              "body": "```suggestion\r\n   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.\r\n```",
+              "createdAt": "2025-10-20T12:42:39Z",
+              "updatedAt": "2025-10-20T12:42:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IDXlP",
+          "commit": {
+            "abbreviatedOid": "4b4507a"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T12:43:49Z",
+          "updatedAt": "2025-10-20T12:43:50Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "```suggestion\r\n   Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.\r\n```",
+              "createdAt": "2025-10-20T12:43:49Z",
+              "updatedAt": "2025-10-20T12:43:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IDX4x",
+          "commit": {
+            "abbreviatedOid": "dd65512"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T12:44:15Z",
+          "updatedAt": "2025-10-20T12:44:16Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "```suggestion\r\n   Incentivizing good security operation practices when migrating to the New Protocol or Protocol Extension should be encouraged. For example, patching is fundamental for security operations and can be incentivized if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.\r\n```",
+              "createdAt": "2025-10-20T12:44:15Z",
+              "updatedAt": "2025-10-20T12:44:16Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IDYQ7",
+          "commit": {
+            "abbreviatedOid": "3567195"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T12:44:48Z",
+          "updatedAt": "2025-10-20T12:44:49Z",
+          "comments": [
+            {
+              "originalPosition": 28,
+              "body": "```suggestion\r\n   Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently{{SECOPS}}. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.\r\n```",
+              "createdAt": "2025-10-20T12:44:48Z",
+              "updatedAt": "2025-10-20T12:44:49Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IDZ1N",
+          "commit": {
+            "abbreviatedOid": "46fd0c4"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T12:47:05Z",
+          "updatedAt": "2025-10-20T12:47:06Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "```suggestion\r\n\r\n```",
+              "createdAt": "2025-10-20T12:47:06Z",
+              "updatedAt": "2025-10-20T12:47:06Z"
+            }
+          ]
         }
       ]
     },
@@ -10243,24 +10556,26 @@
       "id": "PR_kwDOOWPBqs6s51SP",
       "title": "Performance guidance",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/138",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Expand on text on performance considerations",
       "createdAt": "2025-10-09T13:52:14Z",
-      "updatedAt": "2025-10-16T15:31:11Z",
+      "updatedAt": "2025-10-20T21:20:54Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "6d74147c8a0bdfd2ec55ab891d0ea8938d39440c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-2",
-      "headRefOid": "5eccc6239f6019d916a1a44f2e86fc83ba5aa3d0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "4ec6c70371bb8abbd4c750d5786c088708d1109f",
+      "closedAt": "2025-10-20T21:20:52Z",
+      "mergedAt": "2025-10-20T21:20:52Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "ba33c7fa50164ef1d4170e09c4ab1d0bd93fc9b7"
+      },
       "comments": [
         {
           "author": "bclaise",
@@ -10275,6 +10590,13 @@
           "body": "> \"suitable mechanisms to rate limit the OAM must be provided.\"\r\n> \r\n> I am always hesitant with \"must\" and this type of guidelines Taking two of your examples into consideration: \"notifications or logs from systems (through YANG or other means) should be rate-limited so that they do not flood the receiving management station; the application of sophisticated encryption or filtering rules need to be considered in the light of the additional processing they may impose on the \"fast path\" for traffic.\"\r\n> \r\n> Note that the example mentions \"should be rate-limited\", as opposed to must.\r\n> \r\n> The \"system\" of tomorrow will have better performance/bandwidth/processing/whatever-it-needs. If THIS guidance was in place 20 years ago, would we limit the number of syslog msg to ... 100 or 1000 or 10000 msgs/sec kind of arbitrarily. Similarly, I can take the evolution from NetFlow flow records, which could go x millions/sec easily these days.\r\n> \r\n> I scratch my head on what is the guideline here behind \"suitable mechanisms to rate limit the OAM must be provided.\"\r\n> \r\n>     * you should think about it and document the limitations\r\n> \r\n>     * you should think about it, document the limitation, and propose solutions\r\n> \r\n>     * your specifications must include and mandate the solution, ex: a rate-limiting feature\r\n> \r\n>     * your specifications must include the solution, optionally.\r\n\r\nDiscussion centered around changing must be provided to must be considered with some examples from the bulleted list.",
           "createdAt": "2025-10-16T13:14:33Z",
           "updatedAt": "2025-10-16T13:14:33Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'm OK with the latest of these changes",
+          "createdAt": "2025-10-19T19:57:10Z",
+          "updatedAt": "2025-10-19T19:57:10Z"
         }
       ],
       "reviews": [
@@ -10353,6 +10675,106 @@
               "body": "```suggestion\r\nrate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.  Consider three examples: in\r\n```",
               "createdAt": "2025-10-16T15:29:58Z",
               "updatedAt": "2025-10-16T15:31:11Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7H-2Lo",
+          "commit": {
+            "abbreviatedOid": "5756a2f"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T06:26:30Z",
+          "updatedAt": "2025-10-20T06:26:30Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "Not overthinking -- swamped is not a tech or friendly term. Overloaded, congested, etc. \nRFC 6192 uses \"overwhelmed\". That's probably best",
+              "createdAt": "2025-10-20T06:26:30Z",
+              "updatedAt": "2025-10-20T06:26:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7H-2oy",
+          "commit": {
+            "abbreviatedOid": "5756a2f"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T06:27:26Z",
+          "updatedAt": "2025-10-20T06:27:27Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "\"Fast path\" is not clear or descriptive enough. Which path? Processing path. I recommend looking at how RFC 6192 treats this. ",
+              "createdAt": "2025-10-20T06:27:27Z",
+              "updatedAt": "2025-10-20T06:27:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IDHWA",
+          "commit": {
+            "abbreviatedOid": "5756a2f"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T12:19:41Z",
+          "updatedAt": "2025-10-20T12:19:42Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "```suggestion\r\noverwhelmed, then this must be called out, and suitable mechanisms to\r\n```",
+              "createdAt": "2025-10-20T12:19:41Z",
+              "updatedAt": "2025-10-20T12:19:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7ID_qZ",
+          "commit": {
+            "abbreviatedOid": "5756a2f"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T13:32:22Z",
+          "updatedAt": "2025-10-20T13:32:23Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "What about \"hardware forwarding path\"?",
+              "createdAt": "2025-10-20T13:32:23Z",
+              "updatedAt": "2025-10-20T13:32:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7IJnAd",
+          "commit": {
+            "abbreviatedOid": "98c2d14"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-20T21:17:51Z",
+          "updatedAt": "2025-10-20T21:17:52Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\nimpose on the hardware forwarding path for traffic.\r\n```",
+              "createdAt": "2025-10-20T21:17:51Z",
+              "updatedAt": "2025-10-20T21:17:52Z"
             }
           ]
         }
@@ -10473,24 +10895,26 @@
       "id": "PR_kwDOOWPBqs6ubY2J",
       "title": "Carlos review of the most recent PRs",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/142",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Hi,\r\nPlease find some suggested fixes to text introduced by the most recently merged PRs.\r\nBest,\r\nCarlos.",
       "createdAt": "2025-10-18T09:00:53Z",
-      "updatedAt": "2025-10-18T09:29:02Z",
+      "updatedAt": "2025-10-19T14:34:43Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "3390a11f41740b271d1c9dc8b400d83d0036651b",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-various",
       "headRefOid": "1abf0b0de91a471e0d8e12462c6ad2ba70b058ca",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-10-19T14:34:42Z",
+      "mergedAt": "2025-10-19T14:34:41Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "df24779b57a8143f9208b7b88382ac0ba9769988"
+      },
       "comments": [],
       "reviews": [
         {
@@ -10504,6 +10928,61 @@
           "body": "",
           "createdAt": "2025-10-18T09:29:02Z",
           "updatedAt": "2025-10-18T09:29:02Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7H8mUu",
+          "commit": {
+            "abbreviatedOid": "1abf0b0"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-19T14:34:36Z",
+          "updatedAt": "2025-10-19T14:34:36Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 143,
+      "id": "PR_kwDOOWPBqs6uhn7o",
+      "title": "Fix up \"New Protocol or Protocol Extension\"",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/143",
+      "state": "MERGED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "With this change, everything is harmonious and sweet smelling.\r\n\r\nWe can close issue #135",
+      "createdAt": "2025-10-19T20:11:38Z",
+      "updatedAt": "2025-10-19T20:36:00Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "df24779b57a8143f9208b7b88382ac0ba9769988",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-1",
+      "headRefOid": "8b796626d2135796da2db72b3fb92bbc13008777",
+      "closedAt": "2025-10-19T20:35:59Z",
+      "mergedAt": "2025-10-19T20:35:59Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "2a60729de002df6a014248f2e9120b4d744e95b1"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7H9Bcj",
+          "commit": {
+            "abbreviatedOid": "8b79662"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-19T20:35:53Z",
+          "updatedAt": "2025-10-19T20:35:53Z",
           "comments": []
         }
       ]
