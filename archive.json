@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-21T00:47:07.368082+00:00",
+  "timestamp": "2025-10-23T00:46:22.712741+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2225,6 +2225,37 @@
           "body": "Inspection of the latest version of the text shows that 8170 has already been added to the relevant section.",
           "createdAt": "2025-10-20T18:55:34Z",
           "updatedAt": "2025-10-20T18:55:34Z"
+        }
+      ]
+    },
+    {
+      "number": 145,
+      "id": "I_kwDOOWPBqs7S-0Qq",
+      "title": "Advertising the OPSAWG Call for Adoption",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/145",
+      "state": "OPEN",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Not all interested parties in the development of RFC 5706bis are subscribed to the OPSAWG mailing list.\nWe should advertise the CfA to the right audience, for example to the people who already provided feedback.\n\n@AdrianFarrel , you had a list of draft authors you contacted\nFor the routing area, which mailing list is the best?\nWhat about the other areas, shall we go via the area directors?\nNote that I forwarded the CfA email already to the OPS-DIR\n\nB.",
+      "createdAt": "2025-10-22T08:28:12Z",
+      "updatedAt": "2025-10-22T17:20:56Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I posted an advert to the Routing Directorate and to routing-discussion@ietf.org\n\nSpamming other WGs seems overkill although you might request a presentation at the Routing Area Open meeting at IETF-124",
+          "createdAt": "2025-10-22T11:35:35Z",
+          "updatedAt": "2025-10-22T11:35:35Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@bclaise , want to also send to the PM Dir? And the reviewers included in the Acknowledgements",
+          "createdAt": "2025-10-22T17:20:55Z",
+          "updatedAt": "2025-10-22T17:20:55Z"
         }
       ]
     }
