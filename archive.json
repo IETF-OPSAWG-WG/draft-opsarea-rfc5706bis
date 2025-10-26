@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-23T00:46:22.712741+00:00",
+  "timestamp": "2025-10-26T00:50:50.691776+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2258,6 +2258,22 @@
           "updatedAt": "2025-10-22T17:20:55Z"
         }
       ]
+    },
+    {
+      "number": 146,
+      "id": "I_kwDOOWPBqs7TR-RT",
+      "title": "Comment from Curtis Villamizar about BGP damping example  (Section 4)",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/146",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "```\nIf you are going to use this example you should get the story right.\n\n  ORIG:\n\n   BGP flap damping [RFC2439] is an example.  It was designed to block\n   high-frequency route flaps; however, the design did not consider the\n   existence of BGP path exploration / slow convergence.  In real\n   operations, path exploration caused false flap damping, resulting in\n   loss of reachability.  As a result, many networks turned flap damping\n   off.\n\n  NEW:\n\n   BGP flap damping [RFC2439] is an example.  It was designed to block\n   high-frequency route flaps.  The design did consider the existence\n   of BGP path exploration / slow convergence with the inclusion of\n   full BGP path in the stored information.  A specific vendor with\n   memory constrained routers chose to interpret this requirement as\n   optional in their implementation.  Thererfore, in real operations,\n   path exploration caused false flap damping, resulting in loss of\n   reachability.  As a result, many networks turned flap damping off.\n\nThe specific vendor was Cisco which at the time had routers with as little as 4MB\nof memory in the field.  Storing only the prefix and not the full path was seen as \nhaving less impact on their very limited memory.  Cisco has quite a megaphone and\n were able to blame the standard even though lead developers participating\n in IETF (mostly Tony Li, but others) were very explicitly told that their implementation\n was not compliant and would result in path exploration false positives.  Much\n of the industry at the time viewed any Cisco implementation\n (of any protocol, including BGP itself) as a defacto standard even if not adherent to IETF standards.\n\n  RFC2439:\n\n   The AS path is generally included in order to identify downstream\n   instability which is not being damped or not being sufficiently\n   damped and is alternating between a stable and an unstable path.\n   Under rare circumstances it may be desirable to exclude AS path for\n   all or a subset of prefixes.\n\nNote that RFC2439 explicitly points to the need for AS path to cover the case\n of \"alternating between a stable and an unstable path\" aka path exploration.  \nFollowing the rare circumstances statement is a discussion truncating the AS path for AS sets. \n At no point in the document is it implied that an implementation that does not store AS path\n at all would work and it is explictly stated why it would not work.\n\nCurtis\n\n```",
+      "createdAt": "2025-10-23T13:27:13Z",
+      "updatedAt": "2025-10-23T13:27:13Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
