@@ -328,11 +328,6 @@ This document does not describe interoperability requirements. As such, it does 
    Of course, additional relevant operational and manageability topics
    should be included as well.
 
-   Existing protocols and Data Models can provide the management
-   functions identified in the previous section. Protocol Designers
-   should consider how using existing protocols and Data Models might
-   impact network operations.
-
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
