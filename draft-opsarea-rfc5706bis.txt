@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 23 April 2026                                         A. Farrel
+Expires: 3 May 2026                                            A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 23 April 2026                                         A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                         20 October 2025
+                                                         30 October 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 April 2026.
+   This Internet-Draft will expire on 3 May 2026.
 
 Copyright Notice
 
@@ -355,11 +355,6 @@ Table of Contents
    relevant or applicable for the New Protocol or Protocol Extension.
    Of course, additional relevant operational and manageability topics
    should be included as well.
-
-   Existing protocols and Data Models can provide the management
-   functions identified in the previous section.  Protocol Designers
-   should consider how using existing protocols and Data Models might
-   impact network operations.
 
 3.2.  "Operational Considerations" Section Boilerplate When No New
       Considerations Exist
