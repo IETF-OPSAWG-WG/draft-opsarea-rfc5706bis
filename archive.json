@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-30T00:49:49.296420+00:00",
+  "timestamp": "2025-11-02T00:52:17.439723+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2323,16 +2323,31 @@
       "id": "I_kwDOOWPBqs7Ud0PS",
       "title": "(3.1) Existing protocols and Data Models",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/149",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Section 3.1 says the following:\n\n```\n   Existing protocols and Data Models can provide the management\n   functions identified in the previous section. Protocol Designers\n   should consider how using existing protocols and Data Models might\n   impact network operations.\n```\n\n* I think \"identified  in the previous section\" part is broken. \n* What is the purpose of the last sentence?\n* Do we need this full para at the first place?",
       "createdAt": "2025-10-29T06:38:35Z",
-      "updatedAt": "2025-10-29T06:38:35Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-10-30T21:15:02Z",
+      "closedAt": "2025-10-30T21:15:02Z",
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'd say remove the whole paragraph -- happy to do it if that's out consensus.",
+          "createdAt": "2025-10-30T20:37:45Z",
+          "updatedAt": "2025-10-30T20:37:45Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Yeah, I think it could be yanked.",
+          "createdAt": "2025-10-30T20:42:04Z",
+          "updatedAt": "2025-10-30T20:42:04Z"
+        }
+      ]
     },
     {
       "number": 150,
@@ -2357,6 +2372,24 @@
           "updatedAt": "2025-10-29T08:15:30Z"
         }
       ]
+    },
+    {
+      "number": 151,
+      "id": "I_kwDOOWPBqs7U1ZTU",
+      "title": "\"where's your YANG module?\"",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/151",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "OPSAWG-CFA"
+      ],
+      "body": "I appreciate this was only an example (Jeff Haas), but..\n\n...if such comment is made to the authors of a spec, then there is something broken/not clear with the guidance!\n\nEarly sections of the doc reflects the spirit of the guidance, e.g., \n\n>    A core principle of this document is to encourage early on\n>    discussions rather than mandating any specific solution.  It does not\n>    impose a specific management or operational solution, imply that a\n>    formal Data Model is needed, or imply that using a specific\n>    management protocol is mandatory.\n\nNot sure how we can make that better highlighted.\n\n\n",
+      "createdAt": "2025-10-30T13:22:41Z",
+      "updatedAt": "2025-10-30T13:22:41Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -11113,6 +11146,61 @@
           "body": "",
           "createdAt": "2025-10-19T20:35:53Z",
           "updatedAt": "2025-10-19T20:35:53Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 152,
+      "id": "PR_kwDOOWPBqs6wtNWm",
+      "title": "Fix #149 ",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/152",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-30T20:49:53Z",
+      "updatedAt": "2025-10-30T21:15:03Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "9b94cfed3e9a23945a922a6264a053544015e88b",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-149",
+      "headRefOid": "39250542da6db69f08507d55d4506790f061e0a9",
+      "closedAt": "2025-10-30T21:15:01Z",
+      "mergedAt": "2025-10-30T21:15:01Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "8e511993514ab127cfe1dd03239eaaee5a33852a"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7KwIwf",
+          "commit": {
+            "abbreviatedOid": "3925054"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-30T20:56:10Z",
+          "updatedAt": "2025-10-30T20:56:10Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7KwI4F",
+          "commit": {
+            "abbreviatedOid": "3925054"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-30T20:56:17Z",
+          "updatedAt": "2025-10-30T20:56:17Z",
           "comments": []
         }
       ]
