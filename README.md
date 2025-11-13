@@ -4,12 +4,12 @@
 
 This is the working area for the individual Internet-Draft, "Guidelines for Considering Operations and Management in IETF Specifications".
 
-* [Editor's Copy](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-opsarea-rfc5706bis.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-opsarea-rfc5706bis)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-opsarea-rfc5706bis)
-* [Compare Editor's Copy to Individual Draft](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-opsarea-rfc5706bis.diff)
+* [Editor's Copy](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-ietf-opsawg-rfc5706bis.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-opsawg-rfc5706bis)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-rfc5706bis)
+* [Compare Editor's Copy to Individual Draft](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/#go.draft-ietf-opsawg-rfc5706bis.diff)
 * [Compare PRs to Datatracker Page](https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/)
-* [Compare I-D to RFC5706](https://author-tools.ietf.org/diff?doc_1=rfc5706&doc_2=draft-opsarea-rfc5706bis)
+* [Compare I-D to RFC5706](https://author-tools.ietf.org/diff?doc_1=rfc5706&doc_2=draft-ietf-opsawg-rfc5706bis)
 * [Submit a new revision](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/releases/new)
 
 
