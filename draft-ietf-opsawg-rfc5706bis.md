@@ -1145,7 +1145,7 @@ DM         DM        DM     --> concrete/detailed model
    results. Search for "benchmark" in the RFC search tool.
 
    Performance metrics may be useful in multiple environments and for
-   different protocols. The IETF, via the IP Performance Monitoring
+   different protocols. The IETF, via the IP Performance Measurement
    (IPPM) WG, has developed a set of standard metrics that can be
    applied to the quality, performance, and reliability of Internet data
    delivery services. These metrics are designed such that they can be
