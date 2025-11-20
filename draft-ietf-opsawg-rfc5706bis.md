@@ -382,11 +382,12 @@ This document does not describe interoperability requirements. As such, it does 
    a more detailed discussion on what makes for a successful protocol.
 
    BGP flap damping {{?RFC2439}} is an example.  It was designed to block
-   high-frequency route flaps; however, the design did not consider the
-   existence of BGP path exploration / slow convergence.  In real
-   operations, path exploration caused false flap damping, resulting in
-   loss of reachability.  As a result, many networks turned flap damping
-   off.
+   high-frequency route flaps.  Some implementations were memory-
+   constrained so chose not to support this function, others found a
+   conflict where path exploration caused false flap damping resulting
+   in loss of reachability.  As a result, flap damping was often not
+   enabled network wide, contrary to the intentions of the original
+   designers.
 
 ##  Operations {#sec-ops}
 
