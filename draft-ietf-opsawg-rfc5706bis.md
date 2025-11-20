@@ -115,7 +115,7 @@ contributor:
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
-   management particularly difficult.
+   management particularly difficult or insecure.
    To ensure deployability, the operational environment and manageability
    must be considered during design.
 
@@ -1250,7 +1250,9 @@ DM         DM        DM     --> concrete/detailed model
 ##  Security Management {#sec-security-mgmt}
 
    Protocol Designers should consider how to monitor and manage security
-   aspects and vulnerabilities of the New Protocol or Protocol Extension.
+   aspects and vulnerabilities of the New Protocol or Protocol Extension,
+   including periodically re-assessing the design of the New Protocol or
+   Protocol Extension as vulnerabilities arise.
 
    There will be security considerations related to the New Protocol or Protocol Extension.
    To make it possible for operators to be aware of security-related
@@ -1426,8 +1428,11 @@ DM         DM        DM     --> concrete/detailed model
    Making the protocol under development be manageable through a
    management protocol creates a vulnerability to a new source of
    attacks. Only management protocols with adequate security apparatus,
-   such as authentication, message integrity checking, and
+   such as state-of-the-art encryption, mutual authentication, message integrity checking, and
    authorization, should be used.
+
+   The security implications of password-based authentication should be taken into
+   account when designing a New Protocol or Protocol Extension.
 
    While a standard description of a protocol's manageable parameters facilitates
    legitimate operation, it may also inadvertently simplify an attacker's efforts
