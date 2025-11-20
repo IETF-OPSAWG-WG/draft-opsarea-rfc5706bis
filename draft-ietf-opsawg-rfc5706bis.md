@@ -191,7 +191,7 @@ contributor:
 
    It is not the intention that a protocol specification document should
    be held up waiting for operations and management solutions to be
-   developed.  This is particularly the case when a protocol extension 
+   developed.  This is particularly the case when a protocol extension
    is proposed, but the base protocol is missing operations or
    management solutions.  However, it is the intent that new documents
    should clearly articulate the operations and managements needs of any
