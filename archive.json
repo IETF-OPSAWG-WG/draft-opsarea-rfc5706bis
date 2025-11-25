@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-23T00:56:34.826728+00:00",
+  "timestamp": "2025-11-25T00:48:16.023623+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -11392,7 +11392,7 @@
       "labels": [],
       "body": "Addressing Curtis' comment on #146",
       "createdAt": "2025-11-20T17:02:57Z",
-      "updatedAt": "2025-11-20T19:32:46Z",
+      "updatedAt": "2025-11-24T04:08:49Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e1a106f5390cddced0976e3cabd53a81b280147d",
@@ -11455,6 +11455,39 @@
           "body": "",
           "createdAt": "2025-11-20T19:32:46Z",
           "updatedAt": "2025-11-20T19:32:46Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7Qg9Ds",
+          "commit": {
+            "abbreviatedOid": "d1b289e"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-11-24T04:08:18Z",
+          "updatedAt": "2025-11-24T04:08:19Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "```suggestion\r\n   constrained so often elected not to support this function, others found a\r\n```",
+              "createdAt": "2025-11-24T04:08:18Z",
+              "updatedAt": "2025-11-24T04:08:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7Qg9K7",
+          "commit": {
+            "abbreviatedOid": "d1b289e"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-24T04:08:49Z",
+          "updatedAt": "2025-11-24T04:08:49Z",
           "comments": []
         }
       ]
