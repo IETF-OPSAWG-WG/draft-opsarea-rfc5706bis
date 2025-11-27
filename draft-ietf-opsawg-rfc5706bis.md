@@ -192,6 +192,14 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
+   It is not the intention that a protocol specification document should
+   be held up waiting for operations and management solutions to be
+   developed.  This is particularly the case when a protocol extension
+   is proposed, but the base protocol is missing operations or
+   management solutions.  However, it is the intent that new documents
+   should clearly articulate the operations and management of
+   that new work to fill any operations and management gaps.
+
    A core principle of this document is to encourage early on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
