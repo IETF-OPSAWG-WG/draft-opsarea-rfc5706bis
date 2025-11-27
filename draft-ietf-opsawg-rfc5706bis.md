@@ -194,7 +194,7 @@ contributor:
    developed.  This is particularly the case when a protocol extension
    is proposed, but the base protocol is missing operations or
    management solutions.  However, it is the intent that new documents
-   should clearly articulate the operations and managements needs of any
+   should clearly articulate the operations and management needs of any
    protocol and that new work to fill any operations and management gaps
    should be encouraged.
 
