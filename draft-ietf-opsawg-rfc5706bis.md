@@ -198,7 +198,7 @@ contributor:
    protocol is mandatory. Specifically, this document does not require to develop solutions to accommodate
    identified operational considerations within the document that specifies
    a New Protocol or Protocol Extension itself.
-   
+
    If Protocol Designers conclude that the technology can be
    managed solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
