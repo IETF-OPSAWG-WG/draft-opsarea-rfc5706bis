@@ -1287,7 +1287,7 @@ Table of Contents
    protocol.  Search for "metric" in the RFC search tool.  In some
    cases, new metrics need to be defined.  It would be useful if the
    protocol documentation identified the need for such new metrics.  For
-   performance monitoring, it is often more important to report the time
+   performance management, it is often more important to report the time
    spent in a state rather than just the current state.  Snapshots alone
    are typically of less value.
 
