@@ -344,6 +344,12 @@ This document does not describe interoperability requirements. As such, it does 
    Of course, additional relevant operational and manageability topics
    should be included as well.
 
+  Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
+  may be consumed out of RFCs that specify them. As such, it is recommended
+  that operational aspects for a data model (and similar artifacts) are
+  documented as part of the model itself. Such considerations should not be
+  duplicated in the narrative part of a specification that includes such artifacts.
+
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
