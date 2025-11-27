@@ -161,12 +161,15 @@ contributor:
    deliberate and documented decision, not the result of omission. This document
    provides some guidelines for those considerations.
 
-   This document makes a distinction between "Operational
-   Considerations" and "Management Considerations", although the two are
-   closely related. The operational considerations apply to operating protocols within a network, even
-   if there was no management protocol actively being used. The section on manageability is focused on
-   management technology, such as how to utilize management protocols
-   and how to design management Data Models.
+   This document recognizes a distinction between management and operational
+   considerations, although the two are closely related. However, for New
+   Protocols and Protocol Extensions only an "Operational Considerations" section is required.
+   This section is intended to address both management and operational aspects.
+   Operational considerations pertain to the deployment and functioning of protocols
+   within a network, regardless of whether a management protocol is in active use.
+   Management considerations focus on the use of management technologies, such as
+   management protocols and the design of management Data Models. Both topics should
+   be described within the "Operational Considerations" section.
 
 ##  Audience {#sec-audience}
 
