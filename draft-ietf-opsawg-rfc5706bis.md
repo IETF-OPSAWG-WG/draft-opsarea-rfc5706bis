@@ -203,7 +203,11 @@ contributor:
    A core principle of this document is to encourage early on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
-   protocol is mandatory. If Protocol Designers conclude that the technology can be
+   protocol is mandatory. Specifically, this document does not require to develop solutions to accommodate
+   identified operational considerations within the document that specifies
+   a New Protocol or Protocol Extension itself.
+
+   If Protocol Designers conclude that the technology can be
    managed solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
    but it is a decision that should be explicit in a manageability discussion
