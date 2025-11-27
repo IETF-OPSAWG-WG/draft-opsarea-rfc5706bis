@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 24 May 2026                                           A. Farrel
+Expires: 31 May 2026                                           A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 24 May 2026                                           A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        20 November 2025
+                                                        27 November 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 May 2026.
+   This Internet-Draft will expire on 31 May 2026.
 
 Copyright Notice
 
@@ -126,8 +126,9 @@ Table of Contents
    and managed.  Retrofitting operations and management mechanisms is
    often hard and architecturally unpleasant, and certain protocol
    design choices may make deployment, operations, and management
-   particularly difficult.  To ensure deployability, the operational
-   environment and manageability must be considered during design.
+   particularly difficult or insecure.  To ensure deployability, the
+   operational environment and manageability must be considered during
+   design.
 
    This document provides guidelines to help Protocol Designers and
    working groups (WGs) consider the operations and management
@@ -136,8 +137,9 @@ Table of Contents
 
    This document obsoletes [RFC5706] and fully updates its content with
    new operational and management techniques and mechanisms.  It also
-   introduces a requirement for an "Operational Considerations" section
-   in new RFCs in the IETF Stream.  This document also removes outdated
+   introduces a requirement for an "Operational Considerations" section,
+   that covers both operational and management considerations, in new
+   RFCs in the IETF Stream.  This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services.  See Appendix A for more details.
@@ -170,13 +172,17 @@ Table of Contents
    deliberate and documented decision, not the result of omission.  This
    document provides some guidelines for those considerations.
 
-   This document makes a distinction between "Operational
-   Considerations" and "Management Considerations", although the two are
-   closely related.  The operational considerations apply to operating
-   protocols within a network, even if there was no management protocol
-   actively being used.  The section on manageability is focused on
-   management technology, such as how to utilize management protocols
-   and how to design management Data Models.
+   This document recognizes a distinction between management and
+   operational considerations, although the two are closely related.
+   However, for New Protocols and Protocol Extensions only an
+   "Operational Considerations" section is required.  This section is
+   intended to address both management and operational aspects.
+   Operational considerations pertain to the deployment and functioning
+   of protocols within a network, regardless of whether a management
+   protocol is in active use.  Management considerations focus on the
+   use of management technologies, such as management protocols and the
+   design of management Data Models.  Both topics should be described
+   within the "Operational Considerations" section.
 
 1.2.  Audience
 
@@ -201,18 +207,30 @@ Table of Contents
    suggests appropriate standard protocols that could mitigate the
    threats.
 
+   It is not the intention that a protocol specification document should
+   be held up waiting for operations and management solutions to be
+   developed.  This is particularly the case when a protocol extension
+   is proposed, but the base protocol is missing operations or
+   management solutions.  However, it is the intent that new documents
+   should clearly articulate the operations and management of that new
+   work to fill any operations and management gaps.
+
    A core principle of this document is to encourage early on
    discussions rather than mandating any specific solution.  It does not
    impose a specific management or operational solution, imply that a
    formal Data Model is needed, or imply that using a specific
-   management protocol is mandatory.  If Protocol Designers conclude
-   that the technology can be managed solely by using Proprietary
-   Interfaces or that it does not need any structured or standardized
-   Data Model, this might be fine, but it is a decision that should be
-   explicit in a manageability discussion -- that this is how the
-   protocol will need to be operated and managed.  Protocol Designers
-   should avoid deferring manageability to a later phase of the
-   development of the specification.
+   management protocol is mandatory.  Specifically, this document does
+   not require to develop solutions to accommodate identified
+   operational considerations within the document that specifies a New
+   Protocol or Protocol Extension itself.
+
+   If Protocol Designers conclude that the technology can be managed
+   solely by using Proprietary Interfaces or that it does not need any
+   structured or standardized Data Model, this might be fine, but it is
+   a decision that should be explicit in a manageability discussion --
+   that this is how the protocol will need to be operated and managed.
+   Protocol Designers should avoid deferring manageability to a later
+   phase of the development of the specification.
 
    When a WG considers operation and management functionality for a
    protocol, the document should contain enough information for readers
@@ -356,6 +374,13 @@ Table of Contents
    Of course, additional relevant operational and manageability topics
    should be included as well.
 
+   Data Models (e.g., YANG) and other schema artifacts (JSON schema,
+   YAML, CDDL, etc.) may be consumed out of RFCs that specify them.  As
+   such, it is recommended that operational aspects for a data model
+   (and similar artifacts) are documented as part of the model itself.
+   Such considerations should not be duplicated in the narrative part of
+   a specification that includes such artifacts.
+
 3.2.  "Operational Considerations" Section Boilerplate When No New
       Considerations Exist
 
@@ -409,11 +434,12 @@ Table of Contents
    makes for a successful protocol.
 
    BGP flap damping [RFC2439] is an example.  It was designed to block
-   high-frequency route flaps; however, the design did not consider the
-   existence of BGP path exploration / slow convergence.  In real
-   operations, path exploration caused false flap damping, resulting in
-   loss of reachability.  As a result, many networks turned flap damping
-   off.
+   high-frequency route flaps.  Some BGP implementations were memory-
+   constrained so often elected not to support this function, others
+   found a conflict where path exploration caused false flap damping
+   resulting in loss of reachability.  As a result, flap damping was
+   often not enabled network-wide, contrary to the intentions of the
+   original designers.
 
 4.1.  Operations
 
@@ -1261,7 +1287,7 @@ Table of Contents
    protocol.  Search for "metric" in the RFC search tool.  In some
    cases, new metrics need to be defined.  It would be useful if the
    protocol documentation identified the need for such new metrics.  For
-   performance monitoring, it is often more important to report the time
+   performance management, it is often more important to report the time
    spent in a state rather than just the current state.  Snapshots alone
    are typically of less value.
 
@@ -1542,9 +1568,14 @@ Table of Contents
    doorway through which an attack on the device may be launched.
    Making the protocol under development be manageable through a
    management protocol creates a vulnerability to a new source of
-   attacks.  Only management protocols with adequate security apparatus,
-   such as authentication, message integrity checking, and
-   authorization, should be used.
+   attacks.  Only management protocols with adequate security
+   mechanisms, such as state-of-the-art encryption, mutual
+   authentication, message-integrity protection, and authorization,
+   should be used.
+
+   The security implications of password-based authentication should be
+   taken into account when designing a New Protocol or Protocol
+   Extension.
 
    While a standard description of a protocol's manageable parameters
    facilitates legitimate operation, it may also inadvertently simplify
