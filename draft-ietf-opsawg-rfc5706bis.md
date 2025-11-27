@@ -1250,9 +1250,7 @@ DM         DM        DM     --> concrete/detailed model
 ##  Security Management {#sec-security-mgmt}
 
    Protocol Designers should consider how to monitor and manage security
-   aspects and vulnerabilities of the New Protocol or Protocol Extension,
-   including periodically re-assessing the design of the New Protocol or
-   Protocol Extension as vulnerabilities arise.
+   aspects and vulnerabilities of the New Protocol or Protocol Extension.
 
    There will be security considerations related to the New Protocol or Protocol Extension.
    To make it possible for operators to be aware of security-related
