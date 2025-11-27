@@ -386,7 +386,7 @@ This document does not describe interoperability requirements. As such, it does 
    constrained so chose not to support this function, others found a
    conflict where path exploration caused false flap damping resulting
    in loss of reachability.  As a result, flap damping was often not
-   enabled network wide, contrary to the intentions of the original
+   enabled network-wide, contrary to the intentions of the original
    designers.
 
 ##  Operations {#sec-ops}
