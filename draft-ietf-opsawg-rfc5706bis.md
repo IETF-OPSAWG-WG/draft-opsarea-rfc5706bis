@@ -1425,8 +1425,8 @@ DM         DM        DM     --> concrete/detailed model
    doorway through which an attack on the device may be launched.
    Making the protocol under development be manageable through a
    management protocol creates a vulnerability to a new source of
-   attacks. Only management protocols with adequate security apparatus,
-   such as state-of-the-art encryption, mutual authentication, message integrity checking, and
+   attacks. Only management protocols with adequate security mechanisms,
+   such as state-of-the-art encryption, mutual authentication, message-integrity protection, and
    authorization, should be used.
 
    The security implications of password-based authentication should be taken into
