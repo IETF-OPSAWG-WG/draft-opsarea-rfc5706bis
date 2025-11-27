@@ -1355,7 +1355,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    operated, and managed. Retrofitting operations and management
    mechanisms is often hard and architecturally unpleasant, and certain
    protocol design choices may make deployment, operations, and
-   management particularly difficult.
+   management particularly difficult or insecure.
    To ensure deployability, the operational environment and manageability
    must be considered during design.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">This document provides guidelines to help Protocol Designers and working
@@ -2800,22 +2800,24 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
    doorway through which an attack on the device may be launched.
    Making the protocol under development be manageable through a
    management protocol creates a vulnerability to a new source of
-   attacks. Only management protocols with adequate security apparatus,
-   such as authentication, message integrity checking, and
+   attacks. Only management protocols with adequate security mechanisms,
+   such as state-of-the-art encryption, mutual authentication, message-integrity protection, and
    authorization, should be used.<a href="#section-9-2" class="pilcrow">¶</a></p>
-<p id="section-9-3">While a standard description of a protocol's manageable parameters facilitates
+<p id="section-9-3">The security implications of password-based authentication should be taken into
+   account when designing a New Protocol or Protocol Extension.<a href="#section-9-3" class="pilcrow">¶</a></p>
+<p id="section-9-4">While a standard description of a protocol's manageable parameters facilitates
    legitimate operation, it may also inadvertently simplify an attacker's efforts
-   to understand and manipulate the protocol.<a href="#section-9-3" class="pilcrow">¶</a></p>
-<p id="section-9-4">A well-designed protocol is usually more stable and secure. A
+   to understand and manipulate the protocol.<a href="#section-9-4" class="pilcrow">¶</a></p>
+<p id="section-9-5">A well-designed protocol is usually more stable and secure. A
    protocol that can be managed and inspected offers the operator a
    better chance of spotting and quarantining any attacks. Conversely,
    making a protocol easy to inspect is a risk if the wrong person
-   inspects it.<a href="#section-9-4" class="pilcrow">¶</a></p>
-<p id="section-9-5">If security events cause logs and/or notifications/alerts, a
+   inspects it.<a href="#section-9-5" class="pilcrow">¶</a></p>
+<p id="section-9-6">If security events cause logs and/or notifications/alerts, a
    concerted attack might be able to be mounted by causing an excess of
    these events. In other words, the security-management mechanisms
    could constitute a security vulnerability. The management of
-   security aspects is important (see <a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>).<a href="#section-9-5" class="pilcrow">¶</a></p>
+   security aspects is important (see <a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>).<a href="#section-9-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-informative-references">
