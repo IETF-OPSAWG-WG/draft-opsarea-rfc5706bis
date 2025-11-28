@@ -119,8 +119,8 @@ contributor:
    To ensure deployability, the operational environment and manageability
    must be considered during design.
 
-   This document provides guidelines to help Protocol Designers and working
-   groups (WGs) consider the operations and management functionality for
+   This document provides guidelines to help Protocol Designers and Working
+   Groups (WGs) consider the operations and management functionality for
    their New Protocol or Protocol Extension at an early phase in the design
    process.
 
@@ -132,7 +132,7 @@ contributor:
    This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
-   services. See {{sec-changes-since-5706}} for more details.
+   services. Refer to {{sec-changes-since-5706}} for more details.
 
 ##  This Document {#sec-this-doc}
 
@@ -149,8 +149,8 @@ contributor:
    Instead, it guides authors to focus on key aspects that are essential for
    the technology's deployability, operation, and maintenance.
 
-   Suitable management approaches may vary for different areas, working
-   groups, and protocols in the IETF. This document does not prescribe
+   Suitable management approaches may vary for different areas, WGs,
+   and protocols in the IETF. This document does not prescribe
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
    considered for any IETF protocol, given the IETF's role in developing technologies, New Protocols, and Protocol Extensions
@@ -178,7 +178,7 @@ contributor:
    They outline what to consider for management and deployment, how to document
    those aspects, and how to present them in a consistent format.
     This document is intended to offer a flexible set of
-   guiding principles applicable to various circumstances. It provides a framework for working groups
+   guiding principles applicable to various circumstances. It provides a framework for WGs
    to ensure that manageability considerations are an integral part of the protocol design process, and
    its use should not be misinterpreted as imposing new hurdles on work in other areas.
 
@@ -226,7 +226,7 @@ contributor:
    The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}. Ultimately,
-   the decision to incorporate this document's advice into their work remains with Protocol Designers and working groups themselves.
+   the decision to incorporate this document's advice into their work remains with Protocol Designers and WGs themselves.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
@@ -489,7 +489,7 @@ This document does not describe interoperability requirements. As such, it does 
    (e.g., recomputing an expanded key from the seed) that help verify
    correctness and integrity. Additionally, guidance should be given on
    data retention, restoration limits, and cryptographic module
-   interoperability when importing/exporting private key material. See {{?I-D.ietf-lamps-dilithium-certificates}} for an example of how such considerations are incorporated.
+   interoperability when importing/exporting private key material. Refer to {{?I-D.ietf-lamps-dilithium-certificates}} for an example of how such considerations are incorporated.
 
 ##  Migration Path {#sec-migration}
 
@@ -515,7 +515,7 @@ This document does not describe interoperability requirements. As such, it does 
    Incentivizing good security operation practices when migrating to the New Protocol or Protocol Extension should be encouraged. For example, patching is fundamental for security operations and can be incentivized if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.
 
    When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.
-   Refer to {{?RFC8170}} for a detailed discussed on transition versus coexistence.
+   Refer to {{?RFC8170}} for a detailed discussion on transition versus coexistence.
 
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
 
@@ -600,16 +600,18 @@ applications, or increased response time in client-server
 applications. Further, if the additional traffic caused by OAM tools
 and data collection could result in the management plane becoming
 overwhelmed, then this must be called out, and suitable mechanisms to
-rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.  Consider three examples: in
+rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
+
+Consider three examples: (1) In
 Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
 possible to configure very rapid BFD transmissions (of the order of
 3ms) on a very large number of parallel Label Switched Paths (LSPs)
 with the result that the management systems and end nodes may become
 overwhelmed -- this can be protected by applying limits to
-the number of LSPs that may be tested at once; notifications or logs
+the number of LSPs that may be tested at once. (2) Notifications or logs
 from systems (through YANG or other means) should be rate-limited so
-that they do not flood the receiving management station; the
-application of sophisticated encryption or filtering rules need to
+that they do not flood the receiving management station. (3) The
+application of sophisticated encryption or filtering rules needs to
 be considered in the light of the additional processing they may
 impose on the hardware forwarding path for traffic.
 
@@ -622,7 +624,7 @@ New metrics may be required to assess traffic performance. Protocol Designers ma
 
 ## Impact on Security Operations {#sec-impact-secops}
 
-   Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently{{SECOPS}}. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.
+   Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently {{SECOPS}}. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.
 
    Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.
 
@@ -637,8 +639,8 @@ Tooling required by security operators should be documented in the design and de
    Protocol Designers should consider techniques for testing the
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
-   monitoring). Protocol Designers should consider how the correct end-
-   to-end operation of the New Protocol or Protocol Extension in the network can be tested
+   monitoring). Protocol Designers should consider how the correct
+   end-to-end operation of the New Protocol or Protocol Extension in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
    properly with the New Protocol or Protocol Extension. Which metrics are of interest?
@@ -713,7 +715,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    are OK (undo if not), and then unlock the devices.
 
    Techniques for debugging protocol interactions in a network must be
-   part of the network-management discussion. Implementation source
+   part of the network management discussion. Implementation source
    code should be debugged before ever being added to a network, so
    asserts and memory dumps do not normally belong in management data
    models. However, debugging on-the-wire interactions is a protocol
@@ -1056,7 +1058,7 @@ DM         DM        DM     --> concrete/detailed model
    efforts.
 
    Implementations should not arbitrarily modify configuration data. In
-   some cases (such as access control lists (ACLs)), the order of data
+   some cases (such as Access Control Lists (ACLs)), the order of data
    items is significant and comprises part of the configured data. If a
    Protocol Designer defines mechanisms for configuration, it would be
    preferable to standardize the order of elements for consistency of
@@ -1076,8 +1078,8 @@ DM         DM        DM     --> concrete/detailed model
    that are pushed to devices. There is no common database schema for
    network configuration, although the models used by various operators
    are probably very similar. It is operationally beneficial to
-   extract, document, and standardize the common parts of these network-
-   wide configuration database schemas. A Protocol Designer should
+   extract, document, and standardize the common parts of these network-wide
+   configuration database schemas. A Protocol Designer should
    consider how to standardize the common parts of configuring the New
    Protocol, while recognizing that vendors may also have proprietary
    aspects of their configurations.
@@ -1296,7 +1298,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Consider security threats that may be introduced by management
    operations. For example, Control and Provisioning of Wireless Access
-   Points (CAPWAP) breaks the structure of monolithic Access Points
+   Points (CAPWAP) {{?RFC5415}} breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
    By using a control protocol or management protocol, internal
    information that was previously not accessible is now exposed over
@@ -1304,12 +1306,12 @@ DM         DM        DM     --> concrete/detailed model
    potential security threats.
 
    The granularity of access control needed on management interfaces
-   needs to match operational needs. Typical requirements are a role-
-   based access control model and the principle of least privilege,
+   needs to match operational needs. Typical requirements are a role-based
+   access control model and the principle of least privilege,
    where a user can be given only the minimum access necessary to
    perform a required task.
 
-   Some operators wish to do consistency checks of access control lists
+   Some operators wish to do consistency checks of ACLs
    across devices. Protocol Designers should consider Information
    Models to promote comparisons across devices and across vendors to
    permit checking the consistency of security configurations.
@@ -1320,7 +1322,7 @@ DM         DM        DM     --> concrete/detailed model
    good idea to start with defining the threat model for the protocol,
    and from that deducing what is required.
 
-   Protocol Designers should consider how access control lists are
+   Protocol Designers should consider how ACLs are
    maintained and updated.
 
    Standard SNMP notifications or syslog messages might
@@ -1468,7 +1470,7 @@ DM         DM        DM     --> concrete/detailed model
    concerted attack might be able to be mounted by causing an excess of
    these events. In other words, the security-management mechanisms
    could constitute a security vulnerability. The management of
-   security aspects is important (see {{sec-security-mgmt}}).
+   security aspects is important ({{sec-security-mgmt}}).
 
 --- back
 
