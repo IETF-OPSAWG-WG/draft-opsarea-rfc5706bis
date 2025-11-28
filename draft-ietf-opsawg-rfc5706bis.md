@@ -543,7 +543,8 @@ This document does not describe interoperability requirements. As such, it does 
    ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem,
    for RSVP and other protocols that require the router to take some
    packets off the fast-forwarding path. Yet, Router Alert has its own
-   problems in impacting router performance.
+   problems in impacting router performance. Refer to {{?RFC9805}} for
+   deprecation of the IPv6 Router Alert Option for new protocols.
 
 ##  Impact on Network Operation {#sec-impact}
 
