@@ -1064,7 +1064,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 31 May 2026</td>
+<td class="center">Expires 3 June 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1080,12 +1080,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-11-27" class="published">27 November 2025</time>
+<time datetime="2025-11-30" class="published">30 November 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-05-31">31 May 2026</time></dd>
+<dd class="expires"><time datetime="2026-06-03">3 June 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1148,7 +1148,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 31 May 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 3 June 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1358,8 +1358,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
    management particularly difficult or insecure.
    To ensure deployability, the operational environment and manageability
    must be considered during design.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">This document provides guidelines to help Protocol Designers and working
-   groups (WGs) consider the operations and management functionality for
+<p id="section-1-2">This document provides guidelines to help Protocol Designers and Working
+   Groups (WGs) consider the operations and management functionality for
    their New Protocol or Protocol Extension at an early phase in the design
    process.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">This document obsoletes <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> and fully updates its content
@@ -1370,7 +1370,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
-   services. See <a href="#sec-changes-since-5706" class="auto internal xref">Appendix A</a> for more details.<a href="#section-1-3" class="pilcrow">¶</a></p>
+   services. Refer to <a href="#sec-changes-since-5706" class="auto internal xref">Appendix A</a> for more details.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <div id="sec-this-doc">
 <section id="section-1.1">
         <h3 id="name-this-document">
@@ -1387,8 +1387,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
    not mandate a comprehensive inventory of all operational considerations.
    Instead, it guides authors to focus on key aspects that are essential for
    the technology's deployability, operation, and maintenance.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
-<p id="section-1.1-3">Suitable management approaches may vary for different areas, working
-   groups, and protocols in the IETF. This document does not prescribe
+<p id="section-1.1-3">Suitable management approaches may vary for different areas, WGs,
+   and protocols in the IETF. This document does not prescribe
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
    considered for any IETF protocol, given the IETF's role in developing technologies, New Protocols, and Protocol Extensions
@@ -1418,7 +1418,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    They outline what to consider for management and deployment, how to document
    those aspects, and how to present them in a consistent format.
     This document is intended to offer a flexible set of
-   guiding principles applicable to various circumstances. It provides a framework for working groups
+   guiding principles applicable to various circumstances. It provides a framework for WGs
    to ensure that manageability considerations are an integral part of the protocol design process, and
    its use should not be misinterpreted as imposing new hurdles on work in other areas.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
 <p id="section-1.2-2">Protocol Designers should consider which operations and management
@@ -1460,7 +1460,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-1.2-7">The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>. Ultimately,
-   the decision to incorporate this document's advice into their work remains with Protocol Designers and working groups themselves.<a href="#section-1.2-7" class="pilcrow">¶</a></p>
+   the decision to incorporate this document's advice into their work remains with Protocol Designers and WGs themselves.<a href="#section-1.2-7" class="pilcrow">¶</a></p>
 <p id="section-1.2-8">This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.<a href="#section-1.2-8" class="pilcrow">¶</a></p>
 </section>
@@ -1673,8 +1673,8 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
    staff will find difficult to understand. <span>[<a href="#RFC5218" class="cite xref">RFC5218</a>]</span> provides
    a more detailed discussion on what makes for a successful protocol.<a href="#section-4-1" class="pilcrow">¶</a></p>
 <p id="section-4-2">BGP flap damping <span>[<a href="#RFC2439" class="cite xref">RFC2439</a>]</span> is an example.  It was designed to block
-   high-frequency route flaps.  Some BGP implementations were memory-
-   constrained so often elected not to support this function, others found a
+   high-frequency route flaps.  Some BGP implementations were memory-constrained
+   so often elected not to support this function, others found a
    conflict where path exploration caused false flap damping resulting
    in loss of reachability.  As a result, flap damping was often not
    enabled network-wide, contrary to the intentions of the original
@@ -1755,7 +1755,7 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
    (e.g., recomputing an expanded key from the seed) that help verify
    correctness and integrity. Additionally, guidance should be given on
    data retention, restoration limits, and cryptographic module
-   interoperability when importing/exporting private key material. See <span>[<a href="#I-D.ietf-lamps-dilithium-certificates" class="cite xref">I-D.ietf-lamps-dilithium-certificates</a>]</span> for an example of how such considerations are incorporated.<a href="#section-4.2-8" class="pilcrow">¶</a></p>
+   interoperability when importing/exporting private key material. Refer to <span>[<a href="#I-D.ietf-lamps-dilithium-certificates" class="cite xref">I-D.ietf-lamps-dilithium-certificates</a>]</span> for an example of how such considerations are incorporated.<a href="#section-4.2-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-migration">
@@ -1782,7 +1782,7 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
    a manner that facilitates deployment.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
 <p id="section-4.3-3">Incentivizing good security operation practices when migrating to the New Protocol or Protocol Extension should be encouraged. For example, patching is fundamental for security operations and can be incentivized if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
 <p id="section-4.3-4">When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.
-   Refer to <span>[<a href="#RFC8170" class="cite xref">RFC8170</a>]</span> for a detailed discussed on transition versus coexistence.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
+   Refer to <span>[<a href="#RFC8170" class="cite xref">RFC8170</a>]</span> for a detailed discussion on transition versus coexistence.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-other">
@@ -1868,23 +1868,24 @@ applications, or increased response time in client-server
 applications. Further, if the additional traffic caused by OAM tools
 and data collection could result in the management plane becoming
 overwhelmed, then this must be called out, and suitable mechanisms to
-rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.  Consider three examples: in
+rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
+<p id="section-4.5-7">Consider three examples: (1) In
 Bidirectional Forwarding Detection for MPLS <span>[<a href="#RFC5884" class="cite xref">RFC5884</a>]</span> it is
 possible to configure very rapid BFD transmissions (of the order of
 3ms) on a very large number of parallel Label Switched Paths (LSPs)
 with the result that the management systems and end nodes may become
 overwhelmed -- this can be protected by applying limits to
-the number of LSPs that may be tested at once; notifications or logs
+the number of LSPs that may be tested at once. (2) Notifications or logs
 from systems (through YANG or other means) should be rate-limited so
-that they do not flood the receiving management station; the
-application of sophisticated encryption or filtering rules need to
+that they do not flood the receiving management station. (3) The
+application of sophisticated encryption or filtering rules needs to
 be considered in the light of the additional processing they may
-impose on the hardware forwarding path for traffic.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
-<p id="section-4.5-7">New metrics may be required to assess traffic performance. Protocol Designers may refer to <span>[<a href="#RFC6390" class="cite xref">RFC6390</a>]</span> for guidelines for considering new performance metrics.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
-<p id="section-4.5-8">It is important to minimize the impact caused by configuration
+impose on the hardware forwarding path for traffic.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
+<p id="section-4.5-8">New metrics may be required to assess traffic performance. Protocol Designers may refer to <span>[<a href="#RFC6390" class="cite xref">RFC6390</a>]</span> for guidelines for considering new performance metrics.<a href="#section-4.5-8" class="pilcrow">¶</a></p>
+<p id="section-4.5-9">It is important to minimize the impact caused by configuration
    changes. Given configuration A and configuration B, it should be
    possible to generate the operations necessary to get from A to B with
-   minimal state changes and effects on network and systems.<a href="#section-4.5-8" class="pilcrow">¶</a></p>
+   minimal state changes and effects on network and systems.<a href="#section-4.5-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-impact-secops">
@@ -1892,7 +1893,7 @@ impose on the hardware forwarding path for traffic.<a href="#section-4.5-6" clas
         <h3 id="name-impact-on-security-operatio">
 <a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-impact-on-security-operatio" class="section-name selfRef">Impact on Security Operations</a>
         </h3>
-<p id="section-4.6-1">Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently<span>[<a href="#SECOPS" class="cite xref">SECOPS</a>]</span>. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.<a href="#section-4.6-1" class="pilcrow">¶</a></p>
+<p id="section-4.6-1">Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently <span>[<a href="#SECOPS" class="cite xref">SECOPS</a>]</span>. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.<a href="#section-4.6-1" class="pilcrow">¶</a></p>
 <p id="section-4.6-2">Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.<a href="#section-4.6-2" class="pilcrow">¶</a></p>
 <p id="section-4.6-3">Security operators extensively rely upon Indicators of Compromise (IoCs) <span>[<a href="#RFC9424" class="cite xref">RFC9424</a>]</span>. The deployment of New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.
 Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure that operators have the information they need. <span>[<a href="#I-D.ietf-quic-qlog-main-schema" class="cite xref">I-D.ietf-quic-qlog-main-schema</a>]</span> is an example of extensible structured logging.<a href="#section-4.6-3" class="pilcrow">¶</a></p>
@@ -1907,8 +1908,8 @@ Consider the operators' requirement for digital forensics from the network or en
 <p id="section-4.7-1">Protocol Designers should consider techniques for testing the
    effect that the protocol has had on the network by sending data
    through the network and observing its behavior (a.k.a., active
-   monitoring). Protocol Designers should consider how the correct end-
-   to-end operation of the New Protocol or Protocol Extension in the network can be tested
+   monitoring). Protocol Designers should consider how the correct
+   end-to-end operation of the New Protocol or Protocol Extension in the network can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each network element can be verified to be working
    properly with the New Protocol or Protocol Extension. Which metrics are of interest?<a href="#section-4.7-1" class="pilcrow">¶</a></p>
@@ -1991,7 +1992,7 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    devices, perform the configuration settings/changes, check that they
    are OK (undo if not), and then unlock the devices.<a href="#section-5-7" class="pilcrow">¶</a></p>
 <p id="section-5-8">Techniques for debugging protocol interactions in a network must be
-   part of the network-management discussion. Implementation source
+   part of the network management discussion. Implementation source
    code should be debugged before ever being added to a network, so
    asserts and memory dumps do not normally belong in management data
    models. However, debugging on-the-wire interactions is a protocol
@@ -2384,7 +2385,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    <span>[<a href="#RFC3198" class="cite xref">RFC3198</a>]</span> was written to standardize the terminology across these
    efforts.<a href="#section-5.5-4" class="pilcrow">¶</a></p>
 <p id="section-5.5-5">Implementations should not arbitrarily modify configuration data. In
-   some cases (such as access control lists (ACLs)), the order of data
+   some cases (such as Access Control Lists (ACLs)), the order of data
    items is significant and comprises part of the configured data. If a
    Protocol Designer defines mechanisms for configuration, it would be
    preferable to standardize the order of elements for consistency of
@@ -2406,8 +2407,8 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    that are pushed to devices. There is no common database schema for
    network configuration, although the models used by various operators
    are probably very similar. It is operationally beneficial to
-   extract, document, and standardize the common parts of these network-
-   wide configuration database schemas. A Protocol Designer should
+   extract, document, and standardize the common parts of these network-wide
+   configuration database schemas. A Protocol Designer should
    consider how to standardize the common parts of configuring the New
    Protocol, while recognizing that vendors may also have proprietary
    aspects of their configurations.<a href="#section-5.5-8" class="pilcrow">¶</a></p>
@@ -2634,18 +2635,18 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    limits, and security exposures in recommended management mechanisms.<a href="#section-5.8-5" class="pilcrow">¶</a></p>
 <p id="section-5.8-6">Consider security threats that may be introduced by management
    operations. For example, Control and Provisioning of Wireless Access
-   Points (CAPWAP) breaks the structure of monolithic Access Points
+   Points (CAPWAP) <span>[<a href="#RFC5415" class="cite xref">RFC5415</a>]</span> breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
    By using a control protocol or management protocol, internal
    information that was previously not accessible is now exposed over
    the network and to management applications and may become a source of
    potential security threats.<a href="#section-5.8-6" class="pilcrow">¶</a></p>
 <p id="section-5.8-7">The granularity of access control needed on management interfaces
-   needs to match operational needs. Typical requirements are a role-
-   based access control model and the principle of least privilege,
+   needs to match operational needs. Typical requirements are a role-based
+   access control model and the principle of least privilege,
    where a user can be given only the minimum access necessary to
    perform a required task.<a href="#section-5.8-7" class="pilcrow">¶</a></p>
-<p id="section-5.8-8">Some operators wish to do consistency checks of access control lists
+<p id="section-5.8-8">Some operators wish to do consistency checks of ACLs
    across devices. Protocol Designers should consider Information
    Models to promote comparisons across devices and across vendors to
    permit checking the consistency of security configurations.<a href="#section-5.8-8" class="pilcrow">¶</a></p>
@@ -2654,7 +2655,7 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    with existing key and credential management infrastructure. It is a
    good idea to start with defining the threat model for the protocol,
    and from that deducing what is required.<a href="#section-5.8-9" class="pilcrow">¶</a></p>
-<p id="section-5.8-10">Protocol Designers should consider how access control lists are
+<p id="section-5.8-10">Protocol Designers should consider how ACLs are
    maintained and updated.<a href="#section-5.8-10" class="pilcrow">¶</a></p>
 <p id="section-5.8-11">Standard SNMP notifications or syslog messages might
    already exist, or can be defined, to alert operators to the
@@ -2832,7 +2833,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
    concerted attack might be able to be mounted by causing an excess of
    these events. In other words, the security-management mechanisms
    could constitute a security vulnerability. The management of
-   security aspects is important (see <a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>).<a href="#section-9-6" class="pilcrow">¶</a></p>
+   security aspects is important (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>).<a href="#section-9-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-informative-references">
@@ -2980,6 +2981,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC5321">[RFC5321]</dt>
       <dd>
 <span class="refAuthor">Klensin, J.</span>, <span class="refTitle">"Simple Mail Transfer Protocol"</span>, <span class="seriesInfo">RFC 5321</span>, <span class="seriesInfo">DOI 10.17487/RFC5321</span>, <time datetime="2008-10" class="refDate">October 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5321">https://www.rfc-editor.org/rfc/rfc5321</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC5415">[RFC5415]</dt>
+      <dd>
+<span class="refAuthor">Calhoun, P., Ed.</span>, <span class="refAuthor">Montemurro, M., Ed.</span>, and <span class="refAuthor">D. Stanley, Ed.</span>, <span class="refTitle">"Control And Provisioning of Wireless Access Points (CAPWAP) Protocol Specification"</span>, <span class="seriesInfo">RFC 5415</span>, <span class="seriesInfo">DOI 10.17487/RFC5415</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5415">https://www.rfc-editor.org/rfc/rfc5415</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5424">[RFC5424]</dt>
       <dd>

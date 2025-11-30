@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 31 May 2026                                           A. Farrel
+Expires: 3 June 2026                                           A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 31 May 2026                                           A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        27 November 2025
+                                                        30 November 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 May 2026.
+   This Internet-Draft will expire on 3 June 2026.
 
 Copyright Notice
 
@@ -131,7 +131,7 @@ Table of Contents
    design.
 
    This document provides guidelines to help Protocol Designers and
-   working groups (WGs) consider the operations and management
+   Working Groups (WGs) consider the operations and management
    functionality for their New Protocol or Protocol Extension at an
    early phase in the design process.
 
@@ -142,7 +142,7 @@ Table of Contents
    RFCs in the IETF Stream.  This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
-   services.  See Appendix A for more details.
+   services.  Refer to Appendix A for more details.
 
 1.1.  This Document
 
@@ -159,13 +159,13 @@ Table of Contents
    key aspects that are essential for the technology's deployability,
    operation, and maintenance.
 
-   Suitable management approaches may vary for different areas, working
-   groups, and protocols in the IETF.  This document does not prescribe
-   a fixed solution or format in dealing with operational and management
-   aspects of IETF protocols.  However, these aspects should be
-   considered for any IETF protocol, given the IETF's role in developing
-   technologies, New Protocols, and Protocol Extensions to be deployed
-   and operated in the real-world Internet.
+   Suitable management approaches may vary for different areas, WGs, and
+   protocols in the IETF.  This document does not prescribe a fixed
+   solution or format in dealing with operational and management aspects
+   of IETF protocols.  However, these aspects should be considered for
+   any IETF protocol, given the IETF's role in developing technologies,
+   New Protocols, and Protocol Extensions to be deployed and operated in
+   the real-world Internet.
 
    A WG may decide that its protocol does not need interoperable
    management or a standardized Data Model, but this should be a
@@ -191,7 +191,7 @@ Table of Contents
    deployment, how to document those aspects, and how to present them in
    a consistent format.  This document is intended to offer a flexible
    set of guiding principles applicable to various circumstances.  It
-   provides a framework for working groups to ensure that manageability
+   provides a framework for WGs to ensure that manageability
    considerations are an integral part of the protocol design process,
    and its use should not be misinterpreted as imposing new hurdles on
    work in other areas.
@@ -247,7 +247,7 @@ Table of Contents
    and documentation address common operations and management needs, is
    provided in [CHECKLIST].  Ultimately, the decision to incorporate
    this document's advice into their work remains with Protocol
-   Designers and working groups themselves.
+   Designers and WGs themselves.
 
    This document is also of interest to the broader community, who wants
    to understand, contribute to, and review Internet-Drafts, taking
@@ -522,8 +522,9 @@ Table of Contents
    that help verify correctness and integrity.  Additionally, guidance
    should be given on data retention, restoration limits, and
    cryptographic module interoperability when importing/exporting
-   private key material.  See [I-D.ietf-lamps-dilithium-certificates]
-   for an example of how such considerations are incorporated.
+   private key material.  Refer to
+   [I-D.ietf-lamps-dilithium-certificates] for an example of how such
+   considerations are incorporated.
 
 4.3.  Migration Path
 
@@ -558,7 +559,7 @@ Table of Contents
    current techniques employed by operators should be documented and
    mitigations included, where possible, so that consistent security
    operations and management can be achieved.  Refer to [RFC8170] for a
-   detailed discussed on transition versus coexistence.
+   detailed discussion on transition versus coexistence.
 
 4.4.  Requirements on Other Protocols and Functional Components
 
@@ -645,18 +646,20 @@ Table of Contents
    rate limit the OAM must be considered.  Potential options include:
    document the limitations, propose solution track(s), include an
    optional rate limiting feature in the specifications, or impose a
-   rate limiting feature in the specifications.  Consider three
-   examples: in Bidirectional Forwarding Detection for MPLS [RFC5884] it
-   is possible to configure very rapid BFD transmissions (of the order
-   of 3ms) on a very large number of parallel Label Switched Paths
-   (LSPs) with the result that the management systems and end nodes may
-   become overwhelmed -- this can be protected by applying limits to the
-   number of LSPs that may be tested at once; notifications or logs from
-   systems (through YANG or other means) should be rate-limited so that
-   they do not flood the receiving management station; the application
-   of sophisticated encryption or filtering rules need to be considered
-   in the light of the additional processing they may impose on the
-   hardware forwarding path for traffic.
+   rate limiting feature in the specifications.
+
+   Consider three examples: (1) In Bidirectional Forwarding Detection
+   for MPLS [RFC5884] it is possible to configure very rapid BFD
+   transmissions (of the order of 3ms) on a very large number of
+   parallel Label Switched Paths (LSPs) with the result that the
+   management systems and end nodes may become overwhelmed -- this can
+   be protected by applying limits to the number of LSPs that may be
+   tested at once. (2) Notifications or logs from systems (through YANG
+   or other means) should be rate-limited so that they do not flood the
+   receiving management station. (3) The application of sophisticated
+   encryption or filtering rules needs to be considered in the light of
+   the additional processing they may impose on the hardware forwarding
+   path for traffic.
 
    New metrics may be required to assess traffic performance.  Protocol
    Designers may refer to [RFC6390] for guidelines for considering new
@@ -672,7 +675,7 @@ Table of Contents
    Security Operations (SecOps) is a collaborative approach that
    combines security and operational teams to improve the ability of
    operators to protect and manage the network effectively and
-   efficiently[SECOPS].  Security operators detect malicious activity
+   efficiently [SECOPS].  Security operators detect malicious activity
    and respond to threats and are a crucial part of defending against
    attacks alongside the management and operation of the network.
 
@@ -707,7 +710,7 @@ Table of Contents
    Protocol Designers should consider techniques for testing the effect
    that the protocol has had on the network by sending data through the
    network and observing its behavior (a.k.a., active monitoring).
-   Protocol Designers should consider how the correct end- to-end
+   Protocol Designers should consider how the correct end-to-end
    operation of the New Protocol or Protocol Extension in the network
    can be tested actively and passively, and how the correct data or
    forwarding plane function of each network element can be verified to
@@ -793,7 +796,7 @@ Table of Contents
    (undo if not), and then unlock the devices.
 
    Techniques for debugging protocol interactions in a network must be
-   part of the network-management discussion.  Implementation source
+   part of the network management discussion.  Implementation source
    code should be debugged before ever being added to a network, so
    asserts and memory dumps do not normally belong in management data
    models.  However, debugging on-the-wire interactions is a protocol
@@ -1164,7 +1167,7 @@ Table of Contents
    efforts.
 
    Implementations should not arbitrarily modify configuration data.  In
-   some cases (such as access control lists (ACLs)), the order of data
+   some cases (such as Access Control Lists (ACLs)), the order of data
    items is significant and comprises part of the configured data.  If a
    Protocol Designer defines mechanisms for configuration, it would be
    preferable to standardize the order of elements for consistency of
@@ -1187,7 +1190,7 @@ Table of Contents
    database schema for network configuration, although the models used
    by various operators are probably very similar.  It is operationally
    beneficial to extract, document, and standardize the common parts of
-   these network- wide configuration database schemas.  A Protocol
+   these network-wide configuration database schemas.  A Protocol
    Designer should consider how to standardize the common parts of
    configuring the New Protocol, while recognizing that vendors may also
    have proprietary aspects of their configurations.
@@ -1408,9 +1411,9 @@ Table of Contents
 
    Consider security threats that may be introduced by management
    operations.  For example, Control and Provisioning of Wireless Access
-   Points (CAPWAP) breaks the structure of monolithic Access Points
-   (APs) into Access Controllers and Wireless Termination Points (WTPs).
-   By using a control protocol or management protocol, internal
+   Points (CAPWAP) [RFC5415] breaks the structure of monolithic Access
+   Points (APs) into Access Controllers and Wireless Termination Points
+   (WTPs).  By using a control protocol or management protocol, internal
    information that was previously not accessible is now exposed over
    the network and to management applications and may become a source of
    potential security threats.
@@ -1421,10 +1424,10 @@ Table of Contents
    where a user can be given only the minimum access necessary to
    perform a required task.
 
-   Some operators wish to do consistency checks of access control lists
-   across devices.  Protocol Designers should consider Information
-   Models to promote comparisons across devices and across vendors to
-   permit checking the consistency of security configurations.
+   Some operators wish to do consistency checks of ACLs across devices.
+   Protocol Designers should consider Information Models to promote
+   comparisons across devices and across vendors to permit checking the
+   consistency of security configurations.
 
    Protocol Designers should consider how to provide a secure transport,
    authentication, identity, and access control that integrates well
@@ -1432,8 +1435,8 @@ Table of Contents
    good idea to start with defining the threat model for the protocol,
    and from that deducing what is required.
 
-   Protocol Designers should consider how access control lists are
-   maintained and updated.
+   Protocol Designers should consider how ACLs are maintained and
+   updated.
 
    Standard SNMP notifications or syslog messages might already exist,
    or can be defined, to alert operators to the conditions identified in
@@ -1591,7 +1594,7 @@ Table of Contents
    concerted attack might be able to be mounted by causing an excess of
    these events.  In other words, the security-management mechanisms
    could constitute a security vulnerability.  The management of
-   security aspects is important (see Section 5.8).
+   security aspects is important (Section 5.8).
 
 10.  Informative References
 
@@ -1778,6 +1781,12 @@ Table of Contents
    [RFC5321]  Klensin, J., "Simple Mail Transfer Protocol", RFC 5321,
               DOI 10.17487/RFC5321, October 2008,
               <https://www.rfc-editor.org/rfc/rfc5321>.
+
+   [RFC5415]  Calhoun, P., Ed., Montemurro, M., Ed., and D. Stanley,
+              Ed., "Control And Provisioning of Wireless Access Points
+              (CAPWAP) Protocol Specification", RFC 5415,
+              DOI 10.17487/RFC5415, March 2009,
+              <https://www.rfc-editor.org/rfc/rfc5415>.
 
    [RFC5424]  Gerhards, R., "The Syslog Protocol", RFC 5424,
               DOI 10.17487/RFC5424, March 2009,
