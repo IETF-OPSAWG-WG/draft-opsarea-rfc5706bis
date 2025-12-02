@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-30T00:56:19.478723+00:00",
+  "timestamp": "2025-12-02T00:51:20.265087+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3635,10 +3635,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "",
       "createdAt": "2025-04-29T11:20:06Z",
-      "updatedAt": "2025-05-08T11:59:06Z",
+      "updatedAt": "2025-12-01T08:53:47Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "4dcece065ccf1dbcd93d6e299d10872717b0a0b1",
@@ -3784,10 +3786,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "a readily available link to track the changes",
       "createdAt": "2025-04-30T05:41:27Z",
-      "updatedAt": "2025-05-08T12:00:02Z",
+      "updatedAt": "2025-12-01T08:54:01Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "424a262459b7a87f2aa7458152bc0d90d55d9fe0",
@@ -4783,10 +4787,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "",
       "createdAt": "2025-05-15T13:43:15Z",
-      "updatedAt": "2025-05-15T13:46:45Z",
+      "updatedAt": "2025-12-01T08:54:26Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "cd4bdb3f4174a1ceaffba4b90b43f7ddc3c6f1a7",
@@ -6060,10 +6066,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "",
       "createdAt": "2025-06-02T05:39:32Z",
-      "updatedAt": "2025-06-05T11:23:00Z",
+      "updatedAt": "2025-12-01T08:54:42Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9bf61a92b48f517d3ab78747875330b1295ee9a0",
@@ -6088,10 +6096,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "",
       "createdAt": "2025-06-05T08:40:06Z",
-      "updatedAt": "2025-06-05T13:07:38Z",
+      "updatedAt": "2025-12-01T08:54:52Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9bf61a92b48f517d3ab78747875330b1295ee9a0",
@@ -6172,10 +6182,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "",
       "createdAt": "2025-06-05T11:33:56Z",
-      "updatedAt": "2025-06-05T13:08:54Z",
+      "updatedAt": "2025-12-01T08:55:10Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "2d7b24e10004428059ef1622f4ccc06cd32a35e7",
@@ -6845,10 +6857,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "RFC8499 is about DNS.",
       "createdAt": "2025-06-10T07:21:48Z",
-      "updatedAt": "2025-06-12T08:26:15Z",
+      "updatedAt": "2025-12-01T08:55:24Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "b2056806da2ba6b991899779c4809b272cfb5d7e",
@@ -8500,10 +8514,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "Remove manageability from the section name + update the intended RFC track.",
       "createdAt": "2025-07-04T14:21:47Z",
-      "updatedAt": "2025-07-06T15:00:53Z",
+      "updatedAt": "2025-12-01T08:56:31Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "cb18fa2db2e4df5e1790693ff95c86042b9e9707",
@@ -8872,10 +8888,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "This is to shorten what a reader has to read before getting to the main reco :-)",
       "createdAt": "2025-08-06T05:30:56Z",
-      "updatedAt": "2025-08-07T13:18:53Z",
+      "updatedAt": "2025-12-01T08:56:09Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "59246b5c8e902e21ffa7b466e25bfcb659eeff6b",
@@ -8908,10 +8926,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "As we have one singe operational section, the discussion about \"management considerations section\" and so on are confusing for readers.",
       "createdAt": "2025-08-06T05:41:20Z",
-      "updatedAt": "2025-08-07T13:21:34Z",
+      "updatedAt": "2025-12-01T08:55:57Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5424135650c0d12dca2b0eadd39c6966d15b440",
@@ -8944,10 +8964,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "the list of available technologies fits where the doc discusses how a protocol is managed.",
       "createdAt": "2025-08-06T05:50:31Z",
-      "updatedAt": "2025-08-07T13:25:50Z",
+      "updatedAt": "2025-12-01T08:55:47Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "823eaf86303a6020e2435c1c4be8b389af1d9d35",
@@ -10472,10 +10494,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "",
       "createdAt": "2025-09-11T12:49:00Z",
-      "updatedAt": "2025-09-11T13:24:54Z",
+      "updatedAt": "2025-12-01T08:57:19Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "70ca3efaeb97701116715832265f2b85fed6698d",
@@ -10929,10 +10953,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ADReview"
+      ],
       "body": "A protocol may target servers and other similar entities that might not be usually covered under \"operator network\".",
       "createdAt": "2025-09-22T08:06:59Z",
-      "updatedAt": "2025-09-25T13:38:52Z",
+      "updatedAt": "2025-12-01T08:57:06Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9e5973030c3937baffa31cae0cb37ad7a90a2719",
@@ -12109,7 +12135,7 @@
       "id": "PR_kwDOOWPBqs61-hHJ",
       "title": "nits",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/168",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -12118,17 +12144,19 @@
       ],
       "body": "including breaking a very loooong para.\r\n\r\nSome nits are only visible in the rendered version such as \"end- to-end\", \"network- wide\", etc.",
       "createdAt": "2025-11-28T06:39:17Z",
-      "updatedAt": "2025-11-28T13:02:13Z",
+      "updatedAt": "2025-11-30T16:22:52Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "a5fbcd43b3d3bfc0a93625d8090a4a335062136a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "boucadair-patch-2",
       "headRefOid": "7166cd4844ac90dcdf5cf8cda151a9297cabfb0d",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-11-30T16:22:51Z",
+      "mergedAt": "2025-11-30T16:22:51Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "1a0812de9d0fd49fc9234d59dfd3b0df383998d1"
+      },
       "comments": [],
       "reviews": [
         {
