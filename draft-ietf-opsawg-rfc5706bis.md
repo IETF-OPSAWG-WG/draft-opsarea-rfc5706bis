@@ -225,10 +225,7 @@ contributor:
 
    The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in {{CHECKLIST}}. A concise
-   checklist of key questions that should be addressed in New Protocol or Protocol Extension specifications
-   is also provided in {{sec-checklist}}. Ultimately, the decision to incorporate this document's advice
-   into their work remains with Protocol Designers and WGs themselves.
+   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
