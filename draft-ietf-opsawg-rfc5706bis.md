@@ -225,8 +225,10 @@ contributor:
 
    The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in {{CHECKLIST}}. Ultimately,
-   the decision to incorporate this document's advice into their work remains with Protocol Designers and WGs themselves.
+   documentation address common operations and management needs, is provided in {{CHECKLIST}}. A concise
+   checklist of key questions that should be addressed in New Protocol or Protocol Extension specifications
+   is also provided in {{sec-checklist}}. Ultimately, the decision to incorporate this document's advice
+   into their work remains with Protocol Designers and WGs themselves.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
@@ -342,7 +344,8 @@ This document does not describe interoperability requirements. As such, it does 
    to include a simple statement explaining why the topic is not
    relevant or applicable for the New Protocol or Protocol Extension.
    Of course, additional relevant operational and manageability topics
-   should be included as well.
+   should be included as well. A concise checklist of key questions is
+   provided in {{sec-checklist}}.
 
   Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
   may be consumed out of RFCs that specify them. As such, it is recommended
@@ -1569,6 +1572,8 @@ This appendix provides a concise checklist of key questions that Protocol Design
    * Change intended status from Informational to Best Current Practice
 
    * Move the "Operational Considerations" Appendix A to a Checklist {{CHECKLIST}} maintained in GitHub
+
+   * Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
 
    * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
 
