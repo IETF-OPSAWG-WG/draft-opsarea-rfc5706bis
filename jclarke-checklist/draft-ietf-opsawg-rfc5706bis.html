@@ -1485,8 +1485,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
    experience has been gained.<a href="#section-1.2-6" class="pilcrow">¶</a></p>
 <p id="section-1.2-7">The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>. Ultimately,
-   the decision to incorporate this document's advice into their work remains with Protocol Designers and WGs themselves.<a href="#section-1.2-7" class="pilcrow">¶</a></p>
+   documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>. A concise
+   checklist of key questions that should be addressed in New Protocol or Protocol Extension specifications
+   is also provided in <a href="#sec-checklist" class="auto internal xref">Appendix A</a>. Ultimately, the decision to incorporate this document's advice
+   into their work remains with Protocol Designers and WGs themselves.<a href="#section-1.2-7" class="pilcrow">¶</a></p>
 <p id="section-1.2-8">This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.<a href="#section-1.2-8" class="pilcrow">¶</a></p>
 </section>
@@ -1628,7 +1630,8 @@ of New Protocols or Protocol Extensions.<a href="#section-2-3.13.1" class="pilcr
    to include a simple statement explaining why the topic is not
    relevant or applicable for the New Protocol or Protocol Extension.
    Of course, additional relevant operational and manageability topics
-   should be included as well.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
+   should be included as well. A concise checklist of key questions is
+   provided in <a href="#sec-checklist" class="auto internal xref">Appendix A</a>.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
 <p id="section-3.1-5">Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
   may be consumed out of RFCs that specify them. As such, it is recommended
   that operational aspects for a data model (and similar artifacts) are
@@ -3385,24 +3388,27 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
           <p id="appendix-B-2.2.1">Move the "Operational Considerations" Appendix A to a Checklist <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span> maintained in GitHub<a href="#appendix-B-2.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-2.3">
-          <p id="appendix-B-2.3.1">Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.<a href="#appendix-B-2.3.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.3.1">Add a concise "Operational Considerations Checklist" appendix (<a href="#sec-checklist" class="auto internal xref">Appendix A</a>) with key questions that should be addressed in protocol specifications<a href="#appendix-B-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-2.4">
-          <p id="appendix-B-2.4.1">Update the operational and manageability-related technologies to reflect over 15 years of advancements<a href="#appendix-B-2.4.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.4.1">Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.<a href="#appendix-B-2.4.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-2.5">
+          <p id="appendix-B-2.5.1">Update the operational and manageability-related technologies to reflect over 15 years of advancements<a href="#appendix-B-2.5.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-B-2.4.2.1">
-              <p id="appendix-B-2.4.2.1.1">Provide focus and details on YANG-based standards, deprioritizing MIB Modules.<a href="#appendix-B-2.4.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-B-2.5.2.1">
+              <p id="appendix-B-2.5.2.1.1">Provide focus and details on YANG-based standards, deprioritizing MIB Modules.<a href="#appendix-B-2.5.2.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="appendix-B-2.4.2.2">
-              <p id="appendix-B-2.4.2.2.1">Add a "YANG Data Model Considerations" section<a href="#appendix-B-2.4.2.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="appendix-B-2.5.2.2">
+              <p id="appendix-B-2.5.2.2.1">Add a "YANG Data Model Considerations" section<a href="#appendix-B-2.5.2.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="appendix-B-2.4.2.3">
-              <p id="appendix-B-2.4.2.3.1">Update the "Available Management Technologies" landscape<a href="#appendix-B-2.4.2.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="appendix-B-2.5.2.3">
+              <p id="appendix-B-2.5.2.3.1">Update the "Available Management Technologies" landscape<a href="#appendix-B-2.5.2.3.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </li>
-        <li class="normal" id="appendix-B-2.5">
-          <p id="appendix-B-2.5.1">Add an "Operational and Management Tooling Considerations" section<a href="#appendix-B-2.5.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="appendix-B-2.6">
+          <p id="appendix-B-2.6.1">Add an "Operational and Management Tooling Considerations" section<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="sec-todo">
