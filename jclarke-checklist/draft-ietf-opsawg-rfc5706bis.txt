@@ -114,13 +114,12 @@ Table of Contents
    9.  Security Considerations
    10. Informative References
    Appendix A.  Operational Considerations Checklist
-     A.1.  Documentation Requirements
-     A.2.  Operational Fit
-     A.3.  Management Information
-     A.4.  Fault Management
-     A.5.  Configuration Management
-     A.6.  Performance Management
-     A.7.  Security Management
+     A.1.  Operational Fit
+     A.2.  Management Information
+     A.3.  Fault Management
+     A.4.  Configuration Management
+     A.5.  Performance Management
+     A.6.  Security Management
    Appendix B.  Changes Since RFC 5706
      B.1.  TO DO LIST
    Acknowledgements
@@ -1922,7 +1921,9 @@ Appendix A.  Operational Considerations Checklist
    section of their specifications.  Each item references the relevant
    section of this document for detailed guidance.
 
-A.1.  Documentation Requirements
+   The decision to incorporate all or part of these items into their
+   work remains with Protocol Designers and WGs themselves. ##
+   Documentation Requirements
 
    *  Does the specification include an "Operational Considerations"
       section?  (Section 3.1)
@@ -1933,7 +1934,7 @@ A.1.  Documentation Requirements
    *  If there are no new considerations, does the section include the
       appropriate boilerplate with explanation?  (Section 3.2)
 
-A.2.  Operational Fit
+A.1.  Operational Fit
 
    *  How does this protocol operate "out of the box"?  (Section 4.1,
       Section 4.2)
@@ -1982,7 +1983,7 @@ A.2.  Operational Fit
       -  Do messages support internationalization with message codes for
          local language mapping?  (Section 4.8)
 
-A.3.  Management Information
+A.2.  Management Information
 
    *  What needs to be managed?  (Section 5)
 
@@ -2013,7 +2014,7 @@ A.3.  Management Information
       -  Should Device Models, Network Models, or Service Models be
          specified?  (Section 5.3.2)
 
-A.4.  Fault Management
+A.3.  Fault Management
 
    *  What faults and events should be reported?  (Section 5.4)
 
@@ -2035,7 +2036,7 @@ A.4.  Fault Management
       -  What distinguishes faulty from correct messages?
          (Section 5.4.2)
 
-A.5.  Configuration Management
+A.4.  Configuration Management
 
    *  What configuration parameters are defined?  (Section 5.5)
 
@@ -2044,7 +2045,7 @@ A.5.  Configuration Management
 
       -  What information persists across reboots?  (Section 5.5)
 
-A.6.  Performance Management
+A.5.  Performance Management
 
    *  What are the performance implications?  (Section 5.7)
 
@@ -2062,7 +2063,7 @@ A.6.  Performance Management
       -  What are the protocol limitations and behavior when limits are
          exceeded?  (Section 5.7.1)
 
-A.7.  Security Management
+A.6.  Security Management
 
    *  What security-related monitoring is needed?  (Section 5.8)
 
