@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-02T00:51:20.265087+00:00",
+  "timestamp": "2025-12-09T00:51:06.222720+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -12239,6 +12239,85 @@
           "createdAt": "2025-11-28T13:01:04Z",
           "updatedAt": "2025-11-28T13:01:04Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 170,
+      "id": "PR_kwDOOWPBqs63pRGY",
+      "title": "Add a checklist appendix to ask key questions.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/170",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "This appendix has been generated with the help of Claude Sonnet 4.5.  It is meant to address #156.",
+      "createdAt": "2025-12-08T10:33:52Z",
+      "updatedAt": "2025-12-08T22:36:35Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "1a0812de9d0fd49fc9234d59dfd3b0df383998d1",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "jclarke-checklist",
+      "headRefOid": "547e5035d86a4c2fdff07f6c3359bd2a5fd4aaae",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7TxoTU",
+          "commit": {
+            "abbreviatedOid": "c04cd03"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-08T16:40:15Z",
+          "updatedAt": "2025-12-08T16:44:59Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "\"A concise\r\n   checklist of key questions that should be addressed in New Protocol or Protocol Extension specifications\r\n   is also provided in {{sec-checklist}}.\"\r\n\r\nI think that it is better to not mix with the OPSDIR intended use. You may merge this with the NEW sentence in line 347/348.",
+              "createdAt": "2025-12-08T16:40:16Z",
+              "updatedAt": "2025-12-08T16:44:59Z"
+            },
+            {
+              "originalPosition": 8,
+              "body": "\"Ultimately, the decision to incorporate this document's advice\r\n   into their work remains with Protocol Designers and WGs themselves.\"\r\n\r\nI lost the context why we have this sentence in the para with OPSDIR checklist. Maybe better to delete it?",
+              "createdAt": "2025-12-08T16:41:12Z",
+              "updatedAt": "2025-12-08T16:44:59Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "```suggestion\r\n\r\nThe decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.\r\n```",
+              "createdAt": "2025-12-08T16:43:37Z",
+              "updatedAt": "2025-12-08T16:44:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7T2zH6",
+          "commit": {
+            "abbreviatedOid": "c04cd03"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-08T22:36:35Z",
+          "updatedAt": "2025-12-08T22:36:35Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Thanks, Med.  I incorporated your changes.",
+              "createdAt": "2025-12-08T22:36:35Z",
+              "updatedAt": "2025-12-08T22:36:35Z"
+            }
+          ]
         }
       ]
     }
