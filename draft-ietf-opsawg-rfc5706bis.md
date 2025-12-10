@@ -588,7 +588,7 @@ This document does not describe interoperability requirements. As such, it does 
    Protocol Designers should consider also the impact on
    infrastructure applications like DNS {{?RFC1034}}, the registries, or
    the size of routing tables.
-   
+
    > For example, Simple Mail Transfer
    Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter,
@@ -1235,7 +1235,7 @@ DM         DM        DM     --> concrete/detailed model
    managed, not the protocol used for management. If a constraint
    is not specific to a management protocol, then it should be left
    to Data Model designers of that protocol to determine how to handle it.
-   
+
    > For example, VLAN identifiers are defined by standard to range
    from 1 to 4094. Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
@@ -1304,7 +1304,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Consider security threats that may be introduced by management
    operations.
-   
+
    > For example, Control and Provisioning of Wireless Access
    Points (CAPWAP) {{?RFC5415}} breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
@@ -1337,7 +1337,7 @@ DM         DM        DM     --> concrete/detailed model
    already exist, or can be defined, to alert operators to the
    conditions identified in the security considerations for the New
    Protocol.
-   
+
    > For example, you can log all the commands entered by the
    operator using syslog (giving you some degree of audit trail), or you
    can see who has logged on/off using the Secure Shell (SSH) Protocol {{?RFC4251}}
