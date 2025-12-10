@@ -402,7 +402,7 @@ This document does not describe interoperability requirements. As such, it does 
    staff will find difficult to understand. {{?RFC5218}} provides
    a more detailed discussion on what makes for a successful protocol.
 
-   BGP flap damping {{?RFC2439}} is an example.  It was designed to block
+   > BGP flap damping {{?RFC2439}} is an example.  It was designed to block
    high-frequency route flaps.  Some BGP implementations were memory-constrained
    so often elected not to support this function, others found a
    conflict where path exploration caused false flap damping resulting
@@ -441,9 +441,12 @@ This document does not describe interoperability requirements. As such, it does 
 ##  Installation and Initial Setup {#sec-install}
 
    Anything that can be configured can be misconfigured. "Architectural
-   Principles of the Internet" {{?RFC1958}}, Section 3.8, states: "Avoid
+   Principles of the Internet" {{?RFC1958}}, Section 3.8, states:
+
+   {: quote}
+   > Avoid
    options and parameters whenever possible. Any options and parameters
-   should be configured or negotiated dynamically rather than manually".
+   should be configured or negotiated dynamically rather than manually.
 
    To simplify configuration, Protocol Designers should consider
    specifying reasonable defaults, including default modes and
@@ -482,7 +485,7 @@ This document does not describe interoperability requirements. As such, it does 
    speed or some other relevant factors. This would help reduce the
    chance of problems caused by technology advancement.
 
-   For example, where protocols involve cryptographic keys, Protocol Designers should
+   > For example, where protocols involve cryptographic keys, Protocol Designers should
    consider not only key generation and validation mechanisms but also the
    format in which private keys are stored, transmitted, and restored.
    Designers should specify any expected consistency checks
@@ -532,7 +535,7 @@ This document does not describe interoperability requirements. As such, it does 
    certain ways. If restrictions or dependencies exist, they should be
    stated.
 
-   For example, the design of the Resource ReSerVation Protocol (RSVP)
+   > For example, the design of the Resource ReSerVation Protocol (RSVP)
    {{?RFC2205}} required each router to look at the RSVP PATH message and,
    if the router understood RSVP, add its own address to the message to
    enable automatic tunneling through non-RSVP routers. But in reality,
@@ -584,7 +587,9 @@ This document does not describe interoperability requirements. As such, it does 
 
    Protocol Designers should consider also the impact on
    infrastructure applications like DNS {{?RFC1034}}, the registries, or
-   the size of routing tables. For example, Simple Mail Transfer
+   the size of routing tables.
+   
+   > For example, Simple Mail Transfer
    Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter,
    their mail server stopped functioning because of overload of the DNS
@@ -602,7 +607,7 @@ and data collection could result in the management plane becoming
 overwhelmed, then this must be called out, and suitable mechanisms to
 rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
 
-Consider three examples: (1) In
+> Consider three examples: (1) In
 Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
 possible to configure very rapid BFD transmissions (of the order of
 3ms) on a very large number of parallel Label Switched Paths (LSPs)
@@ -1019,7 +1024,7 @@ DM         DM        DM     --> concrete/detailed model
    source event or combination of circumstances that is the foundation of all
    related Faults.
 
-   For example, if end-to-end data delivery is failing (e.g., reported by a
+   > For example, if end-to-end data delivery is failing (e.g., reported by a
    notification), Probable Root Cause analysis can help find the failed link
    or node, or mis-configuration, within the end-to-end path.
 
@@ -1230,7 +1235,8 @@ DM         DM        DM     --> concrete/detailed model
    managed, not the protocol used for management. If a constraint
    is not specific to a management protocol, then it should be left
    to Data Model designers of that protocol to determine how to handle it.
-   For example, VLAN identifiers are defined by standard to range
+   
+   > For example, VLAN identifiers are defined by standard to range
    from 1 to 4094. Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
@@ -1297,7 +1303,9 @@ DM         DM        DM     --> concrete/detailed model
    limits, and security exposures in recommended management mechanisms.
 
    Consider security threats that may be introduced by management
-   operations. For example, Control and Provisioning of Wireless Access
+   operations.
+   
+   > For example, Control and Provisioning of Wireless Access
    Points (CAPWAP) {{?RFC5415}} breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
    By using a control protocol or management protocol, internal
@@ -1328,7 +1336,9 @@ DM         DM        DM     --> concrete/detailed model
    Standard SNMP notifications or syslog messages might
    already exist, or can be defined, to alert operators to the
    conditions identified in the security considerations for the New
-   Protocol. For example, you can log all the commands entered by the
+   Protocol.
+   
+   > For example, you can log all the commands entered by the
    operator using syslog (giving you some degree of audit trail), or you
    can see who has logged on/off using the Secure Shell (SSH) Protocol {{?RFC4251}}
    and from where; failed SSH logins can be logged using syslog, etc.
