@@ -435,7 +435,7 @@ This document does not describe interoperability requirements. As such, it does 
    Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
    protocol -- for example whether write operations are permitted on
-   routers and on hosts, or whether notifications for alarms or other
+   specific nodes (routers, hosts, servers, etc.), or whether notifications for alarms or other
    events will be expected.
 
 ##  Installation and Initial Setup {#sec-install}
@@ -969,9 +969,9 @@ DM         DM        DM     --> concrete/detailed model
    Should there be aggregated status indicators based on concatenation
    of propagated Faults from a given domain or device?
 
-   SNMP notifications and syslog messages can alert an operator when an
+   Notifications and alert messages (e.g., SNMP, syslog, or New Protocol specific mechanism) can alert an operator when an
    aspect of the New Protocol or Protocol Extension fails or encounters an error or failure
-   condition, and SNMP is frequently used as a heartbeat monitor.
+   condition.
    Should the event reporting provide guaranteed accurate delivery of
    the event information within a given (high) margin of confidence?
    Can we poll the latest events in the box?
@@ -1011,11 +1011,12 @@ DM         DM        DM     --> concrete/detailed model
 
    How do you distinguish between faulty messages and good messages?
 
-   Would some threshold-based mechanisms, such as Remote Monitoring
-   (RMON) events/alarms or the EVENT-MIB, be usable to help determine
-   error conditions? Are SNMP notifications for all events needed, or
+   Would some threshold-based mechanisms be usable to help determine
+   error conditions? Are notifications for all events needed, or
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?
+
+   > Remote Monitoring (RMON) events/alarms is an example of threshold-based mechanism.
 
 ###  Probable Root Cause Analysis {#sec-cause-analysis}
 
@@ -1334,7 +1335,7 @@ DM         DM        DM     --> concrete/detailed model
    Protocol Designers should consider how ACLs are
    maintained and updated.
 
-   Standard SNMP notifications or syslog messages might
+   Notifications (e.g., syslog messages) might
    already exist, or can be defined, to alert operators to the
    conditions identified in the security considerations for the New
    Protocol.
@@ -1356,8 +1357,8 @@ DM         DM        DM     --> concrete/detailed model
    while CLI authority levels and policy are usually command-oriented
    (i.e., task-oriented). Depending on the management function,
    sometimes data-oriented or task-oriented approaches make more sense.
-   Protocol Designers should consider both data-oriented and task-
-   oriented authority levels and policy.
+   Protocol Designers should consider both data-oriented and task-oriented
+   authority levels and policy. Refer also to {{?RFC8341}} for more details on access control types and rules.
 
 # Operational and Management Tooling Considerations {#sec-oper-mgmt-tooling}
 
