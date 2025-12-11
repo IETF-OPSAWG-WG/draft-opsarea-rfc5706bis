@@ -352,7 +352,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 > Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
 > with adequate documentation of operational considerations: {{?I-D.ietf-core-dns-over-coap}},
-> {{?I-D.ietf-suit-mti}}, {{?RFC7574}}, {{?RFC 9877}}, and {{?RFC9552}}.
+> {{?I-D.ietf-suit-mti}}, {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
 
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
