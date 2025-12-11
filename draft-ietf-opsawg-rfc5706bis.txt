@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 3 June 2026                                           A. Farrel
+Expires: 14 June 2026                                          A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 3 June 2026                                           A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        30 November 2025
+                                                        11 December 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 June 2026.
+   This Internet-Draft will expire on 14 June 2026.
 
 Copyright Notice
 
@@ -587,7 +587,9 @@ Table of Contents
    ([RFC2113], [RFC2711]) was finally developed to solve this problem,
    for RSVP and other protocols that require the router to take some
    packets off the fast-forwarding path.  Yet, Router Alert has its own
-   problems in impacting router performance.
+   problems in impacting router performance and security.  Refer to
+   [RFC9805] for deprecation of the IPv6 Router Alert Option for New
+   Protocols.
 
 4.5.  Impact on Network Operation
 
@@ -1900,6 +1902,10 @@ Table of Contents
               "Indicators of Compromise (IoCs) and Their Role in Attack
               Defence", RFC 9424, DOI 10.17487/RFC9424, August 2023,
               <https://www.rfc-editor.org/rfc/rfc9424>.
+
+   [RFC9805]  Bonica, R., "Deprecation of the IPv6 Router Alert Option
+              for New Protocols", RFC 9805, DOI 10.17487/RFC9805, June
+              2025, <https://www.rfc-editor.org/rfc/rfc9805>.
 
    [SECOPS]   "NICCS Glossary", August 2025,
               <https://niccs.cisa.gov/resources/glossary>.
