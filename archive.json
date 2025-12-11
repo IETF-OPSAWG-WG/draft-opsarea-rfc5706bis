@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-09T00:51:06.222720+00:00",
+  "timestamp": "2025-12-11T00:53:00.331831+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2701,6 +2701,53 @@
       "updatedAt": "2025-11-28T05:54:27Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 171,
+      "id": "I_kwDOOWPBqs7dIXx4",
+      "title": "Update BCP 22 (Guide for Internet Standards Writers)",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/171",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "RFC 2360 also known as [BCP 22](https://datatracker.ietf.org/doc/bcp22/) says: \n\n> 2.14  Network Management Considerations\n> \n>    When relevant, each standard needs to discuss how to manage the\n>    protocol being specified.  This management process should be\n>    compatible with the current IETF Standard management protocol.  In\n>    addition, a MIB must be defined within the standard or in a companion\n>    document.  The MIB must be compatible with current Structure of\n>    Management Information (SMI) and parseable using a tool such as\n>    SMICng.  Where management or a MIB is not necessary this section of\n>    the standard should explain the reason it is not relevant to the\n>    protocol.\n> \n> 2.15  Scalability Considerations\n> \n>    The standard should establish the limitations on the scale of use,\n>    e.g., tens of millions of sessions, gigabits per second, etc., and\n>    establish limits on the resources used, e.g., round trip time,\n>    computing resources, etc.  This is important because it establishes\n>    the ability of the network to accommodate the number of users and the\n>    complexity of their relations.  The STD 53/RFC 1939 has an example of\n>    such a section.  If this is not applicable to the protocol, an\n>    explanation of why not should be included.\n\nI guess we should mark the bis as updating 2.14, in particular.",
+      "createdAt": "2025-12-09T09:18:46Z",
+      "updatedAt": "2025-12-09T13:51:48Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "What about adding the following to the the last paragraph in the introduction:\n\n**OLD:**\n\n>This document obsoletes {{?RFC5706}} and fully updates its content\n   with new operational and management techniques and mechanisms. It also\n   introduces a requirement for an \"Operational Considerations\"\n   section, that covers both operational and management considerations,\n   in new RFCs in the IETF Stream.\n   This document also removes outdated\n   references and aligns with current practices, protocols, and\n   technologies used in operating and managing devices, networks, and\n   services. Refer to {{sec-changes-since-5706}} for more details.\n\n**NEW:**\n\nThis document obsoletes {{?RFC5706}} and fully updates its content\n   with new operational and management techniques and mechanisms. It also\n   introduces a requirement for an \"Operational Considerations\"\n   section, that covers both operational and management considerations,\n   in new RFCs in the IETF Stream.  Additionally, this document updates Section 2.14 of {{?RFC2360}}\nto obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational\nconsiderations as described in {{sec-doc-req-ietf-spec}}.\n   Likewise, this document removes outdated\n   references and aligns with current practices, protocols, and\n   technologies used in operating and managing devices, networks, and\n   services. Refer to {{sec-changes-since-5706}} for more details.\n",
+          "createdAt": "2025-12-09T11:43:27Z",
+          "updatedAt": "2025-12-09T11:43:27Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I like the proposal from xorrkaz",
+          "createdAt": "2025-12-09T13:09:29Z",
+          "updatedAt": "2025-12-09T13:09:29Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Looks good @xorrkaz. \n\nI assume that an \"update\" header will be also be added to tag the update + we need to mention this update in the abstract. \n\nThanks.",
+          "createdAt": "2025-12-09T13:50:45Z",
+          "updatedAt": "2025-12-09T13:50:45Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Yeah.  I didn't want to do a PR yet as I have my other branch on the checklist going.",
+          "createdAt": "2025-12-09T13:51:48Z",
+          "updatedAt": "2025-12-09T13:51:48Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -12214,13 +12261,13 @@
       ],
       "body": "",
       "createdAt": "2025-11-28T06:43:10Z",
-      "updatedAt": "2025-11-28T13:01:04Z",
+      "updatedAt": "2025-12-10T08:42:32Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "a5fbcd43b3d3bfc0a93625d8090a4a335062136a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "boucadair-patch-3",
-      "headRefOid": "5bee625530ac383a5e3794e75cc7bde5ecfddbd0",
+      "headRefOid": "9fd7a98156cc5ee2a64b1ac8e5be5f85f8758657",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -12239,6 +12286,59 @@
           "createdAt": "2025-11-28T13:01:04Z",
           "updatedAt": "2025-11-28T13:01:04Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UKdMe",
+          "commit": {
+            "abbreviatedOid": "5bee625"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-09T20:19:33Z",
+          "updatedAt": "2025-12-09T20:19:33Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Router Alert affects performance _and_ security, right?",
+              "createdAt": "2025-12-09T20:19:33Z",
+              "updatedAt": "2025-12-09T20:19:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UP9dC",
+          "commit": {
+            "abbreviatedOid": "5bee625"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-10T06:29:17Z",
+          "updatedAt": "2025-12-10T06:29:17Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Yes. see [9fd7a98](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/169/commits/9fd7a98156cc5ee2a64b1ac8e5be5f85f8758657)",
+              "createdAt": "2025-12-10T06:29:17Z",
+              "updatedAt": "2025-12-10T06:29:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7URjI3",
+          "commit": {
+            "abbreviatedOid": "9fd7a98"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-10T08:42:32Z",
+          "updatedAt": "2025-12-10T08:42:32Z",
+          "comments": []
         }
       ]
     },
@@ -12254,7 +12354,7 @@
       "labels": [],
       "body": "This appendix has been generated with the help of Claude Sonnet 4.5.  It is meant to address #156.",
       "createdAt": "2025-12-08T10:33:52Z",
-      "updatedAt": "2025-12-08T22:36:35Z",
+      "updatedAt": "2025-12-09T06:29:12Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "1a0812de9d0fd49fc9234d59dfd3b0df383998d1",
@@ -12318,6 +12418,61 @@
               "updatedAt": "2025-12-08T22:36:35Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7T75wC",
+          "commit": {
+            "abbreviatedOid": "547e503"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-09T06:29:12Z",
+          "updatedAt": "2025-12-09T06:29:12Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 172,
+      "id": "PR_kwDOOWPBqs64F3w9",
+      "title": "proposal to visually separate examples vs. main guidance",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/172",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "Suggest to use the rendered version to check if this format will be helpful for authors",
+      "createdAt": "2025-12-10T09:11:40Z",
+      "updatedAt": "2025-12-10T09:13:33Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "1a0812de9d0fd49fc9234d59dfd3b0df383998d1",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "easily-identify-examples",
+      "headRefOid": "567d49e87f75c683c4f837f6ea862c7ad017caa0",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7UR_E7",
+          "commit": {
+            "abbreviatedOid": "d20ecb4"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-10T09:13:23Z",
+          "updatedAt": "2025-12-10T09:13:23Z",
+          "comments": []
         }
       ]
     }
