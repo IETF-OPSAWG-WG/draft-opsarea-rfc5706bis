@@ -225,8 +225,7 @@ contributor:
 
    The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
-   documentation address common operations and management needs, is provided in {{CHECKLIST}}. Ultimately,
-   the decision to incorporate this document's advice into their work remains with Protocol Designers and WGs themselves.
+   documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
@@ -342,7 +341,8 @@ This document does not describe interoperability requirements. As such, it does 
    to include a simple statement explaining why the topic is not
    relevant or applicable for the New Protocol or Protocol Extension.
    Of course, additional relevant operational and manageability topics
-   should be included as well.
+   should be included as well. A concise checklist of key questions is
+   provided in {{sec-checklist}}.
 
   Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
   may be consumed out of RFCs that specify them. As such, it is recommended
@@ -1485,6 +1485,95 @@ DM         DM        DM     --> concrete/detailed model
 
 --- back
 
+# Operational Considerations Checklist {#sec-checklist}
+
+This appendix provides a concise checklist of key questions that Protocol Designers should address in the "Operational Considerations" section of their specifications. Each item references the relevant section of this document for detailed guidance.
+
+The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.
+## Documentation Requirements
+
+* Does the specification include an "Operational Considerations" section? ({{sec-oper-manag-considerations}})
+* Is this section placed immediately before the Security Considerations section? ({{sec-placement-sec}})
+* If there are no new considerations, does the section include the appropriate boilerplate with explanation? ({{sec-null-sec}})
+
+## Operational Fit
+
+* How does this protocol operate "out of the box"? ({{sec-ops}}, {{sec-install}})
+   * What are the default values, modes, timers, and states? ({{sec-install}})
+   * What is the rationale for chosen default values, especially if they affect operations or are expected to change over time? ({{sec-install}})
+
+* What is the migration path for existing deployments? ({{sec-migration}})
+   * How will deployments transition from older versions or technologies? ({{sec-migration}})
+   * Does the protocol require infrastructure changes, and how can these be introduced? ({{sec-migration}})
+
+* What are the requirements or dependencies on other protocols and functional components? ({{sec-other}})
+
+* What is the impact on network operation? ({{sec-impact}})
+   * What are the scaling implications and interactions with other protocols? ({{sec-impact}})
+   * What are the impacts on traffic patterns or performance (e.g., delay, jitter)? ({{sec-impact}})
+
+* What is the impact on Security Operations? ({{sec-impact-secops}})
+   * How does deployment affect Indicators of Compromise or their availability? ({{sec-impact-secops}})
+   * What logging is needed for digital forensics? ({{sec-impact-secops}})
+
+* How can correct operation be verified? ({{sec-oper-verify}})
+   * What status and health indicators does the protocol provide? ({{sec-oper-verify}})
+
+* How are human-readable messages handled? ({{sec-messages}})
+   * Do messages support internationalization with message codes for local language mapping? ({{sec-messages}})
+
+## Management Information
+
+* What needs to be managed? ({{sec-mgmt-consid}})
+   * What are the manageable entities (e.g., protocol endpoints, network elements, services)? ({{sec-mgmt-consid}})
+
+* Which standardized management technologies are applicable? ({{sec-mgmt-tech}})
+
+* What essential information is required? ({{sec-interop}}, {{sec-mgmt-info}})
+   * What operational, configuration, state, and statistical information is needed? ({{sec-interop}})
+   * Is an Information Model needed, especially if multiple Data Model representations are required? ({{sec-interop}})
+   * What is manageable, what needs configuration, and what protocol-specific events might occur? ({{sec-mgmt-info}})
+   * How are configuration data, operational state, and statistics distinguished? ({{sec-mgmt-info}})
+
+* If YANG Data Models are defined, what type is appropriate? ({{sec-yang-dm}})
+   * Should Device Models, Network Models, or Service Models be specified? ({{sec-yang-dm}})
+
+## Fault Management
+
+* What faults and events should be reported? ({{sec-fm-mgmt}})
+   * What essential faults, health indicators, alarms, and events should be exposed? ({{sec-fm-mgmt}})
+   * How will fault information be propagated? ({{sec-fm-mgmt}})
+
+* How is liveness monitored? ({{sec-monitor}})
+   * What testing and liveness detection features are built into the protocol? ({{sec-monitor}})
+
+* How are faults determined? ({{sec-fault-determ}})
+   * What error counters or diagnostics help pinpoint faults? ({{sec-fault-determ}})
+   * What distinguishes faulty from correct messages? ({{sec-fault-determ}})
+
+## Configuration Management
+
+* What configuration parameters are defined? ({{sec-config-mgmt}})
+   * What parameters need to be configurable, including their defaults and valid ranges? ({{sec-config-mgmt}})
+   * What information persists across reboots? ({{sec-config-mgmt}})
+
+## Performance Management
+
+* What are the performance implications? ({{sec-perf-mgmt}})
+   * What are the hardware/software performance impacts (e.g., CPU, memory, forwarding)? ({{sec-perf-mgmt}})
+
+* What performance information should be available? ({{sec-monitor-proto}})
+   * What protocol counters are defined (e.g., packets received, sent, dropped)? ({{sec-monitor-proto}})
+   * What is the counter behavior at maximum values? ({{sec-monitor-proto}})
+   * What are the protocol limitations and behavior when limits are exceeded? ({{sec-monitor-proto}})
+
+## Security Management
+
+* What security-related monitoring is needed? ({{sec-security-mgmt}})
+   * What security events should be logged? ({{sec-security-mgmt}})
+   * What statistics help detect attacks? ({{sec-security-mgmt}})
+   * What security threats do management operations introduce? ({{sec-security-mgmt}})
+
 # Changes Since RFC 5706 {#sec-changes-since-5706}
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
@@ -1492,6 +1581,8 @@ DM         DM        DM     --> concrete/detailed model
    * Change intended status from Informational to Best Current Practice
 
    * Move the "Operational Considerations" Appendix A to a Checklist {{CHECKLIST}} maintained in GitHub
+
+   * Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
 
    * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
 
