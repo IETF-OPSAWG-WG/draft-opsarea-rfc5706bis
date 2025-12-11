@@ -669,17 +669,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    Considerations for management should include a discussion of what
    needs to be managed, and how to achieve various management tasks.
    Where are the managers and what type of interfaces and
-   protocols will they need? The "write a MIB module" approach to
-   considering management often focuses on monitoring a protocol
-   endpoint on a single device. A MIB module document typically only
-   considers monitoring properties observable at one end, while the
-   document does not really cover managing the \*protocol\* (the
-   coordination of multiple ends) and does not even come near managing
-   the \*service\* (which includes a lot of stuff that is very far away
-   from the box). This scenario reflects a common operational
-   concern: the inability to manage both ends of a connection
-   effectively. As noted in {{?RFC3535}}, "MIB modules can often be
-   characterized as a list of ingredients without a recipe".
+   protocols will they need?
 
    The management model should take into account factors such as:
 
