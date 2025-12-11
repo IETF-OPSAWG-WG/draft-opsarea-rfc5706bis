@@ -113,7 +113,9 @@ Table of Contents
    7.  IANA Considerations
    8.  Operational Considerations
    9.  Security Considerations
-   10. Informative References
+   10. References
+     10.1.  Normative References
+     10.2.  Informative References
    Appendix A.  Operational Considerations Checklist
      A.1.  Operational Fit
      A.2.  Management Information
@@ -147,14 +149,14 @@ Table of Contents
    new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational Considerations" section,
    that covers both operational and management considerations, in new
-   RFCs in the IETF Stream.  Additionally, this document updates
-   Section 2.14 of [RFC2360] to obsolete references to mandatory MIBs
-   and instead focus on documenting holistic manageability and
-   operational considerations as described in Section 3.  Likewise, this
-   document removes outdated references and aligns with current
-   practices, protocols, and technologies used in operating and managing
-   devices, networks, and services.  Refer to Appendix B for more
-   details.
+   RFCs in the IETF Stream.  Additionally, this document updates BCP 22
+   on Guide for Internet Standards Writers, specifically Section 2.14 of
+   [RFC2360] to obsolete references to mandatory MIBs and instead focus
+   on documenting holistic manageability and operational considerations
+   as described in Section 3.  Likewise, this document removes outdated
+   references and aligns with current practices, protocols, and
+   technologies used in operating and managing devices, networks, and
+   services.  Refer to Appendix B for more details.
 
 1.1.  This Document
 
@@ -1619,7 +1621,15 @@ Table of Contents
    could constitute a security vulnerability.  The management of
    security aspects is important (Section 5.8).
 
-10.  Informative References
+10.  References
+
+10.1.  Normative References
+
+   [RFC2360]  Scott, G., "Guide for Internet Standards Writers", BCP 22,
+              RFC 2360, DOI 10.17487/RFC2360, June 1998,
+              <https://www.rfc-editor.org/rfc/rfc2360>.
+
+10.2.  Informative References
 
    [BCP133]   Best Current Practice 133,
               <https://www.rfc-editor.org/info/bcp133>.
@@ -1760,10 +1770,6 @@ Table of Contents
               Jamin, "Resource ReSerVation Protocol (RSVP) -- Version 1
               Functional Specification", RFC 2205, DOI 10.17487/RFC2205,
               September 1997, <https://www.rfc-editor.org/rfc/rfc2205>.
-
-   [RFC2360]  Scott, G., "Guide for Internet Standards Writers", BCP 22,
-              RFC 2360, DOI 10.17487/RFC2360, June 1998,
-              <https://www.rfc-editor.org/rfc/rfc2360>.
 
    [RFC2439]  Villamizar, C., Chandra, R., and R. Govindan, "BGP Route
               Flap Damping", RFC 2439, DOI 10.17487/RFC2439, November
