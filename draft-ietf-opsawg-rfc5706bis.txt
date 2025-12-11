@@ -113,8 +113,15 @@ Table of Contents
    8.  Operational Considerations
    9.  Security Considerations
    10. Informative References
-   Appendix A.  Changes Since RFC 5706
-     A.1.  TO DO LIST
+   Appendix A.  Operational Considerations Checklist
+     A.1.  Operational Fit
+     A.2.  Management Information
+     A.3.  Fault Management
+     A.4.  Configuration Management
+     A.5.  Performance Management
+     A.6.  Security Management
+   Appendix B.  Changes Since RFC 5706
+     B.1.  TO DO LIST
    Acknowledgements
    Contributors
    Authors' Addresses
@@ -142,7 +149,7 @@ Table of Contents
    RFCs in the IETF Stream.  This document also removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
-   services.  Refer to Appendix A for more details.
+   services.  Refer to Appendix B for more details.
 
 1.1.  This Document
 
@@ -245,9 +252,7 @@ Table of Contents
    reviews.  A list of guidelines and a checklist of questions to
    consider, which a reviewer can use to evaluate whether the protocol
    and documentation address common operations and management needs, is
-   provided in [CHECKLIST].  Ultimately, the decision to incorporate
-   this document's advice into their work remains with Protocol
-   Designers and WGs themselves.
+   provided in [CHECKLIST].
 
    This document is also of interest to the broader community, who wants
    to understand, contribute to, and review Internet-Drafts, taking
@@ -372,7 +377,8 @@ Table of Contents
    to include a simple statement explaining why the topic is not
    relevant or applicable for the New Protocol or Protocol Extension.
    Of course, additional relevant operational and manageability topics
-   should be included as well.
+   should be included as well.  A concise checklist of key questions is
+   provided in Appendix A.
 
    Data Models (e.g., YANG) and other schema artifacts (JSON schema,
    YAML, CDDL, etc.) may be consumed out of RFCs that specify them.  As
@@ -433,13 +439,13 @@ Table of Contents
    to understand.  [RFC5218] provides a more detailed discussion on what
    makes for a successful protocol.
 
-   BGP flap damping [RFC2439] is an example.  It was designed to block
-   high-frequency route flaps.  Some BGP implementations were memory-
-   constrained so often elected not to support this function, others
-   found a conflict where path exploration caused false flap damping
-   resulting in loss of reachability.  As a result, flap damping was
-   often not enabled network-wide, contrary to the intentions of the
-   original designers.
+      BGP flap damping [RFC2439] is an example.  It was designed to
+      block high-frequency route flaps.  Some BGP implementations were
+      memory-constrained so often elected not to support this function,
+      others found a conflict where path exploration caused false flap
+      damping resulting in loss of reachability.  As a result, flap
+      damping was often not enabled network-wide, contrary to the
+      intentions of the original designers.
 
 4.1.  Operations
 
@@ -472,9 +478,11 @@ Table of Contents
 4.2.  Installation and Initial Setup
 
    Anything that can be configured can be misconfigured.  "Architectural
-   Principles of the Internet" [RFC1958], Section 3.8, states: "Avoid
-   options and parameters whenever possible.  Any options and parameters
-   should be configured or negotiated dynamically rather than manually".
+   Principles of the Internet" [RFC1958], Section 3.8, states:
+
+   |  Avoid options and parameters whenever possible.  Any options and
+   |  parameters should be configured or negotiated dynamically rather
+   |  than manually.
 
    To simplify configuration, Protocol Designers should consider
    specifying reasonable defaults, including default modes and
@@ -514,17 +522,17 @@ Table of Contents
    speed or some other relevant factors.  This would help reduce the
    chance of problems caused by technology advancement.
 
-   For example, where protocols involve cryptographic keys, Protocol
-   Designers should consider not only key generation and validation
-   mechanisms but also the format in which private keys are stored,
-   transmitted, and restored.  Designers should specify any expected
-   consistency checks (e.g., recomputing an expanded key from the seed)
-   that help verify correctness and integrity.  Additionally, guidance
-   should be given on data retention, restoration limits, and
-   cryptographic module interoperability when importing/exporting
-   private key material.  Refer to
-   [I-D.ietf-lamps-dilithium-certificates] for an example of how such
-   considerations are incorporated.
+      For example, where protocols involve cryptographic keys, Protocol
+      Designers should consider not only key generation and validation
+      mechanisms but also the format in which private keys are stored,
+      transmitted, and restored.  Designers should specify any expected
+      consistency checks (e.g., recomputing an expanded key from the
+      seed) that help verify correctness and integrity.  Additionally,
+      guidance should be given on data retention, restoration limits,
+      and cryptographic module interoperability when importing/exporting
+      private key material.  Refer to
+      [I-D.ietf-lamps-dilithium-certificates] for an example of how such
+      considerations are incorporated.
 
 4.3.  Migration Path
 
@@ -576,20 +584,20 @@ Table of Contents
    certain ways.  If restrictions or dependencies exist, they should be
    stated.
 
-   For example, the design of the Resource ReSerVation Protocol (RSVP)
-   [RFC2205] required each router to look at the RSVP PATH message and,
-   if the router understood RSVP, add its own address to the message to
-   enable automatic tunneling through non-RSVP routers.  But in reality,
-   routers cannot look at an otherwise normal IP packet and potentially
-   take it off the fast path!  The initial designers overlooked that a
-   new "deep packet inspection" requirement was being put on the
-   functional components of a router.  The "router alert" option
-   ([RFC2113], [RFC2711]) was finally developed to solve this problem,
-   for RSVP and other protocols that require the router to take some
-   packets off the fast-forwarding path.  Yet, Router Alert has its own
-   problems in impacting router performance and security.  Refer to
-   [RFC9805] for deprecation of the IPv6 Router Alert Option for New
-   Protocols.
+      For example, the design of the Resource ReSerVation Protocol
+      (RSVP) [RFC2205] required each router to look at the RSVP PATH
+      message and, if the router understood RSVP, add its own address to
+      the message to enable automatic tunneling through non-RSVP
+      routers.  But in reality, routers cannot look at an otherwise
+      normal IP packet and potentially take it off the fast path!  The
+      initial designers overlooked that a new "deep packet inspection"
+      requirement was being put on the functional components of a
+      router.  The "router alert" option ([RFC2113], [RFC2711]) was
+      finally developed to solve this problem, for RSVP and other
+      protocols that require the router to take some packets off the
+      fast-forwarding path.  Yet, Router Alert has its own problems in
+      impacting router performance and security.  Refer to [RFC9805] for
+      deprecation of the IPv6 Router Alert Option for New Protocols.
 
 4.5.  Impact on Network Operation
 
@@ -629,11 +637,13 @@ Table of Contents
 
    Protocol Designers should consider also the impact on infrastructure
    applications like DNS [RFC1034], the registries, or the size of
-   routing tables.  For example, Simple Mail Transfer Protocol (SMTP)
-   [RFC5321] servers use a reverse DNS lookup to filter out incoming
-   connection requests: when Berkeley installed a new spam filter, their
-   mail server stopped functioning because of overload of the DNS cache
-   resolver.
+   routing tables.
+
+      For example, Simple Mail Transfer Protocol (SMTP) [RFC5321]
+      servers use a reverse DNS lookup to filter out incoming connection
+      requests: when Berkeley installed a new spam filter, their mail
+      server stopped functioning because of overload of the DNS cache
+      resolver.
 
    The impact of New Protocols or Protocol Extensions, and the results
    of new OAM tools developed for the New Protocols or Protocol
@@ -650,18 +660,18 @@ Table of Contents
    optional rate limiting feature in the specifications, or impose a
    rate limiting feature in the specifications.
 
-   Consider three examples: (1) In Bidirectional Forwarding Detection
-   for MPLS [RFC5884] it is possible to configure very rapid BFD
-   transmissions (of the order of 3ms) on a very large number of
-   parallel Label Switched Paths (LSPs) with the result that the
-   management systems and end nodes may become overwhelmed -- this can
-   be protected by applying limits to the number of LSPs that may be
-   tested at once. (2) Notifications or logs from systems (through YANG
-   or other means) should be rate-limited so that they do not flood the
-   receiving management station. (3) The application of sophisticated
-   encryption or filtering rules needs to be considered in the light of
-   the additional processing they may impose on the hardware forwarding
-   path for traffic.
+      Consider three examples: (1) In Bidirectional Forwarding Detection
+      for MPLS [RFC5884] it is possible to configure very rapid BFD
+      transmissions (of the order of 3ms) on a very large number of
+      parallel Label Switched Paths (LSPs) with the result that the
+      management systems and end nodes may become overwhelmed -- this
+      can be protected by applying limits to the number of LSPs that may
+      be tested at once. (2) Notifications or logs from systems (through
+      YANG or other means) should be rate-limited so that they do not
+      flood the receiving management station. (3) The application of
+      sophisticated encryption or filtering rules needs to be considered
+      in the light of the additional processing they may impose on the
+      hardware forwarding path for traffic.
 
    New metrics may be required to assess traffic performance.  Protocol
    Designers may refer to [RFC6390] for guidelines for considering new
@@ -1128,10 +1138,10 @@ Table of Contents
    meant to describe the original, source event or combination of
    circumstances that is the foundation of all related Faults.
 
-   For example, if end-to-end data delivery is failing (e.g., reported
-   by a notification), Probable Root Cause analysis can help find the
-   failed link or node, or mis-configuration, within the end-to-end
-   path.
+      For example, if end-to-end data delivery is failing (e.g.,
+      reported by a notification), Probable Root Cause analysis can help
+      find the failed link or node, or mis-configuration, within the
+      end-to-end path.
 
 5.4.4.  Fault Isolation
 
@@ -1342,10 +1352,12 @@ Table of Contents
    words, focus on what makes sense for the protocol being managed, not
    the protocol used for management.  If a constraint is not specific to
    a management protocol, then it should be left to Data Model designers
-   of that protocol to determine how to handle it.  For example, VLAN
-   identifiers are defined by standard to range from 1 to 4094.
-   Therefore, a YANG "vlan-id" definition representing the 12-bit VLAN
-   ID used in the VLAN Tag header uses a range of "1..4094".
+   of that protocol to determine how to handle it.
+
+      For example, VLAN identifiers are defined by standard to range
+      from 1 to 4094.  Therefore, a YANG "vlan-id" definition
+      representing the 12-bit VLAN ID used in the VLAN Tag header uses a
+      range of "1..4094".
 
 5.7.2.  Monitoring the Device
 
@@ -1412,13 +1424,15 @@ Table of Contents
    mechanisms.
 
    Consider security threats that may be introduced by management
-   operations.  For example, Control and Provisioning of Wireless Access
-   Points (CAPWAP) [RFC5415] breaks the structure of monolithic Access
-   Points (APs) into Access Controllers and Wireless Termination Points
-   (WTPs).  By using a control protocol or management protocol, internal
-   information that was previously not accessible is now exposed over
-   the network and to management applications and may become a source of
-   potential security threats.
+   operations.
+
+      For example, Control and Provisioning of Wireless Access Points
+      (CAPWAP) [RFC5415] breaks the structure of monolithic Access
+      Points (APs) into Access Controllers and Wireless Termination
+      Points (WTPs).  By using a control protocol or management
+      protocol, internal information that was previously not accessible
+      is now exposed over the network and to management applications and
+      may become a source of potential security threats.
 
    The granularity of access control needed on management interfaces
    needs to match operational needs.  Typical requirements are a role-
@@ -1442,11 +1456,13 @@ Table of Contents
 
    Standard SNMP notifications or syslog messages might already exist,
    or can be defined, to alert operators to the conditions identified in
-   the security considerations for the New Protocol.  For example, you
-   can log all the commands entered by the operator using syslog (giving
-   you some degree of audit trail), or you can see who has logged on/off
-   using the Secure Shell (SSH) Protocol [RFC4251] and from where;
-   failed SSH logins can be logged using syslog, etc.
+   the security considerations for the New Protocol.
+
+      For example, you can log all the commands entered by the operator
+      using syslog (giving you some degree of audit trail), or you can
+      see who has logged on/off using the Secure Shell (SSH) Protocol
+      [RFC4251] and from where; failed SSH logins can be logged using
+      syslog, etc.
 
    An analysis of existing counters might help operators recognize the
    conditions identified in the security considerations for the new
@@ -1910,7 +1926,167 @@ Table of Contents
    [SECOPS]   "NICCS Glossary", August 2025,
               <https://niccs.cisa.gov/resources/glossary>.
 
-Appendix A.  Changes Since RFC 5706
+Appendix A.  Operational Considerations Checklist
+
+   This appendix provides a concise checklist of key questions that
+   Protocol Designers should address in the "Operational Considerations"
+   section of their specifications.  Each item references the relevant
+   section of this document for detailed guidance.
+
+   The decision to incorporate all or part of these items into their
+   work remains with Protocol Designers and WGs themselves. ##
+   Documentation Requirements
+
+   *  Does the specification include an "Operational Considerations"
+      section?  (Section 3.1)
+
+   *  Is this section placed immediately before the Security
+      Considerations section?  (Section 3.3)
+
+   *  If there are no new considerations, does the section include the
+      appropriate boilerplate with explanation?  (Section 3.2)
+
+A.1.  Operational Fit
+
+   *  How does this protocol operate "out of the box"?  (Section 4.1,
+      Section 4.2)
+
+      -  What are the default values, modes, timers, and states?
+         (Section 4.2)
+
+      -  What is the rationale for chosen default values, especially if
+         they affect operations or are expected to change over time?
+         (Section 4.2)
+
+   *  What is the migration path for existing deployments?
+      (Section 4.3)
+
+      -  How will deployments transition from older versions or
+         technologies?  (Section 4.3)
+
+      -  Does the protocol require infrastructure changes, and how can
+         these be introduced?  (Section 4.3)
+
+   *  What are the requirements or dependencies on other protocols and
+      functional components?  (Section 4.4)
+
+   *  What is the impact on network operation?  (Section 4.5)
+
+      -  What are the scaling implications and interactions with other
+         protocols?  (Section 4.5)
+
+      -  What are the impacts on traffic patterns or performance (e.g.,
+         delay, jitter)?  (Section 4.5)
+
+   *  What is the impact on Security Operations?  (Section 4.6)
+
+      -  How does deployment affect Indicators of Compromise or their
+         availability?  (Section 4.6)
+
+      -  What logging is needed for digital forensics?  (Section 4.6)
+
+   *  How can correct operation be verified?  (Section 4.7)
+
+      -  What status and health indicators does the protocol provide?
+         (Section 4.7)
+
+   *  How are human-readable messages handled?  (Section 4.8)
+
+      -  Do messages support internationalization with message codes for
+         local language mapping?  (Section 4.8)
+
+A.2.  Management Information
+
+   *  What needs to be managed?  (Section 5)
+
+      -  What are the manageable entities (e.g., protocol endpoints,
+         network elements, services)?  (Section 5)
+
+   *  Which standardized management technologies are applicable?
+      (Section 5.1)
+
+   *  What essential information is required?  (Section 5.2,
+      Section 5.3)
+
+      -  What operational, configuration, state, and statistical
+         information is needed?  (Section 5.2)
+
+      -  Is an Information Model needed, especially if multiple Data
+         Model representations are required?  (Section 5.2)
+
+      -  What is manageable, what needs configuration, and what
+         protocol-specific events might occur?  (Section 5.3)
+
+      -  How are configuration data, operational state, and statistics
+         distinguished?  (Section 5.3)
+
+   *  If YANG Data Models are defined, what type is appropriate?
+      (Section 5.3.2)
+
+      -  Should Device Models, Network Models, or Service Models be
+         specified?  (Section 5.3.2)
+
+A.3.  Fault Management
+
+   *  What faults and events should be reported?  (Section 5.4)
+
+      -  What essential faults, health indicators, alarms, and events
+         should be exposed?  (Section 5.4)
+
+      -  How will fault information be propagated?  (Section 5.4)
+
+   *  How is liveness monitored?  (Section 5.4.1)
+
+      -  What testing and liveness detection features are built into the
+         protocol?  (Section 5.4.1)
+
+   *  How are faults determined?  (Section 5.4.2)
+
+      -  What error counters or diagnostics help pinpoint faults?
+         (Section 5.4.2)
+
+      -  What distinguishes faulty from correct messages?
+         (Section 5.4.2)
+
+A.4.  Configuration Management
+
+   *  What configuration parameters are defined?  (Section 5.5)
+
+      -  What parameters need to be configurable, including their
+         defaults and valid ranges?  (Section 5.5)
+
+      -  What information persists across reboots?  (Section 5.5)
+
+A.5.  Performance Management
+
+   *  What are the performance implications?  (Section 5.7)
+
+      -  What are the hardware/software performance impacts (e.g., CPU,
+         memory, forwarding)?  (Section 5.7)
+
+   *  What performance information should be available?  (Section 5.7.1)
+
+      -  What protocol counters are defined (e.g., packets received,
+         sent, dropped)?  (Section 5.7.1)
+
+      -  What is the counter behavior at maximum values?
+         (Section 5.7.1)
+
+      -  What are the protocol limitations and behavior when limits are
+         exceeded?  (Section 5.7.1)
+
+A.6.  Security Management
+
+   *  What security-related monitoring is needed?  (Section 5.8)
+
+      -  What security events should be logged?  (Section 5.8)
+
+      -  What statistics help detect attacks?  (Section 5.8)
+
+      -  What security threats do management operations introduce?
+         (Section 5.8)
+
+Appendix B.  Changes Since RFC 5706
 
    The following changes have been made to the guidelines published in
    [RFC5706]:
@@ -1919,6 +2095,10 @@ Appendix A.  Changes Since RFC 5706
 
    *  Move the "Operational Considerations" Appendix A to a Checklist
       [CHECKLIST] maintained in GitHub
+
+   *  Add a concise "Operational Considerations Checklist" appendix
+      (Appendix A) with key questions that should be addressed in
+      protocol specifications
 
    *  Add a requirement for an "Operational Considerations" section in
       all new Standard Track RFCs, along with specific guidance on its
@@ -1936,7 +2116,7 @@ Appendix A.  Changes Since RFC 5706
 
    *  Add an "Operational and Management Tooling Considerations" section
 
-A.1.  TO DO LIST
+B.1.  TO DO LIST
 
    See the list of open issues at https://github.com/IETF-OPSAWG-WG/
    draft-opsarea-rfc5706bis/issues
