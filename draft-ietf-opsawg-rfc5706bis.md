@@ -969,7 +969,7 @@ DM         DM        DM     --> concrete/detailed model
    Should there be aggregated status indicators based on concatenation
    of propagated Faults from a given domain or device?
 
-   Notifications and alert messages (e.g., SNMP, syslog, or New Protocol specific mechanism) can alert an operator when an
+   Notifications (e.g., SNMP, syslog, or New Protocol specific mechanism) can alert an operator when an
    aspect of the New Protocol or Protocol Extension fails or encounters an error or failure
    condition.
    Should the event reporting provide guaranteed accurate delivery of
