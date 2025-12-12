@@ -662,7 +662,7 @@ Tooling required by security operators should be documented in the design and de
    operation of the service or network, how to verify correct
    protocol behavior, and whether such verification is achieved by testing
    the service function and/or the forwarding function of
-   each network element. This may be achieved through status and
+   each network element. This may be accomplished through the collection of status and
    statistical information gathered from devices.
 
    Having simple protocol status and health indicators on involved
