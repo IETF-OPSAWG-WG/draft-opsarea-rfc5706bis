@@ -1082,12 +1082,12 @@ Table of Contents
    Should there be aggregated status indicators based on concatenation
    of propagated Faults from a given domain or device?
 
-   Notifications (e.g., SNMP, syslog, or New Protocol specific
-   mechanism) can alert an operator when an aspect of the New Protocol
-   or Protocol Extension fails or encounters an error or failure
-   condition.  Should the event reporting provide guaranteed accurate
-   delivery of the event information within a given (high) margin of
-   confidence?  Can we poll the latest events in the box?
+   Notifications (e.g., SNMP traps and informs, syslog, or New Protocol
+   specific mechanism) can alert an operator when an aspect of the New
+   Protocol or Protocol Extension fails or encounters an error or
+   failure condition.  Should the event reporting provide guaranteed
+   accurate delivery of the event information within a given (high)
+   margin of confidence?  Can we poll the latest events in the box?
 
 5.4.1.  Liveness Detection and Monitoring
 
