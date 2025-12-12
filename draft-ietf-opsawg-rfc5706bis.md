@@ -435,7 +435,7 @@ This document does not describe interoperability requirements. As such, it does 
    Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
    protocol -- for example whether write operations are permitted on
-   specific nodes (routers, hosts, servers, etc.), or whether notifications for alarms or other
+   specific nodes (e.g., routers, hosts, including servers), or whether notifications for alarms or other
    events will be expected.
 
 ##  Installation and Initial Setup {#sec-install}
