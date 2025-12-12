@@ -645,7 +645,7 @@ Tooling required by security operators should be documented in the design and de
    An important function that should be provided is guidance on how to
    verify the correct operation of a protocol. A Protocol Designer
    may suggest testing techniques for qualifying and quantifying the impact of the protocol on
-   the network before it is deployed as well as techniques for testing
+   the network before it is partially or fully deployed, as well as testing techniques for
    the effect that the protocol has had on the network after being
    deployed.
 
