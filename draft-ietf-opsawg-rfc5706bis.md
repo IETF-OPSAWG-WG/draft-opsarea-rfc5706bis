@@ -659,7 +659,7 @@ Tooling required by security operators should be documented in the design and de
    properly with the New Protocol or Protocol Extension. Which metrics are of interest?
 
    Protocol Designers should consider how to test the correct end-to-end
-   operation of the service or network, how to verify the correct
+   operation of the service or network, how to verify correct
    functioning of the protocol, and whether that is verified by testing
    the service function and/or by testing the forwarding function of
    each network element. This may be achieved through status and
