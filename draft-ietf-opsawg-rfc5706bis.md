@@ -660,7 +660,7 @@ Tooling required by security operators should be documented in the design and de
 
    Protocol Designers should consider how to test the correct end-to-end
    operation of the service or network, how to verify correct
-   functioning of the protocol, and whether that is verified by testing
+   protocol behavior, and whether such verification is achieved by testing
    the service function and/or by testing the forwarding function of
    each network element. This may be achieved through status and
    statistical information gathered from devices.
