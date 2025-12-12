@@ -669,7 +669,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    Considerations for management should include a discussion of what
    needs to be managed, and how to achieve various management tasks.
    For example, these considerations include where the managers are and what type of interfaces and
-   protocols will they need?
+   protocols will be needed.
 
    The management model should take into account factors such as:
 
