@@ -646,7 +646,7 @@ Tooling required by security operators should be documented in the design and de
    verify the correct operation of a protocol. A Protocol Designer
    may suggest testing techniques for qualifying and quantifying the impact of the protocol on
    the network before it is partially or fully deployed, as well as testing techniques for
-   the effect that the protocol has had on the network after being
+   identifying the effects that the protocol might have on the network after being
    deployed.
 
    Protocol Designers should consider techniques for testing the
