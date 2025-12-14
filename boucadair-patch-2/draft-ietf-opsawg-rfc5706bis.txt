@@ -6,7 +6,7 @@ Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Intended status: Best Current Practice                             Cisco
-Expires: 14 June 2026                                          A. Farrel
+Expires: 17 June 2026                                          A. Farrel
                                                       Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
@@ -14,7 +14,7 @@ Expires: 14 June 2026                                          A. Farrel
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        11 December 2025
+                                                        14 December 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 June 2026.
+   This Internet-Draft will expire on 17 June 2026.
 
 Copyright Notice
 
@@ -391,7 +391,8 @@ Table of Contents
       examples of specifications, covering various areas, with adequate
       documentation of operational considerations, including
       manageability: [I-D.ietf-core-dns-over-coap], [I-D.ietf-suit-mti],
-      [RFC7574], [RFC9877], and [RFC9552].
+      [I-D.ietf-tcpm-prr-rfc6937bis] [RFC7574], [RFC9877], and
+      [RFC9552].
 
 3.2.  "Operational Considerations" Section Boilerplate When No New
       Considerations Exist
@@ -1734,6 +1735,13 @@ Table of Contents
               suit-mti-23, 22 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-suit-
               mti-23>.
+
+   [I-D.ietf-tcpm-prr-rfc6937bis]
+              Mathis, M., Cardwell, N., Cheng, Y., and N. Dukkipati,
+              "Proportional Rate Reduction", Work in Progress, Internet-
+              Draft, draft-ietf-tcpm-prr-rfc6937bis-21, 22 June 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-
+              prr-rfc6937bis-21>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
