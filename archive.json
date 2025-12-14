@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-11T00:53:00.331831+00:00",
+  "timestamp": "2025-12-14T00:56:51.659397+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2595,7 +2595,7 @@
       "id": "I_kwDOOWPBqs7ZaoDN",
       "title": "cheat sheet as a way to navigate the document",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/156",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bclaise",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -2604,8 +2604,8 @@
       "labels": [],
       "body": "The utility of a \"cheat sheet\" or checklist (similar to [RFC 8126](https://datatracker.ietf.org/doc/rfc8126/) for IANA considerations) was discussed, balancing clarity with the avoidance of overly\nprescriptive, rigid requirements.",
       "createdAt": "2025-11-20T14:50:47Z",
-      "updatedAt": "2025-11-20T15:00:05Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-11T08:56:09Z",
+      "closedAt": "2025-12-11T08:56:08Z",
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -2613,6 +2613,13 @@
           "body": "This would address #126 not by making the document shorter, but by making it more useable",
           "createdAt": "2025-11-20T15:00:05Z",
           "updatedAt": "2025-11-20T15:00:05Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Closed by #170 ",
+          "createdAt": "2025-12-11T08:56:09Z",
+          "updatedAt": "2025-12-11T08:56:09Z"
         }
       ]
     },
@@ -2748,6 +2755,22 @@
           "updatedAt": "2025-12-09T13:51:48Z"
         }
       ]
+    },
+    {
+      "number": 178,
+      "id": "I_kwDOOWPBqs7d0Yi-",
+      "title": "PR #169 took care of the IPv6 RA but not the IPv4 RA",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/178",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As such, I would add some text for the IPv4 case as well, citing https://datatracker.ietf.org/doc/bcp186/ ([RFC 7126](https://datatracker.ietf.org/doc/rfc7126/) : Recommendations on Filtering of IPv4 Packets Containing IPv4 Options)",
+      "createdAt": "2025-12-12T01:02:31Z",
+      "updatedAt": "2025-12-12T01:02:31Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -12252,7 +12275,7 @@
       "id": "PR_kwDOOWPBqs61-jG8",
       "title": "deprecation of IPv6 Alert option (Section 4.4)",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/169",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -12261,17 +12284,19 @@
       ],
       "body": "",
       "createdAt": "2025-11-28T06:43:10Z",
-      "updatedAt": "2025-12-10T08:42:32Z",
+      "updatedAt": "2025-12-11T08:55:10Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "a5fbcd43b3d3bfc0a93625d8090a4a335062136a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "boucadair-patch-3",
       "headRefOid": "9fd7a98156cc5ee2a64b1ac8e5be5f85f8758657",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-12-11T08:55:09Z",
+      "mergedAt": "2025-12-11T08:55:09Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "01a5c2528d67f30748de90ccacfeb0c17cb74bf4"
+      },
       "comments": [],
       "reviews": [
         {
@@ -12347,24 +12372,26 @@
       "id": "PR_kwDOOWPBqs63pRGY",
       "title": "Add a checklist appendix to ask key questions.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/170",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "This appendix has been generated with the help of Claude Sonnet 4.5.  It is meant to address #156.",
       "createdAt": "2025-12-08T10:33:52Z",
-      "updatedAt": "2025-12-09T06:29:12Z",
+      "updatedAt": "2025-12-12T01:13:44Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "1a0812de9d0fd49fc9234d59dfd3b0df383998d1",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "jclarke-checklist",
       "headRefOid": "547e5035d86a4c2fdff07f6c3359bd2a5fd4aaae",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-12-11T08:55:42Z",
+      "mergedAt": "2025-12-11T08:55:42Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "d75f75fde3172888d3935a2bda6cf2310187a120"
+      },
       "comments": [],
       "reviews": [
         {
@@ -12431,6 +12458,32 @@
           "createdAt": "2025-12-09T06:29:12Z",
           "updatedAt": "2025-12-09T06:29:12Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UyCO3",
+          "commit": {
+            "abbreviatedOid": "547e503"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-12T01:11:06Z",
+          "updatedAt": "2025-12-12T01:13:44Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "Remove \"boilerplate with\"?",
+              "createdAt": "2025-12-12T01:11:06Z",
+              "updatedAt": "2025-12-12T01:13:44Z"
+            },
+            {
+              "originalPosition": 47,
+              "body": "\"network operations\" (plural)?",
+              "createdAt": "2025-12-12T01:12:42Z",
+              "updatedAt": "2025-12-12T01:13:44Z"
+            }
+          ]
         }
       ]
     },
@@ -12439,7 +12492,7 @@
       "id": "PR_kwDOOWPBqs64F3w9",
       "title": "proposal to visually separate examples vs. main guidance",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/172",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -12448,17 +12501,19 @@
       ],
       "body": "Suggest to use the rendered version to check if this format will be helpful for authors",
       "createdAt": "2025-12-10T09:11:40Z",
-      "updatedAt": "2025-12-10T09:13:33Z",
+      "updatedAt": "2025-12-11T08:55:23Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "1a0812de9d0fd49fc9234d59dfd3b0df383998d1",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "easily-identify-examples",
       "headRefOid": "567d49e87f75c683c4f837f6ea862c7ad017caa0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-12-11T08:55:22Z",
+      "mergedAt": "2025-12-11T08:55:22Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "3462d64ea91c0371d1a798fbcec174262de7b2a4"
+      },
       "comments": [],
       "reviews": [
         {
@@ -12473,6 +12528,518 @@
           "createdAt": "2025-12-10T09:13:23Z",
           "updatedAt": "2025-12-10T09:13:23Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 173,
+      "id": "PR_kwDOOWPBqs64Ts_Y",
+      "title": "Mention that this document updates RFC2360.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/173",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "It is no longer required to create MIBs for New Protocols. (#171)",
+      "createdAt": "2025-12-11T09:01:28Z",
+      "updatedAt": "2025-12-12T01:20:22Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "jclarke-update-bcp-22",
+      "headRefOid": "0091e55a64cb5ff4253d6a6f4081265bea4c7413",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Thanks for the suggestion.  I merged it.",
+          "createdAt": "2025-12-11T09:55:08Z",
+          "updatedAt": "2025-12-11T09:55:08Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7Uk16d",
+          "commit": {
+            "abbreviatedOid": "b1fee16"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Add a mention to the BCP, which can also be used as an argument why we need to publish as BCP as well + fix that RFC2360 is normative + include the section inside the anchor for better link rendering.\r\n\r\nThanks.",
+          "createdAt": "2025-12-11T09:07:14Z",
+          "updatedAt": "2025-12-11T09:09:42Z",
+          "comments": [
+            {
+              "originalPosition": 25,
+              "body": "```suggestion\r\n   in new RFCs in the IETF Stream. Additionally, this document updates BCP 22 on Guide for Internet Standards Writers, specifically {{Section 2.14 of !RFC2360}}\r\n```",
+              "createdAt": "2025-12-11T09:07:15Z",
+              "updatedAt": "2025-12-11T09:09:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UmiP5",
+          "commit": {
+            "abbreviatedOid": "0091e55"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-11T10:58:57Z",
+          "updatedAt": "2025-12-11T10:58:57Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7Ux8z9",
+          "commit": {
+            "abbreviatedOid": "0091e55"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-12T00:56:41Z",
+          "updatedAt": "2025-12-12T00:56:41Z",
+          "comments": [
+            {
+              "originalPosition": 25,
+              "body": "I'd suggest making BCP 22 a citation/reference.",
+              "createdAt": "2025-12-12T00:56:41Z",
+              "updatedAt": "2025-12-12T00:56:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UyF8I",
+          "commit": {
+            "abbreviatedOid": "0091e55"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-12T01:20:22Z",
+          "updatedAt": "2025-12-12T01:20:22Z",
+          "comments": [
+            {
+              "originalPosition": 28,
+              "body": "```suggestion\r\n   Further, this document removes outdated\r\n```",
+              "createdAt": "2025-12-12T01:20:22Z",
+              "updatedAt": "2025-12-12T01:20:22Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 174,
+      "id": "PR_kwDOOWPBqs64T_9C",
+      "title": "Less SNMP, More protocol-agnostic reco",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/174",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "",
+      "createdAt": "2025-12-11T09:26:14Z",
+      "updatedAt": "2025-12-12T05:23:02Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Less-SNMP,-More-protocol-agnostic-reco",
+      "headRefOid": "379d509b61e877ab69d0b062511500f2e6a4de36",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7UlZRb",
+          "commit": {
+            "abbreviatedOid": "17d10cb"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-12-11T09:42:28Z",
+          "updatedAt": "2025-12-11T09:42:48Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "You already have the word \"alert\" there.  What about just using \"Notifications (e.g., ...)\"?",
+              "createdAt": "2025-12-11T09:42:28Z",
+              "updatedAt": "2025-12-11T09:42:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7Ul20x",
+          "commit": {
+            "abbreviatedOid": "17d10cb"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-11T10:12:12Z",
+          "updatedAt": "2025-12-11T10:12:12Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "Works for me. Fixed in [Notifications/Alerts](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/174/commits/41510cc35c68891947e3d46e7199b28c14a03f3c)",
+              "createdAt": "2025-12-11T10:12:12Z",
+              "updatedAt": "2025-12-11T10:12:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UmVaW",
+          "commit": {
+            "abbreviatedOid": "41510cc"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-11T10:44:23Z",
+          "updatedAt": "2025-12-11T10:44:23Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UyEVV",
+          "commit": {
+            "abbreviatedOid": "41510cc"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-12-12T01:16:11Z",
+          "updatedAt": "2025-12-12T01:17:48Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n   specific nodes (e.g., routers, hosts, including servers), or whether notifications for alarms or other\r\n```",
+              "createdAt": "2025-12-12T01:16:12Z",
+              "updatedAt": "2025-12-12T05:22:47Z"
+            },
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\r\n   Notifications (e.g., SNMP traps and informs, syslog, or New Protocol specific mechanism) can alert an operator when an\r\n```",
+              "createdAt": "2025-12-12T01:17:02Z",
+              "updatedAt": "2025-12-12T01:17:48Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 175,
+      "id": "PR_kwDOOWPBqs64VE4x",
+      "title": "examples of spec with good ops cons documentation",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/175",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "",
+      "createdAt": "2025-12-11T10:52:31Z",
+      "updatedAt": "2025-12-11T11:10:35Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "boucadair-patch-2",
+      "headRefOid": "dcc562c0340aff89c3d964d3cc97fa64baefe0db",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Maybe say operational and/or manageability considerations? 7574 has a manageability considerations section whereas the others have the operational considerations.\r\n\r\nWouldn't that be confusing as you define \"ops cons\" covering both? Better IMO to be consistent with the rest of the section.",
+          "createdAt": "2025-12-11T11:04:14Z",
+          "updatedAt": "2025-12-11T11:04:14Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I just meant that since we are defining one section, one might (like I did) search for that section name and not find it in 7574.  That may not be such a big deal, though.",
+          "createdAt": "2025-12-11T11:05:52Z",
+          "updatedAt": "2025-12-11T11:05:52Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7UmjMK",
+          "commit": {
+            "abbreviatedOid": "a6ee78b"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "Maybe say operational and/or manageability considerations?  7574 has a manageability considerations section whereas the others have the operational considerations.",
+          "createdAt": "2025-12-11T10:59:55Z",
+          "updatedAt": "2025-12-11T10:59:55Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7Umpi3",
+          "commit": {
+            "abbreviatedOid": "a6ee78b"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-11T11:07:26Z",
+          "updatedAt": "2025-12-11T11:07:27Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n> with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},\r\n```",
+              "createdAt": "2025-12-11T11:07:26Z",
+              "updatedAt": "2025-12-11T11:07:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7Umqck",
+          "commit": {
+            "abbreviatedOid": "a6ee78b"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-11T11:08:28Z",
+          "updatedAt": "2025-12-11T11:08:28Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "@xorrkaz, What about?",
+              "createdAt": "2025-12-11T11:08:28Z",
+              "updatedAt": "2025-12-11T11:08:28Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UmrCs",
+          "commit": {
+            "abbreviatedOid": "a6ee78b"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-11T11:09:12Z",
+          "updatedAt": "2025-12-11T11:09:13Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Works for me.",
+              "createdAt": "2025-12-11T11:09:13Z",
+              "updatedAt": "2025-12-11T11:09:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UmsJv",
+          "commit": {
+            "abbreviatedOid": "dcc562c"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-11T11:10:35Z",
+          "updatedAt": "2025-12-11T11:10:35Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 176,
+      "id": "PR_kwDOOWPBqs64WwGj",
+      "title": "consolidated correct behavior verification",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/176",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "Merging both sections with adjustment to generalize the applicability. \r\n\r\nThe OLD text (inherited here) is a bit verbose, but still OK.",
+      "createdAt": "2025-12-11T13:10:27Z",
+      "updatedAt": "2025-12-12T05:18:35Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "correct-behavior",
+      "headRefOid": "a9fd7d4d8c86656b41ebda7e8d741f6c8f765c0c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7Uo1Q2",
+          "commit": {
+            "abbreviatedOid": "da4a6d2"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-11T13:33:19Z",
+          "updatedAt": "2025-12-11T13:33:19Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UyHzC",
+          "commit": {
+            "abbreviatedOid": "da4a6d2"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-12-12T01:25:04Z",
+          "updatedAt": "2025-12-12T01:29:45Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\n   may suggest testing techniques for qualifying and quantifying the impact of the protocol on\r\n```",
+              "createdAt": "2025-12-12T01:25:04Z",
+              "updatedAt": "2025-12-12T01:29:45Z"
+            },
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\r\n   the network before it is partially or fully deployed, as well as testing techniques for\r\n```",
+              "createdAt": "2025-12-12T01:25:30Z",
+              "updatedAt": "2025-12-12T01:29:45Z"
+            },
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   identifying the effects that the protocol might have on the network after being\r\n```",
+              "createdAt": "2025-12-12T01:26:05Z",
+              "updatedAt": "2025-12-12T01:29:45Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\r\n   operation of the service or network, how to verify correct\r\n```",
+              "createdAt": "2025-12-12T01:27:26Z",
+              "updatedAt": "2025-12-12T01:29:45Z"
+            },
+            {
+              "originalPosition": 27,
+              "body": "```suggestion\r\n   protocol behavior, and whether such verification is achieved by testing\r\n```",
+              "createdAt": "2025-12-12T01:28:01Z",
+              "updatedAt": "2025-12-12T01:29:45Z"
+            },
+            {
+              "originalPosition": 28,
+              "body": "```suggestion\r\n   the service function and/or the forwarding function of\r\n```",
+              "createdAt": "2025-12-12T01:28:46Z",
+              "updatedAt": "2025-12-12T01:29:45Z"
+            },
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\n   each network element. This may be accomplished through the collection of status and\r\n```",
+              "createdAt": "2025-12-12T01:29:27Z",
+              "updatedAt": "2025-12-12T01:29:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 177,
+      "id": "PR_kwDOOWPBqs64WzxS",
+      "title": "\"write a MIB module\" is a distraction",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/177",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "",
+      "createdAt": "2025-12-11T13:15:39Z",
+      "updatedAt": "2025-12-12T05:15:39Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "write-a-MIB-module",
+      "headRefOid": "3026baa3a81b298ef12cf06083de17589a01dae9",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7Uo0E-",
+          "commit": {
+            "abbreviatedOid": "42f98b6"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-11T13:32:02Z",
+          "updatedAt": "2025-12-11T13:32:02Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7UyG8F",
+          "commit": {
+            "abbreviatedOid": "42f98b6"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-12-12T01:23:16Z",
+          "updatedAt": "2025-12-12T01:23:41Z",
+          "comments": [
+            {
+              "originalPosition": 3,
+              "body": "```suggestion\r\n   For example, these considerations include where the managers are and what type of interfaces and\r\n```",
+              "createdAt": "2025-12-12T01:23:16Z",
+              "updatedAt": "2025-12-12T01:23:41Z"
+            },
+            {
+              "originalPosition": 15,
+              "body": "```suggestion\r\n   protocols will be needed.\r\n```",
+              "createdAt": "2025-12-12T01:23:37Z",
+              "updatedAt": "2025-12-12T01:23:41Z"
+            }
+          ]
         }
       ]
     }
