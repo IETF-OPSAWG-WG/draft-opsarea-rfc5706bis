@@ -132,7 +132,7 @@ contributor:
    in new RFCs in the IETF Stream. Additionally, this document updates BCP 22 on Guide for Internet Standards Writers, specifically {{Section 2.14 of !RFC2360}}
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
    considerations as described in {{sec-doc-req-ietf-spec}}.
-   Likewise, this document removes outdated
+   Further, this document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services. Refer to {{sec-changes-since-5706}} for more details.
