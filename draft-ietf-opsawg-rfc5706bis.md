@@ -350,6 +350,10 @@ This document does not describe interoperability requirements. As such, it does 
   documented as part of the model itself. Such considerations should not be
   duplicated in the narrative part of a specification that includes such artifacts.
 
+> Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
+> with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},
+> {{?I-D.ietf-suit-mti}}, {{?I-D.ietf-tcpm-prr-rfc6937bis}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
+
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
