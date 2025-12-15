@@ -1733,7 +1733,7 @@ with adequate documentation of operational considerations, including manageabili
 <p id="section-4.1-4">Protocol Designers should consider what management operations are
    expected to be performed as a result of the deployment of the
    protocol -- for example whether write operations are permitted on
-   routers and on hosts, or whether notifications for alarms or other
+   specific nodes (e.g., routers, hosts, including servers), or whether notifications for alarms or other
    events will be expected.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -2331,9 +2331,9 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    the lowest Fault be reported and the higher levels be suppressed?
    Should there be aggregated status indicators based on concatenation
    of propagated Faults from a given domain or device?<a href="#section-5.4-3" class="pilcrow">¶</a></p>
-<p id="section-5.4-4">SNMP notifications and syslog messages can alert an operator when an
+<p id="section-5.4-4">Notifications (e.g., SNMP traps and informs, syslog, or New Protocol specific mechanisms) can alert an operator when an
    aspect of the New Protocol or Protocol Extension fails or encounters an error or failure
-   condition, and SNMP is frequently used as a heartbeat monitor.
+   condition.
    Should the event reporting provide guaranteed accurate delivery of
    the event information within a given (high) margin of confidence?
    Can we poll the latest events in the box?<a href="#section-5.4-4" class="pilcrow">¶</a></p>
@@ -2375,11 +2375,15 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    these counters cannot be compared effectively -- they are not
    interoperable counters.<a href="#section-5.4.2-1" class="pilcrow">¶</a></p>
 <p id="section-5.4.2-2">How do you distinguish between faulty messages and good messages?<a href="#section-5.4.2-2" class="pilcrow">¶</a></p>
-<p id="section-5.4.2-3">Would some threshold-based mechanisms, such as Remote Monitoring
-   (RMON) events/alarms or the EVENT-MIB, be usable to help determine
-   error conditions? Are SNMP notifications for all events needed, or
+<p id="section-5.4.2-3">Would some threshold-based mechanisms be usable to help determine
+   error conditions? Are notifications for all events needed, or
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?<a href="#section-5.4.2-3" class="pilcrow">¶</a></p>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="section-5.4.2-4.1">
+              <p id="section-5.4.2-4.1.1">Remote Monitoring (RMON) events/alarms is an example of threshold-based mechanism.<a href="#section-5.4.2-4.1.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="sec-cause-analysis">
@@ -2703,7 +2707,7 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    and from that deducing what is required.<a href="#section-5.8-10" class="pilcrow">¶</a></p>
 <p id="section-5.8-11">Protocol Designers should consider how ACLs are
    maintained and updated.<a href="#section-5.8-11" class="pilcrow">¶</a></p>
-<p id="section-5.8-12">Standard SNMP notifications or syslog messages might
+<p id="section-5.8-12">Notifications (e.g., syslog messages) might
    already exist, or can be defined, to alert operators to the
    conditions identified in the security considerations for the New
    Protocol.<a href="#section-5.8-12" class="pilcrow">¶</a></p>
@@ -2726,8 +2730,8 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    while CLI authority levels and policy are usually command-oriented
    (i.e., task-oriented). Depending on the management function,
    sometimes data-oriented or task-oriented approaches make more sense.
-   Protocol Designers should consider both data-oriented and task-
-   oriented authority levels and policy.<a href="#section-5.8-15" class="pilcrow">¶</a></p>
+   Protocol Designers should consider both data-oriented and task-oriented
+   authority levels and policy. Refer also to <span>[<a href="#RFC8341" class="cite xref">RFC8341</a>]</span> for more details on access control types and rules.<a href="#section-5.8-15" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -3124,6 +3128,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC8340">[RFC8340]</dt>
       <dd>
 <span class="refAuthor">Bjorklund, M.</span> and <span class="refAuthor">L. Berger, Ed.</span>, <span class="refTitle">"YANG Tree Diagrams"</span>, <span class="seriesInfo">BCP 215</span>, <span class="seriesInfo">RFC 8340</span>, <span class="seriesInfo">DOI 10.17487/RFC8340</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8340">https://www.rfc-editor.org/rfc/rfc8340</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8341">[RFC8341]</dt>
+      <dd>
+<span class="refAuthor">Bierman, A.</span> and <span class="refAuthor">M. Bjorklund</span>, <span class="refTitle">"Network Configuration Access Control Model"</span>, <span class="seriesInfo">STD 91</span>, <span class="seriesInfo">RFC 8341</span>, <span class="seriesInfo">DOI 10.17487/RFC8341</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8341">https://www.rfc-editor.org/rfc/rfc8341</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8466">[RFC8466]</dt>
       <dd>
