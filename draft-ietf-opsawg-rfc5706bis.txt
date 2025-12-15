@@ -386,6 +386,13 @@ Table of Contents
    Such considerations should not be duplicated in the narrative part of
    a specification that includes such artifacts.
 
+      Readers may refer to the following non-exhaustive list for
+      examples of specifications, covering various areas, with adequate
+      documentation of operational considerations, including
+      manageability: [I-D.ietf-core-dns-over-coap], [I-D.ietf-suit-mti],
+      [I-D.ietf-tcpm-prr-rfc6937bis] [RFC7574], [RFC9877], and
+      [RFC9552].
+
 3.2.  "Operational Considerations" Section Boilerplate When No New
       Considerations Exist
 
@@ -1653,6 +1660,13 @@ Table of Contents
               <https://github.com/IETF-OPS-DIR/Review-Template/tree/
               main>.
 
+   [I-D.ietf-core-dns-over-coap]
+              Lenders, M. S., Amsüss, C., Gündoğan, C., Schmidt, T. C.,
+              and M. Wählisch, "DNS over CoAP (DoC)", Work in Progress,
+              Internet-Draft, draft-ietf-core-dns-over-coap-20, 16
+              September 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-core-dns-over-coap-20>.
+
    [I-D.ietf-lamps-dilithium-certificates]
               Massimo, J., Kampanakis, P., Turner, S., and B.
               Westerbaan, "Internet X.509 Public Key Infrastructure -
@@ -1700,6 +1714,21 @@ Table of Contents
               schema-13, 20 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
               qlog-main-schema-13>.
+
+   [I-D.ietf-suit-mti]
+              Moran, B., Rønningstad, O., and A. Tsukamoto,
+              "Cryptographic Algorithms for Internet of Things (IoT)
+              Devices", Work in Progress, Internet-Draft, draft-ietf-
+              suit-mti-23, 22 July 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-suit-
+              mti-23>.
+
+   [I-D.ietf-tcpm-prr-rfc6937bis]
+              Mathis, M., Cardwell, N., Cheng, Y., and N. Dukkipati,
+              "Proportional Rate Reduction", Work in Progress, Internet-
+              Draft, draft-ietf-tcpm-prr-rfc6937bis-21, 22 June 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-
+              prr-rfc6937bis-21>.
 
    [IESG-STATEMENT]
               IESG, "Writable MIB Module IESG Statement", 2 March 2014,
@@ -1849,6 +1878,11 @@ Table of Contents
               RFC 7011, DOI 10.17487/RFC7011, September 2013,
               <https://www.rfc-editor.org/rfc/rfc7011>.
 
+   [RFC7574]  Bakker, A., Petrocco, R., and V. Grishchenko, "Peer-to-
+              Peer Streaming Peer Protocol (PPSPP)", RFC 7574,
+              DOI 10.17487/RFC7574, July 2015,
+              <https://www.rfc-editor.org/rfc/rfc7574>.
+
    [RFC7950]  Bjorklund, M., Ed., "The YANG 1.1 Data Modeling Language",
               RFC 7950, DOI 10.17487/RFC7950, August 2016,
               <https://www.rfc-editor.org/rfc/rfc7950>.
@@ -1906,9 +1940,19 @@ Table of Contents
               Defence", RFC 9424, DOI 10.17487/RFC9424, August 2023,
               <https://www.rfc-editor.org/rfc/rfc9424>.
 
+   [RFC9552]  Talaulikar, K., Ed., "Distribution of Link-State and
+              Traffic Engineering Information Using BGP", RFC 9552,
+              DOI 10.17487/RFC9552, December 2023,
+              <https://www.rfc-editor.org/rfc/rfc9552>.
+
    [RFC9805]  Bonica, R., "Deprecation of the IPv6 Router Alert Option
               for New Protocols", RFC 9805, DOI 10.17487/RFC9805, June
               2025, <https://www.rfc-editor.org/rfc/rfc9805>.
+
+   [RFC9877]  Singh, J. and T. Harrison, "Registration Data Access
+              Protocol (RDAP) Extension for Geofeed Data", RFC 9877,
+              DOI 10.17487/RFC9877, October 2025,
+              <https://www.rfc-editor.org/rfc/rfc9877>.
 
    [SECOPS]   "NICCS Glossary", August 2025,
               <https://niccs.cisa.gov/resources/glossary>.
