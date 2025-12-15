@@ -642,16 +642,30 @@ Tooling required by security operators should be documented in the design and de
 
 ##  Verifying Correct Operation {#sec-oper-verify}
 
+   An important function that should be provided is guidance on how to
+   verify the correct operation of a protocol. A Protocol Designer
+   may suggest testing techniques for qualifying and quantifying the impact of the protocol on
+   the network before it is partially or fully deployed, as well as testing techniques for
+   identifying the effects that the protocol might have on the network after being
+   deployed.
+
    Protocol Designers should consider techniques for testing the
-   effect that the protocol has had on the network by sending data
-   through the network and observing its behavior (a.k.a., active
+   effect that the protocol has had on the infrastructure by sending data
+   through the infrastructure and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct
-   end-to-end operation of the New Protocol or Protocol Extension in the network can be tested
+   end-to-end operation of the New Protocol or Protocol Extension can be tested
    actively and passively, and how the correct data or forwarding plane
-   function of each network element can be verified to be working
+   function of each involved element can be verified to be working
    properly with the New Protocol or Protocol Extension. Which metrics are of interest?
 
-   Having simple protocol status and health indicators on network
+   Protocol Designers should consider how to test the correct end-to-end
+   operation of the service or network, how to verify correct
+   protocol behavior, and whether such verification is achieved by testing
+   the service function and/or the forwarding function of
+   each network element. This may be accomplished through the collection of status and
+   statistical information gathered from devices.
+
+   Having simple protocol status and health indicators on involved
    devices is a recommended means to check correct operation.
 
 ## Message Formats {#sec-messages}
@@ -1112,22 +1126,6 @@ DM         DM        DM     --> concrete/detailed model
    specific policy-based behavior by the implementation. These timers
    should have default values suggested in the protocol specification
    and may not need to be otherwise configurable.
-
-###  Verifying Correct Operation {#sec-mgmt-verify}
-
-   An important function that should be provided is guidance on how to
-   verify the correct operation of a protocol. A Protocol Designer
-   could suggest techniques for testing the impact of the protocol on
-   the network before it is deployed as well as techniques for testing
-   the effect that the protocol has had on the network after being
-   deployed.
-
-   Protocol Designers should consider how to test the correct end-to-end
-   operation of the service or network, how to verify the correct
-   functioning of the protocol, and whether that is verified by testing
-   the service function and/or by testing the forwarding function of
-   each network element. This may be achieved through status and
-   statistical information gathered from devices.
 
 ##  Accounting Management {#sec-acc-mgmt}
 
