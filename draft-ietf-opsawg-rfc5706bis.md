@@ -14,6 +14,7 @@ kw:
   - ops considerations
 cat: bcp
 obsoletes: 5706
+updates: 2360
 submissiontype: IETF
 
 coding: utf-8
@@ -102,8 +103,8 @@ contributor:
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
-   introduces a requirement to include an "Operational Considerations"
-   section in new RFCs in the IETF Stream.
+   updates RFC 2360 to obsolete mandatory MIB creation and introduces a
+   requirement to include an "Operational Considerations" section in new RFCs in the IETF Stream.
 
 --- middle
 
@@ -128,8 +129,10 @@ contributor:
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational Considerations"
    section, that covers both operational and management considerations,
-   in new RFCs in the IETF Stream.
-   This document also removes outdated
+   in new RFCs in the IETF Stream. Additionally, this document updates BCP 22 on Guide for Internet Standards Writers, specifically {{Section 2.14 of !RFC2360}}
+   to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
+   considerations as described in {{sec-doc-req-ietf-spec}}.
+   Further, this document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services. Refer to {{sec-changes-since-5706}} for more details.
