@@ -5,9 +5,9 @@
 Network Working Group                                          B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
-Intended status: Best Current Practice                             Cisco
-Expires: 18 June 2026                                          A. Farrel
-                                                      Old Dog Consulting
+Updates: 2360 (if approved)                                        Cisco
+Intended status: Best Current Practice                         A. Farrel
+Expires: 18 June 2026                                 Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
@@ -32,8 +32,9 @@ Abstract
 
    This document obsoletes RFC 5706, replacing it completely and
    updating it with new operational and management techniques and
-   mechanisms.  It also introduces a requirement to include an
-   "Operational Considerations" section in new RFCs in the IETF Stream.
+   mechanisms.  It also updates RFC 2360 to obsolete mandatory MIB
+   creation and introduces a requirement to include an "Operational
+   Considerations" section in new RFCs in the IETF Stream.
 
 Status of This Memo
 
@@ -111,7 +112,9 @@ Table of Contents
    7.  IANA Considerations
    8.  Operational Considerations
    9.  Security Considerations
-   10. Informative References
+   10. References
+     10.1.  Normative References
+     10.2.  Informative References
    Appendix A.  Operational Considerations Checklist
      A.1.  Operational Fit
      A.2.  Management Information
@@ -145,7 +148,11 @@ Table of Contents
    new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational Considerations" section,
    that covers both operational and management considerations, in new
-   RFCs in the IETF Stream.  This document also removes outdated
+   RFCs in the IETF Stream.  Additionally, this document updates BCP 22
+   on Guide for Internet Standards Writers, specifically Section 2.14 of
+   [RFC2360] to obsolete references to mandatory MIBs and instead focus
+   on documenting holistic manageability and operational considerations
+   as described in Section 3.  Further, this document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services.  Refer to Appendix B for more details.
@@ -1611,7 +1618,15 @@ Table of Contents
    could constitute a security vulnerability.  The management of
    security aspects is important (Section 5.8).
 
-10.  Informative References
+10.  References
+
+10.1.  Normative References
+
+   [RFC2360]  Scott, G., "Guide for Internet Standards Writers", BCP 22,
+              RFC 2360, DOI 10.17487/RFC2360, June 1998,
+              <https://www.rfc-editor.org/rfc/rfc2360>.
+
+10.2.  Informative References
 
    [BCP133]   Best Current Practice 133,
               <https://www.rfc-editor.org/info/bcp133>.

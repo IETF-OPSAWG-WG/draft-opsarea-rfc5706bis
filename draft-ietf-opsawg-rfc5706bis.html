@@ -20,8 +20,8 @@
    addressed when defining New Protocols or Protocol Extensions. 
        This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
-   introduces a requirement to include an "Operational Considerations"
-   section in new RFCs in the IETF Stream. 
+   updates RFC 2360 to obsolete mandatory MIB creation and introduces a
+   requirement to include an "Operational Considerations" section in new RFCs in the IETF Stream. 
     ' name="description">
 <meta content="xml2rfc 3.31.0" name="generator">
 <meta content="management" name="keyword">
@@ -1078,6 +1078,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dt class="label-obsoletes">Obsoletes:</dt>
 <dd class="obsoletes">
 <a href="https://www.rfc-editor.org/rfc/rfc5706" class="eref">5706</a> (if approved)</dd>
+<dt class="label-updates">Updates:</dt>
+<dd class="updates">
+<a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
 <time datetime="2025-12-15" class="published">15 December 2025</time>
@@ -1126,8 +1129,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
    addressed when defining New Protocols or Protocol Extensions.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
-   introduces a requirement to include an "Operational Considerations"
-   section in new RFCs in the IETF Stream.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+   updates RFC 2360 to obsolete mandatory MIB creation and introduces a
+   requirement to include an "Operational Considerations" section in new RFCs in the IETF Stream.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1317,7 +1320,15 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10.2.1">
+                <p id="section-toc.1-1.10.2.1.1"><a href="#section-10.1" class="auto internal xref">10.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10.2.2">
+                <p id="section-toc.1-1.10.2.2.1"><a href="#section-10.2" class="auto internal xref">10.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
             <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-operational-considerations-c" class="internal xref">Operational Considerations Checklist</a></p>
@@ -1384,8 +1395,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational Considerations"
    section, that covers both operational and management considerations,
-   in new RFCs in the IETF Stream.
-   This document also removes outdated
+   in new RFCs in the IETF Stream. Additionally, this document updates BCP 22 on Guide for Internet Standards Writers, specifically <span><a href="https://rfc-editor.org/rfc/rfc2360#section-2.14" class="relref">Section 2.14</a> of [<a href="#RFC2360" class="cite xref">RFC2360</a>]</span>
+   to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
+   considerations as described in <a href="#sec-doc-req-ietf-spec" class="auto internal xref">Section 3</a>.
+   Further, this document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
    services. Refer to <a href="#sec-changes-since-5706" class="auto internal xref">Appendix B</a> for more details.<a href="#section-1-3" class="pilcrow">¶</a></p>
@@ -2891,289 +2904,309 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
    security aspects is important (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>).<a href="#section-9-6" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="sec-informative-references">
+<div id="sec-combined-references">
 <section id="section-10">
-      <h2 id="name-informative-references">
-<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+      <h2 id="name-references">
+<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
+<section id="section-10.1">
+        <h3 id="name-normative-references">
+<a href="#section-10.1" class="section-number selfRef">10.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+        </h3>
+<dl class="references">
+<dt id="RFC2360">[RFC2360]</dt>
+      <dd>
+<span class="refAuthor">Scott, G.</span>, <span class="refTitle">"Guide for Internet Standards Writers"</span>, <span class="seriesInfo">BCP 22</span>, <span class="seriesInfo">RFC 2360</span>, <span class="seriesInfo">DOI 10.17487/RFC2360</span>, <time datetime="1998-06" class="refDate">June 1998</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2360">https://www.rfc-editor.org/rfc/rfc2360</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
+<div id="sec-informative-references">
+<section id="section-10.2">
+        <h3 id="name-informative-references">
+<a href="#section-10.2" class="section-number selfRef">10.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+        </h3>
 <dl class="references">
 <dt id="BCP133">[BCP133]</dt>
-      <dd>
+        <dd>
 <div class="refInstance">Best Current Practice 133, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp133">https://www.rfc-editor.org/info/bcp133</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
 </div>
 <div class="refInstance" id="RFC9743">
-          <span class="refAuthor">Duke, M., Ed.</span> and <span class="refAuthor">G. Fairhurst, Ed.</span>, <span class="refTitle">"Specifying New Congestion Control Algorithms"</span>, <span class="seriesInfo">BCP 133</span>, <span class="seriesInfo">RFC 9743</span>, <span class="seriesInfo">DOI 10.17487/RFC9743</span>, <time datetime="2025-03" class="refDate">March 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9743">https://www.rfc-editor.org/info/rfc9743</a>&gt;</span>. </div>
+            <span class="refAuthor">Duke, M., Ed.</span> and <span class="refAuthor">G. Fairhurst, Ed.</span>, <span class="refTitle">"Specifying New Congestion Control Algorithms"</span>, <span class="seriesInfo">BCP 133</span>, <span class="seriesInfo">RFC 9743</span>, <span class="seriesInfo">DOI 10.17487/RFC9743</span>, <time datetime="2025-03" class="refDate">March 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9743">https://www.rfc-editor.org/info/rfc9743</a>&gt;</span>. </div>
 </dd>
 <dd class="break"></dd>
 <dt id="BCP14">[BCP14]</dt>
-      <dd>
+        <dd>
 <div class="refInstance">Best Current Practice 14, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp14">https://www.rfc-editor.org/info/bcp14</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
 </div>
 <div class="refInstance" id="RFC2119">
-          <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>&gt;</span>. </div>
+            <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>&gt;</span>. </div>
 <div class="refInstance" id="RFC8174">
-          <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8174">https://www.rfc-editor.org/info/rfc8174</a>&gt;</span>. </div>
+            <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8174">https://www.rfc-editor.org/info/rfc8174</a>&gt;</span>. </div>
 </dd>
 <dd class="break"></dd>
 <dt id="BCP166">[BCP166]</dt>
-      <dd>
+        <dd>
 <div class="refInstance">Best Current Practice 166, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp166">https://www.rfc-editor.org/info/bcp166</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
 </div>
 <div class="refInstance" id="RFC6365">
-          <span class="refAuthor">Hoffman, P.</span> and <span class="refAuthor">J. Klensin</span>, <span class="refTitle">"Terminology Used in Internationalization in the IETF"</span>, <span class="seriesInfo">BCP 166</span>, <span class="seriesInfo">RFC 6365</span>, <span class="seriesInfo">DOI 10.17487/RFC6365</span>, <time datetime="2011-09" class="refDate">September 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc6365">https://www.rfc-editor.org/info/rfc6365</a>&gt;</span>. </div>
+            <span class="refAuthor">Hoffman, P.</span> and <span class="refAuthor">J. Klensin</span>, <span class="refTitle">"Terminology Used in Internationalization in the IETF"</span>, <span class="seriesInfo">BCP 166</span>, <span class="seriesInfo">RFC 6365</span>, <span class="seriesInfo">DOI 10.17487/RFC6365</span>, <time datetime="2011-09" class="refDate">September 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc6365">https://www.rfc-editor.org/info/rfc6365</a>&gt;</span>. </div>
 </dd>
 <dd class="break"></dd>
 <dt id="BCP72">[BCP72]</dt>
-      <dd>
+        <dd>
 <div class="refInstance">Best Current Practice 72, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp72">https://www.rfc-editor.org/info/bcp72</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
 </div>
 <div class="refInstance" id="RFC3552">
-          <span class="refAuthor">Rescorla, E.</span> and <span class="refAuthor">B. Korver</span>, <span class="refTitle">"Guidelines for Writing RFC Text on Security Considerations"</span>, <span class="seriesInfo">BCP 72</span>, <span class="seriesInfo">RFC 3552</span>, <span class="seriesInfo">DOI 10.17487/RFC3552</span>, <time datetime="2003-07" class="refDate">July 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc3552">https://www.rfc-editor.org/info/rfc3552</a>&gt;</span>. </div>
+            <span class="refAuthor">Rescorla, E.</span> and <span class="refAuthor">B. Korver</span>, <span class="refTitle">"Guidelines for Writing RFC Text on Security Considerations"</span>, <span class="seriesInfo">BCP 72</span>, <span class="seriesInfo">RFC 3552</span>, <span class="seriesInfo">DOI 10.17487/RFC3552</span>, <time datetime="2003-07" class="refDate">July 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc3552">https://www.rfc-editor.org/info/rfc3552</a>&gt;</span>. </div>
 <div class="refInstance" id="RFC9416">
-          <span class="refAuthor">Gont, F.</span> and <span class="refAuthor">I. Arce</span>, <span class="refTitle">"Security Considerations for Transient Numeric Identifiers Employed in Network Protocols"</span>, <span class="seriesInfo">BCP 72</span>, <span class="seriesInfo">RFC 9416</span>, <span class="seriesInfo">DOI 10.17487/RFC9416</span>, <time datetime="2023-07" class="refDate">July 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9416">https://www.rfc-editor.org/info/rfc9416</a>&gt;</span>. </div>
+            <span class="refAuthor">Gont, F.</span> and <span class="refAuthor">I. Arce</span>, <span class="refTitle">"Security Considerations for Transient Numeric Identifiers Employed in Network Protocols"</span>, <span class="seriesInfo">BCP 72</span>, <span class="seriesInfo">RFC 9416</span>, <span class="seriesInfo">DOI 10.17487/RFC9416</span>, <time datetime="2023-07" class="refDate">July 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9416">https://www.rfc-editor.org/info/rfc9416</a>&gt;</span>. </div>
 </dd>
 <dd class="break"></dd>
 <dt id="CHECKLIST">[CHECKLIST]</dt>
-      <dd>
+        <dd>
 <span class="refTitle">"Operations and Management Review Checklist"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://github.com/IETF-OPS-DIR/Review-Template/tree/main">https://github.com/IETF-OPS-DIR/Review-Template/tree/main</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-core-dns-over-coap">[I-D.ietf-core-dns-over-coap]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Lenders, M. S.</span>, <span class="refAuthor">Amsüss, C.</span>, <span class="refAuthor">Gündoğan, C.</span>, <span class="refAuthor">Schmidt, T. C.</span>, and <span class="refAuthor">M. Wählisch</span>, <span class="refTitle">"DNS over CoAP (DoC)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-core-dns-over-coap-20</span>, <time datetime="2025-09-16" class="refDate">16 September 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-core-dns-over-coap-20">https://datatracker.ietf.org/doc/html/draft-ietf-core-dns-over-coap-20</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-lamps-dilithium-certificates">[I-D.ietf-lamps-dilithium-certificates]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Massimo, J.</span>, <span class="refAuthor">Kampanakis, P.</span>, <span class="refAuthor">Turner, S.</span>, and <span class="refAuthor">B. Westerbaan</span>, <span class="refTitle">"Internet X.509 Public Key Infrastructure - Algorithm Identifiers for the Module-Lattice-Based Digital Signature Algorithm (ML-DSA)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-lamps-dilithium-certificates-13</span>, <time datetime="2025-09-30" class="refDate">30 September 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-lamps-dilithium-certificates-13">https://datatracker.ietf.org/doc/html/draft-ietf-lamps-dilithium-certificates-13</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-netmod-rfc8407bis">[I-D.ietf-netmod-rfc8407bis]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Boucadair, M.</span>, and <span class="refAuthor">Q. Wu</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of Documents Containing YANG Data Models"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-netmod-rfc8407bis-28</span>, <time datetime="2025-06-05" class="refDate">5 June 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-28">https://datatracker.ietf.org/doc/html/draft-ietf-netmod-rfc8407bis-28</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-nmop-network-incident-yang">[I-D.ietf-nmop-network-incident-yang]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Hu, T.</span>, <span class="refAuthor">Contreras, L. M.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Davis, N.</span>, and <span class="refAuthor">C. Feng</span>, <span class="refTitle">"A YANG Data Model for Network Incident Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-network-incident-yang-06</span>, <time datetime="2025-10-12" class="refDate">12 October 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-06">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-06</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-nmop-terminology">[I-D.ietf-nmop-terminology]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Davis, N.</span>, <span class="refAuthor">Farrel, A.</span>, <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Wu, Q.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"Some Key Terms for Network Fault and Problem Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-terminology-23</span>, <time datetime="2025-08-18" class="refDate">18 August 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-terminology-23">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-terminology-23</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-opsawg-oam-characterization">[I-D.ietf-opsawg-oam-characterization]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-13</span>, <time datetime="2025-10-20" class="refDate">20 October 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-13">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-13</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-quic-qlog-main-schema">[I-D.ietf-quic-qlog-main-schema]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Marx, R.</span>, <span class="refAuthor">Niccolini, L.</span>, <span class="refAuthor">Seemann, M.</span>, and <span class="refAuthor">L. Pardue</span>, <span class="refTitle">"qlog: Structured Logging for Network Protocols"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-qlog-main-schema-13</span>, <time datetime="2025-10-20" class="refDate">20 October 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-qlog-main-schema-13">https://datatracker.ietf.org/doc/html/draft-ietf-quic-qlog-main-schema-13</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-suit-mti">[I-D.ietf-suit-mti]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Moran, B.</span>, <span class="refAuthor">Rønningstad, O.</span>, and <span class="refAuthor">A. Tsukamoto</span>, <span class="refTitle">"Cryptographic Algorithms for Internet of Things (IoT) Devices"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-suit-mti-23</span>, <time datetime="2025-07-22" class="refDate">22 July 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-suit-mti-23">https://datatracker.ietf.org/doc/html/draft-ietf-suit-mti-23</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-tcpm-prr-rfc6937bis">[I-D.ietf-tcpm-prr-rfc6937bis]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Mathis, M.</span>, <span class="refAuthor">Cardwell, N.</span>, <span class="refAuthor">Cheng, Y.</span>, and <span class="refAuthor">N. Dukkipati</span>, <span class="refTitle">"Proportional Rate Reduction"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-tcpm-prr-rfc6937bis-21</span>, <time datetime="2025-06-22" class="refDate">22 June 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-prr-rfc6937bis-21">https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-prr-rfc6937bis-21</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IESG-STATEMENT">[IESG-STATEMENT]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">IESG</span>, <span class="refTitle">"Writable MIB Module IESG Statement"</span>, <time datetime="2014-03-02" class="refDate">2 March 2014</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/">https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IETF-HACKATHONS">[IETF-HACKATHONS]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">IETF</span>, <span class="refTitle">"IETF Hackathons"</span>, <time datetime="2025-05-01" class="refDate">1 May 2025</time>, <span>&lt;<a href="https://www.ietf.org/meeting/hackathons/">https://www.ietf.org/meeting/hackathons/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IETF-OPS-Dir">[IETF-OPS-Dir]</dt>
-      <dd>
+        <dd>
 <span class="refTitle">"Ops Directorate (opsdir)"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/group/opsdir/about/">https://datatracker.ietf.org/group/opsdir/about/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="NEMOPS">[NEMOPS]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Hardaker, W.</span> and <span class="refAuthor">D. Dhody</span>, <span class="refTitle">"Report from the IAB Workshop on the Next Era of Network Management Operations (NEMOPS)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-iab-nemops-workshop-report-04</span>, <time datetime="2025-08-29" class="refDate">29 August 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-iab-nemops-workshop-report-04">https://datatracker.ietf.org/doc/html/draft-iab-nemops-workshop-report-04</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="NEMOPS-WORKSHOP">[NEMOPS-WORKSHOP]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">IAB</span>, <span class="refTitle">"IAB workshop on the Next Era of Network Management Operations"</span>, <time datetime="2024-12" class="refDate">December 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/group/nemopsws/about/">https://datatracker.ietf.org/group/nemopsws/about/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC1034">[RFC1034]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Mockapetris, P.</span>, <span class="refTitle">"Domain names - concepts and facilities"</span>, <span class="seriesInfo">STD 13</span>, <span class="seriesInfo">RFC 1034</span>, <span class="seriesInfo">DOI 10.17487/RFC1034</span>, <time datetime="1987-11" class="refDate">November 1987</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1034">https://www.rfc-editor.org/rfc/rfc1034</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC1958">[RFC1958]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Carpenter, B., Ed.</span>, <span class="refTitle">"Architectural Principles of the Internet"</span>, <span class="seriesInfo">RFC 1958</span>, <span class="seriesInfo">DOI 10.17487/RFC1958</span>, <time datetime="1996-06" class="refDate">June 1996</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1958">https://www.rfc-editor.org/rfc/rfc1958</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2113">[RFC2113]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Katz, D.</span>, <span class="refTitle">"IP Router Alert Option"</span>, <span class="seriesInfo">RFC 2113</span>, <span class="seriesInfo">DOI 10.17487/RFC2113</span>, <time datetime="1997-02" class="refDate">February 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2113">https://www.rfc-editor.org/rfc/rfc2113</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2205">[RFC2205]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Braden, R., Ed.</span>, <span class="refAuthor">Zhang, L.</span>, <span class="refAuthor">Berson, S.</span>, <span class="refAuthor">Herzog, S.</span>, and <span class="refAuthor">S. Jamin</span>, <span class="refTitle">"Resource ReSerVation Protocol (RSVP) -- Version 1 Functional Specification"</span>, <span class="seriesInfo">RFC 2205</span>, <span class="seriesInfo">DOI 10.17487/RFC2205</span>, <time datetime="1997-09" class="refDate">September 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2205">https://www.rfc-editor.org/rfc/rfc2205</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2439">[RFC2439]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Villamizar, C.</span>, <span class="refAuthor">Chandra, R.</span>, and <span class="refAuthor">R. Govindan</span>, <span class="refTitle">"BGP Route Flap Damping"</span>, <span class="seriesInfo">RFC 2439</span>, <span class="seriesInfo">DOI 10.17487/RFC2439</span>, <time datetime="1998-11" class="refDate">November 1998</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2439">https://www.rfc-editor.org/rfc/rfc2439</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2711">[RFC2711]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Partridge, C.</span> and <span class="refAuthor">A. Jackson</span>, <span class="refTitle">"IPv6 Router Alert Option"</span>, <span class="seriesInfo">RFC 2711</span>, <span class="seriesInfo">DOI 10.17487/RFC2711</span>, <time datetime="1999-10" class="refDate">October 1999</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2711">https://www.rfc-editor.org/rfc/rfc2711</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2975">[RFC2975]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Aboba, B.</span>, <span class="refAuthor">Arkko, J.</span>, and <span class="refAuthor">D. Harrington</span>, <span class="refTitle">"Introduction to Accounting Management"</span>, <span class="seriesInfo">RFC 2975</span>, <span class="seriesInfo">DOI 10.17487/RFC2975</span>, <time datetime="2000-10" class="refDate">October 2000</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2975">https://www.rfc-editor.org/rfc/rfc2975</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC3139">[RFC3139]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Sanchez, L.</span>, <span class="refAuthor">McCloghrie, K.</span>, and <span class="refAuthor">J. Saperia</span>, <span class="refTitle">"Requirements for Configuration Management of IP-based Networks"</span>, <span class="seriesInfo">RFC 3139</span>, <span class="seriesInfo">DOI 10.17487/RFC3139</span>, <time datetime="2001-06" class="refDate">June 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3139">https://www.rfc-editor.org/rfc/rfc3139</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC3198">[RFC3198]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Westerinen, A.</span>, <span class="refAuthor">Schnizlein, J.</span>, <span class="refAuthor">Strassner, J.</span>, <span class="refAuthor">Scherling, M.</span>, <span class="refAuthor">Quinn, B.</span>, <span class="refAuthor">Herzog, S.</span>, <span class="refAuthor">Huynh, A.</span>, <span class="refAuthor">Carlson, M.</span>, <span class="refAuthor">Perry, J.</span>, and <span class="refAuthor">S. Waldbusser</span>, <span class="refTitle">"Terminology for Policy-Based Management"</span>, <span class="seriesInfo">RFC 3198</span>, <span class="seriesInfo">DOI 10.17487/RFC3198</span>, <time datetime="2001-11" class="refDate">November 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3198">https://www.rfc-editor.org/rfc/rfc3198</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC3444">[RFC3444]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Pras, A.</span> and <span class="refAuthor">J. Schoenwaelder</span>, <span class="refTitle">"On the Difference between Information Models and Data Models"</span>, <span class="seriesInfo">RFC 3444</span>, <span class="seriesInfo">DOI 10.17487/RFC3444</span>, <time datetime="2003-01" class="refDate">January 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3444">https://www.rfc-editor.org/rfc/rfc3444</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC3535">[RFC3535]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Schoenwaelder, J.</span>, <span class="refTitle">"Overview of the 2002 IAB Network Management Workshop"</span>, <span class="seriesInfo">RFC 3535</span>, <span class="seriesInfo">DOI 10.17487/RFC3535</span>, <time datetime="2003-05" class="refDate">May 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3535">https://www.rfc-editor.org/rfc/rfc3535</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC4251">[RFC4251]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Ylonen, T.</span> and <span class="refAuthor">C. Lonvick, Ed.</span>, <span class="refTitle">"The Secure Shell (SSH) Protocol Architecture"</span>, <span class="seriesInfo">RFC 4251</span>, <span class="seriesInfo">DOI 10.17487/RFC4251</span>, <time datetime="2006-01" class="refDate">January 2006</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4251">https://www.rfc-editor.org/rfc/rfc4251</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5218">[RFC5218]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Thaler, D.</span> and <span class="refAuthor">B. Aboba</span>, <span class="refTitle">"What Makes for a Successful Protocol?"</span>, <span class="seriesInfo">RFC 5218</span>, <span class="seriesInfo">DOI 10.17487/RFC5218</span>, <time datetime="2008-07" class="refDate">July 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5218">https://www.rfc-editor.org/rfc/rfc5218</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5321">[RFC5321]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Klensin, J.</span>, <span class="refTitle">"Simple Mail Transfer Protocol"</span>, <span class="seriesInfo">RFC 5321</span>, <span class="seriesInfo">DOI 10.17487/RFC5321</span>, <time datetime="2008-10" class="refDate">October 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5321">https://www.rfc-editor.org/rfc/rfc5321</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5415">[RFC5415]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Calhoun, P., Ed.</span>, <span class="refAuthor">Montemurro, M., Ed.</span>, and <span class="refAuthor">D. Stanley, Ed.</span>, <span class="refTitle">"Control And Provisioning of Wireless Access Points (CAPWAP) Protocol Specification"</span>, <span class="seriesInfo">RFC 5415</span>, <span class="seriesInfo">DOI 10.17487/RFC5415</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5415">https://www.rfc-editor.org/rfc/rfc5415</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5424">[RFC5424]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Gerhards, R.</span>, <span class="refTitle">"The Syslog Protocol"</span>, <span class="seriesInfo">RFC 5424</span>, <span class="seriesInfo">DOI 10.17487/RFC5424</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5424">https://www.rfc-editor.org/rfc/rfc5424</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5706">[RFC5706]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Harrington, D.</span>, <span class="refTitle">"Guidelines for Considering Operations and Management of New Protocols and Protocol Extensions"</span>, <span class="seriesInfo">RFC 5706</span>, <span class="seriesInfo">DOI 10.17487/RFC5706</span>, <time datetime="2009-11" class="refDate">November 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5706">https://www.rfc-editor.org/rfc/rfc5706</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5884">[RFC5884]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Aggarwal, R.</span>, <span class="refAuthor">Kompella, K.</span>, <span class="refAuthor">Nadeau, T.</span>, and <span class="refAuthor">G. Swallow</span>, <span class="refTitle">"Bidirectional Forwarding Detection (BFD) for MPLS Label Switched Paths (LSPs)"</span>, <span class="seriesInfo">RFC 5884</span>, <span class="seriesInfo">DOI 10.17487/RFC5884</span>, <time datetime="2010-06" class="refDate">June 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5884">https://www.rfc-editor.org/rfc/rfc5884</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6020">[RFC6020]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"YANG - A Data Modeling Language for the Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6020</span>, <span class="seriesInfo">DOI 10.17487/RFC6020</span>, <time datetime="2010-10" class="refDate">October 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6020">https://www.rfc-editor.org/rfc/rfc6020</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6241">[RFC6241]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Enns, R., Ed.</span>, <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refAuthor">Schoenwaelder, J., Ed.</span>, and <span class="refAuthor">A. Bierman, Ed.</span>, <span class="refTitle">"Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6241</span>, <span class="seriesInfo">DOI 10.17487/RFC6241</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6241">https://www.rfc-editor.org/rfc/rfc6241</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6291">[RFC6291]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Andersson, L.</span>, <span class="refAuthor">van Helvoort, H.</span>, <span class="refAuthor">Bonica, R.</span>, <span class="refAuthor">Romascanu, D.</span>, and <span class="refAuthor">S. Mansfield</span>, <span class="refTitle">"Guidelines for the Use of the "OAM" Acronym in the IETF"</span>, <span class="seriesInfo">BCP 161</span>, <span class="seriesInfo">RFC 6291</span>, <span class="seriesInfo">DOI 10.17487/RFC6291</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6291">https://www.rfc-editor.org/rfc/rfc6291</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6298">[RFC6298]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Paxson, V.</span>, <span class="refAuthor">Allman, M.</span>, <span class="refAuthor">Chu, J.</span>, and <span class="refAuthor">M. Sargent</span>, <span class="refTitle">"Computing TCP's Retransmission Timer"</span>, <span class="seriesInfo">RFC 6298</span>, <span class="seriesInfo">DOI 10.17487/RFC6298</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6298">https://www.rfc-editor.org/rfc/rfc6298</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6390">[RFC6390]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Clark, A.</span> and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"Guidelines for Considering New Performance Metric Development"</span>, <span class="seriesInfo">BCP 170</span>, <span class="seriesInfo">RFC 6390</span>, <span class="seriesInfo">DOI 10.17487/RFC6390</span>, <time datetime="2011-10" class="refDate">October 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6390">https://www.rfc-editor.org/rfc/rfc6390</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6632">[RFC6632]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Ersue, M., Ed.</span> and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"An Overview of the IETF Network Management Standards"</span>, <span class="seriesInfo">RFC 6632</span>, <span class="seriesInfo">DOI 10.17487/RFC6632</span>, <time datetime="2012-06" class="refDate">June 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6632">https://www.rfc-editor.org/rfc/rfc6632</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6709">[RFC6709]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Carpenter, B.</span>, <span class="refAuthor">Aboba, B., Ed.</span>, and <span class="refAuthor">S. Cheshire</span>, <span class="refTitle">"Design Considerations for Protocol Extensions"</span>, <span class="seriesInfo">RFC 6709</span>, <span class="seriesInfo">DOI 10.17487/RFC6709</span>, <time datetime="2012-09" class="refDate">September 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6709">https://www.rfc-editor.org/rfc/rfc6709</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7011">[RFC7011]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Claise, B., Ed.</span>, <span class="refAuthor">Trammell, B., Ed.</span>, and <span class="refAuthor">P. Aitken</span>, <span class="refTitle">"Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information"</span>, <span class="seriesInfo">STD 77</span>, <span class="seriesInfo">RFC 7011</span>, <span class="seriesInfo">DOI 10.17487/RFC7011</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7011">https://www.rfc-editor.org/rfc/rfc7011</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7574">[RFC7574]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bakker, A.</span>, <span class="refAuthor">Petrocco, R.</span>, and <span class="refAuthor">V. Grishchenko</span>, <span class="refTitle">"Peer-to-Peer Streaming Peer Protocol (PPSPP)"</span>, <span class="seriesInfo">RFC 7574</span>, <span class="seriesInfo">DOI 10.17487/RFC7574</span>, <time datetime="2015-07" class="refDate">July 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7574">https://www.rfc-editor.org/rfc/rfc7574</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7950">[RFC7950]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"The YANG 1.1 Data Modeling Language"</span>, <span class="seriesInfo">RFC 7950</span>, <span class="seriesInfo">DOI 10.17487/RFC7950</span>, <time datetime="2016-08" class="refDate">August 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7950">https://www.rfc-editor.org/rfc/rfc7950</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8040">[RFC8040]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Bjorklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"RESTCONF Protocol"</span>, <span class="seriesInfo">RFC 8040</span>, <span class="seriesInfo">DOI 10.17487/RFC8040</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8040">https://www.rfc-editor.org/rfc/rfc8040</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8170">[RFC8170]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Thaler, D., Ed.</span>, <span class="refTitle">"Planning for Protocol Adoption and Subsequent Transitions"</span>, <span class="seriesInfo">RFC 8170</span>, <span class="seriesInfo">DOI 10.17487/RFC8170</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8170">https://www.rfc-editor.org/rfc/rfc8170</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8199">[RFC8199]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bogdanovic, D.</span>, <span class="refAuthor">Claise, B.</span>, and <span class="refAuthor">C. Moberg</span>, <span class="refTitle">"YANG Module Classification"</span>, <span class="seriesInfo">RFC 8199</span>, <span class="seriesInfo">DOI 10.17487/RFC8199</span>, <time datetime="2017-07" class="refDate">July 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8199">https://www.rfc-editor.org/rfc/rfc8199</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8299">[RFC8299]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Wu, Q., Ed.</span>, <span class="refAuthor">Litkowski, S.</span>, <span class="refAuthor">Tomotaki, L.</span>, and <span class="refAuthor">K. Ogaki</span>, <span class="refTitle">"YANG Data Model for L3VPN Service Delivery"</span>, <span class="seriesInfo">RFC 8299</span>, <span class="seriesInfo">DOI 10.17487/RFC8299</span>, <time datetime="2018-01" class="refDate">January 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8299">https://www.rfc-editor.org/rfc/rfc8299</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8309">[RFC8309]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Liu, W.</span>, and <span class="refAuthor">A. Farrel</span>, <span class="refTitle">"Service Models Explained"</span>, <span class="seriesInfo">RFC 8309</span>, <span class="seriesInfo">DOI 10.17487/RFC8309</span>, <time datetime="2018-01" class="refDate">January 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8309">https://www.rfc-editor.org/rfc/rfc8309</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8340">[RFC8340]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bjorklund, M.</span> and <span class="refAuthor">L. Berger, Ed.</span>, <span class="refTitle">"YANG Tree Diagrams"</span>, <span class="seriesInfo">BCP 215</span>, <span class="seriesInfo">RFC 8340</span>, <span class="seriesInfo">DOI 10.17487/RFC8340</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8340">https://www.rfc-editor.org/rfc/rfc8340</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8341">[RFC8341]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bierman, A.</span> and <span class="refAuthor">M. Bjorklund</span>, <span class="refTitle">"Network Configuration Access Control Model"</span>, <span class="seriesInfo">STD 91</span>, <span class="seriesInfo">RFC 8341</span>, <span class="seriesInfo">DOI 10.17487/RFC8341</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8341">https://www.rfc-editor.org/rfc/rfc8341</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8466">[RFC8466]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Wen, B.</span>, <span class="refAuthor">Fioccola, G., Ed.</span>, <span class="refAuthor">Xie, C.</span>, and <span class="refAuthor">L. Jalil</span>, <span class="refTitle">"A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service Delivery"</span>, <span class="seriesInfo">RFC 8466</span>, <span class="seriesInfo">DOI 10.17487/RFC8466</span>, <time datetime="2018-10" class="refDate">October 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8466">https://www.rfc-editor.org/rfc/rfc8466</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8791">[RFC8791]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Björklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"YANG Data Structure Extensions"</span>, <span class="seriesInfo">RFC 8791</span>, <span class="seriesInfo">DOI 10.17487/RFC8791</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8791">https://www.rfc-editor.org/rfc/rfc8791</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8799">[RFC8799]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Carpenter, B.</span> and <span class="refAuthor">B. Liu</span>, <span class="refTitle">"Limited Domains and Internet Protocols"</span>, <span class="seriesInfo">RFC 8799</span>, <span class="seriesInfo">DOI 10.17487/RFC8799</span>, <time datetime="2020-07" class="refDate">July 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8799">https://www.rfc-editor.org/rfc/rfc8799</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9182">[RFC9182]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Barguil, S.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Munoz, L.</span>, and <span class="refAuthor">A. Aguado</span>, <span class="refTitle">"A YANG Network Data Model for Layer 3 VPNs"</span>, <span class="seriesInfo">RFC 9182</span>, <span class="seriesInfo">DOI 10.17487/RFC9182</span>, <time datetime="2022-02" class="refDate">February 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9182">https://www.rfc-editor.org/rfc/rfc9182</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9291">[RFC9291]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Barguil, S.</span>, and <span class="refAuthor">L. Munoz</span>, <span class="refTitle">"A YANG Network Data Model for Layer 2 VPNs"</span>, <span class="seriesInfo">RFC 9291</span>, <span class="seriesInfo">DOI 10.17487/RFC9291</span>, <time datetime="2022-09" class="refDate">September 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9291">https://www.rfc-editor.org/rfc/rfc9291</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9424">[RFC9424]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Paine, K.</span>, <span class="refAuthor">Whitehouse, O.</span>, <span class="refAuthor">Sellwood, J.</span>, and <span class="refAuthor">A. Shaw</span>, <span class="refTitle">"Indicators of Compromise (IoCs) and Their Role in Attack Defence"</span>, <span class="seriesInfo">RFC 9424</span>, <span class="seriesInfo">DOI 10.17487/RFC9424</span>, <time datetime="2023-08" class="refDate">August 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9424">https://www.rfc-editor.org/rfc/rfc9424</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9552">[RFC9552]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Talaulikar, K., Ed.</span>, <span class="refTitle">"Distribution of Link-State and Traffic Engineering Information Using BGP"</span>, <span class="seriesInfo">RFC 9552</span>, <span class="seriesInfo">DOI 10.17487/RFC9552</span>, <time datetime="2023-12" class="refDate">December 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9552">https://www.rfc-editor.org/rfc/rfc9552</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9805">[RFC9805]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bonica, R.</span>, <span class="refTitle">"Deprecation of the IPv6 Router Alert Option for New Protocols"</span>, <span class="seriesInfo">RFC 9805</span>, <span class="seriesInfo">DOI 10.17487/RFC9805</span>, <time datetime="2025-06" class="refDate">June 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9805">https://www.rfc-editor.org/rfc/rfc9805</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9877">[RFC9877]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Singh, J.</span> and <span class="refAuthor">T. Harrison</span>, <span class="refTitle">"Registration Data Access Protocol (RDAP) Extension for Geofeed Data"</span>, <span class="seriesInfo">RFC 9877</span>, <span class="seriesInfo">DOI 10.17487/RFC9877</span>, <time datetime="2025-10" class="refDate">October 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9877">https://www.rfc-editor.org/rfc/rfc9877</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="SECOPS">[SECOPS]</dt>
-    <dd>
+      <dd>
 <span class="refTitle">"NICCS Glossary"</span>, <time datetime="2025-08" class="refDate">August 2025</time>, <span>&lt;<a href="https://niccs.cisa.gov/resources/glossary">https://niccs.cisa.gov/resources/glossary</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
+</section>
+</div>
 </section>
 </div>
 <div id="sec-checklist">
