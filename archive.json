@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-14T00:56:51.659397+00:00",
+  "timestamp": "2025-12-16T00:53:15.559751+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2221,7 +2221,7 @@
       "id": "I_kwDOOWPBqs7RcEQW",
       "title": "An RFC example that follows 5706/Template",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/141",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -2232,8 +2232,8 @@
       ],
       "body": "Maybe consider citing https://datatracker.ietf.org/doc/html/rfc9552#section-8 as it exemplifies how the template is followed?",
       "createdAt": "2025-10-14T12:51:12Z",
-      "updatedAt": "2025-11-28T05:54:41Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-15T20:17:07Z",
+      "closedAt": "2025-12-15T20:17:07Z",
       "comments": [
         {
           "author": "boucadair",
@@ -2668,7 +2668,7 @@
       "id": "I_kwDOOWPBqs7a2BSP",
       "title": "\"write a MIB module\" approach",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/162",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -2679,8 +2679,8 @@
       ],
       "body": "Section 5 has the following:\n\n> The \"write a MIB module\" approach to considering\n>    management often focuses on monitoring a protocol endpoint on a\n>    single device.  A MIB module document typically only considers\n>    monitoring properties observable at one end, while the document does\n>    not really cover managing the *protocol* (the coordination of\n>    multiple ends) and does not even come near managing the *service*\n>    (which includes a lot of stuff that is very far away from the box).\n>    This scenario reflects a common operational concern: the inability to\n>    manage both ends of a connection effectively.  As noted in [RFC3535],\n>    \"MIB modules can often be characterized as a list of ingredients\n>    without a recipe\".\n\nI'm afraid the main message is lost with the MIB example, while this can be simplified by extracting key considerations for authors.\n\nAlso, this text can be misinterpreted as if the doc requires a MIB/YANG in the spec itself. The preamble of Section 5 is worth a refresh, IMO.",
       "createdAt": "2025-11-27T13:35:58Z",
-      "updatedAt": "2025-11-28T05:54:20Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-15T20:15:52Z",
+      "closedAt": "2025-12-15T20:15:52Z",
       "comments": [
         {
           "author": "bclaise",
@@ -2696,7 +2696,7 @@
       "id": "I_kwDOOWPBqs7a9-Ob",
       "title": "\"4.7.  Verifying Correct Operation\" vs \"5.5.1.  Verifying Correct Operation\"",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/166",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -2705,8 +2705,8 @@
       ],
       "body": "Any reason why we have these discussed in two places? I wonder whether we can merge these two under 4.7.\n\n\n```\n4.7.  Verifying Correct Operation\n\n   Protocol Designers should consider techniques for testing the effect\n   that the protocol has had on the network by sending data through the\n   network and observing its behavior (a.k.a., active monitoring).\n   Protocol Designers should consider how the correct end- to-end\n   operation of the New Protocol or Protocol Extension in the network\n   can be tested actively and passively, and how the correct data or\n   forwarding plane function of each network element can be verified to\n   be working properly with the New Protocol or Protocol Extension.\n   Which metrics are of interest?\n\n   Having simple protocol status and health indicators on network\n   devices is a recommended means to check correct operation.\n```\n\n```\n5.5.1.  Verifying Correct Operation\n\n   An important function that should be provided is guidance on how to\n   verify the correct operation of a protocol.  A Protocol Designer\n   could suggest techniques for testing the impact of the protocol on\n   the network before it is deployed as well as techniques for testing\n   the effect that the protocol has had on the network after being\n   deployed.\n\n   Protocol Designers should consider how to test the correct end-to-end\n   operation of the service or network, how to verify the correct\n   functioning of the protocol, and whether that is verified by testing\n   the service function and/or by testing the forwarding function of\n   each network element.  This may be achieved through status and\n   statistical information gathered from devices.\n```",
       "createdAt": "2025-11-28T05:42:09Z",
-      "updatedAt": "2025-11-28T05:54:27Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-15T20:16:47Z",
+      "closedAt": "2025-12-15T20:16:47Z",
       "comments": []
     },
     {
@@ -2714,7 +2714,7 @@
       "id": "I_kwDOOWPBqs7dIXx4",
       "title": "Update BCP 22 (Guide for Internet Standards Writers)",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/171",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -2723,8 +2723,8 @@
       ],
       "body": "RFC 2360 also known as [BCP 22](https://datatracker.ietf.org/doc/bcp22/) says: \n\n> 2.14  Network Management Considerations\n> \n>    When relevant, each standard needs to discuss how to manage the\n>    protocol being specified.  This management process should be\n>    compatible with the current IETF Standard management protocol.  In\n>    addition, a MIB must be defined within the standard or in a companion\n>    document.  The MIB must be compatible with current Structure of\n>    Management Information (SMI) and parseable using a tool such as\n>    SMICng.  Where management or a MIB is not necessary this section of\n>    the standard should explain the reason it is not relevant to the\n>    protocol.\n> \n> 2.15  Scalability Considerations\n> \n>    The standard should establish the limitations on the scale of use,\n>    e.g., tens of millions of sessions, gigabits per second, etc., and\n>    establish limits on the resources used, e.g., round trip time,\n>    computing resources, etc.  This is important because it establishes\n>    the ability of the network to accommodate the number of users and the\n>    complexity of their relations.  The STD 53/RFC 1939 has an example of\n>    such a section.  If this is not applicable to the protocol, an\n>    explanation of why not should be included.\n\nI guess we should mark the bis as updating 2.14, in particular.",
       "createdAt": "2025-12-09T09:18:46Z",
-      "updatedAt": "2025-12-09T13:51:48Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-15T20:19:13Z",
+      "closedAt": "2025-12-15T20:19:13Z",
       "comments": [
         {
           "author": "xorrkaz",
@@ -12536,24 +12536,26 @@
       "id": "PR_kwDOOWPBqs64Ts_Y",
       "title": "Mention that this document updates RFC2360.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/173",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "It is no longer required to create MIBs for New Protocols. (#171)",
       "createdAt": "2025-12-11T09:01:28Z",
-      "updatedAt": "2025-12-12T01:20:22Z",
+      "updatedAt": "2025-12-15T20:19:14Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "jclarke-update-bcp-22",
-      "headRefOid": "0091e55a64cb5ff4253d6a6f4081265bea4c7413",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "0456e97b6d30fc8c04bfe60e224b1897dfcbbfba",
+      "closedAt": "2025-12-15T20:19:12Z",
+      "mergedAt": "2025-12-15T20:19:12Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "f9f6b89585c52cac6b1fd8d5fce7f0196d3addb9"
+      },
       "comments": [
         {
           "author": "xorrkaz",
@@ -12636,6 +12638,26 @@
               "updatedAt": "2025-12-12T01:20:22Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7VIf0S",
+          "commit": {
+            "abbreviatedOid": "0456e97"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-14T19:58:25Z",
+          "updatedAt": "2025-12-14T19:58:25Z",
+          "comments": [
+            {
+              "originalPosition": 25,
+              "body": "This happens automatically when the document is rendered.",
+              "createdAt": "2025-12-14T19:58:25Z",
+              "updatedAt": "2025-12-14T19:58:25Z"
+            }
+          ]
         }
       ]
     },
@@ -12644,7 +12666,7 @@
       "id": "PR_kwDOOWPBqs64T_9C",
       "title": "Less SNMP, More protocol-agnostic reco",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/174",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -12653,17 +12675,19 @@
       ],
       "body": "",
       "createdAt": "2025-12-11T09:26:14Z",
-      "updatedAt": "2025-12-12T05:23:02Z",
+      "updatedAt": "2025-12-15T20:18:37Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "Less-SNMP,-More-protocol-agnostic-reco",
-      "headRefOid": "379d509b61e877ab69d0b062511500f2e6a4de36",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "556ad924c52d022997c6fec4048ce0a050aa1075",
+      "closedAt": "2025-12-15T20:18:35Z",
+      "mergedAt": "2025-12-15T20:18:35Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "2b447fddfcbf5b946554b150226bcf6da446158f"
+      },
       "comments": [],
       "reviews": [
         {
@@ -12744,6 +12768,26 @@
               "updatedAt": "2025-12-12T01:17:48Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7VYgZk",
+          "commit": {
+            "abbreviatedOid": "379d509"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-15T20:17:51Z",
+          "updatedAt": "2025-12-15T20:17:52Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\r\n   Notifications (e.g., SNMP traps and informs, syslog, or New Protocol specific mechanisms) can alert an operator when an\r\n```",
+              "createdAt": "2025-12-15T20:17:51Z",
+              "updatedAt": "2025-12-15T20:17:52Z"
+            }
+          ]
         }
       ]
     },
@@ -12752,7 +12796,7 @@
       "id": "PR_kwDOOWPBqs64VE4x",
       "title": "examples of spec with good ops cons documentation",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/175",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -12761,17 +12805,19 @@
       ],
       "body": "",
       "createdAt": "2025-12-11T10:52:31Z",
-      "updatedAt": "2025-12-11T11:10:35Z",
+      "updatedAt": "2025-12-15T20:17:08Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "boucadair-patch-2",
-      "headRefOid": "dcc562c0340aff89c3d964d3cc97fa64baefe0db",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "156d58accc69d0e14db2d080f3e705d583c9cd26",
+      "closedAt": "2025-12-15T20:17:06Z",
+      "mergedAt": "2025-12-15T20:17:06Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "54754f5a3eb26996e12e7b324e94171f3ab9fb17"
+      },
       "comments": [
         {
           "author": "boucadair",
@@ -12882,7 +12928,7 @@
       "id": "PR_kwDOOWPBqs64WwGj",
       "title": "consolidated correct behavior verification",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/176",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -12891,17 +12937,19 @@
       ],
       "body": "Merging both sections with adjustment to generalize the applicability. \r\n\r\nThe OLD text (inherited here) is a bit verbose, but still OK.",
       "createdAt": "2025-12-11T13:10:27Z",
-      "updatedAt": "2025-12-12T05:18:35Z",
+      "updatedAt": "2025-12-15T20:16:47Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "correct-behavior",
       "headRefOid": "a9fd7d4d8c86656b41ebda7e8d741f6c8f765c0c",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-12-15T20:16:46Z",
+      "mergedAt": "2025-12-15T20:16:46Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "74c45d92896ec12a9701a573200c05dd31f11de7"
+      },
       "comments": [],
       "reviews": [
         {
@@ -12980,7 +13028,7 @@
       "id": "PR_kwDOOWPBqs64WzxS",
       "title": "\"write a MIB module\" is a distraction",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/177",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -12989,17 +13037,19 @@
       ],
       "body": "",
       "createdAt": "2025-12-11T13:15:39Z",
-      "updatedAt": "2025-12-12T05:15:39Z",
+      "updatedAt": "2025-12-15T20:15:54Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d75f75fde3172888d3935a2bda6cf2310187a120",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "write-a-MIB-module",
       "headRefOid": "3026baa3a81b298ef12cf06083de17589a01dae9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-12-15T20:15:51Z",
+      "mergedAt": "2025-12-15T20:15:51Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "fd84cf21f08c34d06cd38b44d1866b785be88d42"
+      },
       "comments": [],
       "reviews": [
         {
