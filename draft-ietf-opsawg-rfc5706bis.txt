@@ -608,7 +608,9 @@ Table of Contents
       protocols that require the router to take some packets off the
       fast-forwarding path.  Yet, Router Alert has its own problems in
       impacting router performance and security.  Refer to [RFC9805] for
-      deprecation of the IPv6 Router Alert Option for New Protocols.
+      deprecation of the IPv6 Router Alert Option for New Protocols and
+      Section 4.8 of RFC 7126 [BCP186] for threats and advice related to
+      IPv4 Router Alert.
 
 4.5.  Impact on Network Operation
 
@@ -1666,6 +1668,15 @@ Table of Contents
               Internationalization in the IETF", BCP 166, RFC 6365,
               DOI 10.17487/RFC6365, September 2011,
               <https://www.rfc-editor.org/info/rfc6365>.
+
+   [BCP186]   Best Current Practice 186,
+              <https://www.rfc-editor.org/info/bcp186>.
+              At the time of writing, this BCP comprises the following:
+
+              Gont, F., Atkinson, R., and C. Pignataro, "Recommendations
+              on Filtering of IPv4 Packets Containing IPv4 Options",
+              BCP 186, RFC 7126, DOI 10.17487/RFC7126, February 2014,
+              <https://www.rfc-editor.org/info/rfc7126>.
 
    [BCP72]    Best Current Practice 72,
               <https://www.rfc-editor.org/info/bcp72>.
