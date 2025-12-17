@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 19 June 2026                                 Old Dog Consulting
+Expires: 20 June 2026                                 Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        16 December 2025
+                                                        17 December 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 June 2026.
+   This Internet-Draft will expire on 20 June 2026.
 
 Copyright Notice
 
@@ -150,12 +150,12 @@ Table of Contents
    that covers both operational and management considerations, in new
    RFCs in the IETF Stream.  Additionally, this document updates [BCP22]
    on Guide for Internet Standards Writers, specifically Section 2.14 of
-   RFC2360 to obsolete references to mandatory MIBs and instead focus on
-   documenting holistic manageability and operational considerations as
-   described in Section 3.  Further, this document removes outdated
-   references and aligns with current practices, protocols, and
-   technologies used in operating and managing devices, networks, and
-   services.  Refer to Appendix B for more details.
+   RFC 2360 [BCP22] to obsolete references to mandatory MIBs and instead
+   focus on documenting holistic manageability and operational
+   considerations as described in Section 3.  Further, this document
+   removes outdated references and aligns with current practices,
+   protocols, and technologies used in operating and managing devices,
+   networks, and services.  Refer to Appendix B for more details.
 
 1.1.  This Document
 
