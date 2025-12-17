@@ -20,6 +20,9 @@ submissiontype: IETF
 coding: utf-8
 pi: [toc, sortrefs, symrefs]
 
+normative:
+   BCP22:
+
 informative:
   CHECKLIST:
     title: Operations and Management Review Checklist
