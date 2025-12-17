@@ -129,7 +129,7 @@ contributor:
    with new operational and management techniques and mechanisms. It also
    introduces a requirement for an "Operational Considerations"
    section, that covers both operational and management considerations,
-   in new RFCs in the IETF Stream. Additionally, this document updates {{!BCP22}} on Guide for Internet Standards Writers, specifically {{Section 2.14 of RFC2360@BCP22}}
+   in new RFCs in the IETF Stream. Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on Guide for Internet Standards Writers. 
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
    considerations as described in {{sec-doc-req-ietf-spec}}.
    Further, this document removes outdated
