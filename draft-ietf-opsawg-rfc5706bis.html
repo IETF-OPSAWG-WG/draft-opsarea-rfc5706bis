@@ -1886,10 +1886,13 @@ with adequate documentation of operational considerations, including manageabili
    For example, a New Protocol or Protocol Extension that doubles the number of active,
    reachable addresses in a network might have implications for the
    scalability of interior gateway protocols, and such impacts should
-   be evaluated accordingly.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+   be evaluated accordingly. Per Section <a href="https://rfc-editor.org/rfc/rfc2360#section-2.15" class="relref">2.15</a> of RFC 2360 <span>[<a href="#BCP22" class="cite xref">BCP22</a>]</span>, New Protocol or Protocol Extension specifications
+   should establish the limitations on the scale of use and limits on the resources used.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
 <p id="section-4.5-2">If the protocol specification requires changes to end hosts, it should
    also indicate whether safeguards exist to protect networks from
-   potential overload. For instance, a congestion control algorithm must
+   potential overload. Moreover, Per Section <a href="https://rfc-editor.org/rfc/rfc2360#section-2.16" class="relref">2.16</a> of RFC 2360 <span>[<a href="#BCP22" class="cite xref">BCP22</a>]</span>, New Protocol
+   or Protocol Extension specifications should address any possible destabilizing events,
+   and means by which the protocol resists or recovers from them. For instance, a congestion control algorithm must
    comply with <span>[<a href="#BCP133" class="cite xref">BCP133</a>]</span> to prevent congestion collapse and ensure
    network stability.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
 <p id="section-4.5-3">A protocol could send active monitoring packets on the wire. Without careful

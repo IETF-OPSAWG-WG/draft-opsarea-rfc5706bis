@@ -626,13 +626,19 @@ Table of Contents
    example, a New Protocol or Protocol Extension that doubles the number
    of active, reachable addresses in a network might have implications
    for the scalability of interior gateway protocols, and such impacts
-   should be evaluated accordingly.
+   should be evaluated accordingly.  Per Section 2.15 of RFC 2360
+   [BCP22], New Protocol or Protocol Extension specifications should
+   establish the limitations on the scale of use and limits on the
+   resources used.
 
    If the protocol specification requires changes to end hosts, it
    should also indicate whether safeguards exist to protect networks
-   from potential overload.  For instance, a congestion control
-   algorithm must comply with [BCP133] to prevent congestion collapse
-   and ensure network stability.
+   from potential overload.  Moreover, Per Section 2.16 of RFC 2360
+   [BCP22], New Protocol or Protocol Extension specifications should
+   address any possible destabilizing events, and means by which the
+   protocol resists or recovers from them.  For instance, a congestion
+   control algorithm must comply with [BCP133] to prevent congestion
+   collapse and ensure network stability.
 
    A protocol could send active monitoring packets on the wire.  Without
    careful consideration, active monitoring might achieve high accuracy
