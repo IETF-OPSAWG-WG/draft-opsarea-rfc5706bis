@@ -60,6 +60,8 @@ informative:
     title: NICCS Glossary
     date: 2025-08
 
+  BCP186:
+
 author:
  -
     fullname: Benoit Claise
@@ -555,7 +557,8 @@ This document does not describe interoperability requirements. As such, it does 
    for RSVP and other protocols that require the router to take some
    packets off the fast-forwarding path. Yet, Router Alert has its own
    problems in impacting router performance and security. Refer to {{?RFC9805}} for
-   deprecation of the IPv6 Router Alert Option for New Protocols.
+   deprecation of the IPv6 Router Alert Option for New Protocols and
+   {{Section 4.8 of RFC7126@BCP186}} for threats and advice related to IPv4 Router Alert.
 
 ##  Impact on Network Operation {#sec-impact}
 
