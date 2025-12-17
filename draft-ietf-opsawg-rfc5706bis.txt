@@ -275,8 +275,6 @@ Table of Contents
    of this document.  Where appropriate, references are provided for
    further reading or authoritative definitions.
 
-   *  Anomaly: See [I-D.ietf-nmop-terminology].
-
    *  Cause: See [I-D.ietf-nmop-terminology].
 
    *  CLI: Command Line Interface.  A human-oriented interface,
