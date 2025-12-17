@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 18 June 2026                                 Old Dog Consulting
+Expires: 20 June 2026                                 Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        15 December 2025
+                                                        17 December 2025
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 June 2026.
+   This Internet-Draft will expire on 20 June 2026.
 
 Copyright Notice
 
@@ -148,9 +148,9 @@ Table of Contents
    new operational and management techniques and mechanisms.  It also
    introduces a requirement for an "Operational Considerations" section,
    that covers both operational and management considerations, in new
-   RFCs in the IETF Stream.  Additionally, this document updates BCP 22
-   on Guide for Internet Standards Writers, specifically Section 2.14 of
-   [RFC2360] to obsolete references to mandatory MIBs and instead focus
+   RFCs in the IETF Stream.  Additionally, this document updates
+   Section 2.14 of RFC 2360 [BCP22] on Guide for Internet Standards
+   Writers.  to obsolete references to mandatory MIBs and instead focus
    on documenting holistic manageability and operational considerations
    as described in Section 3.  Further, this document removes outdated
    references and aligns with current practices, protocols, and
@@ -1622,9 +1622,13 @@ Table of Contents
 
 10.1.  Normative References
 
-   [RFC2360]  Scott, G., "Guide for Internet Standards Writers", BCP 22,
+   [BCP22]    Best Current Practice 22,
+              <https://www.rfc-editor.org/info/bcp22>.
+              At the time of writing, this BCP comprises the following:
+
+              Scott, G., "Guide for Internet Standards Writers", BCP 22,
               RFC 2360, DOI 10.17487/RFC2360, June 1998,
-              <https://www.rfc-editor.org/rfc/rfc2360>.
+              <https://www.rfc-editor.org/info/rfc2360>.
 
 10.2.  Informative References
 
@@ -1721,9 +1725,9 @@ Table of Contents
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-13, 20 October
+              draft-ietf-opsawg-oam-characterization-14, 16 December
               2025, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              opsawg-oam-characterization-13>.
+              opsawg-oam-characterization-14>.
 
    [I-D.ietf-quic-qlog-main-schema]
               Marx, R., Niccolini, L., Seemann, M., and L. Pardue,
