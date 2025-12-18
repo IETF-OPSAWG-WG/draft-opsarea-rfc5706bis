@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-16T00:53:15.559751+00:00",
+  "timestamp": "2025-12-18T00:48:23.791856+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2761,15 +2761,15 @@
       "id": "I_kwDOOWPBqs7d0Yi-",
       "title": "PR #169 took care of the IPv6 RA but not the IPv4 RA",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/178",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "As such, I would add some text for the IPv4 case as well, citing https://datatracker.ietf.org/doc/bcp186/ ([RFC 7126](https://datatracker.ietf.org/doc/rfc7126/) : Recommendations on Filtering of IPv4 Packets Containing IPv4 Options)",
       "createdAt": "2025-12-12T01:02:31Z",
-      "updatedAt": "2025-12-12T01:02:31Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-17T20:34:56Z",
+      "closedAt": "2025-12-17T20:34:56Z",
       "comments": []
     }
   ],
@@ -12163,7 +12163,7 @@
       "id": "PR_kwDOOWPBqs61-PSe",
       "title": "unused terminology",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/167",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -12172,17 +12172,19 @@
       ],
       "body": "Anomaly is not used in the doc.",
       "createdAt": "2025-11-28T05:54:01Z",
-      "updatedAt": "2025-11-28T08:05:17Z",
+      "updatedAt": "2025-12-17T15:36:47Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "a5fbcd43b3d3bfc0a93625d8090a4a335062136a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "boucadair-patch-1",
       "headRefOid": "bd426fec87a2255efdd7c78cd8d9b59cf881718f",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-12-17T15:36:44Z",
+      "mergedAt": "2025-12-17T15:36:44Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "964e69747378c05433a2e10e441dcbad8c6c5358"
+      },
       "comments": [],
       "reviews": [
         {
@@ -13090,6 +13092,222 @@
               "updatedAt": "2025-12-12T01:23:41Z"
             }
           ]
+        }
+      ]
+    },
+    {
+      "number": 179,
+      "id": "PR_kwDOOWPBqs65OgKn",
+      "title": "Cite / Reference the BCP or the RFC within it?",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/179",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Based on the description of the text on updating the BCP, not the RFC, it seems like the reference ought to be to BCP 22.",
+      "createdAt": "2025-12-16T20:08:06Z",
+      "updatedAt": "2025-12-17T15:36:04Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "f9f6b89585c52cac6b1fd8d5fce7f0196d3addb9",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-20251216",
+      "headRefOid": "3f6fc28ddc137676652b41b68de84a492da46766",
+      "closedAt": "2025-12-17T15:36:02Z",
+      "mergedAt": "2025-12-17T15:36:02Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "42c3df926767e0e62181bfcf6edea873319c1722"
+      },
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "In which case, we ought to update the text to say that the update is to the RFC and not the BCP.\r\nIOW, consistent between the text (what is being updated) and the reference.",
+          "createdAt": "2025-12-16T20:50:55Z",
+          "updatedAt": "2025-12-16T20:50:55Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "You can reconcile both by using \"{{Section 2.14 of RFC2360@BCP22}}\" + add \"BCP22:\" under normative references.",
+          "createdAt": "2025-12-17T10:15:44Z",
+          "updatedAt": "2025-12-17T10:15:44Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think that you missed to make this change indicated in my first reply: \"+ add \"BCP22:\" under normative references\".",
+          "createdAt": "2025-12-17T15:25:40Z",
+          "updatedAt": "2025-12-17T15:25:40Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7VrJXU",
+          "commit": {
+            "abbreviatedOid": "d7c4afb"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "Is this what to do when updating something?  Moreover, the rendered document states:\r\n\r\n>[RFC2360]  Scott, G., \"Guide for Internet Standards Writers\", BCP 22,\r\n              RFC 2360, DOI 10.17487/RFC2360, June 1998,\r\n              <https://www.rfc-editor.org/rfc/rfc2360>.\r\n\r\nSo, the reference is there.  I just having updated a BCP before, so I didn't know if you anchor to the RFC you're actually updating or to the BCP (which might include multiple RFCs).",
+          "createdAt": "2025-12-16T20:40:13Z",
+          "updatedAt": "2025-12-16T20:40:13Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7V2Xd_",
+          "commit": {
+            "abbreviatedOid": "d1e2af5"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-17T13:37:00Z",
+          "updatedAt": "2025-12-17T13:37:01Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n   in new RFCs in the IETF Stream. Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on Guide for Internet Standards Writers. \r\n```",
+              "createdAt": "2025-12-17T13:37:00Z",
+              "updatedAt": "2025-12-17T13:37:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7V3zTc",
+          "commit": {
+            "abbreviatedOid": "e535b88"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-17T15:03:02Z",
+          "updatedAt": "2025-12-17T15:03:03Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n   in new RFCs in the IETF Stream. Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on Guide for Internet Standards Writers.\r\n```",
+              "createdAt": "2025-12-17T15:03:02Z",
+              "updatedAt": "2025-12-17T15:03:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 180,
+      "id": "PR_kwDOOWPBqs65Zmfd",
+      "title": "Add a blurb on the risks of IPv4 Router Alert.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/180",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Addresses #178",
+      "createdAt": "2025-12-17T15:47:12Z",
+      "updatedAt": "2025-12-17T20:34:46Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "964e69747378c05433a2e10e441dcbad8c6c5358",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "jclarke-ipv40-router-alert",
+      "headRefOid": "5ca16803574f99240c2e183dbc6eb7647328a586",
+      "closedAt": "2025-12-17T20:34:44Z",
+      "mergedAt": "2025-12-17T20:34:44Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "b0e05ca765942b175ba86f1dd9b2fc83ffc2429e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7V5qF2",
+          "commit": {
+            "abbreviatedOid": "5ca1680"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-17T16:51:41Z",
+          "updatedAt": "2025-12-17T16:51:41Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7V8ilv",
+          "commit": {
+            "abbreviatedOid": "5ca1680"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Thanks!!",
+          "createdAt": "2025-12-17T19:57:15Z",
+          "updatedAt": "2025-12-17T19:57:15Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 181,
+      "id": "PR_kwDOOWPBqs65ZtAB",
+      "title": "Anchor scalability & stability in BCP22",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/181",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "",
+      "createdAt": "2025-12-17T15:56:13Z",
+      "updatedAt": "2025-12-17T17:00:56Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "964e69747378c05433a2e10e441dcbad8c6c5358",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "c765cdb87706f73c30ceecefc44bd1e6fd1e6609",
+      "closedAt": "2025-12-17T17:00:54Z",
+      "mergedAt": "2025-12-17T17:00:54Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "23dcba81c4d7cfa4216c7b1c878b20f42d5cb9b3"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7V4x80",
+          "commit": {
+            "abbreviatedOid": "c765cdb"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-17T15:58:41Z",
+          "updatedAt": "2025-12-17T15:58:41Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7V5qxU",
+          "commit": {
+            "abbreviatedOid": "c765cdb"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-17T16:52:29Z",
+          "updatedAt": "2025-12-17T16:52:29Z",
+          "comments": []
         }
       ]
     }
