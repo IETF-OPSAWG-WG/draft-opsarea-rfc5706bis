@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-18T00:48:23.791856+00:00",
+  "timestamp": "2026-01-11T00:59:46.357504+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2770,6 +2770,25 @@
       "createdAt": "2025-12-12T01:02:31Z",
       "updatedAt": "2025-12-17T20:34:56Z",
       "closedAt": "2025-12-17T20:34:56Z",
+      "comments": []
+    },
+    {
+      "number": 182,
+      "id": "I_kwDOOWPBqs7iJ0OB",
+      "title": "Bug in appendix A",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/182",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "nits",
+        "ADReview"
+      ],
+      "body": "CURRENT:\n\n>    The decision to incorporate all or part of these items into their\n>    work remains with Protocol Designers and WGs themselves. ##\n>    Documentation Requirements\n> \n>    *  Does the specification include an \"Operational Considerations\"\n>       section?  (Section 3.1)\n> \n>    *  Is this section placed immediately before the Security\n>       Considerations section?  (Section 3.3)\n> \n>    *  If there are no new considerations, does the section include the\n>       appropriate boilerplate with explanation?  (Section 3.2)\n\nI guess this should be:\n\n>    The decision to incorporate all or part of these items into their\n>    work remains with Protocol Designers and WGs themselves.\n> \n>    A.1. Documentation Requirements",
+      "createdAt": "2026-01-08T19:59:37Z",
+      "updatedAt": "2026-01-08T19:59:37Z",
+      "closedAt": null,
       "comments": []
     }
   ],
