@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-11T00:59:46.357504+00:00",
+  "timestamp": "2026-01-13T00:50:16.964247+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -92,6 +92,11 @@
       "name": "ADReview",
       "description": "",
       "color": "3cc8c3"
+    },
+    {
+      "name": "DIR Review",
+      "description": null,
+      "color": "aaaaaa"
     }
   ],
   "issues": [
@@ -2790,6 +2795,68 @@
       "updatedAt": "2026-01-08T19:59:37Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 183,
+      "id": "I_kwDOOWPBqs7i2qu8",
+      "title": "Clarify more about the \"location\" of managers in Section 5",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/183",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [
+        "DIR Review"
+      ],
+      "body": "From Joel Halpern (Genart review):\n\n> In section 5, there is text that asks the document authros to consider where\nthe managers are.\u00a0 I find this expectation confusing.\u00a0 For any protocol I am\nfamiliar with, the managers can be in a variety of different places, delivered\nvia a variety of techniques.\u00a0 None of which considerations are tied to the\nspecific protocol being documented.\u00a0 )e.g. for a routing protocol document,\nwhether the managers are on site or remote, whether the access is via the data\nnetwork or v=ia an out of band network, whether there are or are not\nintermediate controllers are all parameters outside the scope of the routing\nprotocol manageability considerations.)\u00a0 While the text after the bulleted list\nappears to be factual, it also does not appear to be related to the protocol to\nbe described.\u00a0 I suppose one could recommend being careful not to assume in\nmanagability that some single specific management approach will always be\ntaken.\u00a0 But that is not what the sections seems to ask us to do.",
+      "createdAt": "2026-01-12T21:04:27Z",
+      "updatedAt": "2026-01-12T21:04:27Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 184,
+      "id": "I_kwDOOWPBqs7i2ss0",
+      "title": "Focus the text in Section 5.3 to what a Protocol Designer should consider",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/184",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [
+        "DIR Review"
+      ],
+      "body": "From Joel Halpern (Genart review):\n\n>Section 5.3 paragraph 4 is more about how management protocols work than it is\nabout what information should be modeled.\u00a0\u00a0 I am not sure it belongs as a\nconsideration for a protocol document management considerations section.\u00a0 I\npresume it would be in the advice to the designers of whatever management\nmodeling language is used to define the management model, which is not mandated\nto be part of this section.\n\nRelated to this:\n\n>Nit: 5.3 paragraph 2 is quite confusing.\u00a0\u00a0 It took me three readings to realize\nthat the text intends to say that the YANG Data Model amplifies the text\ninformation model.\u00a0 Personally, I find that an odd thing to say, as those are\ndifferent levels of abstraction.",
+      "createdAt": "2026-01-12T21:07:10Z",
+      "updatedAt": "2026-01-12T21:07:45Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 185,
+      "id": "I_kwDOOWPBqs7i2wQR",
+      "title": "Remind the reader that SNMP is no longer recommended",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/185",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [
+        "DIR Review"
+      ],
+      "body": "From Joe Halpern (Genart review):\n\n>Nit: should there be a note in section 5.1 along with the reference to RFC6632\nthat SNMP is no longer recommended?",
+      "createdAt": "2026-01-12T21:12:37Z",
+      "updatedAt": "2026-01-12T21:13:18Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Certainly not for read-write.  And likely, we should recommend other choices.",
+          "createdAt": "2026-01-12T21:13:18Z",
+          "updatedAt": "2026-01-12T21:13:18Z"
+        }
+      ]
     }
   ],
   "pulls": [
