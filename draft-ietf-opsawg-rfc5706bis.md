@@ -807,7 +807,7 @@ DM         DM        DM     --> concrete/detailed model
 {: #fig-im-dm title="Information Models (IMs) and Data Models (DMs)" artwork-align="center"}
 
    Protocol Designers must identify the essential operational, configuration, state, and statistical
-   information required for effective monitoring, control, and troubleshooting of New Protocols or Protocol Extensions. 
+   information required for effective monitoring, control, and troubleshooting of New Protocols or Protocol Extensions.
    This includes defining relevant parameters, performance metrics, error indicators,
    and contextual data crucial for diagnostics and lifecycle management.
 
