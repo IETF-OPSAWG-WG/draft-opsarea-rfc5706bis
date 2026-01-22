@@ -597,7 +597,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 The impact of New Protocols or Protocol Extensions, and the results
 of new OAM tools developed for them,
-must be considered with respect to 
+must be considered with respect to
 traffic delivery performance and ongoing manageability. For
 example, it must be noted whether the New Protocol, Protocol Extension,
 or OAM tools cause increased delay or jitter in real-time traffic
