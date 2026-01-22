@@ -498,7 +498,7 @@ This document does not describe interoperability requirements. As such, it does 
    protocols and/or previous versions of the same protocol, management of
    incompatibilities between versions, translation between versions,
    and consideration of potential side effects. A key question is:
-   Are older protocols or versions disabled, or do they coexist 
+   Are older protocols or versions disabled, or do they coexist
    with the New Protocol or Protocol Extension in the network?
 
    Many protocols benefit from being incrementally deployable --
