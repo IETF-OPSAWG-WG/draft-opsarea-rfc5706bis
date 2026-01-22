@@ -1097,7 +1097,7 @@ DM         DM        DM     --> concrete/detailed model
 
    2.  Unless the device or NMS is configured with adequate rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.
 
-   Network-wide configurations may be stored in central master databases
+   Network-wide configurations may be stored in central databases
    and transformed into readable formats that can be pushed to devices, either by
    generating sequences of CLI commands or complete textual configuration files
    that are pushed to devices. There is no common database schema for
