@@ -1320,7 +1320,7 @@ DM         DM        DM     --> concrete/detailed model
    Notifications (e.g., syslog messages) might
    already exist, or can be defined, to alert operators to the
    conditions identified in the Security Considerations for the New
-   Protocol or Protocol Extension. The syslog should also record events, 
+   Protocol or Protocol Extension. The syslog should also record events,
    such as failed logins, but it must be secured.
 
    > For example, you can log all the commands entered by the
