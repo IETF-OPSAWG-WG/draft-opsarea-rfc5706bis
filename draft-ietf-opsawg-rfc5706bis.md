@@ -408,7 +408,7 @@ This document does not describe interoperability requirements. As such, it does 
 ##  Operations {#sec-ops}
 
    Protocol Designers can analyze the operational environment and mode
-   of work in which the New Protocol or Protocol Extension will work. Such an
+   of work in which the New Protocol or Protocol Extension will be used. Such an
    exercise need not be reflected directly by text in their document
    but could help in visualizing how to apply the protocol in the
    Internet environments where it will be deployed.
