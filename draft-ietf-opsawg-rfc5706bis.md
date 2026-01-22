@@ -502,7 +502,7 @@ This document does not describe interoperability requirements. As such, it does 
    with the New Protocol or Protocol Extension in the network?
 
    Many protocols benefit from being incrementally deployable --
-   operators may deploy aspects of a protocol before deploying 
+   operators may deploy aspects of a protocol before deploying
    it fully. In those cases, the operational considerations should
    also specify whether the New Protocol or Protocol Extension requires any changes to
    the existing infrastructure, particularly the network.
