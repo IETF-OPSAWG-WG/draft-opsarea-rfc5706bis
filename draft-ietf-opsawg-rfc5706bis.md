@@ -41,20 +41,6 @@ informative:
     - org: IETF
     date: 2025-05-01
 
-  IESG-STATEMENT:
-    target: https://datatracker.ietf.org/doc/statement-iesg-writable-mib-module-iesg-statement-20140302/
-    title: Writable MIB Module IESG Statement
-    author:
-    - org: IESG
-    date: 2014-03-02
-
-  NEMOPS-WORKSHOP:
-    target: https://datatracker.ietf.org/group/nemopsws/about/
-    title: IAB workshop on the Next Era of Network Management Operations
-    author:
-    - org: IAB
-    date: 2024-12
-
   SECOPS:
     target: https://niccs.cisa.gov/resources/glossary
     title: NICCS Glossary
@@ -99,12 +85,12 @@ contributor:
 
 --- abstract
 
-   New Protocols or Protocol Extensions are best designed with due
+   New Protocols and Protocol Extensions are best designed with due
    consideration of the functionality needed to operate and manage them.
    Retrofitting operations and management considerations is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
-   addressed when defining New Protocols or Protocol Extensions.
+   addressed when defining New Protocols and Protocol Extensions.
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
@@ -161,8 +147,7 @@ contributor:
    and protocols in the IETF. This document does not prescribe
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
-   considered for any IETF protocol, given the IETF's role in developing technologies, New Protocols, and Protocol Extensions
-   to be deployed and operated in the real-world Internet.
+   considered for any New Protocol or Protocol Extension.
 
    A WG may decide that its protocol does not need interoperable
    management or a standardized Data Model, but this should be a
@@ -171,7 +156,7 @@ contributor:
 
    This document recognizes a distinction between management and operational
    considerations, although the two are closely related. However, for New
-   Protocols and Protocol Extensions only an "Operational Considerations" section is required.
+   Protocols or Protocol Extensions only an "Operational Considerations" section is required.
    This section is intended to address both management and operational aspects.
    Operational considerations pertain to the deployment and functioning of protocols
    within a network, regardless of whether a management protocol is in active use.
@@ -325,13 +310,13 @@ This document does not describe interoperability requirements. As such, it does 
 
    All Internet-Drafts that document a technical specification and are advanced for publication
    as IETF RFCs are required to include an "Operational Considerations" section.
-   Internet-Drafts that do not document technical specifications such as process, policy, or administrative
-   Internet-Drafts are not required to include such a section.
+   Internet-Drafts that do not document technical specifications, such as process, policy, or administrative
+   Internet-Drafts, are not required to include such a section.
 
-   After evaluating the operational ({{sec-oper-consid}}) and manageability aspects ({{sec-mgmt-consid}}) of a New
+   After evaluating the operational ({{sec-oper-consid}}) and manageability ({{sec-mgmt-consid}}) aspects of a New
    Protocol, a Protocol Extension, or an architecture, the resulting practices and
    requirements should be documented
-   in an "Operational Considerations" section within a
+   in an "Operational Considerations" section within the
    specification. Since protocols are intended for operational deployment and
    management within real networks, it is expected that such considerations
    will be present.
@@ -341,17 +326,17 @@ This document does not describe interoperability requirements. As such, it does 
    revisions of Internet-Drafts are expected to include an "Operational
    Considerations" section.
 
-   An "Operational Considerations" section should include discussion of
-   the management and operations topics raised in this document, and
-   when one or more of these topics is not relevant, it would be useful
-   to include a simple statement explaining why the topic is not
+   An "Operational Considerations" section should include a discussion of
+   the management and operations topics raised in this document.
+   When one or more of these topics is not relevant, it would be helpful
+   to include a brief statement explaining why it is not
    relevant or applicable for the New Protocol or Protocol Extension.
    Of course, additional relevant operational and manageability topics
    should be included as well. A concise checklist of key questions is
    provided in {{sec-checklist}}.
 
   Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
-  may be consumed out of RFCs that specify them. As such, it is recommended
+  may be consumed out of the RFCs that specify them. As such, it is recommended
   that operational aspects for a data model (and similar artifacts) are
   documented as part of the model itself. Such considerations should not be
   duplicated in the narrative part of a specification that includes such artifacts.
@@ -367,8 +352,8 @@ This document does not describe interoperability requirements. As such, it does 
    management functionality or operational best-practice clarifications are
    needed. It would be helpful to
    reviewers, those who may update or write extensions to the protocol in the
-   future, or to those deploying the protocol, to know the rationale
-   regarding the decisions on manageability of the protocol at the
+   future, and those deploying the protocol, to know the rationale
+   for the decisions on the protocol's manageability at the
    time of its design.
 
    If there are no new manageability or deployment considerations, the "Operational Considerations" section
@@ -386,18 +371,18 @@ This document does not describe interoperability requirements. As such, it does 
    section would indicate to the reader that due
    consideration has been given to manageability and operations.
 
-   In cases where the specification is a Protocol Extension and the base protocol
+   When the specification is a Protocol Extension, and the base protocol
    already addresses the relevant operational and manageability
    considerations, it is helpful to reference the considerations section
-   in the base document.
+   of the base document.
 
 ##  Placement of the "Operational Considerations" Section {#sec-placement-sec}
 
    It is recommended that the section be
    placed immediately before the Security Considerations section.
-   Reviewers interested in such sections will find it easily, and this
-   placement could simplify the development of tools to detect the
-   presence of such a section.
+   Reviewers interested in this section will find it easily, and this
+   placement could simplify the development of tools to detect its
+   presence.
 
 # How Will the New Protocol or Protocol Extension Fit into the Current Environment? {#sec-oper-consid}
 
@@ -423,7 +408,7 @@ This document does not describe interoperability requirements. As such, it does 
 ##  Operations {#sec-ops}
 
    Protocol Designers can analyze the operational environment and mode
-   of work in which the New Protocol and Protocol Extension will work. Such an
+   of work in which the New Protocol or Protocol Extension will be used. Such an
    exercise need not be reflected directly by text in their document
    but could help in visualizing how to apply the protocol in the
    Internet environments where it will be deployed.
@@ -509,16 +494,16 @@ This document does not describe interoperability requirements. As such, it does 
    If the New Protocol or Protocol Extension is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
    how deployments should transition to the New Protocol or Protocol
-   Extensions. This should include coexistence with previously deployed
+   Extension. This should include coexistence with previously deployed
    protocols and/or previous versions of the same protocol, management of
    incompatibilities between versions, translation between versions,
-   and consideration of potential side effects. A key question becomes:
-   Are older protocols or versions disabled, or do they coexist in the
-   network with the New Protocol or Protocol Extension?
+   and consideration of potential side effects. A key question is:
+   Are older protocols or versions disabled, or do they coexist
+   with the New Protocol or Protocol Extension in the network?
 
    Many protocols benefit from being incrementally deployable --
-   operators may deploy aspects of a protocol before deploying the
-   protocol fully. In those cases, the design considerations should
+   operators may deploy aspects of a protocol before deploying
+   it fully. In those cases, the operational considerations should
    also specify whether the New Protocol or Protocol Extension requires any changes to
    the existing infrastructure, particularly the network.
    If so, the protocol specification should describe the nature of those
@@ -562,7 +547,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  Impact on Network Operation {#sec-impact}
 
-   The introduction of a New Protocol or Protocol Extensions may
+   The introduction of a New Protocol or Protocol Extension may
    have an impact on the operation of existing networks. As discussed in {{Section 2.1 of ?RFC6709}}
    major extensions may have characteristics leading to a risk of
    operational
@@ -611,16 +596,16 @@ This document does not describe interoperability requirements. As such, it does 
    cache resolver.
 
 The impact of New Protocols or Protocol Extensions, and the results
-of new OAM tools developed for the New Protocols or Protocol
-Extensions, must be considered with respect to the performance of
-traffic delivery and the availability of ongoing manageability. For
-example, it must be noted if the New Protocols or Protocol Extensions
-or the OAM tools cause increased delay or jitter in real-time traffic
+of new OAM tools developed for them,
+must be considered with respect to
+traffic delivery performance and ongoing manageability. For
+example, it must be noted whether the New Protocol, Protocol Extension,
+or OAM tools cause increased delay or jitter in real-time traffic
 applications, or increased response time in client-server
 applications. Further, if the additional traffic caused by OAM tools
 and data collection could result in the management plane becoming
 overwhelmed, then this must be called out, and suitable mechanisms to
-rate limit the OAM must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
+rate limit the OAM traffic must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
 
 > Consider three examples: (1) In
 Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
@@ -648,8 +633,8 @@ New metrics may be required to assess traffic performance. Protocol Designers ma
 
    Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.
 
-   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.
-Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure that operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging.
+   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of a New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.
+Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging.
 
 Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.
 
@@ -664,13 +649,13 @@ Tooling required by security operators should be documented in the design and de
    deployed.
 
    Protocol Designers should consider techniques for testing the
-   effect that the protocol has had on the infrastructure by sending data
-   through the infrastructure and observing its behavior (a.k.a., active
+   effect the protocol has had on the infrastructure by sending data
+   through it and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct
    end-to-end operation of the New Protocol or Protocol Extension can be tested
    actively and passively, and how the correct data or forwarding plane
    function of each involved element can be verified to be working
-   properly with the New Protocol or Protocol Extension. Which metrics are of interest?
+   correctly with the New Protocol or Protocol Extension. Which metrics are of interest?
 
    Protocol Designers should consider how to test the correct end-to-end
    operation of the service or network, how to verify correct
@@ -728,7 +713,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    device, but also from the perspective of network and service
    management. A service might be network and operational functionality
    derived from the implementation and deployment of a New Protocol or Protocol Exension.
-   Often an individual network element is not aware of the service being
+   Often, an individual network element is unaware of the service being
    delivered.
 
    WGs should consider how to configure multiple related/co-operating
@@ -822,8 +807,8 @@ DM         DM        DM     --> concrete/detailed model
 {: #fig-im-dm title="Information Models (IMs) and Data Models (DMs)" artwork-align="center"}
 
    Protocol Designers must identify the essential operational, configuration, state, and statistical
-   information required for effective monitoring, control, and troubleshooting of New Protocols or Protocol Extensions and
-   their extensions. This includes defining relevant parameters, performance metrics, error indicators,
+   information required for effective monitoring, control, and troubleshooting of New Protocols or Protocol Extensions.
+   This includes defining relevant parameters, performance metrics, error indicators,
    and contextual data crucial for diagnostics and lifecycle management.
 
    To ensure interoperability, management protocol and Data Model standards should incorporate clear
@@ -987,7 +972,7 @@ DM         DM        DM     --> concrete/detailed model
    Should there be aggregated status indicators based on concatenation
    of propagated Faults from a given domain or device?
 
-   Notifications (e.g., SNMP traps and informs, syslog, or New Protocol specific mechanisms) can alert an operator when an
+   Notifications (e.g., SNMP traps and informs, syslog, or protocol-specific mechanisms) can alert an operator when an
    aspect of the New Protocol or Protocol Extension fails or encounters an error or failure
    condition.
    Should the event reporting provide guaranteed accurate delivery of
@@ -1192,11 +1177,11 @@ DM         DM        DM     --> concrete/detailed model
    spent in a state rather than just the current state. Snapshots alone
    are typically of less value.
 
-   There are several parts to performance management to be considered:
-   protocol monitoring, device monitoring (the impact of the new
-   protocol / service activation on the device), network monitoring,
+   There are several parts of performance management to consider:
+   protocol monitoring, device monitoring (the impact of new
+   functionality/service activation on the device), network monitoring,
    and service monitoring (the impact of service activation on the
-   network). Hence, it is recommended that, if the implementation of the
+   network). Hence, if the implementation of the
    New Protocol or Protocol Extension has any hardware/software performance implications
    (e.g., increased CPU utilization, memory consumption, or forwarding
    performance degradation), the Protocol Designers should clearly
@@ -1286,11 +1271,6 @@ DM         DM        DM     --> concrete/detailed model
    Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the New Protocol or Protocol Extension.
 
-   There will be security considerations related to the New Protocol or Protocol Extension.
-   To make it possible for operators to be aware of security-related
-   events, it is recommended that system logs should record events, such
-   as failed logins, but the logs must be secured.
-
    Should a system automatically notify operators of every event
    occurrence, or should an operator-defined threshold control when a
    notification is sent to an operator?
@@ -1339,8 +1319,9 @@ DM         DM        DM     --> concrete/detailed model
 
    Notifications (e.g., syslog messages) might
    already exist, or can be defined, to alert operators to the
-   conditions identified in the security considerations for the New
-   Protocol.
+   conditions identified in the Security Considerations for the New
+   Protocol or Protocol Extension. The syslog should also record events,
+   such as failed logins, but it must be secured.
 
    > For example, you can log all the commands entered by the
    operator using syslog (giving you some degree of audit trail), or you
@@ -1348,7 +1329,7 @@ DM         DM        DM     --> concrete/detailed model
    and from where; failed SSH logins can be logged using syslog, etc.
 
    An analysis of existing counters might help operators recognize the
-   conditions identified in the security considerations for the new
+   conditions identified in the Security Considerations for the new
    protocol before they can impact the network.
 
    Different management protocols use different assumptions about
