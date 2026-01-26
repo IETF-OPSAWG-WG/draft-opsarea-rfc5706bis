@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 26 July 2026                                 Old Dog Consulting
+Expires: 30 July 2026                                 Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                         22 January 2026
+                                                         26 January 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 July 2026.
+   This Internet-Draft will expire on 30 July 2026.
 
 Copyright Notice
 
@@ -1217,8 +1217,8 @@ Table of Contents
        guided by administrators with extensive experience, reordering
        ACLs can introduce significant security risks.
 
-   Network-wide configurations may be stored in central master databases
-   and transformed into readable formats that can be pushed to devices,
+   Network-wide configurations may be stored in central databases and
+   transformed into readable formats that can be pushed to devices,
    either by generating sequences of CLI commands or complete textual
    configuration files that are pushed to devices.  There is no common
    database schema for network configuration, although the models used
@@ -1734,9 +1734,9 @@ Table of Contents
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
               Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-15, 6 January 2026,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
-              oam-characterization-15>.
+              draft-ietf-opsawg-oam-characterization-16, 26 January
+              2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              opsawg-oam-characterization-16>.
 
    [I-D.ietf-quic-qlog-main-schema]
               Marx, R., Niccolini, L., Seemann, M., and L. Pardue,
