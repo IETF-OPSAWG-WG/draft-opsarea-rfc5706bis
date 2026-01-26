@@ -712,7 +712,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    Management needs to be considered not only from the perspective of a
    device, but also from the perspective of network and service
    management. A service might be network and operational functionality
-   derived from the implementation and deployment of a New Protocol or Protocol Exension.
+   derived from the implementation and deployment of a New Protocol or Protocol Extension.
    Often, an individual network element is unaware of the service being
    delivered.
 
