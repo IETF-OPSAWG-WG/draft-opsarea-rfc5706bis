@@ -2220,7 +2220,7 @@ Acknowledgements
       Thanks to reviewers who helped fashion this document, including
       Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise,
       Adrian Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen
-      Schönwälder, Bert Wijnen, Ralf Wolter, Lixia Zhang,.
+      Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
 
 Contributors
 
