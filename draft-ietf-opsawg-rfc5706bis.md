@@ -1620,4 +1620,4 @@ private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, A
 
 : Thanks to reviewers who helped fashion this document, including
 Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
-Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, Lixia Zhang,.
+Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
