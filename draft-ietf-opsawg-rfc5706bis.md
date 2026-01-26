@@ -95,7 +95,8 @@ contributor:
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    updates RFC 2360 to obsolete mandatory MIB creation and introduces a
-   requirement to include an "Operational Considerations" section in new RFCs in the IETF Stream.
+   requirement to include an "Operational Considerations" section in new technical RFCs in the IETF Stream,
+   while providing an escape clause if no new considerations are identified.
 
 --- middle
 
@@ -1474,6 +1475,7 @@ DM         DM        DM     --> concrete/detailed model
 This appendix provides a concise checklist of key questions that Protocol Designers should address in the "Operational Considerations" section of their specifications. Each item references the relevant section of this document for detailed guidance.
 
 The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.
+
 ## Documentation Requirements
 
 * Does the specification include an "Operational Considerations" section? ({{sec-oper-manag-considerations}})
