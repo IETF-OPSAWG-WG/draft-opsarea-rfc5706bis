@@ -1597,8 +1597,11 @@ The IETF Ops Directorate (OpsDir):
 The AD championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
-Reviewers of this document, in chronological order:
-: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, and Richard Shockey for their review, comments, and contributions.
+Reviewers of this document, in roughly chronological order:
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, and Dave Thaler for their review, comments, and contributions.
+
+The document shepherd who has gone beyond normal shepherding duties to improve this document:
+: Alvaro Retana
 
 The author of RFC 5706:
 : David Harrington
@@ -1617,4 +1620,4 @@ private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, A
 
 : Thanks to reviewers who helped fashion this document, including
 Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
-Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
+Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, Lixia Zhang,.
