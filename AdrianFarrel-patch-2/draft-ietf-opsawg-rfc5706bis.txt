@@ -2197,8 +2197,8 @@ Acknowledgements
       ethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott
       Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang,
       Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan
-      Stenstam, Dave Thaler, and Harald Alvestrand for their review,
-      comments, and contributions.
+      Stenstam, Dave Thaler, Harald Alvestrand, and Greg Mirsky for
+      their review, comments, and contributions.
 
    The document shepherd who has gone beyond normal shepherding
    duties to improve this document:  Alvaro Retana
