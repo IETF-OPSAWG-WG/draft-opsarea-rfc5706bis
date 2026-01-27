@@ -817,7 +817,7 @@ Table of Contents
    device, but also from the perspective of network and service
    management.  A service might be network and operational functionality
    derived from the implementation and deployment of a New Protocol or
-   Protocol Exension.  Often, an individual network element is unaware
+   Protocol Extension.  Often, an individual network element is unaware
    of the service being delivered.
 
    WGs should consider how to configure multiple related/co-operating
