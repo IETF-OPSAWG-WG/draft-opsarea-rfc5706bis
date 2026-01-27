@@ -828,11 +828,11 @@ DM         DM        DM     --> concrete/detailed model
    way makes it an effective choice for defining management information
    models.
 
-   Although this document recommends using English text (the official
-   language for IETF specifications) to describe an Information Model,
-   including a complementary YANG module helps translate abstract concepts
-   into implementation-specific Data Models. This ensures consistency between
-   the high-level design and practical deployment.
+   While an Information Model is typically described in English text to
+   define the conceptual management requirements, providing a formal Data
+   Model (such as a YANG module) ensures these concepts are precisely mapped
+   to a concrete implementation. This dual approach helps maintain consistency
+   between high-level design and practical deployment.
 
    A management Information Model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
@@ -840,18 +840,12 @@ DM         DM        DM     --> concrete/detailed model
    occur, which events can be counted, and for which events an operator
    should be notified.
 
-   Operators find it important to be able to make a clear distinction
-   between configuration data, operational state, and statistics. They
-   need to determine which parameters were administratively configured
-   and which parameters have changed since configuration as the result
-   of mechanisms such as routing protocols or network management
-   protocols. It is important to be able to separately fetch current
-   configuration information, initial configuration information,
-   operational state information, and statistics from devices; to be
-   able to compare current state to initial state; and to compare
-   information between devices. So, when deciding what information
-   should exist, do not conflate multiple information elements into a
-   single element.
+   When defining management information, it is important to categorize
+   data into configuration, operational state, and statistics. Conflating
+   these distinct types into a single element makes it difficult for operators
+   to distinguish between administratively set values and the dynamic state of
+   the protocol. The model should be structured to allow these categories to be
+   handled independently.
 
    What is typically difficult to work through are relationships between
    abstract objects. Ideally, an Information Model would describe the
