@@ -95,7 +95,7 @@ contributor:
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    updates RFC 2360 to obsolete mandatory MIB creation and introduces a
-   requirement to include an "Operational Considerations" section in new technical RFCs in the IETF Stream,
+   requirement to include an "Operational Considerations" section in new RFCs that document a technical specification in the IETF Stream,
    while providing an escape clause if no new considerations are identified.
 
 --- middle
@@ -304,7 +304,10 @@ This document does not describe interoperability requirements. As such, it does 
    *  Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
-
+      
+   *  Technical specification: Any document that an implementation would claim conformance to.
+      Specifically, this includes any document that affects the design, implementation, or deployment of a protocol.
+         
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
 ##  "Operational Considerations" Section {#sec-oper-manag-considerations}
@@ -1570,7 +1573,7 @@ The decision to incorporate all or part of these items into their work remains w
 
    * Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
 
-   * Add a requirement for an "Operational Considerations" section in all new Standard Track RFCs, along with specific guidance on its content.
+   * Add a requirement for an "Operational Considerations" section in all new RFCs that document a technical specification in the IETF Stream, along with specific guidance on its content.
 
    * Update the operational and manageability-related technologies to reflect over 15 years of advancements
 
