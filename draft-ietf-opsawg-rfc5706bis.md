@@ -304,10 +304,11 @@ This document does not describe interoperability requirements. As such, it does 
    *  Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
-      
-   *  Technical specification: Any document that an implementation would claim conformance to.
-      Specifically, this includes any document that affects the design, implementation, or deployment of a protocol.
-         
+
+   *  Technical specification: Any document that an
+      implementation would claim conformance to. Specifically, this includes any document that affects the
+      design, implementation, or deployment of a protocol.
+
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
 ##  "Operational Considerations" Section {#sec-oper-manag-considerations}
