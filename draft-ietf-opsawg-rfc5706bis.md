@@ -750,6 +750,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    Note that SNMP is no longer recommended for configuration (read-write)
    operations.  Better programmatic alternatives are discussed
    further in Section {{<sec-interop}}. This  document formally deprecates the following recommendation from {{BCP22}}:
+
    {: quote}
    > a MIB must be defined within the standard or in a companion  document.
 
