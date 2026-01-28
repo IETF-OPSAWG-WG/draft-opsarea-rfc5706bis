@@ -1068,9 +1068,9 @@ DM         DM        DM     --> concrete/detailed model
    push or pull operations. It also involves ensuring that the configurations
    being pushed are semantically compatible across devices and that the resulting
    behavior of all involved devices corresponds to the intended behavior.
-   Is the attachment between them configured
-   compatibly on both ends? Is the IS-IS metric the same? ... Now
-   answer those questions for 1,000 devices.
+   Is the attachment between them configured compatibly on both ends?
+   Is the IS-IS metric the same? Answering those questions for a 1,000 devices
+   network is not that easy.
 
    Several efforts have existed in the IETF to develop policy-based
    configuration management. "Terminology for Policy-Based Management"
@@ -1484,6 +1484,7 @@ DM         DM        DM     --> concrete/detailed model
 This appendix provides a concise checklist of key questions that Protocol Designers should address in the "Operational Considerations" section of their specifications. Each item references the relevant section of this document for detailed guidance.
 
 The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.
+
 ## Documentation Requirements
 
 * Does the specification include an "Operational Considerations" section? ({{sec-oper-manag-considerations}})
