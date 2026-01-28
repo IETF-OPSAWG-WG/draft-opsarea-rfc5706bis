@@ -1068,7 +1068,7 @@ DM         DM        DM     --> concrete/detailed model
    push or pull operations. It also involves ensuring that the configurations
    being pushed are semantically compatible across devices and that the resulting
    behavior of all involved devices corresponds to the intended behavior.
-   Is the attachment between them configured compatibly on both ends? 
+   Is the attachment between them configured compatibly on both ends?
    Is the IS-IS metric the same? Answering those questions for a 1,000 devices
    network is that easy.
 
