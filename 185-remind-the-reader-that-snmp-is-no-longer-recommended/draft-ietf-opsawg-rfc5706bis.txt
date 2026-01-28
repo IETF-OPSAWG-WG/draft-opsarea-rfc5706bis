@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 31 July 2026                                 Old Dog Consulting
+Expires: 1 August 2026                                Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                         27 January 2026
+                                                         28 January 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 July 2026.
+   This Internet-Draft will expire on 1 August 2026.
 
 Copyright Notice
 
@@ -852,8 +852,8 @@ Table of Contents
    The IETF provides several standardized management protocols suitable
    for various operational purposes, for example as outlined in
    [RFC6632].  Note that SNMP is no longer recommended for configuration
-   (read-write) operations.  Modern programmatic alternatives are
-   discussed in Section further in Section 5.2.
+   (read-write) operations.  Better programmatic alternatives are
+   discussed further in Section 5.2.
 
    Readers seeking more in-depth definitions or explanations should
    consult the referenced materials.
