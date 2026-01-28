@@ -855,7 +855,13 @@ Table of Contents
 
    The IETF provides several standardized management protocols suitable
    for various operational purposes, for example as outlined in
-   [RFC6632].
+   [RFC6632].  Note that SNMP is no longer recommended for configuration
+   (read-write) operations.  Better programmatic alternatives are
+   discussed further in Section 5.2.  This document formally deprecates
+   the following recommendation from [BCP22]:
+
+   |  a MIB must be defined within the standard or in a companion
+   |  document.
 
    Readers seeking more in-depth definitions or explanations should
    consult the referenced materials.
@@ -1737,10 +1743,10 @@ Table of Contents
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
-              Characterizing "OAM"", Work in Progress, Internet-Draft,
-              draft-ietf-opsawg-oam-characterization-16, 26 January
-              2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              opsawg-oam-characterization-16>.
+              Characterizing the Term "OAM"", Work in Progress,
+              Internet-Draft, draft-ietf-opsawg-oam-characterization-17,
+              28 January 2026, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-opsawg-oam-characterization-17>.
 
    [I-D.ietf-quic-qlog-main-schema]
               Marx, R., Niccolini, L., Seemann, M., and L. Pardue,
