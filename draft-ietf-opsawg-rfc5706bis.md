@@ -679,10 +679,14 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    entities to be managed, as well as how the managed protocol is
    supposed to be installed, configured, and monitored.
 
-   Considerations for management should include a discussion of what
-   needs to be managed, and how to achieve various management tasks.
-   For example, these considerations include where the managers are and what type of interfaces and
-   protocols will be needed.
+   Considerations for management should describe what aspects of the system
+   require management and the management functions that need to be
+   supported. This includes identifying any assumptions or constraints
+   relevant to management interactions, such as the types of interfaces or
+   protocols required. These considerations should avoid dependence on a
+   specific management deployment model and should remain applicable
+   regardless of where management systems are located or how they are
+   accessed.
 
    The management model should take into account factors such as:
 
