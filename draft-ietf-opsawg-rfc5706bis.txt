@@ -116,12 +116,13 @@ Table of Contents
      10.1.  Normative References
      10.2.  Informative References
    Appendix A.  Operational Considerations Checklist
-     A.1.  Operational Fit
-     A.2.  Management Information
-     A.3.  Fault Management
-     A.4.  Configuration Management
-     A.5.  Performance Management
-     A.6.  Security Management
+     A.1.  Documentation Requirements
+     A.2.  Operational Fit
+     A.3.  Management Information
+     A.4.  Fault Management
+     A.5.  Configuration Management
+     A.6.  Performance Management
+     A.7.  Security Management
    Appendix B.  Changes Since RFC 5706
      B.1.  TO DO LIST
    Acknowledgements
@@ -1203,7 +1204,8 @@ Table of Contents
    devices and that the resulting behavior of all involved devices
    corresponds to the intended behavior.  Is the attachment between them
    configured compatibly on both ends?  Is the IS-IS metric the same?
-   ... Now answer those questions for 1,000 devices.
+   Answering those questions for a 1,000 devices network is not that
+   easy.
 
    Several efforts have existed in the IETF to develop policy-based
    configuration management.  "Terminology for Policy-Based Management"
@@ -2001,8 +2003,9 @@ Appendix A.  Operational Considerations Checklist
    section of this document for detailed guidance.
 
    The decision to incorporate all or part of these items into their
-   work remains with Protocol Designers and WGs themselves. ##
-   Documentation Requirements
+   work remains with Protocol Designers and WGs themselves.
+
+A.1.  Documentation Requirements
 
    *  Does the specification include an "Operational Considerations"
       section?  (Section 3.1)
@@ -2013,7 +2016,7 @@ Appendix A.  Operational Considerations Checklist
    *  If there are no new considerations, does the section include the
       appropriate boilerplate with explanation?  (Section 3.2)
 
-A.1.  Operational Fit
+A.2.  Operational Fit
 
    *  How does this protocol operate "out of the box"?  (Section 4.1,
       Section 4.2)
@@ -2062,7 +2065,7 @@ A.1.  Operational Fit
       -  Do messages support internationalization with message codes for
          local language mapping?  (Section 4.8)
 
-A.2.  Management Information
+A.3.  Management Information
 
    *  What needs to be managed?  (Section 5)
 
@@ -2093,7 +2096,7 @@ A.2.  Management Information
       -  Should Device Models, Network Models, or Service Models be
          specified?  (Section 5.3.2)
 
-A.3.  Fault Management
+A.4.  Fault Management
 
    *  What faults and events should be reported?  (Section 5.4)
 
@@ -2115,7 +2118,7 @@ A.3.  Fault Management
       -  What distinguishes faulty from correct messages?
          (Section 5.4.2)
 
-A.4.  Configuration Management
+A.5.  Configuration Management
 
    *  What configuration parameters are defined?  (Section 5.5)
 
@@ -2124,7 +2127,7 @@ A.4.  Configuration Management
 
       -  What information persists across reboots?  (Section 5.5)
 
-A.5.  Performance Management
+A.6.  Performance Management
 
    *  What are the performance implications?  (Section 5.7)
 
@@ -2142,7 +2145,7 @@ A.5.  Performance Management
       -  What are the protocol limitations and behavior when limits are
          exceeded?  (Section 5.7.1)
 
-A.6.  Security Management
+A.7.  Security Management
 
    *  What security-related monitoring is needed?  (Section 5.8)
 

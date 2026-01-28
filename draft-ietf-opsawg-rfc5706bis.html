@@ -1335,22 +1335,25 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-operational-considerations-c" class="internal xref">Operational Considerations Checklist</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.1">
-                <p id="section-toc.1-1.11.2.1.1"><a href="#appendix-A.1" class="auto internal xref">A.1</a>.  <a href="#name-operational-fit" class="internal xref">Operational Fit</a></p>
+                <p id="section-toc.1-1.11.2.1.1"><a href="#appendix-A.1" class="auto internal xref">A.1</a>.  <a href="#name-documentation-requirements" class="internal xref">Documentation Requirements</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.2">
-                <p id="section-toc.1-1.11.2.2.1"><a href="#appendix-A.2" class="auto internal xref">A.2</a>.  <a href="#name-management-information-2" class="internal xref">Management Information</a></p>
+                <p id="section-toc.1-1.11.2.2.1"><a href="#appendix-A.2" class="auto internal xref">A.2</a>.  <a href="#name-operational-fit" class="internal xref">Operational Fit</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.3">
-                <p id="section-toc.1-1.11.2.3.1"><a href="#appendix-A.3" class="auto internal xref">A.3</a>.  <a href="#name-fault-management-2" class="internal xref">Fault Management</a></p>
+                <p id="section-toc.1-1.11.2.3.1"><a href="#appendix-A.3" class="auto internal xref">A.3</a>.  <a href="#name-management-information-2" class="internal xref">Management Information</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.4">
-                <p id="section-toc.1-1.11.2.4.1"><a href="#appendix-A.4" class="auto internal xref">A.4</a>.  <a href="#name-configuration-management-2" class="internal xref">Configuration Management</a></p>
+                <p id="section-toc.1-1.11.2.4.1"><a href="#appendix-A.4" class="auto internal xref">A.4</a>.  <a href="#name-fault-management-2" class="internal xref">Fault Management</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.5">
-                <p id="section-toc.1-1.11.2.5.1"><a href="#appendix-A.5" class="auto internal xref">A.5</a>.  <a href="#name-performance-management-2" class="internal xref">Performance Management</a></p>
+                <p id="section-toc.1-1.11.2.5.1"><a href="#appendix-A.5" class="auto internal xref">A.5</a>.  <a href="#name-configuration-management-2" class="internal xref">Configuration Management</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.6">
-                <p id="section-toc.1-1.11.2.6.1"><a href="#appendix-A.6" class="auto internal xref">A.6</a>.  <a href="#name-security-management-2" class="internal xref">Security Management</a></p>
+                <p id="section-toc.1-1.11.2.6.1"><a href="#appendix-A.6" class="auto internal xref">A.6</a>.  <a href="#name-performance-management-2" class="internal xref">Performance Management</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.7">
+                <p id="section-toc.1-1.11.2.7.1"><a href="#appendix-A.7" class="auto internal xref">A.7</a>.  <a href="#name-security-management-2" class="internal xref">Security Management</a></p>
 </li>
             </ul>
 </li>
@@ -2461,9 +2464,9 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    push or pull operations. It also involves ensuring that the configurations
    being pushed are semantically compatible across devices and that the resulting
    behavior of all involved devices corresponds to the intended behavior.
-   Is the attachment between them configured
-   compatibly on both ends? Is the IS-IS metric the same? ... Now
-   answer those questions for 1,000 devices.<a href="#section-5.5-3" class="pilcrow">¶</a></p>
+   Is the attachment between them configured compatibly on both ends?
+   Is the IS-IS metric the same? Answering those questions for a 1,000 devices
+   network is not that easy.<a href="#section-5.5-3" class="pilcrow">¶</a></p>
 <p id="section-5.5-4">Several efforts have existed in the IETF to develop policy-based
    configuration management. "Terminology for Policy-Based Management"
    <span>[<a href="#RFC3198" class="cite xref">RFC3198</a>]</span> was written to standardize the terminology across these
@@ -3227,85 +3230,91 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-operational-considerations-c" class="section-name selfRef">Operational Considerations Checklist</a>
       </h2>
 <p id="appendix-A-1">This appendix provides a concise checklist of key questions that Protocol Designers should address in the "Operational Considerations" section of their specifications. Each item references the relevant section of this document for detailed guidance.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
-<p id="appendix-A-2">The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.
-## Documentation Requirements<a href="#appendix-A-2" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="appendix-A-3.1">
-          <p id="appendix-A-3.1.1">Does the specification include an "Operational Considerations" section? (<a href="#sec-oper-manag-considerations" class="auto internal xref">Section 3.1</a>)<a href="#appendix-A-3.1.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="appendix-A-3.2">
-          <p id="appendix-A-3.2.1">Is this section placed immediately before the Security Considerations section? (<a href="#sec-placement-sec" class="auto internal xref">Section 3.3</a>)<a href="#appendix-A-3.2.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="appendix-A-3.3">
-          <p id="appendix-A-3.3.1">If there are no new considerations, does the section include the appropriate boilerplate with explanation? (<a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>)<a href="#appendix-A-3.3.1" class="pilcrow">¶</a></p>
-</li>
-      </ul>
-<div id="operational-fit">
+<p id="appendix-A-2">The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
+<div id="documentation-requirements">
 <section id="appendix-A.1">
-        <h3 id="name-operational-fit">
-<a href="#appendix-A.1" class="section-number selfRef">A.1. </a><a href="#name-operational-fit" class="section-name selfRef">Operational Fit</a>
+        <h3 id="name-documentation-requirements">
+<a href="#appendix-A.1" class="section-number selfRef">A.1. </a><a href="#name-documentation-requirements" class="section-name selfRef">Documentation Requirements</a>
         </h3>
 <ul class="normal">
 <li class="normal" id="appendix-A.1-1.1">
-            <p id="appendix-A.1-1.1.1">How does this protocol operate "out of the box"? (<a href="#sec-ops" class="auto internal xref">Section 4.1</a>, <a href="#sec-install" class="auto internal xref">Section 4.2</a>)<a href="#appendix-A.1-1.1.1" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="appendix-A.1-1.1.2.1">
-                <p id="appendix-A.1-1.1.2.1.1">What are the default values, modes, timers, and states? (<a href="#sec-install" class="auto internal xref">Section 4.2</a>)<a href="#appendix-A.1-1.1.2.1.1" class="pilcrow">¶</a></p>
-</li>
-              <li class="normal" id="appendix-A.1-1.1.2.2">
-                <p id="appendix-A.1-1.1.2.2.1">What is the rationale for chosen default values, especially if they affect operations or are expected to change over time? (<a href="#sec-install" class="auto internal xref">Section 4.2</a>)<a href="#appendix-A.1-1.1.2.2.1" class="pilcrow">¶</a></p>
-</li>
-            </ul>
+            <p id="appendix-A.1-1.1.1">Does the specification include an "Operational Considerations" section? (<a href="#sec-oper-manag-considerations" class="auto internal xref">Section 3.1</a>)<a href="#appendix-A.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="appendix-A.1-1.2">
-            <p id="appendix-A.1-1.2.1">What is the migration path for existing deployments? (<a href="#sec-migration" class="auto internal xref">Section 4.3</a>)<a href="#appendix-A.1-1.2.1" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="appendix-A.1-1.2.2.1">
-                <p id="appendix-A.1-1.2.2.1.1">How will deployments transition from older versions or technologies? (<a href="#sec-migration" class="auto internal xref">Section 4.3</a>)<a href="#appendix-A.1-1.2.2.1.1" class="pilcrow">¶</a></p>
-</li>
-              <li class="normal" id="appendix-A.1-1.2.2.2">
-                <p id="appendix-A.1-1.2.2.2.1">Does the protocol require infrastructure changes, and how can these be introduced? (<a href="#sec-migration" class="auto internal xref">Section 4.3</a>)<a href="#appendix-A.1-1.2.2.2.1" class="pilcrow">¶</a></p>
-</li>
-            </ul>
+            <p id="appendix-A.1-1.2.1">Is this section placed immediately before the Security Considerations section? (<a href="#sec-placement-sec" class="auto internal xref">Section 3.3</a>)<a href="#appendix-A.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="appendix-A.1-1.3">
-            <p id="appendix-A.1-1.3.1">What are the requirements or dependencies on other protocols and functional components? (<a href="#sec-other" class="auto internal xref">Section 4.4</a>)<a href="#appendix-A.1-1.3.1" class="pilcrow">¶</a></p>
+            <p id="appendix-A.1-1.3.1">If there are no new considerations, does the section include the appropriate boilerplate with explanation? (<a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>)<a href="#appendix-A.1-1.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="appendix-A.1-1.4">
-            <p id="appendix-A.1-1.4.1">What is the impact on network operation? (<a href="#sec-impact" class="auto internal xref">Section 4.5</a>)<a href="#appendix-A.1-1.4.1" class="pilcrow">¶</a></p>
+        </ul>
+</section>
+</div>
+<div id="operational-fit">
+<section id="appendix-A.2">
+        <h3 id="name-operational-fit">
+<a href="#appendix-A.2" class="section-number selfRef">A.2. </a><a href="#name-operational-fit" class="section-name selfRef">Operational Fit</a>
+        </h3>
 <ul class="normal">
-<li class="normal" id="appendix-A.1-1.4.2.1">
-                <p id="appendix-A.1-1.4.2.1.1">What are the scaling implications and interactions with other protocols? (<a href="#sec-impact" class="auto internal xref">Section 4.5</a>)<a href="#appendix-A.1-1.4.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.2-1.1">
+            <p id="appendix-A.2-1.1.1">How does this protocol operate "out of the box"? (<a href="#sec-ops" class="auto internal xref">Section 4.1</a>, <a href="#sec-install" class="auto internal xref">Section 4.2</a>)<a href="#appendix-A.2-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-A.2-1.1.2.1">
+                <p id="appendix-A.2-1.1.2.1.1">What are the default values, modes, timers, and states? (<a href="#sec-install" class="auto internal xref">Section 4.2</a>)<a href="#appendix-A.2-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.1-1.4.2.2">
-                <p id="appendix-A.1-1.4.2.2.1">What are the impacts on traffic patterns or performance (e.g., delay, jitter)? (<a href="#sec-impact" class="auto internal xref">Section 4.5</a>)<a href="#appendix-A.1-1.4.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.2-1.1.2.2">
+                <p id="appendix-A.2-1.1.2.2.1">What is the rationale for chosen default values, especially if they affect operations or are expected to change over time? (<a href="#sec-install" class="auto internal xref">Section 4.2</a>)<a href="#appendix-A.2-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.1-1.5">
-            <p id="appendix-A.1-1.5.1">What is the impact on Security Operations? (<a href="#sec-impact-secops" class="auto internal xref">Section 4.6</a>)<a href="#appendix-A.1-1.5.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.2-1.2">
+            <p id="appendix-A.2-1.2.1">What is the migration path for existing deployments? (<a href="#sec-migration" class="auto internal xref">Section 4.3</a>)<a href="#appendix-A.2-1.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.1-1.5.2.1">
-                <p id="appendix-A.1-1.5.2.1.1">How does deployment affect Indicators of Compromise or their availability? (<a href="#sec-impact-secops" class="auto internal xref">Section 4.6</a>)<a href="#appendix-A.1-1.5.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.2-1.2.2.1">
+                <p id="appendix-A.2-1.2.2.1.1">How will deployments transition from older versions or technologies? (<a href="#sec-migration" class="auto internal xref">Section 4.3</a>)<a href="#appendix-A.2-1.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.1-1.5.2.2">
-                <p id="appendix-A.1-1.5.2.2.1">What logging is needed for digital forensics? (<a href="#sec-impact-secops" class="auto internal xref">Section 4.6</a>)<a href="#appendix-A.1-1.5.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.2-1.2.2.2">
+                <p id="appendix-A.2-1.2.2.2.1">Does the protocol require infrastructure changes, and how can these be introduced? (<a href="#sec-migration" class="auto internal xref">Section 4.3</a>)<a href="#appendix-A.2-1.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.1-1.6">
-            <p id="appendix-A.1-1.6.1">How can correct operation be verified? (<a href="#sec-oper-verify" class="auto internal xref">Section 4.7</a>)<a href="#appendix-A.1-1.6.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.2-1.3">
+            <p id="appendix-A.2-1.3.1">What are the requirements or dependencies on other protocols and functional components? (<a href="#sec-other" class="auto internal xref">Section 4.4</a>)<a href="#appendix-A.2-1.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="appendix-A.2-1.4">
+            <p id="appendix-A.2-1.4.1">What is the impact on network operation? (<a href="#sec-impact" class="auto internal xref">Section 4.5</a>)<a href="#appendix-A.2-1.4.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.1-1.6.2.1">
-                <p id="appendix-A.1-1.6.2.1.1">What status and health indicators does the protocol provide? (<a href="#sec-oper-verify" class="auto internal xref">Section 4.7</a>)<a href="#appendix-A.1-1.6.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.2-1.4.2.1">
+                <p id="appendix-A.2-1.4.2.1.1">What are the scaling implications and interactions with other protocols? (<a href="#sec-impact" class="auto internal xref">Section 4.5</a>)<a href="#appendix-A.2-1.4.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="appendix-A.2-1.4.2.2">
+                <p id="appendix-A.2-1.4.2.2.1">What are the impacts on traffic patterns or performance (e.g., delay, jitter)? (<a href="#sec-impact" class="auto internal xref">Section 4.5</a>)<a href="#appendix-A.2-1.4.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.1-1.7">
-            <p id="appendix-A.1-1.7.1">How are human-readable messages handled? (<a href="#sec-messages" class="auto internal xref">Section 4.8</a>)<a href="#appendix-A.1-1.7.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.2-1.5">
+            <p id="appendix-A.2-1.5.1">What is the impact on Security Operations? (<a href="#sec-impact-secops" class="auto internal xref">Section 4.6</a>)<a href="#appendix-A.2-1.5.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.1-1.7.2.1">
-                <p id="appendix-A.1-1.7.2.1.1">Do messages support internationalization with message codes for local language mapping? (<a href="#sec-messages" class="auto internal xref">Section 4.8</a>)<a href="#appendix-A.1-1.7.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.2-1.5.2.1">
+                <p id="appendix-A.2-1.5.2.1.1">How does deployment affect Indicators of Compromise or their availability? (<a href="#sec-impact-secops" class="auto internal xref">Section 4.6</a>)<a href="#appendix-A.2-1.5.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="appendix-A.2-1.5.2.2">
+                <p id="appendix-A.2-1.5.2.2.1">What logging is needed for digital forensics? (<a href="#sec-impact-secops" class="auto internal xref">Section 4.6</a>)<a href="#appendix-A.2-1.5.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="appendix-A.2-1.6">
+            <p id="appendix-A.2-1.6.1">How can correct operation be verified? (<a href="#sec-oper-verify" class="auto internal xref">Section 4.7</a>)<a href="#appendix-A.2-1.6.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-A.2-1.6.2.1">
+                <p id="appendix-A.2-1.6.2.1.1">What status and health indicators does the protocol provide? (<a href="#sec-oper-verify" class="auto internal xref">Section 4.7</a>)<a href="#appendix-A.2-1.6.2.1.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="appendix-A.2-1.7">
+            <p id="appendix-A.2-1.7.1">How are human-readable messages handled? (<a href="#sec-messages" class="auto internal xref">Section 4.8</a>)<a href="#appendix-A.2-1.7.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-A.2-1.7.2.1">
+                <p id="appendix-A.2-1.7.2.1.1">Do messages support internationalization with message codes for local language mapping? (<a href="#sec-messages" class="auto internal xref">Section 4.8</a>)<a href="#appendix-A.2-1.7.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3313,44 +3322,44 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 </section>
 </div>
 <div id="management-information">
-<section id="appendix-A.2">
+<section id="appendix-A.3">
         <h3 id="name-management-information-2">
-<a href="#appendix-A.2" class="section-number selfRef">A.2. </a><a href="#name-management-information-2" class="section-name selfRef">Management Information</a>
+<a href="#appendix-A.3" class="section-number selfRef">A.3. </a><a href="#name-management-information-2" class="section-name selfRef">Management Information</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="appendix-A.2-1.1">
-            <p id="appendix-A.2-1.1.1">What needs to be managed? (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>)<a href="#appendix-A.2-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.3-1.1">
+            <p id="appendix-A.3-1.1.1">What needs to be managed? (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>)<a href="#appendix-A.3-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.2-1.1.2.1">
-                <p id="appendix-A.2-1.1.2.1.1">What are the manageable entities (e.g., protocol endpoints, network elements, services)? (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>)<a href="#appendix-A.2-1.1.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.3-1.1.2.1">
+                <p id="appendix-A.3-1.1.2.1.1">What are the manageable entities (e.g., protocol endpoints, network elements, services)? (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>)<a href="#appendix-A.3-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.2-1.2">
-            <p id="appendix-A.2-1.2.1">Which standardized management technologies are applicable? (<a href="#sec-mgmt-tech" class="auto internal xref">Section 5.1</a>)<a href="#appendix-A.2-1.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.3-1.2">
+            <p id="appendix-A.3-1.2.1">Which standardized management technologies are applicable? (<a href="#sec-mgmt-tech" class="auto internal xref">Section 5.1</a>)<a href="#appendix-A.3-1.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="appendix-A.2-1.3">
-            <p id="appendix-A.2-1.3.1">What essential information is required? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>, <a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.2-1.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.3-1.3">
+            <p id="appendix-A.3-1.3.1">What essential information is required? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>, <a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.3-1.3.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.2-1.3.2.1">
-                <p id="appendix-A.2-1.3.2.1.1">What operational, configuration, state, and statistical information is needed? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>)<a href="#appendix-A.2-1.3.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.3-1.3.2.1">
+                <p id="appendix-A.3-1.3.2.1.1">What operational, configuration, state, and statistical information is needed? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>)<a href="#appendix-A.3-1.3.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.2-1.3.2.2">
-                <p id="appendix-A.2-1.3.2.2.1">Is an Information Model needed, especially if multiple Data Model representations are required? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>)<a href="#appendix-A.2-1.3.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.3-1.3.2.2">
+                <p id="appendix-A.3-1.3.2.2.1">Is an Information Model needed, especially if multiple Data Model representations are required? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>)<a href="#appendix-A.3-1.3.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.2-1.3.2.3">
-                <p id="appendix-A.2-1.3.2.3.1">What is manageable, what needs configuration, and what protocol-specific events might occur? (<a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.2-1.3.2.3.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.3-1.3.2.3">
+                <p id="appendix-A.3-1.3.2.3.1">What is manageable, what needs configuration, and what protocol-specific events might occur? (<a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.3-1.3.2.3.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.2-1.3.2.4">
-                <p id="appendix-A.2-1.3.2.4.1">How are configuration data, operational state, and statistics distinguished? (<a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.2-1.3.2.4.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.3-1.3.2.4">
+                <p id="appendix-A.3-1.3.2.4.1">How are configuration data, operational state, and statistics distinguished? (<a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.3-1.3.2.4.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.2-1.4">
-            <p id="appendix-A.2-1.4.1">If YANG Data Models are defined, what type is appropriate? (<a href="#sec-yang-dm" class="auto internal xref">Section 5.3.2</a>)<a href="#appendix-A.2-1.4.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.3-1.4">
+            <p id="appendix-A.3-1.4.1">If YANG Data Models are defined, what type is appropriate? (<a href="#sec-yang-dm" class="auto internal xref">Section 5.3.2</a>)<a href="#appendix-A.3-1.4.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.2-1.4.2.1">
-                <p id="appendix-A.2-1.4.2.1.1">Should Device Models, Network Models, or Service Models be specified? (<a href="#sec-yang-dm" class="auto internal xref">Section 5.3.2</a>)<a href="#appendix-A.2-1.4.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.3-1.4.2.1">
+                <p id="appendix-A.3-1.4.2.1.1">Should Device Models, Network Models, or Service Models be specified? (<a href="#sec-yang-dm" class="auto internal xref">Section 5.3.2</a>)<a href="#appendix-A.3-1.4.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3358,38 +3367,38 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 </section>
 </div>
 <div id="fault-management">
-<section id="appendix-A.3">
+<section id="appendix-A.4">
         <h3 id="name-fault-management-2">
-<a href="#appendix-A.3" class="section-number selfRef">A.3. </a><a href="#name-fault-management-2" class="section-name selfRef">Fault Management</a>
+<a href="#appendix-A.4" class="section-number selfRef">A.4. </a><a href="#name-fault-management-2" class="section-name selfRef">Fault Management</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="appendix-A.3-1.1">
-            <p id="appendix-A.3-1.1.1">What faults and events should be reported? (<a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a>)<a href="#appendix-A.3-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.4-1.1">
+            <p id="appendix-A.4-1.1.1">What faults and events should be reported? (<a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a>)<a href="#appendix-A.4-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.3-1.1.2.1">
-                <p id="appendix-A.3-1.1.2.1.1">What essential faults, health indicators, alarms, and events should be exposed? (<a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a>)<a href="#appendix-A.3-1.1.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.4-1.1.2.1">
+                <p id="appendix-A.4-1.1.2.1.1">What essential faults, health indicators, alarms, and events should be exposed? (<a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a>)<a href="#appendix-A.4-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.3-1.1.2.2">
-                <p id="appendix-A.3-1.1.2.2.1">How will fault information be propagated? (<a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a>)<a href="#appendix-A.3-1.1.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.4-1.1.2.2">
+                <p id="appendix-A.4-1.1.2.2.1">How will fault information be propagated? (<a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a>)<a href="#appendix-A.4-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.3-1.2">
-            <p id="appendix-A.3-1.2.1">How is liveness monitored? (<a href="#sec-monitor" class="auto internal xref">Section 5.4.1</a>)<a href="#appendix-A.3-1.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.4-1.2">
+            <p id="appendix-A.4-1.2.1">How is liveness monitored? (<a href="#sec-monitor" class="auto internal xref">Section 5.4.1</a>)<a href="#appendix-A.4-1.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.3-1.2.2.1">
-                <p id="appendix-A.3-1.2.2.1.1">What testing and liveness detection features are built into the protocol? (<a href="#sec-monitor" class="auto internal xref">Section 5.4.1</a>)<a href="#appendix-A.3-1.2.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.4-1.2.2.1">
+                <p id="appendix-A.4-1.2.2.1.1">What testing and liveness detection features are built into the protocol? (<a href="#sec-monitor" class="auto internal xref">Section 5.4.1</a>)<a href="#appendix-A.4-1.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.3-1.3">
-            <p id="appendix-A.3-1.3.1">How are faults determined? (<a href="#sec-fault-determ" class="auto internal xref">Section 5.4.2</a>)<a href="#appendix-A.3-1.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.4-1.3">
+            <p id="appendix-A.4-1.3.1">How are faults determined? (<a href="#sec-fault-determ" class="auto internal xref">Section 5.4.2</a>)<a href="#appendix-A.4-1.3.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.3-1.3.2.1">
-                <p id="appendix-A.3-1.3.2.1.1">What error counters or diagnostics help pinpoint faults? (<a href="#sec-fault-determ" class="auto internal xref">Section 5.4.2</a>)<a href="#appendix-A.3-1.3.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.4-1.3.2.1">
+                <p id="appendix-A.4-1.3.2.1.1">What error counters or diagnostics help pinpoint faults? (<a href="#sec-fault-determ" class="auto internal xref">Section 5.4.2</a>)<a href="#appendix-A.4-1.3.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.3-1.3.2.2">
-                <p id="appendix-A.3-1.3.2.2.1">What distinguishes faulty from correct messages? (<a href="#sec-fault-determ" class="auto internal xref">Section 5.4.2</a>)<a href="#appendix-A.3-1.3.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.4-1.3.2.2">
+                <p id="appendix-A.4-1.3.2.2.1">What distinguishes faulty from correct messages? (<a href="#sec-fault-determ" class="auto internal xref">Section 5.4.2</a>)<a href="#appendix-A.4-1.3.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3397,19 +3406,19 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 </section>
 </div>
 <div id="configuration-management">
-<section id="appendix-A.4">
+<section id="appendix-A.5">
         <h3 id="name-configuration-management-2">
-<a href="#appendix-A.4" class="section-number selfRef">A.4. </a><a href="#name-configuration-management-2" class="section-name selfRef">Configuration Management</a>
+<a href="#appendix-A.5" class="section-number selfRef">A.5. </a><a href="#name-configuration-management-2" class="section-name selfRef">Configuration Management</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="appendix-A.4-1.1">
-            <p id="appendix-A.4-1.1.1">What configuration parameters are defined? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.4-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.5-1.1">
+            <p id="appendix-A.5-1.1.1">What configuration parameters are defined? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.5-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.4-1.1.2.1">
-                <p id="appendix-A.4-1.1.2.1.1">What parameters need to be configurable, including their defaults and valid ranges? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.4-1.1.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.5-1.1.2.1">
+                <p id="appendix-A.5-1.1.2.1.1">What parameters need to be configurable, including their defaults and valid ranges? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.5-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.4-1.1.2.2">
-                <p id="appendix-A.4-1.1.2.2.1">What information persists across reboots? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.4-1.1.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.5-1.1.2.2">
+                <p id="appendix-A.5-1.1.2.2.1">What information persists across reboots? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.5-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3417,30 +3426,30 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 </section>
 </div>
 <div id="performance-management">
-<section id="appendix-A.5">
+<section id="appendix-A.6">
         <h3 id="name-performance-management-2">
-<a href="#appendix-A.5" class="section-number selfRef">A.5. </a><a href="#name-performance-management-2" class="section-name selfRef">Performance Management</a>
+<a href="#appendix-A.6" class="section-number selfRef">A.6. </a><a href="#name-performance-management-2" class="section-name selfRef">Performance Management</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="appendix-A.5-1.1">
-            <p id="appendix-A.5-1.1.1">What are the performance implications? (<a href="#sec-perf-mgmt" class="auto internal xref">Section 5.7</a>)<a href="#appendix-A.5-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.6-1.1">
+            <p id="appendix-A.6-1.1.1">What are the performance implications? (<a href="#sec-perf-mgmt" class="auto internal xref">Section 5.7</a>)<a href="#appendix-A.6-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.5-1.1.2.1">
-                <p id="appendix-A.5-1.1.2.1.1">What are the hardware/software performance impacts (e.g., CPU, memory, forwarding)? (<a href="#sec-perf-mgmt" class="auto internal xref">Section 5.7</a>)<a href="#appendix-A.5-1.1.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.6-1.1.2.1">
+                <p id="appendix-A.6-1.1.2.1.1">What are the hardware/software performance impacts (e.g., CPU, memory, forwarding)? (<a href="#sec-perf-mgmt" class="auto internal xref">Section 5.7</a>)<a href="#appendix-A.6-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.5-1.2">
-            <p id="appendix-A.5-1.2.1">What performance information should be available? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.5-1.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.6-1.2">
+            <p id="appendix-A.6-1.2.1">What performance information should be available? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.6-1.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.5-1.2.2.1">
-                <p id="appendix-A.5-1.2.2.1.1">What protocol counters are defined (e.g., packets received, sent, dropped)? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.5-1.2.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.6-1.2.2.1">
+                <p id="appendix-A.6-1.2.2.1.1">What protocol counters are defined (e.g., packets received, sent, dropped)? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.6-1.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.5-1.2.2.2">
-                <p id="appendix-A.5-1.2.2.2.1">What is the counter behavior at maximum values? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.5-1.2.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.6-1.2.2.2">
+                <p id="appendix-A.6-1.2.2.2.1">What is the counter behavior at maximum values? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.6-1.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.5-1.2.2.3">
-                <p id="appendix-A.5-1.2.2.3.1">What are the protocol limitations and behavior when limits are exceeded? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.5-1.2.2.3.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.6-1.2.2.3">
+                <p id="appendix-A.6-1.2.2.3.1">What are the protocol limitations and behavior when limits are exceeded? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.6-1.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3448,22 +3457,22 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 </section>
 </div>
 <div id="security-management">
-<section id="appendix-A.6">
+<section id="appendix-A.7">
         <h3 id="name-security-management-2">
-<a href="#appendix-A.6" class="section-number selfRef">A.6. </a><a href="#name-security-management-2" class="section-name selfRef">Security Management</a>
+<a href="#appendix-A.7" class="section-number selfRef">A.7. </a><a href="#name-security-management-2" class="section-name selfRef">Security Management</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="appendix-A.6-1.1">
-            <p id="appendix-A.6-1.1.1">What security-related monitoring is needed? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.6-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.7-1.1">
+            <p id="appendix-A.7-1.1.1">What security-related monitoring is needed? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.6-1.1.2.1">
-                <p id="appendix-A.6-1.1.2.1.1">What security events should be logged? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.6-1.1.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.7-1.1.2.1">
+                <p id="appendix-A.7-1.1.2.1.1">What security events should be logged? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.6-1.1.2.2">
-                <p id="appendix-A.6-1.1.2.2.1">What statistics help detect attacks? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.6-1.1.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.7-1.1.2.2">
+                <p id="appendix-A.7-1.1.2.2.1">What statistics help detect attacks? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.6-1.1.2.3">
-                <p id="appendix-A.6-1.1.2.3.1">What security threats do management operations introduce? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.6-1.1.2.3.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.7-1.1.2.3">
+                <p id="appendix-A.7-1.1.2.3.1">What security threats do management operations introduce? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
