@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-27T00:57:55.090800+00:00",
+  "timestamp": "2026-01-29T01:02:52.388183+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2794,7 +2794,7 @@
       ],
       "body": "CURRENT:\n\n>    The decision to incorporate all or part of these items into their\n>    work remains with Protocol Designers and WGs themselves. ##\n>    Documentation Requirements\n> \n>    *  Does the specification include an \"Operational Considerations\"\n>       section?  (Section 3.1)\n> \n>    *  Is this section placed immediately before the Security\n>       Considerations section?  (Section 3.3)\n> \n>    *  If there are no new considerations, does the section include the\n>       appropriate boilerplate with explanation?  (Section 3.2)\n\nI guess this should be:\n\n>    The decision to incorporate all or part of these items into their\n>    work remains with Protocol Designers and WGs themselves.\n> \n>    A.1. Documentation Requirements",
       "createdAt": "2026-01-08T19:59:37Z",
-      "updatedAt": "2026-01-23T03:44:12Z",
+      "updatedAt": "2026-01-28T15:18:59Z",
       "closedAt": null,
       "comments": [
         {
@@ -2803,6 +2803,13 @@
           "body": "I think so. ",
           "createdAt": "2026-01-23T03:44:12Z",
           "updatedAt": "2026-01-23T03:44:12Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Yes, Med. It makes sense.",
+          "createdAt": "2026-01-28T15:18:59Z",
+          "updatedAt": "2026-01-28T15:18:59Z"
         }
       ]
     },
@@ -2811,7 +2818,7 @@
       "id": "I_kwDOOWPBqs7i2qu8",
       "title": "Clarify more about the \"location\" of managers in Section 5",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/183",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -2822,8 +2829,8 @@
       ],
       "body": "From Joel Halpern (Genart review):\n\n> In section 5, there is text that asks the document authros to consider where\nthe managers are.\u00a0 I find this expectation confusing.\u00a0 For any protocol I am\nfamiliar with, the managers can be in a variety of different places, delivered\nvia a variety of techniques.\u00a0 None of which considerations are tied to the\nspecific protocol being documented.\u00a0 )e.g. for a routing protocol document,\nwhether the managers are on site or remote, whether the access is via the data\nnetwork or v=ia an out of band network, whether there are or are not\nintermediate controllers are all parameters outside the scope of the routing\nprotocol manageability considerations.)\u00a0 While the text after the bulleted list\nappears to be factual, it also does not appear to be related to the protocol to\nbe described.\u00a0 I suppose one could recommend being careful not to assume in\nmanagability that some single specific management approach will always be\ntaken.\u00a0 But that is not what the sections seems to ask us to do.",
       "createdAt": "2026-01-12T21:04:27Z",
-      "updatedAt": "2026-01-23T00:23:00Z",
-      "closedAt": null,
+      "updatedAt": "2026-01-28T09:59:35Z",
+      "closedAt": "2026-01-28T09:59:35Z",
       "comments": []
     },
     {
@@ -2851,7 +2858,7 @@
       "id": "I_kwDOOWPBqs7i2wQR",
       "title": "Remind the reader that SNMP is no longer recommended",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/185",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -2862,8 +2869,8 @@
       ],
       "body": "From Joe Halpern (Genart review):\n\n>Nit: should there be a note in section 5.1 along with the reference to RFC6632\nthat SNMP is no longer recommended?",
       "createdAt": "2026-01-12T21:12:37Z",
-      "updatedAt": "2026-01-22T14:27:59Z",
-      "closedAt": null,
+      "updatedAt": "2026-01-28T15:07:43Z",
+      "closedAt": "2026-01-28T15:07:43Z",
       "comments": [
         {
           "author": "xorrkaz",
@@ -2925,9 +2932,31 @@
       ],
       "body": "Document: draft-ietf-opsawg-rfc5706bis\nTitle: Guidelines for Considering Operations and Management in IETF\nSpecifications Reviewer: Johan Stenstam Review result: Ready with Nits\n\ndnsdir review of draft-ietf-opsawg-rfc5706bis-01,\n\"Guidelines for Considering Operations and Management in IETF Specifications\"\n\nReviewer: Johan Stenstam\nDate: January 2026\n\nSUMMARY\n\nThe document provides guidelines for considering operations and\nmanagement in IETF specifications. From a DNS perspective, the\ndocument does not have very much to say, but what is there are\nappropriate references DNS as an infrastructure application that may\nbe impacted by new protocols, including DNS-related examples.\n\nThere are several editorial issues that I think ought to be addressed\nbefore publication, but they should all be simple to fix.\n\nDNS-RELATED CONTENT\n\n1. DNS References. There are four references to DNS in the draft:\n\n   a) Line 698 - Infrastructure Impact Consideration\n\n      \"Protocol Designers should consider also the impact on infrastructure\n      applications like DNS [RFC1034], the registries, or the size of\n      routing tables.\"\n\n      To me this is appropriate and well-placed in Section 4.5 (Impact on\n      Network Operation). The reference to RFC 1034 is correct.\n\n   b) Lines 705-707 - DNS Example in Operational Context\n\n      \"For example, Simple Mail Transfer Protocol (SMTP) [RFC5321] servers\n      use a reverse DNS lookup to filter out incoming connection requests:\n      when Berkeley installed a new spam filter, their mail server stopped\n      functioning because of overload of the DNS cache resolver.\"\n\n      This is a good example.\n\n   c) Line 421 - DNS over CoAP as Example\n      The document references DNS over CoAP (DoC) as an example of a\n      specification with adequate operational considerations documentation:\n\n      \"[I-D.ietf-core-dns-over-coap], [I-D.ietf-suit-mti],\n      [I-D.ietf-tcpm-prr-rfc6937bis] [RFC7574], [RFC9877], and [RFC9552].\"\n\n      While this is appropriate, it would be even more helpful if the document\n      explained why DNS over CoAP serves as a good example of operational\n      considerations.\n\n   d) Lines 1811-1816 - Reference Entry\n      The document includes a correct full reference for DNS over CoAP.\n\n2. DNS-Related Options.\n\n   When I started to read this document there were several DNS-related issues\n   that I thought that I might find, but didn't. I'm not suggesting that these\n   must be addressed, only listing them as food-for-thought in case the editors\n   think that \"DNS Issues\" may warrant a more thorough discussion in the\n   document:\n\n   - Adding guidance on considering DNS query patterns and load when\n     designing protocols that may generate DNS lookups\n   - Mentioning DNS caching implications when protocols generate frequent\n     DNS queries\n   - Considering DNS security (DNSSEC) implications for protocols that\n     rely on DNS for service discovery or configuration\n   - Addressing DNS privacy considerations (e.g., DNS over HTTPS, DNS\n     over TLS) when protocols expose DNS query patterns\n\n   Again, these are suggestions for possible enhancement rather than required\n   changes, as the document is already appropriately scoped.\n\nEDITORIAL NITS\n\nThe following editorial nits should be addressed:\n\n1. Line 160 - Capitalization\n   Location: Section 1, Introduction\n   Current text:\n   \"Section 2.14 of RFC 2360 [BCP22] on Guide for Internet Standards\n   Writers.  to obsolete references to mandatory MIBs...\"\n\n   Nit: The sentence that starts with a lowercase \"to\" suggests a\n   sentence break or missing capitalization. The text makes sense, so I\n   don't think there is any missing content.\n\n   Suggested fix:\n   \"Section 2.14 of RFC 2360 [BCP22] on Guide for Internet Standards\n   Writers, to obsolete references to mandatory MIBs...\"\n   OR\n   \"Section 2.14 of RFC 2360 [BCP22] on Guide for Internet Standards\n   Writers. To obsolete references to mandatory MIBs...\"\n\n2. Line 876 - Typo\n   Location: Section 5, paragraph discussing service management\n   Current text:\n   \"A service might be network and operational functionality derived from\n   the implementation and deployment of a New Protocol or Protocol\n   Exension.\"\n\n   Nit: \"Exension\" --> \"Extension\"\n\n3. Line 2142 - Formatting\n   Location: Appendix A, Operational Considerations Checklist\n   Current text:\n   \"The decision to incorporate all or part of these items into their\n   work remains with Protocol Designers and WGs themselves. ##\n   Documentation Requirements\"\n\n   Nit: \"##\" seems misplaced. My guess is that this is intended as a\n   section separator or header marker.\n\n4. Line 1280 - Incomplete Sentence\n   Location: Section 5.5, Configuration Management\n   Current text:\n   \"Is the attachment between them configured compatibly on both ends?\n   Is the IS-IS metric the same? ... Now answer those questions for 1,000\n   devices.\"\n\n   Nit: It is not clear to me whether the ellipsis (\"...\") is placeholder\n   for missing text or the intended editorial format. I suggest rephrasing to\n   make this clear.\n\nOVERALL ASSESSMENT\n\n>From a DNS perspective, this document appropriately recognizes DNS as a\ncritical infrastructure component and includes relevant examples. The DNS\nreferences are accurate and well-placed. The document would benefit from\naddressing the editorial issues identified above before publication.\n\nThe document serves its intended purpose of providing guidelines for\nconsidering operations and management in IETF specifications, and\nhopefully DNS operators will benefit from Protocol Designers in the\nfuture following these guidelines when designing protocols that\ninteract with or impact DNS infrastructure.\n\nRegards,\nJohan Stenstam\n\n",
       "createdAt": "2026-01-22T14:21:13Z",
-      "updatedAt": "2026-01-22T14:50:44Z",
+      "updatedAt": "2026-01-28T16:31:51Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "see #203 for the nits part",
+          "createdAt": "2026-01-28T16:29:27Z",
+          "updatedAt": "2026-01-28T16:29:27Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Whoever added this text about DNS over COAP...\n\n c) Line 421 - DNS over CoAP as Example\n      The document references DNS over CoAP (DoC) as an example of a\n      specification with adequate operational considerations documentation:\n\n      \"[I-D.ietf-core-dns-over-coap], [I-D.ietf-suit-mti],\n      [I-D.ietf-tcpm-prr-rfc6937bis] [RFC7574], [RFC9877], and [RFC9552].\"\n\n      While this is appropriate, it would be even more helpful if the document\n      explained why DNS over CoAP serves as a good example of operational\n      considerations.\n\n... can you please add a sentence why this is a good example",
+          "createdAt": "2026-01-28T16:30:14Z",
+          "updatedAt": "2026-01-28T16:30:14Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Let's discuss the following in our weekly call; those recommendations, even if excellent, might be a little bit too DNS specific. Thoughts?\n\n2. DNS-Related Options.\n\n   When I started to read this document there were several DNS-related issues\n   that I thought that I might find, but didn't. I'm not suggesting that these\n   must be addressed, only listing them as food-for-thought in case the editors\n   think that \"DNS Issues\" may warrant a more thorough discussion in the\n   document:\n\n   - Adding guidance on considering DNS query patterns and load when\n     designing protocols that may generate DNS lookups\n   - Mentioning DNS caching implications when protocols generate frequent\n     DNS queries\n   - Considering DNS security (DNSSEC) implications for protocols that\n     rely on DNS for service discovery or configuration\n   - Addressing DNS privacy considerations (e.g., DNS over HTTPS, DNS\n     over TLS) when protocols expose DNS query patterns\n\n   Again, these are suggestions for possible enhancement rather than required\n   changes, as the document is already appropriately scoped.",
+          "createdAt": "2026-01-28T16:31:51Z",
+          "updatedAt": "2026-01-28T16:31:51Z"
+        }
+      ]
     },
     {
       "number": 190,
@@ -2975,7 +3004,7 @@
       ],
       "body": "To be inserted around this text\n     creation and introduces a requirement to include an \"Operational\n     Considerations\" section in new RFCs in the IETF Stream.",
       "createdAt": "2026-01-22T14:39:24Z",
-      "updatedAt": "2026-01-26T14:48:07Z",
+      "updatedAt": "2026-01-27T22:30:29Z",
       "closedAt": null,
       "comments": [
         {
@@ -2998,6 +3027,13 @@
           "body": "I like that.  We may still need a more refined definition of \"technical\" later on (other than documents that are not process or procedural), but this is a good to assuage concerns early.",
           "createdAt": "2026-01-23T16:17:23Z",
           "updatedAt": "2026-01-23T16:17:23Z"
+        },
+        {
+          "author": "aretana",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> We may still need a more refined definition of \"technical\" later on (other than documents that are not process or procedural)...\n\nFYI: there's a definition of \"Technical Specification\" in rfc2026 (\u00a73).  I don't think that is what we want, but it may be part of it. ",
+          "createdAt": "2026-01-27T22:30:29Z",
+          "updatedAt": "2026-01-27T22:30:29Z"
         }
       ]
     },
@@ -3018,9 +3054,17 @@
       ],
       "body": "Just cleaning text",
       "createdAt": "2026-01-22T14:41:04Z",
-      "updatedAt": "2026-01-26T14:28:09Z",
+      "updatedAt": "2026-01-28T15:22:17Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "#193 is merged, this one should be closed, right?",
+          "createdAt": "2026-01-28T15:22:17Z",
+          "updatedAt": "2026-01-28T15:22:17Z"
+        }
+      ]
     },
     {
       "number": 195,
@@ -3055,7 +3099,31 @@
       ],
       "body": "We've had loads of people commenting recently and we need to make sure we acknowledge them.",
       "createdAt": "2026-01-26T13:44:08Z",
-      "updatedAt": "2026-01-26T14:28:35Z",
+      "updatedAt": "2026-01-27T10:40:43Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This is a duplicate of Issue #195 ",
+          "createdAt": "2026-01-27T10:40:42Z",
+          "updatedAt": "2026-01-27T10:40:42Z"
+        }
+      ]
+    },
+    {
+      "number": 204,
+      "id": "I_kwDOOWPBqs7mfxMd",
+      "title": "Be explicit about the update to rfc2360",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/204",
+      "state": "OPEN",
+      "author": "aretana",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From the Introduction:\n\n> Additionally, this document updates Section [2.14](https://rfc-editor.org/rfc/rfc2360#section-2.14) of RFC 2360 [[BCP22](https://ietf-opsawg-wg.github.io/draft-opsarea-rfc5706bis/draft-ietf-opsawg-rfc5706bis.html#BCP22)] on \n> \"Guide for Internet Standards Writers\" to obsolete references to mandatory \n> MIBs and instead focus on documenting holistic manageability and operational \n> considerations as described in [Section 3](https://ietf-opsawg-wg.github.io/draft-opsarea-rfc5706bis/draft-ietf-opsawg-rfc5706bis.html#sec-doc-req-ietf-spec).\n\n\n\nWe need a section that explicitly spells out the changes to \u00a72.4/rfc2360 (it's only one paragraph).\n\nSuggestion:\n\n>    When relevant, each standard needs to discuss how to manage the\n>    protocol being specified.  This management process should be\n>    compatible with current IETF Standard management protocols.  \n>    See [ThisRFC] for holistic manageability and operational \n>    considerations.\n\nI'm not sure we can get away with a forward reference, but I think it's worth a try.",
+      "createdAt": "2026-01-28T19:44:44Z",
+      "updatedAt": "2026-01-28T19:44:44Z",
       "closedAt": null,
       "comments": []
     }
@@ -13798,7 +13866,7 @@
       "labels": [],
       "body": "This fixes the inclusive lanugage issue from the original document.",
       "createdAt": "2026-01-22T14:12:16Z",
-      "updatedAt": "2026-01-26T14:48:20Z",
+      "updatedAt": "2026-01-27T15:26:11Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "b0e05ca765942b175ba86f1dd9b2fc83ffc2429e",
@@ -13811,7 +13879,22 @@
       "mergeCommit": {
         "oid": "52651d6e5c014db8f1f09f82684db529329b8f4a"
       },
-      "comments": [],
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@xorrkaz -- we do have a check for inclusive language deployed. How come it did not catch this one?",
+          "createdAt": "2026-01-27T10:44:15Z",
+          "updatedAt": "2026-01-27T10:44:15Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "It was in the original document.  The file checks only run on changes pushed, and this \"change\" existed prior to the extension being deployed.",
+          "createdAt": "2026-01-27T15:26:11Z",
+          "updatedAt": "2026-01-27T15:26:11Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs7c5Ihb",
@@ -13875,25 +13958,35 @@
       "id": "PR_kwDOOWPBqs6-0yKZ",
       "title": "183-update text-management-location",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/194",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-01-23T01:07:30Z",
-      "updatedAt": "2026-01-26T13:34:58Z",
+      "updatedAt": "2026-01-28T09:59:12Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "905a4bb8d22533c3e6bcf3da0d9f63dab4bb5c78",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "183-Issue-Management-Location",
       "headRefOid": "fc97166a5d4267515be269c921f1ac200865fef7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "closedAt": "2026-01-28T09:59:10Z",
+      "mergedAt": "2026-01-28T09:59:10Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "15f98d2e4d1451c96a2015dc01d55f84ca387f35"
+      },
+      "comments": [
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This looks good to me. ",
+          "createdAt": "2026-01-28T02:28:17Z",
+          "updatedAt": "2026-01-28T02:28:17Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs7c5gDT",
@@ -13906,6 +13999,19 @@
           "body": "This looks good to me",
           "createdAt": "2026-01-26T13:34:58Z",
           "updatedAt": "2026-01-26T13:34:58Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dUe4i",
+          "commit": {
+            "abbreviatedOid": "fc97166"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "This is clearer to me.  I might have added an \"for instance\" about bandwidth/latency, but perhaps that is not needed.",
+          "createdAt": "2026-01-27T19:44:15Z",
+          "updatedAt": "2026-01-27T19:44:15Z",
           "comments": []
         }
       ]
@@ -13922,18 +14028,26 @@
       "labels": [],
       "body": "Revisions to #191 and #182",
       "createdAt": "2026-01-26T01:51:58Z",
-      "updatedAt": "2026-01-26T14:44:45Z",
+      "updatedAt": "2026-01-28T02:20:04Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "905a4bb8d22533c3e6bcf3da0d9f63dab4bb5c78",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "Ranchen666-patch-1",
-      "headRefOid": "9c95625cbff8b4839f6601c1ec4e41e22c0cc06e",
+      "headRefOid": "95b6295a98f4ddd1d9fc6c98592fec2a4dcca2fd",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hi Med\uff0cAdian\uff0cthe content has been updated based on comments, and an updated Appendix B has been added. Please check it.",
+          "createdAt": "2026-01-27T01:58:44Z",
+          "updatedAt": "2026-01-27T01:58:44Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs7c1sFy",
@@ -13994,6 +14108,126 @@
               "updatedAt": "2026-01-26T14:44:45Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dUfsa",
+          "commit": {
+            "abbreviatedOid": "95b6295"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-27T19:44:56Z",
+          "updatedAt": "2026-01-27T19:45:23Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "a Protocol or Protocol Extension?",
+              "createdAt": "2026-01-27T19:44:56Z",
+              "updatedAt": "2026-01-27T19:45:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dW1QH",
+          "commit": {
+            "abbreviatedOid": "95b6295"
+          },
+          "author": "aretana",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-27T22:32:50Z",
+          "updatedAt": "2026-01-27T22:32:50Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "Note rfc2026's definition of Technical Specification: \"A Technical Specification is any description of a protocol, service, procedure, convention, or format.\"\n\nIf the definition is not the same, we might want to use a different term. Maybe \"technical document\" or something like that.",
+              "createdAt": "2026-01-27T22:32:50Z",
+              "updatedAt": "2026-01-27T22:32:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dW4Jj",
+          "commit": {
+            "abbreviatedOid": "95b6295"
+          },
+          "author": "aretana",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-27T22:37:17Z",
+          "updatedAt": "2026-01-27T22:37:17Z",
+          "comments": [
+            {
+              "originalPosition": 3,
+              "body": "```suggestion\n   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a\n```",
+              "createdAt": "2026-01-27T22:37:17Z",
+              "updatedAt": "2026-01-27T22:38:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dW5Tj",
+          "commit": {
+            "abbreviatedOid": "95b6295"
+          },
+          "author": "aretana",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-27T22:39:13Z",
+          "updatedAt": "2026-01-27T22:39:13Z",
+          "comments": [
+            {
+              "originalPosition": 3,
+              "body": "Using one sentence sounded like including the Operational Considerations Section was part of the update to rfc2360.",
+              "createdAt": "2026-01-27T22:39:13Z",
+              "updatedAt": "2026-01-27T22:39:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dYzZA",
+          "commit": {
+            "abbreviatedOid": "95b6295"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T02:05:35Z",
+          "updatedAt": "2026-01-28T02:05:35Z",
+          "comments": [
+            {
+              "originalPosition": 3,
+              "body": "agree.",
+              "createdAt": "2026-01-28T02:05:35Z",
+              "updatedAt": "2026-01-28T02:05:35Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dY5uy",
+          "commit": {
+            "abbreviatedOid": "95b6295"
+          },
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T02:20:03Z",
+          "updatedAt": "2026-01-28T02:20:04Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "Thank you very much for the reminder. \"Technical document\" works for me \uff0cand the accompanying explanation in the terminology section provides the necessary clarity on its scope.",
+              "createdAt": "2026-01-28T02:20:03Z",
+              "updatedAt": "2026-01-28T02:20:04Z"
+            }
+          ]
         }
       ]
     },
@@ -14009,7 +14243,7 @@
       "labels": [],
       "body": "Updates to the Acknowledgements to resolve #197",
       "createdAt": "2026-01-26T14:27:04Z",
-      "updatedAt": "2026-01-27T00:51:24Z",
+      "updatedAt": "2026-01-28T15:24:10Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "905a4bb8d22533c3e6bcf3da0d9f63dab4bb5c78",
@@ -14027,35 +14261,98 @@
           "body": "Dhruv Dhody, as RTG-DIR, will review our draft. He will submit his comments by the February 3rd deadline.",
           "createdAt": "2026-01-27T00:51:24Z",
           "updatedAt": "2026-01-27T00:51:24Z"
+        },
+        {
+          "author": "Ranchen666",
+          "authorAssociation": "COLLABORATOR",
+          "body": "And Jeffrey Haas",
+          "createdAt": "2026-01-27T00:59:16Z",
+          "updatedAt": "2026-01-27T00:59:16Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7dUht5",
+          "commit": {
+            "abbreviatedOid": "d442185"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-01-27T19:47:19Z",
+          "updatedAt": "2026-01-27T19:47:52Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\n: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, and Greg Mirsky.\n```",
+              "createdAt": "2026-01-27T19:47:20Z",
+              "updatedAt": "2026-01-27T19:47:52Z"
+            },
+            {
+              "originalPosition": 7,
+              "body": "We already thank everyone above for their efforts.  This trailing sentence fragment feels out of place.",
+              "createdAt": "2026-01-27T19:47:46Z",
+              "updatedAt": "2026-01-27T19:47:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dkfbu",
+          "commit": {
+            "abbreviatedOid": "d442185"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-01-28T15:24:10Z",
+          "updatedAt": "2026-01-28T15:24:10Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 199,
       "id": "PR_kwDOOWPBqs6_YZhP",
       "title": "Minor typo",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/199",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "per #190\r\ns/Exension/Extension/",
       "createdAt": "2026-01-26T14:42:44Z",
-      "updatedAt": "2026-01-26T14:42:45Z",
+      "updatedAt": "2026-01-27T19:48:27Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "905a4bb8d22533c3e6bcf3da0d9f63dab4bb5c78",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-3",
       "headRefOid": "faadfbb18f783c0b61bbf6b246541540f4809b2e",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-01-27T19:48:25Z",
+      "mergedAt": "2026-01-27T19:48:25Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "745a68ed14154d3bcecc81405ede984e4cb3f61b"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7dUiqg",
+          "commit": {
+            "abbreviatedOid": "faadfbb"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-01-27T19:48:19Z",
+          "updatedAt": "2026-01-27T19:48:19Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 200,
@@ -14069,7 +14366,7 @@
       "labels": [],
       "body": "#188 requests examples.\r\nThis change provides the long version (although more work is needed) of what might be added. \r\n\r\n(See the comment on the Issue)",
       "createdAt": "2026-01-26T17:17:39Z",
-      "updatedAt": "2026-01-26T17:17:39Z",
+      "updatedAt": "2026-01-27T19:50:47Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "a2d0ea98afaaa0b71518e84f706776a754c91de2",
@@ -14081,7 +14378,357 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7dUlDS",
+          "commit": {
+            "abbreviatedOid": "1fb300c"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "On the right track.  ",
+          "createdAt": "2026-01-27T19:50:41Z",
+          "updatedAt": "2026-01-27T19:50:47Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "Perhaps instead of ending with \"successfully published\" you could just end it at the comma.  That is, it's challenging to think about ops and management in hindsight.",
+              "createdAt": "2026-01-27T19:50:41Z",
+              "updatedAt": "2026-01-27T19:50:47Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 201,
+      "id": "PR_kwDOOWPBqs6_rp4j",
+      "title": "Add a note that SNMP is no longer recommended.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/201",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Addresses #185.",
+      "createdAt": "2026-01-27T19:20:59Z",
+      "updatedAt": "2026-01-28T15:07:44Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "a2d0ea98afaaa0b71518e84f706776a754c91de2",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "185-remind-the-reader-that-snmp-is-no-longer-recommended",
+      "headRefOid": "38d40d828df974c5017942fe5a279633a07ff11c",
+      "closedAt": "2026-01-28T15:07:41Z",
+      "mergedAt": "2026-01-28T15:07:41Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "21d1e8f1dc275a1ae884018e3cef7b6ce0879e93"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7dbOWX",
+          "commit": {
+            "abbreviatedOid": "a16b426"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T07:05:54Z",
+          "updatedAt": "2026-01-28T07:05:54Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "\"modern\" won't age well in an RFC. Maybe s/modern/better ?\n\nAlso, the text about section needs fixing. Thanks",
+              "createdAt": "2026-01-28T07:05:54Z",
+              "updatedAt": "2026-01-28T07:05:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7debjB",
+          "commit": {
+            "abbreviatedOid": "a16b426"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T09:57:36Z",
+          "updatedAt": "2026-01-28T09:57:36Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Good catches.  Fixed!",
+              "createdAt": "2026-01-28T09:57:36Z",
+              "updatedAt": "2026-01-28T09:57:36Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dekgP",
+          "commit": {
+            "abbreviatedOid": "b594d08"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T10:02:41Z",
+          "updatedAt": "2026-01-28T10:02:41Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\n   further in Section {{<sec-interop}}. This  document formally deprecates the following recommendation from {{BCP22}}:\n   \n   {: quote}\n   > a MIB must be defined within the standard or in a companion  document.\n```",
+              "createdAt": "2026-01-28T10:02:41Z",
+              "updatedAt": "2026-01-28T10:03:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7denyi",
+          "commit": {
+            "abbreviatedOid": "ecee97d"
+          },
+          "author": "github-actions",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T10:05:11Z",
+          "updatedAt": "2026-01-28T10:05:11Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "````suggestion\n\n````",
+              "createdAt": "2026-01-28T10:05:11Z",
+              "updatedAt": "2026-01-28T10:05:11Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7deq7A",
+          "commit": {
+            "abbreviatedOid": "ecee97d"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T10:07:32Z",
+          "updatedAt": "2026-01-28T10:07:32Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\n\n```",
+              "createdAt": "2026-01-28T10:07:32Z",
+              "updatedAt": "2026-01-28T10:07:32Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7de8V4",
+          "commit": {
+            "abbreviatedOid": "38d40d8"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-01-28T10:21:09Z",
+          "updatedAt": "2026-01-28T10:21:09Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dj8by",
+          "commit": {
+            "abbreviatedOid": "38d40d8"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-01-28T15:00:59Z",
+          "updatedAt": "2026-01-28T15:00:59Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 202,
+      "id": "PR_kwDOOWPBqs6_ryxg",
+      "title": "Simplify text around models.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/202",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Avoid being overly prescriptive as there are other documents for model/module authors for such text.  This is to address #184.",
+      "createdAt": "2026-01-27T19:32:11Z",
+      "updatedAt": "2026-01-28T15:13:03Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "7660c6adfea9b42b4113b346ea9826ada9564938",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "184-focus-the-text-in-section-53-to-what-a-protocol-designer-should-consider",
+      "headRefOid": "bb224886b188b09b3cb482e778462b7d3d0460cf",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7deT5T",
+          "commit": {
+            "abbreviatedOid": "bb22488"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-01-28T09:52:35Z",
+          "updatedAt": "2026-01-28T09:52:35Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dkI1G",
+          "commit": {
+            "abbreviatedOid": "bb22488"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-01-28T15:10:34Z",
+          "updatedAt": "2026-01-28T15:13:03Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\n   While an Information Model is typically described in English text (or sometime UML) to\n```",
+              "createdAt": "2026-01-28T15:10:34Z",
+              "updatedAt": "2026-01-28T15:13:03Z"
+            },
+            {
+              "originalPosition": 37,
+              "body": "Which model? IM or DM? The previous sentence speaks about \"management information\"",
+              "createdAt": "2026-01-28T15:12:42Z",
+              "updatedAt": "2026-01-28T15:13:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 203,
+      "id": "PR_kwDOOWPBqs6_5jPy",
+      "title": "Nits part from the draft-ietf-opsawg-rfc5706bis-01 early Dnsdir review",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/203",
+      "state": "MERGED",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-01-28T16:28:30Z",
+      "updatedAt": "2026-01-28T17:27:04Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "21d1e8f1dc275a1ae884018e3cef7b6ce0879e93",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "dnsdir-review-nits-parts",
+      "headRefOid": "299d6e7d9b14fd2de1849076f96d5cee28f04d5a",
+      "closedAt": "2026-01-28T17:27:02Z",
+      "mergedAt": "2026-01-28T17:27:02Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "e484cf75a71a92e97d4d85fedd91f1a921e1e0ad"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7dl8P3",
+          "commit": {
+            "abbreviatedOid": "f4673d8"
+          },
+          "author": "github-actions",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T16:28:59Z",
+          "updatedAt": "2026-01-28T16:28:59Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "````suggestion\n   Is the attachment between them configured compatibly on both ends?\n````",
+              "createdAt": "2026-01-28T16:28:59Z",
+              "updatedAt": "2026-01-28T16:28:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dl-xE",
+          "commit": {
+            "abbreviatedOid": "7dfdab2"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-01-28T16:30:31Z",
+          "updatedAt": "2026-01-28T16:30:50Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "This changes the meaning of what was there.  I think what was there was trying to convey this is easy to do for two devices.  It's _not_ so easy to do for 1,000.",
+              "createdAt": "2026-01-28T16:30:31Z",
+              "updatedAt": "2026-01-28T16:30:50Z"
+            },
+            {
+              "originalPosition": 9,
+              "body": "Did not mean to add a \"not\"?",
+              "createdAt": "2026-01-28T16:30:46Z",
+              "updatedAt": "2026-01-28T16:30:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dmHrr",
+          "commit": {
+            "abbreviatedOid": "7dfdab2"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-28T16:36:23Z",
+          "updatedAt": "2026-01-28T16:36:44Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\n   network is not that easy.\n```",
+              "createdAt": "2026-01-28T16:36:23Z",
+              "updatedAt": "2026-01-28T16:36:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7dmOLY",
+          "commit": {
+            "abbreviatedOid": "299d6e7"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-01-28T16:41:08Z",
+          "updatedAt": "2026-01-28T16:41:08Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
