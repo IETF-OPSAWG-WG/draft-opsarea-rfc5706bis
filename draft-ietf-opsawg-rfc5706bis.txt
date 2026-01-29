@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 1 August 2026                                Old Dog Consulting
+Expires: 2 August 2026                                Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                         28 January 2026
+                                                         29 January 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -33,8 +33,10 @@ Abstract
    This document obsoletes RFC 5706, replacing it completely and
    updating it with new operational and management techniques and
    mechanisms.  It also updates RFC 2360 to obsolete mandatory MIB
-   creation and introduces a requirement to include an "Operational
-   Considerations" section in new RFCs in the IETF Stream.
+   creation.  Finally, it introduces a requirement to include an
+   "Operational Considerations" section in new RFCs that document a
+   technical specification in the IETF Stream, while providing an escape
+   clause if no new considerations are identified.
 
 Status of This Memo
 
@@ -51,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 August 2026.
+   This Internet-Draft will expire on 2 August 2026.
 
 Copyright Notice
 
@@ -349,6 +351,10 @@ Table of Contents
    *  Protocol Designer: An individual, a group of people, or an IETF WG
       involved in the development and specification of New Protocols or
       Protocol Extensions.
+
+   *  Technical Document: This includes any document that describes the
+      design, specification, implementation, or deployment of a new
+      Protocol or Protocol Extensions.
 
 3.  Documentation Requirements for IETF Specifications
 
@@ -2171,8 +2177,8 @@ Appendix B.  Changes Since RFC 5706
       protocol specifications
 
    *  Add a requirement for an "Operational Considerations" section in
-      all new Standard Track RFCs, along with specific guidance on its
-      content.
+      all new RFCs that document a technical specification in the IETF
+      Stream, along with specific guidance on its content.
 
    *  Update the operational and manageability-related technologies to
       reflect over 15 years of advancements
