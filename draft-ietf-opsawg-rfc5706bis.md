@@ -828,7 +828,7 @@ DM         DM        DM     --> concrete/detailed model
    way makes it an effective choice for defining management information
    models.
 
-   While an Information Model is typically described in English text to
+   While an Information Model is typically described in English text (or sometimes UML) to
    define the conceptual management requirements, providing a formal Data
    Model (such as a YANG module) ensures these concepts are precisely mapped
    to a concrete implementation. This dual approach helps maintain consistency
