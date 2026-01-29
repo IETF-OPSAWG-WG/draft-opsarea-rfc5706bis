@@ -305,9 +305,9 @@ This document does not describe interoperability requirements. As such, it does 
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-   *  Technical specification: Any document that an
-      implementation would claim conformance to. Specifically, this includes any document that affects the
-      design, implementation, or deployment of a protocol.
+   *  Technical Document: 
+      This includes any document that describes the
+      design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.
 
 #  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
