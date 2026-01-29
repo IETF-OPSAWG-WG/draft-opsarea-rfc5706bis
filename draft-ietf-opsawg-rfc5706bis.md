@@ -94,7 +94,7 @@ contributor:
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
-   updates RFC 2360 to obsolete mandatory MIB creation and introduces a
+   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a
    requirement to include an "Operational Considerations" section in new RFCs that document a technical specification in the IETF Stream,
    while providing an escape clause if no new considerations are identified.
 
