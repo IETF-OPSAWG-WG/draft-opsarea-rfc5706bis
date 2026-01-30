@@ -348,7 +348,9 @@ This document does not describe interoperability requirements. As such, it does 
 
 > Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
 > with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},
-> {{?I-D.ietf-suit-mti}}, {{?I-D.ietf-tcpm-prr-rfc6937bis}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
+> {{?I-D.ietf-suit-mti}}, {{?I-D.ietf-tcpm-prr-rfc6937bis}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}. For example,
+> given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
+> those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
 
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
