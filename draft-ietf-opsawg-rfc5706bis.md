@@ -392,15 +392,15 @@ This document does not describe interoperability requirements. As such, it does 
 # How Will the New Protocol or Protocol Extension Fit into the Current Environment? {#sec-oper-consid}
 
    Designers of a New Protocol or Protocol Extension should carefully consider the operational
-   aspects. To ensure that a protocol will be practical to deploy in
-   the real world, it is not enough to merely define it very precisely
-   in a well-written document. Operational aspects will have a serious
-   impact on the actual success of a protocol. Such aspects include bad
-   interactions with existing solutions, a difficult upgrade path,
-   difficulty of debugging problems, difficulty configuring from a
-   central database, or a complicated state diagram that operations
-   staff will find difficult to understand. {{?RFC5218}} provides
-   a more detailed discussion on what makes for a successful protocol.
+   aspects of real-world deployments, which can directly
+   impact its success. Such aspects include
+   interactions with existing solutions, upgrade or deployment paths,
+   the ability to debug problems, ease of configuration,
+   and a state diagram that operations
+   staff can understand. {{?RFC5218}} provides
+   a more detailed discussion on what makes for a successful protocol. Such an exercise
+   need not be reflected directly in their document, but could help visualize how 
+   to apply the protocol in the environments where it will be deployed.
 
    > BGP flap damping {{?RFC2439}} is an example.  It was designed to block
    high-frequency route flaps.  Some BGP implementations were memory-constrained
@@ -409,34 +409,6 @@ This document does not describe interoperability requirements. As such, it does 
    in loss of reachability.  As a result, flap damping was often not
    enabled network-wide, contrary to the intentions of the original
    designers.
-
-##  Operations {#sec-ops}
-
-   Protocol Designers can analyze the operational environment and mode
-   of work in which the New Protocol or Protocol Extension will be used. Such an
-   exercise need not be reflected directly by text in their document
-   but could help in visualizing how to apply the protocol in the
-   Internet environments where it will be deployed.
-
-   A key question is how the protocol can operate "out of the box". If
-   implementers are free to select their own defaults, the protocol
-   needs to operate well with any choice of values. If there are
-   sensible defaults, these need to be stated.
-
-   There may be a need to support both a human interface (e.g., for
-   troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and Cause analysis). The application programming
-   interfaces (APIs) and the human interfaces might benefit from being similar
-   to ensure that the information exposed by both is
-   consistent when presented to an operator. It is also relevant to
-   identify consistent methods for determining information, such as
-   what is counted in specific counters.
-
-   Protocol Designers should consider what management operations are
-   expected to be performed as a result of the deployment of the
-   protocol -- for example whether write operations are permitted on
-   specific nodes (e.g., routers, hosts, including servers), or whether notifications for alarms or other
-   events will be expected.
 
 ##  Installation and Initial Setup {#sec-install}
 
@@ -448,42 +420,33 @@ This document does not describe interoperability requirements. As such, it does 
    options and parameters whenever possible. Any options and parameters
    should be configured or negotiated dynamically rather than manually.
 
-   To simplify configuration, Protocol Designers should consider
-   specifying reasonable defaults, including default modes and
-   parameters. For example, it could be helpful or necessary to specify
+   The New Protocol or Protocol Extension should be able to can operate "out of the box". 
+   To simplify configuration, Protocol Designers should
+   specify reasonable defaults, including default modes and
+   parameters. For example, define
    default values for modes, timers, default state of logical control
-   variables, default transports, and so on. Even if default values are
-   used, it must be possible to retrieve all the actual values or at
-   least an indication that known default values are being used.
+   variables, default transports, and so on.
 
-   Protocol Designers should consider how to enable operators to
-   concentrate on the configuration of the network or service infrastructure as a whole rather
-   than on individual devices. Of course, how one accomplishes this is
-   the hard part.
-
-   Protocol Designers should explain the background of chosen default
-   values and provide the rationale, especially when those choices may
-   affect operations. In many cases, as
-   technology changes, the values in an RFC might make less and less
-   sense. It is very useful to understand whether defaults are based on
+   Protocol Designers should explain the background of the chosen default
+   values and provide the rationale.
+   In many cases, as
+   technology changes, the documented values might make less and less
+   sense. It is helpful to understand whether defaults are based on
    best current practice and are expected to change as technologies
-   advance or whether they have a more universal value that should not
+   advance, or whether they have a more universal value that should not
    be changed lightly. For example, the default interface speed might
-   be expected to change over time due to increased speeds in the
-   network, and cryptographic algorithms might be expected to change
+   change over time as network speeds increase,
+   and cryptographic algorithms might be expected to change
    over time as older algorithms are "broken".
-
-   It is extremely important to set a sensible default value for all
-   parameters.
 
    Default values should generally favor the conservative side over the
    "optimizing performance" side (e.g., the initial Round-Trip Time (RTT) and
    Round-Trip Time Variance (RTTVAR) values of a TCP connection {{?RFC6298}}).
 
-   For those parameters that are speed-dependent, instead of using a
-   constant, try to set the default value as a function of the link
-   speed or some other relevant factors. This would help reduce the
-   chance of problems caused by technology advancement.
+   For parameters that can vary (e.g., speed-dependent), instead of using a
+   constant, set the default value as a function of the
+   variable to reduce the
+   risk of problems caused by technology advancement.
 
    > For example, where protocols involve cryptographic keys, Protocol Designers should
    consider not only key generation and validation mechanisms but also the
@@ -1492,7 +1455,7 @@ The decision to incorporate all or part of these items into their work remains w
 
 ## Operational Fit
 
-* How does this protocol operate "out of the box"? ({{sec-ops}}, {{sec-install}})
+* How does this protocol operate "out of the box"? ({{sec-install}})
    * What are the default values, modes, timers, and states? ({{sec-install}})
    * What is the rationale for chosen default values, especially if they affect operations or are expected to change over time? ({{sec-install}})
 
