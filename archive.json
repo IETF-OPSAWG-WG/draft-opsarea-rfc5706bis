@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-01T01:13:57.901519+00:00",
+  "timestamp": "2026-02-05T01:04:21.154562+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -97,6 +97,11 @@
       "name": "DIR Review",
       "description": null,
       "color": "aaaaaa"
+    },
+    {
+      "name": "Authors-Experience",
+      "description": "Feedback from authors following guidance",
+      "color": "1ef215"
     }
   ],
   "issues": [
@@ -3196,6 +3201,24 @@
       "body": "Hi Greg,\n\nMany thanks for your review and for supporting the draft.\n\nThe text you quote is a digest of this part from rfc6291:\n\n   \"Provisioning\" is outside the scope of this document, but the\n   following definition is provided for completeness.\n \n   o  Provisioning - Provisioning activities involve configuring\n      resources in the network to support the offered services.  This\n      might include setting up the network so that a new customer can\n      receive an Internet access service.\n \n   In general, Provisioning is used to configure the network to provide\n   new services, whereas OAM is used to keep the network in a state that\n   it can support already existing services.\n \n   Sometimes it is necessary to talk about the combination of functions\n   and tools supplied by OAM and Management, it is preferred that this\n   is spelled out as \"OAM and Management\".  In cases where an acronym is\n   needed, O&M should be used.\n\nWe propose the following change:\n\nOLD\n\n      The broader concept of \"operations and management\" that is the\n      subject of this document encompasses OAM, in addition to other\n      management and provisioning tools and concepts.\nNEW\n\n      The broader concept of \"operations and management\" that is the\n      subject of this document encompasses OAM, in addition to other\n      management and provisioning tools and concepts. This is\n\n      sometimes known as \u201cOAM and Management\u201d or \u201cO&M\u201d as \n      explained in [RFC6291].\n\nThanks and regards, Benoit (on behalf of the authors) \n\n> Document: draft-ietf-opsawg-rfc5706bis\n> Title: Guidelines for Considering Operations and Management in IETF\n> Specifications Reviewer: Greg Mirsky Review result: Has Issues\n>\n> Dear Authors,\n> Thank you for your work on this document. I wholeheartedly agree with your view\n> that adding Operational Considerations to an IETF document will help in the\n> deployment of the specified mechanism. I found the document well-written and\n> easy to read. The concern I have is with the assertion of the relationship\n> between the scopes of Operation and Management, Operation, Administration, and\n> Maintenance, expressed in the Terminology section as:\n>       The broader concept of \"operations and management\" that is the\n>       subject of this document encompasses OAM, in addition to other\n>       management and provisioning tools and concepts.\n> Can you reference a document that discusses that relationship? It seems that\n> RFC 6291 avoided discussing this issue. In your opinion, what is the value of\n> that assertion to the document?\n>\n> Regards,\n> Greg\n>\n>\n",
       "createdAt": "2026-01-29T14:54:10Z",
       "updatedAt": "2026-01-29T14:54:10Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 208,
+      "id": "I_kwDOOWPBqs7n3NRY",
+      "title": "Feedback from Marco Tiloca",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/208",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "Authors-Experience"
+      ],
+      "body": "Thanks for the early feedback on the ACE draft. While I do try to include focused operational remarks inline in Internet Drafts, my experience in thinking of a whole \"Operational Considerations\" section is quite limited so far, so it is going to be a learning process :-)\n\nBased on Thomas' review for the ACE draft (thanks!), I actually relied on the now replaced draft-opsarea-rfc5706bis, which helped a lot and ultimately enabled me to write the new section. That document already was a well-organized collection of experience and wisdom from the OPS Area.\n\nAt the same time, as not experienced in operational issues and considerations, I was also a bit hesitant about how exactly to proceed and what to cover that was pertinent and relevant for that ACE document. I started to wish for a very crisp and actionable checklist. Hence, I ended up producing that list in the form of personal notes, also based on the review checklist for the OPS Directorate [1].\n\nLater on, I could see that draft-ietf-opsawg-rfc5706bis introduced essentially that sort of checklist in Appendix A and its subsections. That's very helpful!\n\nI can give some specific feedback on that Appendix A:\n\n* The appendix is organized into six subsections, covering different classes of considerations.\n\n  I wonder if those can be somehow re-organized into only two classes \"Operational\" and \"Management\", i.e., those considered in the review checklist for the OPS Directorate [1]. Some of the current six classes might become sub-classes of the two main ones above.\n\n* Specifically on the points in Appendix A.6:\n\n  - Unlike in [1], the bullet list does not mention management considerations about other security-related aspects, such as access control and key distribution, although both points are covered in Section 5.8.\n\n  - \"What security threats do management operations introduce?\" could very well be \"What security and privacy threats do management operations introduce?\"\n\n    Precisely when revising the ACE draft, I realized and wrote down how log entries might include privacy-sensitive information, which ought to be stripped away if/when sharing those entries with authorized third parties.\n\nI hope this helps!\n\nBest,\n/Marco\n\n[1] https://github.com/IETF-OPS-DIR/Review-Template/blob/main/review-checklist.md",
+      "createdAt": "2026-02-03T08:47:55Z",
+      "updatedAt": "2026-02-03T08:47:55Z",
       "closedAt": null,
       "comments": []
     }
@@ -15004,6 +15027,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 209,
+      "id": "PR_kwDOOWPBqs7BjVDk",
+      "title": "Coherence Between the Checklist and the Text",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/209",
+      "state": "OPEN",
+      "author": "aretana",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I started comparing the checklist in Appendix A to the corresponding text.\r\n\r\nI went through the first set in A.2. (Operational Fit):\r\n\r\n> How does this protocol operate \"out of the box\"? (Section 4.1, Section 4.2)\r\n> \r\n> What are the default values, modes, timers, and states? (Section 4.2)\r\n> \r\n> What is the rationale for chosen default values, especially if they affect operations or are expected to change over time? (Section 4.2)\r\n\r\n\r\n\r\n1. I believe the text can be simplified significantly. This PR effectively eliminates \u00a74.1 (Operations). \r\n2. Some of the text that I eliminated (see below) didn't correspond to the questions and/or seemed to belong elsewhere.\r\n\r\nIs this type of comparison useful?\r\n\r\n\r\n\r\n## Eliminated text: \r\n\r\n> There may be a need to support both a human interface (e.g., for troubleshooting) and a programmatic interface (e.g., for automated monitoring and Cause analysis). The application programming interfaces (APIs) and the human interfaces might benefit from being similar to ensure that the information exposed by both is consistent when presented to an operator. It is also relevant to identify consistent methods for determining information, such as what is counted in specific counters.\r\n\r\nThe interface-related text seems to belong elsewhere -- \u00a75?\r\n\r\n\r\n> Protocol Designers should consider what management operations are expected to be performed as a result of the deployment of the protocol -- for example whether write operations are permitted on specific nodes (e.g., routers, hosts, including servers), or whether notifications for alarms or other events will be expected.\r\n\r\nManagement operations, belongs in \u00a75 as well?\r\n\r\n\r\n> Even if default values are used, it must be possible to retrieve all the actual values or at least an indication that known default values are being used.\r\n\r\nValue retrieval, belongs in \u00a75.3?\r\n\r\n\r\n> Protocol Designers should consider how to enable operators to concentrate on the configuration of the network or service infrastructure as a whole rather than on individual devices. Of course, how one accomplishes this is the hard part.\r\n\r\nWhat does this mean with respect to the documentation?",
+      "createdAt": "2026-02-04T20:03:03Z",
+      "updatedAt": "2026-02-04T20:03:03Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "cd75d034bd378a521e19c69b040a5f80d2d876a8",
+      "headRepository": "aretana/draft-opsarea-rfc5706bis",
+      "headRefName": "aretana_2",
+      "headRefOid": "a92de79550723d6b1309c578b0e76bed5f1fb05f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
