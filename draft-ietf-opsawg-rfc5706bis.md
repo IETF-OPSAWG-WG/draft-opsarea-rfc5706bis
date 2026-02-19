@@ -92,11 +92,14 @@ contributor:
    reviewers on what operational and management aspects should be
    addressed when defining New Protocols and Protocol Extensions.
 
-   This document obsoletes RFC 5706, replacing it completely and updating
-   it with new operational and management techniques and mechanisms. It also
-   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a
-   requirement to include an "Operational Considerations" section in new RFCs that document a technical specification in the IETF Stream,
-   while providing an escape clause if no new considerations are identified.
+   This document obsoletes RFC 5706, replacing it completely and
+   updating it with new operational and management techniques and
+   mechanisms. It also updates RFC 2360 to obsolete mandatory
+   Management Information Base (MIB) creation. Finally, it introduces a
+   requirement to include an "Operational Considerations" section in
+   new RFCs that document a technical specification in the IETF Stream,
+   while providing an escape clause if no new considerations are
+   identified.
 
 --- middle
 
@@ -217,7 +220,7 @@ contributor:
    need to be updated in the future, after further operational
    experience has been gained.
 
-   The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
+   The Operational Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
@@ -406,7 +409,7 @@ This document does not describe interoperability requirements. As such, it does 
    to apply the protocol in the environments where it will be deployed.
    {{?RFC5218}} provides a more detailed discussion on what makes for a successful protocol.
 
-   > BGP flap damping {{?RFC2439}} is an example.  It was designed to block
+   > Border Gateway Protocol (BGP) flap damping {{?RFC2439}} is an example.  It was designed to block
    high-frequency route flaps.  Some BGP implementations were memory-constrained
    so often elected not to support this function, others found a
    conflict where path exploration caused false flap damping resulting
@@ -445,7 +448,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    Default values should generally favor the conservative side over the
    "optimizing performance" side (e.g., the initial Round-Trip Time (RTT) and
-   Round-Trip Time Variance (RTTVAR) values of a TCP connection {{?RFC6298}}).
+   Round-Trip Time Variance (RTTVAR) values of a Transmission Control Protocol (TCP) connection {{?RFC6298}}).
 
    For parameters that can vary (e.g., speed-dependent), instead of using a
    constant, set the default value as a function of the
@@ -506,7 +509,7 @@ This document does not describe interoperability requirements. As such, it does 
    {{?RFC2205}} required each router to look at the RSVP PATH message and,
    if the router understood RSVP, add its own address to the message to
    enable automatic tunneling through non-RSVP routers. But in reality,
-   routers cannot look at an otherwise normal IP packet and potentially
+   routers cannot look at an otherwise normal Internet Protocol (IP) packet and potentially
    take it off the fast path! The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
@@ -557,12 +560,11 @@ This document does not describe interoperability requirements. As such, it does 
    the configuration, such as servers performing auto-configuration
    operations.
 
-   Protocol Designers should consider also the impact on
-   infrastructure applications like DNS {{?RFC1034}}, the registries, or
-   the size of routing tables.
+   Protocol designers should also consider the impact on infrastructure
+   applications such as the Domain Name System (DNS) {{?RFC1034}}, the
+   registries, or the size of routing tables.
 
-   > For example, Simple Mail Transfer
-   Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
+   > For example, Simple Mail Transfer Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
@@ -580,7 +582,7 @@ overwhelmed, then this must be called out, and suitable mechanisms to
 rate limit the OAM traffic must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
 
 > Consider three examples: (1) In
-Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
+Bidirectional Forwarding Detection for Multi-Protocol Label Switching (MPLS) {{?RFC5884}} it is
 possible to configure very rapid BFD transmissions (of the order of
 3ms) on a very large number of parallel Label Switched Paths (LSPs)
 with the result that the management systems and end nodes may become
@@ -694,7 +696,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble. NETCONF addresses this in a generic manner
+   causes trouble. Network Configuration Protocol (NETCONF) addresses this in a generic manner
    by allowing an operator to lock the configuration on multiple
    devices, perform the configuration settings/changes, check that they
    are OK (undo if not), and then unlock the devices.
@@ -723,7 +725,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    The IETF provides several standardized management protocols suitable for
    various operational purposes, for example as outlined in {{?RFC6632}}.
-   Note that SNMP is no longer recommended for configuration (read-write)
+   Note that Simple Network Management Protocol (SNMP) is no longer recommended for configuration (read-write)
    operations.  Better programmatic alternatives are discussed
    further in Section {{<sec-interop}}. This  document formally deprecates the following recommendation from {{BCP22}}:
 
@@ -750,14 +752,18 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    and services, while ensuring a clear understanding of their operational impact
    and total cost of ownership.
 
-   Achieving universal agreement on a single management syntax and protocol is challenging.
-   However, the IETF has significantly evolved its approach to network management, moving
-   beyond SMIv2 and SNMP. Modern IETF management solutions primarily leverage YANG {{?RFC7950}}
-   for Data Modeling and NETCONF {{?RFC6241}} or RESTCONF {{?RFC8040}} for protocol interactions.
-   This shift, as further elaborated in {{?RFC6632}}, emphasizes structured Data Models and
-   programmatic interfaces to enhance automation and interoperability. Other protocols, such as
-   IPFIX {{?RFC7011}} for flow accounting and syslog {{?RFC5424}} for logging, continue to play
-   specific roles in comprehensive network management.
+   Achieving universal agreement on a single management syntax and protocol is
+   challenging. However, the IETF has significantly evolved its approach to
+   network management, moving beyond Structure of Management Information
+   version 2 (SMIv2) and SNMP. Modern IETF management solutions primarily
+   leverage YANG {{?RFC7950}} for Data Modeling and NETCONF {{?RFC6241}} or
+   RESTful Configuration Protocol (RESTCONF) {{?RFC8040}} for protocol
+   interactions. This shift, as further elaborated in {{?RFC6632}}, emphasizes
+   structured Data Models and programmatic interfaces to enhance automation and
+   interoperability. Other protocols, such as IP Flow Information Export
+   (IPFIX) {{?RFC7011}} for flow accounting and syslog (System Logging
+   Protocol) {{?RFC5424}} for logging, continue to play specific roles in
+   comprehensive network management.
 
    Interoperability must address both syntactic and semantic aspects. While syntactic variations
    across implementations can often be handled through adaptive processing, semantic differences pose a
@@ -958,9 +964,10 @@ DM         DM        DM     --> concrete/detailed model
 ###  Liveness Detection and Monitoring {#sec-monitor}
 
    Protocol Designers should always build in basic testing features
-   (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
-   calls)) that can be used to test for liveness, with an option to
-   enable and disable them.
+   (e.g., Internet Control Message Protocol (ICMP) echo, User Datagram
+   Protocol (UDP) or TCP echo services, and null Remote Procedure Calls
+   (RPCs)) that can be used to test for liveness, with the option to
+   enable or disable them.
 
    Mechanisms for monitoring the liveness of the protocol and for
    detecting Faults in protocol connectivity are usually built into
@@ -1026,17 +1033,17 @@ DM         DM        DM     --> concrete/detailed model
    What information should be maintained across reboots of the device,
    or restarts of the management system?
 
-   "Requirements for Configuration Management of IP-based Networks"
-   {{?RFC3139}} discusses requirements for configuration management,
-   including discussion of different levels of management, high-level
-   policies, network-wide configuration data, and device-local
-   configuration. Network configuration extends beyond simple multi-device
-   push or pull operations. It also involves ensuring that the configurations
-   being pushed are semantically compatible across devices and that the resulting
-   behavior of all involved devices corresponds to the intended behavior.
-   Is the attachment between them configured compatibly on both ends?
-   Is the IS-IS metric the same? Answering those questions for a 1,000 devices
-   network is not that easy.
+   "Requirements for Configuration Management of IP-based Networks"{
+    {?RFC3139}} discusses requirements for configuration management, including
+    discussion of different levels of management, high-level policies,
+    network-wide configuration data, and device-local configuration. Network
+    configuration extends beyond simple multi-device push or pull operations.
+    It also involves ensuring that the configurations being pushed are
+    semantically compatible across devices and that the resulting behavior of
+    all involved devices corresponds to the intended behavior. Is the
+    attachment between them configured compatibly on both ends? Is the
+    Intermediate System to Intermediate System (IS-IS) metric the same?
+    Answering those questions for a 1,000 devices network is not that easy.
 
    Several efforts have existed in the IETF to develop policy-based
    configuration management. "Terminology for Policy-Based Management"
@@ -1053,7 +1060,7 @@ DM         DM        DM     --> concrete/detailed model
 
    There are two parts to this:
 
-   1.  A Network Management System (NMS) could optimize ACLs for
+   1.  A Network Management System (NMS) could optimize Access Control Lists (ACLs) for
        performance reasons.
 
    2.  Unless the device or NMS is configured with adequate rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.
@@ -1201,8 +1208,8 @@ DM         DM        DM     --> concrete/detailed model
    is not specific to a management protocol, then it should be left
    to Data Model designers of that protocol to determine how to handle it.
 
-   > For example, VLAN identifiers are defined by standard to range
-   from 1 to 4094. Therefore, a YANG "vlan-id" definition representing the
+   > For example, Virtual Local Area Network (VLAN) identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
+   Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
 ###  Monitoring the Device {#sec-monitor-dev}
@@ -1571,7 +1578,7 @@ whose efforts have helped to improve this document:
 The IETF Ops Directorate (OpsDir):
 : The IETF OpsDir {{IETF-OPS-Dir}} reviewer team, which has been providing document reviews for more than a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.
 
-The AD championing the update:
+The Area Director (AD) championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document, in roughly chronological order:
