@@ -82,14 +82,13 @@ Table of Contents
      3.3.  Placement of the "Operational Considerations" Section
    4.  How Will the New Protocol or Protocol Extension Fit into the
            Current Environment?
-     4.1.  Operations
-     4.2.  Installation and Initial Setup
-     4.3.  Migration Path
-     4.4.  Requirements on Other Protocols and Functional Components
-     4.5.  Impact on Network Operation
-     4.6.  Impact on Security Operations
-     4.7.  Verifying Correct Operation
-     4.8.  Message Formats
+     4.1.  Installation and Initial Setup
+     4.2.  Migration Path
+     4.3.  Requirements on Other Protocols and Functional Components
+     4.4.  Impact on Network Operation
+     4.5.  Impact on Security Operations
+     4.6.  Verifying Correct Operation
+     4.7.  Message Formats
    5.  How Will the Protocol Be Managed?
      5.1.  Available Management Technologies
      5.2.  Interoperability
@@ -449,16 +448,14 @@ Table of Contents
     Environment?
 
    Designers of a New Protocol or Protocol Extension should carefully
-   consider the operational aspects.  To ensure that a protocol will be
-   practical to deploy in the real world, it is not enough to merely
-   define it very precisely in a well-written document.  Operational
-   aspects will have a serious impact on the actual success of a
-   protocol.  Such aspects include bad interactions with existing
-   solutions, a difficult upgrade path, difficulty of debugging
-   problems, difficulty configuring from a central database, or a
-   complicated state diagram that operations staff will find difficult
-   to understand.  [RFC5218] provides a more detailed discussion on what
-   makes for a successful protocol.
+   consider the operational aspects of real-world deployments, which can
+   directly impact its success.  Such aspects include interactions with
+   existing solutions, upgrade or deployment paths, the ability to debug
+   problems, ease of configuration, and a state diagram that operations
+   staff can understand.  This exercise need not be reflected directly
+   in their document, but could help visualize how to apply the protocol
+   in the environments where it will be deployed.  [RFC5218] provides a
+   more detailed discussion on what makes for a successful protocol.
 
       BGP flap damping [RFC2439] is an example.  It was designed to
       block high-frequency route flaps.  Some BGP implementations were
@@ -468,35 +465,7 @@ Table of Contents
       damping was often not enabled network-wide, contrary to the
       intentions of the original designers.
 
-4.1.  Operations
-
-   Protocol Designers can analyze the operational environment and mode
-   of work in which the New Protocol or Protocol Extension will be used.
-   Such an exercise need not be reflected directly by text in their
-   document but could help in visualizing how to apply the protocol in
-   the Internet environments where it will be deployed.
-
-   A key question is how the protocol can operate "out of the box".  If
-   implementers are free to select their own defaults, the protocol
-   needs to operate well with any choice of values.  If there are
-   sensible defaults, these need to be stated.
-
-   There may be a need to support both a human interface (e.g., for
-   troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and Cause analysis).  The application programming
-   interfaces (APIs) and the human interfaces might benefit from being
-   similar to ensure that the information exposed by both is consistent
-   when presented to an operator.  It is also relevant to identify
-   consistent methods for determining information, such as what is
-   counted in specific counters.
-
-   Protocol Designers should consider what management operations are
-   expected to be performed as a result of the deployment of the
-   protocol -- for example whether write operations are permitted on
-   specific nodes (e.g., routers, hosts, including servers), or whether
-   notifications for alarms or other events will be expected.
-
-4.2.  Installation and Initial Setup
+4.1.  Installation and Initial Setup
 
    Anything that can be configured can be misconfigured.  "Architectural
    Principles of the Internet" [RFC1958], Section 3.8, states:
@@ -505,43 +474,31 @@ Table of Contents
    |  parameters should be configured or negotiated dynamically rather
    |  than manually.
 
-   To simplify configuration, Protocol Designers should consider
-   specifying reasonable defaults, including default modes and
-   parameters.  For example, it could be helpful or necessary to specify
-   default values for modes, timers, default state of logical control
-   variables, default transports, and so on.  Even if default values are
-   used, it must be possible to retrieve all the actual values or at
-   least an indication that known default values are being used.
+   The New Protocol or Protocol Extension should be able to operate "out
+   of the box".  To simplify configuration, Protocol Designers should
+   specify reasonable defaults, including default modes and parameters.
+   For example, define default values for modes, timers, default state
+   of logical control variables, default transports, and so on.
 
-   Protocol Designers should consider how to enable operators to
-   concentrate on the configuration of the network or service
-   infrastructure as a whole rather than on individual devices.  Of
-   course, how one accomplishes this is the hard part.
-
-   Protocol Designers should explain the background of chosen default
-   values and provide the rationale, especially when those choices may
-   affect operations.  In many cases, as technology changes, the values
-   in an RFC might make less and less sense.  It is very useful to
-   understand whether defaults are based on best current practice and
-   are expected to change as technologies advance or whether they have a
-   more universal value that should not be changed lightly.  For
-   example, the default interface speed might be expected to change over
-   time due to increased speeds in the network, and cryptographic
+   Protocol Designers should explain the background of the chosen
+   default values and provide the rationale.  In many cases, as
+   technology changes, the documented values might make less and less
+   sense.  It is helpful to understand whether defaults are based on
+   best current practice and are expected to change as technologies
+   advance, or whether they have a more universal value that should not
+   be changed lightly.  For example, the default interface speed might
+   change over time as network speeds increase, and cryptographic
    algorithms might be expected to change over time as older algorithms
    are "broken".
-
-   It is extremely important to set a sensible default value for all
-   parameters.
 
    Default values should generally favor the conservative side over the
    "optimizing performance" side (e.g., the initial Round-Trip Time
    (RTT) and Round-Trip Time Variance (RTTVAR) values of a TCP
    connection [RFC6298]).
 
-   For those parameters that are speed-dependent, instead of using a
-   constant, try to set the default value as a function of the link
-   speed or some other relevant factors.  This would help reduce the
-   chance of problems caused by technology advancement.
+   For parameters that can vary (e.g., speed-dependent), instead of
+   using a constant, set the default value as a function of the variable
+   to reduce the risk of problems caused by technology advancement.
 
       For example, where protocols involve cryptographic keys, Protocol
       Designers should consider not only key generation and validation
@@ -555,7 +512,7 @@ Table of Contents
       [I-D.ietf-lamps-dilithium-certificates] for an example of how such
       considerations are incorporated.
 
-4.3.  Migration Path
+4.2.  Migration Path
 
    If the New Protocol or Protocol Extension is a new version of an
    existing one, or if it is replacing another technology, the Protocol
@@ -590,7 +547,7 @@ Table of Contents
    operations and management can be achieved.  Refer to [RFC8170] for a
    detailed discussion on transition versus coexistence.
 
-4.4.  Requirements on Other Protocols and Functional Components
+4.3.  Requirements on Other Protocols and Functional Components
 
    Protocol Designers should consider the requirements that the New
    Protocol might put on other protocols and functional components and
@@ -622,7 +579,7 @@ Table of Contents
       Section 4.8 of RFC 7126 [BCP186] for threats and advice related to
       IPv4 Router Alert.
 
-4.5.  Impact on Network Operation
+4.4.  Impact on Network Operation
 
    The introduction of a New Protocol or Protocol Extension may have an
    impact on the operation of existing networks.  As discussed in
@@ -710,7 +667,7 @@ Table of Contents
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-4.6.  Impact on Security Operations
+4.5.  Impact on Security Operations
 
    Security Operations (SecOps) is a collaborative approach that
    combines security and operational teams to improve the ability of
@@ -745,7 +702,7 @@ Table of Contents
    rebuild such tooling would greatly reduce the effectiveness of
    security operators, so protocol extensibility should be considered.
 
-4.7.  Verifying Correct Operation
+4.6.  Verifying Correct Operation
 
    An important function that should be provided is guidance on how to
    verify the correct operation of a protocol.  A Protocol Designer may
@@ -774,7 +731,7 @@ Table of Contents
    Having simple protocol status and health indicators on involved
    devices is a recommended means to check correct operation.
 
-4.8.  Message Formats
+4.7.  Message Formats
 
    Where protocol specifications result in messages (such as errors or
    warnings) being carried as text strings or output for consumption by
@@ -2024,52 +1981,51 @@ A.1.  Documentation Requirements
 
 A.2.  Operational Fit
 
-   *  How does this protocol operate "out of the box"?  (Section 4.1,
-      Section 4.2)
+   *  How does this protocol operate "out of the box"?  (Section 4.1)
 
       -  What are the default values, modes, timers, and states?
-         (Section 4.2)
+         (Section 4.1)
 
       -  What is the rationale for chosen default values, especially if
          they affect operations or are expected to change over time?
-         (Section 4.2)
+         (Section 4.1)
 
    *  What is the migration path for existing deployments?
-      (Section 4.3)
+      (Section 4.2)
 
       -  How will deployments transition from older versions or
-         technologies?  (Section 4.3)
+         technologies?  (Section 4.2)
 
       -  Does the protocol require infrastructure changes, and how can
-         these be introduced?  (Section 4.3)
+         these be introduced?  (Section 4.2)
 
    *  What are the requirements or dependencies on other protocols and
-      functional components?  (Section 4.4)
+      functional components?  (Section 4.3)
 
-   *  What is the impact on network operation?  (Section 4.5)
+   *  What is the impact on network operation?  (Section 4.4)
 
       -  What are the scaling implications and interactions with other
-         protocols?  (Section 4.5)
+         protocols?  (Section 4.4)
 
       -  What are the impacts on traffic patterns or performance (e.g.,
-         delay, jitter)?  (Section 4.5)
+         delay, jitter)?  (Section 4.4)
 
-   *  What is the impact on Security Operations?  (Section 4.6)
+   *  What is the impact on Security Operations?  (Section 4.5)
 
       -  How does deployment affect Indicators of Compromise or their
-         availability?  (Section 4.6)
+         availability?  (Section 4.5)
 
-      -  What logging is needed for digital forensics?  (Section 4.6)
+      -  What logging is needed for digital forensics?  (Section 4.5)
 
-   *  How can correct operation be verified?  (Section 4.7)
+   *  How can correct operation be verified?  (Section 4.6)
 
       -  What status and health indicators does the protocol provide?
-         (Section 4.7)
+         (Section 4.6)
 
-   *  How are human-readable messages handled?  (Section 4.8)
+   *  How are human-readable messages handled?  (Section 4.7)
 
       -  Do messages support internationalization with message codes for
-         local language mapping?  (Section 4.8)
+         local language mapping?  (Section 4.7)
 
 A.3.  Management Information
 
