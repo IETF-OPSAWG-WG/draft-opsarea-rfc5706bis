@@ -285,9 +285,11 @@ This document does not describe interoperability requirements. As such, it does 
          They also involve corrective and preventive measures to make the
          managed network run more effectively.
 
-      The broader concept of "operations and management" that is the subject of
-      this document encompasses OAM, in addition to other management and provisioning
-      tools and concepts.
+     The broader concept of "operations and management" that is the
+     subject of this document encompasses OAM, in addition to other
+     management and provisioning tools and concepts. This is
+     sometimes known as "OAM and Management" or "O&M" as
+     explained in {{?RFC6291}}.
 
    *  Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}
 
