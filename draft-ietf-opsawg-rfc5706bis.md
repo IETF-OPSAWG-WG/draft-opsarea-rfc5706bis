@@ -397,10 +397,10 @@ This document does not describe interoperability requirements. As such, it does 
    interactions with existing solutions, upgrade or deployment paths,
    the ability to debug problems, ease of configuration,
    and a state diagram that operations
-   staff can understand. {{?RFC5218}} provides
-   a more detailed discussion on what makes for a successful protocol. Such an exercise
+   staff can understand. This exercise
    need not be reflected directly in their document, but could help visualize how
    to apply the protocol in the environments where it will be deployed.
+   {{?RFC5218}} provides a more detailed discussion on what makes for a successful protocol.
 
    > BGP flap damping {{?RFC2439}} is an example.  It was designed to block
    high-frequency route flaps.  Some BGP implementations were memory-constrained
