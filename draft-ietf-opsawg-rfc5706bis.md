@@ -399,7 +399,7 @@ This document does not describe interoperability requirements. As such, it does 
    and a state diagram that operations
    staff can understand. {{?RFC5218}} provides
    a more detailed discussion on what makes for a successful protocol. Such an exercise
-   need not be reflected directly in their document, but could help visualize how 
+   need not be reflected directly in their document, but could help visualize how
    to apply the protocol in the environments where it will be deployed.
 
    > BGP flap damping {{?RFC2439}} is an example.  It was designed to block
