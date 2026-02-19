@@ -401,11 +401,11 @@ Table of Contents
       examples of specifications, covering various areas, with adequate
       documentation of operational considerations, including
       manageability: [I-D.ietf-core-dns-over-coap], [I-D.ietf-suit-mti],
-      [I-D.ietf-tcpm-prr-rfc6937bis] [RFC7574], [RFC9877], and
-      [RFC9552].  For example, given the various available transport
-      alternatives, [I-D.ietf-core-dns-over-coap] discusses co-existence
-      with those and clarifies some key deployment aspects such as
-      redirection, forwarding loop prevention, and error handling.
+      [RFC9937] [RFC7574], [RFC9877], and [RFC9552].  For example, given
+      the various available transport alternatives,
+      [I-D.ietf-core-dns-over-coap] discusses co-existence with those
+      and clarifies some key deployment aspects such as redirection,
+      forwarding loop prevention, and error handling.
 
 3.2.  "Operational Considerations" Section Boilerplate When No New
       Considerations Exist
@@ -1729,13 +1729,6 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-ietf-suit-
               mti-23>.
 
-   [I-D.ietf-tcpm-prr-rfc6937bis]
-              Mathis, M., Cardwell, N., Cheng, Y., and N. Dukkipati,
-              "Proportional Rate Reduction", Work in Progress, Internet-
-              Draft, draft-ietf-tcpm-prr-rfc6937bis-21, 22 June 2025,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-
-              prr-rfc6937bis-21>.
-
    [IETF-HACKATHONS]
               IETF, "IETF Hackathons", 1 May 2025,
               <https://www.ietf.org/meeting/hackathons/>.
@@ -1954,6 +1947,11 @@ Table of Contents
               Protocol (RDAP) Extension for Geofeed Data", RFC 9877,
               DOI 10.17487/RFC9877, October 2025,
               <https://www.rfc-editor.org/rfc/rfc9877>.
+
+   [RFC9937]  Mathis, M., Cardwell, N., Cheng, Y., and N. Dukkipati,
+              "Proportional Rate Reduction (PRR)", RFC 9937,
+              DOI 10.17487/RFC9937, December 2025,
+              <https://www.rfc-editor.org/rfc/rfc9937>.
 
    [SECOPS]   "NICCS Glossary", August 2025,
               <https://niccs.cisa.gov/resources/glossary>.
