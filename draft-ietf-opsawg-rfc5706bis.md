@@ -420,7 +420,7 @@ This document does not describe interoperability requirements. As such, it does 
    options and parameters whenever possible. Any options and parameters
    should be configured or negotiated dynamically rather than manually.
 
-   The New Protocol or Protocol Extension should be able to can operate "out of the box". 
+   The New Protocol or Protocol Extension should be able to can operate "out of the box".
    To simplify configuration, Protocol Designers should
    specify reasonable defaults, including default modes and
    parameters. For example, define
