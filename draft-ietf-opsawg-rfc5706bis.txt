@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 23 August 2026                               Old Dog Consulting
+Expires: 24 August 2026                               Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        19 February 2026
+                                                        20 February 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 August 2026.
+   This Internet-Draft will expire on 24 August 2026.
 
 Copyright Notice
 
@@ -80,6 +80,7 @@ Table of Contents
      3.2.  "Operational Considerations" Section Boilerplate When No
            New Considerations Exist
      3.3.  Placement of the "Operational Considerations" Section
+     3.4.  Update to RFC 2360
    4.  How Will the New Protocol or Protocol Extension Fit into the
            Current Environment?
      4.1.  Installation and Initial Setup
@@ -154,10 +155,11 @@ Table of Contents
    Section 2.14 of RFC 2360 [BCP22] on "Guide for Internet Standards
    Writers" to obsolete references to mandatory MIBs and instead focus
    on documenting holistic manageability and operational considerations
-   as described in Section 3.  Further, this document removes outdated
-   references and aligns with current practices, protocols, and
-   technologies used in operating and managing devices, networks, and
-   services.  Refer to Appendix B for more details.
+   as described in Section 3.  The update is provided in Section 3.4.
+   Further, this document removes outdated references and aligns with
+   current practices, protocols, and technologies used in operating and
+   managing devices, networks, and services.  Refer to Appendix B for
+   more details.
 
 1.1.  This Document
 
@@ -443,6 +445,30 @@ Table of Contents
    Security Considerations section.  Reviewers interested in this
    section will find it easily, and this placement could simplify the
    development of tools to detect its presence.
+
+3.4.  Update to RFC 2360
+
+   This document replaces this text from Section 2.14 of RFC 2360
+   [BCP22]:
+
+   |  When relevant, each standard needs to discuss how to manage the
+   |  protocol being specified.  This management process should be
+   |  compatible with the current IETF Standard management protocol.  In
+   |  addition, a MIB must be defined within the standard or in a
+   |  companion document.  The MIB must be compatible with current
+   |  Structure of Management Information (SMI) and parseable using a
+   |  tool such as SMICng.  Where management or a MIB is not necessary
+   |  this section of the standard should explain the reason it is not
+   |  relevant to the protocol.
+
+   with the following:
+
+   |  When relevant, each standard needs to discuss how to manage the
+   |  protocol being specified.  Refer to RFC XXXX for holistic
+   |  manageability and operational considerations.
+
+      Note to the RFC Editor: Please replace RFC XXXX with the RFC
+      number to be assigned to this document.
 
 4.  How Will the New Protocol or Protocol Extension Fit into the Current
     Environment?
@@ -2122,6 +2148,9 @@ Appendix B.  Changes Since RFC 5706
    [RFC5706]:
 
    *  Change intended status from Informational to Best Current Practice
+
+   *  Indicate that this document updates RFC 2360 and add the relevant
+      updated text
 
    *  Move the "Operational Considerations" Appendix A to a Checklist
       [CHECKLIST] maintained in GitHub
