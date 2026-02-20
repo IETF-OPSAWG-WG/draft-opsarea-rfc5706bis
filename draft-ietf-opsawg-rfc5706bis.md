@@ -123,7 +123,7 @@ contributor:
    section, that covers both operational and management considerations,
    in new RFCs in the IETF Stream. Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on "Guide for Internet Standards Writers"
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
-   considerations as described in {{sec-doc-req-ietf-spec}}.
+   considerations as described in {{sec-doc-req-ietf-spec}}. The update is provided in {{sec-2360-update}}.
    Further, this document removes outdated
    references and aligns with current practices, protocols, and
    technologies used in operating and managing devices, networks, and
@@ -392,6 +392,30 @@ This document does not describe interoperability requirements. As such, it does 
    Reviewers interested in this section will find it easily, and this
    placement could simplify the development of tools to detect its
    presence.
+
+## Update to RFC 2360 {#sec-2360-update}
+
+   This document replaces this text from {{Section 2.14 of RFC2360@BCP22}}:
+
+   {: quote}
+   > When relevant, each standard needs to discuss how to manage the
+   > protocol being specified.  This management process should be
+   > compatible with the current IETF Standard management protocol.  In
+   > addition, a MIB must be defined within the standard or in a companion
+   > document.  The MIB must be compatible with current Structure of
+   > Management Information (SMI) and parseable using a tool such as
+   > SMICng.  Where management or a MIB is not necessary this section of
+   > the standard should explain the reason it is not relevant to the
+   > protocol.
+
+   with the following:
+
+   {: quote}
+   > When relevant, each standard needs to discuss how to manage the
+   > protocol being specified. Refer to RFC XXXX for holistic manageability and operational
+   > considerations.
+
+   > Note to the RFC Editor: Please replace RFC XXXX with the RFC number to be assigned to this document.
 
 # How Will the New Protocol or Protocol Extension Fit into the Current Environment? {#sec-oper-consid}
 
@@ -1540,7 +1564,7 @@ The decision to incorporate all or part of these items into their work remains w
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
    * Change intended status from Informational to Best Current Practice
-
+   * Indicate that this document updates RFC 2360 and add the relevant updated text
    * Move the "Operational Considerations" Appendix A to a Checklist {{CHECKLIST}} maintained in GitHub
 
    * Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
