@@ -474,8 +474,8 @@ This document does not describe interoperability requirements. As such, it does 
    with the New Protocol or Protocol Extension in the network?
 
    Many protocols benefit from being incrementally deployable --
-   operators may deploy aspects of a protocol before deploying
-   it fully. In those cases, the operational considerations should
+   operators may deploy some aspects of a protocol before deploying
+   it fully, or may deploy to only some nodes in a network before applying to all nodes in the network. In those cases, the operational considerations should
    also specify whether the New Protocol or Protocol Extension requires any changes to
    the existing infrastructure, particularly the network.
    If so, the protocol specification should describe the nature of those
@@ -484,7 +484,8 @@ This document does not describe interoperability requirements. As such, it does 
 
    Incentivizing good security operation practices when migrating to the New Protocol or Protocol Extension should be encouraged. For example, patching is fundamental for security operations and can be incentivized if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.
 
-   When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved.
+   When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved. Note that transitioning between security mechanisms can be challenging, but it is not desirable to take an easier approach if that leaves data in an open or less-protected
+state during the transition.
    Refer to {{?RFC8170}} for a detailed discussion on transition versus coexistence.
 
 ##  Requirements on Other Protocols and Functional Components {#sec-other}
@@ -563,7 +564,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    > For example, Simple Mail Transfer
    Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
-   out incoming connection requests: when Berkeley installed a new spam filter,
+   out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
 
@@ -694,7 +695,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble. NETCONF addresses this in a generic manner
+   causes trouble. NETCONF {{?RFC6241}} addresses this in a generic manner
    by allowing an operator to lock the configuration on multiple
    devices, perform the configuration settings/changes, check that they
    are OK (undo if not), and then unlock the devices.
@@ -1081,7 +1082,7 @@ DM         DM        DM     --> concrete/detailed model
    protocol to be configured across multiple devices. Configuration
    templates might also be helpful.
 
-   Consensus of the 2002 IAB Workshop {{?RFC3535}} was that textual
+   Consensus of the 2002 IAB Network Management Workshop {{?RFC3535}} was that textual
    configuration files should be able to contain international
    characters. Human-readable strings should utilize UTF-8, and
    protocol elements should be in case-insensitive ASCII.
