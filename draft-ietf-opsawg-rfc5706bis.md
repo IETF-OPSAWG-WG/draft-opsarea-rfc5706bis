@@ -409,7 +409,7 @@ This document does not describe interoperability requirements. As such, it does 
    to apply the protocol in the environments where it will be deployed.
    {{?RFC5218}} provides a more detailed discussion on what makes for a successful protocol.
 
-   > Border Gateway Protocol (BGP) flap damping {{?RFC2439}} is an example.  It was designed to block
+   > BGP flap damping {{?RFC2439}} is an example.  It was designed to block
    high-frequency route flaps.  Some BGP implementations were memory-constrained
    so often elected not to support this function, others found a
    conflict where path exploration caused false flap damping resulting
