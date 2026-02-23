@@ -965,7 +965,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Protocol Designers should always build in basic testing features
    (e.g., ICMP echo, UDP
-   Protocol (UDP) or TCP echo services, and null Remote Procedure Calls
+   or TCP echo services, and null Remote Procedure Calls
    (RPCs)) that can be used to test for liveness, with the option to
    enable or disable them.
 
