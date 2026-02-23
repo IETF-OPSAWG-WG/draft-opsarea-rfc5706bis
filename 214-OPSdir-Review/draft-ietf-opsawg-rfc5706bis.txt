@@ -646,18 +646,17 @@ Table of Contents
    rate limiting feature in the specifications.
 
       Consider three examples: (1) In Bidirectional Forwarding Detection
-      for Multi-Protocol Label Switching (MPLS) [RFC5884] it is possible
-      to configure very rapid BFD transmissions (of the order of 3ms) on
-      a very large number of parallel Label Switched Paths (LSPs) with
-      the result that the management systems and end nodes may become
-      overwhelmed -- this can be protected by applying limits to the
-      number of LSPs that may be tested at once. (2) Notifications or
-      logs from systems (through YANG or other means) should be rate-
-      limited so that they do not flood the receiving management
-      station. (3) The application of sophisticated encryption or
-      filtering rules needs to be considered in the light of the
-      additional processing they may impose on the hardware forwarding
-      path for traffic.
+      for MPLS [RFC5884] it is possible to configure very rapid BFD
+      transmissions (of the order of 3ms) on a very large number of
+      parallel Label Switched Paths (LSPs) with the result that the
+      management systems and end nodes may become overwhelmed -- this
+      can be protected by applying limits to the number of LSPs that may
+      be tested at once. (2) Notifications or logs from systems (through
+      YANG or other means) should be rate-limited so that they do not
+      flood the receiving management station. (3) The application of
+      sophisticated encryption or filtering rules needs to be considered
+      in the light of the additional processing they may impose on the
+      hardware forwarding path for traffic.
 
    New metrics may be required to assess traffic performance.  Protocol
    Designers may refer to [RFC6390] for guidelines for considering new
