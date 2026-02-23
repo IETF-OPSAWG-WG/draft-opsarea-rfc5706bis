@@ -564,7 +564,7 @@ This document does not describe interoperability requirements. As such, it does 
    applications such as the Domain Name System (DNS) {{?RFC1034}}, the
    registries, or the size of routing tables.
 
-   > For example, Simple Mail Transfer Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
+   > For example, SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
