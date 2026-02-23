@@ -448,7 +448,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    Default values should generally favor the conservative side over the
    "optimizing performance" side (e.g., the initial Round-Trip Time (RTT) and
-   Round-Trip Time Variance (RTTVAR) values of a Transmission Control Protocol (TCP) connection {{?RFC6298}}).
+   Round-Trip Time Variance (RTTVAR) values of a TCP connection {{?RFC6298}}).
 
    For parameters that can vary (e.g., speed-dependent), instead of using a
    constant, set the default value as a function of the
