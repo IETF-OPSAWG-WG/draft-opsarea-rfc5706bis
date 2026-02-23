@@ -964,7 +964,7 @@ DM         DM        DM     --> concrete/detailed model
 ###  Liveness Detection and Monitoring {#sec-monitor}
 
    Protocol Designers should always build in basic testing features
-   (e.g., Internet Control Message Protocol (ICMP) echo, User Datagram
+   (e.g., ICMP echo, UDP
    Protocol (UDP) or TCP echo services, and null Remote Procedure Calls
    (RPCs)) that can be used to test for liveness, with the option to
    enable or disable them.
