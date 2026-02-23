@@ -509,7 +509,7 @@ This document does not describe interoperability requirements. As such, it does 
    {{?RFC2205}} required each router to look at the RSVP PATH message and,
    if the router understood RSVP, add its own address to the message to
    enable automatic tunneling through non-RSVP routers. But in reality,
-   routers cannot look at an otherwise normal Internet Protocol (IP) packet and potentially
+   routers cannot look at an otherwise normal IP packet and potentially
    take it off the fast path! The initial designers overlooked that a
    new "deep packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
