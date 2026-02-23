@@ -725,7 +725,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    The IETF provides several standardized management protocols suitable for
    various operational purposes, for example as outlined in {{?RFC6632}}.
-   Note that Simple Network Management Protocol (SNMP) is no longer recommended for configuration (read-write)
+   Note that SNMP is no longer recommended for configuration (read-write)
    operations.  Better programmatic alternatives are discussed
    further in Section {{<sec-interop}}. This  document formally deprecates the following recommendation from {{BCP22}}:
 
