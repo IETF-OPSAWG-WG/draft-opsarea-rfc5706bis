@@ -1092,9 +1092,9 @@ Table of Contents
 5.4.1.  Liveness Detection and Monitoring
 
    Protocol Designers should always build in basic testing features
-   (e.g., ICMP echo, UDP Protocol (UDP) or TCP echo services, and null
-   Remote Procedure Calls (RPCs)) that can be used to test for liveness,
-   with the option to enable or disable them.
+   (e.g., ICMP echo, UDP or TCP echo services, and null Remote Procedure
+   Calls (RPCs)) that can be used to test for liveness, with the option
+   to enable or disable them.
 
    Mechanisms for monitoring the liveness of the protocol and for
    detecting Faults in protocol connectivity are usually built into
