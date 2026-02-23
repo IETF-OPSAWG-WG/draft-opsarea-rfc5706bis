@@ -197,7 +197,7 @@ contributor:
    should clearly articulate the operations and management of
    that new work to fill any operations and management gaps.
 
-   A core principle of this document is to encourage early on discussions rather than mandating any specific solution.
+   A core principle of this document is to encourage early-on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
    protocol is mandatory. Specifically, this document does not require to develop solutions to accommodate
@@ -511,7 +511,7 @@ This document does not describe interoperability requirements. As such, it does 
    enable automatic tunneling through non-RSVP routers. But in reality,
    routers cannot look at an otherwise normal IP packet and potentially
    take it off the fast path! The initial designers overlooked that a
-   new "deep packet inspection" requirement was being put on the
+   new "deep-packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
    ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem,
    for RSVP and other protocols that require the router to take some
@@ -544,7 +544,7 @@ This document does not describe interoperability requirements. As such, it does 
    also indicate whether safeguards exist to protect networks from
    potential overload. Moreover, Per {{Section 2.16 of RFC2360@BCP22}}, New Protocol
    or Protocol Extension specifications should address any possible destabilizing events,
-   and means by which the protocol resists or recovers from them. For instance, a congestion control algorithm must
+   and means by which the protocol resists or recovers from them. For instance, a congestion-control algorithm must
    comply with {{?BCP133}} to prevent congestion collapse and ensure
    network stability.
 
@@ -627,7 +627,7 @@ Tooling required by security operators should be documented in the design and de
    through it and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct
    end-to-end operation of the New Protocol or Protocol Extension can be tested
-   actively and passively, and how the correct data or forwarding plane
+   actively and passively, and how the correct data- or forwarding-plane
    function of each involved element can be verified to be working
    correctly with the New Protocol or Protocol Extension. Which metrics are of interest?
 
@@ -668,7 +668,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
       management systems)?
 
    *  What is the possible architecture (client-server, manager-agent,
-      poll-driven or event-driven, auto-configuration, two levels or
+      poll-driven or event-driven, auto-configuration, two-levels or
       hierarchical)?
 
    *  What are the management operations (initial configuration, dynamic
@@ -1384,9 +1384,9 @@ DM         DM        DM     --> concrete/detailed model
      *  Identifying potential tooling gaps and areas for improvement.
      *  Creating example flows and use cases for manageability.
 
-  *  Open-Source for Tooling: If new tools are deemed necessary, or if significant
-     adaptations to existing tools are required, prioritize open-source development
-     with community involvement. Open-source tools lower the barrier to entry,
+  *  Open Source for Tooling: If new tools are deemed necessary, or if significant
+     adaptations to existing tools are required, prioritize open source development
+     with community involvement. Open source tools lower the barrier to entry,
      encourage collaboration, and provide operators with the flexibility to customize
      and extend the tools to meet their specific needs.
 
@@ -1488,7 +1488,7 @@ The decision to incorporate all or part of these items into their work remains w
    * What status and health indicators does the protocol provide? ({{sec-oper-verify}})
 
 * How are human-readable messages handled? ({{sec-messages}})
-   * Do messages support internationalization with message codes for local language mapping? ({{sec-messages}})
+   * Do messages contain codes that enable local language mapping for internationalization? ({{sec-messages}})
 
 ## Management Information
 
