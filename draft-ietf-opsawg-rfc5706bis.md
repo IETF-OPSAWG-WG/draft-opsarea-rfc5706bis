@@ -582,7 +582,7 @@ overwhelmed, then this must be called out, and suitable mechanisms to
 rate limit the OAM traffic must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
 
 > Consider three examples: (1) In
-Bidirectional Forwarding Detection for Multi-Protocol Label Switching (MPLS) {{?RFC5884}} it is
+Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
 possible to configure very rapid BFD transmissions (of the order of
 3ms) on a very large number of parallel Label Switched Paths (LSPs)
 with the result that the management systems and end nodes may become
