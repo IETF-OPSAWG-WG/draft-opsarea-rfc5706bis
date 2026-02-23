@@ -1208,7 +1208,7 @@ DM         DM        DM     --> concrete/detailed model
    is not specific to a management protocol, then it should be left
    to Data Model designers of that protocol to determine how to handle it.
 
-   > For example, Virtual Local Area Network (VLAN) identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
+   > For example, VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
    Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
