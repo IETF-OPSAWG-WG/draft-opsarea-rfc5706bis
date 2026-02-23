@@ -561,7 +561,7 @@ This document does not describe interoperability requirements. As such, it does 
    operations.
 
    Protocol designers should also consider the impact on infrastructure
-   applications such as the Domain Name System (DNS) {{?RFC1034}}, the
+   applications such as the DNS {{?RFC1034}}, the
    registries, or the size of routing tables.
 
    > For example, SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
