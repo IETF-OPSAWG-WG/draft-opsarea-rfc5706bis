@@ -220,7 +220,7 @@ contributor:
    need to be updated in the future, after further operational
    experience has been gained.
 
-   The Operational Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
+   The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
