@@ -458,14 +458,13 @@ Table of Contents
    in the environments where it will be deployed.  [RFC5218] provides a
    more detailed discussion on what makes for a successful protocol.
 
-      Border Gateway Protocol (BGP) flap damping [RFC2439] is an
-      example.  It was designed to block high-frequency route flaps.
-      Some BGP implementations were memory-constrained so often elected
-      not to support this function, others found a conflict where path
-      exploration caused false flap damping resulting in loss of
-      reachability.  As a result, flap damping was often not enabled
-      network-wide, contrary to the intentions of the original
-      designers.
+      BGP flap damping [RFC2439] is an example.  It was designed to
+      block high-frequency route flaps.  Some BGP implementations were
+      memory-constrained so often elected not to support this function,
+      others found a conflict where path exploration caused false flap
+      damping resulting in loss of reachability.  As a result, flap
+      damping was often not enabled network-wide, contrary to the
+      intentions of the original designers.
 
 4.1.  Installation and Initial Setup
 
@@ -495,8 +494,8 @@ Table of Contents
 
    Default values should generally favor the conservative side over the
    "optimizing performance" side (e.g., the initial Round-Trip Time
-   (RTT) and Round-Trip Time Variance (RTTVAR) values of a Transmission
-   Control Protocol (TCP) connection [RFC6298]).
+   (RTT) and Round-Trip Time Variance (RTTVAR) values of a TCP
+   connection [RFC6298]).
 
    For parameters that can vary (e.g., speed-dependent), instead of
    using a constant, set the default value as a function of the variable
@@ -569,17 +568,17 @@ Table of Contents
       message and, if the router understood RSVP, add its own address to
       the message to enable automatic tunneling through non-RSVP
       routers.  But in reality, routers cannot look at an otherwise
-      normal Internet Protocol (IP) packet and potentially take it off
-      the fast path!  The initial designers overlooked that a new "deep
-      packet inspection" requirement was being put on the functional
-      components of a router.  The "router alert" option ([RFC2113],
-      [RFC2711]) was finally developed to solve this problem, for RSVP
-      and other protocols that require the router to take some packets
-      off the fast-forwarding path.  Yet, Router Alert has its own
-      problems in impacting router performance and security.  Refer to
-      [RFC9805] for deprecation of the IPv6 Router Alert Option for New
-      Protocols and Section 4.8 of RFC 7126 [BCP186] for threats and
-      advice related to IPv4 Router Alert.
+      normal IP packet and potentially take it off the fast path!  The
+      initial designers overlooked that a new "deep packet inspection"
+      requirement was being put on the functional components of a
+      router.  The "router alert" option ([RFC2113], [RFC2711]) was
+      finally developed to solve this problem, for RSVP and other
+      protocols that require the router to take some packets off the
+      fast-forwarding path.  Yet, Router Alert has its own problems in
+      impacting router performance and security.  Refer to [RFC9805] for
+      deprecation of the IPv6 Router Alert Option for New Protocols and
+      Section 4.8 of RFC 7126 [BCP186] for threats and advice related to
+      IPv4 Router Alert.
 
 4.4.  Impact on Network Operation
 
