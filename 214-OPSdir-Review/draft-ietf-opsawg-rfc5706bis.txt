@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 23 August 2026                               Old Dog Consulting
+Expires: 27 August 2026                               Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        19 February 2026
+                                                        23 February 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 August 2026.
+   This Internet-Draft will expire on 27 August 2026.
 
 Copyright Notice
 
@@ -255,8 +255,8 @@ Table of Contents
    updated in the future, after further operational experience has been
    gained.
 
-   The Operational Directorate (OpsDir) can use this document to inform
-   their reviews.  A list of guidelines and a checklist of questions to
+   The Ops Directorate (OpsDir) can use this document to inform their
+   reviews.  A list of guidelines and a checklist of questions to
    consider, which a reviewer can use to evaluate whether the protocol
    and documentation address common operations and management needs, is
    provided in [CHECKLIST].
@@ -458,14 +458,13 @@ Table of Contents
    in the environments where it will be deployed.  [RFC5218] provides a
    more detailed discussion on what makes for a successful protocol.
 
-      Border Gateway Protocol (BGP) flap damping [RFC2439] is an
-      example.  It was designed to block high-frequency route flaps.
-      Some BGP implementations were memory-constrained so often elected
-      not to support this function, others found a conflict where path
-      exploration caused false flap damping resulting in loss of
-      reachability.  As a result, flap damping was often not enabled
-      network-wide, contrary to the intentions of the original
-      designers.
+      BGP flap damping [RFC2439] is an example.  It was designed to
+      block high-frequency route flaps.  Some BGP implementations were
+      memory-constrained so often elected not to support this function,
+      others found a conflict where path exploration caused false flap
+      damping resulting in loss of reachability.  As a result, flap
+      damping was often not enabled network-wide, contrary to the
+      intentions of the original designers.
 
 4.1.  Installation and Initial Setup
 
