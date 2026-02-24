@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-22T01:07:07.078836+00:00",
+  "timestamp": "2026-02-24T01:05:23.084668+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3108,15 +3108,15 @@
       "id": "I_kwDOOWPBqs7lr_f3",
       "title": "Update contributors (including authors, editors, contributors, discussants, named acknowledgements, reviewers, and participants)",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/195",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Update contributors (including authors, editors, contributors, discussants, named acknowledgements, reviewers, and participants)\n\nWe are getting several reviews (directorate, individual, lists, etc)\n\nThis point in the document lifecycle is a useful one to pause and ensure all contributors to this document thus far are acknowledged. We have received many recent reviews -- let's make sure we capture all relevant names in the document\n\nFurther, Lars' review said:\n\n```\n### Too many authors\n\nThe document has six authors, which exceeds the recommended author limit. Has\nthe sponsoring AD agreed that this is appropriate?\n\n```\n\nThough we have never, to my recollection, been intentional or explicit about this point. \n\nWe shall now consider authorship, authors' order, etc -- no?\nWe can consider Git contributions (see screepcaptures), presentations at IETF about the draft, etc...\n\n<img width=\"2440\" height=\"4143\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/c47f72e7-f8e8-41bd-8194-311c57b6a1c1\" />\n<img width=\"2440\" height=\"3677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f4f9c07e-7ae3-4626-94bc-f5cbd5e47523\" />",
       "createdAt": "2026-01-25T16:37:11Z",
-      "updatedAt": "2026-01-29T14:49:36Z",
-      "closedAt": null,
+      "updatedAt": "2026-02-22T08:58:56Z",
+      "closedAt": "2026-02-22T08:58:56Z",
       "comments": [
         {
           "author": "bclaise",
@@ -3311,6 +3311,26 @@
       "body": "\u201cMonitoring the service\u201d (5.7.4) could be better - in particular, monitoring a\nservice should be monitoring that the service is actually useful for users -\nwe\u2019ve seen examples of failures that haven\u2019t been detected because the\nmonitoring of the service failed to monitor that the users could actually get\nwork done. This part may be out of scope to delve further into in this\ndocument, but worth mentioning as an \u201calso remember that\u2026\u201d\n\nSection 9 says \u201cThe security implications of password-based authentication\nshould be taken into account\u201d sounds much too weak. Better would be something\nlike \u201cThe authentication mechanisms recommended for new protocols or extensions\nshould provide adequate security; for instance, pure password-based\nauthentication is rarely an adequate level of security.\u201d\n\nAppendix A A Checklist - the relationship between this and [CHECKLIST] doesn\u2019t\nseem to be carefully explained. Seems like appendix A is a snapshot of the\ngithub checklist? If so, this info should go into section 1, where [CHECKLIST]\nis first mentioned.\n\nNits:\n\n4.3 seems to use \"incrementally deployable\" to refer to deploying only some\nfeatures of a protocol. This seems like an unusual usage of that term -\nnormally, this refers to the state of \"some users do, some users don't\".\n\nWhen considering transition, might want to mention that transitioning between\nsecurity mechanisms can be hard, but leaving stuff in an open or less-protected\nstate during the transition is not a desirable approach.\n\nThe example of SMTP is bad, since reverse DNS lookup is not a protocol\nrequirement, it is a type of spamfilter input - it should be described as \"when\nBerkeley installed a spamfilter using a reverse DNS lookup, the following bad\nthing happened\".\n\n[BCP166](https://datatracker.ietf.org/doc/bcp166/) isn't really the right reference for internationalization - it's a\nterminology source. Note that translation of message formats requires that the\nlanguage of the end consumer is known - this can be hard.\n\nNETCONF is mentioned in section 5 without an RFC reference. Define on first use.\n\n[RFC 3535](https://datatracker.ietf.org/doc/rfc3535/) reference to \"IAB workshop\" fails to mention what IAB workshop -\nshould be \"IAB Network Management Workshop\".",
       "createdAt": "2026-02-20T13:59:18Z",
       "updatedAt": "2026-02-20T14:11:53Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 220,
+      "id": "I_kwDOOWPBqs7tKB7_",
+      "title": "More IM clearity in Section 5.3",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/220",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "xorrkaz"
+      ],
+      "labels": [
+        "DIR Review"
+      ],
+      "body": "From the YANG Doctors review:\n\n>It later says in 5.3.1:\n\n  When defining an Information Model using YANG Data Structure\n  Extensions [...]\n\nIt is not clear to me what you mean here.  In section 5.3 it seems you\nrecommend including a Data Model YANG module (not an IM, since the IM\nis in english text).  But then in 5.3.1 you mention a YANG module\nfor the IM as well, but there is no other discussion about using YANG\nfor the IM.\n\nI think we should adjust Section 5.3 to say that an IM is typically described in English text/UML, but if it is written in YANG it may make linking abstract concepts to concrete data types in the Data Model easier.  This would then have a strong tie-in to Section 5.3.1.",
+      "createdAt": "2026-02-23T15:40:35Z",
+      "updatedAt": "2026-02-23T15:40:49Z",
       "closedAt": null,
       "comments": []
     }
@@ -15347,7 +15367,7 @@
       ],
       "body": "Address all of the nits from #215 except the one suggesting that BCP166 is not a good reference for Internationalisation. While this is a good comment, it turns out that BCP166 includes plenty of helpful references and so is a good enough base.",
       "createdAt": "2026-02-20T14:21:34Z",
-      "updatedAt": "2026-02-20T14:21:34Z",
+      "updatedAt": "2026-02-23T14:30:49Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "19caf09043072561779941e7f0f996eda897e9c7",
@@ -15359,7 +15379,21 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7k9vJI",
+          "commit": {
+            "abbreviatedOid": "55526eb"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-02-23T14:30:49Z",
+          "updatedAt": "2026-02-23T14:30:49Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 217,
@@ -15408,13 +15442,259 @@
       ],
       "body": "Fairly small changes to address all of the issues raised in the review at #215",
       "createdAt": "2026-02-20T14:32:43Z",
-      "updatedAt": "2026-02-20T14:32:43Z",
+      "updatedAt": "2026-02-23T14:28:01Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d2c9fdbe13c6c3a9104030ecd2011865650049bb",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-2",
       "headRefOid": "e7019ed452ef3a620db779f2752f9b45bf4f061b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7k9qf5",
+          "commit": {
+            "abbreviatedOid": "e7019ed"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-02-23T14:28:01Z",
+          "updatedAt": "2026-02-23T14:28:01Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 219,
+      "id": "PR_kwDOOWPBqs7FhBXX",
+      "title": "#214 OpsDir Review Initial commit",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/219",
+      "state": "OPEN",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Acronyms Expanded:\r\n\r\nProtocols and Technologies\r\n\r\n- MIB (Management Information Base)\r\n- DNS (Domain Name System)\r\n- SMTP (Simple Mail Transfer Protocol)\r\n- MPLS (Multi-Protocol Label Switching)\r\n- NETCONF (Network Configuration Protocol) and RESTCONF\r\n- SNMP (Simple Network Management Protocol)\r\n- IPFIX (IP Flow Information Export)\r\n- SMIv2 (Structure of Management Information version 2)\r\n- IS-IS (Intermediate System to Intermediate System)\r\n\r\nAdministrative and Organizational\r\n- Area Director (AD)\r\n\r\nHypenations\r\n\r\n- early-on discussions\r\n- deep-packet inspection\r\n- two-level\r\n- data- or forwarding-plane\r\n",
+      "createdAt": "2026-02-22T22:40:20Z",
+      "updatedAt": "2026-02-23T21:58:37Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d2c9fdbe13c6c3a9104030ecd2011865650049bb",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "214-OPSdir-Review",
+      "headRefOid": "e93afcc8e52142c425bcc286a9135b6d526afdb2",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think this is a step too far and we should pay attention to https://www.rfc-editor.org/rpc/wiki/doku.php?id=abbrev_list\r\nThat is, unless there is an exceptionally good reason (such as confusion between two abbreviations) we should not expand those that appear with an asterisk (*) in the table.  \r\n\r\nSo, I would remove all of the items from the from the \"Protocols and Technologies\" list above.\r\n\r\nWhile there is a debate to be had about clarity in a document that spans Areas and technologies, we *are* the IETF and these are all core IETF terms of art. They do not need to be expanded.\r\n\r\nI would retain the expansion of Area Director (AD)",
+          "createdAt": "2026-02-23T10:04:49Z",
+          "updatedAt": "2026-02-23T10:04:49Z"
+        },
+        {
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> I think this is a step too far and we should pay attention to https://www.rfc-editor.org/rpc/wiki/doku.php?id=abbrev_list That is, unless there is an exceptionally good reason (such as confusion between two abbreviations) we should not expand those that appear with an asterisk (*) in the table.\r\n> \r\n> So, I would remove all of the items from the from the \"Protocols and Technologies\" list above.\r\n> \r\n> While there is a debate to be had about clarity in a document that spans Areas and technologies, we _are_ the IETF and these are all core IETF terms of art. They do not need to be expanded.\r\n> \r\n> I would retain the expansion of Area Director (AD)\r\n\r\nAfter checking the list, these three can ramain:\r\n\r\n- NETCONF (Network Configuration Protocol) and RESTCONF\r\n- IPFIX (IP Flow Information Export)\r\n- SMIv2 (Structure of Management Information version 2)",
+          "createdAt": "2026-02-23T21:50:56Z",
+          "updatedAt": "2026-02-23T21:50:56Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7k9j-s",
+          "commit": {
+            "abbreviatedOid": "6e4feef"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-02-23T14:23:41Z",
+          "updatedAt": "2026-02-23T14:25:51Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "This one feels unnatural.  When I look at https://datatracker.ietf.org/dir/, I think leaving it as \"Ops Directorate\" is fine.",
+              "createdAt": "2026-02-23T14:23:42Z",
+              "updatedAt": "2026-02-23T14:25:51Z"
+            },
+            {
+              "originalPosition": 74,
+              "body": "This one might be common enough?",
+              "createdAt": "2026-02-23T14:24:01Z",
+              "updatedAt": "2026-02-23T14:25:51Z"
+            },
+            {
+              "originalPosition": 83,
+              "body": "Common enough?",
+              "createdAt": "2026-02-23T14:24:15Z",
+              "updatedAt": "2026-02-23T14:25:51Z"
+            },
+            {
+              "originalPosition": 92,
+              "body": "Definitely common enough.",
+              "createdAt": "2026-02-23T14:24:25Z",
+              "updatedAt": "2026-02-23T14:25:51Z"
+            },
+            {
+              "originalPosition": 174,
+              "body": "ICMP, TCP, and UDP are common enough IMHO.  I think in general, it might be best left to RFC Editor to do what is typical/needed.",
+              "createdAt": "2026-02-23T14:25:38Z",
+              "updatedAt": "2026-02-23T14:25:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7lGfP0",
+          "commit": {
+            "abbreviatedOid": "6e4feef"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-02-23T21:42:38Z",
+          "updatedAt": "2026-02-23T21:45:21Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "```suggestion\n   The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a\n```",
+              "createdAt": "2026-02-23T21:42:38Z",
+              "updatedAt": "2026-02-23T21:45:21Z"
+            },
+            {
+              "originalPosition": 74,
+              "body": "```suggestion\n   > BGP flap damping {{?RFC2439}} is an example.  It was designed to block\n```",
+              "createdAt": "2026-02-23T21:43:09Z",
+              "updatedAt": "2026-02-23T21:45:21Z"
+            },
+            {
+              "originalPosition": 83,
+              "body": "```suggestion\n   Round-Trip Time Variance (RTTVAR) values of a TCP connection {{?RFC6298}}).\n```",
+              "createdAt": "2026-02-23T21:43:40Z",
+              "updatedAt": "2026-02-23T21:45:21Z"
+            },
+            {
+              "originalPosition": 92,
+              "body": "```suggestion\n   routers cannot look at an otherwise normal IP packet and potentially\n```",
+              "createdAt": "2026-02-23T21:43:57Z",
+              "updatedAt": "2026-02-23T21:45:21Z"
+            },
+            {
+              "originalPosition": 174,
+              "body": "```suggestion\n   (e.g., ICMP echo, UDP\n```",
+              "createdAt": "2026-02-23T21:44:45Z",
+              "updatedAt": "2026-02-23T21:45:21Z"
+            },
+            {
+              "originalPosition": 175,
+              "body": "```suggestion\n   or TCP echo services, and null Remote Procedure Calls\n```",
+              "createdAt": "2026-02-23T21:45:04Z",
+              "updatedAt": "2026-02-23T21:45:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7lGn3g",
+          "commit": {
+            "abbreviatedOid": "822a577"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-02-23T21:52:08Z",
+          "updatedAt": "2026-02-23T21:54:13Z",
+          "comments": [
+            {
+              "originalPosition": 73,
+              "body": "```suggestion\n   > For example, SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter\n```",
+              "createdAt": "2026-02-23T21:52:09Z",
+              "updatedAt": "2026-02-23T21:54:13Z"
+            },
+            {
+              "originalPosition": 82,
+              "body": "```suggestion\nBidirectional Forwarding Detection for MPLS {{?RFC5884}} it is\n```",
+              "createdAt": "2026-02-23T21:52:29Z",
+              "updatedAt": "2026-02-23T21:54:13Z"
+            },
+            {
+              "originalPosition": 100,
+              "body": "```suggestion\n   Note that SNMP is no longer recommended for configuration (read-write)\n```",
+              "createdAt": "2026-02-23T21:52:52Z",
+              "updatedAt": "2026-02-23T21:54:13Z"
+            },
+            {
+              "originalPosition": 169,
+              "body": "```suggestion\n    IS-IS metric the same?\n```",
+              "createdAt": "2026-02-23T21:53:20Z",
+              "updatedAt": "2026-02-23T21:54:13Z"
+            },
+            {
+              "originalPosition": 189,
+              "body": "```suggestion\n   > For example, VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.\n```",
+              "createdAt": "2026-02-23T21:53:43Z",
+              "updatedAt": "2026-02-23T21:54:13Z"
+            },
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\n   MIB creation. Finally, it introduces a\n```",
+              "createdAt": "2026-02-23T21:54:01Z",
+              "updatedAt": "2026-02-23T21:54:14Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7lGq61",
+          "commit": {
+            "abbreviatedOid": "dc00dfb"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-02-23T21:55:34Z",
+          "updatedAt": "2026-02-23T21:56:19Z",
+          "comments": [
+            {
+              "originalPosition": 68,
+              "body": "```suggestion\n   applications such as the DNS {{?RFC1034}}, the\n```",
+              "createdAt": "2026-02-23T21:55:35Z",
+              "updatedAt": "2026-02-23T21:56:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 221,
+      "id": "PR_kwDOOWPBqs7FsCxs",
+      "title": "Simplify IM text to address YANG Doc review.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/221",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-02-23T16:06:54Z",
+      "updatedAt": "2026-02-23T16:07:19Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d2c9fdbe13c6c3a9104030ecd2011865650049bb",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "220-more-im-clearity-in-section-53",
+      "headRefOid": "949d518bf525a2858628af50a5609fdc9e815fc9",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
