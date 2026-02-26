@@ -1267,6 +1267,10 @@ DM         DM        DM     --> concrete/detailed model
    associations, end-to-end application quality, service interruptions,
    or user experience (UX)?
 
+   Note that monitoring a service must consider the utility to the user.
+   This includes responsiveness, smoothness (absence of jitter), throughput,
+   and other "quality of experience" factors.
+
 ##  Security Management {#sec-security-mgmt}
 
    Protocol Designers should consider how to monitor and manage security
@@ -1450,7 +1454,10 @@ DM         DM        DM     --> concrete/detailed model
    authorization, should be used.
 
    The security implications of password-based authentication should be taken into
-   account when designing a New Protocol or Protocol Extension.
+   account when designing a New Protocol or Protocol Extension. In particular, the
+   authentication mechanisms recommended for new protocols or protocol extensions
+   should provide adequate security; for instance, authentication based purely on
+   passwords is unlikely to provide an adequate level of security.
 
    While a standard description of a protocol's manageable parameters facilitates
    legitimate operation, it may also inadvertently simplify an attacker's efforts
@@ -1473,6 +1480,10 @@ DM         DM        DM     --> concrete/detailed model
 # Operational Considerations Checklist {#sec-checklist}
 
 This appendix provides a concise checklist of key questions that Protocol Designers should address in the "Operational Considerations" section of their specifications. Each item references the relevant section of this document for detailed guidance.
+
+This checklist is intended for use by document authors and the working groups that develop protocol documents. A separate list
+of guidelines and a checklist of questions to consider when reviewing a document to evaluate whether the document address common
+operations and management needs is provided in {{CHECKLIST}}.
 
 The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.
 
