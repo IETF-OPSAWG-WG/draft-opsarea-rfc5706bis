@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-24T01:05:23.084668+00:00",
+  "timestamp": "2026-02-26T01:04:01.541429+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3292,7 +3292,7 @@
       "labels": [],
       "body": "Nits/editorial\n\n- [x] Expand abbreviations on first use:\n  - [x]  OPS - Expanded\n  - [x] NMS - Expanded\n  - [x] KPI - Not Used\n  - [x] MTTR. - Not Used\n- [x] Normalize section title capitalization and hyphenation (e.g., \u201cend-to-end,\u201d\n\u201cmachine-readable\u201d). \n- [x] Avoid ambiguous verbs like \u201csupport\u201d in checklist items.\nPrefer testable phrasing (\u201cThe protocol exposes...,\u201d \u201cThe implementation\nprovides...\u201d). \n- [x] Provide consistent guidance on whether each checklist item is\n\u201cRecommended\u201d vs \u201cOptional,\u201d and keep that labeling uniform across sections.\n- [ ] Ensure references cited in examples are up to date; mark informative vs\nnormative consistently. \n- [ ] Consider a short \u201cHow to use this document\u201d\nsubsection explaining that WGs can paste the checklist into their draft\ntemplates.\n\n- [ ] Scope/intent: Be explicit early that this document is guidance for WGs and\nauthors, not a protocol-level requirement. Where [RFC 2119](https://datatracker.ietf.org/doc/rfc2119/)/8174 terms are used,\nsay they are requirements of this BCP for authors, not for protocol behavior. \n\n- [x] Relationship to [RFC 5706](https://datatracker.ietf.org/doc/rfc5706/): In Abstract and Introduction, clearly state whether\nthis document obsoletes or updates [RFC 5706](https://datatracker.ietf.org/doc/rfc5706/) and summarize the key deltas.\n\n- [ ] Consider an appendix mapping old checklist items to the new structure. \n\n- [ ] Terminology: Define \u201ctelemetry,\u201d \u201cmonitoring,\u201d \u201cobservability,\u201d and\n\u201cmanagement/control/data plane\u201d on first use to avoid ambiguity. \n\n- [ ] Encryption vs. manageability: Add a checklist question about operational visibility when\nend-to-end encryption hides header or payload fields, and expectations for\nexposing safe metadata or counters. \n\n- [ ] Automation and rollback: Add explicit\nitems on idempotent operations, transactionality, dry-run/preview, and reliable\nrollback on failure, since these are frequent sources of outages.\n\n- [ ] Configuration and state: Encourage separation of intended vs. applied config\nand clarity on how state is derived and exposed, including convergence timing\nand failure modes. \n- [ ] Logging and privacy: Include guidance on data\nminimization, redaction of sensitive fields, log retention, and key/credential\nrotation procedures as part of operational security. \n- [ ] Telemetry breadth: Call\nout metrics, events/logs, and traces as first-class signals. Recommend rate\nlimiting, sampling guidance, units, and stability of metric names. \n- [ ] Backwards compatibility and deprecation: Add questions on versioning, feature flags,\ndeprecation notices, and interop during mixed-version rollouts. \n- [ ] IANA and registries: Remind authors to consider registries that impact operations (e.g.,\nerror codes, counters, event types) and to document update policies.",
       "createdAt": "2026-02-19T21:26:49Z",
-      "updatedAt": "2026-02-20T08:42:21Z",
+      "updatedAt": "2026-02-24T13:01:00Z",
       "closedAt": null,
       "comments": []
     },
@@ -3333,6 +3333,39 @@
       "updatedAt": "2026-02-23T15:40:49Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 222,
+      "id": "I_kwDOOWPBqs7tWyvj",
+      "title": "Update RFC 6123",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/222",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "Consider if we need to update RFC6123 to briefly say:\n\n* s/manageability section/Operational Section\n* Unless specifics are privided in 6123, the guidance in this bis takes precedence.\n\n\n@AdrianFarrel is the author of 6123 and I thought that some consisteny is needed here. Maybe bring this to PCE WG?",
+      "createdAt": "2026-02-24T08:08:46Z",
+      "updatedAt": "2026-02-24T10:30:38Z",
+      "closedAt": "2026-02-24T10:30:38Z",
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "RFC 6123 is Historic\nMaking updates to it would be \"strange\".\n\nIf you want to move ahead with the PCE WG then you could persuade them that 5706bis provides a better foundation on which to build. ",
+          "createdAt": "2026-02-24T10:10:46Z",
+          "updatedAt": "2026-02-24T10:10:46Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks Adrian. ",
+          "createdAt": "2026-02-24T10:30:38Z",
+          "updatedAt": "2026-02-24T10:30:38Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -15482,7 +15515,7 @@
       "labels": [],
       "body": "Acronyms Expanded:\r\n\r\nProtocols and Technologies\r\n\r\n- MIB (Management Information Base)\r\n- DNS (Domain Name System)\r\n- SMTP (Simple Mail Transfer Protocol)\r\n- MPLS (Multi-Protocol Label Switching)\r\n- NETCONF (Network Configuration Protocol) and RESTCONF\r\n- SNMP (Simple Network Management Protocol)\r\n- IPFIX (IP Flow Information Export)\r\n- SMIv2 (Structure of Management Information version 2)\r\n- IS-IS (Intermediate System to Intermediate System)\r\n\r\nAdministrative and Organizational\r\n- Area Director (AD)\r\n\r\nHypenations\r\n\r\n- early-on discussions\r\n- deep-packet inspection\r\n- two-level\r\n- data- or forwarding-plane\r\n",
       "createdAt": "2026-02-22T22:40:20Z",
-      "updatedAt": "2026-02-23T21:58:37Z",
+      "updatedAt": "2026-02-24T02:57:16Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d2c9fdbe13c6c3a9104030ecd2011865650049bb",
@@ -15504,9 +15537,9 @@
         {
           "author": "sbarguil",
           "authorAssociation": "COLLABORATOR",
-          "body": "> I think this is a step too far and we should pay attention to https://www.rfc-editor.org/rpc/wiki/doku.php?id=abbrev_list That is, unless there is an exceptionally good reason (such as confusion between two abbreviations) we should not expand those that appear with an asterisk (*) in the table.\r\n> \r\n> So, I would remove all of the items from the from the \"Protocols and Technologies\" list above.\r\n> \r\n> While there is a debate to be had about clarity in a document that spans Areas and technologies, we _are_ the IETF and these are all core IETF terms of art. They do not need to be expanded.\r\n> \r\n> I would retain the expansion of Area Director (AD)\r\n\r\nAfter checking the list, these three can ramain:\r\n\r\n- NETCONF (Network Configuration Protocol) and RESTCONF\r\n- IPFIX (IP Flow Information Export)\r\n- SMIv2 (Structure of Management Information version 2)",
+          "body": "> I think this is a step too far and we should pay attention to https://www.rfc-editor.org/rpc/wiki/doku.php?id=abbrev_list That is, unless there is an exceptionally good reason (such as confusion between two abbreviations) we should not expand those that appear with an asterisk (*) in the table.\r\n> \r\n> So, I would remove all of the items from the from the \"Protocols and Technologies\" list above.\r\n> \r\n> While there is a debate to be had about clarity in a document that spans Areas and technologies, we _are_ the IETF and these are all core IETF terms of art. They do not need to be expanded.\r\n> \r\n> I would retain the expansion of Area Director (AD)\r\n\r\nAfter checking the list and based on @xorrkaz comments, these three can ramain:\r\n\r\n- NETCONF (Network Configuration Protocol) and RESTCONF\r\n- IPFIX (IP Flow Information Export)\r\n- SMIv2 (Structure of Management Information version 2)",
           "createdAt": "2026-02-23T21:50:56Z",
-          "updatedAt": "2026-02-23T21:50:56Z"
+          "updatedAt": "2026-02-24T02:57:16Z"
         }
       ],
       "reviews": [
