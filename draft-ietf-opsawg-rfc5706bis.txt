@@ -407,7 +407,10 @@ Table of Contents
       the various available transport alternatives,
       [I-D.ietf-core-dns-over-coap] discusses co-existence with those
       and clarifies some key deployment aspects such as redirection,
-      forwarding loop prevention, and error handling.
+      forwarding loop prevention, and error handling.  Also,
+      [I-D.ietf-ippm-ioam-integrity-yang] is an example of a document
+      that follows the above guidance by documenting operational aspects
+      as part of the YANG module itself.
 
 3.2.  "Operational Considerations" Section Boilerplate When No New
       Considerations Exist
@@ -1710,6 +1713,14 @@ Table of Contents
               Internet-Draft, draft-ietf-core-dns-over-coap-20, 16
               September 2025, <https://datatracker.ietf.org/doc/html/
               draft-ietf-core-dns-over-coap-20>.
+
+   [I-D.ietf-ippm-ioam-integrity-yang]
+              Iurman, J. and T. Zhou, "A YANG Data Model for In Situ
+              Operations, Administration, and Maintenance (IOAM)
+              Integrity Protected Options", Work in Progress, Internet-
+              Draft, draft-ietf-ippm-ioam-integrity-yang-05, 12 January
+              2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              ippm-ioam-integrity-yang-05>.
 
    [I-D.ietf-lamps-dilithium-certificates]
               Massimo, J., Kampanakis, P., Turner, S., and B.
