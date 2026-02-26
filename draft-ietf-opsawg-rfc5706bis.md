@@ -1270,6 +1270,9 @@ DM         DM        DM     --> concrete/detailed model
 
    Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the New Protocol or Protocol Extension.
+   Likewise, Protocol Designers should consider how some operations (e.g., logging)
+   might include privacy-sensitive information, which ought to be controlled
+   to avoid access by unauthorized entities.
 
    Should a system automatically notify operators of every event
    occurrence, or should an operator-defined threshold control when a
@@ -1557,7 +1560,7 @@ The decision to incorporate all or part of these items into their work remains w
 * What security-related monitoring is needed? ({{sec-security-mgmt}})
    * What security events should be logged? ({{sec-security-mgmt}})
    * What statistics help detect attacks? ({{sec-security-mgmt}})
-   * What security threats do management operations introduce? ({{sec-security-mgmt}})
+   * What security and privacy threats do management operations introduce? ({{sec-security-mgmt}})
 
 # Changes Since RFC 5706 {#sec-changes-since-5706}
 
