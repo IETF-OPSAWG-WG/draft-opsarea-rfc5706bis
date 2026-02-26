@@ -318,7 +318,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  "Operational Considerations" Section {#sec-oper-manag-considerations}
 
-   All Internet-Drafts that document a technical specification for a New Protocol 
+   All Internet-Drafts that document a technical specification for a New Protocol
    or Protocol Extension or describe their use are required to include an "Operational Considerations" section
    if it is the intention that they will be advanced for publication as IETF RFCs.
    Internet-Drafts that do not document technical specifications, such as process, policy, or administrative
