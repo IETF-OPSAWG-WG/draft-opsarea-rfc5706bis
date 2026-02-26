@@ -17,12 +17,13 @@
    Retrofitting operations and management considerations is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
-   addressed when defining New Protocols and Protocol Extensions. 
+   addressed when writing documents in the IETF Stream that define New Protocols or Protocol Extensions. 
        This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a
-   requirement to include an "Operational Considerations" section in new RFCs that document a technical specification in the IETF Stream,
-   while providing an escape clause if no new considerations are identified. 
+   requirement to include an "Operational Considerations" section in new RFCs in
+   the IETF Stream that define New Protocols or Protocol Extensions or describe their use (including relevant YANG
+   Models), while providing an escape clause if no new considerations are identified. 
     ' name="description">
 <meta content="xml2rfc 3.31.0" name="generator">
 <meta content="management" name="keyword">
@@ -1129,12 +1130,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
    Retrofitting operations and management considerations is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
-   addressed when defining New Protocols and Protocol Extensions.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+   addressed when writing documents in the IETF Stream that define New Protocols or Protocol Extensions.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a
-   requirement to include an "Operational Considerations" section in new RFCs that document a technical specification in the IETF Stream,
-   while providing an escape clause if no new considerations are identified.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+   requirement to include an "Operational Considerations" section in new RFCs in
+   the IETF Stream that define New Protocols or Protocol Extensions or describe their use (including relevant YANG
+   Models), while providing an escape clause if no new considerations are identified.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1400,9 +1402,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
    process.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">This document obsoletes <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> and fully updates its content
    with new operational and management techniques and mechanisms. It also
-   introduces a requirement for an "Operational Considerations"
-   section, that covers both operational and management considerations,
-   in new RFCs in the IETF Stream. Additionally, this document updates Section <a href="https://rfc-editor.org/rfc/rfc2360#section-2.14" class="relref">2.14</a> of RFC 2360 <span>[<a href="#BCP22" class="cite xref">BCP22</a>]</span> on "Guide for Internet Standards Writers"
+   introduces a requirement to include an "Operational Considerations"
+   section in new RFCs in the IETF Stream that define New Protocols or
+   Protocol Extensions or describe their use (including relevant YANG
+   Models). This section must cover both operational and management considerations.
+   Additionally, this document updates Section <a href="https://rfc-editor.org/rfc/rfc2360#section-2.14" class="relref">2.14</a> of RFC 2360 <span>[<a href="#BCP22" class="cite xref">BCP22</a>]</span> on "Guide for Internet Standards Writers"
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
    considerations as described in <a href="#sec-doc-req-ietf-spec" class="auto internal xref">Section 3</a>. The update is provided in <a href="#sec-2360-update" class="auto internal xref">Section 3.4</a>.
    Further, this document removes outdated
@@ -1425,13 +1429,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
    not mandate a comprehensive inventory of all operational considerations.
    Instead, it guides authors to focus on key aspects that are essential for
    the technology's deployability, operation, and maintenance.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
-<p id="section-1.1-3">Suitable management approaches may vary for different areas, WGs,
+<p id="section-1.1-3">Suitable operational and management approaches may vary for different areas, WGs,
    and protocols in the IETF. This document does not prescribe
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
    considered for any New Protocol or Protocol Extension.<a href="#section-1.1-3" class="pilcrow">¶</a></p>
 <p id="section-1.1-4">A WG may decide that its protocol does not need interoperable
-   management or a standardized Data Model, but this should be a
+   operational and management or a standardized Data Model, but this should be a
    deliberate and documented decision, not the result of omission. This document
    provides some guidelines for those considerations.<a href="#section-1.1-4" class="pilcrow">¶</a></p>
 <p id="section-1.1-5">This document recognizes a distinction between management and operational
@@ -1452,11 +1456,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h3>
 <p id="section-1.2-1">The guidelines are intended to be useful to authors
    writing protocol specifications.
-   They outline what to consider for management and deployment, how to document
+   They outline what to consider for operations, management, and deployment, how to document
    those aspects, and how to present them in a consistent format.
     This document is intended to offer a flexible set of
    guiding principles applicable to various circumstances. It provides a framework for WGs
-   to ensure that manageability considerations are an integral part of the protocol design process, and
+   to ensure that operational considerations are an integral part of the protocol design process, and
    its use should not be misinterpreted as imposing new hurdles on work in other areas.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
 <p id="section-1.2-2">Protocol Designers should consider which operations and management
    needs are relevant to their protocol, document how those needs could
@@ -1474,7 +1478,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    management solutions.  However, it is the intent that new documents
    should clearly articulate the operations and management of
    that new work to fill any operations and management gaps.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
-<p id="section-1.2-4">A core principle of this document is to encourage early on discussions rather than mandating any specific solution.
+<p id="section-1.2-4">A core principle of this document is to encourage early-on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
    protocol is mandatory. Specifically, this document does not require to develop solutions to accommodate
@@ -1483,11 +1487,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-1.2-5">If Protocol Designers conclude that the technology can be
    managed solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
-   but it is a decision that should be explicit in a manageability discussion
+   but it is a decision that should be explicit in a operational considerations discussion
    -- that this is how the protocol will need to be operated and managed.
-   Protocol Designers should avoid deferring manageability to a later
+   Protocol Designers should avoid deferring operations and manageability to a later
    phase of the development of the specification.<a href="#section-1.2-5" class="pilcrow">¶</a></p>
-<p id="section-1.2-6">When a WG considers operation and management functionality for a
+<p id="section-1.2-6">When a WG considers operations and management functionality for a
    protocol, the document should contain enough information for readers
    to understand how the protocol will be deployed, operated, and managed. The considerations
    do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
@@ -1626,8 +1630,9 @@ design, specification, implementation, or deployment of a new Protocol or Protoc
         <h3 id="name-operational-considerations-">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-operational-considerations-" class="section-name selfRef">"Operational Considerations" Section</a>
         </h3>
-<p id="section-3.1-1">All Internet-Drafts that document a technical specification and are advanced for publication
-   as IETF RFCs are required to include an "Operational Considerations" section.
+<p id="section-3.1-1">All Internet-Drafts that document a technical specification for a New Protocol
+   or Protocol Extension or describe their use are required to include an "Operational Considerations" section
+   if it is the intention that they will be advanced for publication as IETF RFCs.
    Internet-Drafts that do not document technical specifications, such as process, policy, or administrative
    Internet-Drafts, are not required to include such a section.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.1-2">After evaluating the operational (<a href="#sec-oper-consid" class="auto internal xref">Section 4</a>) and manageability (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>) aspects of a New
@@ -1665,6 +1670,11 @@ Also, <span>[<a href="#I-D.ietf-ippm-ioam-integrity-yang" class="cite xref">I-D.
 the above guidance by documenting operational aspects as part of the YANG module itself.<a href="#section-3.1-6.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
+<p id="section-3.1-7">For architecture documents, the "Operational Considerations" section should focus on describing the intended deployment environment,
+  assumptions about network operations, potential impacts on existing operational practices,
+  and any high-level requirements that future protocol designs should address. It is not expected to detail specific
+  configuration parameters or management interfaces unless they are integral to the architecture itself.
+  If the architecture document itself does not introduce new operational considerations, the exemption statement in <a href="#sec-null-sec" class="auto internal xref">Section 3.2</a> can be used.<a href="#section-3.1-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-null-sec">
@@ -1872,7 +1882,7 @@ state during the transition.
    enable automatic tunneling through non-RSVP routers. But in reality,
    routers cannot look at an otherwise normal IP packet and potentially
    take it off the fast path! The initial designers overlooked that a
-   new "deep packet inspection" requirement was being put on the
+   new "deep-packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
    (<span>[<a href="#RFC2113" class="cite xref">RFC2113</a>]</span>, <span>[<a href="#RFC2711" class="cite xref">RFC2711</a>]</span>) was finally developed to solve this problem,
    for RSVP and other protocols that require the router to take some
@@ -1923,13 +1933,12 @@ state during the transition.
    components that are added to the network as a result of changes in
    the configuration, such as servers performing auto-configuration
    operations.<a href="#section-4.4-4" class="pilcrow">¶</a></p>
-<p id="section-4.4-5">Protocol Designers should consider also the impact on
-   infrastructure applications like DNS <span>[<a href="#RFC1034" class="cite xref">RFC1034</a>]</span>, the registries, or
-   the size of routing tables.<a href="#section-4.4-5" class="pilcrow">¶</a></p>
+<p id="section-4.4-5">Protocol Designers should also consider the impact on infrastructure
+   applications such as the DNS <span>[<a href="#RFC1034" class="cite xref">RFC1034</a>]</span>, the
+   registries, or the size of routing tables.<a href="#section-4.4-5" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-4.4-6.1">
-            <p id="section-4.4-6.1.1">For example, Simple Mail Transfer
-   Protocol (SMTP) <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
+            <p id="section-4.4-6.1.1">For example, SMTP <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.<a href="#section-4.4-6.1.1" class="pilcrow">¶</a></p>
@@ -1997,7 +2006,7 @@ Consider the operators' requirement for digital forensics from the network or en
    through it and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct
    end-to-end operation of the New Protocol or Protocol Extension can be tested
-   actively and passively, and how the correct data or forwarding plane
+   actively and passively, and how the correct data- or forwarding-plane
    function of each involved element can be verified to be working
    correctly with the New Protocol or Protocol Extension. Which metrics are of interest?<a href="#section-4.6-2" class="pilcrow">¶</a></p>
 <p id="section-4.6-3">Protocol Designers should consider how to test the correct end-to-end
@@ -2045,7 +2054,7 @@ management systems)?<a href="#section-5-4.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-5-4.2">
           <p id="section-5-4.2.1">What is the possible architecture (client-server, manager-agent,
-poll-driven or event-driven, auto-configuration, two levels or
+poll-driven or event-driven, auto-configuration, two-levels or
 hierarchical)?<a href="#section-5-4.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-5-4.3">
@@ -2074,7 +2083,8 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    delivered.<a href="#section-5-6" class="pilcrow">¶</a></p>
 <p id="section-5-7">WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble. NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> addresses this in a generic manner
+   causes trouble. Network Configuration Protocol (NETCONF) <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span>
+   addresses this in a generic manner
    by allowing an operator to lock the configuration on multiple
    devices, perform the configuration settings/changes, check that they
    are OK (undo if not), and then unlock the devices.<a href="#section-5-7" class="pilcrow">¶</a></p>
@@ -2131,14 +2141,18 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    enable the scalable deployment and lifecycle management of new network functions
    and services, while ensuring a clear understanding of their operational impact
    and total cost of ownership.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
-<p id="section-5.2-3">Achieving universal agreement on a single management syntax and protocol is challenging.
-   However, the IETF has significantly evolved its approach to network management, moving
-   beyond SMIv2 and SNMP. Modern IETF management solutions primarily leverage YANG <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>
-   for Data Modeling and NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> or RESTCONF <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span> for protocol interactions.
-   This shift, as further elaborated in <span>[<a href="#RFC6632" class="cite xref">RFC6632</a>]</span>, emphasizes structured Data Models and
-   programmatic interfaces to enhance automation and interoperability. Other protocols, such as
-   IPFIX <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span> for flow accounting and syslog <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span> for logging, continue to play
-   specific roles in comprehensive network management.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
+<p id="section-5.2-3">Achieving universal agreement on a single management syntax and protocol is
+   challenging. However, the IETF has significantly evolved its approach to
+   network management, moving beyond Structure of Management Information
+   version 2 (SMIv2) and SNMP. Modern IETF management solutions primarily
+   leverage YANG <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> for Data Modeling and NETCONF <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> or
+   RESTful Configuration Protocol (RESTCONF) <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span> for protocol
+   interactions. This shift, as further elaborated in <span>[<a href="#RFC6632" class="cite xref">RFC6632</a>]</span>, emphasizes
+   structured Data Models and programmatic interfaces to enhance automation and
+   interoperability. Other protocols, such as IP Flow Information Export
+   (IPFIX) <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span> for flow accounting and syslog (System Logging
+   Protocol) <span>[<a href="#RFC5424" class="cite xref">RFC5424</a>]</span> for logging, continue to play specific roles in
+   comprehensive network management.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
 <p id="section-5.2-4">Interoperability must address both syntactic and semantic aspects. While syntactic variations
    across implementations can often be handled through adaptive processing, semantic differences pose a
    greater challenge, as the meaning of data is intrinsically tied to the managed entity.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
@@ -2378,9 +2392,10 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <a href="#section-5.4.1" class="section-number selfRef">5.4.1. </a><a href="#name-liveness-detection-and-moni" class="section-name selfRef">Liveness Detection and Monitoring</a>
           </h4>
 <p id="section-5.4.1-1">Protocol Designers should always build in basic testing features
-   (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
-   calls)) that can be used to test for liveness, with an option to
-   enable and disable them.<a href="#section-5.4.1-1" class="pilcrow">¶</a></p>
+   (e.g., ICMP echo, UDP
+   or TCP echo services, and null Remote Procedure Calls
+   (RPCs)) that can be used to test for liveness, with the option to
+   enable or disable them.<a href="#section-5.4.1-1" class="pilcrow">¶</a></p>
 <p id="section-5.4.1-2">Mechanisms for monitoring the liveness of the protocol and for
    detecting Faults in protocol connectivity are usually built into
    protocols. In some cases, mechanisms already exist within other
@@ -2464,17 +2479,17 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    as default values and modes of operation.<a href="#section-5.5-1" class="pilcrow">¶</a></p>
 <p id="section-5.5-2">What information should be maintained across reboots of the device,
    or restarts of the management system?<a href="#section-5.5-2" class="pilcrow">¶</a></p>
-<p id="section-5.5-3">"Requirements for Configuration Management of IP-based Networks"
-   <span>[<a href="#RFC3139" class="cite xref">RFC3139</a>]</span> discusses requirements for configuration management,
-   including discussion of different levels of management, high-level
-   policies, network-wide configuration data, and device-local
-   configuration. Network configuration extends beyond simple multi-device
-   push or pull operations. It also involves ensuring that the configurations
-   being pushed are semantically compatible across devices and that the resulting
-   behavior of all involved devices corresponds to the intended behavior.
-   Is the attachment between them configured compatibly on both ends?
-   Is the IS-IS metric the same? Answering those questions for a 1,000 devices
-   network is not that easy.<a href="#section-5.5-3" class="pilcrow">¶</a></p>
+<p id="section-5.5-3">"Requirements for Configuration Management of IP-based Networks"{
+    {?RFC3139}} discusses requirements for configuration management, including
+    discussion of different levels of management, high-level policies,
+    network-wide configuration data, and device-local configuration. Network
+    configuration extends beyond simple multi-device push or pull operations.
+    It also involves ensuring that the configurations being pushed are
+    semantically compatible across devices and that the resulting behavior of
+    all involved devices corresponds to the intended behavior. Is the
+    attachment between them configured compatibly on both ends? Is the
+    IS-IS metric the same?
+    Answering those questions for a network with one thousand devices is not that easy.<a href="#section-5.5-3" class="pilcrow">¶</a></p>
 <p id="section-5.5-4">Several efforts have existed in the IETF to develop policy-based
    configuration management. "Terminology for Policy-Based Management"
    <span>[<a href="#RFC3198" class="cite xref">RFC3198</a>]</span> was written to standardize the terminology across these
@@ -2489,7 +2504,7 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <p id="section-5.5-6">There are two parts to this:<a href="#section-5.5-6" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-5.5-7">
 <li id="section-5.5-7.1">
-            <p id="section-5.5-7.1.1">A Network Management System (NMS) could optimize ACLs for
+            <p id="section-5.5-7.1.1">A Network Management System (NMS) could optimize Access Control Lists (ACLs) for
 performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
 </li>
           <li id="section-5.5-7.2">
@@ -2635,8 +2650,8 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    to Data Model designers of that protocol to determine how to handle it.<a href="#section-5.7.1-7" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-5.7.1-8.1">
-              <p id="section-5.7.1-8.1.1">For example, VLAN identifiers are defined by standard to range
-   from 1 to 4094. Therefore, a YANG "vlan-id" definition representing the
+              <p id="section-5.7.1-8.1.1">For example, VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
+   Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".<a href="#section-5.7.1-8.1.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
@@ -2795,7 +2810,7 @@ performance reasons.<a href="#section-5.5-7.1.1" class="pilcrow">¶</a></p>
    for successful adoption. Therefore, a new specification should provide
    examples using existing, common tooling, or running code that demonstrate
    how to perform key operational tasks.<a href="#section-6-2" class="pilcrow">¶</a></p>
-<p id="section-6-3">Specifically, the following tooling-related aspects should be considered,
+<p id="section-6-3">Specifically, the following tooling-related aspects should be considered in the operational considerations section,
    prioritizing the adaptation of existing tools:<a href="#section-6-3" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-6-4.1">
@@ -2849,9 +2864,9 @@ platforms.<a href="#section-6-4.4.2.2.1" class="pilcrow">¶</a></p>
           </ul>
 </li>
         <li class="normal" id="section-6-4.5">
-          <p id="section-6-4.5.1">Open-Source for Tooling: If new tools are deemed necessary, or if significant
-adaptations to existing tools are required, prioritize open-source development
-with community involvement. Open-source tools lower the barrier to entry,
+          <p id="section-6-4.5.1">Open Source for Tooling: If new tools are deemed necessary, or if significant
+adaptations to existing tools are required, prioritize open source development
+with community involvement. Open source tools lower the barrier to entry,
 encourage collaboration, and provide operators with the flexibility to customize
 and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" class="pilcrow">¶</a></p>
 </li>
@@ -3083,10 +3098,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC2975">[RFC2975]</dt>
         <dd>
 <span class="refAuthor">Aboba, B.</span>, <span class="refAuthor">Arkko, J.</span>, and <span class="refAuthor">D. Harrington</span>, <span class="refTitle">"Introduction to Accounting Management"</span>, <span class="seriesInfo">RFC 2975</span>, <span class="seriesInfo">DOI 10.17487/RFC2975</span>, <time datetime="2000-10" class="refDate">October 2000</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2975">https://www.rfc-editor.org/rfc/rfc2975</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC3139">[RFC3139]</dt>
-        <dd>
-<span class="refAuthor">Sanchez, L.</span>, <span class="refAuthor">McCloghrie, K.</span>, and <span class="refAuthor">J. Saperia</span>, <span class="refTitle">"Requirements for Configuration Management of IP-based Networks"</span>, <span class="seriesInfo">RFC 3139</span>, <span class="seriesInfo">DOI 10.17487/RFC3139</span>, <time datetime="2001-06" class="refDate">June 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3139">https://www.rfc-editor.org/rfc/rfc3139</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC3198">[RFC3198]</dt>
         <dd>
@@ -3338,7 +3349,7 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
             <p id="appendix-A.2-1.7.1">How are human-readable messages handled? (<a href="#sec-messages" class="auto internal xref">Section 4.7</a>)<a href="#appendix-A.2-1.7.1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-A.2-1.7.2.1">
-                <p id="appendix-A.2-1.7.2.1.1">Do messages support internationalization with message codes for local language mapping? (<a href="#sec-messages" class="auto internal xref">Section 4.7</a>)<a href="#appendix-A.2-1.7.2.1.1" class="pilcrow">¶</a></p>
+                <p id="appendix-A.2-1.7.2.1.1">Do messages contain codes that enable local language mapping for internationalization? (<a href="#sec-messages" class="auto internal xref">Section 4.7</a>)<a href="#appendix-A.2-1.7.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3568,7 +3579,7 @@ whose efforts have helped to improve this document:<a href="#appendix-C-1" class
           <p id="appendix-C-2.2.1">The IETF OpsDir <span>[<a href="#IETF-OPS-Dir" class="cite xref">IETF-OPS-Dir</a>]</span> reviewer team, which has been providing document reviews for more than a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.<a href="#appendix-C-2.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-2.3">The AD championing the update:</dt>
+<dt id="appendix-C-2.3">The Area Director (AD) championing the update:</dt>
         <dd style="margin-left: 1.5em" id="appendix-C-2.4">
           <p id="appendix-C-2.4.1">Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.<a href="#appendix-C-2.4.1" class="pilcrow">¶</a></p>
 </dd>
