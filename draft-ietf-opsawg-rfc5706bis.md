@@ -362,7 +362,7 @@ This document does not describe interoperability requirements. As such, it does 
   assumptions about network operations, potential impacts on existing operational practices,
   and any high-level requirements that future protocol designs should address. It is not expected to detail specific
   configuration parameters or management interfaces unless they are integral to the architecture itself.
-  If the architecture document itself does not introduce new operational considerations, the exemption statement in Section 3.2 can be used.
+  If the architecture document itself does not introduce new operational considerations, the exemption statement in {{sec-null-sec}} can be used.
 
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
