@@ -172,7 +172,7 @@ contributor:
 
    The guidelines are intended to be useful to authors
    writing protocol specifications.
-   They outline what to consider for operations, management and deployment, how to document
+   They outline what to consider for operations, management, and deployment, how to document
    those aspects, and how to present them in a consistent format.
     This document is intended to offer a flexible set of
    guiding principles applicable to various circumstances. It provides a framework for WGs
