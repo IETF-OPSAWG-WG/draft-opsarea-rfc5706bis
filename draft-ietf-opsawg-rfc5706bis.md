@@ -197,7 +197,7 @@ contributor:
    should clearly articulate the operations and management of
    that new work to fill any operations and management gaps.
 
-   A core principle of this document is to encourage early on discussions rather than mandating any specific solution.
+   A core principle of this document is to encourage early-on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
    protocol is mandatory. Specifically, this document does not require to develop solutions to accommodate
@@ -545,7 +545,7 @@ state during the transition.
    enable automatic tunneling through non-RSVP routers. But in reality,
    routers cannot look at an otherwise normal IP packet and potentially
    take it off the fast path! The initial designers overlooked that a
-   new "deep packet inspection" requirement was being put on the
+   new "deep-packet inspection" requirement was being put on the
    functional components of a router. The "router alert" option
    ({{?RFC2113}}, {{?RFC2711}}) was finally developed to solve this problem,
    for RSVP and other protocols that require the router to take some
@@ -594,12 +594,11 @@ state during the transition.
    the configuration, such as servers performing auto-configuration
    operations.
 
-   Protocol Designers should consider also the impact on
-   infrastructure applications like DNS {{?RFC1034}}, the registries, or
-   the size of routing tables.
+   Protocol Designers should also consider the impact on infrastructure
+   applications such as the DNS {{?RFC1034}}, the
+   registries, or the size of routing tables.
 
-   > For example, Simple Mail Transfer
-   Protocol (SMTP) {{?RFC5321}} servers use a reverse DNS lookup to filter
+   > For example, SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
@@ -662,7 +661,7 @@ Tooling required by security operators should be documented in the design and de
    through it and observing its behavior (a.k.a., active
    monitoring). Protocol Designers should consider how the correct
    end-to-end operation of the New Protocol or Protocol Extension can be tested
-   actively and passively, and how the correct data or forwarding plane
+   actively and passively, and how the correct data- or forwarding-plane
    function of each involved element can be verified to be working
    correctly with the New Protocol or Protocol Extension. Which metrics are of interest?
 
@@ -703,7 +702,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
       management systems)?
 
    *  What is the possible architecture (client-server, manager-agent,
-      poll-driven or event-driven, auto-configuration, two levels or
+      poll-driven or event-driven, auto-configuration, two-levels or
       hierarchical)?
 
    *  What are the management operations (initial configuration, dynamic
@@ -731,7 +730,8 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble. NETCONF {{?RFC6241}} addresses this in a generic manner
+   causes trouble. Network Configuration Protocol (NETCONF) {{?RFC6241}}
+   addresses this in a generic manner
    by allowing an operator to lock the configuration on multiple
    devices, perform the configuration settings/changes, check that they
    are OK (undo if not), and then unlock the devices.
@@ -787,14 +787,18 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    and services, while ensuring a clear understanding of their operational impact
    and total cost of ownership.
 
-   Achieving universal agreement on a single management syntax and protocol is challenging.
-   However, the IETF has significantly evolved its approach to network management, moving
-   beyond SMIv2 and SNMP. Modern IETF management solutions primarily leverage YANG {{?RFC7950}}
-   for Data Modeling and NETCONF {{?RFC6241}} or RESTCONF {{?RFC8040}} for protocol interactions.
-   This shift, as further elaborated in {{?RFC6632}}, emphasizes structured Data Models and
-   programmatic interfaces to enhance automation and interoperability. Other protocols, such as
-   IPFIX {{?RFC7011}} for flow accounting and syslog {{?RFC5424}} for logging, continue to play
-   specific roles in comprehensive network management.
+   Achieving universal agreement on a single management syntax and protocol is
+   challenging. However, the IETF has significantly evolved its approach to
+   network management, moving beyond Structure of Management Information
+   version 2 (SMIv2) and SNMP. Modern IETF management solutions primarily
+   leverage YANG {{?RFC7950}} for Data Modeling and NETCONF {{?RFC6241}} or
+   RESTful Configuration Protocol (RESTCONF) {{?RFC8040}} for protocol
+   interactions. This shift, as further elaborated in {{?RFC6632}}, emphasizes
+   structured Data Models and programmatic interfaces to enhance automation and
+   interoperability. Other protocols, such as IP Flow Information Export
+   (IPFIX) {{?RFC7011}} for flow accounting and syslog (System Logging
+   Protocol) {{?RFC5424}} for logging, continue to play specific roles in
+   comprehensive network management.
 
    Interoperability must address both syntactic and semantic aspects. While syntactic variations
    across implementations can often be handled through adaptive processing, semantic differences pose a
@@ -995,9 +999,10 @@ DM         DM        DM     --> concrete/detailed model
 ###  Liveness Detection and Monitoring {#sec-monitor}
 
    Protocol Designers should always build in basic testing features
-   (e.g., ICMP echo, UDP/TCP echo service, NULL RPCs (remote procedure
-   calls)) that can be used to test for liveness, with an option to
-   enable and disable them.
+   (e.g., ICMP echo, UDP
+   or TCP echo services, and null Remote Procedure Calls
+   (RPCs)) that can be used to test for liveness, with the option to
+   enable or disable them.
 
    Mechanisms for monitoring the liveness of the protocol and for
    detecting Faults in protocol connectivity are usually built into
@@ -1063,17 +1068,17 @@ DM         DM        DM     --> concrete/detailed model
    What information should be maintained across reboots of the device,
    or restarts of the management system?
 
-   "Requirements for Configuration Management of IP-based Networks"
-   {{?RFC3139}} discusses requirements for configuration management,
-   including discussion of different levels of management, high-level
-   policies, network-wide configuration data, and device-local
-   configuration. Network configuration extends beyond simple multi-device
-   push or pull operations. It also involves ensuring that the configurations
-   being pushed are semantically compatible across devices and that the resulting
-   behavior of all involved devices corresponds to the intended behavior.
-   Is the attachment between them configured compatibly on both ends?
-   Is the IS-IS metric the same? Answering those questions for a 1,000 devices
-   network is not that easy.
+   "Requirements for Configuration Management of IP-based Networks"{
+    {?RFC3139}} discusses requirements for configuration management, including
+    discussion of different levels of management, high-level policies,
+    network-wide configuration data, and device-local configuration. Network
+    configuration extends beyond simple multi-device push or pull operations.
+    It also involves ensuring that the configurations being pushed are
+    semantically compatible across devices and that the resulting behavior of
+    all involved devices corresponds to the intended behavior. Is the
+    attachment between them configured compatibly on both ends? Is the
+    IS-IS metric the same?
+    Answering those questions for a network with one thousand devices is not that easy.
 
    Several efforts have existed in the IETF to develop policy-based
    configuration management. "Terminology for Policy-Based Management"
@@ -1090,7 +1095,7 @@ DM         DM        DM     --> concrete/detailed model
 
    There are two parts to this:
 
-   1.  A Network Management System (NMS) could optimize ACLs for
+   1.  A Network Management System (NMS) could optimize Access Control Lists (ACLs) for
        performance reasons.
 
    2.  Unless the device or NMS is configured with adequate rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.
@@ -1238,8 +1243,8 @@ DM         DM        DM     --> concrete/detailed model
    is not specific to a management protocol, then it should be left
    to Data Model designers of that protocol to determine how to handle it.
 
-   > For example, VLAN identifiers are defined by standard to range
-   from 1 to 4094. Therefore, a YANG "vlan-id" definition representing the
+   > For example, VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
+   Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
 ###  Monitoring the Device {#sec-monitor-dev}
@@ -1421,9 +1426,9 @@ DM         DM        DM     --> concrete/detailed model
      *  Identifying potential tooling gaps and areas for improvement.
      *  Creating example flows and use cases for manageability.
 
-  *  Open-Source for Tooling: If new tools are deemed necessary, or if significant
-     adaptations to existing tools are required, prioritize open-source development
-     with community involvement. Open-source tools lower the barrier to entry,
+  *  Open Source for Tooling: If new tools are deemed necessary, or if significant
+     adaptations to existing tools are required, prioritize open source development
+     with community involvement. Open source tools lower the barrier to entry,
      encourage collaboration, and provide operators with the flexibility to customize
      and extend the tools to meet their specific needs.
 
@@ -1532,7 +1537,7 @@ The decision to incorporate all or part of these items into their work remains w
    * What status and health indicators does the protocol provide? ({{sec-oper-verify}})
 
 * How are human-readable messages handled? ({{sec-messages}})
-   * Do messages support internationalization with message codes for local language mapping? ({{sec-messages}})
+   * Do messages contain codes that enable local language mapping for internationalization? ({{sec-messages}})
 
 ## Management Information
 
@@ -1622,7 +1627,7 @@ whose efforts have helped to improve this document:
 The IETF Ops Directorate (OpsDir):
 : The IETF OpsDir {{IETF-OPS-Dir}} reviewer team, which has been providing document reviews for more than a decade, and its Chairs past and present: Gunter Van de Velde, Carlos Pignataro, Bo Wu, and Daniele Ceccarelli.
 
-The AD championing the update:
+The Area Director (AD) championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document, in roughly chronological order:
