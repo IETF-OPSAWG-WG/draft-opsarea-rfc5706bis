@@ -1043,7 +1043,7 @@ DM         DM        DM     --> concrete/detailed model
     all involved devices corresponds to the intended behavior. Is the
     attachment between them configured compatibly on both ends? Is the
     IS-IS metric the same?
-    Answering those questions for a 1,000 devices network is not that easy.
+    Answering those questions for a network with one thousand devices is not that easy.
 
    Several efforts have existed in the IETF to develop policy-based
    configuration management. "Terminology for Policy-Based Management"
