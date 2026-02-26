@@ -1458,7 +1458,7 @@ This appendix provides a concise checklist of key questions that Protocol Design
 
 This checklist is intended for use by document authors and the working groups that develop protocol documents. A separate list
 of guidelines and a checklist of questions to consider when reviewing a document to evaluate whether the document address common
-operations and management needs is provided in [CHECKLIST].
+operations and management needs is provided in {{CHECKLIST}}.
 
 The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.
 
