@@ -353,6 +353,8 @@ This document does not describe interoperability requirements. As such, it does 
 > {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}. For example,
 > given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
 > those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
+> Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
+> the above guidance by documenting operational aspects as part of the YANG module itself.
 
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
