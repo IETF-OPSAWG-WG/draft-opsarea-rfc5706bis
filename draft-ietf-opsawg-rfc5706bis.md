@@ -90,13 +90,14 @@ contributor:
    Retrofitting operations and management considerations is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
-   addressed when defining New Protocols and Protocol Extensions.
+   addressed when writing documents in the IETF Stream that define New Protocols or Protocol Extensions.
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
    updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a
-   requirement to include an "Operational Considerations" section in new RFCs that document a technical specification in the IETF Stream,
-   while providing an escape clause if no new considerations are identified.
+   requirement to include an "Operational Considerations" section in new RFCs in
+   the IETF Stream that define New Protocols or Protocol Extensions or describe their use (including relevant YANG
+   Models), while providing an escape clause if no new considerations are identified.
 
 --- middle
 
@@ -119,9 +120,11 @@ contributor:
 
    This document obsoletes {{?RFC5706}} and fully updates its content
    with new operational and management techniques and mechanisms. It also
-   introduces a requirement for an "Operational Considerations"
-   section, that covers both operational and management considerations,
-   in new RFCs in the IETF Stream. Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on "Guide for Internet Standards Writers"
+   introduces a requirement to include an "Operational Considerations"
+   section in new RFCs in the IETF Stream that define New Protocols or
+   Protocol Extensions or describe their use (including relevant YANG
+   Models). This section must cover both operational and management considerations.
+   Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on "Guide for Internet Standards Writers"
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
    considerations as described in {{sec-doc-req-ietf-spec}}. The update is provided in {{sec-2360-update}}.
    Further, this document removes outdated
@@ -144,14 +147,14 @@ contributor:
    Instead, it guides authors to focus on key aspects that are essential for
    the technology's deployability, operation, and maintenance.
 
-   Suitable management approaches may vary for different areas, WGs,
+   Suitable operational and management approaches may vary for different areas, WGs,
    and protocols in the IETF. This document does not prescribe
    a fixed solution or format in dealing with operational and management
    aspects of IETF protocols. However, these aspects should be
    considered for any New Protocol or Protocol Extension.
 
    A WG may decide that its protocol does not need interoperable
-   management or a standardized Data Model, but this should be a
+   operational and management or a standardized Data Model, but this should be a
    deliberate and documented decision, not the result of omission. This document
    provides some guidelines for those considerations.
 
@@ -169,11 +172,11 @@ contributor:
 
    The guidelines are intended to be useful to authors
    writing protocol specifications.
-   They outline what to consider for management and deployment, how to document
+   They outline what to consider for operations, management, and deployment, how to document
    those aspects, and how to present them in a consistent format.
     This document is intended to offer a flexible set of
    guiding principles applicable to various circumstances. It provides a framework for WGs
-   to ensure that manageability considerations are an integral part of the protocol design process, and
+   to ensure that operational considerations are an integral part of the protocol design process, and
    its use should not be misinterpreted as imposing new hurdles on work in other areas.
 
    Protocol Designers should consider which operations and management
@@ -204,12 +207,12 @@ contributor:
    If Protocol Designers conclude that the technology can be
    managed solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
-   but it is a decision that should be explicit in a manageability discussion
+   but it is a decision that should be explicit in a operational considerations discussion
    -- that this is how the protocol will need to be operated and managed.
-   Protocol Designers should avoid deferring manageability to a later
+   Protocol Designers should avoid deferring operations and manageability to a later
    phase of the development of the specification.
 
-   When a WG considers operation and management functionality for a
+   When a WG considers operations and management functionality for a
    protocol, the document should contain enough information for readers
    to understand how the protocol will be deployed, operated, and managed. The considerations
    do not need to be comprehensive and exhaustive; focus should be on key aspects. The WG
@@ -315,8 +318,9 @@ This document does not describe interoperability requirements. As such, it does 
 
 ##  "Operational Considerations" Section {#sec-oper-manag-considerations}
 
-   All Internet-Drafts that document a technical specification and are advanced for publication
-   as IETF RFCs are required to include an "Operational Considerations" section.
+   All Internet-Drafts that document a technical specification for a New Protocol
+   or Protocol Extension or describe their use are required to include an "Operational Considerations" section
+   if it is the intention that they will be advanced for publication as IETF RFCs.
    Internet-Drafts that do not document technical specifications, such as process, policy, or administrative
    Internet-Drafts, are not required to include such a section.
 
@@ -355,6 +359,12 @@ This document does not describe interoperability requirements. As such, it does 
 > those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
 > Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
 > the above guidance by documenting operational aspects as part of the YANG module itself.
+
+  For architecture documents, the "Operational Considerations" section should focus on describing the intended deployment environment,
+  assumptions about network operations, potential impacts on existing operational practices,
+  and any high-level requirements that future protocol designs should address. It is not expected to detail specific
+  configuration parameters or management interfaces unless they are integral to the architecture itself.
+  If the architecture document itself does not introduce new operational considerations, the exemption statement in {{sec-null-sec}} can be used.
 
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
@@ -1373,7 +1383,7 @@ DM         DM        DM     --> concrete/detailed model
    examples using existing, common tooling, or running code that demonstrate
    how to perform key operational tasks.
 
-   Specifically, the following tooling-related aspects should be considered,
+   Specifically, the following tooling-related aspects should be considered in the operational considerations section,
    prioritizing the adaptation of existing tools:
 
    *  Leveraging Existing Tooling: Before considering new tools, assess whether
