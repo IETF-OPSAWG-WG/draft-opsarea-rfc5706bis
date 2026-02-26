@@ -605,7 +605,7 @@ Table of Contents
    from potential overload.  Moreover, Per Section 2.16 of RFC 2360
    [BCP22], New Protocol or Protocol Extension specifications should
    address any possible destabilizing events, and means by which the
-   protocol resists or recovers from them.  For instance, a congestion-
+   protocol resists or recovers from them.  For instance, a congestion
    control algorithm must comply with [BCP133] to prevent congestion
    collapse and ensure network stability.
 
@@ -1169,8 +1169,8 @@ Table of Contents
    devices and that the resulting behavior of all involved devices
    corresponds to the intended behavior.  Is the attachment between them
    configured compatibly on both ends?  Is the IS-IS metric the same?
-   Answering those questions for a 1,000 devices network is not that
-   easy.
+   Answering those questions for a network with one thousand devices is
+   not that easy.
 
    Several efforts have existed in the IETF to develop policy-based
    configuration management.  "Terminology for Policy-Based Management"
