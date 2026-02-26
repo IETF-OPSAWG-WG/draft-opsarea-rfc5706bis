@@ -123,7 +123,7 @@ contributor:
    introduces a requirement to include an "Operational Considerations"
    section in new RFCs in the IETF Stream that define New Protocols or
    Protocol Extensions or describe their use (including relevant YANG
-   Models). This section must cover both operational and management considerations. 
+   Models). This section must cover both operational and management considerations.
    Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on "Guide for Internet Standards Writers"
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
    considerations as described in {{sec-doc-req-ietf-spec}}. The update is provided in {{sec-2360-update}}.
