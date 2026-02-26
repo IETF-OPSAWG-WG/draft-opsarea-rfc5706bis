@@ -929,11 +929,10 @@ DM         DM        DM     --> concrete/detailed model
 
   A common challenge in YANG Data Model development lies in defining the
   relationships between abstract service or network constructs and the
-  underlying device models. Therefore, when designing YANG modules, it
-  is important to go beyond simply modeling configuration and
-  operational data (i.e., leaf nodes), and also consider how the
-  status and relationships of abstract or distributed constructs can
-  be reflected based on parameters available in the network.
+  underlying device models. Therefore, when designing Network and Service
+  YANG modules, consider how the status and relationships of abstract or
+  distributed constructs can be reflected based on parameters available
+  in the network.
 
   For example, the status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
