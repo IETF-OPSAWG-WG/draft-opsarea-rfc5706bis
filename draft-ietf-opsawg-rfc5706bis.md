@@ -560,7 +560,7 @@ This document does not describe interoperability requirements. As such, it does 
    the configuration, such as servers performing auto-configuration
    operations.
 
-   Protocol designers should also consider the impact on infrastructure
+   Protocol Designers should also consider the impact on infrastructure
    applications such as the DNS {{?RFC1034}}, the
    registries, or the size of routing tables.
 
