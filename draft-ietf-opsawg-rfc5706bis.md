@@ -544,7 +544,7 @@ This document does not describe interoperability requirements. As such, it does 
    also indicate whether safeguards exist to protect networks from
    potential overload. Moreover, Per {{Section 2.16 of RFC2360@BCP22}}, New Protocol
    or Protocol Extension specifications should address any possible destabilizing events,
-   and means by which the protocol resists or recovers from them. For instance, a congestion-control algorithm must
+   and means by which the protocol resists or recovers from them. For instance, a congestion control algorithm must
    comply with {{?BCP133}} to prevent congestion collapse and ensure
    network stability.
 
