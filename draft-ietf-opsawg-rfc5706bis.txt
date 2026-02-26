@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 24 August 2026                               Old Dog Consulting
+Expires: 30 August 2026                               Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        20 February 2026
+                                                        26 February 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 August 2026.
+   This Internet-Draft will expire on 30 August 2026.
 
 Copyright Notice
 
@@ -552,13 +552,15 @@ Table of Contents
    Extension in the network?
 
    Many protocols benefit from being incrementally deployable --
-   operators may deploy aspects of a protocol before deploying it fully.
-   In those cases, the operational considerations should also specify
-   whether the New Protocol or Protocol Extension requires any changes
-   to the existing infrastructure, particularly the network.  If so, the
-   protocol specification should describe the nature of those changes,
-   where they are required, and how they can be introduced in a manner
-   that facilitates deployment.
+   operators may deploy some aspects of a protocol before deploying it
+   fully, or may deploy to only some nodes in a network before applying
+   to all nodes in the network.  In those cases, the operational
+   considerations should also specify whether the New Protocol or
+   Protocol Extension requires any changes to the existing
+   infrastructure, particularly the network.  If so, the protocol
+   specification should describe the nature of those changes, where they
+   are required, and how they can be introduced in a manner that
+   facilitates deployment.
 
    Incentivizing good security operation practices when migrating to the
    New Protocol or Protocol Extension should be encouraged.  For
@@ -570,8 +572,11 @@ Table of Contents
    transition to the New Protocol or Protocol Extension, impacts to
    current techniques employed by operators should be documented and
    mitigations included, where possible, so that consistent security
-   operations and management can be achieved.  Refer to [RFC8170] for a
-   detailed discussion on transition versus coexistence.
+   operations and management can be achieved.  Note that transitioning
+   between security mechanisms can be challenging, but it is not
+   desirable to take an easier approach if that leaves data in an open
+   or less-protected state during the transition.  Refer to [RFC8170]
+   for a detailed discussion on transition versus coexistence.
 
 4.3.  Requirements on Other Protocols and Functional Components
 
@@ -653,9 +658,9 @@ Table of Contents
 
       For example, Simple Mail Transfer Protocol (SMTP) [RFC5321]
       servers use a reverse DNS lookup to filter out incoming connection
-      requests: when Berkeley installed a new spam filter, their mail
-      server stopped functioning because of overload of the DNS cache
-      resolver.
+      requests: when Berkeley installed a new spam filter that used
+      reverse DNS lookup, their mail server stopped functioning because
+      of overload of the DNS cache resolver.
 
    The impact of New Protocols or Protocol Extensions, and the results
    of new OAM tools developed for them, must be considered with respect
@@ -821,10 +826,10 @@ Table of Contents
 
    WGs should consider how to configure multiple related/co-operating
    devices and how to back off if one of those configurations fails or
-   causes trouble.  NETCONF addresses this in a generic manner by
-   allowing an operator to lock the configuration on multiple devices,
-   perform the configuration settings/changes, check that they are OK
-   (undo if not), and then unlock the devices.
+   causes trouble.  NETCONF [RFC6241] addresses this in a generic manner
+   by allowing an operator to lock the configuration on multiple
+   devices, perform the configuration settings/changes, check that they
+   are OK (undo if not), and then unlock the devices.
 
    Techniques for debugging protocol interactions in a network must be
    part of the network management discussion.  Implementation source
@@ -1241,10 +1246,10 @@ Table of Contents
    protocol to be configured across multiple devices.  Configuration
    templates might also be helpful.
 
-   Consensus of the 2002 IAB Workshop [RFC3535] was that textual
-   configuration files should be able to contain international
-   characters.  Human-readable strings should utilize UTF-8, and
-   protocol elements should be in case-insensitive ASCII.
+   Consensus of the 2002 IAB Network Management Workshop [RFC3535] was
+   that textual configuration files should be able to contain
+   international characters.  Human-readable strings should utilize UTF-
+   8, and protocol elements should be in case-insensitive ASCII.
 
    A mechanism to dump-and-restore configurations is a primitive
    operation needed by operators.  Standards for pulling and pushing
