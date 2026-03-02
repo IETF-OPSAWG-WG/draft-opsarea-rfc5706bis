@@ -12,5 +12,5 @@ else
 endif
 endif
 
-export UPLOAD_EMAIL ?= benoit.claise@huawei.com
+export UPLOAD_EMAIL ?= benoit@everything-ops.net
 
