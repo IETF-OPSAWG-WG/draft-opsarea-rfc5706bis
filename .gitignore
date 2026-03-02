@@ -1,4 +1,3 @@
-.DS_Store
 .tags
 *.html
 *.pdf
@@ -19,7 +18,6 @@
 /versioned/
 archive.json
 draft-ietf-opsawg-rfc5706bis.xml
-draft-opsarea-rfc5706bis.xml
 Gemfile.lock
 package-lock.json
 report.xml
