@@ -851,11 +851,12 @@ DM         DM        DM     --> concrete/detailed model
    way makes it an effective choice for defining management information
    models.
 
-   While an Information Model is typically described in English text (or sometimes UML) to
-   define the conceptual management requirements, providing a formal Data
-   Model (such as a YANG module) ensures these concepts are precisely mapped
-   to a concrete implementation. This dual approach helps maintain consistency
-   between high-level design and practical deployment.
+   While an Information Model is typically described in English text
+   (or sometimes UML) to define the conceptual management requirements,
+   authors may choose to express it using YANG Data Structure Extensions {{?RFC8791}}
+   as described in {{sec-im-design}}.  Using YANG for the Information Model can make
+   it easier to link abstract concepts to concrete data types in the corresponding Data Model,
+   helping maintain consistency between high-level design and practical deployment.
 
    A management Information Model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
@@ -906,7 +907,7 @@ DM         DM        DM     --> concrete/detailed model
    5.  Avoid causing critical sections to be heavily instrumented. A
        guideline is one counter per critical section per layer.
 
-   6.  When defining an Information Model using  YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}) ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
+   6.  When expressing an Information Model using YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
   7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
@@ -945,11 +946,10 @@ DM         DM        DM     --> concrete/detailed model
 
   A common challenge in YANG Data Model development lies in defining the
   relationships between abstract service or network constructs and the
-  underlying device models. Therefore, when designing YANG modules, it
-  is important to go beyond simply modeling configuration and
-  operational data (i.e., leaf nodes), and also consider how the
-  status and relationships of abstract or distributed constructs can
-  be reflected based on parameters available in the network.
+  underlying device models. Therefore, when designing Network and Service
+  YANG modules, consider how the status and relationships of abstract or
+  distributed constructs can be reflected based on parameters available
+  in the network.
 
   For example, the status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
