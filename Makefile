@@ -1,5 +1,5 @@
 LIBDIR := lib
-include $(LIBDIR)/main.mk
+-include $(LIBDIR)/main.mk
 
 $(LIBDIR)/main.mk:
 ifneq (,$(shell grep "path *= *$(LIBDIR)" .gitmodules 2>/dev/null))
@@ -13,6 +13,3 @@ else
 	    https://github.com/martinthomson/i-d-template $(LIBDIR)
 endif
 endif
-
-export UPLOAD_EMAIL ?= benoit@everything-ops.net
-
