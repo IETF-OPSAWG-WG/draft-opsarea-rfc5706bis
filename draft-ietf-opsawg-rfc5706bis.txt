@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 30 August 2026                               Old Dog Consulting
+Expires: 3 September 2026                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        26 February 2026
+                                                            2 March 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 August 2026.
+   This Internet-Draft will expire on 3 September 2026.
 
 Copyright Notice
 
@@ -980,10 +980,11 @@ Table of Contents
 
    While an Information Model is typically described in English text (or
    sometimes UML) to define the conceptual management requirements,
-   providing a formal Data Model (such as a YANG module) ensures these
-   concepts are precisely mapped to a concrete implementation.  This
-   dual approach helps maintain consistency between high-level design
-   and practical deployment.
+   authors may choose to express it using YANG Data Structure Extensions
+   [RFC8791] as described in Section 5.3.1.  Using YANG for the
+   Information Model can make it easier to link abstract concepts to
+   concrete data types in the corresponding Data Model, helping maintain
+   consistency between high-level design and practical deployment.
 
    A management Information Model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
@@ -1039,9 +1040,9 @@ Table of Contents
    5.  Avoid causing critical sections to be heavily instrumented.  A
        guideline is one counter per critical section per layer.
 
-   6.  When defining an Information Model using YANG Data Structure
+   6.  When expressing an Information Model using YANG Data Structure
        Extensions [RFC8791] (thereby keeping it abstract and
-       implementation-agnostic per [RFC3444]) ensure that the
+       implementation-agnostic per [RFC3444]), ensure that the
        Information Model remains simple, modular, and clear by following
        the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].
 
@@ -1086,11 +1087,10 @@ Table of Contents
 
    A common challenge in YANG Data Model development lies in defining
    the relationships between abstract service or network constructs and
-   the underlying device models.  Therefore, when designing YANG
-   modules, it is important to go beyond simply modeling configuration
-   and operational data (i.e., leaf nodes), and also consider how the
-   status and relationships of abstract or distributed constructs can be
-   reflected based on parameters available in the network.
+   the underlying device models.  Therefore, when designing Network and
+   Service YANG modules, consider how the status and relationships of
+   abstract or distributed constructs can be reflected based on
+   parameters available in the network.
 
    For example, the status of a service may depend on the operational
    state of multiple network elements to which the service is attached.
