@@ -227,7 +227,22 @@ contributor:
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
 
+##  Historical Perspective {#sec-perspective}
 
+Operational considerations have always been important to the way networks are run and so need to form an integral part of the way
+protocols are implemented. In the mid-2000s two separate efforts were started that resulted in {{?RFC5706}} and {{?RFC6123}} that encouraged the inclusion of operational considerations in protocol specifications.
+
+Some specific examples give background motivation for those documents and further suggest the need for this document. This section sumarises those examples, but does not give a full history and is not intended as a criticism of those who did the original work.
+
+### Multiprotocol Label Switching (MPLS) {#sec-mpls}
+
+Multiprotocol Label Switching (MPLS) was specified through a series of RFCs describing the forwarding plane and several control plane protocols. Very little consideraton was given to operational considerations during the development of MPLS although Management Information Base (MIB) modules were developed later for the forwarding components and the control plane protocols. Construction of those MIB modules was a challenge because they were retrofitted, but they were successfully published.
+
+OAM was not integrated into the design of MPLS, and had to be added later: OAM mechanisms are very important to the diagnosis of MPLS networks. Establishing OAM mechanisms for use in a standardised and deployed protocol was not simple, but took careful work over a number of years.
+
+### QUIC {#sec-quic}
+
+### Segment Routing for IPv6 {#sec-srv6}
 
 #  Terminology {#sec-terms}
 
