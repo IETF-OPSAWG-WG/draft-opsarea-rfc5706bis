@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-01T01:12:43.740477+00:00",
+  "timestamp": "2026-03-03T01:07:19.031932+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3334,7 +3334,7 @@
       "id": "I_kwDOOWPBqs7tKB7_",
       "title": "More IM clearity in Section 5.3",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/220",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -3345,8 +3345,8 @@
       ],
       "body": "From the YANG Doctors review:\n\n>It later says in 5.3.1:\n\n  When defining an Information Model using YANG Data Structure\n  Extensions [...]\n\nIt is not clear to me what you mean here.  In section 5.3 it seems you\nrecommend including a Data Model YANG module (not an IM, since the IM\nis in english text).  But then in 5.3.1 you mention a YANG module\nfor the IM as well, but there is no other discussion about using YANG\nfor the IM.\n\nI think we should adjust Section 5.3 to say that an IM is typically described in English text/UML, but if it is written in YANG it may make linking abstract concepts to concrete data types in the Data Model easier.  This would then have a strong tie-in to Section 5.3.1.",
       "createdAt": "2026-02-23T15:40:35Z",
-      "updatedAt": "2026-02-23T15:40:49Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-02T16:46:50Z",
+      "closedAt": "2026-03-02T16:46:50Z",
       "comments": []
     },
     {
@@ -15893,24 +15893,26 @@
       "id": "PR_kwDOOWPBqs7FsCxs",
       "title": "Simplify IM text to address YANG Doc review.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/221",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-02-23T16:06:54Z",
-      "updatedAt": "2026-02-26T13:58:08Z",
+      "updatedAt": "2026-03-02T16:46:50Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d2c9fdbe13c6c3a9104030ecd2011865650049bb",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "220-more-im-clearity-in-section-53",
       "headRefOid": "7758515dc2c59a7d8ca52eaf8aa3b52c648a3171",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-03-02T16:46:49Z",
+      "mergedAt": "2026-03-02T16:46:49Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "61c7513304cb7d2f55653bc917b8828cce296084"
+      },
       "comments": [],
       "reviews": [
         {
