@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-03T01:07:19.031932+00:00",
+  "timestamp": "2026-03-08T01:06:10.795609+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3426,6 +3426,37 @@
       "updatedAt": "2026-02-26T13:29:00Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 228,
+      "id": "I_kwDOOWPBqs7wCwAz",
+      "title": "Additional information for Security Operations",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/228",
+      "state": "OPEN",
+      "author": "michael-p-1",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Hi, \n\nAs per previous discussions, I've now published a draft to provide more information on security operations. Could you add a reference to point to https://datatracker.ietf.org/doc/draft-parsons-opsawg-security-operations in the Impact on Security Operations section, so readers can find more information? ",
+      "createdAt": "2026-03-05T10:13:15Z",
+      "updatedAt": "2026-03-05T19:28:30Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Hey, Michael.  We'd like to see how this document progresses before adding a reference to it.  Ideally, this doc will get to an adopted state so we know there is broad interest on working on it.",
+          "createdAt": "2026-03-05T15:21:17Z",
+          "updatedAt": "2026-03-05T15:21:17Z"
+        },
+        {
+          "author": "michael-p-1",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Hi, \nI'm happy with that path forward :)",
+          "createdAt": "2026-03-05T19:28:30Z",
+          "updatedAt": "2026-03-05T19:28:30Z"
+        }
+      ]
     }
   ],
   "pulls": [
