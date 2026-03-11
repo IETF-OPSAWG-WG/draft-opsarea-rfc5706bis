@@ -1688,11 +1688,12 @@ Table of Contents
    authentication, message-integrity protection, and authorization,
    should be used.
 
-   Authentication mechanisms recommended for new protocols or protocol
-   extensions should provide adequate security.  Protocol Designers
-   should consult current best practice guidance (e.g., [BCP72]) rather
-   than relying solely on password-based authentication, which is
-   generally insufficient on its own.
+   The security implications of password-based authentication should be
+   taken into account when designing a New Protocol or Protocol
+   Extension.  In particular, the authentication mechanisms recommended
+   for new protocols or protocol extensions should provide adequate
+   security; for instance, authentication based purely on passwords is
+   unlikely to provide an adequate level of security.
 
    While a standard description of a protocol's manageable parameters
    facilitates legitimate operation, it may also inadvertently simplify

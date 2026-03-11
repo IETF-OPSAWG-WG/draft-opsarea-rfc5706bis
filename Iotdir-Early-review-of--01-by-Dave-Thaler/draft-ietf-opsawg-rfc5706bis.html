@@ -2929,10 +2929,11 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
    attacks. Only management protocols with adequate security mechanisms,
    such as state-of-the-art encryption, mutual authentication, message-integrity protection, and
    authorization, should be used.<a href="#section-9-2" class="pilcrow">¶</a></p>
-<p id="section-9-3">Authentication mechanisms recommended for new protocols or protocol extensions
-   should provide adequate security. Protocol Designers should consult current
-   best practice guidance (e.g., <span>[<a href="#BCP72" class="cite xref">BCP72</a>]</span>) rather than relying solely on
-   password-based authentication, which is generally insufficient on its own.<a href="#section-9-3" class="pilcrow">¶</a></p>
+<p id="section-9-3">The security implications of password-based authentication should be taken into
+   account when designing a New Protocol or Protocol Extension. In particular, the
+   authentication mechanisms recommended for new protocols or protocol extensions
+   should provide adequate security; for instance, authentication based purely on
+   passwords is unlikely to provide an adequate level of security.<a href="#section-9-3" class="pilcrow">¶</a></p>
 <p id="section-9-4">While a standard description of a protocol's manageable parameters facilitates
    legitimate operation, it may also inadvertently simplify an attacker's efforts
    to understand and manipulate the protocol.<a href="#section-9-4" class="pilcrow">¶</a></p>
