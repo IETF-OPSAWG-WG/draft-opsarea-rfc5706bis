@@ -93,7 +93,7 @@ contributor:
    Retrofitting operations and management considerations is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
-   addressed when writing documents in the IETF Stream that document a technical specification for New Protocols or Protocol Extensions or describe their use.
+   addressed when writing documents in the IETF Stream that document a specification for New Protocols or Protocol Extensions or describe their use.
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
