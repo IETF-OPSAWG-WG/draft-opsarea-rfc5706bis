@@ -1106,7 +1106,7 @@ DM         DM        DM     --> concrete/detailed model
    the protocol is deployed. Protocol Designers should consider how
    configuration is managed in the environments relevant to their protocol,
    acknowledging centralized configuration management paradigms (e.g.,
-   intent-based or model-driven systems) beyond traditional per-device
+   intent-based or model-driven systems) beyond conventional per-device
    management.
 
    A Protocol Designer should document the basic configuration
