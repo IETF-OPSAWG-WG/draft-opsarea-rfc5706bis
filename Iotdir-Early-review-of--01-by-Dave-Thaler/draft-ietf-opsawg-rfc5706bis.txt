@@ -1250,7 +1250,7 @@ Table of Contents
    should consider how configuration is managed in the environments
    relevant to their protocol, acknowledging centralized configuration
    management paradigms (e.g., intent-based or model-driven systems)
-   beyond traditional per-device management.
+   beyond conventional per-device management.
 
    A Protocol Designer should document the basic configuration
    parameters that need to be instrumented for a New Protocol or
