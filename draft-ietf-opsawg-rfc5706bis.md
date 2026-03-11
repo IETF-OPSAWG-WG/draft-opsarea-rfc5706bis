@@ -1512,7 +1512,6 @@ DM         DM        DM     --> concrete/detailed model
 
    Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
 
-   Note that this document is a process and Best Current Practice document; an "Operational Considerations" section is not required for documents of this type per {{sec-oper-manag-considerations}}. This section is included solely to illustrate the exemption mechanism described in {{sec-null-sec}} and does not constitute a normative precedent for process documents.
 
 #  Security Considerations {#sec-security}
 
