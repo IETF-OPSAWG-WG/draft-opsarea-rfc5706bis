@@ -22,6 +22,9 @@ pi: [toc, sortrefs, symrefs]
 
 normative:
    BCP22:
+   RFC8791:
+   RFC8340:
+   I-D.ietf-nmop-terminology:
 
 informative:
   CHECKLIST:
@@ -200,7 +203,7 @@ contributor:
    A core principle of this document is to encourage early-on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
-   protocol is mandatory. Specifically, this document does not require to develop solutions to accommodate
+   protocol is mandatory. Specifically, this document does not require developing solutions to accommodate
    identified operational considerations within the document that specifies
    a New Protocol or Protocol Extension itself.
 
@@ -235,7 +238,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
-   *  Cause: See {{?I-D.ietf-nmop-terminology}}.
+   *  Cause: See {{I-D.ietf-nmop-terminology}}.
 
    *  CLI: Command Line Interface. A human-oriented interface, typically
       a Proprietary Interface, to hardware or software devices
@@ -256,7 +259,7 @@ This document does not describe interoperability requirements. As such, it does 
       discussion of Data Models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgmt-info}}.
 
-   *  Fault: See {{?I-D.ietf-nmop-terminology}}.
+   *  Fault: See {{I-D.ietf-nmop-terminology}}.
 
    *  Fault Management: The process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and deducing underlying
@@ -296,7 +299,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    *  Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}
 
-   *  Problem: See {{?I-D.ietf-nmop-terminology}}.
+   *  Problem: See {{I-D.ietf-nmop-terminology}}.
 
    *  Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
@@ -352,13 +355,13 @@ This document does not describe interoperability requirements. As such, it does 
   documented as part of the model itself. Such considerations should not be
   duplicated in the narrative part of a specification that includes such artifacts.
 
-> Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
-> with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},
-> {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}. For example,
-> given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
-> those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
-> Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
-> the above guidance by documenting operational aspects as part of the YANG module itself.
+Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
+with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},
+{{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}. For example,
+given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
+those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
+Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
+the above guidance by documenting operational aspects as part of the YANG module itself.
 
   For architecture documents, the "Operational Considerations" section should focus on describing the intended deployment environment,
   assumptions about network operations, potential impacts on existing operational practices,
@@ -442,7 +445,7 @@ This document does not describe interoperability requirements. As such, it does 
    to apply the protocol in the environments where it will be deployed.
    {{?RFC5218}} provides a more detailed discussion on what makes for a successful protocol.
 
-   > BGP flap damping {{?RFC2439}} is an example.  It was designed to block
+   For example, BGP flap damping {{?RFC2439}} was designed to block
    high-frequency route flaps.  Some BGP implementations were memory-constrained
    so often elected not to support this function, others found a
    conflict where path exploration caused false flap damping resulting
@@ -488,7 +491,7 @@ This document does not describe interoperability requirements. As such, it does 
    variable to reduce the
    risk of problems caused by technology advancement.
 
-   > For example, where protocols involve cryptographic keys, Protocol Designers should
+   For example, where protocols involve cryptographic keys, Protocol Designers should
    consider not only key generation and validation mechanisms but also the
    format in which private keys are stored, transmitted, and restored.
    Designers should specify any expected consistency checks
@@ -539,7 +542,7 @@ state during the transition.
    certain ways. If restrictions or dependencies exist, they should be
    stated.
 
-   > For example, the design of the Resource ReSerVation Protocol (RSVP)
+   For example, the design of the Resource ReSerVation Protocol (RSVP)
    {{?RFC2205}} required each router to look at the RSVP PATH message and,
    if the router understood RSVP, add its own address to the message to
    enable automatic tunneling through non-RSVP routers. But in reality,
@@ -598,7 +601,7 @@ state during the transition.
    applications such as the DNS {{?RFC1034}}, the
    registries, or the size of routing tables.
 
-   > For example, SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
+   For example, SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
@@ -615,7 +618,7 @@ and data collection could result in the management plane becoming
 overwhelmed, then this must be called out, and suitable mechanisms to
 rate limit the OAM traffic must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
 
-> Consider three examples: (1) In
+For example: (1) In
 Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
 possible to configure very rapid BFD transmissions (of the order of
 3ms) on a very large number of parallel Label Switched Paths (LSPs)
@@ -853,7 +856,7 @@ DM         DM        DM     --> concrete/detailed model
 
    While an Information Model is typically described in English text
    (or sometimes UML) to define the conceptual management requirements,
-   authors may choose to express it using YANG Data Structure Extensions {{?RFC8791}}
+   authors may choose to express it using YANG Data Structure Extensions {{RFC8791}}
    as described in {{sec-im-design}}.  Using YANG for the Information Model can make
    it easier to link abstract concepts to concrete data types in the corresponding Data Model,
    helping maintain consistency between high-level design and practical deployment.
@@ -907,8 +910,8 @@ DM         DM        DM     --> concrete/detailed model
    5.  Avoid causing critical sections to be heavily instrumented. A
        guideline is one counter per critical section per layer.
 
-   6.  When expressing an Information Model using YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
-  7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
+   6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
+  7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
@@ -976,7 +979,7 @@ DM         DM        DM     --> concrete/detailed model
    base Protocol, and to outline the potential impact of misconfigurations
    of the Protocol Extensions.
 
-   Protocol Designers should consider how fault information will be
+   Protocol Designers should consider how Fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?
 
@@ -994,11 +997,11 @@ DM         DM        DM     --> concrete/detailed model
    condition.
    Should the event reporting provide guaranteed accurate delivery of
    the event information within a given (high) margin of confidence?
-   Can we poll the latest events in the box?
+   Can the latest events in the box be polled?
 
 ###  Liveness Detection and Monitoring {#sec-monitor}
 
-   Protocol Designers should always build in basic testing features
+   Protocol Designers should build in basic testing features
    (e.g., ICMP echo, UDP
    or TCP echo services, and null Remote Procedure Calls
    (RPCs)) that can be used to test for liveness, with the option to
@@ -1037,7 +1040,7 @@ DM         DM        DM     --> concrete/detailed model
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?
 
-   > Remote Monitoring (RMON) events/alarms is an example of threshold-based mechanism.
+   For example, Remote Monitoring (RMON) events/alarms provide a threshold-based mechanism.
 
 ###  Probable Root Cause Analysis {#sec-cause-analysis}
 
@@ -1047,7 +1050,7 @@ DM         DM        DM     --> concrete/detailed model
    source event or combination of circumstances that is the foundation of all
    related Faults.
 
-   > For example, if end-to-end data delivery is failing (e.g., reported by a
+   For example, if end-to-end data delivery is failing (e.g., reported by a
    notification), Probable Root Cause analysis can help find the failed link
    or node, or mis-configuration, within the end-to-end path.
 
@@ -1200,7 +1203,7 @@ DM         DM        DM     --> concrete/detailed model
    functionality/service activation on the device), network monitoring,
    and service monitoring (the impact of service activation on the
    network). Hence, if the implementation of the
-   New Protocol or Protocol Extension has any hardware/software performance implications
+   New Protocol or Protocol Extension has any significant hardware/software performance implications
    (e.g., increased CPU utilization, memory consumption, or forwarding
    performance degradation), the Protocol Designers should clearly
    describe these impacts in the specification, along with any
@@ -1243,7 +1246,7 @@ DM         DM        DM     --> concrete/detailed model
    is not specific to a management protocol, then it should be left
    to Data Model designers of that protocol to determine how to handle it.
 
-   > For example, VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
+   For example, VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
    Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
@@ -1314,7 +1317,7 @@ DM         DM        DM     --> concrete/detailed model
    Consider security threats that may be introduced by management
    operations.
 
-   > For example, Control and Provisioning of Wireless Access
+   For example, Control and Provisioning of Wireless Access
    Points (CAPWAP) {{?RFC5415}} breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
    By using a control protocol or management protocol, internal
@@ -1348,7 +1351,7 @@ DM         DM        DM     --> concrete/detailed model
    Protocol or Protocol Extension. The syslog should also record events,
    such as failed logins, but it must be secured.
 
-   > For example, you can log all the commands entered by the
+   For example, you can log all the commands entered by the
    operator using syslog (giving you some degree of audit trail), or you
    can see who has logged on/off using the Secure Shell (SSH) Protocol {{?RFC4251}}
    and from where; failed SSH logins can be logged using syslog, etc.
@@ -1571,7 +1574,7 @@ The decision to incorporate all or part of these items into their work remains w
 ## Configuration Management
 
 * What configuration parameters are defined? ({{sec-config-mgmt}})
-   * What parameters need to be configurable, including their defaults and valid ranges? ({{sec-config-mgmt}})
+   * What parameters need to be configurable, including their valid ranges? ({{sec-config-mgmt}})
    * What information persists across reboots? ({{sec-config-mgmt}})
 
 ## Performance Management
@@ -1614,9 +1617,6 @@ The decision to incorporate all or part of these items into their work remains w
    * Add an "Operational and Management Tooling Considerations" section
 
 
-##  TO DO LIST {#sec-todo}
-
-   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 #  Acknowledgements {#sec-ack}
 {:numbered="false"}
@@ -1641,6 +1641,8 @@ The author of RFC 5706:
 
 Acknowledgments from RFC 5706:
 
+: The following acknowledgments apply to RFC 5706, the predecessor of this document. Some individuals listed below as reviewers of RFC 5706 are now authors or contributors of this document.
+
 : This document started from an earlier document edited by Adrian
 Farrel, which itself was based on work exploring the need for
 Manageability Considerations sections in all Internet-Drafts produced
@@ -1651,6 +1653,6 @@ feedback provided by Pekka Savola and Bert Wijnen.
 : Some of the discussion about designing for manageability came from
 private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.
 
-: Thanks to reviewers who helped fashion this document, including
+: Thanks to reviewers who helped fashion RFC 5706, including
 Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
 Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
