@@ -327,7 +327,7 @@ Table of Contents
    *  Network Device: A device that implements one or more network
       protocols and participates in network operations.  This term
       encompasses a broad range of implementations, including
-      traditional network infrastructure equipment (e.g., routers,
+      conventional network infrastructure equipment (e.g., routers,
       switches), end hosts, IoT devices, virtual network functions, and
       containerized workloads.  In this document, the term is used
       generically to mean any managed entity implementing the protocol
