@@ -306,7 +306,7 @@ This document does not describe interoperability requirements. As such, it does 
      explained in {{?RFC6291}}.
 
    *  Operator: A person or organization responsible for deploying,
-      configuring, and managing a protocol implementation or the systems
+     and managing a protocol implementation or the systems
       and devices running it. This includes, but is not limited to,
       network operators, cloud service administrators, IoT device fleet
       managers, home network administrators, and DNS/NTP server
