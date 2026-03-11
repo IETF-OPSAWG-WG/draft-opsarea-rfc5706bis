@@ -279,7 +279,7 @@ This document does not describe interoperability requirements. As such, it does 
    *  Network Device: A device that implements one or more network
       protocols and participates in network operations. This term
       encompasses a broad range of implementations, including conventional
-      network infrastructure equipment (e.g., routers, switches), end
+      network infrastructure equipment (e.g., routers and switches), end
       hosts, IoT devices, virtual network functions, and containerized
       workloads. In this document, the term is used generically to mean
       any managed entity implementing the protocol under consideration.
