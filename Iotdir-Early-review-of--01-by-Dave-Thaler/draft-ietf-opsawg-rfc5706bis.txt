@@ -1242,7 +1242,7 @@ Table of Contents
 5.5.  Configuration Management
 
    Configuration management applies to a broad range of deployment
-   environments, including traditional network devices, IoT device
+   environments, including conventional network devices, IoT device
    fleets, containerized workloads, cloud-hosted services, and home
    network equipment.  While many examples in this section are drawn
    from network device management, the principles apply equally to any
