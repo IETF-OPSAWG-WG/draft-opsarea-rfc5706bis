@@ -49,7 +49,6 @@ informative:
     title: NICCS Glossary
     date: 2025-08
 
-  RFC5198:
   BCP186:
 
 author:
