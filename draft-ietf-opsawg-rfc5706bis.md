@@ -1105,7 +1105,7 @@ DM         DM        DM     --> concrete/detailed model
    device management, the principles apply equally to any environment where
    the protocol is deployed. Protocol Designers should consider how
    configuration is managed in the environments relevant to their protocol,
-   acknowledging centralized configuration management paradigms (e.g.,
+   acknowledging centralized configuration management approaches (e.g.,
    intent-based or model-driven systems) beyond conventional per-device
    management.
 
