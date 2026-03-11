@@ -1099,7 +1099,7 @@ DM         DM        DM     --> concrete/detailed model
 ##  Configuration Management {#sec-config-mgmt}
 
    Configuration management applies to a broad range of deployment
-   environments, including traditional network devices, IoT device fleets,
+   environments, including conventional network devices, IoT device fleets,
    containerized workloads, cloud-hosted services, and home network
    equipment. While many examples in this section are drawn from network
    device management, the principles apply equally to any environment where
