@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 12 September 2026                            Old Dog Consulting
+Expires: 13 September 2026                            Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           11 March 2026
+                                                           12 March 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 September 2026.
+   This Internet-Draft will expire on 13 September 2026.
 
 Copyright Notice
 
@@ -354,10 +354,10 @@ Table of Contents
     sometimes known as "OAM and Management" or "O&M" as
     explained in {{RFC6291}}.
 
-   *  Operator: A person or organization responsible for deploying, and
-      managing a protocol implementation or the systems and devices
-      running it.  This includes, but is not limited to, network
-      operators, cloud service administrators, IoT device fleet
+   *  Operator: A person or organization responsible for deploying and
+      managing systems, services, or networks that run or rely on a
+      protocol implementation.  This includes, but is not limited to,
+      network operators, cloud service administrators, IoT device fleet
       managers, home network administrators, and DNS/NTP server
       administrators.  The term "operator" is used throughout this
       document in this broad sense unless the context explicitly
