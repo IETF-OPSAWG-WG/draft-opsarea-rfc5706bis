@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-10T01:00:52.994598+00:00",
+  "timestamp": "2026-03-12T00:58:43.226338+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3477,6 +3477,34 @@
       "updatedAt": "2026-03-08T07:20:53Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 231,
+      "id": "I_kwDOOWPBqs7x6eNs",
+      "title": "IotDir Review",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/231",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [
+        "DIR Review"
+      ],
+      "body": "Early Review of draft-ietf-opsawg-rfc5706bis-01:\nhttps://datatracker.ietf.org/doc/review-ietf-opsawg-rfc5706bis-01-iotdir-early-thaler-2026-01-23/\n\nPlease see:\nhttps://mailarchive.ietf.org/arch/msg/iot-directorate/iPE5QYIEeXiBYxLVr_Q7IUC7DC8/\n\nDocument: draft-ietf-opsawg-rfc5706bis\nTitle: Guidelines for Considering Operations and Management in IETF Specifications\nReviewer: Dave Thaler\nReview result: On the Right Track\n",
+      "createdAt": "2026-03-11T14:38:20Z",
+      "updatedAt": "2026-03-11T14:42:40Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "* There are 12 numbered substantive issues in the email body of the review\n* There are a large number of editorial suggestions and fix recommendations in the PDF attached to the review",
+          "createdAt": "2026-03-11T14:40:07Z",
+          "updatedAt": "2026-03-11T14:40:07Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -16266,6 +16294,117 @@
           "createdAt": "2026-03-08T07:20:16Z",
           "updatedAt": "2026-03-08T07:20:16Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 232,
+      "id": "PR_kwDOOWPBqs7JuylW",
+      "title": "Iotdir early review of  01 by dave thaler solves #231",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/232",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [
+        "DIR Review"
+      ],
+      "body": "Iotdir early review of  01 by dave thaler solves #231\r\n\r\nThis includes quite a few adds, please review! \ud83d\ude4f\ud83c\udffc\r\n\r\nCarlos.",
+      "createdAt": "2026-03-11T14:41:23Z",
+      "updatedAt": "2026-03-11T18:08:36Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "5214c15db43bff6f97d151d721424f798a7bb464",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "Iotdir-Early-review-of--01-by-Dave-Thaler",
+      "headRefOid": "d53867ca96af7336d49714bd361ca823fbca147c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7qQgQJ",
+          "commit": {
+            "abbreviatedOid": "6679d4d"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-03-11T14:51:52Z",
+          "updatedAt": "2026-03-11T15:08:01Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "I remember that \"technical specification\" was discussed and there was a comment that this should not be confused with rfc2026#section-3.1 meaning  \n\n\n>    Specifications subject to the Internet Standards Process fall into\n>    one of two categories:  Technical Specification (TS) and\n>    Applicability Statement (AS).\n\nMaybe\n\n```suggestion\n   addressed when writing documents in the IETF Stream that document a specification for New Protocols or Protocol Extensions or describe their use.\n```",
+              "createdAt": "2026-03-11T14:51:53Z",
+              "updatedAt": "2026-03-11T15:08:01Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "This one is OK\n\nBTW, no need to inlcude it here as I see that you made this change in the main text: {{I-D.ietf-nmop-terminology}}.",
+              "createdAt": "2026-03-11T14:55:26Z",
+              "updatedAt": "2026-03-11T15:08:01Z"
+            },
+            {
+              "originalPosition": 60,
+              "body": "```suggestion\n      encompasses a broad range of implementations, including conventional\n```",
+              "createdAt": "2026-03-11T14:57:11Z",
+              "updatedAt": "2026-03-11T15:08:01Z"
+            },
+            {
+              "originalPosition": 60,
+              "body": "to fix R282 below",
+              "createdAt": "2026-03-11T14:57:23Z",
+              "updatedAt": "2026-03-11T15:08:02Z"
+            },
+            {
+              "originalPosition": 61,
+              "body": "```suggestion\n      network infrastructure equipment (e.g., routers and switches), end\n```",
+              "createdAt": "2026-03-11T14:57:46Z",
+              "updatedAt": "2026-03-11T15:08:01Z"
+            },
+            {
+              "originalPosition": 74,
+              "body": "```suggestion\n     and managing a protocol implementation or the systems\n```\n\ncovered by \"managing\"",
+              "createdAt": "2026-03-11T14:59:00Z",
+              "updatedAt": "2026-03-11T15:08:02Z"
+            },
+            {
+              "originalPosition": 94,
+              "body": "I would revert this change as you do have a full para about \"architecture documents\" below",
+              "createdAt": "2026-03-11T15:00:56Z",
+              "updatedAt": "2026-03-11T15:08:02Z"
+            },
+            {
+              "originalPosition": 337,
+              "body": "```suggestion\n   environments, including conventional network devices, IoT device fleets,\n```",
+              "createdAt": "2026-03-11T15:03:57Z",
+              "updatedAt": "2026-03-11T15:08:02Z"
+            },
+            {
+              "originalPosition": 344,
+              "body": "```suggestion\n   intent-based or model-driven systems) beyond conventional per-device\n```",
+              "createdAt": "2026-03-11T15:04:10Z",
+              "updatedAt": "2026-03-11T15:08:02Z"
+            },
+            {
+              "originalPosition": 343,
+              "body": "```suggestion\n   acknowledging centralized configuration management approaches (e.g.,\n```",
+              "createdAt": "2026-03-11T15:04:25Z",
+              "updatedAt": "2026-03-11T15:08:02Z"
+            },
+            {
+              "originalPosition": 408,
+              "body": "```suggestion\n```\n\nI would not add this text.",
+              "createdAt": "2026-03-11T15:06:38Z",
+              "updatedAt": "2026-03-11T15:08:02Z"
+            }
+          ]
         }
       ]
     }
