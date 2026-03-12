@@ -305,9 +305,9 @@ This document does not describe interoperability requirements. As such, it does 
      sometimes known as "OAM and Management" or "O&M" as
      explained in {{?RFC6291}}.
 
-   *  Operator: A person or organization responsible for deploying,
-     and managing a protocol implementation or the systems
-      and devices running it. This includes, but is not limited to,
+   *  Operator: A person or organization responsible for deploying and managing
+      systems, services, or networks that run or rely on a protocol implementation.
+      This includes, but is not limited to,
       network operators, cloud service administrators, IoT device fleet
       managers, home network administrators, and DNS/NTP server
       administrators. The term "operator" is used throughout this document
