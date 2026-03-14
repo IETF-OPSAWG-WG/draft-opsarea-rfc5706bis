@@ -376,8 +376,8 @@ For example:
 
 > Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
 > with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},
-> {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}. For example,
-> given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
+> {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
+> Given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
 > those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
 > Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
 > the above guidance by documenting operational aspects as part of the YANG module itself.
@@ -646,18 +646,20 @@ rate limit the OAM traffic must be considered. Potential options include: docume
 
 For example:
 
-> (1) In
-Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
-possible to configure very rapid BFD transmissions (of the order of
-3ms) on a very large number of parallel Label Switched Paths (LSPs)
-with the result that the management systems and end nodes may become
-overwhelmed -- this can be protected by applying limits to
-the number of LSPs that may be tested at once. (2) Notifications or logs
-from systems (through YANG or other means) should be rate-limited so
-that they do not flood the receiving management station. (3) The
-application of sophisticated encryption or filtering rules needs to
-be considered in the light of the additional processing they may
-impose on the hardware forwarding path for traffic.
+> (1) In Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
+> possible to configure very rapid BFD transmissions (of the order of
+> 3ms) on a very large number of parallel Label Switched Paths (LSPs)
+> with the result that the management systems and end nodes may become
+> overwhelmed -- this can be protected by applying limits to
+> the number of LSPs that may be tested at once.
+>
+> (2) Notifications or logs from systems (through YANG or other means)
+> should be rate-limited so that they do not flood the receiving
+> management station.
+>
+> (3) The application of sophisticated encryption or filtering rules
+> needs to be considered in the light of the additional processing
+> they may impose on the hardware forwarding path for traffic.
 
 New metrics may be required to assess traffic performance. Protocol Designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.
 
