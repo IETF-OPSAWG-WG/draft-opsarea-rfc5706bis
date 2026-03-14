@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 13 September 2026                            Old Dog Consulting
+Expires: 15 September 2026                            Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           12 March 2026
+                                                           14 March 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 September 2026.
+   This Internet-Draft will expire on 15 September 2026.
 
 Copyright Notice
 
@@ -424,15 +424,17 @@ Table of Contents
    Such considerations should not be duplicated in the narrative part of
    a specification that includes such artifacts.
 
+   For example:
+
       Readers may refer to the following non-exhaustive list for
       examples of specifications, covering various areas, with adequate
       documentation of operational considerations, including
       manageability: [I-D.ietf-core-dns-over-coap], [I-D.ietf-suit-mti],
-      [RFC9937] [RFC7574], [RFC9877], and [RFC9552].  For example, given
-      the various available transport alternatives,
-      [I-D.ietf-core-dns-over-coap] discusses co-existence with those
-      and clarifies some key deployment aspects such as redirection,
-      forwarding loop prevention, and error handling.  Also,
+      [RFC9937] [RFC7574], [RFC9877], and [RFC9552].  Given the various
+      available transport alternatives, [I-D.ietf-core-dns-over-coap]
+      discusses co-existence with those and clarifies some key
+      deployment aspects such as redirection, forwarding loop
+      prevention, and error handling.  Also,
       [I-D.ietf-ippm-ioam-integrity-yang] is an example of a document
       that follows the above guidance by documenting operational aspects
       as part of the YANG module itself.
@@ -524,13 +526,15 @@ Table of Contents
    in the environments where it will be deployed.  [RFC5218] provides a
    more detailed discussion on what makes for a successful protocol.
 
-   For example, BGP flap damping [RFC2439] was designed to block high-
-   frequency route flaps.  Some BGP implementations were memory-
-   constrained so often elected not to support this function, others
-   found a conflict where path exploration caused false flap damping
-   resulting in loss of reachability.  As a result, flap damping was
-   often not enabled network-wide, contrary to the intentions of the
-   original designers.
+   For example:
+
+      BGP flap damping [RFC2439] was designed to block high-frequency
+      route flaps.  Some BGP implementations were memory-constrained so
+      often elected not to support this function, others found a
+      conflict where path exploration caused false flap damping
+      resulting in loss of reachability.  As a result, flap damping was
+      often not enabled network-wide, contrary to the intentions of the
+      original designers.
 
 4.1.  Installation and Initial Setup
 
@@ -567,17 +571,18 @@ Table of Contents
    using a constant, set the default value as a function of the variable
    to reduce the risk of problems caused by technology advancement.
 
-   For example, where protocols involve cryptographic keys, Protocol
-   Designers should consider not only key generation and validation
-   mechanisms but also the format in which private keys are stored,
-   transmitted, and restored.  Designers should specify any expected
-   consistency checks (e.g., recomputing an expanded key from the seed)
-   that help verify correctness and integrity.  Additionally, guidance
-   should be given on data retention, restoration limits, and
-   cryptographic module interoperability when importing/exporting
-   private key material.  Refer to
-   [I-D.ietf-lamps-dilithium-certificates] for an example of how such
-   considerations are incorporated.
+   For example:
+
+      Where protocols involve cryptographic keys, Protocol Designers
+      should consider not only key generation and validation mechanisms
+      but also the format in which private keys are stored, transmitted,
+      and restored.  Designers should specify any expected consistency
+      checks (e.g., recomputing an expanded key from the seed) that help
+      verify correctness and integrity.  Additionally, guidance should
+      be given on data retention, restoration limits, and cryptographic
+      module interoperability when importing/exporting private key
+      material.  Refer to [I-D.ietf-lamps-dilithium-certificates] for an
+      example of how such considerations are incorporated.
 
 4.2.  Migration Path
 
@@ -634,21 +639,23 @@ Table of Contents
    certain ways.  If restrictions or dependencies exist, they should be
    stated.
 
-   For example, the design of the Resource ReSerVation Protocol (RSVP)
-   [RFC2205] required each router to look at the RSVP PATH message and,
-   if the router understood RSVP, add its own address to the message to
-   enable automatic tunneling through non-RSVP routers.  But in reality,
-   routers cannot look at an otherwise normal IP packet and potentially
-   take it off the fast path!  The initial designers overlooked that a
-   new "deep-packet inspection" requirement was being put on the
-   functional components of a router.  The "router alert" option
-   ([RFC2113], [RFC2711]) was finally developed to solve this problem,
-   for RSVP and other protocols that require the router to take some
-   packets off the fast-forwarding path.  Yet, Router Alert has its own
-   problems in impacting router performance and security.  Refer to
-   [RFC9805] for deprecation of the IPv6 Router Alert Option for New
-   Protocols and Section 4.8 of RFC 7126 [BCP186] for threats and advice
-   related to IPv4 Router Alert.
+   For example:
+
+      The design of the Resource ReSerVation Protocol (RSVP) [RFC2205]
+      required each router to look at the RSVP PATH message and, if the
+      router understood RSVP, add its own address to the message to
+      enable automatic tunneling through non-RSVP routers.  But in
+      reality, routers cannot look at an otherwise normal IP packet and
+      potentially take it off the fast path!  The initial designers
+      overlooked that a new "deep-packet inspection" requirement was
+      being put on the functional components of a router.  The "router
+      alert" option ([RFC2113], [RFC2711]) was finally developed to
+      solve this problem, for RSVP and other protocols that require the
+      router to take some packets off the fast-forwarding path.  Yet,
+      Router Alert has its own problems in impacting router performance
+      and security.  Refer to [RFC9805] for deprecation of the IPv6
+      Router Alert Option for New Protocols and Section 4.8 of RFC 7126
+      [BCP186] for threats and advice related to IPv4 Router Alert.
 
 4.4.  Impact on Network Operation
 
@@ -698,10 +705,12 @@ Table of Contents
    applications such as the DNS [RFC1034], the registries, or the size
    of routing tables.
 
-   For example, SMTP [RFC5321] servers use a reverse DNS lookup to
-   filter out incoming connection requests: when Berkeley installed a
-   new spam filter that used reverse DNS lookup, their mail server
-   stopped functioning because of overload of the DNS cache resolver.
+   For example:
+
+      SMTP [RFC5321] servers use a reverse DNS lookup to filter out
+      incoming connection requests: when Berkeley installed a new spam
+      filter that used reverse DNS lookup, their mail server stopped
+      functioning because of overload of the DNS cache resolver.
 
    The impact of New Protocols or Protocol Extensions, and the results
    of new OAM tools developed for them, must be considered with respect
@@ -717,18 +726,22 @@ Table of Contents
    an optional rate limiting feature in the specifications, or impose a
    rate limiting feature in the specifications.
 
-   For example: (1) In Bidirectional Forwarding Detection for MPLS
-   [RFC5884] it is possible to configure very rapid BFD transmissions
-   (of the order of 3ms) on a very large number of parallel Label
-   Switched Paths (LSPs) with the result that the management systems and
-   end nodes may become overwhelmed -- this can be protected by applying
-   limits to the number of LSPs that may be tested at once. (2)
-   Notifications or logs from systems (through YANG or other means)
-   should be rate-limited so that they do not flood the receiving
-   management station. (3) The application of sophisticated encryption
-   or filtering rules needs to be considered in the light of the
-   additional processing they may impose on the hardware forwarding path
-   for traffic.
+   For example:
+
+      (1) In Bidirectional Forwarding Detection for MPLS [RFC5884] it is
+      possible to configure very rapid BFD transmissions (of the order
+      of 3ms) on a very large number of parallel Label Switched Paths
+      (LSPs) with the result that the management systems and end nodes
+      may become overwhelmed -- this can be protected by applying limits
+      to the number of LSPs that may be tested at once.
+
+      (2) Notifications or logs from systems (through YANG or other
+      means) should be rate-limited so that they do not flood the
+      receiving management station.
+
+      (3) The application of sophisticated encryption or filtering rules
+      needs to be considered in the light of the additional processing
+      they may impose on the hardware forwarding path for traffic.
 
    New metrics may be required to assess traffic performance.  Protocol
    Designers may refer to [RFC6390] for guidelines for considering new
@@ -1209,8 +1222,10 @@ Table of Contents
    there some "standard" notifications that could be used?  Or can
    relevant counters be polled as needed?
 
-   For example, Remote Monitoring (RMON) events/alarms provide a
-   threshold-based mechanism.
+   For example:
+
+      Remote Monitoring (RMON) events/alarms provide a threshold-based
+      mechanism.
 
 5.4.3.  Probable Root Cause Analysis
 
@@ -1220,10 +1235,12 @@ Table of Contents
    meant to describe the original, source event or combination of
    circumstances that is the foundation of all related Faults.
 
-   For example, if end-to-end data delivery is failing (e.g., reported
-   by a notification), Probable Root Cause analysis can help find the
-   failed link or node, or mis-configuration, within the end-to-end
-   path.
+   For example:
+
+      If end-to-end data delivery is failing (e.g., reported by a
+      notification), Probable Root Cause analysis can help find the
+      failed link or node, or mis-configuration, within the end-to-end
+      path.
 
 5.4.4.  Fault Isolation
 
@@ -1444,10 +1461,12 @@ Table of Contents
    a management protocol, then it should be left to Data Model designers
    of that protocol to determine how to handle it.
 
-   For example, VLAN identifiers (VLAN IDs) are defined by the standard
-   to range from 1 to 4094.  Therefore, a YANG "vlan-id" definition
-   representing the 12-bit VLAN ID used in the VLAN Tag header uses a
-   range of "1..4094".
+   For example:
+
+      VLAN identifiers (VLAN IDs) are defined by the standard to range
+      from 1 to 4094.  Therefore, a YANG "vlan-id" definition
+      representing the 12-bit VLAN ID used in the VLAN Tag header uses a
+      range of "1..4094".
 
 5.7.2.  Monitoring the Device
 
@@ -1518,13 +1537,15 @@ Table of Contents
    Consider security threats that may be introduced by management
    operations.
 
-   For example, Control and Provisioning of Wireless Access Points
-   (CAPWAP) [RFC5415] breaks the structure of monolithic Access Points
-   (APs) into Access Controllers and Wireless Termination Points (WTPs).
-   By using a control protocol or management protocol, internal
-   information that was previously not accessible is now exposed over
-   the network and to management applications and may become a source of
-   potential security threats.
+   For example:
+
+      Control and Provisioning of Wireless Access Points (CAPWAP)
+      [RFC5415] breaks the structure of monolithic Access Points (APs)
+      into Access Controllers and Wireless Termination Points (WTPs).
+      By using a control protocol or management protocol, internal
+      information that was previously not accessible is now exposed over
+      the network and to management applications and may become a source
+      of potential security threats.
 
    The granularity of access control needed on management interfaces
    needs to match operational needs.  Typical requirements are a role-
@@ -1552,10 +1573,13 @@ Table of Contents
    The syslog should also record events, such as failed logins, but it
    must be secured.
 
-   For example, you can log all the commands entered by the operator
-   using syslog (giving you some degree of audit trail), or you can see
-   who has logged on/off using the Secure Shell (SSH) Protocol [RFC4251]
-   and from where; failed SSH logins can be logged using syslog, etc.
+   For example:
+
+      All commands entered by operators can be logged via syslog to
+      provide an audit trail.  Authentication events, including logins,
+      logouts, and failed login attempts, can be recorded using the
+      Secure Shell (SSH) Protocol [RFC4251], capturing the source of
+      each connection.
 
    An analysis of existing counters might help operators recognize the
    conditions identified in the Security Considerations for the new
