@@ -22,6 +22,9 @@ pi: [toc, sortrefs, symrefs]
 
 normative:
    BCP22:
+   RFC8791:
+   RFC8340:
+   I-D.ietf-nmop-terminology:
 
 informative:
   CHECKLIST:
@@ -90,7 +93,7 @@ contributor:
    Retrofitting operations and management considerations is suboptimal.
    The purpose of this document is to provide guidance to authors and
    reviewers on what operational and management aspects should be
-   addressed when writing documents in the IETF Stream that define New Protocols or Protocol Extensions.
+   addressed when writing documents in the IETF Stream that document a specification for New Protocols or Protocol Extensions or describe their use.
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
@@ -200,7 +203,7 @@ contributor:
    A core principle of this document is to encourage early-on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
-   protocol is mandatory. Specifically, this document does not require to develop solutions to accommodate
+   protocol is mandatory. Specifically, this document does not require developing solutions to accommodate
    identified operational considerations within the document that specifies
    a New Protocol or Protocol Extension itself.
 
@@ -235,7 +238,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
-   *  Cause: See {{?I-D.ietf-nmop-terminology}}.
+   *  Cause: See {{I-D.ietf-nmop-terminology}}.
 
    *  CLI: Command Line Interface. A human-oriented interface, typically
       a Proprietary Interface, to hardware or software devices
@@ -256,7 +259,7 @@ This document does not describe interoperability requirements. As such, it does 
       discussion of Data Models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgmt-info}}.
 
-   *  Fault: See {{?I-D.ietf-nmop-terminology}}.
+   *  Fault: See {{I-D.ietf-nmop-terminology}}.
 
    *  Fault Management: The process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and deducing underlying
@@ -272,6 +275,14 @@ This document does not describe interoperability requirements. As such, it does 
    *  New Protocol and Protocol Extension: These terms are used in this document
       to identify entirely new protocols, new versions of existing
       protocols, and extensions to protocols.
+
+   *  Network Device: A device that implements one or more network
+      protocols and participates in network operations. This term
+      encompasses a broad range of implementations, including conventional
+      network infrastructure equipment (e.g., routers and switches), end
+      hosts, IoT devices, virtual network functions, and containerized
+      workloads. In this document, the term is used generically to mean
+      any managed entity implementing the protocol under consideration.
 
    *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
@@ -294,9 +305,18 @@ This document does not describe interoperability requirements. As such, it does 
      sometimes known as "OAM and Management" or "O&M" as
      explained in {{?RFC6291}}.
 
+   *  Operator: A person or organization responsible for deploying and managing
+      systems, services, or networks that run or rely on a protocol implementation.
+      This includes, but is not limited to,
+      network operators, cloud service administrators, IoT device fleet
+      managers, home network administrators, and DNS/NTP server
+      administrators. The term "operator" is used throughout this document
+      in this broad sense unless the context explicitly requires a narrower
+      scope.
+
    *  Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}
 
-   *  Problem: See {{?I-D.ietf-nmop-terminology}}.
+   *  Problem: See {{I-D.ietf-nmop-terminology}}.
 
    *  Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
@@ -325,7 +345,7 @@ This document does not describe interoperability requirements. As such, it does 
    Internet-Drafts, are not required to include such a section.
 
    After evaluating the operational ({{sec-oper-consid}}) and manageability ({{sec-mgmt-consid}}) aspects of a New
-   Protocol, a Protocol Extension, or an architecture, the resulting practices and
+   Protocol or Protocol Extension, the resulting practices and
    requirements should be documented
    in an "Operational Considerations" section within the
    specification. Since protocols are intended for operational deployment and
@@ -334,7 +354,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    It is also recommended that operational and manageability considerations
    be addressed early in the protocol design process. Consequently, early
-   revisions of Internet-Drafts are expected to include an "Operational
+   revisions of Internet-Drafts are highly encouraged to include an "Operational
    Considerations" section.
 
    An "Operational Considerations" section should include a discussion of
@@ -352,19 +372,17 @@ This document does not describe interoperability requirements. As such, it does 
   documented as part of the model itself. Such considerations should not be
   duplicated in the narrative part of a specification that includes such artifacts.
 
+For example:
+
 > Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
 > with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},
-> {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}. For example,
-> given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
+> {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
+> Given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
 > those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
 > Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
 > the above guidance by documenting operational aspects as part of the YANG module itself.
 
-  For architecture documents, the "Operational Considerations" section should focus on describing the intended deployment environment,
-  assumptions about network operations, potential impacts on existing operational practices,
-  and any high-level requirements that future protocol designs should address. It is not expected to detail specific
-  configuration parameters or management interfaces unless they are integral to the architecture itself.
-  If the architecture document itself does not introduce new operational considerations, the exemption statement in {{sec-null-sec}} can be used.
+  For architecture documents, an "Operational Considerations" section is expected only where the architecture introduces new operational considerations with normative implications for downstream protocol designs. When included, it should focus on describing the intended deployment environment, assumptions about network operations, potential impacts on existing operational practices, and any high-level requirements that future protocol designs should address. It is not expected to detail specific configuration parameters or management interfaces unless they are integral to the architecture itself. If the architecture document does not introduce new operational considerations, the exemption statement in {{sec-null-sec}} applies.
 
 ##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
@@ -442,7 +460,9 @@ This document does not describe interoperability requirements. As such, it does 
    to apply the protocol in the environments where it will be deployed.
    {{?RFC5218}} provides a more detailed discussion on what makes for a successful protocol.
 
-   > BGP flap damping {{?RFC2439}} is an example.  It was designed to block
+   For example:
+
+   > BGP flap damping {{?RFC2439}} was designed to block
    high-frequency route flaps.  Some BGP implementations were memory-constrained
    so often elected not to support this function, others found a
    conflict where path exploration caused false flap damping resulting
@@ -488,7 +508,9 @@ This document does not describe interoperability requirements. As such, it does 
    variable to reduce the
    risk of problems caused by technology advancement.
 
-   > For example, where protocols involve cryptographic keys, Protocol Designers should
+   For example:
+
+   > Where protocols involve cryptographic keys, Protocol Designers should
    consider not only key generation and validation mechanisms but also the
    format in which private keys are stored, transmitted, and restored.
    Designers should specify any expected consistency checks
@@ -539,7 +561,9 @@ state during the transition.
    certain ways. If restrictions or dependencies exist, they should be
    stated.
 
-   > For example, the design of the Resource ReSerVation Protocol (RSVP)
+   For example:
+
+   > The design of the Resource ReSerVation Protocol (RSVP)
    {{?RFC2205}} required each router to look at the RSVP PATH message and,
    if the router understood RSVP, add its own address to the message to
    enable automatic tunneling through non-RSVP routers. But in reality,
@@ -557,7 +581,9 @@ state during the transition.
 ##  Impact on Network Operation {#sec-impact}
 
    The introduction of a New Protocol or Protocol Extension may
-   have an impact on the operation of existing networks. As discussed in {{Section 2.1 of ?RFC6709}}
+   have an impact on the operation of existing networks, as well as on the
+   hosts, devices, and systems that implement or depend on the protocol.
+   As discussed in {{Section 2.1 of ?RFC6709}}
    major extensions may have characteristics leading to a risk of
    operational
    problems. Protocol
@@ -574,9 +600,10 @@ state during the transition.
    be evaluated accordingly. Per {{Section 2.15 of RFC2360@BCP22}}, New Protocol or Protocol Extension specifications
    should establish the limitations on the scale of use and limits on the resources used.
 
-   If the protocol specification requires changes to end hosts, it should
-   also indicate whether safeguards exist to protect networks from
-   potential overload. Moreover, Per {{Section 2.16 of RFC2360@BCP22}}, New Protocol
+   If the protocol specification requires changes to end hosts or network
+   infrastructure, it should indicate whether safeguards exist to protect
+   both end hosts and devices and the broader network from potential
+   overload. Moreover, Per {{Section 2.16 of RFC2360@BCP22}}, New Protocol
    or Protocol Extension specifications should address any possible destabilizing events,
    and means by which the protocol resists or recovers from them. For instance, a congestion control algorithm must
    comply with {{?BCP133}} to prevent congestion collapse and ensure
@@ -598,7 +625,9 @@ state during the transition.
    applications such as the DNS {{?RFC1034}}, the
    registries, or the size of routing tables.
 
-   > For example, SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
+   For example:
+
+   > SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
@@ -615,18 +644,22 @@ and data collection could result in the management plane becoming
 overwhelmed, then this must be called out, and suitable mechanisms to
 rate limit the OAM traffic must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
 
-> Consider three examples: (1) In
-Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
-possible to configure very rapid BFD transmissions (of the order of
-3ms) on a very large number of parallel Label Switched Paths (LSPs)
-with the result that the management systems and end nodes may become
-overwhelmed -- this can be protected by applying limits to
-the number of LSPs that may be tested at once. (2) Notifications or logs
-from systems (through YANG or other means) should be rate-limited so
-that they do not flood the receiving management station. (3) The
-application of sophisticated encryption or filtering rules needs to
-be considered in the light of the additional processing they may
-impose on the hardware forwarding path for traffic.
+For example:
+
+> (1) In Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
+> possible to configure very rapid BFD transmissions (of the order of
+> 3ms) on a very large number of parallel Label Switched Paths (LSPs)
+> with the result that the management systems and end nodes may become
+> overwhelmed -- this can be protected by applying limits to
+> the number of LSPs that may be tested at once.
+>
+> (2) Notifications or logs from systems (through YANG or other means)
+> should be rate-limited so that they do not flood the receiving
+> management station.
+>
+> (3) The application of sophisticated encryption or filtering rules
+> needs to be considered in the light of the additional processing
+> they may impose on the hardware forwarding path for traffic.
 
 New metrics may be required to assess traffic performance. Protocol Designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.
 
@@ -641,7 +674,7 @@ New metrics may be required to assess traffic performance. Protocol Designers ma
 
    Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.
 
-   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of a New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their network consistently.
+   Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of a New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their networks, systems, and devices consistently.
 Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging.
 
 Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.
@@ -677,7 +710,7 @@ Tooling required by security operators should be documented in the design and de
 
 ## Message Formats {#sec-messages}
 
-Where protocol specifications result in messages (such as errors or warnings) being carried as text strings or output for consumption by human operators, consideration should be given to making it possible for implementations to be configured so that the messages can be viewed in the local language. In such cases, it may be helpful to transmit a specific message code (i.e., a number) along with the default English language message, so that implementations may easily map the code to a local text string.
+Where protocol specifications result in messages (such as errors or warnings) being carried as text strings or output for consumption by human operators, consideration should be given to making it possible for implementations to be configured so that the messages can be viewed in the local language. In such cases, it is helpful to transmit a specific message code (i.e., a number) along with the message text, and to include a language tag (as described in {{?BCP47}}) to enable correct identification and rendering in the appropriate language. Protocol specifications should not assume English as the default language.
 
 Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
@@ -853,7 +886,7 @@ DM         DM        DM     --> concrete/detailed model
 
    While an Information Model is typically described in English text
    (or sometimes UML) to define the conceptual management requirements,
-   authors may choose to express it using YANG Data Structure Extensions {{?RFC8791}}
+   authors may choose to express it using YANG Data Structure Extensions {{RFC8791}}
    as described in {{sec-im-design}}.  Using YANG for the Information Model can make
    it easier to link abstract concepts to concrete data types in the corresponding Data Model,
    helping maintain consistency between high-level design and practical deployment.
@@ -894,21 +927,33 @@ DM         DM        DM     --> concrete/detailed model
    possible by applying the following criteria:
 
    1.  Start with a small set of essential objects and make additions only as
-       further objects are needed with the objective of keeping the absolute number of objects as small as possible while still delivering the required function such that there is
-       no duplication between objects and where one piece of information can be derived from the other pieces of information, it is not itself represented as an object.
+       further objects are needed, with the objective of keeping the absolute
+       number of objects as small as possible while still delivering the
+       required function. Essential objects are those needed to answer the
+       diagnostic, configuration, and operational questions the protocol is
+       expected to support; objects that are technically accessible but do not
+       serve these functions should be excluded. There should be no duplication
+       between objects, and where one piece of information can be derived from
+       other pieces of information, it should not itself be represented as an
+       object.
 
-   2.  Require that all objects be essential for management.
+   2.  Verify that each object serves a distinct management purpose and cannot
+       be derived from other objects already in the model. Objects that are
+       redundant or that conflate multiple concerns should be split or
+       eliminated.
 
    3.  Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the Information Model.
 
    4.  Exclude objects that can be derived from others in this or
        other information models.
 
-   5.  Avoid causing critical sections to be heavily instrumented. A
-       guideline is one counter per critical section per layer.
+   5.  Avoid heavy instrumentation of performance-critical code paths or
+       state that is expensive to query or compute. A guideline is to limit
+       instrumentation to one counter per significant processing stage or
+       operational boundary per layer.
 
-   6.  When expressing an Information Model using YANG Data Structure Extensions {{?RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
-  7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{?RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
+   6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
+  7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
@@ -976,7 +1021,7 @@ DM         DM        DM     --> concrete/detailed model
    base Protocol, and to outline the potential impact of misconfigurations
    of the Protocol Extensions.
 
-   Protocol Designers should consider how fault information will be
+   Protocol Designers should consider how Fault information will be
    propagated. Will it be done using asynchronous notifications or
    polling of health indicators?
 
@@ -994,11 +1039,11 @@ DM         DM        DM     --> concrete/detailed model
    condition.
    Should the event reporting provide guaranteed accurate delivery of
    the event information within a given (high) margin of confidence?
-   Can we poll the latest events in the box?
+   Can the latest events in the box be polled?
 
 ###  Liveness Detection and Monitoring {#sec-monitor}
 
-   Protocol Designers should always build in basic testing features
+   Protocol Designers should build in basic testing features
    (e.g., ICMP echo, UDP
    or TCP echo services, and null Remote Procedure Calls
    (RPCs)) that can be used to test for liveness, with the option to
@@ -1037,7 +1082,9 @@ DM         DM        DM     --> concrete/detailed model
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?
 
-   > Remote Monitoring (RMON) events/alarms is an example of threshold-based mechanism.
+   For example:
+
+   > Remote Monitoring (RMON) events/alarms provide a threshold-based mechanism.
 
 ###  Probable Root Cause Analysis {#sec-cause-analysis}
 
@@ -1047,19 +1094,38 @@ DM         DM        DM     --> concrete/detailed model
    source event or combination of circumstances that is the foundation of all
    related Faults.
 
-   > For example, if end-to-end data delivery is failing (e.g., reported by a
+   For example:
+
+   > If end-to-end data delivery is failing (e.g., reported by a
    notification), Probable Root Cause analysis can help find the failed link
    or node, or mis-configuration, within the end-to-end path.
 
 ###  Fault Isolation {#sec-fault-isol}
 
-   It might be useful to isolate or quarantine Faults, such as isolating
-   a device that emits malformed messages that are necessary to
-   coordinate connections properly. This might be able to be done by
-   configuring next-hop devices to drop the faulty messages to prevent
-   them from entering the rest of the network.
+   It might be useful to isolate or quarantine Faults. Protocol Designers
+   should consider fault isolation mechanisms appropriate to the deployment
+   environment. At the network level, this might involve configuring
+   next-hop devices to drop faulty messages to prevent them from
+   propagating through the network, such as isolating a device that emits
+   malformed messages that are necessary to coordinate connections properly.
+   At the host level, isolation mechanisms may include process quarantine,
+   container or virtual machine isolation, or disabling a misbehaving
+   protocol implementation without disrupting other services on the same
+   device. The range of appropriate isolation mechanisms will depend on
+   where the protocol is deployed and the nature of the Fault.
 
 ##  Configuration Management {#sec-config-mgmt}
+
+   Configuration management applies to a broad range of deployment
+   environments, including conventional network devices, IoT device fleets,
+   containerized workloads, cloud-hosted services, and home network
+   equipment. While many examples in this section are drawn from network
+   device management, the principles apply equally to any environment where
+   the protocol is deployed. Protocol Designers should consider how
+   configuration is managed in the environments relevant to their protocol,
+   acknowledging centralized configuration management approaches (e.g.,
+   intent-based or model-driven systems) beyond conventional per-device
+   management.
 
    A Protocol Designer should document the basic configuration
    parameters that need to be instrumented for a New Protocol or Protocol Extensions, as well
@@ -1124,9 +1190,14 @@ DM         DM        DM     --> concrete/detailed model
    templates might also be helpful.
 
    Consensus of the 2002 IAB Network Management Workshop {{?RFC3535}} was that textual
-   configuration files should be able to contain international
-   characters. Human-readable strings should utilize UTF-8, and
-   protocol elements should be in case-insensitive ASCII.
+   configuration files should be able to contain international characters.
+   For human-readable strings carried in protocols, {{?RFC5198}} provides
+   guidance on the use of UTF-8 with NFC normalization for consistent
+   encoding of Unicode text; protocol elements that are not intended for
+   human consumption may remain in ASCII. Requirements for the encoding of
+   device-local configuration files are generally outside the scope of IETF
+   standardization and should be handled appropriately for the deployment
+   environment.
 
    A mechanism to dump-and-restore configurations is a primitive
    operation needed by operators. Standards for pulling and pushing
@@ -1200,7 +1271,7 @@ DM         DM        DM     --> concrete/detailed model
    functionality/service activation on the device), network monitoring,
    and service monitoring (the impact of service activation on the
    network). Hence, if the implementation of the
-   New Protocol or Protocol Extension has any hardware/software performance implications
+   New Protocol or Protocol Extension has any significant hardware/software performance implications
    (e.g., increased CPU utilization, memory consumption, or forwarding
    performance degradation), the Protocol Designers should clearly
    describe these impacts in the specification, along with any
@@ -1243,7 +1314,9 @@ DM         DM        DM     --> concrete/detailed model
    is not specific to a management protocol, then it should be left
    to Data Model designers of that protocol to determine how to handle it.
 
-   > For example, VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
+   For example:
+
+   > VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
    Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
@@ -1314,7 +1387,9 @@ DM         DM        DM     --> concrete/detailed model
    Consider security threats that may be introduced by management
    operations.
 
-   > For example, Control and Provisioning of Wireless Access
+   For example:
+
+   > Control and Provisioning of Wireless Access
    Points (CAPWAP) {{?RFC5415}} breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
    By using a control protocol or management protocol, internal
@@ -1348,10 +1423,12 @@ DM         DM        DM     --> concrete/detailed model
    Protocol or Protocol Extension. The syslog should also record events,
    such as failed logins, but it must be secured.
 
-   > For example, you can log all the commands entered by the
-   operator using syslog (giving you some degree of audit trail), or you
-   can see who has logged on/off using the Secure Shell (SSH) Protocol {{?RFC4251}}
-   and from where; failed SSH logins can be logged using syslog, etc.
+   For example:
+
+   >    All commands entered by operators can be logged via syslog to provide
+   an audit trail.  Authentication events, including logins, logouts, and
+   failed login attempts, can be recorded using the Secure Shell (SSH)
+   Protocol {{?RFC4251}}, capturing the source of each connection.
 
    An analysis of existing counters might help operators recognize the
    conditions identified in the Security Considerations for the new
@@ -1458,6 +1535,7 @@ DM         DM        DM     --> concrete/detailed model
 # Operational Considerations {#sec-oper-mgmt-consid}
 
    Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
+
 
 #  Security Considerations {#sec-security}
 
@@ -1571,7 +1649,7 @@ The decision to incorporate all or part of these items into their work remains w
 ## Configuration Management
 
 * What configuration parameters are defined? ({{sec-config-mgmt}})
-   * What parameters need to be configurable, including their defaults and valid ranges? ({{sec-config-mgmt}})
+   * What parameters need to be configurable, including their valid ranges? ({{sec-config-mgmt}})
    * What information persists across reboots? ({{sec-config-mgmt}})
 
 ## Performance Management
@@ -1601,7 +1679,7 @@ The decision to incorporate all or part of these items into their work remains w
 
    * Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
 
-   * Add a requirement for an "Operational Considerations" section in all new RFCs that document a technical specification in the IETF Stream, along with specific guidance on its content.
+   * Add a requirement for an "Operational Considerations" section in all new RFCs that document a technical specification for a New Protocol or Protocol Extension or describe their use in the IETF Stream, along with specific guidance on its content.
 
    * Update the operational and manageability-related technologies to reflect over 15 years of advancements
 
@@ -1614,9 +1692,6 @@ The decision to incorporate all or part of these items into their work remains w
    * Add an "Operational and Management Tooling Considerations" section
 
 
-##  TO DO LIST {#sec-todo}
-
-   See the list of open issues at https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues
 
 #  Acknowledgements {#sec-ack}
 {:numbered="false"}
@@ -1641,6 +1716,8 @@ The author of RFC 5706:
 
 Acknowledgments from RFC 5706:
 
+: The following acknowledgments apply to RFC 5706, the predecessor of this document. Some individuals listed below as reviewers of RFC 5706 are now authors or contributors of this document.
+
 : This document started from an earlier document edited by Adrian
 Farrel, which itself was based on work exploring the need for
 Manageability Considerations sections in all Internet-Drafts produced
@@ -1651,6 +1728,6 @@ feedback provided by Pekka Savola and Bert Wijnen.
 : Some of the discussion about designing for manageability came from
 private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.
 
-: Thanks to reviewers who helped fashion this document, including
+: Thanks to reviewers who helped fashion RFC 5706, including
 Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
 Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.
