@@ -372,6 +372,8 @@ This document does not describe interoperability requirements. As such, it does 
   documented as part of the model itself. Such considerations should not be
   duplicated in the narrative part of a specification that includes such artifacts.
 
+For example:
+
 > Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
 > with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},
 > {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}. For example,
@@ -458,7 +460,9 @@ This document does not describe interoperability requirements. As such, it does 
    to apply the protocol in the environments where it will be deployed.
    {{?RFC5218}} provides a more detailed discussion on what makes for a successful protocol.
 
-   For example, BGP flap damping {{?RFC2439}} was designed to block
+   For example:
+
+   > BGP flap damping {{?RFC2439}} was designed to block
    high-frequency route flaps.  Some BGP implementations were memory-constrained
    so often elected not to support this function, others found a
    conflict where path exploration caused false flap damping resulting
@@ -504,7 +508,9 @@ This document does not describe interoperability requirements. As such, it does 
    variable to reduce the
    risk of problems caused by technology advancement.
 
-   For example, where protocols involve cryptographic keys, Protocol Designers should
+   For example:
+
+   > Where protocols involve cryptographic keys, Protocol Designers should
    consider not only key generation and validation mechanisms but also the
    format in which private keys are stored, transmitted, and restored.
    Designers should specify any expected consistency checks
@@ -555,7 +561,9 @@ state during the transition.
    certain ways. If restrictions or dependencies exist, they should be
    stated.
 
-   For example, the design of the Resource ReSerVation Protocol (RSVP)
+   For example:
+
+   > The design of the Resource ReSerVation Protocol (RSVP)
    {{?RFC2205}} required each router to look at the RSVP PATH message and,
    if the router understood RSVP, add its own address to the message to
    enable automatic tunneling through non-RSVP routers. But in reality,
@@ -617,7 +625,9 @@ state during the transition.
    applications such as the DNS {{?RFC1034}}, the
    registries, or the size of routing tables.
 
-   For example, SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
+   For example:
+
+   > SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
@@ -634,7 +644,9 @@ and data collection could result in the management plane becoming
 overwhelmed, then this must be called out, and suitable mechanisms to
 rate limit the OAM traffic must be considered. Potential options include: document the limitations, propose solution track(s), include an optional rate limiting feature in the specifications, or impose a rate limiting feature in the specifications.
 
-For example: (1) In
+For example:
+
+> (1) In
 Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
 possible to configure very rapid BFD transmissions (of the order of
 3ms) on a very large number of parallel Label Switched Paths (LSPs)
@@ -1068,7 +1080,9 @@ DM         DM        DM     --> concrete/detailed model
    are there some "standard" notifications that could be used? Or can
    relevant counters be polled as needed?
 
-   For example, Remote Monitoring (RMON) events/alarms provide a threshold-based mechanism.
+   For example:
+
+   > Remote Monitoring (RMON) events/alarms provide a threshold-based mechanism.
 
 ###  Probable Root Cause Analysis {#sec-cause-analysis}
 
@@ -1078,7 +1092,9 @@ DM         DM        DM     --> concrete/detailed model
    source event or combination of circumstances that is the foundation of all
    related Faults.
 
-   For example, if end-to-end data delivery is failing (e.g., reported by a
+   For example:
+
+   > If end-to-end data delivery is failing (e.g., reported by a
    notification), Probable Root Cause analysis can help find the failed link
    or node, or mis-configuration, within the end-to-end path.
 
@@ -1296,7 +1312,9 @@ DM         DM        DM     --> concrete/detailed model
    is not specific to a management protocol, then it should be left
    to Data Model designers of that protocol to determine how to handle it.
 
-   For example, VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
+   For example:
+
+   > VLAN identifiers (VLAN IDs) are defined by the standard to range from 1 to 4094.
    Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
@@ -1367,7 +1385,9 @@ DM         DM        DM     --> concrete/detailed model
    Consider security threats that may be introduced by management
    operations.
 
-   For example, Control and Provisioning of Wireless Access
+   For example:
+
+   > Control and Provisioning of Wireless Access
    Points (CAPWAP) {{?RFC5415}} breaks the structure of monolithic Access Points
    (APs) into Access Controllers and Wireless Termination Points (WTPs).
    By using a control protocol or management protocol, internal
@@ -1401,10 +1421,12 @@ DM         DM        DM     --> concrete/detailed model
    Protocol or Protocol Extension. The syslog should also record events,
    such as failed logins, but it must be secured.
 
-   For example, you can log all the commands entered by the
-   operator using syslog (giving you some degree of audit trail), or you
-   can see who has logged on/off using the Secure Shell (SSH) Protocol {{?RFC4251}}
-   and from where; failed SSH logins can be logged using syslog, etc.
+   For example:
+
+   >    All commands entered by operators can be logged via syslog to provide
+   an audit trail.  Authentication events, including logins, logouts, and
+   failed login attempts, can be recorded using the Secure Shell (SSH)
+   Protocol {{?RFC4251}}, capturing the source of each connection.
 
    An analysis of existing counters might help operators recognize the
    conditions identified in the Security Considerations for the new
