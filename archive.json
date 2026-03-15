@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-12T00:58:43.226338+00:00",
+  "timestamp": "2026-03-15T01:14:37.279446+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3483,7 +3483,7 @@
       "id": "I_kwDOOWPBqs7x6eNs",
       "title": "IotDir Review",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/231",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3494,8 +3494,8 @@
       ],
       "body": "Early Review of draft-ietf-opsawg-rfc5706bis-01:\nhttps://datatracker.ietf.org/doc/review-ietf-opsawg-rfc5706bis-01-iotdir-early-thaler-2026-01-23/\n\nPlease see:\nhttps://mailarchive.ietf.org/arch/msg/iot-directorate/iPE5QYIEeXiBYxLVr_Q7IUC7DC8/\n\nDocument: draft-ietf-opsawg-rfc5706bis\nTitle: Guidelines for Considering Operations and Management in IETF Specifications\nReviewer: Dave Thaler\nReview result: On the Right Track\n",
       "createdAt": "2026-03-11T14:38:20Z",
-      "updatedAt": "2026-03-11T14:42:40Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-14T21:06:10Z",
+      "closedAt": "2026-03-14T21:06:10Z",
       "comments": [
         {
           "author": "cpignata",
@@ -16302,7 +16302,7 @@
       "id": "PR_kwDOOWPBqs7JuylW",
       "title": "Iotdir early review of  01 by dave thaler solves #231",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/232",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -16313,18 +16313,42 @@
       ],
       "body": "Iotdir early review of  01 by dave thaler solves #231\r\n\r\nThis includes quite a few adds, please review! \ud83d\ude4f\ud83c\udffc\r\n\r\nCarlos.",
       "createdAt": "2026-03-11T14:41:23Z",
-      "updatedAt": "2026-03-11T18:08:36Z",
+      "updatedAt": "2026-03-14T21:06:11Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "5214c15db43bff6f97d151d721424f798a7bb464",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "Iotdir-Early-review-of--01-by-Dave-Thaler",
-      "headRefOid": "d53867ca96af7336d49714bd361ca823fbca147c",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "6683db7c36041e1bf710aac94f1e245cbe481a2e",
+      "closedAt": "2026-03-14T21:06:08Z",
+      "mergedAt": "2026-03-14T21:06:08Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "8a18a8bbd472179055edc1954e193d739ef4a371"
+      },
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hi Med @boucadair , I think all your comments have been addressed. Let me know if I missed anything. Thanks!",
+          "createdAt": "2026-03-12T17:25:58Z",
+          "updatedAt": "2026-03-13T21:04:56Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Hi Med @boucadair , I think all your comments have been addressed. Let me know if I missed anything. Thanks!\r\n\r\nThere is just this formatting point to help separate the guidance and the examples. Sorry for being picky here.",
+          "createdAt": "2026-03-13T21:17:35Z",
+          "updatedAt": "2026-03-13T21:17:35Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "All good, Med @boucadair -- should be done now with a clearer approach to separating examples, since the issue is that it had confused Dave T. \r\nPlease check it out.",
+          "createdAt": "2026-03-14T10:35:01Z",
+          "updatedAt": "2026-03-14T10:35:01Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs7qQgQJ",
@@ -16405,6 +16429,250 @@
               "updatedAt": "2026-03-11T15:08:02Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qdvYX",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T03:23:17Z",
+          "updatedAt": "2026-03-12T03:24:41Z",
+          "comments": [
+            {
+              "originalPosition": 66,
+              "body": "```suggestion\n     systems, services, or networks that run or rely on a protocol implementation.\n```",
+              "createdAt": "2026-03-12T03:23:17Z",
+              "updatedAt": "2026-03-12T03:24:41Z"
+            },
+            {
+              "originalPosition": 65,
+              "body": "```suggestion\n   *  Operator: A person or organization responsible for deploying and managing\n```",
+              "createdAt": "2026-03-12T03:23:29Z",
+              "updatedAt": "2026-03-12T03:24:41Z"
+            },
+            {
+              "originalPosition": 67,
+              "body": "```suggestion\n      This includes, but is not limited to,\n```",
+              "createdAt": "2026-03-12T03:23:58Z",
+              "updatedAt": "2026-03-12T03:24:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qd1Hb",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T03:31:07Z",
+          "updatedAt": "2026-03-12T03:32:23Z",
+          "comments": [
+            {
+              "originalPosition": 322,
+              "body": "Does this need to be Protocol?",
+              "createdAt": "2026-03-12T03:31:07Z",
+              "updatedAt": "2026-03-12T03:32:23Z"
+            },
+            {
+              "originalPosition": 334,
+              "body": "Does this need to be \"Protocol or Protocol Extension\"?",
+              "createdAt": "2026-03-12T03:31:38Z",
+              "updatedAt": "2026-03-12T03:32:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qh18g",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T08:22:39Z",
+          "updatedAt": "2026-03-12T08:22:40Z",
+          "comments": [
+            {
+              "originalPosition": 103,
+              "body": "The intent of this formatting (as side notes) was to ease seperation of the guidance vs. examples for readers. Is there any issue with leaving it as it is?",
+              "createdAt": "2026-03-12T08:22:40Z",
+              "updatedAt": "2026-03-12T08:22:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qvhpl",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T17:11:30Z",
+          "updatedAt": "2026-03-12T17:11:30Z",
+          "comments": [
+            {
+              "originalPosition": 322,
+              "body": "In this context 'protocol' is used generically in descriptive prose explaining how fault isolation works, not as a scoped term. The defined terms 'New Protocol' and 'Protocol Extension' are reserved for normative guidance about the document's applicability. No change needed.",
+              "createdAt": "2026-03-12T17:11:30Z",
+              "updatedAt": "2026-03-12T17:11:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qvhr3",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T17:11:31Z",
+          "updatedAt": "2026-03-12T17:11:31Z",
+          "comments": [
+            {
+              "originalPosition": 334,
+              "body": "Same as above \u2014 'protocol' here is generic descriptive prose. Using 'New Protocol or Protocol Extension' in this context would be awkward and inconsistent with how the terms are used elsewhere. No change needed.",
+              "createdAt": "2026-03-12T17:11:31Z",
+              "updatedAt": "2026-03-12T17:11:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qvloo",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T17:14:22Z",
+          "updatedAt": "2026-03-12T17:14:22Z",
+          "comments": [
+            {
+              "originalPosition": 66,
+              "body": "Good catch, applied. Thanks!",
+              "createdAt": "2026-03-12T17:14:22Z",
+              "updatedAt": "2026-03-12T17:14:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qvlqn",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T17:14:24Z",
+          "updatedAt": "2026-03-12T17:14:24Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "Good catch, applied. Thanks!",
+              "createdAt": "2026-03-12T17:14:24Z",
+              "updatedAt": "2026-03-12T17:14:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qvlsI",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T17:14:25Z",
+          "updatedAt": "2026-03-12T17:14:25Z",
+          "comments": [
+            {
+              "originalPosition": 67,
+              "body": "Good catch, applied. Thanks!",
+              "createdAt": "2026-03-12T17:14:25Z",
+              "updatedAt": "2026-03-12T17:14:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7qv3QA",
+          "commit": {
+            "abbreviatedOid": "501e689"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-12T17:25:25Z",
+          "updatedAt": "2026-03-12T17:25:26Z",
+          "comments": [
+            {
+              "originalPosition": 103,
+              "body": "Agreed, reverted. Thanks Med!",
+              "createdAt": "2026-03-12T17:25:25Z",
+              "updatedAt": "2026-03-12T17:25:26Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7q4ZU0",
+          "commit": {
+            "abbreviatedOid": "b3216d5"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-03-13T00:04:24Z",
+          "updatedAt": "2026-03-13T00:04:24Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7rQlcm",
+          "commit": {
+            "abbreviatedOid": "d53867c"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-13T21:15:22Z",
+          "updatedAt": "2026-03-13T21:15:23Z",
+          "comments": [
+            {
+              "originalPosition": 103,
+              "body": "Thanks Carlos. I still see this not reverted per https://author-tools.ietf.org/api/iddiff?url_1=https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/draft-ietf-opsawg-rfc5706bis.txt&url_2=https://IETF-OPSAWG-WG.github.io/draft-opsarea-rfc5706bis/Iotdir-Early-review-of--01-by-Dave-Thaler/draft-ietf-opsawg-rfc5706bis.txt",
+              "createdAt": "2026-03-13T21:15:22Z",
+              "updatedAt": "2026-03-13T21:15:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7rXhHj",
+          "commit": {
+            "abbreviatedOid": "6683db7"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Thanks @cpignata. ",
+          "createdAt": "2026-03-14T12:37:20Z",
+          "updatedAt": "2026-03-14T12:37:20Z",
+          "comments": []
         }
       ]
     }
