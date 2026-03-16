@@ -1151,20 +1151,11 @@ DM         DM        DM     --> concrete/detailed model
    {{?RFC3198}} was written to standardize the terminology across these
    efforts.
 
-   Implementations should not arbitrarily modify configuration data. In
-   some cases (such as Access Control Lists (ACLs)), the order of data
-   items is significant and comprises part of the configured data. If a
+   Implementations should not arbitrarily modify configuration data. If a
    Protocol Designer defines mechanisms for configuration, it would be
    preferable to standardize the order of elements for consistency of
    configuration and of reporting across vendors and across releases
    from vendors.
-
-   There are two parts to this:
-
-   1.  A Network Management System (NMS) could optimize Access Control Lists (ACLs) for
-       performance reasons.
-
-   2.  Unless the device or NMS is configured with adequate rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.
 
    Network-wide configurations may be stored in central databases
    and transformed into readable formats that can be pushed to devices, either by
@@ -1369,23 +1360,25 @@ DM         DM        DM     --> concrete/detailed model
    might include privacy-sensitive information, which ought to be controlled
    to avoid access by unauthorized entities.
 
-   Should a system automatically notify operators of every event
-   occurrence, or should an operator-defined threshold control when a
-   notification is sent to an operator?
+   Protocol Designers should consider whether a system automatically
+   notify operators of every event Occurrence as default behavior or
+   should define an operator-defined threshold to control when a
+   notification is sent to an operator.
 
-   Should certain statistics be collected about the operation of the New
-   Protocol that might be useful for detecting attacks, such as the
-   receipt of malformed messages, messages out of order, or messages
-   with invalid timestamps? If such statistics are collected, is it
-   important to count them separately for each sender to help identify
-   the source of attacks?
+   Protocol Designers should assess whether and which statistics need to
+   be collected about the operation of the New Protocol that might be
+   useful for detecting attacks (e.g., the receipt of malformed
+   messages, messages out of order, or messages with invalid
+   timestamps). If such statistics are collected, care should be taken
+   to evaluate whether it is important to count them separately for
+   each sender to help identify the source of attacks.
 
    Security-oriented manageability topics may include risks of insufficient
    monitoring, regulatory issues with missing audit trails, log capacity
    limits, and security exposures in recommended management mechanisms.
 
-   Consider security threats that may be introduced by management
-   operations.
+   Protocol Designers should consider security threats that may be
+   introduced by management operations.
 
    For example:
 
@@ -1429,10 +1422,6 @@ DM         DM        DM     --> concrete/detailed model
    an audit trail.  Authentication events, including logins, logouts, and
    failed login attempts, can be recorded using the Secure Shell (SSH)
    Protocol {{?RFC4251}}, capturing the source of each connection.
-
-   An analysis of existing counters might help operators recognize the
-   conditions identified in the Security Considerations for the new
-   protocol before they can impact the network.
 
    Different management protocols use different assumptions about
    message security and data-access controls. A Protocol Designer that
@@ -1539,39 +1528,9 @@ DM         DM        DM     --> concrete/detailed model
 
 #  Security Considerations {#sec-security}
 
-   This document provides guidelines for
+   This document provides guidelines for Protocol Designers for
    considering manageability and operations. It introduces no new
    security concerns.
-
-   The provision of a management portal to a network device provides a
-   doorway through which an attack on the device may be launched.
-   Making the protocol under development be manageable through a
-   management protocol creates a vulnerability to a new source of
-   attacks. Only management protocols with adequate security mechanisms,
-   such as state-of-the-art encryption, mutual authentication, message-integrity protection, and
-   authorization, should be used.
-
-   The security implications of password-based authentication should be taken into
-   account when designing a New Protocol or Protocol Extension. In particular, the
-   authentication mechanisms recommended for new protocols or protocol extensions
-   should provide adequate security; for instance, authentication based purely on
-   passwords is unlikely to provide an adequate level of security.
-
-   While a standard description of a protocol's manageable parameters facilitates
-   legitimate operation, it may also inadvertently simplify an attacker's efforts
-   to understand and manipulate the protocol.
-
-   A well-designed protocol is usually more stable and secure. A
-   protocol that can be managed and inspected offers the operator a
-   better chance of spotting and quarantining any attacks. Conversely,
-   making a protocol easy to inspect is a risk if the wrong person
-   inspects it.
-
-   If security events cause logs and/or notifications/alerts, a
-   concerted attack might be able to be mounted by causing an excess of
-   these events. In other words, the security-management mechanisms
-   could constitute a security vulnerability. The management of
-   security aspects is important ({{sec-security-mgmt}}).
 
 --- back
 
@@ -1706,7 +1665,7 @@ The Area Director (AD) championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document, in roughly chronological order:
-: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, and Marco Tiloca.
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, and Jacqueline McCall.
 
 The document shepherd who has gone beyond normal shepherding duties to improve this document:
 : Alvaro Retana
