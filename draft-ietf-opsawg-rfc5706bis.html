@@ -1068,7 +1068,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 15 September 2026</td>
+<td class="center">Expires 17 September 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1087,12 +1087,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-03-14" class="published">14 March 2026</time>
+<time datetime="2026-03-16" class="published">16 March 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-09-15">15 September 2026</time></dd>
+<dd class="expires"><time datetime="2026-09-17">17 September 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1157,7 +1157,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 15 September 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 17 September 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2543,24 +2543,12 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    configuration management. "Terminology for Policy-Based Management"
    <span>[<a href="#RFC3198" class="cite xref">RFC3198</a>]</span> was written to standardize the terminology across these
    efforts.<a href="#section-5.5-5" class="pilcrow">¶</a></p>
-<p id="section-5.5-6">Implementations should not arbitrarily modify configuration data. In
-   some cases (such as Access Control Lists (ACLs)), the order of data
-   items is significant and comprises part of the configured data. If a
+<p id="section-5.5-6">Implementations should not arbitrarily modify configuration data. If a
    Protocol Designer defines mechanisms for configuration, it would be
    preferable to standardize the order of elements for consistency of
    configuration and of reporting across vendors and across releases
    from vendors.<a href="#section-5.5-6" class="pilcrow">¶</a></p>
-<p id="section-5.5-7">There are two parts to this:<a href="#section-5.5-7" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-5.5-8">
-<li id="section-5.5-8.1">
-            <p id="section-5.5-8.1.1">A Network Management System (NMS) could optimize Access Control Lists (ACLs) for
-performance reasons.<a href="#section-5.5-8.1.1" class="pilcrow">¶</a></p>
-</li>
-          <li id="section-5.5-8.2">
-            <p id="section-5.5-8.2.1">Unless the device or NMS is configured with adequate rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.<a href="#section-5.5-8.2.1" class="pilcrow">¶</a></p>
-</li>
-        </ol>
-<p id="section-5.5-9">Network-wide configurations may be stored in central databases
+<p id="section-5.5-7">Network-wide configurations may be stored in central databases
    and transformed into readable formats that can be pushed to devices, either by
    generating sequences of CLI commands or complete textual configuration files
    that are pushed to devices. There is no common database schema for
@@ -2570,8 +2558,8 @@ performance reasons.<a href="#section-5.5-8.1.1" class="pilcrow">¶</a></p>
    configuration database schemas. A Protocol Designer should
    consider how to standardize the common parts of configuring the New
    Protocol, while recognizing that vendors may also have proprietary
-   aspects of their configurations.<a href="#section-5.5-9" class="pilcrow">¶</a></p>
-<p id="section-5.5-10">It is important to enable operators to concentrate on the
+   aspects of their configurations.<a href="#section-5.5-7" class="pilcrow">¶</a></p>
+<p id="section-5.5-8">It is important to enable operators to concentrate on the
    configuration of the network or service as a whole, rather than individual
    devices. Support for configuration transactions across several
    devices could significantly simplify network configuration
@@ -2580,8 +2568,8 @@ performance reasons.<a href="#section-5.5-8.1.1" class="pilcrow">¶</a></p>
    and then activate them in a near-simultaneous manner might help.
    Protocol Designers can consider how it would make sense for their
    protocol to be configured across multiple devices. Configuration
-   templates might also be helpful.<a href="#section-5.5-10" class="pilcrow">¶</a></p>
-<p id="section-5.5-11">Consensus of the 2002 IAB Network Management Workshop <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span> was that textual
+   templates might also be helpful.<a href="#section-5.5-8" class="pilcrow">¶</a></p>
+<p id="section-5.5-9">Consensus of the 2002 IAB Network Management Workshop <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span> was that textual
    configuration files should be able to contain international characters.
    For human-readable strings carried in protocols, <span>[<a href="#RFC5198" class="cite xref">RFC5198</a>]</span> provides
    guidance on the use of UTF-8 with NFC normalization for consistent
@@ -2589,21 +2577,21 @@ performance reasons.<a href="#section-5.5-8.1.1" class="pilcrow">¶</a></p>
    human consumption may remain in ASCII. Requirements for the encoding of
    device-local configuration files are generally outside the scope of IETF
    standardization and should be handled appropriately for the deployment
-   environment.<a href="#section-5.5-11" class="pilcrow">¶</a></p>
-<p id="section-5.5-12">A mechanism to dump-and-restore configurations is a primitive
+   environment.<a href="#section-5.5-9" class="pilcrow">¶</a></p>
+<p id="section-5.5-10">A mechanism to dump-and-restore configurations is a primitive
    operation needed by operators. Standards for pulling and pushing
-   configurations from/to devices are highly beneficial.<a href="#section-5.5-12" class="pilcrow">¶</a></p>
-<p id="section-5.5-13">Given configuration A and configuration B, it should be possible to
+   configurations from/to devices are highly beneficial.<a href="#section-5.5-10" class="pilcrow">¶</a></p>
+<p id="section-5.5-11">Given configuration A and configuration B, it should be possible to
    generate the operations necessary to get from A to B with minimal
    state changes and effects on network and systems. It is important to
-   minimize the impact caused by configuration changes.<a href="#section-5.5-13" class="pilcrow">¶</a></p>
-<p id="section-5.5-14">A Protocol Designer should consider the configurable items that exist
+   minimize the impact caused by configuration changes.<a href="#section-5.5-11" class="pilcrow">¶</a></p>
+<p id="section-5.5-12">A Protocol Designer should consider the configurable items that exist
    for the control of function via the protocol elements described in
    the protocol specification. For example, sometimes the protocol
    requires that timers can be configured by the operator to ensure
    specific policy-based behavior by the implementation. These timers
    should have default values suggested in the protocol specification
-   and may not need to be otherwise configurable.<a href="#section-5.5-14" class="pilcrow">¶</a></p>
+   and may not need to be otherwise configurable.<a href="#section-5.5-12" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-acc-mgmt">
@@ -2773,20 +2761,22 @@ performance reasons.<a href="#section-5.5-8.1.1" class="pilcrow">¶</a></p>
    Likewise, Protocol Designers should consider how some operations (e.g., logging)
    might include privacy-sensitive information, which ought to be controlled
    to avoid access by unauthorized entities.<a href="#section-5.8-1" class="pilcrow">¶</a></p>
-<p id="section-5.8-2">Should a system automatically notify operators of every event
-   occurrence, or should an operator-defined threshold control when a
-   notification is sent to an operator?<a href="#section-5.8-2" class="pilcrow">¶</a></p>
-<p id="section-5.8-3">Should certain statistics be collected about the operation of the New
-   Protocol that might be useful for detecting attacks, such as the
-   receipt of malformed messages, messages out of order, or messages
-   with invalid timestamps? If such statistics are collected, is it
-   important to count them separately for each sender to help identify
-   the source of attacks?<a href="#section-5.8-3" class="pilcrow">¶</a></p>
+<p id="section-5.8-2">Protocol Designers should consider whether a system automatically
+   notify operators of every event Occurrence as default behavior or
+   should define an operator-defined threshold to control when a
+   notification is sent to an operator.<a href="#section-5.8-2" class="pilcrow">¶</a></p>
+<p id="section-5.8-3">Protocol Designers should assess whether and which statistics need to
+   be collected about the operation of the New Protocol that might be
+   useful for detecting attacks (e.g., the receipt of malformed
+   messages, messages out of order, or messages with invalid
+   timestamps). If such statistics are collected, care should be taken
+   to evaluate whether it is important to count them separately for
+   each sender to help identify the source of attacks.<a href="#section-5.8-3" class="pilcrow">¶</a></p>
 <p id="section-5.8-4">Security-oriented manageability topics may include risks of insufficient
    monitoring, regulatory issues with missing audit trails, log capacity
    limits, and security exposures in recommended management mechanisms.<a href="#section-5.8-4" class="pilcrow">¶</a></p>
-<p id="section-5.8-5">Consider security threats that may be introduced by management
-   operations.<a href="#section-5.8-5" class="pilcrow">¶</a></p>
+<p id="section-5.8-5">Protocol Designers should consider security threats that may be
+   introduced by management operations.<a href="#section-5.8-5" class="pilcrow">¶</a></p>
 <p id="section-5.8-6">For example:<a href="#section-5.8-6" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-5.8-7.1">
@@ -2829,10 +2819,7 @@ performance reasons.<a href="#section-5.5-8.1.1" class="pilcrow">¶</a></p>
    Protocol <span>[<a href="#RFC4251" class="cite xref">RFC4251</a>]</span>, capturing the source of each connection.<a href="#section-5.8-14.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-5.8-15">An analysis of existing counters might help operators recognize the
-   conditions identified in the Security Considerations for the new
-   protocol before they can impact the network.<a href="#section-5.8-15" class="pilcrow">¶</a></p>
-<p id="section-5.8-16">Different management protocols use different assumptions about
+<p id="section-5.8-15">Different management protocols use different assumptions about
    message security and data-access controls. A Protocol Designer that
    recommends using different protocols should consider how security
    will be applied in a balanced manner across multiple management
@@ -2841,7 +2828,7 @@ performance reasons.<a href="#section-5.5-8.1.1" class="pilcrow">¶</a></p>
    (i.e., task-oriented). Depending on the management function,
    sometimes data-oriented or task-oriented approaches make more sense.
    Protocol Designers should consider both data-oriented and task-oriented
-   authority levels and policy. Refer also to <span>[<a href="#RFC8341" class="cite xref">RFC8341</a>]</span> for more details on access control types and rules.<a href="#section-5.8-16" class="pilcrow">¶</a></p>
+   authority levels and policy. Refer also to <span>[<a href="#RFC8341" class="cite xref">RFC8341</a>]</span> for more details on access control types and rules.<a href="#section-5.8-15" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2974,34 +2961,9 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
       <h2 id="name-security-considerations">
 <a href="#section-9" class="section-number selfRef">9. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-9-1">This document provides guidelines for
+<p id="section-9-1">This document provides guidelines for Protocol Designers for
    considering manageability and operations. It introduces no new
    security concerns.<a href="#section-9-1" class="pilcrow">¶</a></p>
-<p id="section-9-2">The provision of a management portal to a network device provides a
-   doorway through which an attack on the device may be launched.
-   Making the protocol under development be manageable through a
-   management protocol creates a vulnerability to a new source of
-   attacks. Only management protocols with adequate security mechanisms,
-   such as state-of-the-art encryption, mutual authentication, message-integrity protection, and
-   authorization, should be used.<a href="#section-9-2" class="pilcrow">¶</a></p>
-<p id="section-9-3">The security implications of password-based authentication should be taken into
-   account when designing a New Protocol or Protocol Extension. In particular, the
-   authentication mechanisms recommended for new protocols or protocol extensions
-   should provide adequate security; for instance, authentication based purely on
-   passwords is unlikely to provide an adequate level of security.<a href="#section-9-3" class="pilcrow">¶</a></p>
-<p id="section-9-4">While a standard description of a protocol's manageable parameters facilitates
-   legitimate operation, it may also inadvertently simplify an attacker's efforts
-   to understand and manipulate the protocol.<a href="#section-9-4" class="pilcrow">¶</a></p>
-<p id="section-9-5">A well-designed protocol is usually more stable and secure. A
-   protocol that can be managed and inspected offers the operator a
-   better chance of spotting and quarantining any attacks. Conversely,
-   making a protocol easy to inspect is a risk if the wrong person
-   inspects it.<a href="#section-9-5" class="pilcrow">¶</a></p>
-<p id="section-9-6">If security events cause logs and/or notifications/alerts, a
-   concerted attack might be able to be mounted by causing an excess of
-   these events. In other words, the security-management mechanisms
-   could constitute a security vulnerability. The management of
-   security aspects is important (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>).<a href="#section-9-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-combined-references">
@@ -3649,7 +3611,7 @@ whose efforts have helped to improve this document:<a href="#appendix-C-1" class
         <dd class="break"></dd>
 <dt id="appendix-C-2.5">Reviewers of this document, in roughly chronological order:</dt>
         <dd style="margin-left: 1.5em" id="appendix-C-2.6">
-          <p id="appendix-C-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, and Marco Tiloca.<a href="#appendix-C-2.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-C-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, and Jacqueline McCall.<a href="#appendix-C-2.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="appendix-C-2.7">The document shepherd who has gone beyond normal shepherding duties to improve this document:</dt>
