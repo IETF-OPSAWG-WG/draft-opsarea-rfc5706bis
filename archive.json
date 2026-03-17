@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-15T01:14:37.279446+00:00",
+  "timestamp": "2026-03-17T01:06:15.849026+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3463,7 +3463,7 @@
       "id": "I_kwDOOWPBqs7w2An4",
       "title": "Sec-Dir Review",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/229",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3474,8 +3474,8 @@
       ],
       "body": "**(1) Make this change:**\n\nOLD:\n\n   Should a system automatically notify operators of every event\n   occurrence, or should an operator-defined threshold control when a\n   notification is sent to an operator? \n\n   Should certain statistics be collected about the operation of the New\n   Protocol that might be useful for detecting attacks, such as the\n   receipt of malformed messages, messages out of order, or messages\n   with invalid timestamps? If such statistics are collected, is it\n   important to count them separately for each sender to help identify\n   the source of attacks?\n\nNEW:\n\n   Protocol Designers should consider whether a system automatically notify operators of every event\n   Occurrence as default behavior or should define an operator-defined threshold to control when a\n   notification is sent to an operator.\n\n   Protocol Designers should assess whether and which statistics need to be collected about the operation of the New\n   Protocol that might be useful for detecting attacks (e.g., the\n   receipt of malformed messages, messages out of order, or messages\n   with invalid timestamps). If such statistics are collected, care should be taken\n   to evaluate whether it is important to count them separately for each sender to help identify\n   the source of attacks.\n\n**(2) Make this change:**\n\n\nOLD:\n\n   Consider security threats that may be introduced by management\n   operations.\n\nNEW:\n\n   Protocol Designers should consider security threats that may be introduced by management\n   operations.\n\n\n**(3) Delete this text:**\n \n\nOLD:\n\n   An analysis of existing counters might help operators recognize the\n   conditions identified in the Security Considerations for the new\n   protocol before they can impact the network.\n\n**(4) Delete this text:**\n\n \nOLD:\n\n   Implementations should not arbitrarily modify configuration data. In\n   some cases (such as Access Control Lists (ACLs)), the order of data\n   items is significant and comprises part of the configured data.\n \n**(5) Delete this text:**\n\nOLD:\n\n   There are two parts to this:\n\n    1.  A Network Management System (NMS) could optimize Access Control Lists (ACLs) for\n      performance reasons.\n\n   2.  Unless the device or NMS is configured with adequate rules and guided by administrators with extensive experience, reordering ACLs can introduce significant security risks.\n\n\n**(6) Make this change**\n\nOLD:\n\n   This document provides guidelines for\n   considering manageability and operations. It introduces no new\n   security concerns.\n\n   The provision of a management portal to a network device provides a\n   Making the protocol under development be manageable through a\n   management protocol creates a vulnerability to a new source of\n   attacks. Only management protocols with adequate security mechanisms,\n   such as state-of-the-art encryption, mutual authentication, message-integrity protection, and\n   authorization, should be used.\n\n   The security implications of password-based authentication should be taken into\n   account when designing a New Protocol or Protocol Extension. In particular, the\n   authentication mechanisms recommended for new protocols or protocol extensions\n   should provide adequate security; for instance, authentication based purely on\n   passwords is unlikely to provide an adequate level of security.\n\n   While a standard description of a protocol's manageable parameters facilitates\n   legitimate operation, it may also inadvertently simplify an attacker's efforts\n   to understand and manipulate the protocol.\n \n   A well-designed protocol is usually more stable and secure. A\n   protocol that can be managed and inspected offers the operator a\n   better chance of spotting and quarantining any attacks. Conversely,\n   making a protocol easy to inspect is a risk if the wrong person\n   inspects it.\n \n   If security events cause logs and/or notifications/alerts, a\n   concerted attack might be able to be mounted by causing an excess of\n   these events. In other words, the security-management mechanisms\n   could constitute a security vulnerability. The management of\n   security aspects is important ({{sec-security-mgmt}}).\n \nNEW:\n\n   This document provides guidelines for Protocol Designers for\n   considering manageability and operations. It introduces no new\n   security concerns.\n\n**(7) Make this change**\n\nOLD:\n\n   Greg Mirsky, and Marco Tiloca.\n\nNEW:\n\n   Greg Mirsky, Marco Tiloca, and Jacqueline McCall.",
       "createdAt": "2026-03-08T06:50:07Z",
-      "updatedAt": "2026-03-08T07:20:53Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-16T02:43:12Z",
+      "closedAt": "2026-03-16T02:43:12Z",
       "comments": []
     },
     {
@@ -16260,7 +16260,7 @@
       "id": "PR_kwDOOWPBqs7I1LJY",
       "title": "229-Sec-Dir Review",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/230",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "sbarguil",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -16269,17 +16269,19 @@
       ],
       "body": "",
       "createdAt": "2026-03-08T07:14:41Z",
-      "updatedAt": "2026-03-08T07:20:36Z",
+      "updatedAt": "2026-03-16T02:43:12Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "5214c15db43bff6f97d151d721424f798a7bb464",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "229-sec-dir",
       "headRefOid": "7e5c959fccfb99070376da9a8321b2b1effe17a2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-03-16T02:43:10Z",
+      "mergedAt": "2026-03-16T02:43:10Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "4d697c532bacad112a344e88bb39ca00bdfa7ce8"
+      },
       "comments": [],
       "reviews": [
         {
@@ -16293,6 +16295,19 @@
           "body": "Thanks @sbarguil\n ",
           "createdAt": "2026-03-08T07:20:16Z",
           "updatedAt": "2026-03-08T07:20:16Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7rgg4V",
+          "commit": {
+            "abbreviatedOid": "7e5c959"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-03-16T02:43:01Z",
+          "updatedAt": "2026-03-16T02:43:01Z",
           "comments": []
         }
       ]
