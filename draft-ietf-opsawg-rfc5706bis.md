@@ -284,7 +284,7 @@ This document does not describe interoperability requirements. As such, it does 
       workloads. In this document, the term is used generically to mean
       any managed entity implementing the protocol under consideration.
 
-   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}} 
+   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
       combination of:
 
