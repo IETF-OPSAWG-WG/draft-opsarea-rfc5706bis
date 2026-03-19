@@ -210,7 +210,7 @@ contributor:
    If Protocol Designers conclude that the technology can be
    managed solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
-   but it is a decision that should be explicit in a operational considerations discussion
+   but it is a decision that should be explicit in an operational considerations discussion
    -- that this is how the protocol will need to be operated and managed.
    Protocol Designers should avoid deferring operations and manageability to a later
    phase of the development of the specification.
@@ -284,7 +284,7 @@ This document does not describe interoperability requirements. As such, it does 
       workloads. In this document, the term is used generically to mean
       any managed entity implementing the protocol under consideration.
 
-   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
+   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}} 
       {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
       combination of:
 
@@ -299,11 +299,11 @@ This document does not describe interoperability requirements. As such, it does 
          They also involve corrective and preventive measures to make the
          managed network run more effectively.
 
-     The broader concept of "operations and management" that is the
-     subject of this document encompasses OAM, in addition to other
-     management and provisioning tools and concepts. This is
-     sometimes known as "OAM and Management" or "O&M" as
-     explained in {{?RFC6291}}.
+      The broader concept of "operations and management" that is the
+      subject of this document encompasses OAM, in addition to other
+      management and provisioning tools and concepts. This is
+      sometimes known as "OAM and Management" or "O&M" as
+      explained in {{RFC6291}}.
 
    *  Operator: A person or organization responsible for deploying and managing
       systems, services, or networks that run or rely on a protocol implementation.
@@ -314,7 +314,7 @@ This document does not describe interoperability requirements. As such, it does 
       in this broad sense unless the context explicitly requires a narrower
       scope.
 
-   *  Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}
+   *  Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
 
    *  Problem: See {{I-D.ietf-nmop-terminology}}.
 
@@ -1134,8 +1134,8 @@ DM         DM        DM     --> concrete/detailed model
    What information should be maintained across reboots of the device,
    or restarts of the management system?
 
-   "Requirements for Configuration Management of IP-based Networks"{
-    {?RFC3139}} discusses requirements for configuration management, including
+   "Requirements for Configuration Management of IP-based Networks"
+    {{?RFC3139}} discusses requirements for configuration management, including
     discussion of different levels of management, high-level policies,
     network-wide configuration data, and device-local configuration. Network
     configuration extends beyond simple multi-device push or pull operations.
