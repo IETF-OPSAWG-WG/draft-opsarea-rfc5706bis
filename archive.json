@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-17T01:06:15.849026+00:00",
+  "timestamp": "2026-03-22T01:09:40.929704+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3198,9 +3198,17 @@
       "labels": [],
       "body": "The current definition says:\n\n> New Protocol and Protocol Extension: These terms are used in this \n> document to identify entirely new protocols, new versions of existing \n> protocols, and extensions to protocols.\n\nThe focus is on protocols.  Services, for example, and the reuse of protocols to create them (services, procedures, mechanisms, etc.)  are not covered.\n\nI believe we definitely want those types of documents to have Operational Considerations.",
       "createdAt": "2026-01-29T14:26:00Z",
-      "updatedAt": "2026-01-29T14:26:00Z",
+      "updatedAt": "2026-03-19T04:19:02Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Yes, although we don't want more terms that we have to add in throughout the document as \"New Protocols, Protocol Extensions, Services, Applications, other Experiences.\"\n\nMaybe we add a sentence to this definition to say:\nThe application of new protocols and protocol extensions for different scenarios and to deliver services is assumed to form part of this definition.",
+          "createdAt": "2026-03-19T04:19:02Z",
+          "updatedAt": "2026-03-19T04:19:02Z"
+        }
+      ]
     },
     {
       "number": 206,
@@ -3262,10 +3270,12 @@
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "candidate to close?"
+      ],
       "body": "A provisional slot is secured: https://github.com/IETF-OPS-AD/OPSAREA-meetings/blob/main/ietf125.md \n",
       "createdAt": "2026-02-19T06:20:06Z",
-      "updatedAt": "2026-02-19T06:20:06Z",
+      "updatedAt": "2026-03-19T04:19:46Z",
       "closedAt": null,
       "comments": []
     },
@@ -3439,7 +3449,7 @@
       "labels": [],
       "body": "Hi, \n\nAs per previous discussions, I've now published a draft to provide more information on security operations. Could you add a reference to point to https://datatracker.ietf.org/doc/draft-parsons-opsawg-security-operations in the Impact on Security Operations section, so readers can find more information? ",
       "createdAt": "2026-03-05T10:13:15Z",
-      "updatedAt": "2026-03-05T19:28:30Z",
+      "updatedAt": "2026-03-19T04:15:51Z",
       "closedAt": null,
       "comments": [
         {
@@ -3455,6 +3465,13 @@
           "body": "Hi, \nI'm happy with that path forward :)",
           "createdAt": "2026-03-05T19:28:30Z",
           "updatedAt": "2026-03-05T19:28:30Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "My hearing of Michael's presentation in OPSAWG was that people were all over the I-D thinking how important it is. I have no objection to inserting an Informational reference at this stage. I think it is likely that before our work becomes an RFC, Michael's work will have been adopted, so everything will come out in the wash.",
+          "createdAt": "2026-03-19T04:15:51Z",
+          "updatedAt": "2026-03-19T04:15:51Z"
         }
       ]
     },
@@ -3505,6 +3522,26 @@
           "updatedAt": "2026-03-11T14:40:07Z"
         }
       ]
+    },
+    {
+      "number": 233,
+      "id": "I_kwDOOWPBqs70Ux-2",
+      "title": "Tim Winters INT-Dir review",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/233",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "AdrianFarrel"
+      ],
+      "labels": [
+        "DIR Review"
+      ],
+      "body": "Summary: I found this document clear and concise with the purpose of this\ndocument.  Appendix A has an excellent set of questions for protocol designers.\n I have some suggestions for improving how operation considerations over the\ninternet.\n\nINTAREA:\n\nThis document should suggest that protocol designs consider all aspects IPv6\nwhen using IP as part of the operation and management solution.  For example,\nreducing the need for fragmentation and leverage appropriate MTU sizes when\nmaking operational considerations.   Another area that you may want to consider\ntunnel behavior if the operation and management solution will need to deal with\ntunnels as part of the solution.\n\nIn both cases, it would be helpful to suggest to authors to consider these\nfactors when documenting the management and operation solution for new or\nextended protocols.\n\nI looked thru the document for references to Internet protocols (DHCP/IP).  The\nreferences to IP based protocols such as the reference to Router Alert were\naccurate.\n\nNits:\n - RFC3139 has an error in the reference.\n - Section 2 - Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang] needs a \".\" \n- {{RFC6291}} has an error with the reference. \n- - Section 1.2\n \"explicit in a operational considerations discussion\" -> \"explicit in an operational considerations discussion\"\n",
+      "createdAt": "2026-03-19T03:41:39Z",
+      "updatedAt": "2026-03-19T04:11:49Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -16687,6 +16724,108 @@
           "body": "Thanks @cpignata. ",
           "createdAt": "2026-03-14T12:37:20Z",
           "updatedAt": "2026-03-14T12:37:20Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 234,
+      "id": "PR_kwDOOWPBqs7LvMyz",
+      "title": "Nits from Tim Winters review",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/234",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "DIR Review"
+      ],
+      "body": "Fixing the nits on #233 \r\nMore substantive issues need more work",
+      "createdAt": "2026-03-19T03:53:29Z",
+      "updatedAt": "2026-03-19T04:11:22Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "4d697c532bacad112a344e88bb39ca00bdfa7ce8",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-1-1",
+      "headRefOid": "b13d0e4c3debe8384e768e75b9361e55f545e289",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7sypYl",
+          "commit": {
+            "abbreviatedOid": "22fefc6"
+          },
+          "author": "github-actions",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-19T03:53:54Z",
+          "updatedAt": "2026-03-19T03:53:55Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "````suggestion\n   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}\n````",
+              "createdAt": "2026-03-19T03:53:54Z",
+              "updatedAt": "2026-03-19T03:53:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7syywI",
+          "commit": {
+            "abbreviatedOid": "b13d0e4"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-03-19T04:11:22Z",
+          "updatedAt": "2026-03-19T04:11:22Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 235,
+      "id": "PR_kwDOOWPBqs7LvXb3",
+      "title": "Update acknowledgements",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/235",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Tim Winters per #233",
+      "createdAt": "2026-03-19T04:13:17Z",
+      "updatedAt": "2026-03-19T04:23:04Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "4d697c532bacad112a344e88bb39ca00bdfa7ce8",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-2",
+      "headRefOid": "43db750dca95dba9c8b05dac3c6c9cdb9c2659a2",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7sy6Ll",
+          "commit": {
+            "abbreviatedOid": "43db750"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-03-19T04:23:04Z",
+          "updatedAt": "2026-03-19T04:23:04Z",
           "comments": []
         }
       ]
