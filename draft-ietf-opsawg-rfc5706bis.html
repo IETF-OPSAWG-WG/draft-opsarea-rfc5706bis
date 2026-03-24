@@ -25,25 +25,25 @@
    the IETF Stream that define New Protocols or Protocol Extensions or describe their use (including relevant YANG
    Models), while providing an escape clause if no new considerations are identified. 
     ' name="description">
-<meta content="xml2rfc 3.31.0" name="generator">
+<meta content="xml2rfc 3.32.0" name="generator">
 <meta content="management" name="keyword">
 <meta content="operations" name="keyword">
 <meta content="operations and management" name="keyword">
 <meta content="ops considerations" name="keyword">
 <meta content="draft-ietf-opsawg-rfc5706bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.31.0
+  xml2rfc 3.32.0
     Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
     lxml 6.0.2
-    platformdirs 4.5.1
+    platformdirs 4.9.4
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.32.5
-    wcwidth 0.3.0
+    wcwidth 0.6.0
 -->
 <link href="draft-ietf-opsawg-rfc5706bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1068,7 +1068,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 17 September 2026</td>
+<td class="center">Expires 25 September 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1087,12 +1087,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-03-16" class="published">16 March 2026</time>
+<time datetime="2026-03-24" class="published">24 March 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-09-17">17 September 2026</time></dd>
+<dd class="expires"><time datetime="2026-09-25">25 September 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1157,7 +1157,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 17 September 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 25 September 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1482,7 +1482,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-1.2-5">If Protocol Designers conclude that the technology can be
    managed solely by using Proprietary Interfaces or that it does
    not need any structured or standardized Data Model, this might be fine,
-   but it is a decision that should be explicit in a operational considerations discussion
+   but it is a decision that should be explicit in an operational considerations discussion
    -- that this is how the protocol will need to be operated and managed.
    Protocol Designers should avoid deferring operations and manageability to a later
    phase of the development of the specification.<a href="#section-1.2-5" class="pilcrow">¶</a></p>
@@ -1584,52 +1584,47 @@ They also involve corrective and preventive measures to make the
 managed network run more effectively.<a href="#section-2-3.9.2.3.1" class="pilcrow">¶</a></p>
 </li>
           </ol>
+<p id="section-2-3.9.3">
+The broader concept of "operations and management" that is the
+subject of this document encompasses OAM, in addition to other
+management and provisioning tools and concepts. This is
+sometimes known as "OAM and Management" or "O&amp;M" as
+explained in <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>.<a href="#section-2-3.9.3" class="pilcrow">¶</a></p>
 </li>
-      </ul>
-<div class="alignLeft art-text artwork" id="section-2-4">
-<pre>
- The broader concept of "operations and management" that is the
- subject of this document encompasses OAM, in addition to other
- management and provisioning tools and concepts. This is
- sometimes known as "OAM and Management" or "O&amp;M" as
- explained in {{RFC6291}}.
-</pre><a href="#section-2-4" class="pilcrow">¶</a>
-</div>
-<ul class="normal">
-<li class="normal" id="section-2-5.1">
-          <p id="section-2-5.1.1">Operator: A person or organization responsible for deploying and managing
+        <li class="normal" id="section-2-3.10">
+          <p id="section-2-3.10.1">Operator: A person or organization responsible for deploying and managing
 systems, services, or networks that run or rely on a protocol implementation.
 This includes, but is not limited to,
 network operators, cloud service administrators, IoT device fleet
 managers, home network administrators, and DNS/NTP server
 administrators. The term "operator" is used throughout this document
 in this broad sense unless the context explicitly requires a narrower
-scope.<a href="#section-2-5.1.1" class="pilcrow">¶</a></p>
+scope.<a href="#section-2-3.10.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-5.2">
-          <p id="section-2-5.2.1">Probable Root Cause: See <span>[<a href="#I-D.ietf-nmop-network-incident-yang" class="cite xref">I-D.ietf-nmop-network-incident-yang</a>]</span><a href="#section-2-5.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.11">
+          <p id="section-2-3.11.1">Probable Root Cause: See <span>[<a href="#I-D.ietf-nmop-network-incident-yang" class="cite xref">I-D.ietf-nmop-network-incident-yang</a>]</span>.<a href="#section-2-3.11.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-5.3">
-          <p id="section-2-5.3.1">Problem: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2-5.3.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-3.12">
+          <p id="section-2-3.12.1">Problem: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2-3.12.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-5.4">
-          <p id="section-2-5.4.1">Proprietary Interface: An interface to manage a network element
+        <li class="normal" id="section-2-3.13">
+          <p id="section-2-3.13.1">Proprietary Interface: An interface to manage a network element
 that is not standardized. As such, the user interface, syntax, and
 semantics typically vary significantly between implementations.
 Examples of proprietary interfaces include Command Line
 Interface (CLI), management web portal and Browser User Interface (BUI),
 Graphical User Interface (GUI), and vendor-specific application
-programming interface (API).<a href="#section-2-5.4.1" class="pilcrow">¶</a></p>
+programming interface (API).<a href="#section-2-3.13.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-5.5">
-          <p id="section-2-5.5.1">Protocol Designer: An individual, a group of
+        <li class="normal" id="section-2-3.14">
+          <p id="section-2-3.14.1">Protocol Designer: An individual, a group of
 people, or an IETF WG involved in the development and specification
-of New Protocols or Protocol Extensions.<a href="#section-2-5.5.1" class="pilcrow">¶</a></p>
+of New Protocols or Protocol Extensions.<a href="#section-2-3.14.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-5.6">
-          <p id="section-2-5.6.1">Technical Document:
+        <li class="normal" id="section-2-3.15">
+          <p id="section-2-3.15.1">Technical Document:
 This includes any document that describes the
-design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.<a href="#section-2-5.6.1" class="pilcrow">¶</a></p>
+design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.<a href="#section-2-3.15.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
@@ -2528,8 +2523,8 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    as default values and modes of operation.<a href="#section-5.5-2" class="pilcrow">¶</a></p>
 <p id="section-5.5-3">What information should be maintained across reboots of the device,
    or restarts of the management system?<a href="#section-5.5-3" class="pilcrow">¶</a></p>
-<p id="section-5.5-4">"Requirements for Configuration Management of IP-based Networks"{
-    {?RFC3139}} discusses requirements for configuration management, including
+<p id="section-5.5-4">"Requirements for Configuration Management of IP-based Networks"
+    <span>[<a href="#RFC3139" class="cite xref">RFC3139</a>]</span> discusses requirements for configuration management, including
     discussion of different levels of management, high-level policies,
     network-wide configuration data, and device-local configuration. Network
     configuration extends beyond simple multi-device push or pull operations.
@@ -3135,6 +3130,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC2975">[RFC2975]</dt>
         <dd>
 <span class="refAuthor">Aboba, B.</span>, <span class="refAuthor">Arkko, J.</span>, and <span class="refAuthor">D. Harrington</span>, <span class="refTitle">"Introduction to Accounting Management"</span>, <span class="seriesInfo">RFC 2975</span>, <span class="seriesInfo">DOI 10.17487/RFC2975</span>, <time datetime="2000-10" class="refDate">October 2000</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2975">https://www.rfc-editor.org/rfc/rfc2975</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3139">[RFC3139]</dt>
+        <dd>
+<span class="refAuthor">Sanchez, L.</span>, <span class="refAuthor">McCloghrie, K.</span>, and <span class="refAuthor">J. Saperia</span>, <span class="refTitle">"Requirements for Configuration Management of IP-based Networks"</span>, <span class="seriesInfo">RFC 3139</span>, <span class="seriesInfo">DOI 10.17487/RFC3139</span>, <time datetime="2001-06" class="refDate">June 2001</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3139">https://www.rfc-editor.org/rfc/rfc3139</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC3198">[RFC3198]</dt>
         <dd>
