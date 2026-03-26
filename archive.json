@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-22T01:09:40.929704+00:00",
+  "timestamp": "2026-03-26T01:14:30.645150+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3266,7 +3266,7 @@
       "id": "I_kwDOOWPBqs7sGyzY",
       "title": "Status Update in OPSAREA@IETF125",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/210",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -3275,8 +3275,8 @@
       ],
       "body": "A provisional slot is secured: https://github.com/IETF-OPS-AD/OPSAREA-meetings/blob/main/ietf125.md \n",
       "createdAt": "2026-02-19T06:20:06Z",
-      "updatedAt": "2026-03-19T04:19:46Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-24T16:00:16Z",
+      "closedAt": "2026-03-24T16:00:16Z",
       "comments": []
     },
     {
@@ -3423,7 +3423,7 @@
       "id": "I_kwDOOWPBqs7uJ7gW",
       "title": "Update IETF Expert Topics Wiki",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/225",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -3433,8 +3433,8 @@
       ],
       "body": "I updated the page to reference the draft as you can see at: https://wiki.ietf.org/en/group/iesg/ExpertTopics#guidelines-for-considering-operations-and-management-in-ietf-specifications\n\nLet me know if we need to say more.\n\nThis page is referenced in the doc write-up \n\n> 10. Several IETF Areas have assembled [lists of common issues that their\n>     reviewers encounter][6]. For which areas have such issues been identified\n>     and addressed? For which does this still need to happen in subsequent\n>     reviews?\n\n\n",
       "createdAt": "2026-02-26T13:29:00Z",
-      "updatedAt": "2026-02-26T13:29:00Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-24T15:59:55Z",
+      "closedAt": "2026-03-24T15:59:55Z",
       "comments": []
     },
     {
@@ -3539,9 +3539,17 @@
       ],
       "body": "Summary: I found this document clear and concise with the purpose of this\ndocument.  Appendix A has an excellent set of questions for protocol designers.\n I have some suggestions for improving how operation considerations over the\ninternet.\n\nINTAREA:\n\nThis document should suggest that protocol designs consider all aspects IPv6\nwhen using IP as part of the operation and management solution.  For example,\nreducing the need for fragmentation and leverage appropriate MTU sizes when\nmaking operational considerations.   Another area that you may want to consider\ntunnel behavior if the operation and management solution will need to deal with\ntunnels as part of the solution.\n\nIn both cases, it would be helpful to suggest to authors to consider these\nfactors when documenting the management and operation solution for new or\nextended protocols.\n\nI looked thru the document for references to Internet protocols (DHCP/IP).  The\nreferences to IP based protocols such as the reference to Router Alert were\naccurate.\n\nNits:\n - RFC3139 has an error in the reference.\n - Section 2 - Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang] needs a \".\" \n- {{RFC6291}} has an error with the reference. \n- - Section 1.2\n \"explicit in a operational considerations discussion\" -> \"explicit in an operational considerations discussion\"\n",
       "createdAt": "2026-03-19T03:41:39Z",
-      "updatedAt": "2026-03-19T04:11:49Z",
+      "updatedAt": "2026-03-24T15:59:36Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> This document should suggest that protocol designs consider all aspects IPv6 when using IP as part of the operation and management solution. For example, reducing the need for fragmentation and leverage appropriate MTU sizes when making operational considerations. Another area that you may want to consider tunnel behavior if the operation and management solution will need to deal with tunnels as part of the solution.\n> \n> In both cases, it would be helpful to suggest to authors to consider these factors when documenting the management and operation solution for new or extended protocols.\n\nReopen the issues as I think this part of the review is still to be discussed. Only the nit part was fixed in #234 ",
+          "createdAt": "2026-03-24T15:59:36Z",
+          "updatedAt": "2026-03-24T15:59:36Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -16733,7 +16741,7 @@
       "id": "PR_kwDOOWPBqs7LvMyz",
       "title": "Nits from Tim Winters review",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/234",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -16742,17 +16750,19 @@
       ],
       "body": "Fixing the nits on #233 \r\nMore substantive issues need more work",
       "createdAt": "2026-03-19T03:53:29Z",
-      "updatedAt": "2026-03-19T04:11:22Z",
+      "updatedAt": "2026-03-24T12:26:20Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "4d697c532bacad112a344e88bb39ca00bdfa7ce8",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-1-1",
       "headRefOid": "b13d0e4c3debe8384e768e75b9361e55f545e289",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-03-24T12:26:17Z",
+      "mergedAt": "2026-03-24T12:26:17Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "4c1039bd46856593a1b2ad17ef6bced921cb8741"
+      },
       "comments": [],
       "reviews": [
         {
@@ -16787,6 +16797,19 @@
           "createdAt": "2026-03-19T04:11:22Z",
           "updatedAt": "2026-03-19T04:11:22Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7uV8cr",
+          "commit": {
+            "abbreviatedOid": "b13d0e4"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-03-24T12:26:03Z",
+          "updatedAt": "2026-03-24T12:26:03Z",
+          "comments": []
         }
       ]
     },
@@ -16795,24 +16818,26 @@
       "id": "PR_kwDOOWPBqs7LvXb3",
       "title": "Update acknowledgements",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/235",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Tim Winters per #233",
       "createdAt": "2026-03-19T04:13:17Z",
-      "updatedAt": "2026-03-19T04:23:04Z",
+      "updatedAt": "2026-03-24T12:26:40Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "4d697c532bacad112a344e88bb39ca00bdfa7ce8",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-2",
       "headRefOid": "43db750dca95dba9c8b05dac3c6c9cdb9c2659a2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-03-24T12:26:38Z",
+      "mergedAt": "2026-03-24T12:26:38Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "fd18c54d9e4f813b8a85886a1b2cb5f789ba4087"
+      },
       "comments": [],
       "reviews": [
         {
