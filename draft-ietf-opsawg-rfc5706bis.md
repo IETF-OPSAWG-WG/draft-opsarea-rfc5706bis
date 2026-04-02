@@ -1625,8 +1625,15 @@ The decision to incorporate all or part of these items into their work remains w
 
 * What security-related monitoring is needed? ({{sec-security-mgmt}})
    * What security events should be logged? ({{sec-security-mgmt}})
+   * Do log entries contain privacy-sensitive information that must be controlled or redacted before sharing with authorized third parties? ({{sec-security-mgmt}})
    * What statistics help detect attacks? ({{sec-security-mgmt}})
    * What security and privacy threats do management operations introduce? ({{sec-security-mgmt}})
+
+* What access controls are needed on management interfaces? ({{sec-security-mgmt}})
+   * Do management interfaces support role-based access control and the principle of least privilege? ({{sec-security-mgmt}})
+   * How are ACLs maintained, updated, and verified for consistency across devices? ({{sec-security-mgmt}})
+
+* How are secure transport, authentication, identity, and key/credential management addressed for management operations? ({{sec-security-mgmt}})
 
 # Changes Since RFC 5706 {#sec-changes-since-5706}
 
