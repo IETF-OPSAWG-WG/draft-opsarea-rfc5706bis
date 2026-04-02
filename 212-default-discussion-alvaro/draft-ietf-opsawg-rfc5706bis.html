@@ -1823,9 +1823,8 @@ considerations.<a href="#section-3.4-4.1" class="pilcrow">¶</a></p>
    constant, set the default value as a function of the
    variable to reduce the
    risk of problems caused by technology advancement.<a href="#section-4.1-6" class="pilcrow">¶</a></p>
-<p id="section-4.1-7">Even when a protocol element is operating with its default value, it
-   must be possible for an operator to retrieve the actual value in use,
-   or at minimum to determine that the element is running at a known
+<p id="section-4.1-7">It must always be possible for an operator to retrieve the actual value in use,
+   to determine that the element is running at a known
    default. This is important for troubleshooting, auditing, and ensuring
    consistent behavior across implementations.<a href="#section-4.1-7" class="pilcrow">¶</a></p>
 <p id="section-4.1-8">For example:<a href="#section-4.1-8" class="pilcrow">¶</a></p>
@@ -2257,9 +2256,9 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    types of operations are allowed, what protocol-specific events might
    occur, which events can be counted, and for which events an operator
    should be notified.<a href="#section-5.3-3" class="pilcrow">¶</a></p>
-<p id="section-5.3-4">There may be a need to support both a human interface (e.g., for
+<p id="section-5.3-4">There may be a need to support both CLI (e.g., for
    troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and Cause analysis). The APIs and human interfaces should
+   monitoring and Cause analysis). The APIs and CLI should
    expose consistent information so that an operator receives the same
    view of the protocol state regardless of which interface is used.
    Counter definitions, in particular, should be unambiguous and
