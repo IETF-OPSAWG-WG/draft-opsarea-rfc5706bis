@@ -508,6 +508,12 @@ For example:
    variable to reduce the
    risk of problems caused by technology advancement.
 
+   Even when a protocol element is operating with its default value, it
+   must be possible for an operator to retrieve the actual value in use,
+   or at minimum to determine that the element is running at a known
+   default. This is important for troubleshooting, auditing, and ensuring
+   consistent behavior across implementations.
+
    For example:
 
    > Where protocols involve cryptographic keys, Protocol Designers should
@@ -896,6 +902,14 @@ DM         DM        DM     --> concrete/detailed model
    types of operations are allowed, what protocol-specific events might
    occur, which events can be counted, and for which events an operator
    should be notified.
+
+   There may be a need to support both a human interface (e.g., for
+   troubleshooting) and a programmatic interface (e.g., for automated
+   monitoring and Cause analysis). The APIs and human interfaces should
+   expose consistent information so that an operator receives the same
+   view of the protocol state regardless of which interface is used.
+   Counter definitions, in particular, should be unambiguous and
+   consistently defined across both types of interface.
 
    When defining management information, it is important to categorize
    data into configuration, operational state, and statistics. Conflating
