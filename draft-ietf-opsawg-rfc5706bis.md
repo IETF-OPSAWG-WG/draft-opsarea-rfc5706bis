@@ -508,9 +508,8 @@ For example:
    variable to reduce the
    risk of problems caused by technology advancement.
 
-   Even when a protocol element is operating with its default value, it
-   must be possible for an operator to retrieve the actual value in use,
-   or at minimum to determine that the element is running at a known
+   It must always be possible for an operator to retrieve the actual value in use,
+   to determine that the element is running at a known
    default. This is important for troubleshooting, auditing, and ensuring
    consistent behavior across implementations.
 
@@ -903,9 +902,9 @@ DM         DM        DM     --> concrete/detailed model
    occur, which events can be counted, and for which events an operator
    should be notified.
 
-   There may be a need to support both a human interface (e.g., for
+   There may be a need to support both CLI (e.g., for
    troubleshooting) and a programmatic interface (e.g., for automated
-   monitoring and Cause analysis). The APIs and human interfaces should
+   monitoring and Cause analysis). The APIs and CLI should
    expose consistent information so that an operator receives the same
    view of the protocol state regardless of which interface is used.
    Counter definitions, in particular, should be unambiguous and
