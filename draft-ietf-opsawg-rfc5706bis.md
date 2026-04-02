@@ -679,6 +679,8 @@ Consider the operators' requirement for digital forensics from the network or en
 
 Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.
 
+For further information on the security operations considerations discussed in this section, refer to {{?I-D.parsons-opsawg-security-operations}}.
+
 
 ##  Verifying Correct Operation {#sec-oper-verify}
 
