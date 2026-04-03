@@ -545,7 +545,7 @@ For example:
    changes, where they are required, and how they can be introduced in
    a manner that facilitates deployment.
 
-   Incentivizing good security operation practices when migrating to the New Protocol or Protocol Extension should be encouraged. For example, patching is fundamental for security operations and can be incentivized if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.
+   Security operations ({{sec-impact-secops}}) are important to ensure the stability and security of networks. Good security operation practices should be encouraged when migrating to a New Protocol or Protocol Extension. For example, patching (i.e., installing new versions that have fixes for security vulnerabilities) is fundamental for security operations, and can be made much easier if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.
 
    When Protocol Designers are considering how deployments should transition to the New Protocol or Protocol Extension, impacts to current techniques employed by operators should be documented and mitigations included, where possible, so that consistent security operations and management can be achieved. Note that transitioning between security mechanisms can be challenging, but it is not desirable to take an easier approach if that leaves data in an open or less-protected
 state during the transition.
