@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-26T01:14:30.645150+00:00",
+  "timestamp": "2026-04-05T01:18:15.899245+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2913,11 +2913,12 @@
         "AdrianFarrel"
       ],
       "labels": [
+        "candidate to close?",
         "DIR Review"
       ],
       "body": "Per Lars' TSV Dir review...\n\n> This document provides **no** evidence that would motivate why this additional\n> work is something that needs to be put on all IETF WGs **now**\n\nWe should find two examples where the absence of Operational Considerations early in the specification cycle has had a detrimental effect on the protocol, its operations, or its deployability.\n\nPossible considerations:\nQUIC\nSRv6\nMPLS",
       "createdAt": "2026-01-22T14:20:50Z",
-      "updatedAt": "2026-01-26T17:17:04Z",
+      "updatedAt": "2026-04-02T12:47:05Z",
       "closedAt": null,
       "comments": [
         {
@@ -2933,6 +2934,13 @@
           "body": "I have made  PR for the long version of what we might do for this (more work is needed).\n\nWe could significantly reduce this by simply naming the examples, but that might give rise to more questions.\n\nFurther, we could move this work to an appendix. \n\nA final option is to reject the requested change as not something the document itself needs to include because the WG has already decided on the \"need\" and documents like this don't need to justify themselves in that way.",
           "createdAt": "2026-01-26T17:17:04Z",
           "updatedAt": "2026-01-26T17:17:04Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "This is linked to the PR that is a candidate to close.",
+          "createdAt": "2026-04-02T12:46:58Z",
+          "updatedAt": "2026-04-02T12:46:58Z"
         }
       ]
     },
@@ -3194,11 +3202,13 @@
       "state": "OPEN",
       "author": "aretana",
       "authorAssociation": "CONTRIBUTOR",
-      "assignees": [],
+      "assignees": [
+        "xorrkaz"
+      ],
       "labels": [],
       "body": "The current definition says:\n\n> New Protocol and Protocol Extension: These terms are used in this \n> document to identify entirely new protocols, new versions of existing \n> protocols, and extensions to protocols.\n\nThe focus is on protocols.  Services, for example, and the reuse of protocols to create them (services, procedures, mechanisms, etc.)  are not covered.\n\nI believe we definitely want those types of documents to have Operational Considerations.",
       "createdAt": "2026-01-29T14:26:00Z",
-      "updatedAt": "2026-03-19T04:19:02Z",
+      "updatedAt": "2026-04-02T13:06:31Z",
       "closedAt": null,
       "comments": [
         {
@@ -3248,17 +3258,19 @@
       "id": "I_kwDOOWPBqs7n3NRY",
       "title": "Feedback from Marco Tiloca",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/208",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "xorrkaz"
+      ],
       "labels": [
         "Authors-Experience"
       ],
       "body": "Thanks for the early feedback on the ACE draft. While I do try to include focused operational remarks inline in Internet Drafts, my experience in thinking of a whole \"Operational Considerations\" section is quite limited so far, so it is going to be a learning process :-)\n\nBased on Thomas' review for the ACE draft (thanks!), I actually relied on the now replaced draft-opsarea-rfc5706bis, which helped a lot and ultimately enabled me to write the new section. That document already was a well-organized collection of experience and wisdom from the OPS Area.\n\nAt the same time, as not experienced in operational issues and considerations, I was also a bit hesitant about how exactly to proceed and what to cover that was pertinent and relevant for that ACE document. I started to wish for a very crisp and actionable checklist. Hence, I ended up producing that list in the form of personal notes, also based on the review checklist for the OPS Directorate [1].\n\nLater on, I could see that draft-ietf-opsawg-rfc5706bis introduced essentially that sort of checklist in Appendix A and its subsections. That's very helpful!\n\nI can give some specific feedback on that Appendix A:\n\n* The appendix is organized into six subsections, covering different classes of considerations.\n\n  I wonder if those can be somehow re-organized into only two classes \"Operational\" and \"Management\", i.e., those considered in the review checklist for the OPS Directorate [1]. Some of the current six classes might become sub-classes of the two main ones above.\n\n* Specifically on the points in Appendix A.6:\n\n  - Unlike in [1], the bullet list does not mention management considerations about other security-related aspects, such as access control and key distribution, although both points are covered in Section 5.8.\n\n  - \"What security threats do management operations introduce?\" could very well be \"What security and privacy threats do management operations introduce?\"\n\n    Precisely when revising the ACE draft, I realized and wrote down how log entries might include privacy-sensitive information, which ought to be stripped away if/when sharing those entries with authorized third parties.\n\nI hope this helps!\n\nBest,\n/Marco\n\n[1] https://github.com/IETF-OPS-DIR/Review-Template/blob/main/review-checklist.md",
       "createdAt": "2026-02-03T08:47:55Z",
-      "updatedAt": "2026-02-03T08:47:55Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-03T13:28:24Z",
+      "closedAt": "2026-04-03T13:28:24Z",
       "comments": []
     },
     {
@@ -3284,16 +3296,26 @@
       "id": "I_kwDOOWPBqs7sOwW6",
       "title": "Default discussion (Alvaro)",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/212",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "xorrkaz"
+      ],
       "labels": [],
       "body": "Related to #209 \n\nCheck if any of this removed text needs to be maintained/moved to other parts of the draft:\n\n>    There may be a need to support both a human interface (e.g., for\n>    troubleshooting) and a programmatic interface (e.g., for automated\n>    monitoring and Cause analysis). The application programming\n>    interfaces (APIs) and the human interfaces might benefit from being similar\n>    to ensure that the information exposed by both is\n>    consistent when presented to an operator. It is also relevant to\n>    identify consistent methods for determining information, such as\n>    what is counted in specific counters.\n> \n>    Protocol Designers should consider what management operations are\n>    expected to be performed as a result of the deployment of the\n>    protocol -- for example whether write operations are permitted on\n>    specific nodes (e.g., routers, hosts, including servers), or whether notifications for alarms or other\n>    events will be expected.\n\n\n\n>    To simplify configuration, Protocol Designers should consider\n>    specifying reasonable defaults, including default modes and\n>    parameters. For example, it could be helpful or necessary to specify\n>    default values for modes, timers, default state of logical control\n>    variables, default transports, and so on. Even if default values are\n>    used, it must be possible to retrieve all the actual values or at\n>    least an indication that known default values are being used.",
       "createdAt": "2026-02-19T14:32:18Z",
-      "updatedAt": "2026-02-19T14:32:18Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-04-03T13:28:39Z",
+      "closedAt": "2026-04-03T13:28:39Z",
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I believe this has been done.  When I look at `sec-install` I see:\n\n\"The New Protocol or Protocol Extension should be able to operate \"out of the box\".\n   To simplify configuration, Protocol Designers should\n   specify reasonable defaults, including default modes and\n   parameters. For example, define\n   default values for modes, timers, default state of logical control\n   variables, default transports, and so on.\"",
+          "createdAt": "2026-04-02T12:44:10Z",
+          "updatedAt": "2026-04-02T12:44:10Z"
+        }
+      ]
     },
     {
       "number": 214,
@@ -3539,7 +3561,7 @@
       ],
       "body": "Summary: I found this document clear and concise with the purpose of this\ndocument.  Appendix A has an excellent set of questions for protocol designers.\n I have some suggestions for improving how operation considerations over the\ninternet.\n\nINTAREA:\n\nThis document should suggest that protocol designs consider all aspects IPv6\nwhen using IP as part of the operation and management solution.  For example,\nreducing the need for fragmentation and leverage appropriate MTU sizes when\nmaking operational considerations.   Another area that you may want to consider\ntunnel behavior if the operation and management solution will need to deal with\ntunnels as part of the solution.\n\nIn both cases, it would be helpful to suggest to authors to consider these\nfactors when documenting the management and operation solution for new or\nextended protocols.\n\nI looked thru the document for references to Internet protocols (DHCP/IP).  The\nreferences to IP based protocols such as the reference to Router Alert were\naccurate.\n\nNits:\n - RFC3139 has an error in the reference.\n - Section 2 - Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang] needs a \".\" \n- {{RFC6291}} has an error with the reference. \n- - Section 1.2\n \"explicit in a operational considerations discussion\" -> \"explicit in an operational considerations discussion\"\n",
       "createdAt": "2026-03-19T03:41:39Z",
-      "updatedAt": "2026-03-24T15:59:36Z",
+      "updatedAt": "2026-04-02T13:08:47Z",
       "closedAt": null,
       "comments": [
         {
@@ -3548,8 +3570,141 @@
           "body": "> This document should suggest that protocol designs consider all aspects IPv6 when using IP as part of the operation and management solution. For example, reducing the need for fragmentation and leverage appropriate MTU sizes when making operational considerations. Another area that you may want to consider tunnel behavior if the operation and management solution will need to deal with tunnels as part of the solution.\n> \n> In both cases, it would be helpful to suggest to authors to consider these factors when documenting the management and operation solution for new or extended protocols.\n\nReopen the issues as I think this part of the review is still to be discussed. Only the nit part was fixed in #234 ",
           "createdAt": "2026-03-24T15:59:36Z",
           "updatedAt": "2026-03-24T15:59:36Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Perhaps the solution to this is to ask Tim for a pointer to a document that covers some of the points like MTU, fragmentation, tunnels, etc. rather than rewriting such text here.",
+          "createdAt": "2026-04-02T13:08:47Z",
+          "updatedAt": "2026-04-02T13:08:47Z"
         }
       ]
+    },
+    {
+      "number": 236,
+      "id": "I_kwDOOWPBqs76A3N6",
+      "title": "Not All Examples Support the Document's Thesis",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/236",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "cpignata"
+      ],
+      "labels": [
+        "Authors-Experience"
+      ],
+      "body": "From Eliot Lear:\n\n* Not all of the examples in the document support an Operational\n    Considerations section.  Case and point is the reference to RFC2439\n    in Section 4.  Can you think of any text that would have gone into\n    an Operational Considerations that would have changed the outcome\n    that is described.  In fact, arguably a substantial portion of that\n    Proposed Standard addresses operational considerations!  There's\n    configuration examples, processing costs, etc.\n\n  * RFC2439 also demonstrates something else, and it is not alone:\n    sometimes we do not fully understand how a protocol will be used in\n    the wild.  You properly cite RFC *5218* (one of my favorite RFCs\n    *ever* (we should have a contest!)), but that document makes clear\n    the difficulty: imagine having had this requirement for RFCs 822 or\n    1945.  Not only did we not know what the operational considerations\n    should be, we did not know what we did not know!  Sometimes the\n    operational considerations are in the application of the\n    specification, and not within the sole context of the specification\n    itself, and I am specifically concerned about this when it comes to\n    Section 4.5.\n",
+      "createdAt": "2026-04-02T13:13:34Z",
+      "updatedAt": "2026-04-02T13:24:34Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 237,
+      "id": "I_kwDOOWPBqs76BIlv",
+      "title": "Is This Really About an Operational Considerations Section?",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/237",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "AdrianFarrel"
+      ],
+      "labels": [
+        "Authors-Experience"
+      ],
+      "body": "From Eliot Lear:\n\nI am not entirely certain that you are looking for an \"Operational\n    Considerations\" section so much as the answer within the IETF prior\n    to publication to the question, \u201cDid you consider how this\n    specification would be used in the field?\u201d  That is, in general, the\n    question I would expect ops directorate reviewers to ask, and\n    there's a lot of good discussion in this document on how to help\n    them evaluate answers, not to mention for the authors to know what\n    they should be thinking about.  RFC 1958\u2019s advice on avoiding\n    options was and remains *excellent*.",
+      "createdAt": "2026-04-02T13:26:06Z",
+      "updatedAt": "2026-04-02T13:34:45Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 238,
+      "id": "I_kwDOOWPBqs76BJ2I",
+      "title": "Operational Considerations Should Be Close To the Spec",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/238",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "bclaise"
+      ],
+      "labels": [
+        "Authors-Experience"
+      ],
+      "body": "From Eliot Lear:\n\nBut the discussion about\n    whether to have an option needs to be within the working group, and\n    the text around how to use an option should (IMHO) be proximate to\n    its specification, and not divorced.  If it's really complex to use,\n    requiring a lot of text, then RFC 1958 seems to apply even more.\n\nAnd perhaps related:\n\nRegarding Section 4.4, I just chastised authors for \"burying the\n    lede\" in terms of stating what the requirements to run a protocol\n    are.  And this one gets hairy.  A good example is certificates and\n    time.  Is NTP required or is roughtime required?  And if so, if you\n    bury that in operational considerations, might it waste a lot of\n    time (so to speak)?  I like the idea of listing out that sort of\n    dependency right up front.",
+      "createdAt": "2026-04-02T13:27:05Z",
+      "updatedAt": "2026-04-02T13:34:36Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 239,
+      "id": "I_kwDOOWPBqs76BLm7",
+      "title": "Sometimes Ops Considerations May Require Their Own Document",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/239",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "sbarguil"
+      ],
+      "labels": [
+        "Authors-Experience"
+      ],
+      "body": "From Eliot Lear:\n\nSimilarly, the discussion about coexistence is tricky, and somewhat\n    relates to not only RFC 5218 but the workshop the IAB held some time\n    ago on Internet Technology Adoption and Transition (RFC 7305).  You\n    might need an entire RFC to discuss the effects of transitioning at\n    at the IP layer, requiring that the discussion be deferred or simply\n    placed elsewhere.  Indeed we have an entire working group for v6\n    operations!  For little stuff, it might just require some normative\n    behavior definitions here or there.",
+      "createdAt": "2026-04-02T13:28:26Z",
+      "updatedAt": "2026-04-02T13:34:19Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Med has said that we could add a sentence to the escape clause that says if there is another document that describes the operational and management considerations, then reference that.  No duplication of text is required.",
+          "createdAt": "2026-04-02T13:29:17Z",
+          "updatedAt": "2026-04-02T13:29:17Z"
+        }
+      ]
+    },
+    {
+      "number": 240,
+      "id": "I_kwDOOWPBqs76BQWt",
+      "title": "Can All Things Be Known/Done At Design Time",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/240",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "Ranchen666"
+      ],
+      "labels": [
+        "Authors-Experience"
+      ],
+      "body": "From Eliot Lear:\n\n  Tooling required by security operators should be documented in the\n      design and deployment of a New Protocol or Protocol Extension.\n\n    That's great as a concept, but it seems to me has the lingering\n    effect of delaying the publication of work as an RFC because\n    E-LACKOFTOOLING.  BTW, I'm all for tooling, but indications of\n    exploit evolve and are a lagging technology because we may not know\n    how the specification will be exploited.\n\n  * Similarly, with network management, it may be that the subject\n    requires a lot of consideration once there is in fact operational\n    experience.  Prematurely writing that down can lead people down the\n    wrong path, and worse an ossified path at that.",
+      "createdAt": "2026-04-02T13:32:03Z",
+      "updatedAt": "2026-04-02T13:34:26Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 245,
+      "id": "I_kwDOOWPBqs76Eva1",
+      "title": "Frist mention of SecOps needs a forward pointer to {{sec-impact-secops}}",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/245",
+      "state": "CLOSED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "AdrianFarrel"
+      ],
+      "labels": [],
+      "body": "That'll need a little re-wording",
+      "createdAt": "2026-04-02T16:02:44Z",
+      "updatedAt": "2026-04-03T13:29:00Z",
+      "closedAt": "2026-04-03T13:29:00Z",
+      "comments": []
     }
   ],
   "pulls": [
@@ -16851,6 +17006,435 @@
           "body": "",
           "createdAt": "2026-03-19T04:23:04Z",
           "updatedAt": "2026-03-19T04:23:04Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 241,
+      "id": "PR_kwDOOWPBqs7Pkj1A",
+      "title": "Add a sentence to further clarify New Protocol and Protocol Extension.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/241",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "This is from Adrian to address #205.",
+      "createdAt": "2026-04-02T14:00:05Z",
+      "updatedAt": "2026-04-03T05:20:57Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "9aaeeb2a2f4f877b3b60001ae5af6a36976baa42",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "205-extend-the-definition-of-new-protocol-or-protocol-extension",
+      "headRefOid": "1c4f0c2ccfde09aa76b5286fa6b5cb5c927abb04",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7xgUcX",
+          "commit": {
+            "abbreviatedOid": "2278419"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Upper case \"New Protocols ...\"\nRemove the \"assumption\" and make a clear statement.",
+          "createdAt": "2026-04-02T16:25:39Z",
+          "updatedAt": "2026-04-02T16:25:39Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xp_p7",
+          "commit": {
+            "abbreviatedOid": "1c4f0c2"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-03T05:20:57Z",
+          "updatedAt": "2026-04-03T05:20:57Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 242,
+      "id": "PR_kwDOOWPBqs7PkzJa",
+      "title": "Address Marco's remaining comments.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/242",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Note: we may decide to just close this PR. The changes requested were to the checklist, which I plan to update holistically.  That said, I liked the suggestion about logging privacy (just ran into this in a project myself).\r\n\r\nI was less sold on adding ACL matter, but I proposed some text anyway. Do we want to be this specific?  I can argue that in the case of something like SSH over QUIC, maybe thinking through ACLs is a good thing.",
+      "createdAt": "2026-04-02T14:13:39Z",
+      "updatedAt": "2026-04-03T13:28:24Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "040ce762c23f6025feae1adc5dea8994d08a1083",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "208-feedback-from-marco-tiloca",
+      "headRefOid": "804a4e3be0f854abfce0699594cb8c444833aa0e",
+      "closedAt": "2026-04-03T13:28:22Z",
+      "mergedAt": "2026-04-03T13:28:22Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "5c198cffd8e9df123bf3bf3827ffd7e51a4bda0a"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7xgRzJ",
+          "commit": {
+            "abbreviatedOid": "804a4e3"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "I could go either way on this.\nThe risk is that we are creeping towards pulling all of the checklist back into the main document.\nBut the proposed change is inoffensive.",
+          "createdAt": "2026-04-02T16:23:22Z",
+          "updatedAt": "2026-04-02T16:23:22Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xjpd-",
+          "commit": {
+            "abbreviatedOid": "804a4e3"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Per comment, I'd be OK to not do this, but am also OK to do it.",
+          "createdAt": "2026-04-02T19:10:20Z",
+          "updatedAt": "2026-04-02T19:10:20Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xqAjG",
+          "commit": {
+            "abbreviatedOid": "804a4e3"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-03T05:22:55Z",
+          "updatedAt": "2026-04-03T05:22:55Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "id": "PR_kwDOOWPBqs7PlFPI",
+      "title": "Return some text lost in revisions.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/243",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "I'm not sold we need all of this, but I do like the point about human vs. programmatic consistency.  This is something I can't say my employer as always been good at, but it's good to reinforce.\r\n\r\nThe bit about knowing when the defaults are used I feel is less important, and we may have consciously removed that text previously.",
+      "createdAt": "2026-04-02T14:28:03Z",
+      "updatedAt": "2026-04-03T13:28:40Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "040ce762c23f6025feae1adc5dea8994d08a1083",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "212-default-discussion-alvaro",
+      "headRefOid": "9cc2fc7102038589ff1a0b51061d4f0d735f2470",
+      "closedAt": "2026-04-03T13:28:38Z",
+      "mergedAt": "2026-04-03T13:28:37Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "5ed4a420434e8c3e7c7e63e733c07702c2bef4c3"
+      },
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "CLI is better, I think.\r\n\r\nI mean, \u201chuman\u201d would embrace GUI, too. But GUI is always built on top of some form of API.\r\n\r\nA\r\n\r\n \r\n\r\nFrom: Joe Clarke ***@***.***> \r\nSent: 02 April 2026 19:03\r\nTo: IETF-OPSAWG-WG/draft-opsarea-rfc5706bis ***@***.***>\r\nCc: AdrianFarrel ***@***.***>; Review requested ***@***.***>\r\nSubject: Re: [IETF-OPSAWG-WG/draft-opsarea-rfc5706bis] Return some text lost in revisions. (PR #243)\r\n\r\n \r\n\r\n@xorrkaz commented on this pull request.\r\n\r\n  _____  \r\n\r\nIn draft-ietf-opsawg-rfc5706bis.md <https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/243?email_source=notifications&email_token=ADBLGMYJYURJTUPNU5MLSST4T2TNJA5CNFSNUABKM5UWIORPF5TWS5BNNB2WEL2QOVWGYUTFOF2WK43UKJSXM2LFO4XTIMBVGIZDQNBXHA2KM4TFMFZW63VQOJSXM2LFO5PXEZLROVSXG5DFMSSWK5TFNZ2K64DSL5ZGK5TJMV3V6Y3MNFRWW#discussion_r3029528011> :\r\n\r\n> @@ -897,6 +903,14 @@ DM         DM        DM     --> concrete/detailed model\r\n    occur, which events can be counted, and for which events an operator\r\n    should be notified.\r\n \r\n+   There may be a need to support both a human interface (e.g., for\r\n\r\nWe had already defined \"CLI\" to be a \"human interface\". I replace \"human here with CLI. Does that help?\r\n\r\n\u2014\r\nReply to this email directly, view it on GitHub <https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/243?email_source=notifications&email_token=ADBLGMZDXRMMBB4UL7PU7F34T2TNJA5CNFSNUABKM5UWIORPF5TWS5BNNB2WEL2QOVWGYUTFOF2WK43UKJSXM2LFO4XTIMBVGIZDQNBXHA2KM4TFMFZW63VQOJSXM2LFO5PXEZLROVSXG5DFMSSWK5TFNZ2L24DSL5ZGK5TJMV3V63TPORUWM2LDMF2GS33OONPWG3DJMNVQ#discussion_r3029528011> , or unsubscribe <https://github.com/notifications/unsubscribe-auth/ADBLGM55P7TJOBFM7RMWMK34T2TNJAVCNFSM6AAAAACXKVKSD2VHI2DSMVQWIX3LMV43YUDVNRWFEZLROVSXG5CSMV3GSZLXHM2DANJSGI4DINZYGQ> .\r\nYou are receiving this because your review was requested.Message ID: ***@***.***>\r\n\r\n",
+          "createdAt": "2026-04-02T19:05:33Z",
+          "updatedAt": "2026-04-02T19:05:33Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7xgI6G",
+          "commit": {
+            "abbreviatedOid": "81474cd"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-02T16:16:26Z",
+          "updatedAt": "2026-04-02T16:16:26Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I don't see the value in \"Even when...\"\nI would start as \"It must always be possible for...\"\n\nI would also strike \", or at a minimum....\" because if you retrieve information that the default value is in use then you have retrieved the actual value in use.",
+              "createdAt": "2026-04-02T16:16:26Z",
+              "updatedAt": "2026-04-02T16:16:26Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xgNWl",
+          "commit": {
+            "abbreviatedOid": "81474cd"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-02T16:19:55Z",
+          "updatedAt": "2026-04-02T16:19:56Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "Mutter, mutter!\nThere is no such thing as a human interface.\nAll interfaces are programmatic, but sometimes an application is written on top of the programmatic interface that facilitates easy access by a human.\nEssentially this paragraph is saying that all interfaces over which operational data is retrieved must supply the same data at any time. But I prefer the word consistent because it is perfectly fine for one interface to supply detail and another to summarise.",
+              "createdAt": "2026-04-02T16:19:56Z",
+              "updatedAt": "2026-04-02T16:19:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xgOvS",
+          "commit": {
+            "abbreviatedOid": "81474cd"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "I am not really happy with either paragraph!\nI added comments in the proposed change",
+          "createdAt": "2026-04-02T16:20:50Z",
+          "updatedAt": "2026-04-02T16:20:50Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xiONP",
+          "commit": {
+            "abbreviatedOid": "81474cd"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-02T18:01:41Z",
+          "updatedAt": "2026-04-02T18:01:42Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I incorporated your feedback.",
+              "createdAt": "2026-04-02T18:01:41Z",
+              "updatedAt": "2026-04-02T18:01:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xiPVw",
+          "commit": {
+            "abbreviatedOid": "81474cd"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-02T18:02:38Z",
+          "updatedAt": "2026-04-02T18:02:38Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "We had already defined \"CLI\" to be a \"human interface\".  I replace \"human here with CLI.  Does that help?",
+              "createdAt": "2026-04-02T18:02:38Z",
+              "updatedAt": "2026-04-02T18:02:38Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xjlsc",
+          "commit": {
+            "abbreviatedOid": "9cc2fc7"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "I'm OK with what we have here",
+          "createdAt": "2026-04-02T19:08:10Z",
+          "updatedAt": "2026-04-02T19:08:10Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xqA7n",
+          "commit": {
+            "abbreviatedOid": "9cc2fc7"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-03T05:23:46Z",
+          "updatedAt": "2026-04-03T05:23:46Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "id": "PR_kwDOOWPBqs7PljbO",
+      "title": "Add a reference to Michael P's SecOps document.",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/244",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-04-02T14:52:55Z",
+      "updatedAt": "2026-04-02T16:01:46Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "040ce762c23f6025feae1adc5dea8994d08a1083",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "228-additional-information-for-security-operations",
+      "headRefOid": "17809c1c36973b4331aee5cdce5506187fca5552",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7xf00N",
+          "commit": {
+            "abbreviatedOid": "17809c1"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Yes, this is about the right change",
+          "createdAt": "2026-04-02T16:01:46Z",
+          "updatedAt": "2026-04-02T16:01:46Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 246,
+      "id": "PR_kwDOOWPBqs7PmysJ",
+      "title": "Forward reference for SecOps",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/246",
+      "state": "MERGED",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "AdrianFarrel"
+      ],
+      "labels": [
+        "documentation"
+      ],
+      "body": "Fix for #245 \r\n\r\nInclude a pointer to the SecOps section.\r\nAlso fix the (cough) American usage of \"incentivized\" which is misleading to a British ear.",
+      "createdAt": "2026-04-02T16:08:52Z",
+      "updatedAt": "2026-04-03T13:29:01Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "040ce762c23f6025feae1adc5dea8994d08a1083",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-2",
+      "headRefOid": "33f92fd4b3ef09fa653652712b55349f69b3bd3f",
+      "closedAt": "2026-04-03T13:28:59Z",
+      "mergedAt": "2026-04-03T13:28:59Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "7fd404ba10705d6799c1cb4fb99d83f26d83d14c"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7xgxyg",
+          "commit": {
+            "abbreviatedOid": "50d5035"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "Works for me.",
+          "createdAt": "2026-04-02T16:51:21Z",
+          "updatedAt": "2026-04-02T16:51:21Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xg3kZ",
+          "commit": {
+            "abbreviatedOid": "50d5035"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-02T16:56:05Z",
+          "updatedAt": "2026-04-02T16:56:05Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\n   Security operations ({{sec-impact-secops}}) are important to ensure the stability and security of networks. Good security operation practices should be encouraged when migrating to a New Protocol or Protocol Extension. For example, patching (i.e., installing new versions that have fixes for security vulnerabilities) is fundamental for security operations, and can be made much easier if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.\n```",
+              "createdAt": "2026-04-02T16:56:05Z",
+              "updatedAt": "2026-04-02T16:56:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xjgni",
+          "commit": {
+            "abbreviatedOid": "50d5035"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-02T19:03:36Z",
+          "updatedAt": "2026-04-02T19:03:37Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Sure. Add those brackets!",
+              "createdAt": "2026-04-02T19:03:36Z",
+              "updatedAt": "2026-04-02T19:03:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xjnVL",
+          "commit": {
+            "abbreviatedOid": "33f92fd"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-02T19:09:08Z",
+          "updatedAt": "2026-04-02T19:09:08Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7xp_G2",
+          "commit": {
+            "abbreviatedOid": "33f92fd"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-03T05:19:50Z",
+          "updatedAt": "2026-04-03T05:19:50Z",
           "comments": []
         }
       ]
