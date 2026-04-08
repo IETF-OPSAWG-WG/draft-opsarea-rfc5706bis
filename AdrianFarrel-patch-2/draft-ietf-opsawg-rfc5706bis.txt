@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 4 October 2026                               Old Dog Consulting
+Expires: 10 October 2026                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            2 April 2026
+                                                            8 April 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 October 2026.
+   This Internet-Draft will expire on 10 October 2026.
 
 Copyright Notice
 
@@ -203,6 +203,14 @@ Table of Contents
    use of management technologies, such as management protocols and the
    design of management Data Models.  Both topics should be described
    within the "Operational Considerations" section.
+
+   It is possible that the operational considerations will require
+   significant amounts of text and need to be presented in a separate
+   document.  This saves the protocol specification from becoming
+   overwhelmed or bloated.  In this case the Operational Considerations
+   section may contain just a short overview description of the material
+   and a reference to other documents that contain the details, but
+   those references must be normative.
 
 1.2.  Audience
 
@@ -569,6 +577,11 @@ Table of Contents
    For parameters that can vary (e.g., speed-dependent), instead of
    using a constant, set the default value as a function of the variable
    to reduce the risk of problems caused by technology advancement.
+
+   It must always be possible for an operator to retrieve the actual
+   value in use, to determine that the element is running at a known
+   default.  This is important for troubleshooting, auditing, and
+   ensuring consistent behavior across implementations.
 
    For example:
 
@@ -1031,6 +1044,14 @@ Table of Contents
    types of operations are allowed, what protocol-specific events might
    occur, which events can be counted, and for which events an operator
    should be notified.
+
+   There may be a need to support both CLI (e.g., for troubleshooting)
+   and a programmatic interface (e.g., for automated monitoring and
+   Cause analysis).  The APIs and CLI should expose consistent
+   information so that an operator receives the same view of the
+   protocol state regardless of which interface is used.  Counter
+   definitions, in particular, should be unambiguous and consistently
+   defined across both types of interface.
 
    When defining management information, it is important to categorize
    data into configuration, operational state, and statistics.
@@ -2242,10 +2263,27 @@ A.7.  Security Management
 
       -  What security events should be logged?  (Section 5.8)
 
+      -  Do log entries contain privacy-sensitive information that must
+         be controlled or redacted before sharing with authorized third
+         parties?  (Section 5.8)
+
       -  What statistics help detect attacks?  (Section 5.8)
 
       -  What security and privacy threats do management operations
          introduce?  (Section 5.8)
+
+   *  What access controls are needed on management interfaces?
+      (Section 5.8)
+
+      -  Do management interfaces support role-based access control and
+         the principle of least privilege?  (Section 5.8)
+
+      -  How are ACLs maintained, updated, and verified for consistency
+         across devices?  (Section 5.8)
+
+   *  How are secure transport, authentication, identity, and key/
+      credential management addressed for management operations?
+      (Section 5.8)
 
 Appendix B.  Changes Since RFC 5706
 
