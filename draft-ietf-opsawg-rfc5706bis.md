@@ -275,6 +275,9 @@ This document does not describe interoperability requirements. As such, it does 
    *  New Protocol and Protocol Extension: These terms are used in this document
       to identify entirely new protocols, new versions of existing
       protocols, and extensions to protocols.
+      The application of New Protocols and Protocol Extensions to different
+      scenarios, and their use in delivering services, procedures, mechanisms,
+      or applications, falls within the scope of this definition.
 
    *  Network Device: A device that implements one or more network
       protocols and participates in network operations. This term
