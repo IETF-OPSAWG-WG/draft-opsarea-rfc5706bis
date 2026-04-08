@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 5 October 2026                               Old Dog Consulting
+Expires: 10 October 2026                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            3 April 2026
+                                                            8 April 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 October 2026.
+   This Internet-Draft will expire on 10 October 2026.
 
 Copyright Notice
 
@@ -322,7 +322,10 @@ Table of Contents
 
    *  New Protocol and Protocol Extension: These terms are used in this
       document to identify entirely new protocols, new versions of
-      existing protocols, and extensions to protocols.
+      existing protocols, and extensions to protocols.  The application
+      of New Protocols and Protocol Extensions to different scenarios,
+      and their use in delivering services, procedures, mechanisms, or
+      applications, falls within the scope of this definition.
 
    *  Network Device: A device that implements one or more network
       protocols and participates in network operations.  This term
