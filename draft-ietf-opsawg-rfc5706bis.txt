@@ -798,6 +798,10 @@ Table of Contents
    rebuild such tooling would greatly reduce the effectiveness of
    security operators, so protocol extensibility should be considered.
 
+   For further information on the security operations considerations
+   discussed in this section, refer to
+   [I-D.parsons-opsawg-security-operations].
+
 4.6.  Verifying Correct Operation
 
    An important function that should be provided is guidance on how to
@@ -1873,6 +1877,13 @@ Table of Contents
               suit-mti-23, 22 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-suit-
               mti-23>.
+
+   [I-D.parsons-opsawg-security-operations]
+              P, M. and F. D, "Security Operations Fundamentals and
+              Guidance", Work in Progress, Internet-Draft, draft-
+              parsons-opsawg-security-operations-00, 27 February 2026,
+              <https://datatracker.ietf.org/doc/html/draft-parsons-
+              opsawg-security-operations-00>.
 
    [IETF-HACKATHONS]
               IETF, "IETF Hackathons", 1 May 2025,
