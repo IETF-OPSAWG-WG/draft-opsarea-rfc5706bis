@@ -171,6 +171,11 @@ contributor:
    management protocols and the design of management Data Models. Both topics should
    be described within the "Operational Considerations" section.
 
+   It is possible that the operational considerations will require significant amounts of text and need to be presented in
+   a separate document. This saves the protocol specification from becoming overwhelmed or bloated. In this case the
+   Operational Considerations section may contain just a short overview description of the material and a reference to
+   other documents that contain the details, but those references must be normative.
+
 ##  Audience {#sec-audience}
 
    The guidelines are intended to be useful to authors
