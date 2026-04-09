@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-05T01:18:15.899245+00:00",
+  "timestamp": "2026-04-09T01:06:59.544413+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3199,7 +3199,7 @@
       "id": "I_kwDOOWPBqs7mund5",
       "title": "Extend the definition of New Protocol or Protocol Extension.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/205",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "aretana",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -3208,8 +3208,8 @@
       "labels": [],
       "body": "The current definition says:\n\n> New Protocol and Protocol Extension: These terms are used in this \n> document to identify entirely new protocols, new versions of existing \n> protocols, and extensions to protocols.\n\nThe focus is on protocols.  Services, for example, and the reuse of protocols to create them (services, procedures, mechanisms, etc.)  are not covered.\n\nI believe we definitely want those types of documents to have Operational Considerations.",
       "createdAt": "2026-01-29T14:26:00Z",
-      "updatedAt": "2026-04-02T13:06:31Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-08T17:29:33Z",
+      "closedAt": "2026-04-08T17:29:33Z",
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -3464,15 +3464,15 @@
       "id": "I_kwDOOWPBqs7wCwAz",
       "title": "Additional information for Security Operations",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/228",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "michael-p-1",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Hi, \n\nAs per previous discussions, I've now published a draft to provide more information on security operations. Could you add a reference to point to https://datatracker.ietf.org/doc/draft-parsons-opsawg-security-operations in the Impact on Security Operations section, so readers can find more information? ",
       "createdAt": "2026-03-05T10:13:15Z",
-      "updatedAt": "2026-03-19T04:15:51Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-08T17:30:05Z",
+      "closedAt": "2026-04-08T17:30:05Z",
       "comments": [
         {
           "author": "xorrkaz",
@@ -3616,9 +3616,24 @@
       ],
       "body": "From Eliot Lear:\n\nI am not entirely certain that you are looking for an \"Operational\n    Considerations\" section so much as the answer within the IETF prior\n    to publication to the question, \u201cDid you consider how this\n    specification would be used in the field?\u201d  That is, in general, the\n    question I would expect ops directorate reviewers to ask, and\n    there's a lot of good discussion in this document on how to help\n    them evaluate answers, not to mention for the authors to know what\n    they should be thinking about.  RFC 1958\u2019s advice on avoiding\n    options was and remains *excellent*.",
       "createdAt": "2026-04-02T13:26:06Z",
-      "updatedAt": "2026-04-02T13:34:45Z",
+      "updatedAt": "2026-04-08T17:02:57Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Eliot's comment is reasonable except s/would/could/\nBut the question is larger and about all of the things that might be needed or plain useful in order to facilitate better operations of the protocol.\nFurther, this is not:\n- a crib sheet for reviewers (that is on the wiki)\n- a cheat sheet for authors to dodge the reviews\n\nI don't see anything actionable in this comment.",
+          "createdAt": "2026-04-08T16:21:45Z",
+          "updatedAt": "2026-04-08T16:22:02Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "And that's fair.  If we think there is nothing to do, we can collect comments and have a consolidated response to him.  In this case, it can be, like you say, we have the wiki for a reviewers, and we want authors to give operations serious thought.",
+          "createdAt": "2026-04-08T17:02:57Z",
+          "updatedAt": "2026-04-08T17:02:57Z"
+        }
+      ]
     },
     {
       "number": 238,
@@ -3656,7 +3671,7 @@
       ],
       "body": "From Eliot Lear:\n\nSimilarly, the discussion about coexistence is tricky, and somewhat\n    relates to not only RFC 5218 but the workshop the IAB held some time\n    ago on Internet Technology Adoption and Transition (RFC 7305).  You\n    might need an entire RFC to discuss the effects of transitioning at\n    at the IP layer, requiring that the discussion be deferred or simply\n    placed elsewhere.  Indeed we have an entire working group for v6\n    operations!  For little stuff, it might just require some normative\n    behavior definitions here or there.",
       "createdAt": "2026-04-02T13:28:26Z",
-      "updatedAt": "2026-04-02T13:34:19Z",
+      "updatedAt": "2026-04-08T16:00:50Z",
       "closedAt": null,
       "comments": [
         {
@@ -3665,6 +3680,13 @@
           "body": "Med has said that we could add a sentence to the escape clause that says if there is another document that describes the operational and management considerations, then reference that.  No duplication of text is required.",
           "createdAt": "2026-04-02T13:29:17Z",
           "updatedAt": "2026-04-02T13:29:17Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'm not sure it is the escape clause, per se. More it is just that the section can punt to another document, but only if that document is normatively referenced.\nThere is a lot of history in this being used as a wriggle with security considerations where, rather than do the work, a new I-D was opened or even just postulated, and then the main draft punted and became an RFC without any real security work being done.\nEngineers are endlessly inventive in finding ways to avoid work.",
+          "createdAt": "2026-04-08T16:00:49Z",
+          "updatedAt": "2026-04-08T16:00:49Z"
         }
       ]
     },
@@ -17015,24 +17037,26 @@
       "id": "PR_kwDOOWPBqs7Pkj1A",
       "title": "Add a sentence to further clarify New Protocol and Protocol Extension.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/241",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "This is from Adrian to address #205.",
       "createdAt": "2026-04-02T14:00:05Z",
-      "updatedAt": "2026-04-03T05:20:57Z",
+      "updatedAt": "2026-04-08T17:29:33Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "9aaeeb2a2f4f877b3b60001ae5af6a36976baa42",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "205-extend-the-definition-of-new-protocol-or-protocol-extension",
       "headRefOid": "1c4f0c2ccfde09aa76b5286fa6b5cb5c927abb04",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-08T17:29:31Z",
+      "mergedAt": "2026-04-08T17:29:31Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "9b9a6e721fee1dc58f7df3dae04d37396a4ae709"
+      },
       "comments": [],
       "reviews": [
         {
@@ -17059,6 +17083,19 @@
           "body": "",
           "createdAt": "2026-04-03T05:20:57Z",
           "updatedAt": "2026-04-03T05:20:57Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7y-fPN",
+          "commit": {
+            "abbreviatedOid": "1c4f0c2"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-08T15:56:12Z",
+          "updatedAt": "2026-04-08T15:56:12Z",
           "comments": []
         }
       ]
@@ -17292,24 +17329,26 @@
       "id": "PR_kwDOOWPBqs7PljbO",
       "title": "Add a reference to Michael P's SecOps document.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/244",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-04-02T14:52:55Z",
-      "updatedAt": "2026-04-02T16:01:46Z",
+      "updatedAt": "2026-04-08T17:30:05Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "040ce762c23f6025feae1adc5dea8994d08a1083",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "228-additional-information-for-security-operations",
       "headRefOid": "17809c1c36973b4331aee5cdce5506187fca5552",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-08T17:30:03Z",
+      "mergedAt": "2026-04-08T17:30:03Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "016f7d2481ab293b2a65e3b067a4bacb50da9c2c"
+      },
       "comments": [],
       "reviews": [
         {
@@ -17436,6 +17475,94 @@
           "createdAt": "2026-04-03T05:19:50Z",
           "updatedAt": "2026-04-03T05:19:50Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 247,
+      "id": "PR_kwDOOWPBqs7Q3WHn",
+      "title": "What if the Operational Considerations are in another document",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/247",
+      "state": "OPEN",
+      "author": "AdrianFarrel",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Short piece of text to address #239",
+      "createdAt": "2026-04-08T16:07:46Z",
+      "updatedAt": "2026-04-08T17:48:32Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "7fd404ba10705d6799c1cb4fb99d83f26d83d14c",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "AdrianFarrel-patch-2",
+      "headRefOid": "4f972ff2efe24265d2ae715657ec043fb4fb0cc1",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Well, I meant that the protocol spec might become lost amongst all the operational details.\r\n\r\n \r\n\r\nFrom: Joe Clarke ***@***.***> \r\nSent: 08 April 2026 18:32\r\nTo: IETF-OPSAWG-WG/draft-opsarea-rfc5706bis ***@***.***>\r\nCc: AdrianFarrel ***@***.***>; Author ***@***.***>\r\nSubject: Re: [IETF-OPSAWG-WG/draft-opsarea-rfc5706bis] What if the Operational Considerations are in another document (PR #247)\r\n\r\n \r\n\r\n@xorrkaz commented on this pull request.\r\n\r\nI like the \"must be normative\" bit. I had a general wording question.\r\n\r\n  _____  \r\n\r\nIn draft-ietf-opsawg-rfc5706bis.md <https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/247#discussion_r3053083141> :\r\n\r\n> @@ -171,6 +171,11 @@ contributor:\r\n    management protocols and the design of management Data Models. Both topics should\r\n    be described within the \"Operational Considerations\" section.\r\n \r\n+   It is possible that the operational considerations will require significant amounts of text and need to be presented in\r\n+   a separate document. This saves the protocol specification from becoming overwhelmed or bloated. In this case the\r\n\r\nIs it better to say \"overwhelming and bloated\"?\r\n\r\n\u2014\r\nReply to this email directly, view it on GitHub <https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/247#pullrequestreview-4077001021> , or unsubscribe <https://github.com/notifications/unsubscribe-auth/ADBLGM5QBO2GJFQ52KFK73T4U2EKVAVCNFSM6AAAAACXRHRDHWVHI2DSMVQWIX3LMV43YUDVNRWFEZLROVSXG5CSMV3GSZLXHM2DANZXGAYDCMBSGE> .\r\nYou are receiving this because you authored the thread.Message ID: ***@***.***>\r\n\r\n",
+          "createdAt": "2026-04-08T17:48:32Z",
+          "updatedAt": "2026-04-08T17:48:32Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs7y-wV-",
+          "commit": {
+            "abbreviatedOid": "0ff49db"
+          },
+          "author": "github-actions",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-08T16:08:15Z",
+          "updatedAt": "2026-04-08T16:08:15Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "````suggestion\n   a separate document. This saves the protocol specification from becoming overwhelmed or bloated. In this case the\n````",
+              "createdAt": "2026-04-08T16:08:15Z",
+              "updatedAt": "2026-04-08T16:25:35Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7y_I2w",
+          "commit": {
+            "abbreviatedOid": "0ff49db"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "typo",
+          "createdAt": "2026-04-08T16:26:04Z",
+          "updatedAt": "2026-04-08T16:26:04Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs7zAhk9",
+          "commit": {
+            "abbreviatedOid": "4f972ff"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "I like the \"must be normative\" bit.  I had a general wording question.",
+          "createdAt": "2026-04-08T17:31:21Z",
+          "updatedAt": "2026-04-08T17:32:04Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Is it better to say \"overwhelming and bloated\"?",
+              "createdAt": "2026-04-08T17:31:21Z",
+              "updatedAt": "2026-04-08T17:32:04Z"
+            }
+          ]
         }
       ]
     }
