@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-09T01:06:59.544413+00:00",
+  "timestamp": "2026-04-12T01:21:36.125239+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -17490,7 +17490,7 @@
       "labels": [],
       "body": "Short piece of text to address #239",
       "createdAt": "2026-04-08T16:07:46Z",
-      "updatedAt": "2026-04-08T17:48:32Z",
+      "updatedAt": "2026-04-11T16:06:07Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "7fd404ba10705d6799c1cb4fb99d83f26d83d14c",
@@ -17508,6 +17508,13 @@
           "body": "Well, I meant that the protocol spec might become lost amongst all the operational details.\r\n\r\n \r\n\r\nFrom: Joe Clarke ***@***.***> \r\nSent: 08 April 2026 18:32\r\nTo: IETF-OPSAWG-WG/draft-opsarea-rfc5706bis ***@***.***>\r\nCc: AdrianFarrel ***@***.***>; Author ***@***.***>\r\nSubject: Re: [IETF-OPSAWG-WG/draft-opsarea-rfc5706bis] What if the Operational Considerations are in another document (PR #247)\r\n\r\n \r\n\r\n@xorrkaz commented on this pull request.\r\n\r\nI like the \"must be normative\" bit. I had a general wording question.\r\n\r\n  _____  \r\n\r\nIn draft-ietf-opsawg-rfc5706bis.md <https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/247#discussion_r3053083141> :\r\n\r\n> @@ -171,6 +171,11 @@ contributor:\r\n    management protocols and the design of management Data Models. Both topics should\r\n    be described within the \"Operational Considerations\" section.\r\n \r\n+   It is possible that the operational considerations will require significant amounts of text and need to be presented in\r\n+   a separate document. This saves the protocol specification from becoming overwhelmed or bloated. In this case the\r\n\r\nIs it better to say \"overwhelming and bloated\"?\r\n\r\n\u2014\r\nReply to this email directly, view it on GitHub <https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/247#pullrequestreview-4077001021> , or unsubscribe <https://github.com/notifications/unsubscribe-auth/ADBLGM5QBO2GJFQ52KFK73T4U2EKVAVCNFSM6AAAAACXRHRDHWVHI2DSMVQWIX3LMV43YUDVNRWFEZLROVSXG5CSMV3GSZLXHM2DANZXGAYDCMBSGE> .\r\nYou are receiving this because you authored the thread.Message ID: ***@***.***>\r\n\r\n",
           "createdAt": "2026-04-08T17:48:32Z",
           "updatedAt": "2026-04-08T17:48:32Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Ah, with that in mind, this text is fine.",
+          "createdAt": "2026-04-11T16:05:59Z",
+          "updatedAt": "2026-04-11T16:05:59Z"
         }
       ],
       "reviews": [
@@ -17563,6 +17570,19 @@
               "updatedAt": "2026-04-08T17:32:04Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs70BJ7M",
+          "commit": {
+            "abbreviatedOid": "4f972ff"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-11T16:06:07Z",
+          "updatedAt": "2026-04-11T16:06:07Z",
+          "comments": []
         }
       ]
     }
