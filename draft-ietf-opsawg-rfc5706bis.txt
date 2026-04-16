@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 15 October 2026                              Old Dog Consulting
+Expires: 18 October 2026                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           13 April 2026
+                                                           16 April 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 October 2026.
+   This Internet-Draft will expire on 18 October 2026.
 
 Copyright Notice
 
@@ -203,6 +203,14 @@ Table of Contents
    use of management technologies, such as management protocols and the
    design of management Data Models.  Both topics should be described
    within the "Operational Considerations" section.
+
+   It is possible that the operational considerations will require
+   significant amounts of text and need to be presented in a separate
+   document.  This saves the protocol specification from becoming
+   overwhelmed or bloated.  In this case the Operational Considerations
+   section may contain just a short overview description of the material
+   and a reference to other documents that contain the details, but
+   those references must be normative.
 
 1.2.  Audience
 
@@ -1825,10 +1833,10 @@ Table of Contents
    [I-D.ietf-ippm-ioam-integrity-yang]
               Iurman, J. and T. Zhou, "A YANG Data Model for In Situ
               Operations, Administration, and Maintenance (IOAM)
-              Integrity Protected Options", Work in Progress, Internet-
-              Draft, draft-ietf-ippm-ioam-integrity-yang-05, 12 January
+              Integrity-Protected Options", Work in Progress, Internet-
+              Draft, draft-ietf-ippm-ioam-integrity-yang-06, 15 April
               2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              ippm-ioam-integrity-yang-05>.
+              ippm-ioam-integrity-yang-06>.
 
    [I-D.ietf-lamps-dilithium-certificates]
               Massimo, J., Kampanakis, P., Turner, S., and B.
