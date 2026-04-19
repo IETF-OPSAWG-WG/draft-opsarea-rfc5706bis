@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-12T01:21:36.125239+00:00",
+  "timestamp": "2026-04-19T01:24:51.369016+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3419,7 +3419,7 @@
       "id": "I_kwDOOWPBqs7uC6UJ",
       "title": "Rtgdir review",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/223",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "Ranchen666",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3428,8 +3428,8 @@
       "labels": [],
       "body": "### Major\n\n- The Abstract frames this as guidance for \u201cNew Protocols or Protocol\nExtensions,\u201d but later text introduces a requirement for an \u201cOperational\nConsiderations\u201d section in \u201cnew RFCs in the IETF Stream,\u201d and Section 3.1\nfurther scopes this to \u201call Internet-Drafts that document a technical\nspecification\u201d (and also mentions architectures and data models/schema). Please\nalign these statements.\n**Ran\uff1aScope consistency: We will unify the scope in the abstract, introduction and section 3.1 to clearly state that this document applies to  New Protocols or  Protocol Extensions or describe their use (including relevant YANG Models).**\n\n- Further, the draft states that its guidance applies to \u201cNew Protocols,\nProtocol Extensions, or architectures\u201d, but the subsequent guidance is largely\nwritten from the perspective of protocol specifications. It is not entirely\nclear how the requirements and expectations around an \u201cOperational\nConsiderations\u201d section should be interpreted for architecture documents, which\nare often Informational and may not define concrete protocol mechanisms or\nmanagement solutions. Some additional clarification on what is expected for\narchitecture documents (e.g., scope, level of detail, and whether purely\ndescriptive operational assumptions are sufficient) would help avoid\ninconsistent interpretation during reviews.\n**Ran\uff1aArchitecture documents: We will add a clarification in Section 3.1 explaining that architecture documents should focus on deployment assumptions, operational impacts, and high-level requirements, rather than detailed configuration parameters.**\n\n- Also, the document appears to apply to YANG data model specifications (as\nimplied by Section 3.1), but these do not clearly fit into the \u201cnew protocol /\nprotocol extension / architecture\u201d categorization used elsewhere. I am unsure\nif they should. Anyways it needs a brief clarification and how the guidance\napplies to them.\n**Ran\uff1a\nIntroduction\nOLD\n   It also\n   introduces a requirement for an \"Operational Considerations\" section\n   in new RFCs in the IETF Stream.\n\nNEW\n   It also introduces a requirement to include an \"Operational Considerations\"\n   section in new RFCs in the IETF Stream that define New Protocols or\n   Protocol Extensions or describe their use (including relevant YANG\n   Models).\nEND**\n\n### Minor\n\n- Throughout the document, the terms \u201coperational\u201d, \u201cmanageability\u201d, and\n\u201coperational and manageability\u201d are used somewhat interchangeably. Section 1.1\nestablishes \u201coperational considerations\u201d as the broader concept, with\nmanageability as a subset, but later usage is not always consistent with this\nframing. As a result, it is sometimes unclear whether references to\n\u201cmanageability\u201d alone are intentional (i.e., specifically limited to management\naspects) or simply shorthand for the broader operational scope. For example, in\nSection 1.2: \u201cIt provides a framework for WGs to ensure that manageability\nconsiderations are an integral part of the protocol design process\u2026\u201d.\nClarification would improve consistency.\n**Ran: We will update the draft and ensure consistent usage throughout the document, replacing \"manageability\" with \"operational\" in broad contexts.**\n\n- Section 5.3 appears to blur the distinction between IMs and YANG DMs. It is\nnot always clear whether authors are expected to provide an explicit IM (e.g.,\ndescribed in English text), whether a reference to a YANG data model is\nsufficient, whether YANG is intended to serve as the IM itself, whether\nsuggesting changes to future YANG extension is enough, or how the guidance\nshould be interpreted when no standalone IM is defined. Some clarification\nwould be helpful.\n**Ran: Please see https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/220**\n\n- Sections 6 and 6.1 introduce guidance on operational tooling and AI-driven\nmanagement, but it is not always clear who the intended audience is or what\nconcrete actions are expected from a protocol designer. Much of the discussion\n(e.g., aggressive querying patterns, telemetry access, overload prevention,\nAI-driven data consumption) appears to relate more directly to the design and\nbehavior of management protocols, implementations, or tooling, rather than to\nprotocol specification choices themselves. While the concerns raised are\nreasonable, either rephrase in a way that explicitly tie these considerations\nback to specific protocol design decisions or move it to appendix.\n**Ran: Section 6.1 (AI Tooling Considerations) already clearly addresses protocol designers and ties AI considerations to specific protocol design decisions (e.g., designing data models to prevent overload, accounting for data integrity). We believe this section is appropriate as is.\nThe current text in section 6 has:\n   Specifically, the following tooling-related aspects should be\n   considered, prioritizing the adaptation of existing tools:\nMaybe update to:\n   Specifically, the following tooling-related aspects should be\n   Considered in the operational considerations section,\n   prioritizing the adaptation of existing tools:**\n\n### Query\n\n- Is there a reason beyond updating RFC 2360 (BCP 22) that this I-D is a BCP?\nThe document is largely framed as guidance, guidelines, and recommendations for\nauthors and reviewers, similar in style and intent to RFC 5706, which was\npublished as Informational.\n**Ran\uff1aAlvaro is handling this.**\n\n### Nits\n\n- s/on Guide for Internet Standards Writers. to obsolete/on \"Guide for Internet\nStandards Writers\" to obsolete/\n\n- s/Protocol Exension/Protocol Extension/\n\n- fix \"troubleshooting of New Protocols or Protocol Extensions and their\nextensions\"\n\n- Appendix A, I am guessing this is meant to be a section header - ##\nDocumentation Requirements?\n**Ran\uff1aEasy fixes.**\n\n",
       "createdAt": "2026-02-26T07:15:42Z",
-      "updatedAt": "2026-02-26T15:06:31Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-17T00:52:19Z",
+      "closedAt": "2026-04-17T00:52:19Z",
       "comments": [
         {
           "author": "xorrkaz",
@@ -3660,7 +3660,7 @@
       "id": "I_kwDOOWPBqs76BLm7",
       "title": "Sometimes Ops Considerations May Require Their Own Document",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/239",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -3671,8 +3671,8 @@
       ],
       "body": "From Eliot Lear:\n\nSimilarly, the discussion about coexistence is tricky, and somewhat\n    relates to not only RFC 5218 but the workshop the IAB held some time\n    ago on Internet Technology Adoption and Transition (RFC 7305).  You\n    might need an entire RFC to discuss the effects of transitioning at\n    at the IP layer, requiring that the discussion be deferred or simply\n    placed elsewhere.  Indeed we have an entire working group for v6\n    operations!  For little stuff, it might just require some normative\n    behavior definitions here or there.",
       "createdAt": "2026-04-02T13:28:26Z",
-      "updatedAt": "2026-04-08T16:00:50Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-16T13:29:23Z",
+      "closedAt": "2026-04-16T13:29:23Z",
       "comments": [
         {
           "author": "xorrkaz",
@@ -3687,6 +3687,13 @@
           "body": "I'm not sure it is the escape clause, per se. More it is just that the section can punt to another document, but only if that document is normatively referenced.\nThere is a lot of history in this being used as a wriggle with security considerations where, rather than do the work, a new I-D was opened or even just postulated, and then the main draft punted and became an RFC without any real security work being done.\nEngineers are endlessly inventive in finding ways to avoid work.",
           "createdAt": "2026-04-08T16:00:49Z",
           "updatedAt": "2026-04-08T16:00:49Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "This has been addressed by #247 .",
+          "createdAt": "2026-04-16T13:29:23Z",
+          "updatedAt": "2026-04-16T13:29:23Z"
         }
       ]
     },
@@ -17483,24 +17490,26 @@
       "id": "PR_kwDOOWPBqs7Q3WHn",
       "title": "What if the Operational Considerations are in another document",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/247",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Short piece of text to address #239",
       "createdAt": "2026-04-08T16:07:46Z",
-      "updatedAt": "2026-04-11T16:06:07Z",
+      "updatedAt": "2026-04-16T13:28:14Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "7fd404ba10705d6799c1cb4fb99d83f26d83d14c",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-2",
       "headRefOid": "4f972ff2efe24265d2ae715657ec043fb4fb0cc1",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-16T13:28:12Z",
+      "mergedAt": "2026-04-16T13:28:12Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64"
+      },
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -17582,6 +17591,19 @@
           "body": "",
           "createdAt": "2026-04-11T16:06:07Z",
           "updatedAt": "2026-04-11T16:06:07Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs71dvXU",
+          "commit": {
+            "abbreviatedOid": "4f972ff"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-16T03:39:30Z",
+          "updatedAt": "2026-04-16T03:39:30Z",
           "comments": []
         }
       ]
