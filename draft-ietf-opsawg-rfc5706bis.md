@@ -197,13 +197,7 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
-   It is not the intention that a protocol specification document should
-   be held up waiting for operations and management solutions to be
-   developed.  This is particularly the case when a protocol extension
-   is proposed, but the base protocol is missing operations or
-   management solutions.  However, it is the intent that new documents
-   should clearly articulate the operations and management of
-   that new work to fill any operations and management gaps.
+   It is not the intention that a protocol specification document should be held up waiting for operations and management solutions, or for supporting tooling, to be developed.  This is particularly the case when a protocol extension is proposed, but the base protocol is missing operations or management solutions.  However, it is the intent that new documents should clearly articulate the operations and management of that new work to fill any such gaps. Some operational and tooling guidance can only be determined once operational experience has been gained.  In such cases authors should document what is reasonably foreseeable at design time rather than prematurely specifying detailed mechanisms that may later prove to be wrong or unnecessarily constraining.
 
    A core principle of this document is to encourage early-on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
@@ -690,7 +684,7 @@ New metrics may be required to assess traffic performance. Protocol Designers ma
    Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of a New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their networks, systems, and devices consistently.
 Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging.
 
-Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.
+Tooling needed by security operators should be considered when designing and deploying a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. The absence of such tooling is not, by itself, a reason to delay publication of the specification. Indicators of compromise, and the means to detect exploitation, tend to evolve only as operational experience accumulates and as attacks emerge.  Detailed forensic and tooling guidance may therefore be developed after the protocol is specified and is expected to be refined over time (see also {{sec-oper-mgmt-tooling}}).
 
 For further information on the security operations considerations discussed in this section, refer to {{?I-D.parsons-opsawg-security-operations}}.
 
