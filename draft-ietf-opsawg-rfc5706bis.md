@@ -681,6 +681,8 @@ New metrics may be required to assess traffic performance. Protocol Designers ma
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
+   When IP is used as part of the operation and management solution itself (e.g., to carry telemetry, logging, or configuration traffic), Protocol Designers should consider how that traffic behaves over the IP underlay. This includes considering all aspects of IPv6, reducing the need for fragmentation, making appropriate use of the path MTU, and accounting for the behavior of the solution when its traffic traverses tunnels. Refer to XXX:IP-MTU-REF:XXX for detailed advice on MTU, fragmentation, and tunnel behavior.
+
 ## Impact on Security Operations {#sec-impact-secops}
 
    Security Operations (SecOps) is a collaborative approach that combines security and operational teams to improve the ability of operators to protect and manage the network effectively and efficiently {{SECOPS}}. Security operators detect malicious activity and respond to threats and are a crucial part of defending against attacks alongside the management and operation of the network.
