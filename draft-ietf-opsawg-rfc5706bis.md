@@ -468,15 +468,11 @@ For example:
    to apply the protocol in the environments where it will be deployed.
    {{?RFC5218}} provides a more detailed discussion on what makes for a successful protocol.
 
+   Not every operational consideration can be foreseen at design time. Some considerations reside in how a specification is applied and deployed rather than in the specification itself, and may only become apparent once operational experience has been gained.  In some cases, the relevant questions are not even known in advance. Authors should document what is reasonably foreseeable without speculating, and should expect that operational considerations may need to be revisited as deployment experience accumulates.
+
    For example:
 
-   > BGP flap damping {{?RFC2439}} was designed to block
-   high-frequency route flaps.  Some BGP implementations were memory-constrained
-   so often elected not to support this function, others found a
-   conflict where path exploration caused false flap damping resulting
-   in loss of reachability.  As a result, flap damping was often not
-   enabled network-wide, contrary to the intentions of the original
-   designers.
+   > BGP flap damping {{?RFC2439}} was designed to block high-frequency route flaps.  Some BGP implementations were memory-constrained so often elected not to support this function, others found a conflict where path exploration caused false flap damping resulting in loss of reachability.  As a result, flap damping was often not enabled network-wide, contrary to the intentions of the original designers. This case is instructive precisely because little, if any, text in an "Operational Considerations" section written at design time would have changed the outcome.  That is, the behavior emerged only from operational experience at scale. It illustrates that some operational considerations cannot be fully anticipated when a specification is written.
 
 ##  Installation and Initial Setup {#sec-install}
 
