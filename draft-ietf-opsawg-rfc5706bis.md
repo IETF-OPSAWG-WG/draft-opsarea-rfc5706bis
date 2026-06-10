@@ -488,6 +488,8 @@ For example:
    options and parameters whenever possible. Any options and parameters
    should be configured or negotiated dynamically rather than manually.
 
+   The decision whether to include an option at all belongs to the Working Group developing the specification. When an option is included, guidance on how and when to use it should be specified together with the option itself, rather than being divorced from it (e.g., relegated to a separate operational considerations document). If using an option correctly requires a substantial amount of explanatory text, that is a strong signal that, like {{?RFC1958}} states, the need for the option should be reconsidered.
+
    The New Protocol or Protocol Extension should be able to operate "out of the box".
    To simplify configuration, Protocol Designers should
    specify reasonable defaults, including default modes and
@@ -574,7 +576,9 @@ state during the transition.
    certain ways. If restrictions or dependencies exist, they should be
    stated.
 
-   For example:
+   Where a New Protocol or Protocol Extension depends on another protocol or functional component in order to operate at all, that dependency should be stated prominently in the main body of the specification and not buried in the "Operational Considerations" section, so that implementers and operators are not surprised by it. For example, if correct operation relies on the availability of an accurate time source (such as NTP {{?RFC5905}}) to validate certificates for instance, the specification should make that requirement, and the acceptable means of satisfying it, explicit and easy to find.
+
+   Another example:
 
    > The design of the Resource ReSerVation Protocol (RSVP)
    {{?RFC2205}} required each router to look at the RSVP PATH message and,
