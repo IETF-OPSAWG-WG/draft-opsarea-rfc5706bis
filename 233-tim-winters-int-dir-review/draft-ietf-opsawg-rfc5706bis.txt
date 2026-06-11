@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 12 December 2026                             Old Dog Consulting
+Expires: 13 December 2026                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            10 June 2026
+                                                            11 June 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 December 2026.
+   This Internet-Draft will expire on 13 December 2026.
 
 Copyright Notice
 
@@ -770,14 +770,12 @@ Table of Contents
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-   When IP is used as part of the operation and management solution
-   itself (e.g., to carry telemetry, logging, or configuration traffic),
-   Protocol Designers should consider how that traffic behaves over the
-   IP underlay.  This includes considering all aspects of IPv6, reducing
-   the need for fragmentation, making appropriate use of the path MTU,
-   and accounting for the behavior of the solution when its traffic
-   traverses tunnels.  Refer to XXX:IP-MTU-REF:XXX for detailed advice
-   on MTU, fragmentation, and tunnel behavior.
+   When IP is used to transport management traffic (telemetry, logging,
+   configuration), Protocol Designers should size packets to fit within
+   the path MTU, handle ICMP Packet Too Big messages correctly, and
+   account for tunnel encapsulation overhead when computing effective
+   payload size.  See Section 6 of [RFC8900] for detailed guidance on
+   MTU and fragmentation.
 
 4.5.  Impact on Security Operations
 
@@ -2087,6 +2085,8 @@ Table of Contents
    [RFC8799]  Carpenter, B. and B. Liu, "Limited Domains and Internet
               Protocols", RFC 8799, DOI 10.17487/RFC8799, July 2020,
               <https://www.rfc-editor.org/rfc/rfc8799>.
+
+   [RFC8900]  "*** BROKEN REFERENCE ***".
 
    [RFC9182]  Barguil, S., Gonzalez de Dios, O., Ed., Boucadair, M.,
               Ed., Munoz, L., and A. Aguado, "A YANG Network Data Model
