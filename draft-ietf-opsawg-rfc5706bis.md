@@ -576,7 +576,7 @@ state during the transition.
    certain ways. If restrictions or dependencies exist, they should be
    stated.
 
-   Where a New Protocol or Protocol Extension depends on another protocol or functional component in order to operate at all, that dependency should be stated prominently in the main body of the specification and not buried in the "Operational Considerations" section, so that implementers and operators are not surprised by it. For example, if correct operation relies on the availability of an accurate time source (such as NTP {{?RFC5905}}) to validate certificates for instance, the specification should make that requirement, and the acceptable means of satisfying it, explicit and easy to find.
+   Where a New Protocol or Protocol Extension depends on another protocol or component in order to function, that dependency should be stated prominently in the main body of the specification and not buried in the "Operational Considerations" section, so that implementers and operators are not surprised by it. For example, if correct function and its operation rely on the availability of an accurate time source (such as NTP {{?RFC5905}}), the specification should make that requirement, and the acceptable means of satisfying it, explicit and easy to find.
 
    Another example:
 
