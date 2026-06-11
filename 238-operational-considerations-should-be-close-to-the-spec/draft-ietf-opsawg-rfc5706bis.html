@@ -1804,14 +1804,13 @@ considerations.<a href="#section-3.4-4.1" class="pilcrow">¶</a></p>
    options and parameters whenever possible. Any options and parameters
    should be configured or negotiated dynamically rather than manually.<a href="#section-4.1-2.1" class="pilcrow">¶</a></p>
 </blockquote>
-<p id="section-4.1-3">The decision whether to include an option at all belongs to the Working Group developing the specification. When an option is included, guidance on how and when to use it should be specified together with the option itself, rather than being divorced from it (e.g., relegated to a separate operational considerations document). If using an option correctly requires a substantial amount of explanatory text, that is a strong signal that, like <span>[<a href="#RFC1958" class="cite xref">RFC1958</a>]</span> states, the need for the option should be reconsidered.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
-<p id="section-4.1-4">The New Protocol or Protocol Extension should be able to operate "out of the box".
+<p id="section-4.1-3">The New Protocol or Protocol Extension should be able to operate "out of the box".
    To simplify configuration, Protocol Designers should
    specify reasonable defaults, including default modes and
    parameters. For example, define
    default values for modes, timers, default state of logical control
-   variables, default transports, and so on.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
-<p id="section-4.1-5">Protocol Designers should explain the background of the chosen default
+   variables, default transports, and so on.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.1-4">Protocol Designers should explain the background of the chosen default
    values and provide the rationale.
    In many cases, as
    technology changes, the documented values might make less and less
@@ -1821,29 +1820,29 @@ considerations.<a href="#section-3.4-4.1" class="pilcrow">¶</a></p>
    be changed lightly. For example, the default interface speed might
    change over time as network speeds increase,
    and cryptographic algorithms might be expected to change
-   over time as older algorithms are "broken".<a href="#section-4.1-5" class="pilcrow">¶</a></p>
-<p id="section-4.1-6">Default values should generally favor the conservative side over the
+   over time as older algorithms are "broken".<a href="#section-4.1-4" class="pilcrow">¶</a></p>
+<p id="section-4.1-5">Default values should generally favor the conservative side over the
    "optimizing performance" side (e.g., the initial Round-Trip Time (RTT) and
-   Round-Trip Time Variance (RTTVAR) values of a TCP connection <span>[<a href="#RFC6298" class="cite xref">RFC6298</a>]</span>).<a href="#section-4.1-6" class="pilcrow">¶</a></p>
-<p id="section-4.1-7">For parameters that can vary (e.g., speed-dependent), instead of using a
+   Round-Trip Time Variance (RTTVAR) values of a TCP connection <span>[<a href="#RFC6298" class="cite xref">RFC6298</a>]</span>).<a href="#section-4.1-5" class="pilcrow">¶</a></p>
+<p id="section-4.1-6">For parameters that can vary (e.g., speed-dependent), instead of using a
    constant, set the default value as a function of the
    variable to reduce the
-   risk of problems caused by technology advancement.<a href="#section-4.1-7" class="pilcrow">¶</a></p>
-<p id="section-4.1-8">It must always be possible for an operator to retrieve the actual value in use,
+   risk of problems caused by technology advancement.<a href="#section-4.1-6" class="pilcrow">¶</a></p>
+<p id="section-4.1-7">It must always be possible for an operator to retrieve the actual value in use,
    to determine that the element is running at a known
    default. This is important for troubleshooting, auditing, and ensuring
-   consistent behavior across implementations.<a href="#section-4.1-8" class="pilcrow">¶</a></p>
-<p id="section-4.1-9">For example:<a href="#section-4.1-9" class="pilcrow">¶</a></p>
+   consistent behavior across implementations.<a href="#section-4.1-7" class="pilcrow">¶</a></p>
+<p id="section-4.1-8">For example:<a href="#section-4.1-8" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-4.1-10.1">
-            <p id="section-4.1-10.1.1">Where protocols involve cryptographic keys, Protocol Designers should
+<li class="normal ulEmpty" id="section-4.1-9.1">
+            <p id="section-4.1-9.1.1">Where protocols involve cryptographic keys, Protocol Designers should
    consider not only key generation and validation mechanisms but also the
    format in which private keys are stored, transmitted, and restored.
    Designers should specify any expected consistency checks
    (e.g., recomputing an expanded key from the seed) that help verify
    correctness and integrity. Additionally, guidance should be given on
    data retention, restoration limits, and cryptographic module
-   interoperability when importing/exporting private key material. Refer to <span>[<a href="#I-D.ietf-lamps-dilithium-certificates" class="cite xref">I-D.ietf-lamps-dilithium-certificates</a>]</span> for an example of how such considerations are incorporated.<a href="#section-4.1-10.1.1" class="pilcrow">¶</a></p>
+   interoperability when importing/exporting private key material. Refer to <span>[<a href="#I-D.ietf-lamps-dilithium-certificates" class="cite xref">I-D.ietf-lamps-dilithium-certificates</a>]</span> for an example of how such considerations are incorporated.<a href="#section-4.1-9.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
