@@ -488,8 +488,6 @@ For example:
    options and parameters whenever possible. Any options and parameters
    should be configured or negotiated dynamically rather than manually.
 
-   The decision whether to include an option at all belongs to the Working Group developing the specification. When an option is included, guidance on how and when to use it should be specified together with the option itself, rather than being divorced from it (e.g., relegated to a separate operational considerations document). If using an option correctly requires a substantial amount of explanatory text, that is a strong signal that, like {{?RFC1958}} states, the need for the option should be reconsidered.
-
    The New Protocol or Protocol Extension should be able to operate "out of the box".
    To simplify configuration, Protocol Designers should
    specify reasonable defaults, including default modes and
