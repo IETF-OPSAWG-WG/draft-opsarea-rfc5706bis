@@ -197,7 +197,7 @@ contributor:
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.
 
-   It is not the intention that a protocol specification document should be held up waiting for operations and management solutions, or for supporting tooling, to be developed.  This is particularly the case when a protocol extension is proposed, but the base protocol is missing operations or management solutions.  However, it is the intent that new documents should clearly articulate the operations and management of that new work to fill any such gaps. Some operational and tooling guidance can only be determined once operational experience has been gained.  In such cases authors should document what is reasonably foreseeable at design time rather than prematurely specifying detailed mechanisms that may later prove to be wrong or unnecessarily constraining.
+   It is not the intention that a protocol specification document should be held up waiting for operations and management solutions, or for supporting tooling, to be developed.  This is particularly the case when a protocol extension is proposed, but the base protocol is missing operations or management solutions.  However, it is the intent that new documents should clearly articulate the operations and management of that new work to fill any such gaps. Some operational and tooling guidance can only be determined through deployment experience. In such cases, authors should document what is reasonably foreseeable at design time.
 
    A core principle of this document is to encourage early-on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
