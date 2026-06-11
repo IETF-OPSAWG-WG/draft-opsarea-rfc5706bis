@@ -770,12 +770,11 @@ Table of Contents
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-   When IP is used to transport management traffic (telemetry, logging,
-   configuration), Protocol Designers should size packets to fit within
-   the path MTU, handle ICMP Packet Too Big messages correctly, and
-   account for tunnel encapsulation overhead when computing effective
-   payload size.  See Section 6 of [RFC8900] for detailed guidance on
-   MTU and fragmentation.
+   Protocol Designers should account for path MTU constraints when
+   designing protocols that carry management traffic, including any
+   reduction in effective payload size introduced by tunnel or
+   encapsulation overhead.  See Section 6.1 of [RFC8900] and [RFC8899]
+   for guidance on path MTU discovery and handling MTU constraints.
 
 4.5.  Impact on Security Operations
 
@@ -2086,7 +2085,15 @@ Table of Contents
               Protocols", RFC 8799, DOI 10.17487/RFC8799, July 2020,
               <https://www.rfc-editor.org/rfc/rfc8799>.
 
-   [RFC8900]  "*** BROKEN REFERENCE ***".
+   [RFC8899]  Fairhurst, G., Jones, T., Tüxen, M., Rüngeler, I., and T.
+              Völker, "Packetization Layer Path MTU Discovery for
+              Datagram Transports", RFC 8899, DOI 10.17487/RFC8899,
+              September 2020, <https://www.rfc-editor.org/rfc/rfc8899>.
+
+   [RFC8900]  Bonica, R., Baker, F., Huston, G., Hinden, R., Troan, O.,
+              and F. Gont, "IP Fragmentation Considered Fragile",
+              BCP 230, RFC 8900, DOI 10.17487/RFC8900, September 2020,
+              <https://www.rfc-editor.org/rfc/rfc8900>.
 
    [RFC9182]  Barguil, S., Gonzalez de Dios, O., Ed., Boucadair, M.,
               Ed., Munoz, L., and A. Aguado, "A YANG Network Data Model
