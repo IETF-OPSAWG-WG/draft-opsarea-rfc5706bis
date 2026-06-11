@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 12 December 2026                             Old Dog Consulting
+Expires: 13 December 2026                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            10 June 2026
+                                                            11 June 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 December 2026.
+   This Internet-Draft will expire on 13 December 2026.
 
 Copyright Notice
 
@@ -667,14 +667,14 @@ Table of Contents
    stated.
 
    Where a New Protocol or Protocol Extension depends on another
-   protocol or functional component in order to operate at all, that
-   dependency should be stated prominently in the main body of the
-   specification and not buried in the "Operational Considerations"
-   section, so that implementers and operators are not surprised by it.
-   For example, if correct operation relies on the availability of an
-   accurate time source (such as NTP [RFC5905]) to validate certificates
-   for instance, the specification should make that requirement, and the
-   acceptable means of satisfying it, explicit and easy to find.
+   protocol or component in order to function, that dependency should be
+   stated prominently in the main body of the specification and not
+   buried in the "Operational Considerations" section, so that
+   implementers and operators are not surprised by it.  For example, if
+   correct function and its operation rely on the availability of an
+   accurate time source (such as NTP [RFC5905]), the specification
+   should make that requirement, and the acceptable means of satisfying
+   it, explicit and easy to find.
 
    Another example:
 
