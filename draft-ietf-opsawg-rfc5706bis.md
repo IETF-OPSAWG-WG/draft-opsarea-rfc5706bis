@@ -681,7 +681,7 @@ New metrics may be required to assess traffic performance. Protocol Designers ma
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-   Protocol Designers should account for path MTU constraints when designing protocols that carry management traffic, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. See Section 6.1 of {{?RFC8900}} and {{?RFC8899}} for guidance on path MTU discovery and handling MTU constraints.
+   Protocol Designers should account for MTU constraints when designing protocols that carry management traffic, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. See {{Section 6.1 of ?RFC8900}} and {{?RFC8899}} for guidance on path MTU discovery and handling MTU constraints at various layers.
 
 ## Impact on Security Operations {#sec-impact-secops}
 
