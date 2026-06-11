@@ -681,7 +681,7 @@ New metrics may be required to assess traffic performance. Protocol Designers ma
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
-   When IP is used as part of the operation and management solution itself (e.g., to carry telemetry, logging, or configuration traffic), Protocol Designers should consider how that traffic behaves over the IP underlay. This includes considering all aspects of IPv6, reducing the need for fragmentation, making appropriate use of the path MTU, and accounting for the behavior of the solution when its traffic traverses tunnels. Refer to XXX:IP-MTU-REF:XXX for detailed advice on MTU, fragmentation, and tunnel behavior.
+   When IP is used to transport management traffic (telemetry, logging, configuration), Protocol Designers should size packets to fit within the path MTU, handle ICMP Packet Too Big messages correctly, and account for tunnel encapsulation overhead when computing effective payload size. See Section 6 of {{?RFC8900}} for detailed guidance on MTU and fragmentation.
 
 ## Impact on Security Operations {#sec-impact-secops}
 
