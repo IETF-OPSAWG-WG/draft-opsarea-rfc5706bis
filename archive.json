@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-11T02:31:43.465781+00:00",
+  "timestamp": "2026-06-14T02:29:57.326709+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -2906,7 +2906,7 @@
       "id": "I_kwDOOWPBqs7lEgi_",
       "title": "Add examples that motivate this draft",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/188",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -2918,8 +2918,8 @@
       ],
       "body": "Per Lars' TSV Dir review...\n\n> This document provides **no** evidence that would motivate why this additional\n> work is something that needs to be put on all IETF WGs **now**\n\nWe should find two examples where the absence of Operational Considerations early in the specification cycle has had a detrimental effect on the protocol, its operations, or its deployability.\n\nPossible considerations:\nQUIC\nSRv6\nMPLS",
       "createdAt": "2026-01-22T14:20:50Z",
-      "updatedAt": "2026-04-02T12:47:05Z",
-      "closedAt": null,
+      "updatedAt": "2026-06-11T13:38:13Z",
+      "closedAt": "2026-06-11T13:38:13Z",
       "comments": [
         {
           "author": "cpignata",
@@ -2941,6 +2941,13 @@
           "body": "This is linked to the PR that is a candidate to close.",
           "createdAt": "2026-04-02T12:46:58Z",
           "updatedAt": "2026-04-02T12:46:58Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "We don't need this open.  Archeological interest can be found via a GitHub search.",
+          "createdAt": "2026-06-11T13:38:13Z",
+          "updatedAt": "2026-06-11T13:38:13Z"
         }
       ]
     },
@@ -3585,7 +3592,7 @@
       "id": "I_kwDOOWPBqs76A3N6",
       "title": "Not All Examples Support the Document's Thesis",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/236",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -3596,8 +3603,8 @@
       ],
       "body": "From Eliot Lear:\n\n* Not all of the examples in the document support an Operational\n    Considerations section.  Case and point is the reference to RFC2439\n    in Section 4.  Can you think of any text that would have gone into\n    an Operational Considerations that would have changed the outcome\n    that is described.  In fact, arguably a substantial portion of that\n    Proposed Standard addresses operational considerations!  There's\n    configuration examples, processing costs, etc.\n\n  * RFC2439 also demonstrates something else, and it is not alone:\n    sometimes we do not fully understand how a protocol will be used in\n    the wild.  You properly cite RFC *5218* (one of my favorite RFCs\n    *ever* (we should have a contest!)), but that document makes clear\n    the difficulty: imagine having had this requirement for RFCs 822 or\n    1945.  Not only did we not know what the operational considerations\n    should be, we did not know what we did not know!  Sometimes the\n    operational considerations are in the application of the\n    specification, and not within the sole context of the specification\n    itself, and I am specifically concerned about this when it comes to\n    Section 4.5.\n",
       "createdAt": "2026-04-02T13:13:34Z",
-      "updatedAt": "2026-04-02T13:24:34Z",
-      "closedAt": null,
+      "updatedAt": "2026-06-11T13:08:50Z",
+      "closedAt": "2026-06-11T13:08:50Z",
       "comments": []
     },
     {
@@ -3616,7 +3623,7 @@
       ],
       "body": "From Eliot Lear:\n\nI am not entirely certain that you are looking for an \"Operational\n    Considerations\" section so much as the answer within the IETF prior\n    to publication to the question, \u201cDid you consider how this\n    specification would be used in the field?\u201d  That is, in general, the\n    question I would expect ops directorate reviewers to ask, and\n    there's a lot of good discussion in this document on how to help\n    them evaluate answers, not to mention for the authors to know what\n    they should be thinking about.  RFC 1958\u2019s advice on avoiding\n    options was and remains *excellent*.",
       "createdAt": "2026-04-02T13:26:06Z",
-      "updatedAt": "2026-04-08T17:02:57Z",
+      "updatedAt": "2026-06-11T13:37:32Z",
       "closedAt": null,
       "comments": [
         {
@@ -3632,6 +3639,20 @@
           "body": "And that's fair.  If we think there is nothing to do, we can collect comments and have a consolidated response to him.  In this case, it can be, like you say, we have the wiki for a reviewers, and we want authors to give operations serious thought.",
           "createdAt": "2026-04-08T17:02:57Z",
           "updatedAt": "2026-04-08T17:02:57Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The only thing I can say, on further reflection, is that maybe we don't need to force an Operational Considerations section, if the operational considerations are already well described and distributed through the document. OTOH, a section that summarises in this case would probably be useful.\nI think exactly the same discussion applies to Security Considerations, and no one gets precious about that.",
+          "createdAt": "2026-06-11T09:21:24Z",
+          "updatedAt": "2026-06-11T09:21:24Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "https://github.com/[IETF-OPS-DIR/Review-Template](https://github.com/IETF-OPS-DIR/Review-Template), fwiw",
+          "createdAt": "2026-06-11T13:37:32Z",
+          "updatedAt": "2026-06-11T13:37:32Z"
         }
       ]
     },
@@ -3702,7 +3723,7 @@
       "id": "I_kwDOOWPBqs76BQWt",
       "title": "Can All Things Be Known/Done At Design Time",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/240",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -3713,8 +3734,8 @@
       ],
       "body": "From Eliot Lear:\n\n  Tooling required by security operators should be documented in the\n      design and deployment of a New Protocol or Protocol Extension.\n\n    That's great as a concept, but it seems to me has the lingering\n    effect of delaying the publication of work as an RFC because\n    E-LACKOFTOOLING.  BTW, I'm all for tooling, but indications of\n    exploit evolve and are a lagging technology because we may not know\n    how the specification will be exploited.\n\n  * Similarly, with network management, it may be that the subject\n    requires a lot of consideration once there is in fact operational\n    experience.  Prematurely writing that down can lead people down the\n    wrong path, and worse an ossified path at that.",
       "createdAt": "2026-04-02T13:32:03Z",
-      "updatedAt": "2026-04-02T13:34:26Z",
-      "closedAt": null,
+      "updatedAt": "2026-06-11T13:15:30Z",
+      "closedAt": "2026-06-11T13:15:30Z",
       "comments": []
     },
     {
@@ -15062,7 +15083,7 @@
       "id": "PR_kwDOOWPBqs6_aZIv",
       "title": "Add examples that motivate this work",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/200",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -15071,18 +15092,26 @@
       ],
       "body": "#188 requests examples.\r\nThis change provides the long version (although more work is needed) of what might be added. \r\n\r\n(See the comment on the Issue)",
       "createdAt": "2026-01-26T17:17:39Z",
-      "updatedAt": "2026-02-19T14:35:39Z",
+      "updatedAt": "2026-06-11T13:45:37Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "a2d0ea98afaaa0b71518e84f706776a754c91de2",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "AdrianFarrel-patch-4",
       "headRefOid": "1fb300cd21c929dc0e58f532e40c1b4a6761a8cd",
-      "closedAt": null,
+      "closedAt": "2026-06-11T13:45:36Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "This PR isn't needed.  The issue was closed as historical.",
+          "createdAt": "2026-06-11T13:45:36Z",
+          "updatedAt": "2026-06-11T13:45:36Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWPBqs7dUlDS",
@@ -17613,26 +17642,130 @@
       "id": "PR_kwDOOWPBqs7lCN9F",
       "title": "Address Eliot's comments on #240",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/248",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Be forgiving when it comes to tool development and make it clear that tooling or detailed considerations are not necessarily gating criteria to a protocol being published.",
       "createdAt": "2026-06-10T20:46:26Z",
-      "updatedAt": "2026-06-10T20:46:26Z",
+      "updatedAt": "2026-06-11T13:15:30Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "240-can-all-things-be-knowndone-at-design-time",
-      "headRefOid": "e56a90852b2daa85e443afc84316167099688a9b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "headRefOid": "a1d29ddbb643585abf4175d36c898d85dd5972dd",
+      "closedAt": "2026-06-11T13:15:29Z",
+      "mergedAt": "2026-06-11T13:15:29Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "5420f6ebcaa981ec8f555590b03d0fc37f5d1165"
+      },
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "> Changes are good. I wonder whether we are missing saying that, while it is OK to not delay publication waiting for tools to be developed, we should, as far as possible, identify and document the need and reason for those tools.\r\n\r\nI think there is other text in the document that covers that point.",
+          "createdAt": "2026-06-11T11:18:58Z",
+          "updatedAt": "2026-06-11T11:18:58Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCr-8ig",
+          "commit": {
+            "abbreviatedOid": "e56a908"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Changes are good.\nI wonder whether we are missing saying that, while it is OK to not delay publication waiting for tools to be developed, we should, as far as possible, identify and document the need and reason for those tools.",
+          "createdAt": "2026-06-11T09:08:15Z",
+          "updatedAt": "2026-06-11T09:08:15Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCsNv8A",
+          "commit": {
+            "abbreviatedOid": "e56a908"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T09:41:47Z",
+          "updatedAt": "2026-06-11T09:42:15Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "```suggestion\n   It is not the intention that a protocol specification document should be held up waiting for operations and management solutions, or for supporting tooling, to be developed.  This is particularly the case when a protocol extension is proposed, but the base protocol is missing operations or management solutions.  However, it is the intent that new documents should clearly articulate the operations and management of that new work to fill any such gaps. Some operational and tooling guidance can only be determined through deployment experience. In such cases, authors should document what is reasonably foreseeable at design time.\n```",
+              "createdAt": "2026-06-11T09:41:47Z",
+              "updatedAt": "2026-06-11T13:13:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCtZ8fw",
+          "commit": {
+            "abbreviatedOid": "e56a908"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T12:45:45Z",
+          "updatedAt": "2026-06-11T12:46:43Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "I don't know what \"leave room the rest\" mean?",
+              "createdAt": "2026-06-11T12:45:45Z",
+              "updatedAt": "2026-06-11T12:46:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCtbGGg",
+          "commit": {
+            "abbreviatedOid": "e56a908"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T12:48:01Z",
+          "updatedAt": "2026-06-11T12:48:01Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "Yeah.  I wanted to discuss this with the rest of the group and not just merge it.  Selfishly, I like my original text better.",
+              "createdAt": "2026-06-11T12:48:01Z",
+              "updatedAt": "2026-06-11T12:48:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCtiNqg",
+          "commit": {
+            "abbreviatedOid": "e56a908"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T13:02:10Z",
+          "updatedAt": "2026-06-11T13:02:10Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "agreed Joe on the preference for your original text\r\n",
+              "createdAt": "2026-06-11T13:02:10Z",
+              "updatedAt": "2026-06-11T13:02:10Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 249,
@@ -17646,45 +17779,197 @@
       "labels": [],
       "body": "Make it clear that protocol dependencies need not and should not be buried in the Ops Considerations section.  Use Eliot's own time example.\r\n\r\nLeave options up to the underlying Protocol WG.",
       "createdAt": "2026-06-10T20:56:58Z",
-      "updatedAt": "2026-06-10T20:56:58Z",
+      "updatedAt": "2026-06-11T16:25:50Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "238-operational-considerations-should-be-close-to-the-spec",
-      "headRefOid": "440a49ecaa4a539f9958c506abd12b1ffc99b395",
+      "headRefOid": "9eca483e2e92b7ef26466700fc88d3a3fe9d9592",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "> 2nd para is good.\r\n> \r\n> 1st para is a bit waffle-like. The first sentence doesn't belong in this document at all - it is describing IETF process, and might not even be true! The second sentence seems to be saying \"don't write a separate operational considerations document\" but I think that sometimes this will be the correct approach, and sometimes it will not. Certainly the use of \"relegated\" is pejorative. The third sentence is about protocol design and the desirability or otherwise of options. It may be true, but it doesn't belong in this document.\r\n\r\nI find myself in an \"off\" mood these days.  What if we ax this block entirely, then?  I was trying to get to what I perceived to be Eliot's point about WG autonomy while echoing some of Jeff Haas's comments.  But maybe this horse is on its way out.",
+          "createdAt": "2026-06-11T11:13:15Z",
+          "updatedAt": "2026-06-11T11:13:15Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "We say this in the intro:\r\n\r\n>\"It is not the intention that a protocol specification document should be held up waiting for operations and management solutions to be developed. This is particularly the case when a protocol extension is proposed, but the base protocol is missing operations or management solutions. However, it is the intent that new documents should clearly articulate the operations and management of that new work to fill any operations and management gaps.\"\r\n\r\nIn light of that, I propose we ax my first paragraph.",
+          "createdAt": "2026-06-11T14:02:13Z",
+          "updatedAt": "2026-06-11T14:02:13Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCr9rzg",
+          "commit": {
+            "abbreviatedOid": "440a49e"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "2nd para is good.\n\n1st para is a bit waffle-like. \nThe first sentence doesn't belong in this document at all - it is describing IETF process, and might not even be true!\nThe second sentence seems to be saying \"don't write a separate operational considerations document\" but I think that sometimes this will be the correct approach, and sometimes it will not.  Certainly the use of \"relegated\" is pejorative. \nThe third sentence is about protocol design and the desirability or otherwise of options. It may be true, but it doesn't belong in this document.",
+          "createdAt": "2026-06-11T09:05:16Z",
+          "updatedAt": "2026-06-11T09:05:16Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCsLcow",
+          "commit": {
+            "abbreviatedOid": "440a49e"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T09:36:22Z",
+          "updatedAt": "2026-06-11T13:20:49Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\n   The decision whether to include an option at all belongs to the Working Group developing the specification. When an option is included, guidance on how and when to use it should be specified together with the option itself, rather than being divorced from it (e.g., a separate operational considerations document). If using an option correctly requires a substantial amount of explanatory text, that is a strong signal that, like {{?RFC1958}} states, the need for the option should be reconsidered.\n```",
+              "createdAt": "2026-06-11T09:36:23Z",
+              "updatedAt": "2026-06-11T13:20:49Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCtvR1w",
+          "commit": {
+            "abbreviatedOid": "440a49e"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T13:26:48Z",
+          "updatedAt": "2026-06-11T13:26:48Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\n   Where a New Protocol or Protocol Extension depends on another protocol or component in order to function, that dependency should be stated prominently in the main body of the specification and not buried in the \"Operational Considerations\" section, so that implementers and operators are not surprised by it. For example, if correct function and its operation rely on the availability of an accurate time source (such as NTP {{?RFC5905}}), the specification should make that requirement, and the acceptable means of satisfying it, explicit and easy to find.\n```",
+              "createdAt": "2026-06-11T13:26:48Z",
+              "updatedAt": "2026-06-11T13:26:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCvKJ_Q",
+          "commit": {
+            "abbreviatedOid": "9eca483"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-11T16:25:50Z",
+          "updatedAt": "2026-06-11T16:25:50Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 250,
       "id": "PR_kwDOOWPBqs7lCj2w",
       "title": "Address Eliot's comments in #236.",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/250",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Authors can't know the future, and speculating too much is dangerous. Be explicit that Designers should only document what they can know or reasonably assume.  It isn't a bad thing if operational considerations need to be revisited in a future document once operational experience is gained.",
       "createdAt": "2026-06-10T21:01:53Z",
-      "updatedAt": "2026-06-10T21:01:53Z",
+      "updatedAt": "2026-06-11T13:08:51Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "236-not-all-examples-support-the-documents-thesis",
       "headRefOid": "586711f7fea35808e30a6906b9243a69468fa9ee",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "closedAt": "2026-06-11T13:08:49Z",
+      "mergedAt": "2026-06-11T13:08:49Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "7dda3dbf9c6595dfdc927a8fe6df362d8ffc8e79"
+      },
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Happy with both text proposals",
+          "createdAt": "2026-06-11T12:50:22Z",
+          "updatedAt": "2026-06-11T12:50:22Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCr6KSw",
+          "commit": {
+            "abbreviatedOid": "586711f"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "I agree with all the changes.\n\nMy gripe is that the flap-damping designers should have understood the memory implications. But that, of course, was not an operational consideration (well it was slightly, because the operators decided to not enable it owing to memory constraints) so much as an implementation/scaling consideration. It does point to the interaction between protocol design and operatability.",
+          "createdAt": "2026-06-11T08:57:14Z",
+          "updatedAt": "2026-06-11T08:57:14Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCsE7Dw",
+          "commit": {
+            "abbreviatedOid": "586711f"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T09:22:14Z",
+          "updatedAt": "2026-06-11T09:22:14Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Looks good. \n\n",
+              "createdAt": "2026-06-11T09:22:14Z",
+              "updatedAt": "2026-06-11T09:22:14Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCsJPKw",
+          "commit": {
+            "abbreviatedOid": "586711f"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-11T09:31:38Z",
+          "updatedAt": "2026-06-11T09:31:38Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCtcYAQ",
+          "commit": {
+            "abbreviatedOid": "586711f"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-11T12:50:40Z",
+          "updatedAt": "2026-06-11T12:50:40Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 251,
@@ -17698,19 +17983,101 @@
       "labels": [],
       "body": "Add some text (reference pending) to point Designers to existing guidance on IP transport (MTU, fragmentation, etc.).",
       "createdAt": "2026-06-10T21:05:23Z",
-      "updatedAt": "2026-06-10T21:05:23Z",
+      "updatedAt": "2026-06-11T16:25:25Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "233-tim-winters-int-dir-review",
-      "headRefOid": "58fea622cc26170b71d4031ec7d4ff5dd692a48e",
+      "headRefOid": "b7016290bf7a06ea604cc9e1375f9366f10799c1",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The framing and language sounds a bit too vague and somewhat passive. How's this?\r\n\r\nWhen IP carries management traffic (telemetry, logging, configuration), Protocol Designers should size packets to fit within the path MTU, handle ICMP Packet Too Big messages correctly, and account for tunnel encapsulation overhead when computing effective payload size. See XXX:IP-MTU-REF:XXX for detailed guidance.\r\n\r\nFor references, rfc4459 or rfc8900?",
+          "createdAt": "2026-06-11T09:15:16Z",
+          "updatedAt": "2026-06-11T09:15:16Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCsCRKQ",
+          "commit": {
+            "abbreviatedOid": "58fea62"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T09:15:55Z",
+          "updatedAt": "2026-06-11T09:15:55Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I don't parse well the \"when IP ..\".\n\nI think referring to the guidance in https://datatracker.ietf.org/doc/html/rfc8900#section-6.1 for MTU/fragmentation may be sufficient.\n\nMTU/tunnelling issues are discissed in https://datatracker.ietf.org/doc/html/[draft-ietf-intarea-tunnels-15](https://datatracker.ietf.org/doc/html/draft-ietf-intarea-tunnels-15) (but that doc si there for almost 15 years. If cited, please make it informative.\n\nSeveral of these concerns are also applicable for the transport layer. Mechanims such as DPLPMTUD (https://datatracker.ietf.org/doc/html/rfc8899, for example) can be considered as PMTU mau fail. ",
+              "createdAt": "2026-06-11T09:15:55Z",
+              "updatedAt": "2026-06-11T09:15:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCtehfA",
+          "commit": {
+            "abbreviatedOid": "58fea62"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T12:55:28Z",
+          "updatedAt": "2026-06-11T12:55:28Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I tend to agree with Med. Referring to this text in (https://datatracker.ietf.org/doc/html/rfc8900#section-6.1 ...\r\n\r\nDevelopers SHOULD NOT develop new protocols or applications that rely on IP fragmentation. When a new protocol or application is deployed in an environment that does not fully support IP fragmentation, it SHOULD operate correctly, either in its default configuration or in a specified alternative configuration.\r\n\r\n... is sufficient.\r\nIt seems that the current proposal paraphrases the already published RFC8900 BCP.",
+              "createdAt": "2026-06-11T12:55:28Z",
+              "updatedAt": "2026-06-11T12:55:28Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCvG8YA",
+          "commit": {
+            "abbreviatedOid": "5208712"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T16:17:43Z",
+          "updatedAt": "2026-06-11T16:17:43Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\n   Protocol Designers should account for MTU constraints when designing protocols that carry management traffic, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. See {{Section 6.1 of ?RFC8900}} and {{?RFC8899}} for guidance on path MTU discovery and handling MTU constraints at various layers.\n```",
+              "createdAt": "2026-06-11T16:17:43Z",
+              "updatedAt": "2026-06-11T16:17:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABCvJ_KA",
+          "commit": {
+            "abbreviatedOid": "b701629"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-11T16:25:25Z",
+          "updatedAt": "2026-06-11T16:25:25Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
