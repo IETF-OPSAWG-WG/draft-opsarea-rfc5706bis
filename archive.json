@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-14T02:29:57.326709+00:00",
+  "timestamp": "2026-06-21T02:32:20.688915+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -17779,7 +17779,7 @@
       "labels": [],
       "body": "Make it clear that protocol dependencies need not and should not be buried in the Ops Considerations section.  Use Eliot's own time example.\r\n\r\nLeave options up to the underlying Protocol WG.",
       "createdAt": "2026-06-10T20:56:58Z",
-      "updatedAt": "2026-06-11T16:25:50Z",
+      "updatedAt": "2026-06-20T12:38:19Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64",
@@ -17871,6 +17871,52 @@
           "body": "",
           "createdAt": "2026-06-11T16:25:50Z",
           "updatedAt": "2026-06-11T16:25:50Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDm8_oQ",
+          "commit": {
+            "abbreviatedOid": "9eca483"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Yeah, I think we got there in the end.",
+          "createdAt": "2026-06-20T10:54:24Z",
+          "updatedAt": "2026-06-20T10:54:24Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDnSevw",
+          "commit": {
+            "abbreviatedOid": "9eca483"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-20T12:38:02Z",
+          "updatedAt": "2026-06-20T12:38:02Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\n   Where a New Protocol or Protocol Extension depends on another protocol or component to function correctly, that dependency is a normative property of the specification and belongs in its main body rather than only in the \"Operational Considerations\" section, so that implementers and operators can identify it readily. For example, if correct operation relies on an accurate time source (such as NTP {{?RFC5905}}), the specification should state that requirement, and the acceptable means of satisfying it, explicitly.\n```",
+              "createdAt": "2026-06-20T12:38:02Z",
+              "updatedAt": "2026-06-20T12:38:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDnSjaQ",
+          "commit": {
+            "abbreviatedOid": "9eca483"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-06-20T12:38:19Z",
+          "updatedAt": "2026-06-20T12:38:19Z",
           "comments": []
         }
       ]
@@ -17983,7 +18029,7 @@
       "labels": [],
       "body": "Add some text (reference pending) to point Designers to existing guidance on IP transport (MTU, fragmentation, etc.).",
       "createdAt": "2026-06-10T21:05:23Z",
-      "updatedAt": "2026-06-11T16:25:25Z",
+      "updatedAt": "2026-06-20T12:36:11Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64",
@@ -18075,6 +18121,72 @@
           "body": "",
           "createdAt": "2026-06-11T16:25:25Z",
           "updatedAt": "2026-06-11T16:25:25Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDm8ntg",
+          "commit": {
+            "abbreviatedOid": "b701629"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Wfm",
+          "createdAt": "2026-06-20T10:52:23Z",
+          "updatedAt": "2026-06-20T10:52:23Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDnRjDg",
+          "commit": {
+            "abbreviatedOid": "b701629"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-20T12:34:48Z",
+          "updatedAt": "2026-06-20T12:34:48Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\n   Protocol Designers should account for MTU constraints when designing protocols that carry management traffic, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. {{?RFC8899}} specifies path MTU discovery for datagram transports, and {{Section 6.1 of ?RFC8900}} gives recommendations for protocol developers on avoiding reliance on IP fragmentation.\n```",
+              "createdAt": "2026-06-20T12:34:48Z",
+              "updatedAt": "2026-06-20T12:34:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDnRuuQ",
+          "commit": {
+            "abbreviatedOid": "b701629"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-20T12:35:24Z",
+          "updatedAt": "2026-06-20T12:35:24Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\n   Protocol Designers should account for MTU constraints when designing protocols that carry management traffic, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. {{?RFC8899}} specifies path MTU discovery for datagram transports, and {{Section 6.1 of ?RFC8900}} gives recommendations for protocol developers on avoiding reliance on IP fragmentation.\n```",
+              "createdAt": "2026-06-20T12:35:24Z",
+              "updatedAt": "2026-06-20T12:35:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDnR9sw",
+          "commit": {
+            "abbreviatedOid": "b701629"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-06-20T12:36:11Z",
+          "updatedAt": "2026-06-20T12:36:11Z",
           "comments": []
         }
       ]
