@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 13 December 2026                             Old Dog Consulting
+Expires: 24 December 2026                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            11 June 2026
+                                                            22 June 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 December 2026.
+   This Internet-Draft will expire on 24 December 2026.
 
 Copyright Notice
 
@@ -658,14 +658,13 @@ Table of Contents
    stated.
 
    Where a New Protocol or Protocol Extension depends on another
-   protocol or component in order to function, that dependency should be
-   stated prominently in the main body of the specification and not
-   buried in the "Operational Considerations" section, so that
-   implementers and operators are not surprised by it.  For example, if
-   correct function and its operation rely on the availability of an
-   accurate time source (such as NTP [RFC5905]), the specification
-   should make that requirement, and the acceptable means of satisfying
-   it, explicit and easy to find.
+   protocol or component to function correctly, that dependency is a
+   normative property of the specification and belongs in its main body
+   rather than only in the "Operational Considerations" section, so that
+   implementers and operators can identify it easily.  For example, if
+   correct operation relies on an accurate time source (such as NTP
+   [RFC5905]), the specification should state that requirement, and the
+   acceptable means of satisfying it, explicitly.
 
    Another example:
 
@@ -1762,15 +1761,6 @@ Table of Contents
 
 10.2.  Informative References
 
-   [BCP133]   Best Current Practice 133,
-              <https://www.rfc-editor.org/info/bcp133>.
-              At the time of writing, this BCP comprises the following:
-
-              Duke, M., Ed. and G. Fairhurst, Ed., "Specifying New
-              Congestion Control Algorithms", BCP 133, RFC 9743,
-              DOI 10.17487/RFC9743, March 2025,
-              <https://www.rfc-editor.org/info/rfc9743>.
-
    [BCP14]    Best Current Practice 14,
               <https://www.rfc-editor.org/info/bcp14>.
               At the time of writing, this BCP comprises the following:
@@ -1783,24 +1773,6 @@ Table of Contents
               Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
-   [BCP166]   Best Current Practice 166,
-              <https://www.rfc-editor.org/info/bcp166>.
-              At the time of writing, this BCP comprises the following:
-
-              Hoffman, P. and J. Klensin, "Terminology Used in
-              Internationalization in the IETF", BCP 166, RFC 6365,
-              DOI 10.17487/RFC6365, September 2011,
-              <https://www.rfc-editor.org/info/rfc6365>.
-
-   [BCP186]   Best Current Practice 186,
-              <https://www.rfc-editor.org/info/bcp186>.
-              At the time of writing, this BCP comprises the following:
-
-              Gont, F., Atkinson, R., and C. Pignataro, "Recommendations
-              on Filtering of IPv4 Packets Containing IPv4 Options",
-              BCP 186, RFC 7126, DOI 10.17487/RFC7126, February 2014,
-              <https://www.rfc-editor.org/info/rfc7126>.
 
    [BCP47]    Best Current Practice 47,
               <https://www.rfc-editor.org/info/bcp47>.
@@ -1827,6 +1799,33 @@ Table of Contents
               Transient Numeric Identifiers Employed in Network
               Protocols", BCP 72, RFC 9416, DOI 10.17487/RFC9416, July
               2023, <https://www.rfc-editor.org/info/rfc9416>.
+
+   [BCP133]   Best Current Practice 133,
+              <https://www.rfc-editor.org/info/bcp133>.
+              At the time of writing, this BCP comprises the following:
+
+              Duke, M., Ed. and G. Fairhurst, Ed., "Specifying New
+              Congestion Control Algorithms", BCP 133, RFC 9743,
+              DOI 10.17487/RFC9743, March 2025,
+              <https://www.rfc-editor.org/info/rfc9743>.
+
+   [BCP166]   Best Current Practice 166,
+              <https://www.rfc-editor.org/info/bcp166>.
+              At the time of writing, this BCP comprises the following:
+
+              Hoffman, P. and J. Klensin, "Terminology Used in
+              Internationalization in the IETF", BCP 166, RFC 6365,
+              DOI 10.17487/RFC6365, September 2011,
+              <https://www.rfc-editor.org/info/rfc6365>.
+
+   [BCP186]   Best Current Practice 186,
+              <https://www.rfc-editor.org/info/bcp186>.
+              At the time of writing, this BCP comprises the following:
+
+              Gont, F., Atkinson, R., and C. Pignataro, "Recommendations
+              on Filtering of IPv4 Packets Containing IPv4 Options",
+              BCP 186, RFC 7126, DOI 10.17487/RFC7126, February 2014,
+              <https://www.rfc-editor.org/info/rfc7126>.
 
    [CHECKLIST]
               "Operations and Management Review Checklist", 2025,
