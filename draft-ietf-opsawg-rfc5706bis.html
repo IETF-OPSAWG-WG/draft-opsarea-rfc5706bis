@@ -25,25 +25,26 @@
    the IETF Stream that define New Protocols or Protocol Extensions or describe their use (including relevant YANG
    Models), while providing an escape clause if no new considerations are identified. 
     ' name="description">
-<meta content="xml2rfc 3.32.0" name="generator">
+<meta content="xml2rfc 3.34.0" name="generator">
 <meta content="management" name="keyword">
 <meta content="operations" name="keyword">
 <meta content="operations and management" name="keyword">
 <meta content="ops considerations" name="keyword">
 <meta content="draft-ietf-opsawg-rfc5706bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.32.0
-    Python 3.12.12
-    ConfigArgParse 1.7
+  xml2rfc 3.34.0
+    Python 3.14.5
+    ConfigArgParse 1.7.5
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
-    lxml 6.0.2
-    platformdirs 4.9.4
+    lxml 6.1.1
+    natsort 8.4.0
+    platformdirs 4.10.0
     pycountry 24.6.1
     PyYAML 6.0.3
-    requests 2.32.5
-    wcwidth 0.6.0
+    requests 2.33.1
+    wcwidth 0.8.1
 -->
 <link href="draft-ietf-opsawg-rfc5706bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -310,16 +311,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
   color: var(--title-color);
 }
-h1#title {
-  font-size: 32px;
-  line-height: 40px;
-  clear: both;
-}
-h1#title, h1#rfcnum {
-  margin: 1.5em 0 0.2em;
-}
-h1#rfcnum + h1#title {
-  margin: 0.2em 0;
+h1 {
+  &#title {
+    font-size: 32px;
+    line-height: 40px;
+    clear: both;
+    margin: 1.5em 0 0.2em;
+  }
+  &#rfcnum {
+    margin: 1.5em 0 0.2em;
+    & + h1#title {
+      margin: 0.2em 0;
+    }
+  }
 }
 
 h1, h2, h3 {
@@ -339,10 +343,10 @@ h4, h5, h6 {
 #abstract+p {
   font-size: 18px;
   line-height: 24px;
-}
-#abstract+p code, #abstract+p samp, #abstract+p tt {
-  font-size: 16px;
-  line-height: 0;
+  & code, & samp, & tt {
+    font-size: 16px;
+    line-height: 0;
+  }
 }
 
 p {
@@ -353,59 +357,59 @@ p {
 div {
   margin: 0;
 }
-.alignRight.art-text {
-  background-color: var(--highlight-color);
-  border: 1px solid var(--line-color);
-  border-radius: 3px;
-  padding: 0.5em 1em 0;
-  margin-bottom: 0.5em;
-}
-.alignRight.art-text pre {
-  padding: 0;
-  width: auto;
-}
 .alignRight {
   margin: 1em 0;
-}
-.alignRight > *:first-child {
-  border: none;
-  margin: 0;
-  float: right;
-  clear: both;
-}
-.alignRight > *:nth-child(2) {
-  clear: both;
-  display: block;
-  border: none;
+  &.art-text {
+    background-color: var(--highlight-color);
+    border: 1px solid var(--line-color);
+    border-radius: 3px;
+    padding: 0.5em 1em 0;
+    margin-bottom: 0.5em;
+    & pre {
+      padding: 0;
+      width: auto;
+    }
+  }
+  & > *:first-child {
+    border: none;
+    margin: 0;
+    float: right;
+    clear: both;
+  }
+  & > *:nth-child(2) {
+    clear: both;
+    display: block;
+    border: none;
+  }
 }
 svg {
   display: block;
-}
-/* font-family isn't space-separated, but =~ will have to do */
-svg[font-family~="monospace" i], svg [font-family~="monospace" i] {
-  font-family: var(--font-mono);
-}
-.alignCenter.art-text {
-  background-color: var(--highlight-color);
-  border: 1px solid var(--line-color);
-  border-radius: 3px;
-  padding: 0.5em 1em 0;
-  margin-bottom: 0.5em;
-}
-.alignCenter.art-text pre {
-  padding: 0;
-  width: auto;
+  /* font-family isn't space-separated, but =~ will have to do */
+  &[font-family~="monospace" i], & [font-family~="monospace" i] {
+    font-family: var(--font-mono);
+  }
 }
 .alignCenter {
   margin: 1em 0;
-}
-.alignCenter > *:first-child {
-  border: none;
-  /* this isn't optimal, but it's an existence proof.  PrinceXML doesn't
-     support flexbox yet.
-  */
-  display: table;
-  margin: 0 auto;
+  &.art-text {
+    background-color: var(--highlight-color);
+    border: 1px solid var(--line-color);
+    border-radius: 3px;
+    padding: 0.5em 1em 0;
+    margin-bottom: 0.5em;
+    & pre {
+      padding: 0;
+      width: auto;
+    }
+  }
+  & > *:first-child {
+    border: none;
+    /* this isn't optimal, but it's an existence proof.  PrinceXML doesn't
+       support flexbox yet.
+    */
+    display: table;
+    margin: 0 auto;
+  }
 }
 
 /* lists */
@@ -443,26 +447,25 @@ dl {
     --indent: 5ch;
     & > dt {
       min-width: calc(var(--indent) - 2ch);
+      float: none;
     }
-  }
-  &.olPercent > dt {
-    float: none;
   }
 
   dl > dd > & {
     margin-top: 0.5em;
     margin-bottom: 0;
   }
-}
-dl:not(.dlNewline) > dt {
-  float: left;
-  margin-right: 2ch;
-  min-width: 8ch;
-}
-dl > dd {
-  margin-bottom: .8em;
-  margin-left: var(--indent) !important; /* stupid element overrides */
-  min-height: 2ex;
+
+  &:not(.dlNewline) > dt {
+    float: left;
+    margin-right: 2ch;
+    min-width: 8ch;
+  }
+  & > dd {
+    margin-bottom: .8em;
+    margin-left: var(--indent) !important; /* stupid element overrides */
+    min-height: 2ex;
+  }
 }
 :is(dl.compact, .dlCompact) > dd {
   margin-bottom: 0;
@@ -478,20 +481,22 @@ dl > dd {
 }
 
 /* links */
-a, a[href].selfRef:hover {
+a {
   text-decoration: none;
+  &[href] {
+    color: var(--link-color);
+    &:hover { text-decoration: underline; }
+    &.selfRef {
+      color: var(--text-color);
+      &:hover {
+        text-decoration: none;
+        background-color: var(--highlight-color);
+      }
+    }
+  }
 }
-a[href] {
-  color: var(--link-color);
-}
-a[href].selfRef, .iref + a[href].internal {
+.iref + a[href].internal {
   color: var(--text-color);
-}
-a[href]:hover {
-  text-decoration: underline;
-}
-a[href].selfRef:hover {
-  background-color: var(--highlight-color);
 }
 a.xref:is(.cite, .auto), :is(#status-of-memo, #copyright) a {
   white-space: nowrap;
@@ -527,9 +532,9 @@ img {
 figure {
   margin: 0.5em 0;
   padding: 0;
-}
-figure blockquote {
-  margin: 0.8em 0.4em 0.4em;
+  & blockquote {
+    margin: 0.8em 0.4em 0.4em;
+  }
 }
 figcaption, caption {
   font-style: italic;
@@ -539,17 +544,19 @@ figcaption, caption {
 }
 @media screen {
   /* Auto-collapse boilerplate. */
-  :is(#status-of-memo, #copyright) p {
-    margin: -2px 0;
-    max-height: 0;
-    transition: max-height 2s ease, margin 0.5s ease 0.5s;
-    overflow: hidden;
-  }
-  :is(#status-of-memo, #copyright):hover p,
-  :is(#status-of-memo, #copyright) h2:target ~ p {
-    margin: 0.5em 0;
-    max-height: 500px;
-    overflow: auto;
+  :is(#status-of-memo, #copyright) {
+    & p {
+      margin: -2px 0;
+      max-height: 0;
+      transition: max-height 2s ease, margin 0.5s ease 0.5s;
+      overflow: hidden;
+    }
+    &:hover p,
+    & h2:target ~ p {
+      margin: 0.5em 0;
+      max-height: 500px;
+      overflow: auto;
+    }
   }
   pre, svg {
     display: inline-block;
@@ -599,25 +606,17 @@ table {
   max-width: 100%;
   margin: 0 0 1em;
   border-collapse: collapse;
-}
-table.right {
-  margin-left: auto;
-}
-table.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-table.left {
-  margin-right: auto;
-}
-table .text-left {
-  text-align: left;
-}
-table .text-center {
-  text-align: center;
-}
-table .text-right {
-  text-align: right;
+  &.right { margin-left: auto; }
+  &.center { margin-left: auto; margin-right: auto; }
+  &.left { margin-right: auto; }
+  & .text-left { text-align: left; }
+  & .text-center { text-align: center; }
+  & .text-right { text-align: right; }
+  & caption {
+    margin: 0;
+    padding: 3px 0 3px 1em;
+  }
+  & p { margin: 0; }
 }
 
 thead, tbody {
@@ -637,13 +636,6 @@ th {
 :is(tr:nth-child(2n+1), thead+tbody > tr:nth-child(2n)) > td {
   background-color: var(--highlight-color);
 }
-table caption {
-  margin: 0;
-  padding: 3px 0 3px 1em;
-}
-table p {
-  margin: 0;
-}
 
 /* pilcrow */
 a.pilcrow {
@@ -654,18 +646,16 @@ a.pilcrow {
     color: var(--pilcrow-weak);
     &:hover { text-decoration: none; }
   }
-}
-@media not print {
-  :hover > a.pilcrow, a.pilcrow:focus {
-    opacity: 1;
+  @media not print {
+    :hover > &, &:focus {
+      opacity: 1;
+    }
+    &[href]:hover {
+      color: var(--pilcrow-strong);
+      background-color: transparent;
+    }
   }
-  a.pilcrow[href]:hover {
-    color: var(--pilcrow-strong);
-    background-color: transparent;
-  }
-}
-@media print {
-  a.pilcrow {
+  @media print {
     display: none;
   }
 }
@@ -724,9 +714,9 @@ sub, sup {
   font-size: 0.9em;
   font-style: italic;
   margin-top: 2em;
-}
-.docInfo .prepared {
-  float: right;
+  & .prepared {
+    float: right;
+  }
 }
 
 /* table of contents */
@@ -816,23 +806,27 @@ hr.addr {
   max-width: calc(100% - 16px);
 }
 @media (min-width: 500px) {
-  #authors-addresses > section {
-    column-count: 2;
-    column-gap: 20px;
-  }
-  #authors-addresses > section > h2 {
-    column-span: all;
-  }
-  /* hack for break-inside: avoid-column */
-  #authors-addresses address {
-    display: inline-block;
-    break-inside: avoid-column;
+  #authors-addresses {
+    & > section {
+      column-count: 2;
+      column-gap: 20px;
+    }
+    & > section > h2 {
+      column-span: all;
+    }
+    /* hack for break-inside: avoid-column */
+    & address {
+      display: inline-block;
+      break-inside: avoid-column;
+    }
   }
 }
 
 /* Comments */
-.rfcEditorRemove p:first-of-type {
-  font-style: italic;
+.rfcEditorRemove {
+  & p:first-of-type {
+    font-style: italic;
+  }
 }
 .cref {
   background-color: rgba(249, 232, 105, 0.3);
@@ -843,19 +837,21 @@ hr.addr {
 }
 
 @media screen {
-  #toc nav {
-    font-family: var(--font-title);
-    font-weight: 360;
-    & > ul { margin-bottom: 2em; }
-    & ul {
-      margin: 0 0 0 4px;
-      & :is(p, li) {
-        margin: 2px 0;
+  #toc {
+    & nav {
+      font-family: var(--font-title);
+      font-weight: 360;
+      & > ul { margin-bottom: 2em; }
+      & ul {
+        margin: 0 0 0 4px;
+        & :is(p, li) {
+          margin: 2px 0;
+        }
       }
     }
-  }
-  #toc a.toplink {
-    float: right;
+    & a.toplink {
+      float: right;
+    }
   }
 }
 @media not screen {
@@ -876,54 +872,54 @@ hr.addr {
     margin: 0;
     border-bottom: 1px solid #ccc;
     opacity: 0.6;
-  }
-  #toc h2 {
-    margin: 0;
-    padding: 2px 0 2px 6px;
-    padding-right: 1em;
-    font-size: 18px;
-    line-height: 24px;
-    min-width: 190px;
-    text-align: right;
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-    &::before { /* css hamburger */
-      float: right;
-      position: relative;
-      width: 1em;
-      height: 1px;
-      left: -164px;
-      margin: 8px 0 0 0;
-      background: white none repeat scroll 0 0;
-      box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
-      content: "";
+    & h2 {
+      margin: 0;
+      padding: 2px 0 2px 6px;
+      padding-right: 1em;
+      font-size: 18px;
+      line-height: 24px;
+      min-width: 190px;
+      text-align: right;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+      &::before { /* css hamburger */
+        float: right;
+        position: relative;
+        width: 1em;
+        height: 1px;
+        left: -164px;
+        margin: 8px 0 0 0;
+        background: white none repeat scroll 0 0;
+        box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
+        content: "";
+      }
     }
-  }
-  #toc nav {
-    display: none;
-    background-color: var(--background-color);
-    padding: 0.5em 1em 1em;
-    overflow: auto;
-    overscroll-behavior: contain;
-    height: calc(100vh - 48px);
-    border-left: 1px solid #ddd;
-  }
-  #toc.active {
-    opacity: 1;
-    & nav { display: block; }
-  }
-  /* Make the collapsed ToC header render white on gray also when it's a link */
-  #toc h2 a,
-  #toc h2 a:is(:link, :focus, :hover),
-  #toc a.toplink,
-  #toc a.toplink:hover {
-    color: white;
-    background-color: #444;
-    text-decoration: none;
-  }
-  #toc a.toplink {
-    margin: 2px 0.5em 0;
+    & nav {
+      display: none;
+      background-color: var(--background-color);
+      padding: 0.5em 1em 1em;
+      overflow: auto;
+      overscroll-behavior: contain;
+      height: calc(100vh - 48px);
+      border-left: 1px solid #ddd;
+    }
+    &.active {
+      opacity: 1;
+      & nav { display: block; }
+    }
+    /* Make the collapsed ToC header render white on gray also when it's a link */
+    & h2 a,
+    & h2 a:is(:link, :focus, :hover),
+    & a.toplink,
+    & a.toplink:hover {
+      color: white;
+      background-color: #444;
+      text-decoration: none;
+    }
+    & a.toplink {
+      margin: 2px 0.5em 0;
+    }
   }
 }
 
@@ -942,26 +938,26 @@ hr.addr {
     margin: 0;
     padding: 0;
     z-index: 1;
-  }
-  #toc h2 {
-    margin: 0;
-    padding: 0.25em 1em 1em 0;
-  }
-  #toc nav {
-    display: block;
-    height: calc(90vh - 84px);
-    bottom: 0;
-    padding: 0.5em 0 2em;
-    overflow: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
+    & h2 {
+      margin: 0;
+      padding: 0.25em 1em 1em 0;
+    }
+    & nav {
+      display: block;
+      height: calc(90vh - 84px);
+      bottom: 0;
+      padding: 0.5em 0 2em;
+      overflow: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+    }
+    & a.toplink {
+      margin: 8px 0.5em 0;
+    }
   }
   img { /* future proofing */
     max-width: 100%;
     height: auto;
-  }
-  #toc a.toplink {
-    margin: 8px 0.5em 0;
   }
 }
 
@@ -977,12 +973,13 @@ hr.addr {
   #n-copyright-notice {
     border-bottom: none;
   }
-  #toc, #n-introduction {
-    page-break-before: always;
-  }
   #toc {
+    page-break-before: always;
     border-top: none;
     padding-top: 0;
+  }
+  #n-introduction {
+    page-break-before: always;
   }
   figure, pre, .vcard {
     page-break-inside: avoid;
@@ -1044,17 +1041,19 @@ hr.addr {
 }
 
 /* SVG Trick: a prefix match works because only black and white are allowed */
-svg :is([stroke="black"], [stroke^="#000"]) {
-  stroke: var(--text-color);
-}
-svg :is([stroke="white"], [stroke^="#fff"]) {
-  stroke: var(--background-color);
-}
-svg :is([fill="black"], [fill^="#000"], :not([fill])) {
-  fill: var(--text-color);
-}
-svg :is([fill="white"], [fill^="#fff"]) {
-  fill: var(--background-color);
+svg {
+  & :is([stroke="black"], [stroke^="#000"]) {
+    stroke: var(--text-color);
+  }
+  & :is([stroke="white"], [stroke^="#fff"]) {
+    stroke: var(--background-color);
+  }
+  & :is([fill="black"], [fill^="#000"], :not([fill])) {
+    fill: var(--text-color);
+  }
+  & :is([fill="white"], [fill^="#fff"]) {
+    fill: var(--background-color);
+  }
 }
 </style>
 
@@ -1064,11 +1063,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Operations &amp; Management Considerations</td>
-<td class="right">April 2026</td>
+<td class="right">June 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 18 October 2026</td>
+<td class="center">Expires 24 December 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1087,12 +1086,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-04-16" class="published">16 April 2026</time>
+<time datetime="2026-06-22" class="published">22 June 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-10-18">18 October 2026</time></dd>
+<dd class="expires"><time datetime="2026-12-24">24 December 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1157,7 +1156,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 18 October 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 24 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1470,13 +1469,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    per Guidelines for Writing RFC Text on Security Considerations <span>[<a href="#BCP72" class="cite xref">BCP72</a>]</span>)
    how threats should be mitigated, and then suggests appropriate standard
    protocols that could mitigate the threats.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
-<p id="section-1.2-3">It is not the intention that a protocol specification document should
-   be held up waiting for operations and management solutions to be
-   developed.  This is particularly the case when a protocol extension
-   is proposed, but the base protocol is missing operations or
-   management solutions.  However, it is the intent that new documents
-   should clearly articulate the operations and management of
-   that new work to fill any operations and management gaps.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
+<p id="section-1.2-3">It is not the intention that a protocol specification document should be held up waiting for operations and management solutions, or for supporting tooling, to be developed.  This is particularly the case when a protocol extension is proposed, but the base protocol is missing operations or management solutions.  However, it is the intent that new documents should clearly articulate the operations and management of that new work to fill any such gaps. Some operational and tooling guidance can only be determined through deployment experience. In such cases, authors should document what is reasonably foreseeable at design time.<a href="#section-1.2-3" class="pilcrow">¶</a></p>
 <p id="section-1.2-4">A core principle of this document is to encourage early-on discussions rather than mandating any specific solution.
    It does not impose a specific management or operational solution,
    imply that a formal Data Model is needed, or imply that using a specific management
@@ -1782,16 +1775,11 @@ considerations.<a href="#section-3.4-4.1" class="pilcrow">¶</a></p>
    need not be reflected directly in their document, but could help visualize how
    to apply the protocol in the environments where it will be deployed.
    <span>[<a href="#RFC5218" class="cite xref">RFC5218</a>]</span> provides a more detailed discussion on what makes for a successful protocol.<a href="#section-4-1" class="pilcrow">¶</a></p>
-<p id="section-4-2">For example:<a href="#section-4-2" class="pilcrow">¶</a></p>
+<p id="section-4-2">Not every operational consideration can be foreseen at design time. Some considerations reside in how a specification is applied and deployed rather than in the specification itself, and may only become apparent once operational experience has been gained.  In some cases, the relevant questions are not even known in advance. Authors should document what is reasonably foreseeable without speculating, and should expect that operational considerations may need to be revisited as deployment experience accumulates.<a href="#section-4-2" class="pilcrow">¶</a></p>
+<p id="section-4-3">For example:<a href="#section-4-3" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-4-3.1">
-          <p id="section-4-3.1.1">BGP flap damping <span>[<a href="#RFC2439" class="cite xref">RFC2439</a>]</span> was designed to block
-   high-frequency route flaps.  Some BGP implementations were memory-constrained
-   so often elected not to support this function, others found a
-   conflict where path exploration caused false flap damping resulting
-   in loss of reachability.  As a result, flap damping was often not
-   enabled network-wide, contrary to the intentions of the original
-   designers.<a href="#section-4-3.1.1" class="pilcrow">¶</a></p>
+<li class="normal ulEmpty" id="section-4-4.1">
+          <p id="section-4-4.1.1">BGP flap damping <span>[<a href="#RFC2439" class="cite xref">RFC2439</a>]</span> was designed to block high-frequency route flaps.  Some BGP implementations were memory-constrained so often elected not to support this function, others found a conflict where path exploration caused false flap damping resulting in loss of reachability.  As a result, flap damping was often not enabled network-wide, contrary to the intentions of the original designers. This case is instructive precisely because little, if any, text in an "Operational Considerations" section written at design time would have changed the outcome.  That is, the behavior emerged only from operational experience at scale. It illustrates that some operational considerations cannot be fully anticipated when a specification is written.<a href="#section-4-4.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="sec-install">
@@ -1893,10 +1881,11 @@ state during the transition.
    other protocols, or assuming other protocols will not be extended in
    certain ways. If restrictions or dependencies exist, they should be
    stated.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
-<p id="section-4.3-3">For example:<a href="#section-4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.3-3">Where a New Protocol or Protocol Extension depends on another protocol or component to function correctly, that dependency is a normative property of the specification and belongs in its main body rather than only in the "Operational Considerations" section, so that implementers and operators can identify it easily. For example, if correct operation relies on an accurate time source (such as NTP <span>[<a href="#RFC5905" class="cite xref">RFC5905</a>]</span>), the specification should state that requirement, and the acceptable means of satisfying it, explicitly.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.3-4">Another example:<a href="#section-4.3-4" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-4.3-4.1">
-            <p id="section-4.3-4.1.1">The design of the Resource ReSerVation Protocol (RSVP)
+<li class="normal ulEmpty" id="section-4.3-5.1">
+            <p id="section-4.3-5.1.1">The design of the Resource ReSerVation Protocol (RSVP)
    <span>[<a href="#RFC2205" class="cite xref">RFC2205</a>]</span> required each router to look at the RSVP PATH message and,
    if the router understood RSVP, add its own address to the message to
    enable automatic tunneling through non-RSVP routers. But in reality,
@@ -1909,7 +1898,7 @@ state during the transition.
    packets off the fast-forwarding path. Yet, Router Alert has its own
    problems in impacting router performance and security. Refer to <span>[<a href="#RFC9805" class="cite xref">RFC9805</a>]</span> for
    deprecation of the IPv6 Router Alert Option for New Protocols and
-   Section <a href="https://rfc-editor.org/rfc/rfc7126#section-4.8" class="relref">4.8</a> of RFC 7126 <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span> for threats and advice related to IPv4 Router Alert.<a href="#section-4.3-4.1.1" class="pilcrow">¶</a></p>
+   Section <a href="https://rfc-editor.org/rfc/rfc7126#section-4.8" class="relref">4.8</a> of RFC 7126 <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span> for threats and advice related to IPv4 Router Alert.<a href="#section-4.3-5.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -2012,7 +2001,7 @@ they may impose on the hardware forwarding path for traffic.<a href="#section-4.
 <p id="section-4.5-2">Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
 <p id="section-4.5-3">Security operators extensively rely upon Indicators of Compromise (IoCs) <span>[<a href="#RFC9424" class="cite xref">RFC9424</a>]</span>. The deployment of a New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their networks, systems, and devices consistently.
 Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure operators have the information they need. <span>[<a href="#I-D.ietf-quic-qlog-main-schema" class="cite xref">I-D.ietf-quic-qlog-main-schema</a>]</span> is an example of extensible structured logging.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
-<p id="section-4.5-4">Tooling required by security operators should be documented in the design and deployment of a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
+<p id="section-4.5-4">Tooling needed by security operators should be considered when designing and deploying a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. The absence of such tooling is not, by itself, a reason to delay publication of the specification. Indicators of compromise, and the means to detect exploitation, tend to evolve only as operational experience accumulates and as attacks emerge.  Detailed forensic and tooling guidance may therefore be developed after the protocol is specified and is expected to be refined over time (see also <a href="#sec-oper-mgmt-tooling" class="auto internal xref">Section 6</a>).<a href="#section-4.5-4" class="pilcrow">¶</a></p>
 <p id="section-4.5-5">For further information on the security operations considerations discussed in this section, refer to <span>[<a href="#I-D.parsons-opsawg-security-operations" class="cite xref">I-D.parsons-opsawg-security-operations</a>]</span>.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -3020,14 +3009,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <a href="#section-10.2" class="section-number selfRef">10.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
-<dt id="BCP133">[BCP133]</dt>
-        <dd>
-<div class="refInstance">Best Current Practice 133, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp133">https://www.rfc-editor.org/info/bcp133</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
-</div>
-<div class="refInstance" id="RFC9743">
-            <span class="refAuthor">Duke, M., Ed.</span> and <span class="refAuthor">G. Fairhurst, Ed.</span>, <span class="refTitle">"Specifying New Congestion Control Algorithms"</span>, <span class="seriesInfo">BCP 133</span>, <span class="seriesInfo">RFC 9743</span>, <span class="seriesInfo">DOI 10.17487/RFC9743</span>, <time datetime="2025-03" class="refDate">March 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9743">https://www.rfc-editor.org/info/rfc9743</a>&gt;</span>. </div>
-</dd>
-<dd class="break"></dd>
 <dt id="BCP14">[BCP14]</dt>
         <dd>
 <div class="refInstance">Best Current Practice 14, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp14">https://www.rfc-editor.org/info/bcp14</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
@@ -3036,22 +3017,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
             <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>&gt;</span>. </div>
 <div class="refInstance" id="RFC8174">
             <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8174">https://www.rfc-editor.org/info/rfc8174</a>&gt;</span>. </div>
-</dd>
-<dd class="break"></dd>
-<dt id="BCP166">[BCP166]</dt>
-        <dd>
-<div class="refInstance">Best Current Practice 166, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp166">https://www.rfc-editor.org/info/bcp166</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
-</div>
-<div class="refInstance" id="RFC6365">
-            <span class="refAuthor">Hoffman, P.</span> and <span class="refAuthor">J. Klensin</span>, <span class="refTitle">"Terminology Used in Internationalization in the IETF"</span>, <span class="seriesInfo">BCP 166</span>, <span class="seriesInfo">RFC 6365</span>, <span class="seriesInfo">DOI 10.17487/RFC6365</span>, <time datetime="2011-09" class="refDate">September 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc6365">https://www.rfc-editor.org/info/rfc6365</a>&gt;</span>. </div>
-</dd>
-<dd class="break"></dd>
-<dt id="BCP186">[BCP186]</dt>
-        <dd>
-<div class="refInstance">Best Current Practice 186, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp186">https://www.rfc-editor.org/info/bcp186</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
-</div>
-<div class="refInstance" id="RFC7126">
-            <span class="refAuthor">Gont, F.</span>, <span class="refAuthor">Atkinson, R.</span>, and <span class="refAuthor">C. Pignataro</span>, <span class="refTitle">"Recommendations on Filtering of IPv4 Packets Containing IPv4 Options"</span>, <span class="seriesInfo">BCP 186</span>, <span class="seriesInfo">RFC 7126</span>, <span class="seriesInfo">DOI 10.17487/RFC7126</span>, <time datetime="2014-02" class="refDate">February 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc7126">https://www.rfc-editor.org/info/rfc7126</a>&gt;</span>. </div>
 </dd>
 <dd class="break"></dd>
 <dt id="BCP47">[BCP47]</dt>
@@ -3074,6 +3039,30 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
             <span class="refAuthor">Gont, F.</span> and <span class="refAuthor">I. Arce</span>, <span class="refTitle">"Security Considerations for Transient Numeric Identifiers Employed in Network Protocols"</span>, <span class="seriesInfo">BCP 72</span>, <span class="seriesInfo">RFC 9416</span>, <span class="seriesInfo">DOI 10.17487/RFC9416</span>, <time datetime="2023-07" class="refDate">July 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9416">https://www.rfc-editor.org/info/rfc9416</a>&gt;</span>. </div>
 </dd>
 <dd class="break"></dd>
+<dt id="BCP133">[BCP133]</dt>
+        <dd>
+<div class="refInstance">Best Current Practice 133, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp133">https://www.rfc-editor.org/info/bcp133</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
+</div>
+<div class="refInstance" id="RFC9743">
+            <span class="refAuthor">Duke, M., Ed.</span> and <span class="refAuthor">G. Fairhurst, Ed.</span>, <span class="refTitle">"Specifying New Congestion Control Algorithms"</span>, <span class="seriesInfo">BCP 133</span>, <span class="seriesInfo">RFC 9743</span>, <span class="seriesInfo">DOI 10.17487/RFC9743</span>, <time datetime="2025-03" class="refDate">March 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9743">https://www.rfc-editor.org/info/rfc9743</a>&gt;</span>. </div>
+</dd>
+<dd class="break"></dd>
+<dt id="BCP166">[BCP166]</dt>
+        <dd>
+<div class="refInstance">Best Current Practice 166, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp166">https://www.rfc-editor.org/info/bcp166</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
+</div>
+<div class="refInstance" id="RFC6365">
+            <span class="refAuthor">Hoffman, P.</span> and <span class="refAuthor">J. Klensin</span>, <span class="refTitle">"Terminology Used in Internationalization in the IETF"</span>, <span class="seriesInfo">BCP 166</span>, <span class="seriesInfo">RFC 6365</span>, <span class="seriesInfo">DOI 10.17487/RFC6365</span>, <time datetime="2011-09" class="refDate">September 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc6365">https://www.rfc-editor.org/info/rfc6365</a>&gt;</span>. </div>
+</dd>
+<dd class="break"></dd>
+<dt id="BCP186">[BCP186]</dt>
+        <dd>
+<div class="refInstance">Best Current Practice 186, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp186">https://www.rfc-editor.org/info/bcp186</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
+</div>
+<div class="refInstance" id="RFC7126">
+            <span class="refAuthor">Gont, F.</span>, <span class="refAuthor">Atkinson, R.</span>, and <span class="refAuthor">C. Pignataro</span>, <span class="refTitle">"Recommendations on Filtering of IPv4 Packets Containing IPv4 Options"</span>, <span class="seriesInfo">BCP 186</span>, <span class="seriesInfo">RFC 7126</span>, <span class="seriesInfo">DOI 10.17487/RFC7126</span>, <time datetime="2014-02" class="refDate">February 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc7126">https://www.rfc-editor.org/info/rfc7126</a>&gt;</span>. </div>
+</dd>
+<dd class="break"></dd>
 <dt id="CHECKLIST">[CHECKLIST]</dt>
         <dd>
 <span class="refTitle">"Operations and Management Review Checklist"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://github.com/IETF-OPS-DIR/Review-Template/tree/main">https://github.com/IETF-OPS-DIR/Review-Template/tree/main</a>&gt;</span>. </dd>
@@ -3084,7 +3073,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-ippm-ioam-integrity-yang">[I-D.ietf-ippm-ioam-integrity-yang]</dt>
         <dd>
-<span class="refAuthor">Iurman, J.</span> and <span class="refAuthor">T. Zhou</span>, <span class="refTitle">"A YANG Data Model for In Situ Operations, Administration, and Maintenance (IOAM) Integrity-Protected Options"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ippm-ioam-integrity-yang-06</span>, <time datetime="2026-04-15" class="refDate">15 April 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ippm-ioam-integrity-yang-06">https://datatracker.ietf.org/doc/html/draft-ietf-ippm-ioam-integrity-yang-06</a>&gt;</span>. </dd>
+<span class="refAuthor">Iurman, J.</span> and <span class="refAuthor">T. Zhou</span>, <span class="refTitle">"A YANG Data Model for In Situ Operations, Administration, and Maintenance (IOAM) Integrity-Protected Options"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ippm-ioam-integrity-yang-08</span>, <time datetime="2026-05-08" class="refDate">8 May 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ippm-ioam-integrity-yang-08">https://datatracker.ietf.org/doc/html/draft-ietf-ippm-ioam-integrity-yang-08</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-lamps-dilithium-certificates">[I-D.ietf-lamps-dilithium-certificates]</dt>
         <dd>
@@ -3112,7 +3101,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.parsons-opsawg-security-operations">[I-D.parsons-opsawg-security-operations]</dt>
         <dd>
-<span class="refAuthor">P, M.</span> and <span class="refAuthor">F. D</span>, <span class="refTitle">"Security Operations Fundamentals and Guidance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-parsons-opsawg-security-operations-00</span>, <time datetime="2026-02-27" class="refDate">27 February 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-00">https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-00</a>&gt;</span>. </dd>
+<span class="refAuthor">P, M.</span> and <span class="refAuthor">F. D</span>, <span class="refTitle">"Security Operations Fundamentals and Guidance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-parsons-opsawg-security-operations-01</span>, <time datetime="2026-05-20" class="refDate">20 May 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-01">https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-01</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IETF-HACKATHONS">[IETF-HACKATHONS]</dt>
         <dd>
@@ -3201,6 +3190,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC5884">[RFC5884]</dt>
         <dd>
 <span class="refAuthor">Aggarwal, R.</span>, <span class="refAuthor">Kompella, K.</span>, <span class="refAuthor">Nadeau, T.</span>, and <span class="refAuthor">G. Swallow</span>, <span class="refTitle">"Bidirectional Forwarding Detection (BFD) for MPLS Label Switched Paths (LSPs)"</span>, <span class="seriesInfo">RFC 5884</span>, <span class="seriesInfo">DOI 10.17487/RFC5884</span>, <time datetime="2010-06" class="refDate">June 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5884">https://www.rfc-editor.org/rfc/rfc5884</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC5905">[RFC5905]</dt>
+        <dd>
+<span class="refAuthor">Mills, D.</span>, <span class="refAuthor">Martin, J., Ed.</span>, <span class="refAuthor">Burbank, J.</span>, and <span class="refAuthor">W. Kasch</span>, <span class="refTitle">"Network Time Protocol Version 4: Protocol and Algorithms Specification"</span>, <span class="seriesInfo">RFC 5905</span>, <span class="seriesInfo">DOI 10.17487/RFC5905</span>, <time datetime="2010-06" class="refDate">June 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5905">https://www.rfc-editor.org/rfc/rfc5905</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6020">[RFC6020]</dt>
         <dd>
