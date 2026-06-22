@@ -796,6 +796,13 @@ Table of Contents
    possible to generate the operations necessary to get from A to B with
    minimal state changes and effects on network and systems.
 
+   Protocol Designers should account for MTU constraints when designing
+   protocols that carry management traffic, including any reduction in
+   effective payload size introduced by tunnel or encapsulation
+   overhead.  [RFC8899] specifies path MTU discovery for datagram
+   transports, and Section 6.1 of [RFC8900] gives recommendations for
+   protocol developers on avoiding reliance on IP fragmentation.
+
 4.5.  Impact on Security Operations
 
    Security Operations (SecOps) is a collaborative approach that
@@ -2116,6 +2123,16 @@ Table of Contents
    [RFC8799]  Carpenter, B. and B. Liu, "Limited Domains and Internet
               Protocols", RFC 8799, DOI 10.17487/RFC8799, July 2020,
               <https://www.rfc-editor.org/rfc/rfc8799>.
+
+   [RFC8899]  Fairhurst, G., Jones, T., Tüxen, M., Rüngeler, I., and T.
+              Völker, "Packetization Layer Path MTU Discovery for
+              Datagram Transports", RFC 8899, DOI 10.17487/RFC8899,
+              September 2020, <https://www.rfc-editor.org/rfc/rfc8899>.
+
+   [RFC8900]  Bonica, R., Baker, F., Huston, G., Hinden, R., Troan, O.,
+              and F. Gont, "IP Fragmentation Considered Fragile",
+              BCP 230, RFC 8900, DOI 10.17487/RFC8900, September 2020,
+              <https://www.rfc-editor.org/rfc/rfc8900>.
 
    [RFC9182]  Barguil, S., Gonzalez de Dios, O., Ed., Boucadair, M.,
               Ed., Munoz, L., and A. Aguado, "A YANG Network Data Model
