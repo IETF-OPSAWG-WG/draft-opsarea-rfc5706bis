@@ -564,7 +564,9 @@ state during the transition.
    certain ways. If restrictions or dependencies exist, they should be
    stated.
 
-   For example:
+   Where a New Protocol or Protocol Extension depends on another protocol or component to function correctly, that dependency is a normative property of the specification and belongs in its main body rather than only in the "Operational Considerations" section, so that implementers and operators can identify it easily. For example, if correct operation relies on an accurate time source (such as NTP {{?RFC5905}}), the specification should state that requirement, and the acceptable means of satisfying it, explicitly.
+
+   Another example:
 
    > The design of the Resource ReSerVation Protocol (RSVP)
    {{?RFC2205}} required each router to look at the RSVP PATH message and,
