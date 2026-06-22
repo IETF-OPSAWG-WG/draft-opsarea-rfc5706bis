@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 20 September 2026                            Old Dog Consulting
+Expires: 24 December 2026                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           19 March 2026
+                                                            22 June 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 September 2026.
+   This Internet-Draft will expire on 24 December 2026.
 
 Copyright Notice
 
@@ -149,21 +149,23 @@ Table of Contents
    functionality for their New Protocol or Protocol Extension at an
    early phase in the design process.
 
-   This document obsoletes [RFC5706] and fully updates its content with
-   new operational and management techniques and mechanisms.  It also
-   introduces a requirement to include an "Operational Considerations"
-   section in new RFCs in the IETF Stream that define New Protocols or
-   Protocol Extensions or describe their use (including relevant YANG
-   Models).  This section must cover both operational and management
-   considerations.  Additionally, this document updates Section 2.14 of
-   RFC 2360 [BCP22] on "Guide for Internet Standards Writers" to
-   obsolete references to mandatory MIBs and instead focus on
-   documenting holistic manageability and operational considerations as
-   described in Section 3.  The update is provided in Section 3.4.
-   Further, this document removes outdated references and aligns with
-   current practices, protocols, and technologies used in operating and
-   managing devices, networks, and services.  Refer to Appendix B for
-   more details.
+   This document obsoletes [RFC5706] and updates its content with new
+   operational and management considerations.  It also introduces a
+   requirement to include an "Operational Considerations" section in new
+   RFCs in the IETF Stream that define New Protocols or Protocol
+   Extensions or describe their use (including relevant YANG data
+   models).  This section must cover both operational and management
+   considerations.
+
+   Additionally, this document updates Section 2.14 of RFC 2360 [BCP22]
+   on "Guide for Internet Standards Writers" to obsolete references to
+   mandatory MIBs and instead focus on documenting holistic
+   manageability and operational considerations as described in
+   Section 3.  The update is provided in Section 3.4.  Further, this
+   document removes outdated references and aligns with current
+   practices, protocols, and technologies used in operating and managing
+   devices, networks, and services.  Refer to Appendix B for more
+   details.
 
 1.1.  This Document
 
@@ -204,6 +206,14 @@ Table of Contents
    design of management Data Models.  Both topics should be described
    within the "Operational Considerations" section.
 
+   It is possible that the operational considerations will require
+   significant amounts of text and need to be presented in a separate
+   document.  This saves the protocol specification from becoming
+   overwhelmed or bloated.  In this case the Operational Considerations
+   section may contain just a short overview description of the material
+   and a reference to other documents that contain the details, but
+   those references must be normative.
+
 1.2.  Audience
 
    The guidelines are intended to be useful to authors writing protocol
@@ -228,12 +238,15 @@ Table of Contents
    threats.
 
    It is not the intention that a protocol specification document should
-   be held up waiting for operations and management solutions to be
-   developed.  This is particularly the case when a protocol extension
-   is proposed, but the base protocol is missing operations or
-   management solutions.  However, it is the intent that new documents
-   should clearly articulate the operations and management of that new
-   work to fill any operations and management gaps.
+   be held up waiting for operations and management solutions, or for
+   supporting tooling, to be developed.  This is particularly the case
+   when a protocol extension is proposed, but the base protocol is
+   missing operations or management solutions.  However, it is the
+   intent that new documents should clearly articulate the operations
+   and management of that new work to fill any such gaps.  Some
+   operational and tooling guidance can only be determined through
+   deployment experience.  In such cases, authors should document what
+   is reasonably foreseeable at design time.
 
    A core principle of this document is to encourage early-on
    discussions rather than mandating any specific solution.  It does not
@@ -322,7 +335,10 @@ Table of Contents
 
    *  New Protocol and Protocol Extension: These terms are used in this
       document to identify entirely new protocols, new versions of
-      existing protocols, and extensions to protocols.
+      existing protocols, and extensions to protocols.  The application
+      of New Protocols and Protocol Extensions to different scenarios,
+      and their use in delivering services, procedures, mechanisms, or
+      applications, falls within the scope of this definition.
 
    *  Network Device: A device that implements one or more network
       protocols and participates in network operations.  This term
@@ -525,6 +541,15 @@ Table of Contents
    in the environments where it will be deployed.  [RFC5218] provides a
    more detailed discussion on what makes for a successful protocol.
 
+   Not every operational consideration can be foreseen at design time.
+   Some considerations reside in how a specification is applied and
+   deployed rather than in the specification itself, and may only become
+   apparent once operational experience has been gained.  In some cases,
+   the relevant questions are not even known in advance.  Authors should
+   document what is reasonably foreseeable without speculating, and
+   should expect that operational considerations may need to be
+   revisited as deployment experience accumulates.
+
    For example:
 
       BGP flap damping [RFC2439] was designed to block high-frequency
@@ -533,7 +558,12 @@ Table of Contents
       conflict where path exploration caused false flap damping
       resulting in loss of reachability.  As a result, flap damping was
       often not enabled network-wide, contrary to the intentions of the
-      original designers.
+      original designers.  This case is instructive precisely because
+      little, if any, text in an "Operational Considerations" section
+      written at design time would have changed the outcome.  That is,
+      the behavior emerged only from operational experience at scale.
+      It illustrates that some operational considerations cannot be
+      fully anticipated when a specification is written.
 
 4.1.  Installation and Initial Setup
 
@@ -569,6 +599,11 @@ Table of Contents
    For parameters that can vary (e.g., speed-dependent), instead of
    using a constant, set the default value as a function of the variable
    to reduce the risk of problems caused by technology advancement.
+
+   It must always be possible for an operator to retrieve the actual
+   value in use, to determine that the element is running at a known
+   default.  This is important for troubleshooting, auditing, and
+   ensuring consistent behavior across implementations.
 
    For example:
 
@@ -607,11 +642,14 @@ Table of Contents
    are required, and how they can be introduced in a manner that
    facilitates deployment.
 
-   Incentivizing good security operation practices when migrating to the
-   New Protocol or Protocol Extension should be encouraged.  For
-   example, patching is fundamental for security operations and can be
-   incentivized if Protocol Designers consider supporting cheap and fast
-   connection hand-offs and reconnections.
+   Security operations (Section 4.5) are important to ensure the
+   stability and security of networks.  Good security operation
+   practices should be encouraged when migrating to a New Protocol or
+   Protocol Extension.  For example, patching (i.e., installing new
+   versions that have fixes for security vulnerabilities) is fundamental
+   for security operations, and can be made much easier if Protocol
+   Designers consider supporting cheap and fast connection hand-offs and
+   reconnections.
 
    When Protocol Designers are considering how deployments should
    transition to the New Protocol or Protocol Extension, impacts to
@@ -777,8 +815,8 @@ Table of Contents
    [I-D.ietf-quic-qlog-main-schema] is an example of extensible
    structured logging.
 
-   Tooling required by security operators should be documented in the
-   design and deployment of a New Protocol or Protocol Extension.
+   Tooling needed by security operators should be considered when
+   designing and deploying a New Protocol or Protocol Extension.
    Operators may require new tooling or methods for managing network
    traffic in response to protocol changes to ensure consistent
    availability and performance of networks.  Similarly, updating and
@@ -786,6 +824,17 @@ Table of Contents
    expected when a New Protocol is deployed, but having to completely
    rebuild such tooling would greatly reduce the effectiveness of
    security operators, so protocol extensibility should be considered.
+   The absence of such tooling is not, by itself, a reason to delay
+   publication of the specification.  Indicators of compromise, and the
+   means to detect exploitation, tend to evolve only as operational
+   experience accumulates and as attacks emerge.  Detailed forensic and
+   tooling guidance may therefore be developed after the protocol is
+   specified and is expected to be refined over time (see also
+   Section 6).
+
+   For further information on the security operations considerations
+   discussed in this section, refer to
+   [I-D.parsons-opsawg-security-operations].
 
 4.6.  Verifying Correct Operation
 
@@ -1028,6 +1077,14 @@ Table of Contents
    types of operations are allowed, what protocol-specific events might
    occur, which events can be counted, and for which events an operator
    should be notified.
+
+   There may be a need to support both CLI (e.g., for troubleshooting)
+   and a programmatic interface (e.g., for automated monitoring and
+   Cause analysis).  The APIs and CLI should expose consistent
+   information so that an operator receives the same view of the
+   protocol state regardless of which interface is used.  Counter
+   definitions, in particular, should be unambiguous and consistently
+   defined across both types of interface.
 
    When defining management information, it is important to categorize
    data into configuration, operational state, and statistics.
@@ -1721,15 +1778,6 @@ Table of Contents
 
 10.2.  Informative References
 
-   [BCP133]   Best Current Practice 133,
-              <https://www.rfc-editor.org/info/bcp133>.
-              At the time of writing, this BCP comprises the following:
-
-              Duke, M., Ed. and G. Fairhurst, Ed., "Specifying New
-              Congestion Control Algorithms", BCP 133, RFC 9743,
-              DOI 10.17487/RFC9743, March 2025,
-              <https://www.rfc-editor.org/info/rfc9743>.
-
    [BCP14]    Best Current Practice 14,
               <https://www.rfc-editor.org/info/bcp14>.
               At the time of writing, this BCP comprises the following:
@@ -1742,24 +1790,6 @@ Table of Contents
               Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
-   [BCP166]   Best Current Practice 166,
-              <https://www.rfc-editor.org/info/bcp166>.
-              At the time of writing, this BCP comprises the following:
-
-              Hoffman, P. and J. Klensin, "Terminology Used in
-              Internationalization in the IETF", BCP 166, RFC 6365,
-              DOI 10.17487/RFC6365, September 2011,
-              <https://www.rfc-editor.org/info/rfc6365>.
-
-   [BCP186]   Best Current Practice 186,
-              <https://www.rfc-editor.org/info/bcp186>.
-              At the time of writing, this BCP comprises the following:
-
-              Gont, F., Atkinson, R., and C. Pignataro, "Recommendations
-              on Filtering of IPv4 Packets Containing IPv4 Options",
-              BCP 186, RFC 7126, DOI 10.17487/RFC7126, February 2014,
-              <https://www.rfc-editor.org/info/rfc7126>.
 
    [BCP47]    Best Current Practice 47,
               <https://www.rfc-editor.org/info/bcp47>.
@@ -1787,6 +1817,33 @@ Table of Contents
               Protocols", BCP 72, RFC 9416, DOI 10.17487/RFC9416, July
               2023, <https://www.rfc-editor.org/info/rfc9416>.
 
+   [BCP133]   Best Current Practice 133,
+              <https://www.rfc-editor.org/info/bcp133>.
+              At the time of writing, this BCP comprises the following:
+
+              Duke, M., Ed. and G. Fairhurst, Ed., "Specifying New
+              Congestion Control Algorithms", BCP 133, RFC 9743,
+              DOI 10.17487/RFC9743, March 2025,
+              <https://www.rfc-editor.org/info/rfc9743>.
+
+   [BCP166]   Best Current Practice 166,
+              <https://www.rfc-editor.org/info/bcp166>.
+              At the time of writing, this BCP comprises the following:
+
+              Hoffman, P. and J. Klensin, "Terminology Used in
+              Internationalization in the IETF", BCP 166, RFC 6365,
+              DOI 10.17487/RFC6365, September 2011,
+              <https://www.rfc-editor.org/info/rfc6365>.
+
+   [BCP186]   Best Current Practice 186,
+              <https://www.rfc-editor.org/info/bcp186>.
+              At the time of writing, this BCP comprises the following:
+
+              Gont, F., Atkinson, R., and C. Pignataro, "Recommendations
+              on Filtering of IPv4 Packets Containing IPv4 Options",
+              BCP 186, RFC 7126, DOI 10.17487/RFC7126, February 2014,
+              <https://www.rfc-editor.org/info/rfc7126>.
+
    [CHECKLIST]
               "Operations and Management Review Checklist", 2025,
               <https://github.com/IETF-OPS-DIR/Review-Template/tree/
@@ -1802,10 +1859,10 @@ Table of Contents
    [I-D.ietf-ippm-ioam-integrity-yang]
               Iurman, J. and T. Zhou, "A YANG Data Model for In Situ
               Operations, Administration, and Maintenance (IOAM)
-              Integrity Protected Options", Work in Progress, Internet-
-              Draft, draft-ietf-ippm-ioam-integrity-yang-05, 12 January
-              2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              ippm-ioam-integrity-yang-05>.
+              Integrity-Protected Options", Work in Progress, Internet-
+              Draft, draft-ietf-ippm-ioam-integrity-yang-08, 8 May 2026,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ippm-
+              ioam-integrity-yang-08>.
 
    [I-D.ietf-lamps-dilithium-certificates]
               Massimo, J., Kampanakis, P., Turner, S., and B.
@@ -1854,6 +1911,13 @@ Table of Contents
               suit-mti-23, 22 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-suit-
               mti-23>.
+
+   [I-D.parsons-opsawg-security-operations]
+              P, M. and F. D, "Security Operations Fundamentals and
+              Guidance", Work in Progress, Internet-Draft, draft-
+              parsons-opsawg-security-operations-01, 20 May 2026,
+              <https://datatracker.ietf.org/doc/html/draft-parsons-
+              opsawg-security-operations-01>.
 
    [IETF-HACKATHONS]
               IETF, "IETF Hackathons", 1 May 2025,
@@ -2239,10 +2303,27 @@ A.7.  Security Management
 
       -  What security events should be logged?  (Section 5.8)
 
+      -  Do log entries contain privacy-sensitive information that must
+         be controlled or redacted before sharing with authorized third
+         parties?  (Section 5.8)
+
       -  What statistics help detect attacks?  (Section 5.8)
 
       -  What security and privacy threats do management operations
          introduce?  (Section 5.8)
+
+   *  What access controls are needed on management interfaces?
+      (Section 5.8)
+
+      -  Do management interfaces support role-based access control and
+         the principle of least privilege?  (Section 5.8)
+
+      -  How are ACLs maintained, updated, and verified for consistency
+         across devices?  (Section 5.8)
+
+   *  How are secure transport, authentication, identity, and key/
+      credential management addressed for management operations?
+      (Section 5.8)
 
 Appendix B.  Changes Since RFC 5706
 
@@ -2298,7 +2379,7 @@ Acknowledgements
       Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang,
       Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan
       Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco
-      Tiloca, and Jacqueline McCall.
+      Tiloca, Jacqueline McCall, and Tim Winters.
 
    The document shepherd who has gone beyond normal shepherding
    duties to improve this document:  Alvaro Retana
