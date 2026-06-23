@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-21T02:32:20.688915+00:00",
+  "timestamp": "2026-06-23T02:02:32.833219+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3557,7 +3557,7 @@
       "id": "I_kwDOOWPBqs70Ux-2",
       "title": "Tim Winters INT-Dir review",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/233",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "AdrianFarrel",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -3568,8 +3568,8 @@
       ],
       "body": "Summary: I found this document clear and concise with the purpose of this\ndocument.  Appendix A has an excellent set of questions for protocol designers.\n I have some suggestions for improving how operation considerations over the\ninternet.\n\nINTAREA:\n\nThis document should suggest that protocol designs consider all aspects IPv6\nwhen using IP as part of the operation and management solution.  For example,\nreducing the need for fragmentation and leverage appropriate MTU sizes when\nmaking operational considerations.   Another area that you may want to consider\ntunnel behavior if the operation and management solution will need to deal with\ntunnels as part of the solution.\n\nIn both cases, it would be helpful to suggest to authors to consider these\nfactors when documenting the management and operation solution for new or\nextended protocols.\n\nI looked thru the document for references to Internet protocols (DHCP/IP).  The\nreferences to IP based protocols such as the reference to Router Alert were\naccurate.\n\nNits:\n - RFC3139 has an error in the reference.\n - Section 2 - Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang] needs a \".\" \n- {{RFC6291}} has an error with the reference. \n- - Section 1.2\n \"explicit in a operational considerations discussion\" -> \"explicit in an operational considerations discussion\"\n",
       "createdAt": "2026-03-19T03:41:39Z",
-      "updatedAt": "2026-04-02T13:08:47Z",
-      "closedAt": null,
+      "updatedAt": "2026-06-22T13:46:17Z",
+      "closedAt": "2026-06-22T13:46:17Z",
       "comments": [
         {
           "author": "boucadair",
@@ -3661,7 +3661,7 @@
       "id": "I_kwDOOWPBqs76BJ2I",
       "title": "Operational Considerations Should Be Close To the Spec",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/238",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -3672,8 +3672,8 @@
       ],
       "body": "From Eliot Lear:\n\nBut the discussion about\n    whether to have an option needs to be within the working group, and\n    the text around how to use an option should (IMHO) be proximate to\n    its specification, and not divorced.  If it's really complex to use,\n    requiring a lot of text, then RFC 1958 seems to apply even more.\n\nAnd perhaps related:\n\nRegarding Section 4.4, I just chastised authors for \"burying the\n    lede\" in terms of stating what the requirements to run a protocol\n    are.  And this one gets hairy.  A good example is certificates and\n    time.  Is NTP required or is roughtime required?  And if so, if you\n    bury that in operational considerations, might it waste a lot of\n    time (so to speak)?  I like the idea of listing out that sort of\n    dependency right up front.",
       "createdAt": "2026-04-02T13:27:05Z",
-      "updatedAt": "2026-04-02T13:34:36Z",
-      "closedAt": null,
+      "updatedAt": "2026-06-22T13:43:08Z",
+      "closedAt": "2026-06-22T13:43:08Z",
       "comments": []
     },
     {
@@ -17772,24 +17772,26 @@
       "id": "PR_kwDOOWPBqs7lCdY-",
       "title": "Address Eliot's comments from #238",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/249",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Make it clear that protocol dependencies need not and should not be buried in the Ops Considerations section.  Use Eliot's own time example.\r\n\r\nLeave options up to the underlying Protocol WG.",
       "createdAt": "2026-06-10T20:56:58Z",
-      "updatedAt": "2026-06-20T12:38:19Z",
+      "updatedAt": "2026-06-22T13:43:09Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "238-operational-considerations-should-be-close-to-the-spec",
-      "headRefOid": "9eca483e2e92b7ef26466700fc88d3a3fe9d9592",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "20287383e0af11198f776a940da9ed0ea45332df",
+      "closedAt": "2026-06-22T13:43:07Z",
+      "mergedAt": "2026-06-22T13:43:07Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "d02ad4d075f4703edc3a1e2ed13f516ca9d06904"
+      },
       "comments": [
         {
           "author": "xorrkaz",
@@ -17900,9 +17902,9 @@
           "comments": [
             {
               "originalPosition": 5,
-              "body": "```suggestion\n   Where a New Protocol or Protocol Extension depends on another protocol or component to function correctly, that dependency is a normative property of the specification and belongs in its main body rather than only in the \"Operational Considerations\" section, so that implementers and operators can identify it readily. For example, if correct operation relies on an accurate time source (such as NTP {{?RFC5905}}), the specification should state that requirement, and the acceptable means of satisfying it, explicitly.\n```",
+              "body": "```suggestion\r\n   Where a New Protocol or Protocol Extension depends on another protocol or component to function correctly, that dependency is a normative property of the specification and belongs in its main body rather than only in the \"Operational Considerations\" section, so that implementers and operators can identify it easily. For example, if correct operation relies on an accurate time source (such as NTP {{?RFC5905}}), the specification should state that requirement, and the acceptable means of satisfying it, explicitly.\r\n```",
               "createdAt": "2026-06-20T12:38:02Z",
-              "updatedAt": "2026-06-20T12:38:02Z"
+              "updatedAt": "2026-06-22T13:41:38Z"
             }
           ]
         },
@@ -17917,6 +17919,19 @@
           "body": "",
           "createdAt": "2026-06-20T12:38:19Z",
           "updatedAt": "2026-06-20T12:38:19Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDr6bGg",
+          "commit": {
+            "abbreviatedOid": "9eca483"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-22T08:29:32Z",
+          "updatedAt": "2026-06-22T08:29:32Z",
           "comments": []
         }
       ]
@@ -18022,24 +18037,26 @@
       "id": "PR_kwDOOWPBqs7lCowK",
       "title": "Address comments from Tim Winters in #233",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/251",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Add some text (reference pending) to point Designers to existing guidance on IP transport (MTU, fragmentation, etc.).",
       "createdAt": "2026-06-10T21:05:23Z",
-      "updatedAt": "2026-06-20T12:36:11Z",
+      "updatedAt": "2026-06-22T13:46:17Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "af081e8209c6e7c5af80f1d9ca91fd0f7d915f64",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "233-tim-winters-int-dir-review",
-      "headRefOid": "b7016290bf7a06ea604cc9e1375f9366f10799c1",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "de763dbf9d6d98d587e1f51a20be24f011746846",
+      "closedAt": "2026-06-22T13:46:16Z",
+      "mergedAt": "2026-06-22T13:46:16Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "33d6e1115f836ea2677a881e704a51fdc41961a1"
+      },
       "comments": [
         {
           "author": "cpignata",
@@ -18187,6 +18204,68 @@
           "body": "",
           "createdAt": "2026-06-20T12:36:11Z",
           "updatedAt": "2026-06-20T12:36:11Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 252,
+      "id": "PR_kwDOOWPBqs7pCSUB",
+      "title": "clarify updates",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/252",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "\"fully update ...\" is inacurrate given the list of changes.\r\n\r\n+ minor fix to be consistent with https://datatracker.ietf.org/doc/html/rfc9907#name-yang-data-model-versus-yang",
+      "createdAt": "2026-06-22T06:32:40Z",
+      "updatedAt": "2026-06-22T13:43:57Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "5420f6ebcaa981ec8f555590b03d0fc37f5d1165",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "0e2ef6dfb750e63b3a52bac560d121af9bc976d6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDrOt-Q",
+          "commit": {
+            "abbreviatedOid": "697bec7"
+          },
+          "author": "github-actions",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-22T06:33:07Z",
+          "updatedAt": "2026-06-22T06:33:08Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "````suggestion\n\n````",
+              "createdAt": "2026-06-22T06:33:07Z",
+              "updatedAt": "2026-06-22T06:33:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABDuEIkA",
+          "commit": {
+            "abbreviatedOid": "0e2ef6d"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-22T13:43:57Z",
+          "updatedAt": "2026-06-22T13:43:57Z",
           "comments": []
         }
       ]
