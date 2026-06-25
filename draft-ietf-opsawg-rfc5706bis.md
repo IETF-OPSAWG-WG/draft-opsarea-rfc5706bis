@@ -1703,6 +1703,8 @@ Reviewers of this document, in roughly chronological order:
 The document shepherd who has gone beyond normal shepherding duties to improve this document:
 : Alvaro Retana
 
+Claude Opus was used to distill document content into {{sec-checklist}}.
+
 The author of RFC 5706:
 : David Harrington
 
