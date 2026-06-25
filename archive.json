@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-23T02:02:32.833219+00:00",
+  "timestamp": "2026-06-25T02:05:02.587377+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -18222,7 +18222,7 @@
       ],
       "body": "\"fully update ...\" is inacurrate given the list of changes.\r\n\r\n+ minor fix to be consistent with https://datatracker.ietf.org/doc/html/rfc9907#name-yang-data-model-versus-yang",
       "createdAt": "2026-06-22T06:32:40Z",
-      "updatedAt": "2026-06-22T13:43:57Z",
+      "updatedAt": "2026-06-24T12:35:27Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "5420f6ebcaa981ec8f555590b03d0fc37f5d1165",
@@ -18266,6 +18266,19 @@
           "body": "",
           "createdAt": "2026-06-22T13:43:57Z",
           "updatedAt": "2026-06-22T13:43:57Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABD-154g",
+          "commit": {
+            "abbreviatedOid": "0e2ef6d"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-24T12:35:26Z",
+          "updatedAt": "2026-06-24T12:35:26Z",
           "comments": []
         }
       ]
