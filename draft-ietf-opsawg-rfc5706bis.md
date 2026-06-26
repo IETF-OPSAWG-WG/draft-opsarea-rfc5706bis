@@ -669,7 +669,7 @@ For example:
 
 New metrics may be required to assess traffic performance. Protocol Designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.
 
-Protocol Designers should account for MTU constraints when designing protocols that carry management traffic, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. {{?RFC8899}} specifies path MTU discovery for datagram transports, and {{Section 6.1 of ?RFC8900}} gives recommendations for protocol developers on avoiding reliance on IP fragmentation.
+Protocol Designers should account for MTU constraints when designing protocols that carry management traffic or measurement data, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. {{?RFC8899}} specifies path MTU discovery for datagram transports, and {{Section 6.1 of ?RFC8900}} gives recommendations for protocol developers on avoiding reliance on IP fragmentation.
 
 ## Impact on Security Operations {#sec-impact-secops}
 
@@ -1556,7 +1556,7 @@ The decision to incorporate all or part of these items into their work remains w
 ## Documentation Requirements
 
 - Does the specification include an "Operational Considerations" section, placed immediately before the Security Considerations section? ({{sec-oper-manag-considerations}}, {{sec-placement-sec}})
-- If there are no new considerations, does the section include the appropriate boilerplate with explanation? ({{sec-null-sec}})
+- If there are no new operational considerations, does the section include the appropriate boilerplate with explanation? ({{sec-null-sec}})
 
 ## Operational Fit
 
@@ -1572,7 +1572,7 @@ The decision to incorporate all or part of these items into their work remains w
 
 - What is the impact on network operation? ({{sec-impact}})
   - What are the scaling implications and interactions with other protocols? ({{sec-impact}})
-  - What are the impacts on traffic patterns or performance (e.g., delay, jitter)? ({{sec-impact}})
+  - What are the impacts on traffic patterns or performance (e.g., delay or jitter)? ({{sec-impact}})
   - Does management traffic account for MTU constraints and avoid reliance on IP fragmentation? ({{sec-impact}})
 
 - What is the impact on Security Operations? ({{sec-impact-secops}})
@@ -1588,12 +1588,12 @@ The decision to incorporate all or part of these items into their work remains w
 ## Management Information
 
 - What needs to be managed? ({{sec-mgmt-consid}})
-  - What are the manageable entities (e.g., protocol endpoints, network elements, services)? ({{sec-mgmt-consid}})
+  - What are the manageable entities (e.g., protocol endpoints, network elements, and services)? ({{sec-mgmt-consid}})
 
 - Which standardized management technologies are applicable? ({{sec-mgmt-tech}})
 
 - What essential information is required? ({{sec-interop}}, {{sec-mgmt-info}})
-  - What operational, configuration, state, and statistical information is needed? ({{sec-interop}})
+  - What configuration and operational (state, statistical, etc.) information is needed? ({{sec-interop}})
   - Is an Information Model needed, especially if multiple Data Model representations are required? ({{sec-interop}})
   - Is the model kept minimal, with each object serving a distinct purpose and no data that can be derived from other objects? ({{sec-im-design}})
   - What is manageable, what needs configuration, and what protocol-specific events might occur? ({{sec-mgmt-info}})
@@ -1636,10 +1636,10 @@ The decision to incorporate all or part of these items into their work remains w
 ## Performance Management
 
 - What are the performance implications? ({{sec-perf-mgmt}})
-  - What are the hardware/software performance impacts (e.g., CPU, memory, forwarding)? ({{sec-perf-mgmt}})
+  - What are the hardware/software performance impacts (e.g., CPU, memory, and forwarding)? ({{sec-perf-mgmt}})
 
 - What performance information should be available? ({{sec-monitor-proto}})
-  - What protocol counters are defined (e.g., packets received, sent, dropped)? ({{sec-monitor-proto}})
+  - What protocol counters are defined (e.g., packets received, sent, or dropped)? ({{sec-monitor-proto}})
   - What is the counter behavior at maximum values? ({{sec-monitor-proto}})
   - What are the protocol limitations and behavior when limits are exceeded? ({{sec-monitor-proto}})
 
