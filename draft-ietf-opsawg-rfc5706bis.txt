@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 27 December 2026                             Old Dog Consulting
+Expires: 28 December 2026                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            25 June 2026
+                                                            26 June 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 December 2026.
+   This Internet-Draft will expire on 28 December 2026.
 
 Copyright Notice
 
@@ -126,8 +126,10 @@ Table of Contents
      A.3.  Management Information
      A.4.  Fault Management
      A.5.  Configuration Management
-     A.6.  Performance Management
-     A.7.  Security Management
+     A.6.  Accounting Management
+     A.7.  Performance Management
+     A.8.  Security Management
+     A.9.  Operational and Management Tooling
    Appendix B.  Changes Since RFC 5706
    Acknowledgements
    Contributors
@@ -553,17 +555,14 @@ Table of Contents
    For example:
 
       BGP flap damping [RFC2439] was designed to block high-frequency
-      route flaps.  Some BGP implementations were memory-constrained so
-      often elected not to support this function, others found a
-      conflict where path exploration caused false flap damping
-      resulting in loss of reachability.  As a result, flap damping was
-      often not enabled network-wide, contrary to the intentions of the
-      original designers.  This case is instructive precisely because
-      little, if any, text in an "Operational Considerations" section
-      written at design time would have changed the outcome.  That is,
-      the behavior emerged only from operational experience at scale.
-      It illustrates that some operational considerations cannot be
-      fully anticipated when a specification is written.
+      route flaps.  Some BGP implementations were memory-constrained and
+      elected not to support this function.  Others found a conflict
+      where path exploration caused false flap damping resulting in loss
+      of reachability.  As a result, flap damping was often not enabled
+      network-wide, contrary to the intentions of the original
+      designers.  This behavior emerged only from operational experience
+      at scale, and little text written at design time would have
+      changed the outcome.
 
 4.1.  Installation and Initial Setup
 
@@ -793,17 +792,13 @@ Table of Contents
    Designers may refer to [RFC6390] for guidelines for considering new
    performance metrics.
 
-   It is important to minimize the impact caused by configuration
-   changes.  Given configuration A and configuration B, it should be
-   possible to generate the operations necessary to get from A to B with
-   minimal state changes and effects on network and systems.
-
    Protocol Designers should account for MTU constraints when designing
-   protocols that carry management traffic, including any reduction in
-   effective payload size introduced by tunnel or encapsulation
-   overhead.  [RFC8899] specifies path MTU discovery for datagram
-   transports, and Section 6.1 of [RFC8900] gives recommendations for
-   protocol developers on avoiding reliance on IP fragmentation.
+   protocols that carry management traffic or measurement data,
+   including any reduction in effective payload size introduced by
+   tunnel or encapsulation overhead.  [RFC8899] specifies path MTU
+   discovery for datagram transports, and Section 6.1 of [RFC8900] gives
+   recommendations for protocol developers on avoiding reliance on IP
+   fragmentation.
 
 4.5.  Impact on Security Operations
 
@@ -1539,10 +1534,6 @@ Table of Contents
    current instances exceed the capacity of the implementation or the
    capacity of the device.
 
-   Designers of an Information Model should provide runtime information
-   about the maximum supported instances, the current number of
-   instances, and expected behavior when capacity is exceeded.
-
 5.7.3.  Monitoring the Network
 
    Consider whether network performance will be affected by the number
@@ -2192,13 +2183,12 @@ Appendix A.  Operational Considerations Checklist
 A.1.  Documentation Requirements
 
    *  Does the specification include an "Operational Considerations"
-      section?  (Section 3.1)
+      section, placed immediately before the Security Considerations
+      section?  (Section 3.1, Section 3.3)
 
-   *  Is this section placed immediately before the Security
-      Considerations section?  (Section 3.3)
-
-   *  If there are no new considerations, does the section include the
-      appropriate boilerplate with explanation?  (Section 3.2)
+   *  If there are no new operational considerations, does the section
+      include the appropriate boilerplate with explanation?
+      (Section 3.2)
 
 A.2.  Operational Fit
 
@@ -2229,7 +2219,10 @@ A.2.  Operational Fit
          protocols?  (Section 4.4)
 
       -  What are the impacts on traffic patterns or performance (e.g.,
-         delay, jitter)?  (Section 4.4)
+         delay or jitter)?  (Section 4.4)
+
+      -  Does management traffic account for MTU constraints and avoid
+         reliance on IP fragmentation?  (Section 4.4)
 
    *  What is the impact on Security Operations?  (Section 4.5)
 
@@ -2253,7 +2246,7 @@ A.3.  Management Information
    *  What needs to be managed?  (Section 5)
 
       -  What are the manageable entities (e.g., protocol endpoints,
-         network elements, services)?  (Section 5)
+         network elements, and services)?  (Section 5)
 
    *  Which standardized management technologies are applicable?
       (Section 5.1)
@@ -2261,11 +2254,15 @@ A.3.  Management Information
    *  What essential information is required?  (Section 5.2,
       Section 5.3)
 
-      -  What operational, configuration, state, and statistical
+      -  What configuration and operational (state, statistical, etc.)
          information is needed?  (Section 5.2)
 
       -  Is an Information Model needed, especially if multiple Data
          Model representations are required?  (Section 5.2)
+
+      -  Is the model kept minimal, with each object serving a distinct
+         purpose and no data that can be derived from other objects?
+         (Section 5.3.1)
 
       -  What is manageable, what needs configuration, and what
          protocol-specific events might occur?  (Section 5.3)
@@ -2301,6 +2298,15 @@ A.4.  Fault Management
       -  What distinguishes faulty from correct messages?
          (Section 5.4.2)
 
+   *  How are faults localized and contained?  (Section 5.4.3,
+      Section 5.4.4)
+
+      -  Can the probable root cause of a fault be identified using
+         management information?  (Section 5.4.3)
+
+      -  Can faults be isolated or quarantined to prevent them from
+         propagating?  (Section 5.4.4)
+
 A.5.  Configuration Management
 
    *  What configuration parameters are defined?  (Section 5.5)
@@ -2310,17 +2316,32 @@ A.5.  Configuration Management
 
       -  What information persists across reboots?  (Section 5.5)
 
-A.6.  Performance Management
+   *  How is configuration managed across multiple devices?
+      (Section 5.5)
+
+      -  Can configuration changes be applied across several devices as
+         a coordinated operation, with a way to back out on failure?
+         (Section 5.5)
+
+      -  Is there a way to dump and restore configuration?
+         (Section 5.5)
+
+A.6.  Accounting Management
+
+   *  Is it appropriate to collect usage information for this protocol,
+      and if so, what information should be collected?  (Section 5.6)
+
+A.7.  Performance Management
 
    *  What are the performance implications?  (Section 5.7)
 
       -  What are the hardware/software performance impacts (e.g., CPU,
-         memory, forwarding)?  (Section 5.7)
+         memory, and forwarding)?  (Section 5.7)
 
    *  What performance information should be available?  (Section 5.7.1)
 
       -  What protocol counters are defined (e.g., packets received,
-         sent, dropped)?  (Section 5.7.1)
+         sent, or dropped)?  (Section 5.7.1)
 
       -  What is the counter behavior at maximum values?
          (Section 5.7.1)
@@ -2328,20 +2349,16 @@ A.6.  Performance Management
       -  What are the protocol limitations and behavior when limits are
          exceeded?  (Section 5.7.1)
 
-A.7.  Security Management
+A.8.  Security Management
 
    *  What security-related monitoring is needed?  (Section 5.8)
 
-      -  What security events should be logged?  (Section 5.8)
+      -  What security events should be logged, and do any log entries
+         contain privacy-sensitive information that must be controlled?
+         (Section 5.8)
 
-      -  Do log entries contain privacy-sensitive information that must
-         be controlled or redacted before sharing with authorized third
-         parties?  (Section 5.8)
-
-      -  What statistics help detect attacks?  (Section 5.8)
-
-      -  What security and privacy threats do management operations
-         introduce?  (Section 5.8)
+      -  What statistics help detect attacks, and what threats do
+         management operations themselves introduce?  (Section 5.8)
 
    *  What access controls are needed on management interfaces?
       (Section 5.8)
@@ -2355,6 +2372,20 @@ A.7.  Security Management
    *  How are secure transport, authentication, identity, and key/
       credential management addressed for management operations?
       (Section 5.8)
+
+A.9.  Operational and Management Tooling
+
+   *  Can existing tooling be adapted or extended to deploy, monitor,
+      and manage this specification before new tools are considered?
+      (Section 6)
+
+      -  Where new tooling is required, are its requirements limited to
+         functions that adaptation or extension cannot provide?
+         (Section 6)
+
+      -  Is the management interface designed to remain stable under
+         high-frequency automated query patterns, including those from
+         AI-driven tools?  (Section 6.1)
 
 Appendix B.  Changes Since RFC 5706
 
@@ -2414,6 +2445,8 @@ Acknowledgements
 
    The document shepherd who has gone beyond normal shepherding
    duties to improve this document:  Alvaro Retana
+
+   Claude Opus was used to distill document content into Appendix A.
 
    The author of RFC 5706:  David Harrington
 

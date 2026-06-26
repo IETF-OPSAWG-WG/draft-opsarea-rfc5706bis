@@ -1067,7 +1067,7 @@ svg {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 27 December 2026</td>
+<td class="center">Expires 28 December 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1086,12 +1086,12 @@ svg {
 <a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-06-25" class="published">25 June 2026</time>
+<time datetime="2026-06-26" class="published">26 June 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-12-27">27 December 2026</time></dd>
+<dd class="expires"><time datetime="2026-12-28">28 December 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1156,7 +1156,7 @@ svg {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 27 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 28 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1354,10 +1354,16 @@ svg {
                 <p id="section-toc.1-1.11.2.5.1"><a href="#appendix-A.5" class="auto internal xref">A.5</a>.  <a href="#name-configuration-management-2" class="internal xref">Configuration Management</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.6">
-                <p id="section-toc.1-1.11.2.6.1"><a href="#appendix-A.6" class="auto internal xref">A.6</a>.  <a href="#name-performance-management-2" class="internal xref">Performance Management</a></p>
+                <p id="section-toc.1-1.11.2.6.1"><a href="#appendix-A.6" class="auto internal xref">A.6</a>.  <a href="#name-accounting-management-2" class="internal xref">Accounting Management</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.7">
-                <p id="section-toc.1-1.11.2.7.1"><a href="#appendix-A.7" class="auto internal xref">A.7</a>.  <a href="#name-security-management-2" class="internal xref">Security Management</a></p>
+                <p id="section-toc.1-1.11.2.7.1"><a href="#appendix-A.7" class="auto internal xref">A.7</a>.  <a href="#name-performance-management-2" class="internal xref">Performance Management</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.8">
+                <p id="section-toc.1-1.11.2.8.1"><a href="#appendix-A.8" class="auto internal xref">A.8</a>.  <a href="#name-security-management-2" class="internal xref">Security Management</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.9">
+                <p id="section-toc.1-1.11.2.9.1"><a href="#appendix-A.9" class="auto internal xref">A.9</a>.  <a href="#name-operational-and-management-t" class="internal xref">Operational and Management Tooling</a></p>
 </li>
             </ul>
 </li>
@@ -1779,7 +1785,7 @@ considerations.<a href="#section-3.4-4.1" class="pilcrow">¶</a></p>
 <p id="section-4-3">For example:<a href="#section-4-3" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-4-4.1">
-          <p id="section-4-4.1.1">BGP flap damping <span>[<a href="#RFC2439" class="cite xref">RFC2439</a>]</span> was designed to block high-frequency route flaps.  Some BGP implementations were memory-constrained so often elected not to support this function, others found a conflict where path exploration caused false flap damping resulting in loss of reachability.  As a result, flap damping was often not enabled network-wide, contrary to the intentions of the original designers. This case is instructive precisely because little, if any, text in an "Operational Considerations" section written at design time would have changed the outcome.  That is, the behavior emerged only from operational experience at scale. It illustrates that some operational considerations cannot be fully anticipated when a specification is written.<a href="#section-4-4.1.1" class="pilcrow">¶</a></p>
+          <p id="section-4-4.1.1">BGP flap damping <span>[<a href="#RFC2439" class="cite xref">RFC2439</a>]</span> was designed to block high-frequency route flaps. Some BGP implementations were memory-constrained and elected not to support this function. Others found a conflict where path exploration caused false flap damping resulting in loss of reachability. As a result, flap damping was often not enabled network-wide, contrary to the intentions of the original designers. This behavior emerged only from operational experience at scale, and little text written at design time would have changed the outcome.<a href="#section-4-4.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="sec-install">
@@ -1986,11 +1992,7 @@ they may impose on the hardware forwarding path for traffic.<a href="#section-4.
 </li>
         </ul>
 <p id="section-4.4-11">New metrics may be required to assess traffic performance. Protocol Designers may refer to <span>[<a href="#RFC6390" class="cite xref">RFC6390</a>]</span> for guidelines for considering new performance metrics.<a href="#section-4.4-11" class="pilcrow">¶</a></p>
-<p id="section-4.4-12">It is important to minimize the impact caused by configuration
-   changes. Given configuration A and configuration B, it should be
-   possible to generate the operations necessary to get from A to B with
-   minimal state changes and effects on network and systems.<a href="#section-4.4-12" class="pilcrow">¶</a></p>
-<p id="section-4.4-13">Protocol Designers should account for MTU constraints when designing protocols that carry management traffic, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. <span>[<a href="#RFC8899" class="cite xref">RFC8899</a>]</span> specifies path MTU discovery for datagram transports, and <span><a href="https://rfc-editor.org/rfc/rfc8900#section-6.1" class="relref">Section 6.1</a> of [<a href="#RFC8900" class="cite xref">RFC8900</a>]</span> gives recommendations for protocol developers on avoiding reliance on IP fragmentation.<a href="#section-4.4-13" class="pilcrow">¶</a></p>
+<p id="section-4.4-12">Protocol Designers should account for MTU constraints when designing protocols that carry management traffic or measurement data, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. <span>[<a href="#RFC8899" class="cite xref">RFC8899</a>]</span> specifies path MTU discovery for datagram transports, and <span><a href="https://rfc-editor.org/rfc/rfc8900#section-6.1" class="relref">Section 6.1</a> of [<a href="#RFC8900" class="cite xref">RFC8900</a>]</span> gives recommendations for protocol developers on avoiding reliance on IP fragmentation.<a href="#section-4.4-12" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-impact-secops">
@@ -2716,9 +2718,6 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    the current number of instances, and the expected behavior when the
    current instances exceed the capacity of the implementation or the
    capacity of the device.<a href="#section-5.7.2-1" class="pilcrow">¶</a></p>
-<p id="section-5.7.2-2">Designers of an Information Model should provide runtime information
-   about the maximum supported instances, the current number of instances,
-   and expected behavior when capacity is exceeded.<a href="#section-5.7.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-monitor-net">
@@ -3330,13 +3329,10 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
         </h3>
 <ul class="normal">
 <li class="normal" id="appendix-A.1-1.1">
-            <p id="appendix-A.1-1.1.1">Does the specification include an "Operational Considerations" section? (<a href="#sec-oper-manag-considerations" class="auto internal xref">Section 3.1</a>)<a href="#appendix-A.1-1.1.1" class="pilcrow">¶</a></p>
+            <p id="appendix-A.1-1.1.1">Does the specification include an "Operational Considerations" section, placed immediately before the Security Considerations section? (<a href="#sec-oper-manag-considerations" class="auto internal xref">Section 3.1</a>, <a href="#sec-placement-sec" class="auto internal xref">Section 3.3</a>)<a href="#appendix-A.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="appendix-A.1-1.2">
-            <p id="appendix-A.1-1.2.1">Is this section placed immediately before the Security Considerations section? (<a href="#sec-placement-sec" class="auto internal xref">Section 3.3</a>)<a href="#appendix-A.1-1.2.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="appendix-A.1-1.3">
-            <p id="appendix-A.1-1.3.1">If there are no new considerations, does the section include the appropriate boilerplate with explanation? (<a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>)<a href="#appendix-A.1-1.3.1" class="pilcrow">¶</a></p>
+            <p id="appendix-A.1-1.2.1">If there are no new operational considerations, does the section include the appropriate boilerplate with explanation? (<a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>)<a href="#appendix-A.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -3379,7 +3375,10 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
                 <p id="appendix-A.2-1.4.2.1.1">What are the scaling implications and interactions with other protocols? (<a href="#sec-impact" class="auto internal xref">Section 4.4</a>)<a href="#appendix-A.2-1.4.2.1.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="appendix-A.2-1.4.2.2">
-                <p id="appendix-A.2-1.4.2.2.1">What are the impacts on traffic patterns or performance (e.g., delay, jitter)? (<a href="#sec-impact" class="auto internal xref">Section 4.4</a>)<a href="#appendix-A.2-1.4.2.2.1" class="pilcrow">¶</a></p>
+                <p id="appendix-A.2-1.4.2.2.1">What are the impacts on traffic patterns or performance (e.g., delay or jitter)? (<a href="#sec-impact" class="auto internal xref">Section 4.4</a>)<a href="#appendix-A.2-1.4.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="appendix-A.2-1.4.2.3">
+                <p id="appendix-A.2-1.4.2.3.1">Does management traffic account for MTU constraints and avoid reliance on IP fragmentation? (<a href="#sec-impact" class="auto internal xref">Section 4.4</a>)<a href="#appendix-A.2-1.4.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3423,7 +3422,7 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
             <p id="appendix-A.3-1.1.1">What needs to be managed? (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>)<a href="#appendix-A.3-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-A.3-1.1.2.1">
-                <p id="appendix-A.3-1.1.2.1.1">What are the manageable entities (e.g., protocol endpoints, network elements, services)? (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>)<a href="#appendix-A.3-1.1.2.1.1" class="pilcrow">¶</a></p>
+                <p id="appendix-A.3-1.1.2.1.1">What are the manageable entities (e.g., protocol endpoints, network elements, and services)? (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>)<a href="#appendix-A.3-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3434,16 +3433,19 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
             <p id="appendix-A.3-1.3.1">What essential information is required? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>, <a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.3-1.3.1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-A.3-1.3.2.1">
-                <p id="appendix-A.3-1.3.2.1.1">What operational, configuration, state, and statistical information is needed? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>)<a href="#appendix-A.3-1.3.2.1.1" class="pilcrow">¶</a></p>
+                <p id="appendix-A.3-1.3.2.1.1">What configuration and operational (state, statistical, etc.) information is needed? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>)<a href="#appendix-A.3-1.3.2.1.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="appendix-A.3-1.3.2.2">
                 <p id="appendix-A.3-1.3.2.2.1">Is an Information Model needed, especially if multiple Data Model representations are required? (<a href="#sec-interop" class="auto internal xref">Section 5.2</a>)<a href="#appendix-A.3-1.3.2.2.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="appendix-A.3-1.3.2.3">
-                <p id="appendix-A.3-1.3.2.3.1">What is manageable, what needs configuration, and what protocol-specific events might occur? (<a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.3-1.3.2.3.1" class="pilcrow">¶</a></p>
+                <p id="appendix-A.3-1.3.2.3.1">Is the model kept minimal, with each object serving a distinct purpose and no data that can be derived from other objects? (<a href="#sec-im-design" class="auto internal xref">Section 5.3.1</a>)<a href="#appendix-A.3-1.3.2.3.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="appendix-A.3-1.3.2.4">
-                <p id="appendix-A.3-1.3.2.4.1">How are configuration data, operational state, and statistics distinguished? (<a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.3-1.3.2.4.1" class="pilcrow">¶</a></p>
+                <p id="appendix-A.3-1.3.2.4.1">What is manageable, what needs configuration, and what protocol-specific events might occur? (<a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.3-1.3.2.4.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="appendix-A.3-1.3.2.5">
+                <p id="appendix-A.3-1.3.2.5.1">How are configuration data, operational state, and statistics distinguished? (<a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>)<a href="#appendix-A.3-1.3.2.5.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3494,6 +3496,17 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
 </li>
             </ul>
 </li>
+          <li class="normal" id="appendix-A.4-1.4">
+            <p id="appendix-A.4-1.4.1">How are faults localized and contained? (<a href="#sec-cause-analysis" class="auto internal xref">Section 5.4.3</a>, <a href="#sec-fault-isol" class="auto internal xref">Section 5.4.4</a>)<a href="#appendix-A.4-1.4.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-A.4-1.4.2.1">
+                <p id="appendix-A.4-1.4.2.1.1">Can the probable root cause of a fault be identified using management information? (<a href="#sec-cause-analysis" class="auto internal xref">Section 5.4.3</a>)<a href="#appendix-A.4-1.4.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="appendix-A.4-1.4.2.2">
+                <p id="appendix-A.4-1.4.2.2.1">Can faults be isolated or quarantined to prevent them from propagating? (<a href="#sec-fault-isol" class="auto internal xref">Section 5.4.4</a>)<a href="#appendix-A.4-1.4.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
         </ul>
 </section>
 </div>
@@ -3514,34 +3527,57 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
 </li>
             </ul>
 </li>
+          <li class="normal" id="appendix-A.5-1.2">
+            <p id="appendix-A.5-1.2.1">How is configuration managed across multiple devices? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.5-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-A.5-1.2.2.1">
+                <p id="appendix-A.5-1.2.2.1.1">Can configuration changes be applied across several devices as a coordinated operation, with a way to back out on failure? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.5-1.2.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="appendix-A.5-1.2.2.2">
+                <p id="appendix-A.5-1.2.2.2.1">Is there a way to dump and restore configuration? (<a href="#sec-config-mgmt" class="auto internal xref">Section 5.5</a>)<a href="#appendix-A.5-1.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+        </ul>
+</section>
+</div>
+<div id="accounting-management">
+<section id="appendix-A.6">
+        <h3 id="name-accounting-management-2">
+<a href="#appendix-A.6" class="section-number selfRef">A.6. </a><a href="#name-accounting-management-2" class="section-name selfRef">Accounting Management</a>
+        </h3>
+<ul class="normal">
+<li class="normal" id="appendix-A.6-1.1">
+            <p id="appendix-A.6-1.1.1">Is it appropriate to collect usage information for this protocol, and if so, what information should be collected? (<a href="#sec-acc-mgmt" class="auto internal xref">Section 5.6</a>)<a href="#appendix-A.6-1.1.1" class="pilcrow">¶</a></p>
+</li>
         </ul>
 </section>
 </div>
 <div id="performance-management">
-<section id="appendix-A.6">
+<section id="appendix-A.7">
         <h3 id="name-performance-management-2">
-<a href="#appendix-A.6" class="section-number selfRef">A.6. </a><a href="#name-performance-management-2" class="section-name selfRef">Performance Management</a>
+<a href="#appendix-A.7" class="section-number selfRef">A.7. </a><a href="#name-performance-management-2" class="section-name selfRef">Performance Management</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="appendix-A.6-1.1">
-            <p id="appendix-A.6-1.1.1">What are the performance implications? (<a href="#sec-perf-mgmt" class="auto internal xref">Section 5.7</a>)<a href="#appendix-A.6-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.7-1.1">
+            <p id="appendix-A.7-1.1.1">What are the performance implications? (<a href="#sec-perf-mgmt" class="auto internal xref">Section 5.7</a>)<a href="#appendix-A.7-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.6-1.1.2.1">
-                <p id="appendix-A.6-1.1.2.1.1">What are the hardware/software performance impacts (e.g., CPU, memory, forwarding)? (<a href="#sec-perf-mgmt" class="auto internal xref">Section 5.7</a>)<a href="#appendix-A.6-1.1.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.7-1.1.2.1">
+                <p id="appendix-A.7-1.1.2.1.1">What are the hardware/software performance impacts (e.g., CPU, memory, and forwarding)? (<a href="#sec-perf-mgmt" class="auto internal xref">Section 5.7</a>)<a href="#appendix-A.7-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.6-1.2">
-            <p id="appendix-A.6-1.2.1">What performance information should be available? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.6-1.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.7-1.2">
+            <p id="appendix-A.7-1.2.1">What performance information should be available? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.7-1.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.6-1.2.2.1">
-                <p id="appendix-A.6-1.2.2.1.1">What protocol counters are defined (e.g., packets received, sent, dropped)? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.6-1.2.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.7-1.2.2.1">
+                <p id="appendix-A.7-1.2.2.1.1">What protocol counters are defined (e.g., packets received, sent, or dropped)? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.7-1.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.6-1.2.2.2">
-                <p id="appendix-A.6-1.2.2.2.1">What is the counter behavior at maximum values? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.6-1.2.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.7-1.2.2.2">
+                <p id="appendix-A.7-1.2.2.2.1">What is the counter behavior at maximum values? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.7-1.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.6-1.2.2.3">
-                <p id="appendix-A.6-1.2.2.3.1">What are the protocol limitations and behavior when limits are exceeded? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.6-1.2.2.3.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.7-1.2.2.3">
+                <p id="appendix-A.7-1.2.2.3.1">What are the protocol limitations and behavior when limits are exceeded? (<a href="#sec-monitor-proto" class="auto internal xref">Section 5.7.1</a>)<a href="#appendix-A.7-1.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
@@ -3549,41 +3585,55 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
 </section>
 </div>
 <div id="security-management">
-<section id="appendix-A.7">
+<section id="appendix-A.8">
         <h3 id="name-security-management-2">
-<a href="#appendix-A.7" class="section-number selfRef">A.7. </a><a href="#name-security-management-2" class="section-name selfRef">Security Management</a>
+<a href="#appendix-A.8" class="section-number selfRef">A.8. </a><a href="#name-security-management-2" class="section-name selfRef">Security Management</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="appendix-A.7-1.1">
-            <p id="appendix-A.7-1.1.1">What security-related monitoring is needed? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.8-1.1">
+            <p id="appendix-A.8-1.1.1">What security-related monitoring is needed? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.8-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.7-1.1.2.1">
-                <p id="appendix-A.7-1.1.2.1.1">What security events should be logged? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.8-1.1.2.1">
+                <p id="appendix-A.8-1.1.2.1.1">What security events should be logged, and do any log entries contain privacy-sensitive information that must be controlled? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.8-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.7-1.1.2.2">
-                <p id="appendix-A.7-1.1.2.2.1">Do log entries contain privacy-sensitive information that must be controlled or redacted before sharing with authorized third parties? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.2.2.1" class="pilcrow">¶</a></p>
-</li>
-              <li class="normal" id="appendix-A.7-1.1.2.3">
-                <p id="appendix-A.7-1.1.2.3.1">What statistics help detect attacks? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.2.3.1" class="pilcrow">¶</a></p>
-</li>
-              <li class="normal" id="appendix-A.7-1.1.2.4">
-                <p id="appendix-A.7-1.1.2.4.1">What security and privacy threats do management operations introduce? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.1.2.4.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.8-1.1.2.2">
+                <p id="appendix-A.8-1.1.2.2.1">What statistics help detect attacks, and what threats do management operations themselves introduce? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.8-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.7-1.2">
-            <p id="appendix-A.7-1.2.1">What access controls are needed on management interfaces? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.8-1.2">
+            <p id="appendix-A.8-1.2.1">What access controls are needed on management interfaces? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.8-1.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-A.7-1.2.2.1">
-                <p id="appendix-A.7-1.2.2.1.1">Do management interfaces support role-based access control and the principle of least privilege? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.2.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="appendix-A.8-1.2.2.1">
+                <p id="appendix-A.8-1.2.2.1.1">Do management interfaces support role-based access control and the principle of least privilege? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.8-1.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="appendix-A.7-1.2.2.2">
-                <p id="appendix-A.7-1.2.2.2.1">How are ACLs maintained, updated, and verified for consistency across devices? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.2.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="appendix-A.8-1.2.2.2">
+                <p id="appendix-A.8-1.2.2.2.1">How are ACLs maintained, updated, and verified for consistency across devices? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.8-1.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="appendix-A.7-1.3">
-            <p id="appendix-A.7-1.3.1">How are secure transport, authentication, identity, and key/credential management addressed for management operations? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.7-1.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="appendix-A.8-1.3">
+            <p id="appendix-A.8-1.3.1">How are secure transport, authentication, identity, and key/credential management addressed for management operations? (<a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>)<a href="#appendix-A.8-1.3.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+</section>
+</div>
+<div id="operational-and-management-tooling">
+<section id="appendix-A.9">
+        <h3 id="name-operational-and-management-t">
+<a href="#appendix-A.9" class="section-number selfRef">A.9. </a><a href="#name-operational-and-management-t" class="section-name selfRef">Operational and Management Tooling</a>
+        </h3>
+<ul class="normal">
+<li class="normal" id="appendix-A.9-1.1">
+            <p id="appendix-A.9-1.1.1">Can existing tooling be adapted or extended to deploy, monitor, and manage this specification before new tools are considered? (<a href="#sec-oper-mgmt-tooling" class="auto internal xref">Section 6</a>)<a href="#appendix-A.9-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-A.9-1.1.2.1">
+                <p id="appendix-A.9-1.1.2.1.1">Where new tooling is required, are its requirements limited to functions that adaptation or extension cannot provide? (<a href="#sec-oper-mgmt-tooling" class="auto internal xref">Section 6</a>)<a href="#appendix-A.9-1.1.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="appendix-A.9-1.1.2.2">
+                <p id="appendix-A.9-1.1.2.2.1">Is the management interface designed to remain stable under high-frequency automated query patterns, including those from AI-driven tools? (<a href="#sec-ai-tooling" class="auto internal xref">Section 6.1</a>)<a href="#appendix-A.9-1.1.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
         </ul>
 </section>
@@ -3659,38 +3709,41 @@ whose efforts have helped to improve this document:<a href="#appendix-C-1" class
         <dd style="margin-left: 1.5em" id="appendix-C-2.8">
           <p id="appendix-C-2.8.1">Alvaro Retana<a href="#appendix-C-2.8.1" class="pilcrow">¶</a></p>
 </dd>
-        <dd class="break"></dd>
-<dt id="appendix-C-2.9">The author of RFC 5706:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-2.10">
-          <p id="appendix-C-2.10.1">David Harrington<a href="#appendix-C-2.10.1" class="pilcrow">¶</a></p>
+      <dd class="break"></dd>
+</dl>
+<p id="appendix-C-3">Claude Opus was used to distill document content into <a href="#sec-checklist" class="auto internal xref">Appendix A</a>.<a href="#appendix-C-3" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="appendix-C-4">
+        <dt id="appendix-C-4.1">The author of RFC 5706:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-4.2">
+          <p id="appendix-C-4.2.1">David Harrington<a href="#appendix-C-4.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-2.11">Acknowledgments from RFC 5706:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-2.12">
-          <p id="appendix-C-2.12.1">The following acknowledgments apply to RFC 5706, the predecessor of this document. Some individuals listed below as reviewers of RFC 5706 are now authors or contributors of this document.<a href="#appendix-C-2.12.1" class="pilcrow">¶</a></p>
+<dt id="appendix-C-4.3">Acknowledgments from RFC 5706:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-4.4">
+          <p id="appendix-C-4.4.1">The following acknowledgments apply to RFC 5706, the predecessor of this document. Some individuals listed below as reviewers of RFC 5706 are now authors or contributors of this document.<a href="#appendix-C-4.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-2.13"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-2.14">
-          <p id="appendix-C-2.14.1">This document started from an earlier document edited by Adrian
+<dt id="appendix-C-4.5"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-4.6">
+          <p id="appendix-C-4.6.1">This document started from an earlier document edited by Adrian
 Farrel, which itself was based on work exploring the need for
 Manageability Considerations sections in all Internet-Drafts produced
 within the Routing Area of the IETF. That earlier work was produced
 by Avri Doria, Loa Andersson, and Adrian Farrel, with valuable
-feedback provided by Pekka Savola and Bert Wijnen.<a href="#appendix-C-2.14.1" class="pilcrow">¶</a></p>
+feedback provided by Pekka Savola and Bert Wijnen.<a href="#appendix-C-4.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-2.15"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-2.16">
-          <p id="appendix-C-2.16.1">Some of the discussion about designing for manageability came from
-private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.<a href="#appendix-C-2.16.1" class="pilcrow">¶</a></p>
+<dt id="appendix-C-4.7"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-4.8">
+          <p id="appendix-C-4.8.1">Some of the discussion about designing for manageability came from
+private discussions between Dan Romascanu, Bert Wijnen, Jürgen Schönwälder, Andy Bierman, and David Harrington.<a href="#appendix-C-4.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-2.17"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-2.18">
-          <p id="appendix-C-2.18.1">Thanks to reviewers who helped fashion RFC 5706, including
+<dt id="appendix-C-4.9"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-4.10">
+          <p id="appendix-C-4.10.1">Thanks to reviewers who helped fashion RFC 5706, including
 Harald Alvestrand, Ron Bonica, Brian Carpenter, Benoît Claise, Adrian
-Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.<a href="#appendix-C-2.18.1" class="pilcrow">¶</a></p>
+Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert Wijnen, Ralf Wolter, and Lixia Zhang.<a href="#appendix-C-4.10.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>
