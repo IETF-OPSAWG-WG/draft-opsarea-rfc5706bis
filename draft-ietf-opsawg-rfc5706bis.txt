@@ -2441,7 +2441,7 @@ Acknowledgements
       Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang,
       Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan
       Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco
-      Tiloca, Jacqueline McCall, and Tim Winters.
+      Tiloca, Jacqueline McCall, Tim Winters, and Eliot Lear.
 
    The document shepherd who has gone beyond normal shepherding
    duties to improve this document:  Alvaro Retana
