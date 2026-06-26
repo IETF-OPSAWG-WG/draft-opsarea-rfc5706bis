@@ -467,7 +467,7 @@ For example:
 
    For example:
 
-   > BGP flap damping {{?RFC2439}} was designed to block high-frequency route flaps.  Some BGP implementations were memory-constrained so often elected not to support this function, others found a conflict where path exploration caused false flap damping resulting in loss of reachability.  As a result, flap damping was often not enabled network-wide, contrary to the intentions of the original designers. This case is instructive precisely because little, if any, text in an "Operational Considerations" section written at design time would have changed the outcome.  That is, the behavior emerged only from operational experience at scale. It illustrates that some operational considerations cannot be fully anticipated when a specification is written.
+   > BGP flap damping {{?RFC2439}} was designed to block high-frequency route flaps. Some BGP implementations were memory-constrained and elected not to support this function. Others found a conflict where path exploration caused false flap damping resulting in loss of reachability. As a result, flap damping was often not enabled network-wide, contrary to the intentions of the original designers. This behavior emerged only from operational experience at scale, and little text written at design time would have changed the outcome.
 
 ##  Installation and Initial Setup {#sec-install}
 
@@ -669,12 +669,7 @@ For example:
 
 New metrics may be required to assess traffic performance. Protocol Designers may refer to {{?RFC6390}} for guidelines for considering new performance metrics.
 
-   It is important to minimize the impact caused by configuration
-   changes. Given configuration A and configuration B, it should be
-   possible to generate the operations necessary to get from A to B with
-   minimal state changes and effects on network and systems.
-
-   Protocol Designers should account for MTU constraints when designing protocols that carry management traffic, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. {{?RFC8899}} specifies path MTU discovery for datagram transports, and {{Section 6.1 of ?RFC8900}} gives recommendations for protocol developers on avoiding reliance on IP fragmentation.
+Protocol Designers should account for MTU constraints when designing protocols that carry management traffic or measurement data, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. {{?RFC8899}} specifies path MTU discovery for datagram transports, and {{Section 6.1 of ?RFC8900}} gives recommendations for protocol developers on avoiding reliance on IP fragmentation.
 
 ## Impact on Security Operations {#sec-impact-secops}
 
@@ -1339,10 +1334,6 @@ DM         DM        DM     --> concrete/detailed model
    current instances exceed the capacity of the implementation or the
    capacity of the device.
 
-   Designers of an Information Model should provide runtime information
-   about the maximum supported instances, the current number of instances,
-   and expected behavior when capacity is exceeded.
-
 ###  Monitoring the Network {#sec-monitor-net}
 
    Consider whether network performance will be affected by the number
@@ -1564,94 +1555,111 @@ The decision to incorporate all or part of these items into their work remains w
 
 ## Documentation Requirements
 
-* Does the specification include an "Operational Considerations" section? ({{sec-oper-manag-considerations}})
-* Is this section placed immediately before the Security Considerations section? ({{sec-placement-sec}})
-* If there are no new considerations, does the section include the appropriate boilerplate with explanation? ({{sec-null-sec}})
+- Does the specification include an "Operational Considerations" section, placed immediately before the Security Considerations section? ({{sec-oper-manag-considerations}}, {{sec-placement-sec}})
+- If there are no new operational considerations, does the section include the appropriate boilerplate with explanation? ({{sec-null-sec}})
 
 ## Operational Fit
 
-* How does this protocol operate "out of the box"? ({{sec-install}})
-   * What are the default values, modes, timers, and states? ({{sec-install}})
-   * What is the rationale for chosen default values, especially if they affect operations or are expected to change over time? ({{sec-install}})
+- How does this protocol operate "out of the box"? ({{sec-install}})
+  - What are the default values, modes, timers, and states? ({{sec-install}})
+  - What is the rationale for chosen default values, especially if they affect operations or are expected to change over time? ({{sec-install}})
 
-* What is the migration path for existing deployments? ({{sec-migration}})
-   * How will deployments transition from older versions or technologies? ({{sec-migration}})
-   * Does the protocol require infrastructure changes, and how can these be introduced? ({{sec-migration}})
+- What is the migration path for existing deployments? ({{sec-migration}})
+  - How will deployments transition from older versions or technologies? ({{sec-migration}})
+  - Does the protocol require infrastructure changes, and how can these be introduced? ({{sec-migration}})
 
-* What are the requirements or dependencies on other protocols and functional components? ({{sec-other}})
+- What are the requirements or dependencies on other protocols and functional components? ({{sec-other}})
 
-* What is the impact on network operation? ({{sec-impact}})
-   * What are the scaling implications and interactions with other protocols? ({{sec-impact}})
-   * What are the impacts on traffic patterns or performance (e.g., delay, jitter)? ({{sec-impact}})
+- What is the impact on network operation? ({{sec-impact}})
+  - What are the scaling implications and interactions with other protocols? ({{sec-impact}})
+  - What are the impacts on traffic patterns or performance (e.g., delay or jitter)? ({{sec-impact}})
+  - Does management traffic account for MTU constraints and avoid reliance on IP fragmentation? ({{sec-impact}})
 
-* What is the impact on Security Operations? ({{sec-impact-secops}})
-   * How does deployment affect Indicators of Compromise or their availability? ({{sec-impact-secops}})
-   * What logging is needed for digital forensics? ({{sec-impact-secops}})
+- What is the impact on Security Operations? ({{sec-impact-secops}})
+  - How does deployment affect Indicators of Compromise or their availability? ({{sec-impact-secops}})
+  - What logging is needed for digital forensics? ({{sec-impact-secops}})
 
-* How can correct operation be verified? ({{sec-oper-verify}})
-   * What status and health indicators does the protocol provide? ({{sec-oper-verify}})
+- How can correct operation be verified? ({{sec-oper-verify}})
+  - What status and health indicators does the protocol provide? ({{sec-oper-verify}})
 
-* How are human-readable messages handled? ({{sec-messages}})
-   * Do messages contain codes that enable local language mapping for internationalization? ({{sec-messages}})
+- How are human-readable messages handled? ({{sec-messages}})
+  - Do messages contain codes that enable local language mapping for internationalization? ({{sec-messages}})
 
 ## Management Information
 
-* What needs to be managed? ({{sec-mgmt-consid}})
-   * What are the manageable entities (e.g., protocol endpoints, network elements, services)? ({{sec-mgmt-consid}})
+- What needs to be managed? ({{sec-mgmt-consid}})
+  - What are the manageable entities (e.g., protocol endpoints, network elements, and services)? ({{sec-mgmt-consid}})
 
-* Which standardized management technologies are applicable? ({{sec-mgmt-tech}})
+- Which standardized management technologies are applicable? ({{sec-mgmt-tech}})
 
-* What essential information is required? ({{sec-interop}}, {{sec-mgmt-info}})
-   * What operational, configuration, state, and statistical information is needed? ({{sec-interop}})
-   * Is an Information Model needed, especially if multiple Data Model representations are required? ({{sec-interop}})
-   * What is manageable, what needs configuration, and what protocol-specific events might occur? ({{sec-mgmt-info}})
-   * How are configuration data, operational state, and statistics distinguished? ({{sec-mgmt-info}})
+- What essential information is required? ({{sec-interop}}, {{sec-mgmt-info}})
+  - What configuration and operational (state, statistical, etc.) information is needed? ({{sec-interop}})
+  - Is an Information Model needed, especially if multiple Data Model representations are required? ({{sec-interop}})
+  - Is the model kept minimal, with each object serving a distinct purpose and no data that can be derived from other objects? ({{sec-im-design}})
+  - What is manageable, what needs configuration, and what protocol-specific events might occur? ({{sec-mgmt-info}})
+  - How are configuration data, operational state, and statistics distinguished? ({{sec-mgmt-info}})
 
-* If YANG Data Models are defined, what type is appropriate? ({{sec-yang-dm}})
-   * Should Device Models, Network Models, or Service Models be specified? ({{sec-yang-dm}})
+- If YANG Data Models are defined, what type is appropriate? ({{sec-yang-dm}})
+  - Should Device Models, Network Models, or Service Models be specified? ({{sec-yang-dm}})
 
 ## Fault Management
 
-* What faults and events should be reported? ({{sec-fm-mgmt}})
-   * What essential faults, health indicators, alarms, and events should be exposed? ({{sec-fm-mgmt}})
-   * How will fault information be propagated? ({{sec-fm-mgmt}})
+- What faults and events should be reported? ({{sec-fm-mgmt}})
+  - What essential faults, health indicators, alarms, and events should be exposed? ({{sec-fm-mgmt}})
+  - How will fault information be propagated? ({{sec-fm-mgmt}})
 
-* How is liveness monitored? ({{sec-monitor}})
-   * What testing and liveness detection features are built into the protocol? ({{sec-monitor}})
+- How is liveness monitored? ({{sec-monitor}})
+  - What testing and liveness detection features are built into the protocol? ({{sec-monitor}})
 
-* How are faults determined? ({{sec-fault-determ}})
-   * What error counters or diagnostics help pinpoint faults? ({{sec-fault-determ}})
-   * What distinguishes faulty from correct messages? ({{sec-fault-determ}})
+- How are faults determined? ({{sec-fault-determ}})
+  - What error counters or diagnostics help pinpoint faults? ({{sec-fault-determ}})
+  - What distinguishes faulty from correct messages? ({{sec-fault-determ}})
+
+- How are faults localized and contained? ({{sec-cause-analysis}}, {{sec-fault-isol}})
+  - Can the probable root cause of a fault be identified using management information? ({{sec-cause-analysis}})
+  - Can faults be isolated or quarantined to prevent them from propagating? ({{sec-fault-isol}})
 
 ## Configuration Management
 
-* What configuration parameters are defined? ({{sec-config-mgmt}})
-   * What parameters need to be configurable, including their valid ranges? ({{sec-config-mgmt}})
-   * What information persists across reboots? ({{sec-config-mgmt}})
+- What configuration parameters are defined? ({{sec-config-mgmt}})
+  - What parameters need to be configurable, including their valid ranges? ({{sec-config-mgmt}})
+  - What information persists across reboots? ({{sec-config-mgmt}})
+
+- How is configuration managed across multiple devices? ({{sec-config-mgmt}})
+  - Can configuration changes be applied across several devices as a coordinated operation, with a way to back out on failure? ({{sec-config-mgmt}})
+  - Is there a way to dump and restore configuration? ({{sec-config-mgmt}})
+
+## Accounting Management
+
+- Is it appropriate to collect usage information for this protocol, and if so, what information should be collected? ({{sec-acc-mgmt}})
 
 ## Performance Management
 
-* What are the performance implications? ({{sec-perf-mgmt}})
-   * What are the hardware/software performance impacts (e.g., CPU, memory, forwarding)? ({{sec-perf-mgmt}})
+- What are the performance implications? ({{sec-perf-mgmt}})
+  - What are the hardware/software performance impacts (e.g., CPU, memory, and forwarding)? ({{sec-perf-mgmt}})
 
-* What performance information should be available? ({{sec-monitor-proto}})
-   * What protocol counters are defined (e.g., packets received, sent, dropped)? ({{sec-monitor-proto}})
-   * What is the counter behavior at maximum values? ({{sec-monitor-proto}})
-   * What are the protocol limitations and behavior when limits are exceeded? ({{sec-monitor-proto}})
+- What performance information should be available? ({{sec-monitor-proto}})
+  - What protocol counters are defined (e.g., packets received, sent, or dropped)? ({{sec-monitor-proto}})
+  - What is the counter behavior at maximum values? ({{sec-monitor-proto}})
+  - What are the protocol limitations and behavior when limits are exceeded? ({{sec-monitor-proto}})
 
 ## Security Management
 
-* What security-related monitoring is needed? ({{sec-security-mgmt}})
-   * What security events should be logged? ({{sec-security-mgmt}})
-   * Do log entries contain privacy-sensitive information that must be controlled or redacted before sharing with authorized third parties? ({{sec-security-mgmt}})
-   * What statistics help detect attacks? ({{sec-security-mgmt}})
-   * What security and privacy threats do management operations introduce? ({{sec-security-mgmt}})
+- What security-related monitoring is needed? ({{sec-security-mgmt}})
+  - What security events should be logged, and do any log entries contain privacy-sensitive information that must be controlled? ({{sec-security-mgmt}})
+  - What statistics help detect attacks, and what threats do management operations themselves introduce? ({{sec-security-mgmt}})
 
-* What access controls are needed on management interfaces? ({{sec-security-mgmt}})
-   * Do management interfaces support role-based access control and the principle of least privilege? ({{sec-security-mgmt}})
-   * How are ACLs maintained, updated, and verified for consistency across devices? ({{sec-security-mgmt}})
+- What access controls are needed on management interfaces? ({{sec-security-mgmt}})
+  - Do management interfaces support role-based access control and the principle of least privilege? ({{sec-security-mgmt}})
+  - How are ACLs maintained, updated, and verified for consistency across devices? ({{sec-security-mgmt}})
 
-* How are secure transport, authentication, identity, and key/credential management addressed for management operations? ({{sec-security-mgmt}})
+- How are secure transport, authentication, identity, and key/credential management addressed for management operations? ({{sec-security-mgmt}})
+
+## Operational and Management Tooling
+
+- Can existing tooling be adapted or extended to deploy, monitor, and manage this specification before new tools are considered? ({{sec-oper-mgmt-tooling}})
+  - Where new tooling is required, are its requirements limited to functions that adaptation or extension cannot provide? ({{sec-oper-mgmt-tooling}})
+  - Is the management interface designed to remain stable under high-frequency automated query patterns, including those from AI-driven tools? ({{sec-ai-tooling}})
 
 # Changes Since RFC 5706 {#sec-changes-since-5706}
 
@@ -1694,6 +1702,8 @@ Reviewers of this document, in roughly chronological order:
 
 The document shepherd who has gone beyond normal shepherding duties to improve this document:
 : Alvaro Retana
+
+Claude Opus was used to distill document content into {{sec-checklist}}.
 
 The author of RFC 5706:
 : David Harrington
