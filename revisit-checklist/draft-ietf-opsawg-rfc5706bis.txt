@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 27 December 2026                             Old Dog Consulting
+Expires: 28 December 2026                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            25 June 2026
+                                                            26 June 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 December 2026.
+   This Internet-Draft will expire on 28 December 2026.
 
 Copyright Notice
 
@@ -793,11 +793,12 @@ Table of Contents
    performance metrics.
 
    Protocol Designers should account for MTU constraints when designing
-   protocols that carry management traffic, including any reduction in
-   effective payload size introduced by tunnel or encapsulation
-   overhead.  [RFC8899] specifies path MTU discovery for datagram
-   transports, and Section 6.1 of [RFC8900] gives recommendations for
-   protocol developers on avoiding reliance on IP fragmentation.
+   protocols that carry management traffic or measurement data,
+   including any reduction in effective payload size introduced by
+   tunnel or encapsulation overhead.  [RFC8899] specifies path MTU
+   discovery for datagram transports, and Section 6.1 of [RFC8900] gives
+   recommendations for protocol developers on avoiding reliance on IP
+   fragmentation.
 
 4.5.  Impact on Security Operations
 
@@ -2185,8 +2186,9 @@ A.1.  Documentation Requirements
       section, placed immediately before the Security Considerations
       section?  (Section 3.1, Section 3.3)
 
-   *  If there are no new considerations, does the section include the
-      appropriate boilerplate with explanation?  (Section 3.2)
+   *  If there are no new operational considerations, does the section
+      include the appropriate boilerplate with explanation?
+      (Section 3.2)
 
 A.2.  Operational Fit
 
@@ -2217,7 +2219,7 @@ A.2.  Operational Fit
          protocols?  (Section 4.4)
 
       -  What are the impacts on traffic patterns or performance (e.g.,
-         delay, jitter)?  (Section 4.4)
+         delay or jitter)?  (Section 4.4)
 
       -  Does management traffic account for MTU constraints and avoid
          reliance on IP fragmentation?  (Section 4.4)
@@ -2244,7 +2246,7 @@ A.3.  Management Information
    *  What needs to be managed?  (Section 5)
 
       -  What are the manageable entities (e.g., protocol endpoints,
-         network elements, services)?  (Section 5)
+         network elements, and services)?  (Section 5)
 
    *  Which standardized management technologies are applicable?
       (Section 5.1)
@@ -2252,7 +2254,7 @@ A.3.  Management Information
    *  What essential information is required?  (Section 5.2,
       Section 5.3)
 
-      -  What operational, configuration, state, and statistical
+      -  What configuration and operational (state, statistical, etc.)
          information is needed?  (Section 5.2)
 
       -  Is an Information Model needed, especially if multiple Data
@@ -2334,12 +2336,12 @@ A.7.  Performance Management
    *  What are the performance implications?  (Section 5.7)
 
       -  What are the hardware/software performance impacts (e.g., CPU,
-         memory, forwarding)?  (Section 5.7)
+         memory, and forwarding)?  (Section 5.7)
 
    *  What performance information should be available?  (Section 5.7.1)
 
       -  What protocol counters are defined (e.g., packets received,
-         sent, dropped)?  (Section 5.7.1)
+         sent, or dropped)?  (Section 5.7.1)
 
       -  What is the counter behavior at maximum values?
          (Section 5.7.1)
