@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-25T02:05:02.587377+00:00",
+  "timestamp": "2026-06-28T02:12:09.835858+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -18213,7 +18213,7 @@
       "id": "PR_kwDOOWPBqs7pCSUB",
       "title": "clarify updates",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/252",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -18222,17 +18222,19 @@
       ],
       "body": "\"fully update ...\" is inacurrate given the list of changes.\r\n\r\n+ minor fix to be consistent with https://datatracker.ietf.org/doc/html/rfc9907#name-yang-data-model-versus-yang",
       "createdAt": "2026-06-22T06:32:40Z",
-      "updatedAt": "2026-06-24T12:35:27Z",
+      "updatedAt": "2026-06-25T14:20:47Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "5420f6ebcaa981ec8f555590b03d0fc37f5d1165",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "boucadair-patch-1",
       "headRefOid": "0e2ef6dfb750e63b3a52bac560d121af9bc976d6",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-06-25T14:20:45Z",
+      "mergedAt": "2026-06-25T14:20:45Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "a6eee20c42aab3449651e316462b4ce89ec986d6"
+      },
       "comments": [],
       "reviews": [
         {
@@ -18280,6 +18282,130 @@
           "createdAt": "2026-06-24T12:35:26Z",
           "updatedAt": "2026-06-24T12:35:26Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 253,
+      "id": "PR_kwDOOWPBqs7qpMuF",
+      "title": "chore: Update checklist based on new text",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/253",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "While here, attempt to pare down the body and remove some duplication. This was facilitated by Claude Opus.",
+      "createdAt": "2026-06-25T16:09:30Z",
+      "updatedAt": "2026-06-26T07:28:33Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "a6eee20c42aab3449651e316462b4ce89ec986d6",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "revisit-checklist",
+      "headRefOid": "c6a4d72dc4dbba69dcae758379f6e49e3e93303d",
+      "closedAt": "2026-06-26T07:28:30Z",
+      "mergedAt": "2026-06-26T07:28:30Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "4daac6e68a584bb67e19fa3f1f2da9b3ae1965e6"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABEJilDg",
+          "commit": {
+            "abbreviatedOid": "03a28d2"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "This looks good, Joe, and I have one general comment -- given the facilitation, should Claude be added to the Acknowledgements?\nThanks,\nCarlos.",
+          "createdAt": "2026-06-25T17:30:59Z",
+          "updatedAt": "2026-06-25T17:30:59Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABEJorkA",
+          "commit": {
+            "abbreviatedOid": "753c514"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-25T17:43:59Z",
+          "updatedAt": "2026-06-25T17:43:59Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABEKFgtg",
+          "commit": {
+            "abbreviatedOid": "753c514"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-06-25T18:40:39Z",
+          "updatedAt": "2026-06-25T18:40:39Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABENEKJg",
+          "commit": {
+            "abbreviatedOid": "753c514"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-26T06:20:09Z",
+          "updatedAt": "2026-06-26T06:26:45Z",
+          "comments": [
+            {
+              "originalPosition": 19,
+              "body": "```suggestion\nProtocol Designers should account for MTU constraints when designing protocols that carry management traffic or measurement data, including any reduction in effective payload size introduced by tunnel or encapsulation overhead. {{?RFC8899}} specifies path MTU discovery for datagram transports, and {{Section 6.1 of ?RFC8900}} gives recommendations for protocol developers on avoiding reliance on IP fragmentation.\n```",
+              "createdAt": "2026-06-26T06:20:09Z",
+              "updatedAt": "2026-06-26T06:26:45Z"
+            },
+            {
+              "originalPosition": 42,
+              "body": "```suggestion\n- If there are no new operational considerations, does the section include the appropriate boilerplate with explanation? ({{sec-null-sec}})\n```",
+              "createdAt": "2026-06-26T06:20:44Z",
+              "updatedAt": "2026-06-26T06:26:45Z"
+            },
+            {
+              "originalPosition": 68,
+              "body": "```suggestion\n  - What are the impacts on traffic patterns or performance (e.g., delay or jitter)? ({{sec-impact}})\n```",
+              "createdAt": "2026-06-26T06:21:35Z",
+              "updatedAt": "2026-06-26T06:26:45Z"
+            },
+            {
+              "originalPosition": 93,
+              "body": "```suggestion\n  - What are the manageable entities (e.g., protocol endpoints, network elements, and services)? ({{sec-mgmt-consid}})\n```",
+              "createdAt": "2026-06-26T06:22:11Z",
+              "updatedAt": "2026-06-26T06:26:45Z"
+            },
+            {
+              "originalPosition": 104,
+              "body": "```suggestion\n  - What configuration and operational (state, statistical, etc.) information is needed? ({{sec-interop}})\n```",
+              "createdAt": "2026-06-26T06:23:27Z",
+              "updatedAt": "2026-06-26T06:26:45Z"
+            },
+            {
+              "originalPosition": 162,
+              "body": "```suggestion\n  - What are the hardware/software performance impacts (e.g., CPU, memory, and forwarding)? ({{sec-perf-mgmt}})\n```",
+              "createdAt": "2026-06-26T06:25:27Z",
+              "updatedAt": "2026-06-26T06:26:45Z"
+            },
+            {
+              "originalPosition": 169,
+              "body": "```suggestion\n  - What protocol counters are defined (e.g., packets received, sent, or dropped)? ({{sec-monitor-proto}})\n```",
+              "createdAt": "2026-06-26T06:25:39Z",
+              "updatedAt": "2026-06-26T06:26:45Z"
+            }
+          ]
         }
       ]
     }
