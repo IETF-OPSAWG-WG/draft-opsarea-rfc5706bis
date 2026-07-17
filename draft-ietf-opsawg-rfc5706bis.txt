@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 28 December 2026                             Old Dog Consulting
+Expires: 18 January 2027                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            26 June 2026
+                                                            17 July 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 December 2026.
+   This Internet-Draft will expire on 18 January 2027.
 
 Copyright Notice
 
@@ -298,107 +298,108 @@ Table of Contents
    of this document.  Where appropriate, references are provided for
    further reading or authoritative definitions.
 
-   *  Cause: See [I-D.ietf-nmop-terminology].
+*  Cause: See [RFC9940].
 
-   *  CLI: Command Line Interface.  A human-oriented interface,
-      typically a Proprietary Interface, to hardware or software devices
-      (e.g., hosts, routers, or operating systems).  The commands, their
-      syntax, and the precise semantics of the parameters may vary
-      considerably between different vendors, between products from the
-      same vendor, and even between different versions or releases of a
-      single product.  No attempt at standardizing CLIs has been made by
-      the IETF.
+*  CLI: Command Line Interface.  A human-oriented interface,
+   typically a Proprietary Interface, to hardware or software devices
+   (e.g., hosts, routers, or operating systems).  The commands, their
+   syntax, and the precise semantics of the parameters may vary
+   considerably between different vendors, between products from the
+   same vendor, and even between different versions or releases of a
+   single product.  No attempt at standardizing CLIs has been made by
+   the IETF.
 
-   *  Data Model: A set of mechanisms for representing, organizing,
-      storing, and handling data within a particular type of data store
-      or repository.  This usually comprises a collection of data
-      structures such as lists, tables, relations, etc., a collection of
-      operations that can be applied to the structures such as
-      retrieval, update, summation, etc., and a collection of integrity
-      rules that define the legal states (set of values) or changes of
-      state (operations on values).  A Data Model may be derived by
-      mapping the contents of an Information Model or may be developed
-      ab initio.  Further discussion of Data Models can be found in
-      [RFC3444], Section 5.2, and Section 5.3.
+*  Data Model: A set of mechanisms for representing, organizing,
+   storing, and handling data within a particular type of data store
+   or repository.  This usually comprises a collection of data
+   structures such as lists, tables, relations, etc., a collection of
+   operations that can be applied to the structures such as
+   retrieval, update, summation, etc., and a collection of integrity
+   rules that define the legal states (set of values) or changes of
+   state (operations on values).  A Data Model may be derived by
+   mapping the contents of an Information Model or may be developed
+   ab initio.  Further discussion of Data Models can be found in
+   [RFC3444], Section 5.2, and Section 5.3.
 
-   *  Fault: See [I-D.ietf-nmop-terminology].
+*  Fault: See [RFC9940].
 
-   *  Fault Management: The process of interpreting fault notifications
-      and other alerts and alarms, isolating faults, correlating them,
-      and deducing underlying Causes.  See Section 5.4 for more
-      information.
+*  Fault Management: The process of interpreting fault notifications
+   and other alerts and alarms, isolating faults, correlating them,
+   and deducing underlying Causes.  See Section 5.4 for more
+   information.
 
-   *  Information Model: An abstraction and representation of the
-      entities in a managed environment, their properties, attributes
-      and operations, and the way that they relate to each other.  The
-      model is independent of any specific software usage, protocol, or
-      platform [RFC3444].  See Sections 5.2 and 5.3.1 for further
-      discussion of Information Models.
+*  Information Model: An abstraction and representation of the
+   entities in a managed environment, their properties, attributes
+   and operations, and the way that they relate to each other.  The
+   model is independent of any specific software usage, protocol, or
+   platform [RFC3444].  See Sections 5.2 and 5.3.1 for further
+   discussion of Information Models.
 
-   *  New Protocol and Protocol Extension: These terms are used in this
-      document to identify entirely new protocols, new versions of
-      existing protocols, and extensions to protocols.  The application
-      of New Protocols and Protocol Extensions to different scenarios,
-      and their use in delivering services, procedures, mechanisms, or
-      applications, falls within the scope of this definition.
+*  New Protocol and Protocol Extension: These terms are used in this
+   document to identify entirely new protocols, new versions of
+   existing protocols, and extensions to protocols.  The application
+   of New Protocols and Protocol Extensions to different scenarios,
+   and their use in delivering services, procedures, mechanisms, or
+   applications, falls within the scope of this definition.
 
-   *  Network Device: A device that implements one or more network
-      protocols and participates in network operations.  This term
-      encompasses a broad range of implementations, including
-      conventional network infrastructure equipment (e.g., routers and
-      switches), end hosts, IoT devices, virtual network functions, and
-      containerized workloads.  In this document, the term is used
-      generically to mean any managed entity implementing the protocol
-      under consideration.
+*  Network Device: A device that implements one or more network
+   protocols and participates in network operations.  This term
+   encompasses a broad range of implementations, including
+   conventional network infrastructure equipment (e.g., routers and
+   switches), end hosts, IoT devices, virtual network functions, and
+   containerized workloads.  In this document, the term is used
+   generically to mean any managed entity implementing the protocol
+   under consideration.
 
-   *  OAM: Operations, Administration, and Maintenance [RFC6291]
-      [I-D.ietf-opsawg-oam-characterization] is the term given to the
-      combination of:
+*  OAM: Operations, Administration, and Maintenance [RFC6291]
+   [I-D.ietf-opsawg-oam-characterization] is the term given to the
+   combination of:
 
-      1.  Operation activities that are undertaken to keep the network
-          running as intended.  They include monitoring of the network.
+1. Operation activities that are undertaken to keep the
+   network running as intended. They include monitoring of the network.
 
-      2.  Administration activities that keep track of resources in the
-          network and how they are used.  They include the bookkeeping
-          necessary to track networking resources.
+2. Administration activities that keep track of resources in the
+   network and how they are used. They include the bookkeeping necessary
+   to track networking resources.
 
-      3.  Maintenance activities focused on facilitating repairs and
-          upgrades.  They also involve corrective and preventive
-          measures to make the managed network run more effectively.
+3. Maintenance activities focused on facilitating repairs and upgrades.
+   They also involve corrective and preventive measures to make the
+   managed network run more effectively.
 
-      The broader concept of "operations and management" that is the
-      subject of this document encompasses OAM, in addition to other
-      management and provisioning tools and concepts.  This is sometimes
-      known as "OAM and Management" or "O&M" as explained in [RFC6291].
+The broader concept of "operations and management" that is the
+subject of this document encompasses OAM, in addition to other
+management and provisioning tools and concepts. This is
+sometimes known as "OAM and Management" or "O&M" as
+explained in {{RFC6291}}.
 
-   *  Operator: A person or organization responsible for deploying and
-      managing systems, services, or networks that run or rely on a
-      protocol implementation.  This includes, but is not limited to,
-      network operators, cloud service administrators, IoT device fleet
-      managers, home network administrators, and DNS/NTP server
-      administrators.  The term "operator" is used throughout this
-      document in this broad sense unless the context explicitly
-      requires a narrower scope.
+*  Operator: A person or organization responsible for deploying and
+   managing systems, services, or networks that run or rely on a
+   protocol implementation.  This includes, but is not limited to,
+   network operators, cloud service administrators, IoT device fleet
+   managers, home network administrators, and DNS/NTP server
+   administrators.  The term "operator" is used throughout this
+   document in this broad sense unless the context explicitly
+   requires a narrower scope.
 
-   *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].
+*  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].
 
-   *  Problem: See [I-D.ietf-nmop-terminology].
+*  Problem: See [RFC9940].
 
-   *  Proprietary Interface: An interface to manage a network element
+   -  Proprietary Interface: An interface to manage a network element
       that is not standardized.  As such, the user interface, syntax,
       and semantics typically vary significantly between
       implementations.  Examples of proprietary interfaces include
       Command Line Interface (CLI), management web portal and Browser
-      User Interface (BUI), Graphical User Interface (GUI), and vendor-
-      specific application programming interface (API).
+      User Interface (BUI), Graphical User Interface (GUI), and
+      vendor-specific application programming interface (API).
 
-   *  Protocol Designer: An individual, a group of people, or an IETF WG
-      involved in the development and specification of New Protocols or
-      Protocol Extensions.
+   -  Protocol Designer: An individual, a group of people, or an IETF
+      WG involved in the development and specification of New
+      Protocols or Protocol Extensions.
 
-   *  Technical Document: This includes any document that describes the
-      design, specification, implementation, or deployment of a new
-      Protocol or Protocol Extensions.
+   -  Technical Document: This includes any document that describes
+      the design, specification, implementation, or deployment of a
+      new Protocol or Protocol Extensions.
 
 3.  Documentation Requirements for IETF Specifications
 
@@ -1744,10 +1745,12 @@ Table of Contents
 
 8.  Operational Considerations
 
+   There are no new operations or manageability requirements introduced
+   by this document.
+
    Although this document focuses on operations and manageability
    guidance, it does not define a New Protocol, a Protocol Extension, or
-   an architecture.  As such, there are no new operations or
-   manageability requirements introduced by this document.
+   an architecture.
 
 9.  Security Considerations
 
@@ -1767,14 +1770,6 @@ Table of Contents
               RFC 2360, DOI 10.17487/RFC2360, June 1998,
               <https://www.rfc-editor.org/info/rfc2360>.
 
-   [I-D.ietf-nmop-terminology]
-              Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
-              Key Terms for Network Fault and Problem Management", Work
-              in Progress, Internet-Draft, draft-ietf-nmop-terminology-
-              23, 18 August 2025,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              terminology-23>.
-
    [RFC8340]  Bjorklund, M. and L. Berger, Ed., "YANG Tree Diagrams",
               BCP 215, RFC 8340, DOI 10.17487/RFC8340, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8340>.
@@ -1782,6 +1777,11 @@ Table of Contents
    [RFC8791]  Bierman, A., Björklund, M., and K. Watsen, "YANG Data
               Structure Extensions", RFC 8791, DOI 10.17487/RFC8791,
               June 2020, <https://www.rfc-editor.org/rfc/rfc8791>.
+
+   [RFC9940]  Davis, N., Ed., Farrel, A., Ed., Graf, T., Wu, Q., and C.
+              Yu, "Some Key Terms for Network Fault and Problem
+              Management", RFC 9940, DOI 10.17487/RFC9940, April 2026,
+              <https://www.rfc-editor.org/rfc/rfc9940>.
 
 10.2.  Informative References
 
@@ -1892,9 +1892,9 @@ Table of Contents
               Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
               "A YANG Data Model for Network Incident Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-network-
-              incident-yang-08, 13 February 2026,
+              incident-yang-10, 5 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              network-incident-yang-08>.
+              network-incident-yang-10>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
@@ -1907,9 +1907,9 @@ Table of Contents
               Marx, R., Niccolini, L., Seemann, M., and L. Pardue,
               "qlog: Structured Logging for Network Protocols", Work in
               Progress, Internet-Draft, draft-ietf-quic-qlog-main-
-              schema-13, 20 October 2025,
+              schema-14, 6 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              qlog-main-schema-13>.
+              qlog-main-schema-14>.
 
    [I-D.ietf-suit-mti]
               Moran, B., Rønningstad, O., and A. Tsukamoto,
