@@ -24,7 +24,7 @@ normative:
    BCP22:
    RFC8791:
    RFC8340:
-   I-D.ietf-nmop-terminology:
+   RFC9940:
 
 informative:
   CHECKLIST:
@@ -238,9 +238,9 @@ This document does not describe interoperability requirements. As such, it does 
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
-   *  Cause: See {{I-D.ietf-nmop-terminology}}.
+- Cause: See {{RFC9940}}.
 
-   *  CLI: Command Line Interface. A human-oriented interface, typically
+- CLI: Command Line Interface. A human-oriented interface, typically
       a Proprietary Interface, to hardware or software devices
       (e.g., hosts, routers, or operating systems). The commands, their syntax,
       and the precise semantics of the parameters may vary considerably
@@ -248,7 +248,7 @@ This document does not describe interoperability requirements. As such, it does 
       vendor, and even between different versions or releases of a single
       product. No attempt at standardizing CLIs has been made by the IETF.
 
-   *  Data Model: A set of mechanisms for representing, organizing, storing,
+- Data Model: A set of mechanisms for representing, organizing, storing,
       and handling data within a particular type of data store or repository.
       This usually comprises a collection of data structures such as lists, tables,
       relations, etc., a collection of operations that can be applied to the
@@ -259,27 +259,27 @@ This document does not describe interoperability requirements. As such, it does 
       discussion of Data Models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgmt-info}}.
 
-   *  Fault: See {{I-D.ietf-nmop-terminology}}.
+- Fault: See {{RFC9940}}.
 
-   *  Fault Management: The process of interpreting fault notifications and other alerts
+- Fault Management: The process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and deducing underlying
       Causes. See {{sec-fm-mgmt}} for more information.
 
-   *  Information Model: An abstraction and representation of the
+- Information Model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other. The model is
       independent of any specific software usage, protocol,
       or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for
       further discussion of Information Models.
 
-   *  New Protocol and Protocol Extension: These terms are used in this document
+- New Protocol and Protocol Extension: These terms are used in this document
       to identify entirely new protocols, new versions of existing
       protocols, and extensions to protocols.
       The application of New Protocols and Protocol Extensions to different
       scenarios, and their use in delivering services, procedures, mechanisms,
       or applications, falls within the scope of this definition.
 
-   *  Network Device: A device that implements one or more network
+- Network Device: A device that implements one or more network
       protocols and participates in network operations. This term
       encompasses a broad range of implementations, including conventional
       network infrastructure equipment (e.g., routers and switches), end
@@ -287,7 +287,7 @@ This document does not describe interoperability requirements. As such, it does 
       workloads. In this document, the term is used generically to mean
       any managed entity implementing the protocol under consideration.
 
-   *  OAM: Operations, Administration, and Maintenance {{?RFC6291}}
+- OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
       combination of:
 
@@ -308,7 +308,7 @@ This document does not describe interoperability requirements. As such, it does 
       sometimes known as "OAM and Management" or "O&M" as
       explained in {{?RFC6291}}.
 
-   *  Operator: A person or organization responsible for deploying and managing
+- Operator: A person or organization responsible for deploying and managing
       systems, services, or networks that run or rely on a protocol implementation.
       This includes, but is not limited to,
       network operators, cloud service administrators, IoT device fleet
@@ -317,9 +317,9 @@ This document does not describe interoperability requirements. As such, it does 
       in this broad sense unless the context explicitly requires a narrower
       scope.
 
-   *  Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
+- Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
 
-   *  Problem: See {{I-D.ietf-nmop-terminology}}.
+- Problem: See {{RFC9940}}.
 
    *  Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
@@ -1532,7 +1532,10 @@ DM         DM        DM     --> concrete/detailed model
 
 # Operational Considerations {#sec-oper-mgmt-consid}
 
-   Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.
+   There are no new operations or manageability requirements introduced
+   by this document.
+
+   Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture.
 
 
 #  Security Considerations {#sec-security}
