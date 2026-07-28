@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 24 December 2026                             Old Dog Consulting
+Expires: 29 January 2027                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            22 June 2026
+                                                            28 July 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 December 2026.
+   This Internet-Draft will expire on 29 January 2027.
 
 Copyright Notice
 
@@ -126,8 +126,10 @@ Table of Contents
      A.3.  Management Information
      A.4.  Fault Management
      A.5.  Configuration Management
-     A.6.  Performance Management
-     A.7.  Security Management
+     A.6.  Accounting Management
+     A.7.  Performance Management
+     A.8.  Security Management
+     A.9.  Operational and Management Tooling
    Appendix B.  Changes Since RFC 5706
    Acknowledgements
    Contributors
@@ -296,107 +298,108 @@ Table of Contents
    of this document.  Where appropriate, references are provided for
    further reading or authoritative definitions.
 
-   *  Cause: See [I-D.ietf-nmop-terminology].
+*  Cause: See [RFC9940].
 
-   *  CLI: Command Line Interface.  A human-oriented interface,
-      typically a Proprietary Interface, to hardware or software devices
-      (e.g., hosts, routers, or operating systems).  The commands, their
-      syntax, and the precise semantics of the parameters may vary
-      considerably between different vendors, between products from the
-      same vendor, and even between different versions or releases of a
-      single product.  No attempt at standardizing CLIs has been made by
-      the IETF.
+*  CLI: Command Line Interface.  A human-oriented interface,
+   typically a Proprietary Interface, to hardware or software devices
+   (e.g., hosts, routers, or operating systems).  The commands, their
+   syntax, and the precise semantics of the parameters may vary
+   considerably between different vendors, between products from the
+   same vendor, and even between different versions or releases of a
+   single product.  No attempt at standardizing CLIs has been made by
+   the IETF.
 
-   *  Data Model: A set of mechanisms for representing, organizing,
-      storing, and handling data within a particular type of data store
-      or repository.  This usually comprises a collection of data
-      structures such as lists, tables, relations, etc., a collection of
-      operations that can be applied to the structures such as
-      retrieval, update, summation, etc., and a collection of integrity
-      rules that define the legal states (set of values) or changes of
-      state (operations on values).  A Data Model may be derived by
-      mapping the contents of an Information Model or may be developed
-      ab initio.  Further discussion of Data Models can be found in
-      [RFC3444], Section 5.2, and Section 5.3.
+*  Data Model: A set of mechanisms for representing, organizing,
+   storing, and handling data within a particular type of data store
+   or repository.  This usually comprises a collection of data
+   structures such as lists, tables, relations, etc., a collection of
+   operations that can be applied to the structures such as
+   retrieval, update, summation, etc., and a collection of integrity
+   rules that define the legal states (set of values) or changes of
+   state (operations on values).  A Data Model may be derived by
+   mapping the contents of an Information Model or may be developed
+   ab initio.  Further discussion of Data Models can be found in
+   [RFC3444], Section 5.2, and Section 5.3.
 
-   *  Fault: See [I-D.ietf-nmop-terminology].
+*  Fault: See [RFC9940].
 
-   *  Fault Management: The process of interpreting fault notifications
-      and other alerts and alarms, isolating faults, correlating them,
-      and deducing underlying Causes.  See Section 5.4 for more
-      information.
+*  Fault Management: The process of interpreting fault notifications
+   and other alerts and alarms, isolating faults, correlating them,
+   and deducing underlying Causes.  See Section 5.4 for more
+   information.
 
-   *  Information Model: An abstraction and representation of the
-      entities in a managed environment, their properties, attributes
-      and operations, and the way that they relate to each other.  The
-      model is independent of any specific software usage, protocol, or
-      platform [RFC3444].  See Sections 5.2 and 5.3.1 for further
-      discussion of Information Models.
+*  Information Model: An abstraction and representation of the
+   entities in a managed environment, their properties, attributes
+   and operations, and the way that they relate to each other.  The
+   model is independent of any specific software usage, protocol, or
+   platform [RFC3444].  See Sections 5.2 and 5.3.1 for further
+   discussion of Information Models.
 
-   *  New Protocol and Protocol Extension: These terms are used in this
-      document to identify entirely new protocols, new versions of
-      existing protocols, and extensions to protocols.  The application
-      of New Protocols and Protocol Extensions to different scenarios,
-      and their use in delivering services, procedures, mechanisms, or
-      applications, falls within the scope of this definition.
+*  New Protocol and Protocol Extension: These terms are used in this
+   document to identify entirely new protocols, new versions of
+   existing protocols, and extensions to protocols.  The application
+   of New Protocols and Protocol Extensions to different scenarios,
+   and their use in delivering services, procedures, mechanisms, or
+   applications, falls within the scope of this definition.
 
-   *  Network Device: A device that implements one or more network
-      protocols and participates in network operations.  This term
-      encompasses a broad range of implementations, including
-      conventional network infrastructure equipment (e.g., routers and
-      switches), end hosts, IoT devices, virtual network functions, and
-      containerized workloads.  In this document, the term is used
-      generically to mean any managed entity implementing the protocol
-      under consideration.
+*  Network Device: A device that implements one or more network
+   protocols and participates in network operations.  This term
+   encompasses a broad range of implementations, including
+   conventional network infrastructure equipment (e.g., routers and
+   switches), end hosts, IoT devices, virtual network functions, and
+   containerized workloads.  In this document, the term is used
+   generically to mean any managed entity implementing the protocol
+   under consideration.
 
-   *  OAM: Operations, Administration, and Maintenance [RFC6291]
-      [I-D.ietf-opsawg-oam-characterization] is the term given to the
-      combination of:
+*  OAM: Operations, Administration, and Maintenance [RFC6291]
+   [I-D.ietf-opsawg-oam-characterization] is the term given to the
+   combination of:
 
-      1.  Operation activities that are undertaken to keep the network
-          running as intended.  They include monitoring of the network.
+1. Operation activities that are undertaken to keep the
+   network running as intended. They include monitoring of the network.
 
-      2.  Administration activities that keep track of resources in the
-          network and how they are used.  They include the bookkeeping
-          necessary to track networking resources.
+2. Administration activities that keep track of resources in the
+   network and how they are used. They include the bookkeeping necessary
+   to track networking resources.
 
-      3.  Maintenance activities focused on facilitating repairs and
-          upgrades.  They also involve corrective and preventive
-          measures to make the managed network run more effectively.
+3. Maintenance activities focused on facilitating repairs and upgrades.
+   They also involve corrective and preventive measures to make the
+   managed network run more effectively.
 
-      The broader concept of "operations and management" that is the
-      subject of this document encompasses OAM, in addition to other
-      management and provisioning tools and concepts.  This is sometimes
-      known as "OAM and Management" or "O&M" as explained in [RFC6291].
+The broader concept of "operations and management" that is the
+subject of this document encompasses OAM, in addition to other
+management and provisioning tools and concepts. This is
+sometimes known as "OAM and Management" or "O&M" as
+explained in {{RFC6291}}.
 
-   *  Operator: A person or organization responsible for deploying and
-      managing systems, services, or networks that run or rely on a
-      protocol implementation.  This includes, but is not limited to,
-      network operators, cloud service administrators, IoT device fleet
-      managers, home network administrators, and DNS/NTP server
-      administrators.  The term "operator" is used throughout this
-      document in this broad sense unless the context explicitly
-      requires a narrower scope.
+*  Operator: A person or organization responsible for deploying and
+   managing systems, services, or networks that run or rely on a
+   protocol implementation.  This includes, but is not limited to,
+   network operators, cloud service administrators, IoT device fleet
+   managers, home network administrators, and DNS/NTP server
+   administrators.  The term "operator" is used throughout this
+   document in this broad sense unless the context explicitly
+   requires a narrower scope.
 
-   *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].
+*  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].
 
-   *  Problem: See [I-D.ietf-nmop-terminology].
+*  Problem: See [RFC9940].
 
-   *  Proprietary Interface: An interface to manage a network element
+   -  Proprietary Interface: An interface to manage a network element
       that is not standardized.  As such, the user interface, syntax,
       and semantics typically vary significantly between
       implementations.  Examples of proprietary interfaces include
       Command Line Interface (CLI), management web portal and Browser
-      User Interface (BUI), Graphical User Interface (GUI), and vendor-
-      specific application programming interface (API).
+      User Interface (BUI), Graphical User Interface (GUI), and
+      vendor-specific application programming interface (API).
 
-   *  Protocol Designer: An individual, a group of people, or an IETF WG
-      involved in the development and specification of New Protocols or
-      Protocol Extensions.
+   -  Protocol Designer: An individual, a group of people, or an IETF
+      WG involved in the development and specification of New
+      Protocols or Protocol Extensions.
 
-   *  Technical Document: This includes any document that describes the
-      design, specification, implementation, or deployment of a new
-      Protocol or Protocol Extensions.
+   -  Technical Document: This includes any document that describes
+      the design, specification, implementation, or deployment of a
+      new Protocol or Protocol Extensions.
 
 3.  Documentation Requirements for IETF Specifications
 
@@ -432,6 +435,7 @@ Table of Contents
    included as well.  A concise checklist of key questions is provided
    in Appendix A.
 
+   For New Protocol or Protocol Extension specifications that contain
    Data Models (e.g., YANG) and other schema artifacts (JSON schema,
    YAML, CDDL, etc.) may be consumed out of the RFCs that specify them.
    As such, it is recommended that operational aspects for a data model
@@ -553,17 +557,14 @@ Table of Contents
    For example:
 
       BGP flap damping [RFC2439] was designed to block high-frequency
-      route flaps.  Some BGP implementations were memory-constrained so
-      often elected not to support this function, others found a
-      conflict where path exploration caused false flap damping
-      resulting in loss of reachability.  As a result, flap damping was
-      often not enabled network-wide, contrary to the intentions of the
-      original designers.  This case is instructive precisely because
-      little, if any, text in an "Operational Considerations" section
-      written at design time would have changed the outcome.  That is,
-      the behavior emerged only from operational experience at scale.
-      It illustrates that some operational considerations cannot be
-      fully anticipated when a specification is written.
+      route flaps.  Some BGP implementations were memory-constrained and
+      elected not to support this function.  Others found a conflict
+      where path exploration caused false flap damping resulting in loss
+      of reachability.  As a result, flap damping was often not enabled
+      network-wide, contrary to the intentions of the original
+      designers.  This behavior emerged only from operational experience
+      at scale, and little text written at design time would have
+      changed the outcome.
 
 4.1.  Installation and Initial Setup
 
@@ -676,7 +677,16 @@ Table of Contents
    certain ways.  If restrictions or dependencies exist, they should be
    stated.
 
-   For example:
+   Where a New Protocol or Protocol Extension depends on another
+   protocol or component to function correctly, that dependency is a
+   normative property of the specification and belongs in its main body
+   rather than only in the "Operational Considerations" section, so that
+   implementers and operators can identify it easily.  For example, if
+   correct operation relies on an accurate time source (such as NTP
+   [RFC5905]), the specification should state that requirement, and the
+   acceptable means of satisfying it, explicitly.
+
+   Another example:
 
       The design of the Resource ReSerVation Protocol (RSVP) [RFC2205]
       required each router to look at the RSVP PATH message and, if the
@@ -784,10 +794,13 @@ Table of Contents
    Designers may refer to [RFC6390] for guidelines for considering new
    performance metrics.
 
-   It is important to minimize the impact caused by configuration
-   changes.  Given configuration A and configuration B, it should be
-   possible to generate the operations necessary to get from A to B with
-   minimal state changes and effects on network and systems.
+   Protocol Designers should account for MTU constraints when designing
+   protocols that carry management traffic or measurement data,
+   including any reduction in effective payload size introduced by
+   tunnel or encapsulation overhead.  [RFC8899] specifies path MTU
+   discovery for datagram transports, and Section 6.1 of [RFC8900] gives
+   recommendations for protocol developers on avoiding reliance on IP
+   fragmentation.
 
 4.5.  Impact on Security Operations
 
@@ -1194,16 +1207,30 @@ Table of Contents
    abstract or distributed constructs can be reflected based on
    parameters available in the network.
 
-   For example, the status of a service may depend on the operational
-   state of multiple network elements to which the service is attached.
-   In such cases, the YANG Data Model (and its accompanying
-   documentation) should clearly describe how service-level status is
-   derived from underlying device-level information.  Similarly, it is
-   beneficial to define events (and relevant triggered notifications)
-   that indicate changes in an underlying state, enabling reliable
-   detection and correlation of service-affecting conditions.  Including
-   such mechanisms improves the robustness of integrations and helps
-   ensure consistent behavior across implementations.
+   The status of a service may depend on the operational state of
+   multiple network elements to which the service is attached.  In such
+   cases, the YANG Data Model (and its accompanying documentation)
+   should clearly describe how service-level status is derived from
+   underlying network-level abstractions and device-level information.
+   Similarly, it is beneficial to define events (and relevant triggered
+   notifications) at the device, network, and service levels that
+   indicate changes in an underlying state, enabling reliable detection
+   and correlation of service-affecting conditions across these levels.
+   Including such mechanisms improves the robustness of integrations and
+   helps ensure consistent behavior across implementations.
+
+   For example:
+
+      A device YANG module may define a notification indicating that a
+      hardware component, such as a line card, has failed.  A Network
+      Model, such as L3NM [RFC9182], can use such device-level
+      notifications from the attached devices to detect that a link
+      supporting the network is no longer operational and generate its
+      own network-level notification.  A Service Model, such as L3SM
+      [RFC8299], can, in turn, correlate that network-level notification
+      with the affected service to derive and report a service-degraded
+      event to the customer, without requiring the service-facing model
+      to expose device-level detail.
 
    Specific guidelines to consider when authoring any type of YANG
    modules are described in [I-D.ietf-netmod-rfc8407bis].
@@ -1523,10 +1550,6 @@ Table of Contents
    current instances exceed the capacity of the implementation or the
    capacity of the device.
 
-   Designers of an Information Model should provide runtime information
-   about the maximum supported instances, the current number of
-   instances, and expected behavior when capacity is exceeded.
-
 5.7.3.  Monitoring the Network
 
    Consider whether network performance will be affected by the number
@@ -1737,10 +1760,12 @@ Table of Contents
 
 8.  Operational Considerations
 
+   There are no new operations or manageability requirements introduced
+   by this document.
+
    Although this document focuses on operations and manageability
    guidance, it does not define a New Protocol, a Protocol Extension, or
-   an architecture.  As such, there are no new operations or
-   manageability requirements introduced by this document.
+   an architecture.
 
 9.  Security Considerations
 
@@ -1760,14 +1785,6 @@ Table of Contents
               RFC 2360, DOI 10.17487/RFC2360, June 1998,
               <https://www.rfc-editor.org/info/rfc2360>.
 
-   [I-D.ietf-nmop-terminology]
-              Davis, N., Farrel, A., Graf, T., Wu, Q., and C. Yu, "Some
-              Key Terms for Network Fault and Problem Management", Work
-              in Progress, Internet-Draft, draft-ietf-nmop-terminology-
-              23, 18 August 2025,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              terminology-23>.
-
    [RFC8340]  Bjorklund, M. and L. Berger, Ed., "YANG Tree Diagrams",
               BCP 215, RFC 8340, DOI 10.17487/RFC8340, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8340>.
@@ -1775,6 +1792,11 @@ Table of Contents
    [RFC8791]  Bierman, A., Björklund, M., and K. Watsen, "YANG Data
               Structure Extensions", RFC 8791, DOI 10.17487/RFC8791,
               June 2020, <https://www.rfc-editor.org/rfc/rfc8791>.
+
+   [RFC9940]  Davis, N., Ed., Farrel, A., Ed., Graf, T., Wu, Q., and C.
+              Yu, "Some Key Terms for Network Fault and Problem
+              Management", RFC 9940, DOI 10.17487/RFC9940, April 2026,
+              <https://www.rfc-editor.org/rfc/rfc9940>.
 
 10.2.  Informative References
 
@@ -1885,9 +1907,9 @@ Table of Contents
               Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
               "A YANG Data Model for Network Incident Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-network-
-              incident-yang-08, 13 February 2026,
+              incident-yang-10, 5 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              network-incident-yang-08>.
+              network-incident-yang-10>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
@@ -1900,9 +1922,9 @@ Table of Contents
               Marx, R., Niccolini, L., Seemann, M., and L. Pardue,
               "qlog: Structured Logging for Network Protocols", Work in
               Progress, Internet-Draft, draft-ietf-quic-qlog-main-
-              schema-13, 20 October 2025,
+              schema-14, 6 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              qlog-main-schema-13>.
+              qlog-main-schema-14>.
 
    [I-D.ietf-suit-mti]
               Moran, B., Rønningstad, O., and A. Tsukamoto,
@@ -2019,6 +2041,11 @@ Table of Contents
               Switched Paths (LSPs)", RFC 5884, DOI 10.17487/RFC5884,
               June 2010, <https://www.rfc-editor.org/rfc/rfc5884>.
 
+   [RFC5905]  Mills, D., Martin, J., Ed., Burbank, J., and W. Kasch,
+              "Network Time Protocol Version 4: Protocol and Algorithms
+              Specification", RFC 5905, DOI 10.17487/RFC5905, June 2010,
+              <https://www.rfc-editor.org/rfc/rfc5905>.
+
    [RFC6020]  Bjorklund, M., Ed., "YANG - A Data Modeling Language for
               the Network Configuration Protocol (NETCONF)", RFC 6020,
               DOI 10.17487/RFC6020, October 2010,
@@ -2105,6 +2132,16 @@ Table of Contents
               Protocols", RFC 8799, DOI 10.17487/RFC8799, July 2020,
               <https://www.rfc-editor.org/rfc/rfc8799>.
 
+   [RFC8899]  Fairhurst, G., Jones, T., Tüxen, M., Rüngeler, I., and T.
+              Völker, "Packetization Layer Path MTU Discovery for
+              Datagram Transports", RFC 8899, DOI 10.17487/RFC8899,
+              September 2020, <https://www.rfc-editor.org/rfc/rfc8899>.
+
+   [RFC8900]  Bonica, R., Baker, F., Huston, G., Hinden, R., Troan, O.,
+              and F. Gont, "IP Fragmentation Considered Fragile",
+              BCP 230, RFC 8900, DOI 10.17487/RFC8900, September 2020,
+              <https://www.rfc-editor.org/rfc/rfc8900>.
+
    [RFC9182]  Barguil, S., Gonzalez de Dios, O., Ed., Boucadair, M.,
               Ed., Munoz, L., and A. Aguado, "A YANG Network Data Model
               for Layer 3 VPNs", RFC 9182, DOI 10.17487/RFC9182,
@@ -2161,13 +2198,12 @@ Appendix A.  Operational Considerations Checklist
 A.1.  Documentation Requirements
 
    *  Does the specification include an "Operational Considerations"
-      section?  (Section 3.1)
+      section, placed immediately before the Security Considerations
+      section?  (Section 3.1, Section 3.3)
 
-   *  Is this section placed immediately before the Security
-      Considerations section?  (Section 3.3)
-
-   *  If there are no new considerations, does the section include the
-      appropriate boilerplate with explanation?  (Section 3.2)
+   *  If there are no new operational considerations, does the section
+      include the appropriate boilerplate with explanation?
+      (Section 3.2)
 
 A.2.  Operational Fit
 
@@ -2198,7 +2234,10 @@ A.2.  Operational Fit
          protocols?  (Section 4.4)
 
       -  What are the impacts on traffic patterns or performance (e.g.,
-         delay, jitter)?  (Section 4.4)
+         delay or jitter)?  (Section 4.4)
+
+      -  Does management traffic account for MTU constraints and avoid
+         reliance on IP fragmentation?  (Section 4.4)
 
    *  What is the impact on Security Operations?  (Section 4.5)
 
@@ -2222,7 +2261,7 @@ A.3.  Management Information
    *  What needs to be managed?  (Section 5)
 
       -  What are the manageable entities (e.g., protocol endpoints,
-         network elements, services)?  (Section 5)
+         network elements, and services)?  (Section 5)
 
    *  Which standardized management technologies are applicable?
       (Section 5.1)
@@ -2230,11 +2269,15 @@ A.3.  Management Information
    *  What essential information is required?  (Section 5.2,
       Section 5.3)
 
-      -  What operational, configuration, state, and statistical
+      -  What configuration and operational (state, statistical, etc.)
          information is needed?  (Section 5.2)
 
       -  Is an Information Model needed, especially if multiple Data
          Model representations are required?  (Section 5.2)
+
+      -  Is the model kept minimal, with each object serving a distinct
+         purpose and no data that can be derived from other objects?
+         (Section 5.3.1)
 
       -  What is manageable, what needs configuration, and what
          protocol-specific events might occur?  (Section 5.3)
@@ -2270,6 +2313,15 @@ A.4.  Fault Management
       -  What distinguishes faulty from correct messages?
          (Section 5.4.2)
 
+   *  How are faults localized and contained?  (Section 5.4.3,
+      Section 5.4.4)
+
+      -  Can the probable root cause of a fault be identified using
+         management information?  (Section 5.4.3)
+
+      -  Can faults be isolated or quarantined to prevent them from
+         propagating?  (Section 5.4.4)
+
 A.5.  Configuration Management
 
    *  What configuration parameters are defined?  (Section 5.5)
@@ -2279,17 +2331,32 @@ A.5.  Configuration Management
 
       -  What information persists across reboots?  (Section 5.5)
 
-A.6.  Performance Management
+   *  How is configuration managed across multiple devices?
+      (Section 5.5)
+
+      -  Can configuration changes be applied across several devices as
+         a coordinated operation, with a way to back out on failure?
+         (Section 5.5)
+
+      -  Is there a way to dump and restore configuration?
+         (Section 5.5)
+
+A.6.  Accounting Management
+
+   *  Is it appropriate to collect usage information for this protocol,
+      and if so, what information should be collected?  (Section 5.6)
+
+A.7.  Performance Management
 
    *  What are the performance implications?  (Section 5.7)
 
       -  What are the hardware/software performance impacts (e.g., CPU,
-         memory, forwarding)?  (Section 5.7)
+         memory, and forwarding)?  (Section 5.7)
 
    *  What performance information should be available?  (Section 5.7.1)
 
       -  What protocol counters are defined (e.g., packets received,
-         sent, dropped)?  (Section 5.7.1)
+         sent, or dropped)?  (Section 5.7.1)
 
       -  What is the counter behavior at maximum values?
          (Section 5.7.1)
@@ -2297,20 +2364,16 @@ A.6.  Performance Management
       -  What are the protocol limitations and behavior when limits are
          exceeded?  (Section 5.7.1)
 
-A.7.  Security Management
+A.8.  Security Management
 
    *  What security-related monitoring is needed?  (Section 5.8)
 
-      -  What security events should be logged?  (Section 5.8)
+      -  What security events should be logged, and do any log entries
+         contain privacy-sensitive information that must be controlled?
+         (Section 5.8)
 
-      -  Do log entries contain privacy-sensitive information that must
-         be controlled or redacted before sharing with authorized third
-         parties?  (Section 5.8)
-
-      -  What statistics help detect attacks?  (Section 5.8)
-
-      -  What security and privacy threats do management operations
-         introduce?  (Section 5.8)
+      -  What statistics help detect attacks, and what threats do
+         management operations themselves introduce?  (Section 5.8)
 
    *  What access controls are needed on management interfaces?
       (Section 5.8)
@@ -2324,6 +2387,20 @@ A.7.  Security Management
    *  How are secure transport, authentication, identity, and key/
       credential management addressed for management operations?
       (Section 5.8)
+
+A.9.  Operational and Management Tooling
+
+   *  Can existing tooling be adapted or extended to deploy, monitor,
+      and manage this specification before new tools are considered?
+      (Section 6)
+
+      -  Where new tooling is required, are its requirements limited to
+         functions that adaptation or extension cannot provide?
+         (Section 6)
+
+      -  Is the management interface designed to remain stable under
+         high-frequency automated query patterns, including those from
+         AI-driven tools?  (Section 6.1)
 
 Appendix B.  Changes Since RFC 5706
 
@@ -2379,10 +2456,12 @@ Acknowledgements
       Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang,
       Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan
       Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco
-      Tiloca, Jacqueline McCall, and Tim Winters.
+      Tiloca, Jacqueline McCall, Tim Winters, and Eliot Lear.
 
    The document shepherd who has gone beyond normal shepherding
    duties to improve this document:  Alvaro Retana
+
+   Claude Opus was used to distill document content into Appendix A.
 
    The author of RFC 5706:  David Harrington
 

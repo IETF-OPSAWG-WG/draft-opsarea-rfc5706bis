@@ -40,11 +40,11 @@
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.10.0
+    platformdirs 4.10.1
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.1
+    wcwidth 0.8.2
 -->
 <link href="draft-ietf-opsawg-rfc5706bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1063,11 +1063,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Operations &amp; Management Considerations</td>
-<td class="right">June 2026</td>
+<td class="right">July 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 28 December 2026</td>
+<td class="center">Expires 29 January 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1086,12 +1086,12 @@ svg {
 <a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-06-26" class="published">26 June 2026</time>
+<time datetime="2026-07-28" class="published">28 July 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-12-28">28 December 2026</time></dd>
+<dd class="expires"><time datetime="2027-01-29">29 January 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1156,7 +1156,7 @@ svg {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 28 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 29 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1514,123 +1514,123 @@ svg {
 <p id="section-2-2">This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2-3.1">
-          <p id="section-2-3.1.1">Cause: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2-3.1.1" class="pilcrow">¶</a></p>
+          <p id="section-2-3.1.1">Cause: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-3.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.2">
           <p id="section-2-3.2.1">CLI: Command Line Interface. A human-oriented interface, typically
-a Proprietary Interface, to hardware or software devices
-(e.g., hosts, routers, or operating systems). The commands, their syntax,
-and the precise semantics of the parameters may vary considerably
-between different vendors, between products from the same
-vendor, and even between different versions or releases of a single
-product. No attempt at standardizing CLIs has been made by the IETF.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
+    a Proprietary Interface, to hardware or software devices
+    (e.g., hosts, routers, or operating systems). The commands, their syntax,
+    and the precise semantics of the parameters may vary considerably
+    between different vendors, between products from the same
+    vendor, and even between different versions or releases of a single
+    product. No attempt at standardizing CLIs has been made by the IETF.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.3">
           <p id="section-2-3.3.1">Data Model: A set of mechanisms for representing, organizing, storing,
-and handling data within a particular type of data store or repository.
-This usually comprises a collection of data structures such as lists, tables,
-relations, etc., a collection of operations that can be applied to the
-structures such as retrieval, update, summation, etc., and a collection of
-integrity rules that define the legal states (set of values) or changes of
-state (operations on values). A Data Model may be derived by mapping the
-contents of an Information Model or may be developed ab initio. Further
-discussion of Data Models can be found in <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>, <a href="#sec-interop" class="auto internal xref">Section 5.2</a>,
-and <a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>.<a href="#section-2-3.3.1" class="pilcrow">¶</a></p>
+    and handling data within a particular type of data store or repository.
+    This usually comprises a collection of data structures such as lists, tables,
+    relations, etc., a collection of operations that can be applied to the
+    structures such as retrieval, update, summation, etc., and a collection of
+    integrity rules that define the legal states (set of values) or changes of
+    state (operations on values). A Data Model may be derived by mapping the
+    contents of an Information Model or may be developed ab initio. Further
+    discussion of Data Models can be found in <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>, <a href="#sec-interop" class="auto internal xref">Section 5.2</a>,
+    and <a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>.<a href="#section-2-3.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.4">
-          <p id="section-2-3.4.1">Fault: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
+          <p id="section-2-3.4.1">Fault: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.5">
           <p id="section-2-3.5.1">Fault Management: The process of interpreting fault notifications and other alerts
-and alarms, isolating faults, correlating them, and deducing underlying
-Causes. See <a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a> for more information.<a href="#section-2-3.5.1" class="pilcrow">¶</a></p>
+    and alarms, isolating faults, correlating them, and deducing underlying
+    Causes. See <a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a> for more information.<a href="#section-2-3.5.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.6">
           <p id="section-2-3.6.1">Information Model: An abstraction and representation of the
-entities in a managed environment, their properties, attributes
-and operations, and the way that they relate to each other. The model is
-independent of any specific software usage, protocol,
-or platform <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>. See Sections <a href="#sec-interop" class="auto internal xref">5.2</a> and <a href="#sec-im-design" class="auto internal xref">5.3.1</a> for
-further discussion of Information Models.<a href="#section-2-3.6.1" class="pilcrow">¶</a></p>
+    entities in a managed environment, their properties, attributes
+    and operations, and the way that they relate to each other. The model is
+    independent of any specific software usage, protocol,
+    or platform <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>. See Sections <a href="#sec-interop" class="auto internal xref">5.2</a> and <a href="#sec-im-design" class="auto internal xref">5.3.1</a> for
+    further discussion of Information Models.<a href="#section-2-3.6.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.7">
           <p id="section-2-3.7.1">New Protocol and Protocol Extension: These terms are used in this document
-to identify entirely new protocols, new versions of existing
-protocols, and extensions to protocols.
-The application of New Protocols and Protocol Extensions to different
-scenarios, and their use in delivering services, procedures, mechanisms,
-or applications, falls within the scope of this definition.<a href="#section-2-3.7.1" class="pilcrow">¶</a></p>
+    to identify entirely new protocols, new versions of existing
+    protocols, and extensions to protocols.
+    The application of New Protocols and Protocol Extensions to different
+    scenarios, and their use in delivering services, procedures, mechanisms,
+    or applications, falls within the scope of this definition.<a href="#section-2-3.7.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.8">
           <p id="section-2-3.8.1">Network Device: A device that implements one or more network
-protocols and participates in network operations. This term
-encompasses a broad range of implementations, including conventional
-network infrastructure equipment (e.g., routers and switches), end
-hosts, IoT devices, virtual network functions, and containerized
-workloads. In this document, the term is used generically to mean
-any managed entity implementing the protocol under consideration.<a href="#section-2-3.8.1" class="pilcrow">¶</a></p>
+    protocols and participates in network operations. This term
+    encompasses a broad range of implementations, including conventional
+    network infrastructure equipment (e.g., routers and switches), end
+    hosts, IoT devices, virtual network functions, and containerized
+    workloads. In this document, the term is used generically to mean
+    any managed entity implementing the protocol under consideration.<a href="#section-2-3.8.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.9">
           <p id="section-2-3.9.1">OAM: Operations, Administration, and Maintenance <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>
             <span>[<a href="#I-D.ietf-opsawg-oam-characterization" class="cite xref">I-D.ietf-opsawg-oam-characterization</a>]</span> is the term given to the
-combination of:<a href="#section-2-3.9.1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-2-3.9.2">
-<li id="section-2-3.9.2.1">
-              <p id="section-2-3.9.2.1.1">Operation activities that are undertaken to keep the
-network running as intended. They include monitoring of the network.<a href="#section-2-3.9.2.1.1" class="pilcrow">¶</a></p>
-</li>
-            <li id="section-2-3.9.2.2">
-              <p id="section-2-3.9.2.2.1">Administration activities that keep track of resources in the
-network and how they are used. They include the bookkeeping necessary
-to track networking resources.<a href="#section-2-3.9.2.2.1" class="pilcrow">¶</a></p>
-</li>
-            <li id="section-2-3.9.2.3">
-              <p id="section-2-3.9.2.3.1">Maintenance activities focused on facilitating repairs and upgrades.
-They also involve corrective and preventive measures to make the
-managed network run more effectively.<a href="#section-2-3.9.2.3.1" class="pilcrow">¶</a></p>
-</li>
-          </ol>
-<p id="section-2-3.9.3">
+    combination of:<a href="#section-2-3.9.1" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2-3.9.2">
+<pre>
+1. Operation activities that are undertaken to keep the
+   network running as intended. They include monitoring of the network.
+
+2. Administration activities that keep track of resources in the
+   network and how they are used. They include the bookkeeping necessary
+   to track networking resources.
+
+3. Maintenance activities focused on facilitating repairs and upgrades.
+   They also involve corrective and preventive measures to make the
+   managed network run more effectively.
+
 The broader concept of "operations and management" that is the
 subject of this document encompasses OAM, in addition to other
 management and provisioning tools and concepts. This is
 sometimes known as "OAM and Management" or "O&amp;M" as
-explained in <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>.<a href="#section-2-3.9.3" class="pilcrow">¶</a></p>
+explained in {{RFC6291}}.
+</pre><a href="#section-2-3.9.2" class="pilcrow">¶</a>
+</div>
 </li>
         <li class="normal" id="section-2-3.10">
           <p id="section-2-3.10.1">Operator: A person or organization responsible for deploying and managing
-systems, services, or networks that run or rely on a protocol implementation.
-This includes, but is not limited to,
-network operators, cloud service administrators, IoT device fleet
-managers, home network administrators, and DNS/NTP server
-administrators. The term "operator" is used throughout this document
-in this broad sense unless the context explicitly requires a narrower
-scope.<a href="#section-2-3.10.1" class="pilcrow">¶</a></p>
+    systems, services, or networks that run or rely on a protocol implementation.
+    This includes, but is not limited to,
+    network operators, cloud service administrators, IoT device fleet
+    managers, home network administrators, and DNS/NTP server
+    administrators. The term "operator" is used throughout this document
+    in this broad sense unless the context explicitly requires a narrower
+    scope.<a href="#section-2-3.10.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.11">
           <p id="section-2-3.11.1">Probable Root Cause: See <span>[<a href="#I-D.ietf-nmop-network-incident-yang" class="cite xref">I-D.ietf-nmop-network-incident-yang</a>]</span>.<a href="#section-2-3.11.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.12">
-          <p id="section-2-3.12.1">Problem: See <span>[<a href="#I-D.ietf-nmop-terminology" class="cite xref">I-D.ietf-nmop-terminology</a>]</span>.<a href="#section-2-3.12.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="section-2-3.13">
-          <p id="section-2-3.13.1">Proprietary Interface: An interface to manage a network element
+          <p id="section-2-3.12.1">Problem: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-3.12.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2-3.12.2.1">
+              <p id="section-2-3.12.2.1.1">Proprietary Interface: An interface to manage a network element
 that is not standardized. As such, the user interface, syntax, and
 semantics typically vary significantly between implementations.
 Examples of proprietary interfaces include Command Line
 Interface (CLI), management web portal and Browser User Interface (BUI),
 Graphical User Interface (GUI), and vendor-specific application
-programming interface (API).<a href="#section-2-3.13.1" class="pilcrow">¶</a></p>
+programming interface (API).<a href="#section-2-3.12.2.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.14">
-          <p id="section-2-3.14.1">Protocol Designer: An individual, a group of
+            <li class="normal" id="section-2-3.12.2.2">
+              <p id="section-2-3.12.2.2.1">Protocol Designer: An individual, a group of
 people, or an IETF WG involved in the development and specification
-of New Protocols or Protocol Extensions.<a href="#section-2-3.14.1" class="pilcrow">¶</a></p>
+of New Protocols or Protocol Extensions.<a href="#section-2-3.12.2.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.15">
-          <p id="section-2-3.15.1">Technical Document:
+            <li class="normal" id="section-2-3.12.2.3">
+              <p id="section-2-3.12.2.3.1">Technical Document:
 This includes any document that describes the
-design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.<a href="#section-2-3.15.1" class="pilcrow">¶</a></p>
+design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.<a href="#section-2-3.12.2.3.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </li>
       </ul>
 </section>
@@ -1669,7 +1669,8 @@ design, specification, implementation, or deployment of a new Protocol or Protoc
    Of course, additional relevant operational and manageability topics
    should be included as well. A concise checklist of key questions is
    provided in <a href="#sec-checklist" class="auto internal xref">Appendix A</a>.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-<p id="section-3.1-5">Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
+<p id="section-3.1-5">For New Protocol or Protocol Extension specifications that contain
+  Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
   may be consumed out of the RFCs that specify them. As such, it is recommended
   that operational aspects for a data model (and similar artifacts) are
   documented as part of the model itself. Such considerations should not be
@@ -2378,18 +2379,33 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
   YANG modules, consider how the status and relationships of abstract or
   distributed constructs can be reflected based on parameters available
   in the network.<a href="#section-5.3.2-3" class="pilcrow">¶</a></p>
-<p id="section-5.3.2-4">For example, the status of a service may depend on the operational state
+<p id="section-5.3.2-4">The status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
   cases, the YANG Data Model (and its accompanying documentation) should
   clearly describe how service-level status is derived from underlying
-  device-level information. Similarly, it is beneficial to define
-  events (and relevant triggered notifications) that indicate changes in an underlying state,
-  enabling reliable detection and correlation of service-affecting
-  conditions. Including such mechanisms improves the robustness of
+  network-level abstractions and device-level information. Similarly, it is beneficial to define
+  events (and relevant triggered notifications) at the device, network, and
+  service levels that indicate changes in an underlying state, enabling
+  reliable detection and correlation of service-affecting conditions across
+  these levels. Including such mechanisms improves the robustness of
   integrations and helps ensure consistent behavior across
   implementations.<a href="#section-5.3.2-4" class="pilcrow">¶</a></p>
-<p id="section-5.3.2-5">Specific guidelines to consider when authoring any type of YANG
-  modules are described in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-5.3.2-5" class="pilcrow">¶</a></p>
+<p id="section-5.3.2-5">For example:<a href="#section-5.3.2-5" class="pilcrow">¶</a></p>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="section-5.3.2-6.1">
+              <p id="section-5.3.2-6.1.1">A device YANG module may define a notification indicating that a
+  hardware component, such as a line card, has failed. A Network Model,
+  such as L3NM <span>[<a href="#RFC9182" class="cite xref">RFC9182</a>]</span>, can use such device-level notifications from
+  the attached devices to detect that a link supporting the network is no
+  longer operational and generate its own network-level notification. A
+  Service Model, such as L3SM <span>[<a href="#RFC8299" class="cite xref">RFC8299</a>]</span>, can, in turn, correlate that
+  network-level notification with the affected service to derive and
+  report a service-degraded event to the customer, without requiring the
+  service-facing model to expose device-level detail.<a href="#section-5.3.2-6.1.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-5.3.2-7">Specific guidelines to consider when authoring any type of YANG
+  modules are described in <span>[<a href="#I-D.ietf-netmod-rfc8407bis" class="cite xref">I-D.ietf-netmod-rfc8407bis</a>]</span>.<a href="#section-5.3.2-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2956,7 +2972,9 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
       <h2 id="name-operational-considerations">
 <a href="#section-8" class="section-number selfRef">8. </a><a href="#name-operational-considerations" class="section-name selfRef">Operational Considerations</a>
       </h2>
-<p id="section-8-1">Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture. As such, there are no new operations or manageability requirements introduced by this document.<a href="#section-8-1" class="pilcrow">¶</a></p>
+<p id="section-8-1">There are no new operations or manageability requirements introduced
+   by this document.<a href="#section-8-1" class="pilcrow">¶</a></p>
+<p id="section-8-2">Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture.<a href="#section-8-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-security">
@@ -2988,17 +3006,17 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
             <span class="refAuthor">Scott, G.</span>, <span class="refTitle">"Guide for Internet Standards Writers"</span>, <span class="seriesInfo">BCP 22</span>, <span class="seriesInfo">RFC 2360</span>, <span class="seriesInfo">DOI 10.17487/RFC2360</span>, <time datetime="1998-06" class="refDate">June 1998</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2360">https://www.rfc-editor.org/info/rfc2360</a>&gt;</span>. </div>
 </dd>
 <dd class="break"></dd>
-<dt id="I-D.ietf-nmop-terminology">[I-D.ietf-nmop-terminology]</dt>
-        <dd>
-<span class="refAuthor">Davis, N.</span>, <span class="refAuthor">Farrel, A.</span>, <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Wu, Q.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"Some Key Terms for Network Fault and Problem Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-terminology-23</span>, <time datetime="2025-08-18" class="refDate">18 August 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-terminology-23">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-terminology-23</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC8340">[RFC8340]</dt>
         <dd>
 <span class="refAuthor">Bjorklund, M.</span> and <span class="refAuthor">L. Berger, Ed.</span>, <span class="refTitle">"YANG Tree Diagrams"</span>, <span class="seriesInfo">BCP 215</span>, <span class="seriesInfo">RFC 8340</span>, <span class="seriesInfo">DOI 10.17487/RFC8340</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8340">https://www.rfc-editor.org/rfc/rfc8340</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8791">[RFC8791]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Björklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"YANG Data Structure Extensions"</span>, <span class="seriesInfo">RFC 8791</span>, <span class="seriesInfo">DOI 10.17487/RFC8791</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8791">https://www.rfc-editor.org/rfc/rfc8791</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9940">[RFC9940]</dt>
+      <dd>
+<span class="refAuthor">Davis, N., Ed.</span>, <span class="refAuthor">Farrel, A., Ed.</span>, <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Wu, Q.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"Some Key Terms for Network Fault and Problem Management"</span>, <span class="seriesInfo">RFC 9940</span>, <span class="seriesInfo">DOI 10.17487/RFC9940</span>, <time datetime="2026-04" class="refDate">April 2026</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9940">https://www.rfc-editor.org/rfc/rfc9940</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -3085,7 +3103,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-nmop-network-incident-yang">[I-D.ietf-nmop-network-incident-yang]</dt>
         <dd>
-<span class="refAuthor">Hu, T.</span>, <span class="refAuthor">Contreras, L. M.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Davis, N.</span>, and <span class="refAuthor">C. Feng</span>, <span class="refTitle">"A YANG Data Model for Network Incident Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-network-incident-yang-08</span>, <time datetime="2026-02-13" class="refDate">13 February 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-08">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-08</a>&gt;</span>. </dd>
+<span class="refAuthor">Hu, T.</span>, <span class="refAuthor">Contreras, L. M.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Davis, N.</span>, and <span class="refAuthor">C. Feng</span>, <span class="refTitle">"A YANG Data Model for Network Incident Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-network-incident-yang-10</span>, <time datetime="2026-07-05" class="refDate">5 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-10">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-10</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-opsawg-oam-characterization">[I-D.ietf-opsawg-oam-characterization]</dt>
         <dd>
@@ -3093,7 +3111,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-quic-qlog-main-schema">[I-D.ietf-quic-qlog-main-schema]</dt>
         <dd>
-<span class="refAuthor">Marx, R.</span>, <span class="refAuthor">Niccolini, L.</span>, <span class="refAuthor">Seemann, M.</span>, and <span class="refAuthor">L. Pardue</span>, <span class="refTitle">"qlog: Structured Logging for Network Protocols"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-qlog-main-schema-13</span>, <time datetime="2025-10-20" class="refDate">20 October 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-qlog-main-schema-13">https://datatracker.ietf.org/doc/html/draft-ietf-quic-qlog-main-schema-13</a>&gt;</span>. </dd>
+<span class="refAuthor">Marx, R.</span>, <span class="refAuthor">Niccolini, L.</span>, <span class="refAuthor">Seemann, M.</span>, and <span class="refAuthor">L. Pardue</span>, <span class="refTitle">"qlog: Structured Logging for Network Protocols"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-qlog-main-schema-14</span>, <time datetime="2026-07-06" class="refDate">6 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-qlog-main-schema-14">https://datatracker.ietf.org/doc/html/draft-ietf-quic-qlog-main-schema-14</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-suit-mti">[I-D.ietf-suit-mti]</dt>
         <dd>
@@ -3702,7 +3720,7 @@ whose efforts have helped to improve this document:<a href="#appendix-C-1" class
         <dd class="break"></dd>
 <dt id="appendix-C-2.5">Reviewers of this document, in roughly chronological order:</dt>
         <dd style="margin-left: 1.5em" id="appendix-C-2.6">
-          <p id="appendix-C-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, and Tim Winters.<a href="#appendix-C-2.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-C-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, and Eliot Lear.<a href="#appendix-C-2.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="appendix-C-2.7">The document shepherd who has gone beyond normal shepherding duties to improve this document:</dt>
