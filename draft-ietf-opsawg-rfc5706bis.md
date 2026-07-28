@@ -369,6 +369,7 @@ This document does not describe interoperability requirements. As such, it does 
    should be included as well. A concise checklist of key questions is
    provided in {{sec-checklist}}.
 
+  For New Protocol or Protocol Extension specifications that contain
   Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
   may be consumed out of the RFCs that specify them. As such, it is recommended
   that operational aspects for a data model (and similar artifacts) are
@@ -1009,16 +1010,29 @@ DM         DM        DM     --> concrete/detailed model
   distributed constructs can be reflected based on parameters available
   in the network.
 
-  For example, the status of a service may depend on the operational state
+  The status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
   cases, the YANG Data Model (and its accompanying documentation) should
   clearly describe how service-level status is derived from underlying
-  device-level information. Similarly, it is beneficial to define
-  events (and relevant triggered notifications) that indicate changes in an underlying state,
-  enabling reliable detection and correlation of service-affecting
-  conditions. Including such mechanisms improves the robustness of
+  network-level abstractions and device-level information. Similarly, it is beneficial to define
+  events (and relevant triggered notifications) at the device, network, and
+  service levels that indicate changes in an underlying state, enabling
+  reliable detection and correlation of service-affecting conditions across
+  these levels. Including such mechanisms improves the robustness of
   integrations and helps ensure consistent behavior across
   implementations.
+
+  For example:
+
+  > A device YANG module may define a notification indicating that a
+  hardware component, such as a line card, has failed. A Network Model,
+  such as L3NM {{?RFC9182}}, can use such device-level notifications from
+  the attached devices to detect that a link supporting the network is no
+  longer operational and generate its own network-level notification. A
+  Service Model, such as L3SM {{?RFC8299}}, can, in turn, correlate that
+  network-level notification with the affected service to derive and
+  report a service-degraded event to the customer, without requiring the
+  service-facing model to expose device-level detail.
 
   Specific guidelines to consider when authoring any type of YANG
   modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
