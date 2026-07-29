@@ -1535,7 +1535,7 @@ DM         DM        DM     --> concrete/detailed model
    There are no new operations or manageability requirements introduced
    by this document.
 
-   Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture.
+   Explanation: Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture.
 
 
 #  Security Considerations {#sec-security}
