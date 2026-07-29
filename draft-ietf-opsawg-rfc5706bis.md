@@ -272,13 +272,6 @@ This document does not describe interoperability requirements. As such, it does 
       or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for
       further discussion of Information Models.
 
-- New Protocol and Protocol Extension: These terms are used in this document
-      to identify entirely new protocols, new versions of existing
-      protocols, and extensions to protocols.
-      The application of New Protocols and Protocol Extensions to different
-      scenarios, and their use in delivering services, procedures, mechanisms,
-      or applications, falls within the scope of this definition.
-
 - Network Device: A device that implements one or more network
       protocols and participates in network operations. This term
       encompasses a broad range of implementations, including conventional
@@ -286,6 +279,13 @@ This document does not describe interoperability requirements. As such, it does 
       hosts, Internet of Things (IoT) devices, virtual network functions, and containerized
       workloads. In this document, the term is used generically to mean
       any managed entity implementing the protocol under consideration.
+
+- New Protocol and Protocol Extension: These terms are used in this document
+      to identify entirely new protocols, new versions of existing
+      protocols, and extensions to protocols.
+      The application of New Protocols and Protocol Extensions to different
+      scenarios, and their use in delivering services, procedures, mechanisms,
+      or applications, falls within the scope of this definition.
 
 - OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
@@ -321,7 +321,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 - Problem: See {{RFC9940}}.
 
-   *  Proprietary Interface: An interface to manage a network element
+- Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
       semantics typically vary significantly between implementations.
       Examples of proprietary interfaces include CLI,
@@ -329,11 +329,11 @@ This document does not describe interoperability requirements. As such, it does 
       Graphical User Interface (GUI), and vendor-specific application
       programming interface (API).
 
-   *  Protocol Designer: An individual, a group of
+- Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-   *  Technical Document:
+- Technical Document:
       This includes any document that describes the
       design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.
 
