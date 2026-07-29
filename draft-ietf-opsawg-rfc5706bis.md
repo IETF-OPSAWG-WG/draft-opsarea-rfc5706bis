@@ -965,7 +965,7 @@ DM         DM        DM     --> concrete/detailed model
        instrumentation to one counter per significant processing stage or
        operational boundary per layer.
 
-   6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
+   6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?RFC9907}}.
   7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
@@ -973,7 +973,7 @@ DM         DM        DM     --> concrete/detailed model
   When considering YANG Data Models for a new specification, there
   are multiple types of Data Models that may be applicable. The
   hierarchy and relationship between these types is described in
-  {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}. A new specification
+  {{Section 3.5.1 of ?RFC9907}}. A new specification
   may require or benefit from one or more of these YANG Data Model types.
 
   *  Device Models - Also called Network Element Models,
@@ -1021,7 +1021,7 @@ DM         DM        DM     --> concrete/detailed model
   implementations.
 
   Specific guidelines to consider when authoring any type of YANG
-  modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
+  modules are described in {{?RFC9907}}.
 
 ## Fault Management {#sec-fm-mgmt}
 
