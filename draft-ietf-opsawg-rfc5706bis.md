@@ -609,7 +609,7 @@ state during the transition.
    If the protocol specification requires changes to end hosts or network
    infrastructure, it should indicate whether safeguards exist to protect
    both end hosts and devices and the broader network from potential
-   overload. Moreover, Per {{Section 2.16 of RFC2360@BCP22}}, New Protocol
+   overload. Moreover, per {{Section 2.16 of RFC2360@BCP22}}, New Protocol
    or Protocol Extension specifications should address any possible destabilizing events,
    and means by which the protocol resists or recovers from them. For instance, a congestion control algorithm must
    comply with {{?BCP133}} to prevent congestion collapse and ensure
@@ -696,7 +696,7 @@ For further information on the security operations considerations discussed in t
 
    Protocol Designers should consider techniques for testing the
    effect the protocol has had on the infrastructure by sending data
-   through it and observing its behavior (a.k.a., active
+   through it and observing its behavior (also known as active
    monitoring). Protocol Designers should consider how the correct
    end-to-end operation of the New Protocol or Protocol Extension can be tested
    actively and passively, and how the correct data- or forwarding-plane
@@ -800,7 +800,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    various operational purposes, for example as outlined in {{?RFC6632}}.
    Note that SNMP is no longer recommended for configuration (read-write)
    operations.  Better programmatic alternatives are discussed
-   further in Section {{<sec-interop}}. This  document formally deprecates the following recommendation from {{BCP22}}:
+   further in Section {{<sec-interop}}. This document formally deprecates the following recommendation from {{BCP22}}:
 
    {: quote}
    > a MIB must be defined within the standard or in a companion  document.
@@ -1142,7 +1142,7 @@ DM         DM        DM     --> concrete/detailed model
    management.
 
    A Protocol Designer should document the basic configuration
-   parameters that need to be instrumented for a New Protocol or Protocol Extensions, as well
+   parameters that need to be instrumented for a New Protocol or Protocol Extension, as well
    as default values and modes of operation.
 
    What information should be maintained across reboots of the device,
@@ -1371,7 +1371,7 @@ DM         DM        DM     --> concrete/detailed model
    to avoid access by unauthorized entities.
 
    Protocol Designers should consider whether a system automatically
-   notify operators of every event Occurrence as default behavior or
+   notifies operators of every event occurrence as default behavior or
    should define an operator-defined threshold to control when a
    notification is sent to an operator.
 
