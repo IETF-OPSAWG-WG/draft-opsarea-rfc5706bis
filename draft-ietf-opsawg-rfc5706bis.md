@@ -471,8 +471,9 @@ For example:
 
 ##  Installation and Initial Setup {#sec-install}
 
-   Anything that can be configured can be misconfigured. "Architectural
-   Principles of the Internet" {{?RFC1958}}, Section 3.8, states:
+   Anything that can be configured can be misconfigured.
+   {{Section 3.8 of ?RFC1958}} ("Architectural Principles of the Internet")
+   states:
 
    {: quote}
    > Avoid
