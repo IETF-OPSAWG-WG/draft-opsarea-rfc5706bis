@@ -324,8 +324,8 @@ This document does not describe interoperability requirements. As such, it does 
    *  Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
       semantics typically vary significantly between implementations.
-      Examples of proprietary interfaces include Command Line
-      Interface (CLI), management web portal and Browser User Interface (BUI),
+      Examples of proprietary interfaces include CLI,
+      management web portal and Browser User Interface (BUI),
       Graphical User Interface (GUI), and vendor-specific application
       programming interface (API).
 
