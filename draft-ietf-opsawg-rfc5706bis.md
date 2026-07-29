@@ -6,7 +6,7 @@ docname: draft-ietf-opsawg-rfc5706bis-latest
 stand_alone: true
 ipr: trust200902
 area: "Operations and Management"
-wg:
+wg: Operations and Management Area Working Group
 kw:
   - management
   - operations
@@ -967,7 +967,8 @@ DM         DM        DM     --> concrete/detailed model
        operational boundary per layer.
 
    6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
-  7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
+
+   7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
