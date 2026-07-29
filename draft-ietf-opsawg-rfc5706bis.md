@@ -852,7 +852,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    Protocol Designers should consider developing an IM, when multiple Data Model (DM)
    representations (e.g., YANG and/or IPFIX) are required, to ensure lossless
-   semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in Figure 1, an
+   semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in {{fig-im-dm}}, an
    IM serves as a conceptual blueprint for designers and operators, from which concrete DMs are derived
    for implementers. {{?RFC3444}} provides further guidance on distinguishing IMs from DMs.
 
