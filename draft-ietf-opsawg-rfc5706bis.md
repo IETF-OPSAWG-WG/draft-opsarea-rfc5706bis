@@ -521,7 +521,7 @@ For example:
    (e.g., recomputing an expanded key from the seed) that help verify
    correctness and integrity. Additionally, guidance should be given on
    data retention, restoration limits, and cryptographic module
-   interoperability when importing/exporting private key material. Refer to {{?I-D.ietf-lamps-dilithium-certificates}} for an example of how such considerations are incorporated.
+   interoperability when importing/exporting private key material. Refer to {{?RFC9881}} for an example of how such considerations are incorporated.
 
 ##  Migration Path {#sec-migration}
 
