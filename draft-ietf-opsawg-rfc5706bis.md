@@ -371,7 +371,7 @@ This document does not describe interoperability requirements. As such, it does 
 
   Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
   may be consumed out of the RFCs that specify them. As such, it is recommended
-  that operational aspects for a data model (and similar artifacts) are
+  that operational aspects for a Data Model (and similar artifacts) are
   documented as part of the model itself. Such considerations should not be
   duplicated in the narrative part of a specification that includes such artifacts.
 
