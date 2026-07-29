@@ -803,7 +803,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    further in Section {{<sec-interop}}. This document formally deprecates the following recommendation from {{BCP22}}:
 
    {: quote}
-   > a MIB must be defined within the standard or in a companion  document.
+   > a MIB must be defined within the standard or in a companion document.
 
    Readers seeking more in-depth definitions or explanations should consult
    the referenced materials.
