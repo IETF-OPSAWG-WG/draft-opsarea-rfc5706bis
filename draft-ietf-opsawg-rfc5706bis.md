@@ -1671,7 +1671,7 @@ The decision to incorporate all or part of these items into their work remains w
 
    * Change intended status from Informational to Best Current Practice
    * Indicate that this document updates RFC 2360 and add the relevant updated text
-   * Move the "Operational Considerations" Appendix A to a Checklist {{CHECKLIST}} maintained in GitHub
+   * Move the "Operational Considerations" checklist in {{Appendix A of ?RFC5706}} to a Checklist {{CHECKLIST}} maintained in GitHub
 
    * Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
 
