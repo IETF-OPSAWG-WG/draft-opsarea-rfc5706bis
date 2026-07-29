@@ -283,7 +283,7 @@ This document does not describe interoperability requirements. As such, it does 
       protocols and participates in network operations. This term
       encompasses a broad range of implementations, including conventional
       network infrastructure equipment (e.g., routers and switches), end
-      hosts, IoT devices, virtual network functions, and containerized
+      hosts, Internet of Things (IoT) devices, virtual network functions, and containerized
       workloads. In this document, the term is used generically to mean
       any managed entity implementing the protocol under consideration.
 
@@ -652,7 +652,7 @@ rate limit the OAM traffic must be considered. Potential options include: docume
 
 For example:
 
-> (1) In Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
+> (1) In Bidirectional Forwarding Detection (BFD) for MPLS {{?RFC5884}} it is
 > possible to configure very rapid BFD transmissions (of the order of
 > 3ms) on a very large number of parallel Label Switched Paths (LSPs)
 > with the result that the management systems and end nodes may become
@@ -890,7 +890,8 @@ DM         DM        DM     --> concrete/detailed model
    models.
 
    While an Information Model is typically described in English text
-   (or sometimes UML) to define the conceptual management requirements,
+   (or sometimes the Unified Modeling Language (UML)) to define the conceptual
+   management requirements,
    authors may choose to express it using YANG Data Structure Extensions {{RFC8791}}
    as described in {{sec-im-design}}.  Using YANG for the Information Model can make
    it easier to link abstract concepts to concrete data types in the corresponding Data Model,
@@ -1405,7 +1406,7 @@ DM         DM        DM     --> concrete/detailed model
    where a user can be given only the minimum access necessary to
    perform a required task.
 
-   Some operators wish to do consistency checks of ACLs
+   Some operators wish to do consistency checks of Access Control Lists (ACLs)
    across devices. Protocol Designers should consider Information
    Models to promote comparisons across devices and across vendors to
    permit checking the consistency of security configurations.
