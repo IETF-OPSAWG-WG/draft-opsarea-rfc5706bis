@@ -1456,7 +1456,7 @@ DM         DM        DM     --> concrete/detailed model
    leveraged or extended to support the management and operation of these new
    specifications.
 
-   The {{?NEMOPS=I-D.iab-nemops-workshop-report}} workshop highlighted a
+   The {{?NEMOPS=RFC9968}} workshop highlighted a
    consistent theme applicable beyond network management protocols: the
    "ease of use" and adaptability of existing tools are critical factors
    for successful adoption. Therefore, a new specification should provide
