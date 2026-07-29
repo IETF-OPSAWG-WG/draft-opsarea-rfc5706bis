@@ -379,7 +379,7 @@ For example:
 
 > Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
 > with adequate documentation of operational considerations, including manageability: {{?RFC9953}},
-> {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
+> {{?I-D.ietf-suit-mti}}, {{?RFC9937}}, {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
 > Given the various available transport alternatives, {{?RFC9953}} discusses co-existence with
 > those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
 > Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
