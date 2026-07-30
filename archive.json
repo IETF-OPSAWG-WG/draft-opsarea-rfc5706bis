@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-28T02:12:09.835858+00:00",
+  "timestamp": "2026-07-30T01:16:27.111189+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3623,7 +3623,7 @@
       ],
       "body": "From Eliot Lear:\n\nI am not entirely certain that you are looking for an \"Operational\n    Considerations\" section so much as the answer within the IETF prior\n    to publication to the question, \u201cDid you consider how this\n    specification would be used in the field?\u201d  That is, in general, the\n    question I would expect ops directorate reviewers to ask, and\n    there's a lot of good discussion in this document on how to help\n    them evaluate answers, not to mention for the authors to know what\n    they should be thinking about.  RFC 1958\u2019s advice on avoiding\n    options was and remains *excellent*.",
       "createdAt": "2026-04-02T13:26:06Z",
-      "updatedAt": "2026-06-11T13:37:32Z",
+      "updatedAt": "2026-07-29T21:24:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -3653,6 +3653,13 @@
           "body": "https://github.com/[IETF-OPS-DIR/Review-Template](https://github.com/IETF-OPS-DIR/Review-Template), fwiw",
           "createdAt": "2026-06-11T13:37:32Z",
           "updatedAt": "2026-06-11T13:37:32Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "On Adrian's point about making Operational Considerations optional when the material is already distributed through the document: I don't think the Security Considerations analogy holds. In practice that section isn't optional even when security is well-distributed \u2014 RFC 3552 and IESG review still require it, even as just a short pointer (\"covered in \u00a74.2/\u00a76; no additional considerations\"). It's mandatory because it's the canonical place reviewers check first, and distributed-but-unsummarized isn't a substitute.\n\nSame logic applies here: keep the section mandatory, but allow it to be brief \u2014 e.g., \"operational considerations are addressed throughout, specifically in \u00a7xyz, covering foo and bar.\" Since Eliot's original comment doesn't have a concrete actionable change attached, I'd suggest closing with a reply along these lines.",
+          "createdAt": "2026-07-29T21:24:11Z",
+          "updatedAt": "2026-07-29T21:24:11Z"
         }
       ]
     },
@@ -3754,6 +3761,38 @@
       "createdAt": "2026-04-02T16:02:44Z",
       "updatedAt": "2026-04-03T13:29:00Z",
       "closedAt": "2026-04-03T13:29:00Z",
+      "comments": []
+    },
+    {
+      "number": 258,
+      "id": "I_kwDOOWPBqs8AAAABKuWEfw",
+      "title": "RFC 9940 downref",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/258",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Does it need to be reclassified as informative?\n\nArgument: Cause/Fault/Problem are terminology-only citations, and the parallel \"Probable Root Cause\" entry is already informative \u2014 so the normative marking looks incidental.",
+      "createdAt": "2026-07-30T00:06:31Z",
+      "updatedAt": "2026-07-30T00:06:31Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 259,
+      "id": "I_kwDOOWPBqs8AAAABKuX2YA",
+      "title": "Search for \"benchmark\"/\"metric\" in the RFC search tool",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/259",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This text is too loosy-goosy... \n\n```\n5.7.  Performance Management\n...\n   requirements for the common, unambiguous reporting of benchmarking\n   results.  **Search for \"benchmark\" in the RFC search tool.**\n...\n   groups.  The existing metrics might be applicable to the new\n   protocol.  **Search for \"metric\" in the RFC search tool.**  In some\n   cases, new metrics need to be defined.  It would be useful if the\n```\n\nPoint to a tool, or remvoe the \"RFC search tool\" ambiguous citation...",
+      "createdAt": "2026-07-30T00:11:51Z",
+      "updatedAt": "2026-07-30T00:11:51Z",
+      "closedAt": null,
       "comments": []
     }
   ],
@@ -18408,6 +18447,151 @@
           ]
         }
       ]
+    },
+    {
+      "number": 254,
+      "id": "PR_kwDOOWPBqs73izPm",
+      "title": "chore: Address feedback from Qin Wu",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/254",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "* Clarify language around Data Models\r\n* Indicate more explicitly that network-level models are in scope\r\n* Provide a concrete example tying together device, network, and service level interactions",
+      "createdAt": "2026-07-28T16:02:57Z",
+      "updatedAt": "2026-07-29T21:15:56Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "qinwu-review",
+      "headRefOid": "ddd9f27199573d6dbcf9e13dbb3a49965c3ed23e",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABHt_-0A",
+          "commit": {
+            "abbreviatedOid": "ddd9f27"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-07-29T21:13:38Z",
+          "updatedAt": "2026-07-29T21:14:14Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\n  Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.), such artifacts\n```",
+              "createdAt": "2026-07-29T21:13:38Z",
+              "updatedAt": "2026-07-29T21:14:14Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABHuA64w",
+          "commit": {
+            "abbreviatedOid": "ddd9f27"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-29T21:15:55Z",
+          "updatedAt": "2026-07-29T21:15:55Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Explanation: Sentence in the Data Models paragraph doesn't parse after the added lead-in clause, see suggested fix.",
+              "createdAt": "2026-07-29T21:15:55Z",
+              "updatedAt": "2026-07-29T21:15:56Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 255,
+      "id": "PR_kwDOOWPBqs74PjP3",
+      "title": "chore: Update published references and fix citation hygiene",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/255",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nFive referenced Internet-Drafts have been published as RFCs, as flagged by \nidnits. This updates them, and also fixes four citation and cross-reference \nnits found while checking them.\n\nReference updates:\n\n- `draft-ietf-core-dns-over-coap` \u2192 **RFC 9953** (DNS over CoAP)\n- `draft-ietf-lamps-dilithium-certificates` \u2192 **RFC 9881** (X.509 Algorithm\n  Identifiers for ML-DSA)\n- `draft-ietf-netmod-rfc8407bis` \u2192 **RFC 9907** (Guidelines for Authors and\n  Reviewers of Documents Containing YANG Data Models)\n- `draft-ietf-opsawg-oam-characterization` \u2192 **RFC 10014** (Guidelines for\n  Characterizing the Term \"OAM\")\n- `draft-iab-nemops-workshop-report` \u2192 **RFC 9968** (IAB NEMOPS Workshop Report)\n\nThe RFC 9907 change keeps the Section 3.5.1 citation: that section is \"YANG\nModule Classification\" and still carries the Service / Network / Device model\nclassification the surrounding text relies on.\n\nCitation and cross-reference fixes:\n\n- Section 3.8 of RFC 1958 was written as running text rather than a cross\n  reference; it is now `{{Section 3.8 of ?RFC1958}}`.\n- \"As illustrated in Figure 1\" hardcoded the figure number. It now uses the\n  `fig-im-dm` anchor.\n- Missing separator between `[RFC9937]` and `[RFC7574]` in the list of example\n  specifications.\n- \"the 'Operational Considerations' Appendix A\" in Changes Since RFC 5706 was\n  ambiguous alongside this document's own Appendix A. It now\n  reads Appendix A of RFC 5706 explicitly.\n\nOne commit per change.\n",
+      "createdAt": "2026-07-29T23:16:49Z",
+      "updatedAt": "2026-07-29T23:17:44Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-refs-and-citations",
+      "headRefOid": "907e203cfe5a63010701b40832af559e00ee7c04",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 256,
+      "id": "PR_kwDOOWPBqs74QCHK",
+      "title": "chore: Editorial consistency and typo fixes",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/256",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nEditorial only, no technical content changes: acronym expansions, typos and\nstray capitalization, Terminology list ordering and bullet markers, a\ndivergent duplicate of the RFC 2360 quotation, list indentation, and the\nempty `wg` field (the document was rendering as \"Network Working Group\").\n\nOne commit per change \u2014 see the individual commit messages for the rationale.\n",
+      "createdAt": "2026-07-29T23:43:02Z",
+      "updatedAt": "2026-07-29T23:43:23Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-editorial-wglc",
+      "headRefOid": "acdc749d75fb6829c4f90f9112e663b6e43ee3fd",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 257,
+      "id": "PR_kwDOOWPBqs74QNUX",
+      "title": "chore: Normalize defined-term capitalization and follow the document's own boilerplate",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/257",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nFault, Probable Root Cause, and Data Model are defined terms but were\ninconsistently lowercased. The adjective \"faulty\" is left lowercase and anchor names are unchanged.\n\nSection 3.2 also requires the no-new-considerations statement to be followed\nby an explanation labelled `Explanation:`; this document's own Operational\nConsiderations section now follows that template.\n",
+      "createdAt": "2026-07-29T23:53:16Z",
+      "updatedAt": "2026-07-29T23:53:41Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-defined-terms-and-boilerplate",
+      "headRefOid": "6116a0e4b932ca28113c795701c80dcaef8fee8d",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
