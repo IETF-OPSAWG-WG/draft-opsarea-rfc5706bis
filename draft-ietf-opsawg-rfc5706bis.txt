@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 18 January 2027                              Old Dog Consulting
+Expires: 1 February 2027                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            17 July 2026
+                                                            31 July 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 January 2027.
+   This Internet-Draft will expire on 1 February 2027.
 
 Copyright Notice
 
@@ -352,8 +352,7 @@ Table of Contents
    under consideration.
 
 *  OAM: Operations, Administration, and Maintenance [RFC6291]
-   [I-D.ietf-opsawg-oam-characterization] is the term given to the
-   combination of:
+   [RFC10014] is the term given to the combination of:
 
 1. Operation activities that are undertaken to keep the
    network running as intended. They include monitoring of the network.
@@ -447,15 +446,14 @@ explained in {{RFC6291}}.
       Readers may refer to the following non-exhaustive list for
       examples of specifications, covering various areas, with adequate
       documentation of operational considerations, including
-      manageability: [I-D.ietf-core-dns-over-coap], [I-D.ietf-suit-mti],
-      [RFC9937] [RFC7574], [RFC9877], and [RFC9552].  Given the various
-      available transport alternatives, [I-D.ietf-core-dns-over-coap]
-      discusses co-existence with those and clarifies some key
-      deployment aspects such as redirection, forwarding loop
-      prevention, and error handling.  Also,
-      [I-D.ietf-ippm-ioam-integrity-yang] is an example of a document
-      that follows the above guidance by documenting operational aspects
-      as part of the YANG module itself.
+      manageability: [RFC9953], [I-D.ietf-suit-mti], [RFC9937],
+      [RFC7574], [RFC9877], and [RFC9552].  Given the various available
+      transport alternatives, [RFC9953] discusses co-existence with
+      those and clarifies some key deployment aspects such as
+      redirection, forwarding loop prevention, and error handling.
+      Also, [I-D.ietf-ippm-ioam-integrity-yang] is an example of a
+      document that follows the above guidance by documenting
+      operational aspects as part of the YANG module itself.
 
    For architecture documents, an "Operational Considerations" section
    is expected only where the architecture introduces new operational
@@ -567,8 +565,8 @@ explained in {{RFC6291}}.
 
 4.1.  Installation and Initial Setup
 
-   Anything that can be configured can be misconfigured.  "Architectural
-   Principles of the Internet" [RFC1958], Section 3.8, states:
+   Anything that can be configured can be misconfigured.  Section 3.8 of
+   [RFC1958] ("Architectural Principles of the Internet") states:
 
    |  Avoid options and parameters whenever possible.  Any options and
    |  parameters should be configured or negotiated dynamically rather
@@ -615,8 +613,8 @@ explained in {{RFC6291}}.
       verify correctness and integrity.  Additionally, guidance should
       be given on data retention, restoration limits, and cryptographic
       module interoperability when importing/exporting private key
-      material.  Refer to [I-D.ietf-lamps-dilithium-certificates] for an
-      example of how such considerations are incorporated.
+      material.  Refer to [RFC9881] for an example of how such
+      considerations are incorporated.
 
 4.2.  Migration Path
 
@@ -1158,7 +1156,7 @@ explained in {{RFC6291}}.
        Extensions [RFC8791] (thereby keeping it abstract and
        implementation-agnostic per [RFC3444]), ensure that the
        Information Model remains simple, modular, and clear by following
-       the authoring guidelines in [I-D.ietf-netmod-rfc8407bis].
+       the authoring guidelines in [RFC9907].
 
    7.  When illustrating the abstract Information Model, use YANG Tree
        Diagrams [RFC8340] to provide a simple, standardized, and
@@ -1169,8 +1167,8 @@ explained in {{RFC6291}}.
    When considering YANG Data Models for a new specification, there are
    multiple types of Data Models that may be applicable.  The hierarchy
    and relationship between these types is described in Section 3.5.1 of
-   [I-D.ietf-netmod-rfc8407bis].  A new specification may require or
-   benefit from one or more of these YANG Data Model types.
+   [RFC9907].  A new specification may require or benefit from one or
+   more of these YANG Data Model types.
 
    *  Device Models - Also called Network Element Models, represent the
       configuration, operational state, and notifications of individual
@@ -1218,7 +1216,7 @@ explained in {{RFC6291}}.
    ensure consistent behavior across implementations.
 
    Specific guidelines to consider when authoring any type of YANG
-   modules are described in [I-D.ietf-netmod-rfc8407bis].
+   modules are described in [RFC9907].
 
 5.4.  Fault Management
 
@@ -1856,13 +1854,6 @@ explained in {{RFC6291}}.
               <https://github.com/IETF-OPS-DIR/Review-Template/tree/
               main>.
 
-   [I-D.ietf-core-dns-over-coap]
-              Lenders, M. S., Amsüss, C., Gündoğan, C., Schmidt, T. C.,
-              and M. Wählisch, "DNS over CoAP (DoC)", Work in Progress,
-              Internet-Draft, draft-ietf-core-dns-over-coap-20, 16
-              September 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-core-dns-over-coap-20>.
-
    [I-D.ietf-ippm-ioam-integrity-yang]
               Iurman, J. and T. Zhou, "A YANG Data Model for In Situ
               Operations, Administration, and Maintenance (IOAM)
@@ -1871,37 +1862,13 @@ explained in {{RFC6291}}.
               <https://datatracker.ietf.org/doc/html/draft-ietf-ippm-
               ioam-integrity-yang-08>.
 
-   [I-D.ietf-lamps-dilithium-certificates]
-              Massimo, J., Kampanakis, P., Turner, S., and B.
-              Westerbaan, "Internet X.509 Public Key Infrastructure -
-              Algorithm Identifiers for the Module-Lattice-Based Digital
-              Signature Algorithm (ML-DSA)", Work in Progress, Internet-
-              Draft, draft-ietf-lamps-dilithium-certificates-13, 30
-              September 2025, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-lamps-dilithium-certificates-13>.
-
-   [I-D.ietf-netmod-rfc8407bis]
-              Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
-              Authors and Reviewers of Documents Containing YANG Data
-              Models", Work in Progress, Internet-Draft, draft-ietf-
-              netmod-rfc8407bis-28, 5 June 2025,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc8407bis-28>.
-
    [I-D.ietf-nmop-network-incident-yang]
               Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
               "A YANG Data Model for Network Incident Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-network-
-              incident-yang-10, 5 July 2026,
+              incident-yang-13, 29 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              network-incident-yang-10>.
-
-   [I-D.ietf-opsawg-oam-characterization]
-              Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
-              Characterizing the Term "OAM"", Work in Progress,
-              Internet-Draft, draft-ietf-opsawg-oam-characterization-17,
-              28 January 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-opsawg-oam-characterization-17>.
+              network-incident-yang-13>.
 
    [I-D.ietf-quic-qlog-main-schema]
               Marx, R., Niccolini, L., Seemann, M., and L. Pardue,
@@ -1936,10 +1903,8 @@ explained in {{RFC6291}}.
 
    [NEMOPS]   Hardaker, W. and D. Dhody, "Report from the IAB Workshop
               on the Next Era of Network Management Operations
-              (NEMOPS)", Work in Progress, Internet-Draft, draft-iab-
-              nemops-workshop-report-04, 29 August 2025,
-              <https://datatracker.ietf.org/doc/html/draft-iab-nemops-
-              workshop-report-04>.
+              (NEMOPS)", RFC 9968, DOI 10.17487/RFC9968, May 2026,
+              <https://www.rfc-editor.org/rfc/rfc9968>.
 
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
@@ -2156,10 +2121,32 @@ explained in {{RFC6291}}.
               DOI 10.17487/RFC9877, October 2025,
               <https://www.rfc-editor.org/rfc/rfc9877>.
 
+   [RFC9881]  Massimo, J., Kampanakis, P., Turner, S., and B. E.
+              Westerbaan, "Internet X.509 Public Key Infrastructure --
+              Algorithm Identifiers for the Module-Lattice-Based Digital
+              Signature Algorithm (ML-DSA)", RFC 9881,
+              DOI 10.17487/RFC9881, October 2025,
+              <https://www.rfc-editor.org/rfc/rfc9881>.
+
+   [RFC9907]  Bierman, A., Boucadair, M., Ed., and Q. Wu, "Guidelines
+              for Authors and Reviewers of Documents Containing YANG
+              Data Models", BCP 216, RFC 9907, DOI 10.17487/RFC9907,
+              March 2026, <https://www.rfc-editor.org/rfc/rfc9907>.
+
    [RFC9937]  Mathis, M., Cardwell, N., Cheng, Y., and N. Dukkipati,
               "Proportional Rate Reduction (PRR)", RFC 9937,
               DOI 10.17487/RFC9937, December 2025,
               <https://www.rfc-editor.org/rfc/rfc9937>.
+
+   [RFC9953]  Lenders, M. S., Amsüss, C., Gündoğan, C., Schmidt, T. C.,
+              and M. Wählisch, "DNS over CoAP (DoC)", RFC 9953,
+              DOI 10.17487/RFC9953, March 2026,
+              <https://www.rfc-editor.org/rfc/rfc9953>.
+
+   [RFC10014] Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
+              Characterizing the Term "OAM"", BCP 161, RFC 10014,
+              DOI 10.17487/RFC10014, June 2026,
+              <https://www.rfc-editor.org/rfc/rfc10014>.
 
    [SECOPS]   "NICCS Glossary", August 2025,
               <https://niccs.cisa.gov/resources/glossary>.
@@ -2397,8 +2384,8 @@ Appendix B.  Changes Since RFC 5706
    *  Indicate that this document updates RFC 2360 and add the relevant
       updated text
 
-   *  Move the "Operational Considerations" Appendix A to a Checklist
-      [CHECKLIST] maintained in GitHub
+   *  Move the "Operational Considerations" checklist in Appendix A of
+      [RFC5706] to a Checklist [CHECKLIST] maintained in GitHub
 
    *  Add a concise "Operational Considerations Checklist" appendix
       (Appendix A) with key questions that should be addressed in
