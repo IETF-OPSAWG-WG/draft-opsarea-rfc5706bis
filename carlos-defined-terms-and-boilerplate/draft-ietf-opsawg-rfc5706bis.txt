@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 30 January 2027                              Old Dog Consulting
+Expires: 1 February 2027                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            29 July 2026
+                                                            31 July 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 January 2027.
+   This Internet-Draft will expire on 1 February 2027.
 
 Copyright Notice
 
@@ -490,7 +490,7 @@ explained in {{RFC6291}}.
    "There are no new operations or manageability requirements introduced
      by this document.
 
-     Explanation: [brief rationale goes here]"
+     [Brief rationale goes here]"
 
    The presence of such a section would indicate to the reader that due
    consideration has been given to manageability and operations.
@@ -1748,9 +1748,9 @@ explained in {{RFC6291}}.
    There are no new operations or manageability requirements introduced
    by this document.
 
-   Explanation: Although this document focuses on operations and
-   manageability guidance, it does not define a New Protocol, a Protocol
-   Extension, or an architecture.
+   Although this document focuses on operations and manageability
+   guidance, it does not define a New Protocol, a Protocol Extension, or
+   an architecture.
 
 9.  Security Considerations
 
@@ -1892,9 +1892,9 @@ explained in {{RFC6291}}.
               Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
               "A YANG Data Model for Network Incident Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-network-
-              incident-yang-10, 5 July 2026,
+              incident-yang-13, 29 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              network-incident-yang-10>.
+              network-incident-yang-13>.
 
    [I-D.ietf-opsawg-oam-characterization]
               Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
