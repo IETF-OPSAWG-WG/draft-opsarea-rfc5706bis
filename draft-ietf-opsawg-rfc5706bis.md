@@ -370,7 +370,7 @@ This document does not describe interoperability requirements. As such, it does 
    provided in {{sec-checklist}}.
 
   For New Protocol or Protocol Extension specifications that contain
-  Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
+  Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.), such artifacts
   may be consumed out of the RFCs that specify them. As such, it is recommended
   that operational aspects for a data model (and similar artifacts) are
   documented as part of the model itself. Such considerations should not be
