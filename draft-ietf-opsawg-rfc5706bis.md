@@ -6,7 +6,7 @@ docname: draft-ietf-opsawg-rfc5706bis-latest
 stand_alone: true
 ipr: trust200902
 area: "Operations and Management"
-wg:
+wg: Operations and Management Area Working Group
 kw:
   - management
   - operations
@@ -272,20 +272,20 @@ This document does not describe interoperability requirements. As such, it does 
       or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for
       further discussion of Information Models.
 
+- Network Device: A device that implements one or more network
+      protocols and participates in network operations. This term
+      encompasses a broad range of implementations, including conventional
+      network infrastructure equipment (e.g., routers and switches), end
+      hosts, Internet of Things (IoT) devices, virtual network functions, and containerized
+      workloads. In this document, the term is used generically to mean
+      any managed entity implementing the protocol under consideration.
+
 - New Protocol and Protocol Extension: These terms are used in this document
       to identify entirely new protocols, new versions of existing
       protocols, and extensions to protocols.
       The application of New Protocols and Protocol Extensions to different
       scenarios, and their use in delivering services, procedures, mechanisms,
       or applications, falls within the scope of this definition.
-
-- Network Device: A device that implements one or more network
-      protocols and participates in network operations. This term
-      encompasses a broad range of implementations, including conventional
-      network infrastructure equipment (e.g., routers and switches), end
-      hosts, IoT devices, virtual network functions, and containerized
-      workloads. In this document, the term is used generically to mean
-      any managed entity implementing the protocol under consideration.
 
 - OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?RFC10014}} is the term given to the
@@ -321,19 +321,19 @@ This document does not describe interoperability requirements. As such, it does 
 
 - Problem: See {{RFC9940}}.
 
-   *  Proprietary Interface: An interface to manage a network element
+- Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
       semantics typically vary significantly between implementations.
-      Examples of proprietary interfaces include Command Line
-      Interface (CLI), management web portal and Browser User Interface (BUI),
+      Examples of proprietary interfaces include CLI,
+      management web portal and Browser User Interface (BUI),
       Graphical User Interface (GUI), and vendor-specific application
       programming interface (API).
 
-   *  Protocol Designer: An individual, a group of
+- Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-   *  Technical Document:
+- Technical Document:
       This includes any document that describes the
       design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.
 
@@ -610,7 +610,7 @@ state during the transition.
    If the protocol specification requires changes to end hosts or network
    infrastructure, it should indicate whether safeguards exist to protect
    both end hosts and devices and the broader network from potential
-   overload. Moreover, Per {{Section 2.16 of RFC2360@BCP22}}, New Protocol
+   overload. Moreover, per {{Section 2.16 of RFC2360@BCP22}}, New Protocol
    or Protocol Extension specifications should address any possible destabilizing events,
    and means by which the protocol resists or recovers from them. For instance, a congestion control algorithm must
    comply with {{?BCP133}} to prevent congestion collapse and ensure
@@ -653,7 +653,7 @@ rate limit the OAM traffic must be considered. Potential options include: docume
 
 For example:
 
-> (1) In Bidirectional Forwarding Detection for MPLS {{?RFC5884}} it is
+> (1) In Bidirectional Forwarding Detection (BFD) for MPLS {{?RFC5884}} it is
 > possible to configure very rapid BFD transmissions (of the order of
 > 3ms) on a very large number of parallel Label Switched Paths (LSPs)
 > with the result that the management systems and end nodes may become
@@ -697,7 +697,7 @@ For further information on the security operations considerations discussed in t
 
    Protocol Designers should consider techniques for testing the
    effect the protocol has had on the infrastructure by sending data
-   through it and observing its behavior (a.k.a., active
+   through it and observing its behavior (also known as active
    monitoring). Protocol Designers should consider how the correct
    end-to-end operation of the New Protocol or Protocol Extension can be tested
    actively and passively, and how the correct data- or forwarding-plane
@@ -801,10 +801,10 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    various operational purposes, for example as outlined in {{?RFC6632}}.
    Note that SNMP is no longer recommended for configuration (read-write)
    operations.  Better programmatic alternatives are discussed
-   further in Section {{<sec-interop}}. This  document formally deprecates the following recommendation from {{BCP22}}:
+   further in Section {{<sec-interop}}. This document formally deprecates the following recommendation from {{BCP22}}:
 
    {: quote}
-   > a MIB must be defined within the standard or in a companion  document.
+   > a MIB must be defined within the standard or in a companion document.
 
    Readers seeking more in-depth definitions or explanations should consult
    the referenced materials.
@@ -891,7 +891,8 @@ DM         DM        DM     --> concrete/detailed model
    models.
 
    While an Information Model is typically described in English text
-   (or sometimes UML) to define the conceptual management requirements,
+   (or sometimes the Unified Modeling Language (UML)) to define the conceptual
+   management requirements,
    authors may choose to express it using YANG Data Structure Extensions {{RFC8791}}
    as described in {{sec-im-design}}.  Using YANG for the Information Model can make
    it easier to link abstract concepts to concrete data types in the corresponding Data Model,
@@ -967,7 +968,8 @@ DM         DM        DM     --> concrete/detailed model
        operational boundary per layer.
 
    6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?RFC9907}}.
-  7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
+
+   7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
@@ -1142,7 +1144,7 @@ DM         DM        DM     --> concrete/detailed model
    management.
 
    A Protocol Designer should document the basic configuration
-   parameters that need to be instrumented for a New Protocol or Protocol Extensions, as well
+   parameters that need to be instrumented for a New Protocol or Protocol Extension, as well
    as default values and modes of operation.
 
    What information should be maintained across reboots of the device,
@@ -1371,7 +1373,7 @@ DM         DM        DM     --> concrete/detailed model
    to avoid access by unauthorized entities.
 
    Protocol Designers should consider whether a system automatically
-   notify operators of every event Occurrence as default behavior or
+   notifies operators of every event occurrence as default behavior or
    should define an operator-defined threshold to control when a
    notification is sent to an operator.
 
@@ -1406,7 +1408,7 @@ DM         DM        DM     --> concrete/detailed model
    where a user can be given only the minimum access necessary to
    perform a required task.
 
-   Some operators wish to do consistency checks of ACLs
+   Some operators wish to do consistency checks of Access Control Lists (ACLs)
    across devices. Protocol Designers should consider Information
    Models to promote comparisons across devices and across vendors to
    permit checking the consistency of security configurations.
