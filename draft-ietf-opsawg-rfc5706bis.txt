@@ -2,7 +2,7 @@
 
 
 
-Network Working Group                                          B. Claise
+Operations and Management Area Working Group                   B. Claise
 Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
@@ -335,21 +335,21 @@ Table of Contents
    platform [RFC3444].  See Sections 5.2 and 5.3.1 for further
    discussion of Information Models.
 
+*  Network Device: A device that implements one or more network
+   protocols and participates in network operations.  This term
+   encompasses a broad range of implementations, including
+   conventional network infrastructure equipment (e.g., routers and
+   switches), end hosts, Internet of Things (IoT) devices, virtual
+   network functions, and containerized workloads.  In this document,
+   the term is used generically to mean any managed entity
+   implementing the protocol under consideration.
+
 *  New Protocol and Protocol Extension: These terms are used in this
    document to identify entirely new protocols, new versions of
    existing protocols, and extensions to protocols.  The application
    of New Protocols and Protocol Extensions to different scenarios,
    and their use in delivering services, procedures, mechanisms, or
    applications, falls within the scope of this definition.
-
-*  Network Device: A device that implements one or more network
-   protocols and participates in network operations.  This term
-   encompasses a broad range of implementations, including
-   conventional network infrastructure equipment (e.g., routers and
-   switches), end hosts, IoT devices, virtual network functions, and
-   containerized workloads.  In this document, the term is used
-   generically to mean any managed entity implementing the protocol
-   under consideration.
 
 *  OAM: Operations, Administration, and Maintenance [RFC6291]
    [RFC10014] is the term given to the combination of:
@@ -384,21 +384,21 @@ explained in {{RFC6291}}.
 
 *  Problem: See [RFC9940].
 
-   -  Proprietary Interface: An interface to manage a network element
-      that is not standardized.  As such, the user interface, syntax,
-      and semantics typically vary significantly between
-      implementations.  Examples of proprietary interfaces include
-      Command Line Interface (CLI), management web portal and Browser
-      User Interface (BUI), Graphical User Interface (GUI), and
-      vendor-specific application programming interface (API).
+*  Proprietary Interface: An interface to manage a network element
+   that is not standardized.  As such, the user interface, syntax,
+   and semantics typically vary significantly between
+   implementations.  Examples of proprietary interfaces include CLI,
+   management web portal and Browser User Interface (BUI), Graphical
+   User Interface (GUI), and vendor-specific application programming
+   interface (API).
 
-   -  Protocol Designer: An individual, a group of people, or an IETF
-      WG involved in the development and specification of New
-      Protocols or Protocol Extensions.
+*  Protocol Designer: An individual, a group of people, or an IETF WG
+   involved in the development and specification of New Protocols or
+   Protocol Extensions.
 
-   -  Technical Document: This includes any document that describes
-      the design, specification, implementation, or deployment of a
-      new Protocol or Protocol Extensions.
+*  Technical Document: This includes any document that describes the
+   design, specification, implementation, or deployment of a new
+   Protocol or Protocol Extensions.
 
 3.  Documentation Requirements for IETF Specifications
 
@@ -726,7 +726,7 @@ explained in {{RFC6291}}.
    If the protocol specification requires changes to end hosts or
    network infrastructure, it should indicate whether safeguards exist
    to protect both end hosts and devices and the broader network from
-   potential overload.  Moreover, Per Section 2.16 of RFC 2360 [BCP22],
+   potential overload.  Moreover, per Section 2.16 of RFC 2360 [BCP22],
    New Protocol or Protocol Extension specifications should address any
    possible destabilizing events, and means by which the protocol
    resists or recovers from them.  For instance, a congestion control
@@ -772,12 +772,12 @@ explained in {{RFC6291}}.
 
    For example:
 
-      (1) In Bidirectional Forwarding Detection for MPLS [RFC5884] it is
-      possible to configure very rapid BFD transmissions (of the order
-      of 3ms) on a very large number of parallel Label Switched Paths
-      (LSPs) with the result that the management systems and end nodes
-      may become overwhelmed -- this can be protected by applying limits
-      to the number of LSPs that may be tested at once.
+      (1) In Bidirectional Forwarding Detection (BFD) for MPLS [RFC5884]
+      it is possible to configure very rapid BFD transmissions (of the
+      order of 3ms) on a very large number of parallel Label Switched
+      Paths (LSPs) with the result that the management systems and end
+      nodes may become overwhelmed -- this can be protected by applying
+      limits to the number of LSPs that may be tested at once.
 
       (2) Notifications or logs from systems (through YANG or other
       means) should be rate-limited so that they do not flood the
@@ -857,13 +857,13 @@ explained in {{RFC6291}}.
 
    Protocol Designers should consider techniques for testing the effect
    the protocol has had on the infrastructure by sending data through it
-   and observing its behavior (a.k.a., active monitoring).  Protocol
-   Designers should consider how the correct end-to-end operation of the
-   New Protocol or Protocol Extension can be tested actively and
-   passively, and how the correct data- or forwarding-plane function of
-   each involved element can be verified to be working correctly with
-   the New Protocol or Protocol Extension.  Which metrics are of
-   interest?
+   and observing its behavior (also known as active monitoring).
+   Protocol Designers should consider how the correct end-to-end
+   operation of the New Protocol or Protocol Extension can be tested
+   actively and passively, and how the correct data- or forwarding-plane
+   function of each involved element can be verified to be working
+   correctly with the New Protocol or Protocol Extension.  Which metrics
+   are of interest?
 
    Protocol Designers should consider how to test the correct end-to-end
    operation of the service or network, how to verify correct protocol
@@ -1075,12 +1075,13 @@ explained in {{RFC6291}}.
    information models.
 
    While an Information Model is typically described in English text (or
-   sometimes UML) to define the conceptual management requirements,
-   authors may choose to express it using YANG Data Structure Extensions
-   [RFC8791] as described in Section 5.3.1.  Using YANG for the
-   Information Model can make it easier to link abstract concepts to
-   concrete data types in the corresponding Data Model, helping maintain
-   consistency between high-level design and practical deployment.
+   sometimes the Unified Modeling Language (UML)) to define the
+   conceptual management requirements, authors may choose to express it
+   using YANG Data Structure Extensions [RFC8791] as described in
+   Section 5.3.1.  Using YANG for the Information Model can make it
+   easier to link abstract concepts to concrete data types in the
+   corresponding Data Model, helping maintain consistency between high-
+   level design and practical deployment.
 
    A management Information Model should include a discussion of what is
    manageable, which aspects of the protocol need to be configured, what
@@ -1338,8 +1339,7 @@ explained in {{RFC6291}}.
 
    A Protocol Designer should document the basic configuration
    parameters that need to be instrumented for a New Protocol or
-   Protocol Extensions, as well as default values and modes of
-   operation.
+   Protocol Extension, as well as default values and modes of operation.
 
    What information should be maintained across reboots of the device,
    or restarts of the management system?
@@ -1570,7 +1570,7 @@ explained in {{RFC6291}}.
    unauthorized entities.
 
    Protocol Designers should consider whether a system automatically
-   notify operators of every event Occurrence as default behavior or
+   notifies operators of every event occurrence as default behavior or
    should define an operator-defined threshold to control when a
    notification is sent to an operator.
 
@@ -1606,10 +1606,11 @@ explained in {{RFC6291}}.
    where a user can be given only the minimum access necessary to
    perform a required task.
 
-   Some operators wish to do consistency checks of ACLs across devices.
-   Protocol Designers should consider Information Models to promote
-   comparisons across devices and across vendors to permit checking the
-   consistency of security configurations.
+   Some operators wish to do consistency checks of Access Control Lists
+   (ACLs) across devices.  Protocol Designers should consider
+   Information Models to promote comparisons across devices and across
+   vendors to permit checking the consistency of security
+   configurations.
 
    Protocol Designers should consider how to provide a secure transport,
    authentication, identity, and access control that integrates well
