@@ -288,7 +288,7 @@ This document does not describe interoperability requirements. As such, it does 
       or applications, falls within the scope of this definition.
 
 - OAM: Operations, Administration, and Maintenance {{?RFC6291}}
-      {{?I-D.ietf-opsawg-oam-characterization}} is the term given to the
+      {{?RFC10014}} is the term given to the
       combination of:
 
       1. Operation activities that are undertaken to keep the
@@ -378,9 +378,9 @@ This document does not describe interoperability requirements. As such, it does 
 For example:
 
 > Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
-> with adequate documentation of operational considerations, including manageability: {{?I-D.ietf-core-dns-over-coap}},
-> {{?I-D.ietf-suit-mti}}, {{?RFC9937}} {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
-> Given the various available transport alternatives, {{?I-D.ietf-core-dns-over-coap}} discusses co-existence with
+> with adequate documentation of operational considerations, including manageability: {{?RFC9953}},
+> {{?I-D.ietf-suit-mti}}, {{?RFC9937}}, {{?RFC7574}}, {{?RFC9877}}, and {{?RFC9552}}.
+> Given the various available transport alternatives, {{?RFC9953}} discusses co-existence with
 > those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
 > Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
 > the above guidance by documenting operational aspects as part of the YANG module itself.
@@ -471,8 +471,9 @@ For example:
 
 ##  Installation and Initial Setup {#sec-install}
 
-   Anything that can be configured can be misconfigured. "Architectural
-   Principles of the Internet" {{?RFC1958}}, Section 3.8, states:
+   Anything that can be configured can be misconfigured.
+   {{Section 3.8 of ?RFC1958}} ("Architectural Principles of the Internet")
+   states:
 
    {: quote}
    > Avoid
@@ -521,7 +522,7 @@ For example:
    (e.g., recomputing an expanded key from the seed) that help verify
    correctness and integrity. Additionally, guidance should be given on
    data retention, restoration limits, and cryptographic module
-   interoperability when importing/exporting private key material. Refer to {{?I-D.ietf-lamps-dilithium-certificates}} for an example of how such considerations are incorporated.
+   interoperability when importing/exporting private key material. Refer to {{?RFC9881}} for an example of how such considerations are incorporated.
 
 ##  Migration Path {#sec-migration}
 
@@ -851,7 +852,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    Protocol Designers should consider developing an IM, when multiple Data Model (DM)
    representations (e.g., YANG and/or IPFIX) are required, to ensure lossless
-   semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in Figure 1, an
+   semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in {{fig-im-dm}}, an
    IM serves as a conceptual blueprint for designers and operators, from which concrete DMs are derived
    for implementers. {{?RFC3444}} provides further guidance on distinguishing IMs from DMs.
 
@@ -966,7 +967,7 @@ DM         DM        DM     --> concrete/detailed model
        instrumentation to one counter per significant processing stage or
        operational boundary per layer.
 
-   6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?I-D.ietf-netmod-rfc8407bis}}.
+   6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?RFC9907}}.
 
    7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
@@ -975,7 +976,7 @@ DM         DM        DM     --> concrete/detailed model
   When considering YANG Data Models for a new specification, there
   are multiple types of Data Models that may be applicable. The
   hierarchy and relationship between these types is described in
-  {{Section 3.5.1 of ?I-D.ietf-netmod-rfc8407bis}}. A new specification
+  {{Section 3.5.1 of ?RFC9907}}. A new specification
   may require or benefit from one or more of these YANG Data Model types.
 
   *  Device Models - Also called Network Element Models,
@@ -1023,7 +1024,7 @@ DM         DM        DM     --> concrete/detailed model
   implementations.
 
   Specific guidelines to consider when authoring any type of YANG
-  modules are described in {{?I-D.ietf-netmod-rfc8407bis}}.
+  modules are described in {{?RFC9907}}.
 
 ## Fault Management {#sec-fm-mgmt}
 
@@ -1458,7 +1459,7 @@ DM         DM        DM     --> concrete/detailed model
    leveraged or extended to support the management and operation of these new
    specifications.
 
-   The {{?NEMOPS=I-D.iab-nemops-workshop-report}} workshop highlighted a
+   The {{?NEMOPS=RFC9968}} workshop highlighted a
    consistent theme applicable beyond network management protocols: the
    "ease of use" and adaptability of existing tools are critical factors
    for successful adoption. Therefore, a new specification should provide
@@ -1672,7 +1673,7 @@ The decision to incorporate all or part of these items into their work remains w
 
    * Change intended status from Informational to Best Current Practice
    * Indicate that this document updates RFC 2360 and add the relevant updated text
-   * Move the "Operational Considerations" Appendix A to a Checklist {{CHECKLIST}} maintained in GitHub
+   * Move the "Operational Considerations" checklist in {{Appendix A of ?RFC5706}} to a Checklist {{CHECKLIST}} maintained in GitHub
 
    * Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
 
