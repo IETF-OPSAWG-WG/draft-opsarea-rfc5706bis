@@ -24,7 +24,6 @@ normative:
    BCP22:
    RFC8791:
    RFC8340:
-   RFC9940:
 
 informative:
   CHECKLIST:
@@ -238,7 +237,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
-- Cause: See {{RFC9940}}.
+- Cause: See {{?RFC9940}}.
 
 - CLI: Command Line Interface. A human-oriented interface, typically
       a Proprietary Interface, to hardware or software devices
@@ -259,7 +258,7 @@ This document does not describe interoperability requirements. As such, it does 
       discussion of Data Models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgmt-info}}.
 
-- Fault: See {{RFC9940}}.
+- Fault: See {{?RFC9940}}.
 
 - Fault Management: The process of interpreting fault notifications and other alerts
       and alarms, isolating faults, correlating them, and deducing underlying
@@ -319,7 +318,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 - Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
 
-- Problem: See {{RFC9940}}.
+- Problem: See {{?RFC9940}}.
 
 - Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
