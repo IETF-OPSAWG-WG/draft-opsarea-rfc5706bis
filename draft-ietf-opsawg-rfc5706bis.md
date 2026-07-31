@@ -406,7 +406,7 @@ For example:
   "There are no new operations or manageability requirements introduced
     by this document.
 
-    Explanation: [brief rationale goes here]"
+    [Brief rationale goes here]"
 ~~~~
 
    The presence of such a
@@ -1535,7 +1535,7 @@ DM         DM        DM     --> concrete/detailed model
    There are no new operations or manageability requirements introduced
    by this document.
 
-   Explanation: Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture.
+   Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture.
 
 
 #  Security Considerations {#sec-security}
