@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-30T01:16:27.111189+00:00",
+  "timestamp": "2026-08-02T01:28:58.650302+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3775,9 +3775,17 @@
       "labels": [],
       "body": "Does it need to be reclassified as informative?\n\nArgument: Cause/Fault/Problem are terminology-only citations, and the parallel \"Probable Root Cause\" entry is already informative \u2014 so the normative marking looks incidental.",
       "createdAt": "2026-07-30T00:06:31Z",
-      "updatedAt": "2026-07-30T00:06:31Z",
+      "updatedAt": "2026-07-31T13:37:38Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I agree with you.  Info seems right here.",
+          "createdAt": "2026-07-31T13:37:37Z",
+          "updatedAt": "2026-07-31T13:37:37Z"
+        }
+      ]
     },
     {
       "number": 259,
@@ -3791,9 +3799,24 @@
       "labels": [],
       "body": "This text is too loosy-goosy... \n\n```\n5.7.  Performance Management\n...\n   requirements for the common, unambiguous reporting of benchmarking\n   results.  **Search for \"benchmark\" in the RFC search tool.**\n...\n   groups.  The existing metrics might be applicable to the new\n   protocol.  **Search for \"metric\" in the RFC search tool.**  In some\n   cases, new metrics need to be defined.  It would be useful if the\n```\n\nPoint to a tool, or remvoe the \"RFC search tool\" ambiguous citation...",
       "createdAt": "2026-07-30T00:11:51Z",
-      "updatedAt": "2026-07-30T00:11:51Z",
+      "updatedAt": "2026-07-31T18:39:44Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I agree.  Those sentences don't seem to add any value.  It might be more valuable to reach out to the new PERF DIR for questions (or have your chairs request a review).",
+          "createdAt": "2026-07-31T13:36:36Z",
+          "updatedAt": "2026-07-31T13:36:36Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Leveraging directorates instead of the current text has my support!",
+          "createdAt": "2026-07-31T18:39:44Z",
+          "updatedAt": "2026-07-31T18:39:44Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -18460,13 +18483,13 @@
       "labels": [],
       "body": "* Clarify language around Data Models\r\n* Indicate more explicitly that network-level models are in scope\r\n* Provide a concrete example tying together device, network, and service level interactions",
       "createdAt": "2026-07-28T16:02:57Z",
-      "updatedAt": "2026-07-29T21:15:56Z",
+      "updatedAt": "2026-07-31T18:27:35Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "qinwu-review",
-      "headRefOid": "ddd9f27199573d6dbcf9e13dbb3a49965c3ed23e",
+      "headRefOid": "9824dd0c2b9d70e7127ec38b202fa82ce236ee78",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -18512,6 +18535,19 @@
               "updatedAt": "2026-07-29T21:15:56Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABH_YDDA",
+          "commit": {
+            "abbreviatedOid": "9824dd0"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-07-31T18:27:35Z",
+          "updatedAt": "2026-07-31T18:27:35Z",
+          "comments": []
         }
       ]
     },
@@ -18520,24 +18556,26 @@
       "id": "PR_kwDOOWPBqs74PjP3",
       "title": "chore: Update published references and fix citation hygiene",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/255",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "## Summary\n\nFive referenced Internet-Drafts have been published as RFCs, as flagged by \nidnits. This updates them, and also fixes four citation and cross-reference \nnits found while checking them.\n\nReference updates:\n\n- `draft-ietf-core-dns-over-coap` \u2192 **RFC 9953** (DNS over CoAP)\n- `draft-ietf-lamps-dilithium-certificates` \u2192 **RFC 9881** (X.509 Algorithm\n  Identifiers for ML-DSA)\n- `draft-ietf-netmod-rfc8407bis` \u2192 **RFC 9907** (Guidelines for Authors and\n  Reviewers of Documents Containing YANG Data Models)\n- `draft-ietf-opsawg-oam-characterization` \u2192 **RFC 10014** (Guidelines for\n  Characterizing the Term \"OAM\")\n- `draft-iab-nemops-workshop-report` \u2192 **RFC 9968** (IAB NEMOPS Workshop Report)\n\nThe RFC 9907 change keeps the Section 3.5.1 citation: that section is \"YANG\nModule Classification\" and still carries the Service / Network / Device model\nclassification the surrounding text relies on.\n\nCitation and cross-reference fixes:\n\n- Section 3.8 of RFC 1958 was written as running text rather than a cross\n  reference; it is now `{{Section 3.8 of ?RFC1958}}`.\n- \"As illustrated in Figure 1\" hardcoded the figure number. It now uses the\n  `fig-im-dm` anchor.\n- Missing separator between `[RFC9937]` and `[RFC7574]` in the list of example\n  specifications.\n- \"the 'Operational Considerations' Appendix A\" in Changes Since RFC 5706 was\n  ambiguous alongside this document's own Appendix A. It now\n  reads Appendix A of RFC 5706 explicitly.\n\nOne commit per change.\n",
       "createdAt": "2026-07-29T23:16:49Z",
-      "updatedAt": "2026-07-29T23:17:44Z",
+      "updatedAt": "2026-07-31T13:27:28Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-refs-and-citations",
       "headRefOid": "907e203cfe5a63010701b40832af559e00ee7c04",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-07-31T13:27:26Z",
+      "mergedAt": "2026-07-31T13:27:26Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "91762563e6a7a61a92d9ef990fe0b82c0375a81a"
+      },
       "comments": [],
       "reviews": []
     },
@@ -18546,24 +18584,26 @@
       "id": "PR_kwDOOWPBqs74QCHK",
       "title": "chore: Editorial consistency and typo fixes",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/256",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "## Summary\n\nEditorial only, no technical content changes: acronym expansions, typos and\nstray capitalization, Terminology list ordering and bullet markers, a\ndivergent duplicate of the RFC 2360 quotation, list indentation, and the\nempty `wg` field (the document was rendering as \"Network Working Group\").\n\nOne commit per change \u2014 see the individual commit messages for the rationale.\n",
       "createdAt": "2026-07-29T23:43:02Z",
-      "updatedAt": "2026-07-29T23:43:23Z",
+      "updatedAt": "2026-07-31T13:31:07Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
-      "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
+      "baseRefOid": "91762563e6a7a61a92d9ef990fe0b82c0375a81a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-editorial-wglc",
-      "headRefOid": "acdc749d75fb6829c4f90f9112e663b6e43ee3fd",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "7be79f43d008d6f38e241b5aeede3c017e901744",
+      "closedAt": "2026-07-31T13:31:05Z",
+      "mergedAt": "2026-07-31T13:31:05Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "2242db5501a0e18fa0983b239aef1f097eb613c3"
+      },
       "comments": [],
       "reviews": []
     },
@@ -18579,13 +18619,80 @@
       "labels": [],
       "body": "## Summary\n\nFault, Probable Root Cause, and Data Model are defined terms but were\ninconsistently lowercased. The adjective \"faulty\" is left lowercase and anchor names are unchanged.\n\nSection 3.2 also requires the no-new-considerations statement to be followed\nby an explanation labelled `Explanation:`; this document's own Operational\nConsiderations section now follows that template.\n",
       "createdAt": "2026-07-29T23:53:16Z",
-      "updatedAt": "2026-07-29T23:53:41Z",
+      "updatedAt": "2026-07-31T18:36:57Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-defined-terms-and-boilerplate",
-      "headRefOid": "6116a0e4b932ca28113c795701c80dcaef8fee8d",
+      "headRefOid": "cb8e65b55ee946e0fd31eb18666647784ba6b794",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABH9NAuA",
+          "commit": {
+            "abbreviatedOid": "6116a0e"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "I have one comment, but the rest looks good to me.",
+          "createdAt": "2026-07-31T13:32:43Z",
+          "updatedAt": "2026-07-31T13:33:01Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "I don't know.  I explicitly left out the word \"Explanation\" because I thought this was more of a guidance word than something that needed to be there explicitly.  I'd be more in favor of dropping this from our boilerplate, and just having them add the explanation like we do with YANG models in their security considerations.",
+              "createdAt": "2026-07-31T13:32:43Z",
+              "updatedAt": "2026-07-31T13:33:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABH_cZ2Q",
+          "commit": {
+            "abbreviatedOid": "cb8e65b"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-31T18:36:51Z",
+          "updatedAt": "2026-07-31T18:36:51Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "Agreed, and thanks \u2014 that is the better direction. I had read the boilerplate literally: \"Explanation:\" sits outside the brackets, so it looked like mandated text and this document appeared not to follow its own rule. Your point is that the mismatch is in the boilerplate, not in our Operational Considerations section.\n\nFixed in cb8e65b: dropped \"Explanation\" from the boilerplate and reverted the change to our own section, so that section is now identical to main. The placeholder stands alone as its own paragraph, so it is capitalized: \"[Brief rationale goes here]\". The requirement itself is unaffected, since the preceding sentence already says the statement must be \"followed by a brief explanation of why that is the case\".",
+              "createdAt": "2026-07-31T18:36:51Z",
+              "updatedAt": "2026-07-31T18:36:51Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 260,
+      "id": "PR_kwDOOWPBqs75J7nI",
+      "title": "chore: Make the RFC 9940 reference informative",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/260",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nRFC 9940 is cited only for terminology (Cause, Fault, Problem), and the\nparallel Probable Root Cause entry is already informative. Moving it to\ninformative removes the downref flagged by idnits.\n\nCloses #258.\n",
+      "createdAt": "2026-07-31T18:44:50Z",
+      "updatedAt": "2026-07-31T18:47:22Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "2242db5501a0e18fa0983b239aef1f097eb613c3",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-rfc9940-informative",
+      "headRefOid": "82823a0974afd9b9047d4988d55d39736d9609c6",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
