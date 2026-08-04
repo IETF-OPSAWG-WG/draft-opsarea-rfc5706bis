@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 1 February 2027                              Old Dog Consulting
+Expires: 5 February 2027                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            31 July 2026
+                                                           4 August 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 February 2027.
+   This Internet-Draft will expire on 5 February 2027.
 
 Copyright Notice
 
@@ -1223,15 +1223,18 @@ explained in {{RFC6291}}.
    For example:
 
       A device YANG module may define a notification indicating that a
-      hardware component, such as a line card, has failed.  A Network
-      Model, such as L3NM [RFC9182], can use such device-level
-      notifications from the attached devices to detect that a link
-      supporting the network is no longer operational and generate its
-      own network-level notification.  A Service Model, such as L3SM
-      [RFC8299], can, in turn, correlate that network-level notification
-      with the affected service to derive and report a service-degraded
-      event to the customer, without requiring the service-facing model
-      to expose device-level detail.
+      hardware component, such as a line card, has failed.  An
+      implementation (e.g., a network controller that is aware of device
+      inventory) can correlate such a device-level notification with the
+      interfaces hosted on the affected line card and their subsequent
+      down status to determine that a link supporting the network is no
+      longer operational, and expose a corresponding network-level
+      notification using a Network Model such as L3NM [RFC9182].
+      Likewise, an implementation managing the service layer can
+      correlate that network-level notification with the affected
+      service and use a Service Model such as L3SM [RFC8299] to report a
+      service-degraded event to the customer, without requiring the
+      service-facing model to expose device-level detail.
 
    Specific guidelines to consider when authoring any type of YANG
    modules are described in [I-D.ietf-netmod-rfc8407bis].

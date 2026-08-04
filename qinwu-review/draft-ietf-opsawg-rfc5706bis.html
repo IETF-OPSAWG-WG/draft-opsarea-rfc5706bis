@@ -40,7 +40,7 @@
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.10.1
+    platformdirs 4.11.0
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
@@ -1060,11 +1060,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Operations &amp; Management Considerations</td>
-<td class="right">July 2026</td>
+<td class="right">August 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 1 February 2027</td>
+<td class="center">Expires 5 February 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1083,12 +1083,12 @@ svg {
 <a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-07-31" class="published">31 July 2026</time>
+<time datetime="2026-08-04" class="published">4 August 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-02-01">1 February 2027</time></dd>
+<dd class="expires"><time datetime="2027-02-05">5 February 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1153,7 +1153,7 @@ svg {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 1 February 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 5 February 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2391,13 +2391,16 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-5.3.2-6.1">
               <p id="section-5.3.2-6.1.1">A device YANG module may define a notification indicating that a
-  hardware component, such as a line card, has failed. A Network Model,
-  such as L3NM <span>[<a href="#RFC9182" class="cite xref">RFC9182</a>]</span>, can use such device-level notifications from
-  the attached devices to detect that a link supporting the network is no
-  longer operational and generate its own network-level notification. A
-  Service Model, such as L3SM <span>[<a href="#RFC8299" class="cite xref">RFC8299</a>]</span>, can, in turn, correlate that
-  network-level notification with the affected service to derive and
-  report a service-degraded event to the customer, without requiring the
+  hardware component, such as a line card, has failed. An implementation
+  (e.g., a network controller that is aware of device inventory) can
+  correlate such a device-level notification with the interfaces hosted
+  on the affected line card and their subsequent down status to determine
+  that a link supporting the network is no longer operational, and expose
+  a corresponding network-level notification using a Network Model such
+  as L3NM <span>[<a href="#RFC9182" class="cite xref">RFC9182</a>]</span>. Likewise, an implementation managing the service layer can
+  correlate that network-level notification with the affected service and
+  use a Service Model such as L3SM <span>[<a href="#RFC8299" class="cite xref">RFC8299</a>]</span> to report a
+  service-degraded event to the customer, without requiring the
   service-facing model to expose device-level detail.<a href="#section-5.3.2-6.1.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
