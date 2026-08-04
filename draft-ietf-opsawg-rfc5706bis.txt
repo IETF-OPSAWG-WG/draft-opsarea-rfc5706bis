@@ -1777,11 +1777,6 @@ explained in {{RFC6291}}.
               Structure Extensions", RFC 8791, DOI 10.17487/RFC8791,
               June 2020, <https://www.rfc-editor.org/rfc/rfc8791>.
 
-   [RFC9940]  Davis, N., Ed., Farrel, A., Ed., Graf, T., Wu, Q., and C.
-              Yu, "Some Key Terms for Network Fault and Problem
-              Management", RFC 9940, DOI 10.17487/RFC9940, April 2026,
-              <https://www.rfc-editor.org/rfc/rfc9940>.
-
 10.2.  Informative References
 
    [BCP14]    Best Current Practice 14,
@@ -2138,6 +2133,11 @@ explained in {{RFC6291}}.
               "Proportional Rate Reduction (PRR)", RFC 9937,
               DOI 10.17487/RFC9937, December 2025,
               <https://www.rfc-editor.org/rfc/rfc9937>.
+
+   [RFC9940]  Davis, N., Ed., Farrel, A., Ed., Graf, T., Wu, Q., and C.
+              Yu, "Some Key Terms for Network Fault and Problem
+              Management", RFC 9940, DOI 10.17487/RFC9940, April 2026,
+              <https://www.rfc-editor.org/rfc/rfc9940>.
 
    [RFC9953]  Lenders, M. S., Amsüss, C., Gündoğan, C., Schmidt, T. C.,
               and M. Wählisch, "DNS over CoAP (DoC)", RFC 9953,
