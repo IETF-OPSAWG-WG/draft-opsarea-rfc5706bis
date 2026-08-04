@@ -261,8 +261,8 @@ This document does not describe interoperability requirements. As such, it does 
 
 - Fault: See {{RFC9940}}.
 
-- Fault Management: The process of interpreting fault notifications and other alerts
-      and alarms, isolating faults, correlating them, and deducing underlying
+- Fault Management: The process of interpreting Fault notifications and other alerts
+      and alarms, isolating Faults, correlating them, and deducing underlying
       Causes. See {{sec-fm-mgmt}} for more information.
 
 - Information Model: An abstraction and representation of the
@@ -371,7 +371,7 @@ This document does not describe interoperability requirements. As such, it does 
 
   Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
   may be consumed out of the RFCs that specify them. As such, it is recommended
-  that operational aspects for a data model (and similar artifacts) are
+  that operational aspects for a Data Model (and similar artifacts) are
   documented as part of the model itself. Such considerations should not be
   duplicated in the narrative part of a specification that includes such artifacts.
 
@@ -406,7 +406,7 @@ For example:
   "There are no new operations or manageability requirements introduced
     by this document.
 
-    Explanation: [brief rationale goes here]"
+    [Brief rationale goes here]"
 ~~~~
 
    The presence of such a
@@ -1106,7 +1106,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Probable Root Cause analysis is about working out where the foundational
    Fault or Problem might be. Since one Fault may give rise to another Fault or
-   Problem, a probable root cause is commonly meant to describe the original,
+   Problem, a Probable Root Cause is commonly meant to describe the original,
    source event or combination of circumstances that is the foundation of all
    related Faults.
 
@@ -1119,7 +1119,7 @@ DM         DM        DM     --> concrete/detailed model
 ###  Fault Isolation {#sec-fault-isol}
 
    It might be useful to isolate or quarantine Faults. Protocol Designers
-   should consider fault isolation mechanisms appropriate to the deployment
+   should consider Fault isolation mechanisms appropriate to the deployment
    environment. At the network level, this might involve configuring
    next-hop devices to drop faulty messages to prevent them from
    propagating through the network, such as isolating a device that emits
@@ -1610,20 +1610,20 @@ The decision to incorporate all or part of these items into their work remains w
 
 ## Fault Management
 
-- What faults and events should be reported? ({{sec-fm-mgmt}})
-  - What essential faults, health indicators, alarms, and events should be exposed? ({{sec-fm-mgmt}})
-  - How will fault information be propagated? ({{sec-fm-mgmt}})
+- What Faults and events should be reported? ({{sec-fm-mgmt}})
+  - What essential Faults, health indicators, alarms, and events should be exposed? ({{sec-fm-mgmt}})
+  - How will Fault information be propagated? ({{sec-fm-mgmt}})
 
 - How is liveness monitored? ({{sec-monitor}})
   - What testing and liveness detection features are built into the protocol? ({{sec-monitor}})
 
-- How are faults determined? ({{sec-fault-determ}})
-  - What error counters or diagnostics help pinpoint faults? ({{sec-fault-determ}})
+- How are Faults determined? ({{sec-fault-determ}})
+  - What error counters or diagnostics help pinpoint Faults? ({{sec-fault-determ}})
   - What distinguishes faulty from correct messages? ({{sec-fault-determ}})
 
-- How are faults localized and contained? ({{sec-cause-analysis}}, {{sec-fault-isol}})
-  - Can the probable root cause of a fault be identified using management information? ({{sec-cause-analysis}})
-  - Can faults be isolated or quarantined to prevent them from propagating? ({{sec-fault-isol}})
+- How are Faults localized and contained? ({{sec-cause-analysis}}, {{sec-fault-isol}})
+  - Can the Probable Root Cause of a Fault be identified using management information? ({{sec-cause-analysis}})
+  - Can Faults be isolated or quarantined to prevent them from propagating? ({{sec-fault-isol}})
 
 ## Configuration Management
 
