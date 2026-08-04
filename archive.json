@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-02T01:28:58.650302+00:00",
+  "timestamp": "2026-08-04T01:19:34.317985+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -18483,7 +18483,7 @@
       "labels": [],
       "body": "* Clarify language around Data Models\r\n* Indicate more explicitly that network-level models are in scope\r\n* Provide a concrete example tying together device, network, and service level interactions",
       "createdAt": "2026-07-28T16:02:57Z",
-      "updatedAt": "2026-07-31T18:27:35Z",
+      "updatedAt": "2026-08-04T01:16:12Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
@@ -18548,6 +18548,32 @@
           "createdAt": "2026-07-31T18:27:35Z",
           "updatedAt": "2026-07-31T18:27:35Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIRFivg",
+          "commit": {
+            "abbreviatedOid": "9824dd0"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-08-04T01:14:37Z",
+          "updatedAt": "2026-08-04T01:16:12Z",
+          "comments": [
+            {
+              "originalPosition": 32,
+              "body": "Nit/technical concern on this example: L3NM (RFC 9182) and L3SM (RFC 8299) are YANG data models \u2014 they define the structure of data/notifications that can be exposed, not the behavior of detecting, correlating, or translating events across layers. As written, the text implies the models themselves \"detect,\" \"generate,\" and \"correlate\" (\"A Network Model... can use such device-level notifications... to detect... and generate its own network-level notification\"), but that logic lives entirely in an implementation (controller/orchestrator) built on top of the models, and is not defined by either RFC.",
+              "createdAt": "2026-08-04T01:14:37Z",
+              "updatedAt": "2026-08-04T01:16:12Z"
+            },
+            {
+              "originalPosition": 33,
+              "body": "A device YANG module may define a notification indicating that a hardware component, such as a line card, has failed. An implementation (e.g., a network controller) can consume such device-level notifications from the attached devices to infer that a link supporting the network is no longer operational, and expose a corresponding network-level notification using a Network Model such as L3NM {{?RFC9182}}. Likewise, an implementation managing the service layer can correlate that network-level notification with the affected service and use a Service Model such as L3SM {{?RFC8299}} to report a service-degraded event to the customer, without requiring the service-facing model to expose device-level detail.",
+              "createdAt": "2026-08-04T01:15:30Z",
+              "updatedAt": "2026-08-04T01:16:12Z"
+            }
+          ]
         }
       ]
     },
@@ -18619,7 +18645,7 @@
       "labels": [],
       "body": "## Summary\n\nFault, Probable Root Cause, and Data Model are defined terms but were\ninconsistently lowercased. The adjective \"faulty\" is left lowercase and anchor names are unchanged.\n\nSection 3.2 also requires the no-new-considerations statement to be followed\nby an explanation labelled `Explanation:`; this document's own Operational\nConsiderations section now follows that template.\n",
       "createdAt": "2026-07-29T23:53:16Z",
-      "updatedAt": "2026-07-31T18:36:57Z",
+      "updatedAt": "2026-08-04T01:16:45Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
@@ -18671,6 +18697,32 @@
               "updatedAt": "2026-07-31T18:36:51Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIOATOQ",
+          "commit": {
+            "abbreviatedOid": "cb8e65b"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "This works for me.  I think it's more consistent with things like the YANG Security boilerplate.",
+          "createdAt": "2026-08-03T16:45:12Z",
+          "updatedAt": "2026-08-03T16:45:12Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIRGCMw",
+          "commit": {
+            "abbreviatedOid": "cb8e65b"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-04T01:16:45Z",
+          "updatedAt": "2026-08-04T01:16:45Z",
+          "comments": []
         }
       ]
     },
@@ -18686,7 +18738,7 @@
       "labels": [],
       "body": "## Summary\n\nRFC 9940 is cited only for terminology (Cause, Fault, Problem), and the\nparallel Probable Root Cause entry is already informative. Moving it to\ninformative removes the downref flagged by idnits.\n\nCloses #258.\n",
       "createdAt": "2026-07-31T18:44:50Z",
-      "updatedAt": "2026-07-31T18:47:22Z",
+      "updatedAt": "2026-08-04T01:18:12Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "2242db5501a0e18fa0983b239aef1f097eb613c3",
@@ -18698,7 +18750,34 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIN_xXA",
+          "commit": {
+            "abbreviatedOid": "82823a0"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "LGTM",
+          "createdAt": "2026-08-03T16:44:02Z",
+          "updatedAt": "2026-08-03T16:44:02Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIRGX6Q",
+          "commit": {
+            "abbreviatedOid": "82823a0"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-04T01:18:12Z",
+          "updatedAt": "2026-08-04T01:18:12Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
