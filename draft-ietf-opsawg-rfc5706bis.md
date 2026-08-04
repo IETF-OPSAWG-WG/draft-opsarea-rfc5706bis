@@ -1025,13 +1025,16 @@ DM         DM        DM     --> concrete/detailed model
   For example:
 
   > A device YANG module may define a notification indicating that a
-  hardware component, such as a line card, has failed. A Network Model,
-  such as L3NM {{?RFC9182}}, can use such device-level notifications from
-  the attached devices to detect that a link supporting the network is no
-  longer operational and generate its own network-level notification. A
-  Service Model, such as L3SM {{?RFC8299}}, can, in turn, correlate that
-  network-level notification with the affected service to derive and
-  report a service-degraded event to the customer, without requiring the
+  hardware component, such as a line card, has failed. An implementation
+  (e.g., a network controller that is aware of device inventory) can
+  correlate such a device-level notification with the interfaces hosted
+  on the affected line card and their subsequent down status to determine
+  that a link supporting the network is no longer operational, and expose
+  a corresponding network-level notification using a Network Model such
+  as L3NM {{?RFC9182}}. Likewise, an implementation managing the service layer can
+  correlate that network-level notification with the affected service and
+  use a Service Model such as L3SM {{?RFC8299}} to report a
+  service-degraded event to the customer, without requiring the
   service-facing model to expose device-level detail.
 
   Specific guidelines to consider when authoring any type of YANG
