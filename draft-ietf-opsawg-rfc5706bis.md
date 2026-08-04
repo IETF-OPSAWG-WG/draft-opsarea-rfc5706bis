@@ -36,6 +36,11 @@ informative:
     date: 2025
     target: https://datatracker.ietf.org/group/opsdir/about/
 
+  PERFMETRDIR:
+    title: Performance Metrics Directorate (perfmetrdir)
+    date: 2026
+    target: <https://datatracker.ietf.org/group/perfmetrdir/about/>
+
   IETF-HACKATHONS:
     target: https://www.ietf.org/meeting/hackathons/
     title: IETF Hackathons
@@ -103,8 +108,7 @@ contributor:
 
 --- middle
 
-
-#  Introduction {#sec-intro}
+# Introduction {#sec-intro}
 
    Often, when New Protocols or Protocol Extensions are developed, not
    enough consideration is given to how they will be deployed,
@@ -135,7 +139,7 @@ contributor:
    technologies used in operating and managing devices, networks, and
    services. Refer to {{sec-changes-since-5706}} for more details.
 
-##  This Document {#sec-this-doc}
+## This Document {#sec-this-doc}
 
    This document provides a set of guidelines for considering
    operations and management in an IETF technical specification
@@ -176,7 +180,7 @@ contributor:
    Operational Considerations section may contain just a short overview description of the material and a reference to
    other documents that contain the details, but those references must be normative.
 
-##  Audience {#sec-audience}
+## Audience {#sec-audience}
 
    The guidelines are intended to be useful to authors
    writing protocol specifications.
@@ -226,12 +230,14 @@ contributor:
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
+   Similarly, the Performance Metrics Directorate (PERFMETRDIR) {{PERFMETRDIR}} can use this document,
+   together with the guidelines in {{?RFC6390}}, to inform reviews of the performance management aspects
+   of a New Protocol or Protocol Extension.
+
    This document is also of interest to the broader community, who wants to understand, contribute to,
    and review Internet-Drafts, taking operational considerations into account.
 
-
-
-#  Terminology {#sec-terms}
+# Terminology {#sec-terms}
 
 This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?BCP14}}.
 
@@ -316,6 +322,8 @@ This document does not describe interoperability requirements. As such, it does 
       in this broad sense unless the context explicitly requires a narrower
       scope.
 
+- Performance Metrics: See {{?RFC7799}}.
+
 - Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
 
 - Problem: See {{?RFC9940}}.
@@ -336,9 +344,9 @@ This document does not describe interoperability requirements. As such, it does 
       This includes any document that describes the
       design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.
 
-#  Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
+# Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
-##  "Operational Considerations" Section {#sec-oper-manag-considerations}
+## "Operational Considerations" Section {#sec-oper-manag-considerations}
 
    All Internet-Drafts that document a technical specification for a New Protocol
    or Protocol Extension or describe their use are required to include an "Operational Considerations" section
@@ -386,7 +394,7 @@ For example:
 
   For architecture documents, an "Operational Considerations" section is expected only where the architecture introduces new operational considerations with normative implications for downstream protocol designs. When included, it should focus on describing the intended deployment environment, assumptions about network operations, potential impacts on existing operational practices, and any high-level requirements that future protocol designs should address. It is not expected to detail specific configuration parameters or management interfaces unless they are integral to the architecture itself. If the architecture document does not introduce new operational considerations, the exemption statement in {{sec-null-sec}} applies.
 
-##  "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
+## "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
    After a Protocol Designer has considered the manageability
    requirements of a New Protocol or Protocol Extension, they may determine that no
@@ -417,13 +425,35 @@ For example:
    considerations, it is helpful to reference the considerations section
    of the base document.
 
-##  Placement of the "Operational Considerations" Section {#sec-placement-sec}
+## Placement of the "Operational Considerations" Section {#sec-placement-sec}
 
    It is recommended that the section be
    placed immediately before the Security Considerations section.
    Reviewers interested in this section will find it easily, and this
    placement could simplify the development of tools to detect its
    presence.
+
+## Changes Since RFC 5706 {#sec-changes-since-5706}
+
+   The following changes have been made to the guidelines published in  {{?RFC5706}}:
+
+- Change intended status from Informational to Best Current Practice
+- Indicate that this document updates RFC 2360 and add the relevant updated text
+- Move the "Operational Considerations" checklist in {{Appendix A of ?RFC5706}} to a Checklist {{CHECKLIST}} maintained in GitHub
+
+- Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
+
+- Add a requirement for an "Operational Considerations" section in all new RFCs that document a technical specification for a New Protocol or Protocol Extension or describe their use in the IETF Stream, along with specific guidance on its content.
+
+- Update the operational and manageability-related technologies to reflect over 15 years of advancements
+
+  - Provide focus and details on YANG-based standards, deprioritizing MIB Modules.
+
+  - Add a "YANG Data Model Considerations" section
+
+  - Update the "Available Management Technologies" landscape
+
+- Add an "Operational and Management Tooling Considerations" section
 
 ## Update to RFC 2360 {#sec-2360-update}
 
@@ -542,7 +572,9 @@ For example:
    the existing infrastructure, particularly the network.
    If so, the protocol specification should describe the nature of those
    changes, where they are required, and how they can be introduced in
-   a manner that facilitates deployment.
+   a manner that facilitates deployment. Where possible, backward-compatible approaches
+   should be preferred over non-backward-compatible ones, since they typically provide a
+   smoother migration path with lower cost and impact on existing deployments.
 
    Security operations ({{sec-impact-secops}}) are important to ensure the stability and security of networks. Good security operation practices should be encouraged when migrating to a New Protocol or Protocol Extension. For example, patching (i.e., installing new versions that have fixes for security vulnerabilities) is fundamental for security operations, and can be made much easier if Protocol Designers consider supporting cheap and fast connection hand-offs and reconnections.
 
@@ -793,6 +825,10 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    the server end of a protocol than the client end, since the
    performance of the server might impact more nodes than the
    performance of a specific client.
+
+   The subsections from {{sec-fm-mgmt}} through {{sec-security-mgmt}} are organized following
+   the Fault, Configuration, Accounting, Performance, and Security (FCAPS) network management
+   framework.
 
 ##  Available Management Technologies {#sec-mgmt-tech}
 
@@ -1249,7 +1285,8 @@ DM         DM        DM     --> concrete/detailed model
    recommendations for the measurement of the performance
    characteristics of various internetworking technologies in a
    laboratory environment, including the systems or services that are
-   built from these technologies. Each benchmarking recommendation
+   built from these technologies, building on the foundational methodology
+   in {{?RFC2544}}. Each benchmarking recommendation
    describes the class of equipment, system, or service being addressed;
    discusses the performance characteristics that are pertinent to that
    class; clearly identifies a set of metrics that aid in the
@@ -1260,7 +1297,8 @@ DM         DM        DM     --> concrete/detailed model
 
    Performance metrics may be useful in multiple environments and for
    different protocols. The IETF, via the IP Performance Measurement
-   (IPPM) WG, has developed a set of standard metrics that can be
+   (IPPM) WG, has developed a set of standard metrics, building on the
+   framework defined in {{?RFC2330}}, that can be
    applied to the quality, performance, and reliability of Internet data
    delivery services. These metrics are designed such that they can be
    performed by network operators, end users, or independent testing
@@ -1270,7 +1308,10 @@ DM         DM        DM     --> concrete/detailed model
    protocol documentation identified the need for such new metrics. For
    performance management, it is often more important to report the time
    spent in a state rather than just the current state. Snapshots alone
-   are typically of less value.
+   are typically of less value. {{?RFC7799}} classifies measurement methods as active,
+   passive, or hybrid.  This classification is relevant to the protocol, device, network,
+   and service monitoring approaches discussed in {{sec-monitor-proto}}, {{sec-monitor-dev}},
+   {{sec-monitor-net}}, and {{sec-monitor-svc}}.
 
    There are several parts of performance management to consider:
    protocol monitoring, device monitoring (the impact of new
@@ -1665,30 +1706,6 @@ The decision to incorporate all or part of these items into their work remains w
 - Can existing tooling be adapted or extended to deploy, monitor, and manage this specification before new tools are considered? ({{sec-oper-mgmt-tooling}})
   - Where new tooling is required, are its requirements limited to functions that adaptation or extension cannot provide? ({{sec-oper-mgmt-tooling}})
   - Is the management interface designed to remain stable under high-frequency automated query patterns, including those from AI-driven tools? ({{sec-ai-tooling}})
-
-# Changes Since RFC 5706 {#sec-changes-since-5706}
-
-   The following changes have been made to the guidelines published in  {{?RFC5706}}:
-
-   * Change intended status from Informational to Best Current Practice
-   * Indicate that this document updates RFC 2360 and add the relevant updated text
-   * Move the "Operational Considerations" checklist in {{Appendix A of ?RFC5706}} to a Checklist {{CHECKLIST}} maintained in GitHub
-
-   * Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
-
-   * Add a requirement for an "Operational Considerations" section in all new RFCs that document a technical specification for a New Protocol or Protocol Extension or describe their use in the IETF Stream, along with specific guidance on its content.
-
-   * Update the operational and manageability-related technologies to reflect over 15 years of advancements
-
-      * Provide focus and details on YANG-based standards, deprioritizing MIB Modules.
-
-      * Add a "YANG Data Model Considerations" section
-
-      * Update the "Available Management Technologies" landscape
-
-   * Add an "Operational and Management Tooling Considerations" section
-
-
 
 #  Acknowledgements {#sec-ack}
 {:numbered="false"}
