@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 1 February 2027                              Old Dog Consulting
+Expires: 5 February 2027                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                            31 July 2026
+                                                           4 August 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 February 2027.
+   This Internet-Draft will expire on 5 February 2027.
 
 Copyright Notice
 
@@ -323,8 +323,8 @@ Table of Contents
 
 *  Fault: See [RFC9940].
 
-*  Fault Management: The process of interpreting fault notifications
-   and other alerts and alarms, isolating faults, correlating them,
+*  Fault Management: The process of interpreting Fault notifications
+   and other alerts and alarms, isolating Faults, correlating them,
    and deducing underlying Causes.  See Section 5.4 for more
    information.
 
@@ -436,7 +436,7 @@ explained in {{RFC6291}}.
 
    Data Models (e.g., YANG) and other schema artifacts (JSON schema,
    YAML, CDDL, etc.) may be consumed out of the RFCs that specify them.
-   As such, it is recommended that operational aspects for a data model
+   As such, it is recommended that operational aspects for a Data Model
    (and similar artifacts) are documented as part of the model itself.
    Such considerations should not be duplicated in the narrative part of
    a specification that includes such artifacts.
@@ -488,7 +488,7 @@ explained in {{RFC6291}}.
    "There are no new operations or manageability requirements introduced
      by this document.
 
-     Explanation: [brief rationale goes here]"
+     [Brief rationale goes here]"
 
    The presence of such a section would indicate to the reader that due
    consideration has been given to manageability and operations.
@@ -1298,7 +1298,7 @@ explained in {{RFC6291}}.
 
    Probable Root Cause analysis is about working out where the
    foundational Fault or Problem might be.  Since one Fault may give
-   rise to another Fault or Problem, a probable root cause is commonly
+   rise to another Fault or Problem, a Probable Root Cause is commonly
    meant to describe the original, source event or combination of
    circumstances that is the foundation of all related Faults.
 
@@ -1312,7 +1312,7 @@ explained in {{RFC6291}}.
 5.4.4.  Fault Isolation
 
    It might be useful to isolate or quarantine Faults.  Protocol
-   Designers should consider fault isolation mechanisms appropriate to
+   Designers should consider Fault isolation mechanisms appropriate to
    the deployment environment.  At the network level, this might involve
    configuring next-hop devices to drop faulty messages to prevent them
    from propagating through the network, such as isolating a device that
@@ -2266,33 +2266,33 @@ A.3.  Management Information
 
 A.4.  Fault Management
 
-   *  What faults and events should be reported?  (Section 5.4)
+   *  What Faults and events should be reported?  (Section 5.4)
 
-      -  What essential faults, health indicators, alarms, and events
+      -  What essential Faults, health indicators, alarms, and events
          should be exposed?  (Section 5.4)
 
-      -  How will fault information be propagated?  (Section 5.4)
+      -  How will Fault information be propagated?  (Section 5.4)
 
    *  How is liveness monitored?  (Section 5.4.1)
 
       -  What testing and liveness detection features are built into the
          protocol?  (Section 5.4.1)
 
-   *  How are faults determined?  (Section 5.4.2)
+   *  How are Faults determined?  (Section 5.4.2)
 
-      -  What error counters or diagnostics help pinpoint faults?
+      -  What error counters or diagnostics help pinpoint Faults?
          (Section 5.4.2)
 
       -  What distinguishes faulty from correct messages?
          (Section 5.4.2)
 
-   *  How are faults localized and contained?  (Section 5.4.3,
+   *  How are Faults localized and contained?  (Section 5.4.3,
       Section 5.4.4)
 
-      -  Can the probable root cause of a fault be identified using
+      -  Can the Probable Root Cause of a Fault be identified using
          management information?  (Section 5.4.3)
 
-      -  Can faults be isolated or quarantined to prevent them from
+      -  Can Faults be isolated or quarantined to prevent them from
          propagating?  (Section 5.4.4)
 
 A.5.  Configuration Management
