@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 5 February 2027                              Old Dog Consulting
+Expires: 6 February 2027                              Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           4 August 2026
+                                                           5 August 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 February 2027.
+   This Internet-Draft will expire on 6 February 2027.
 
 Copyright Notice
 
@@ -83,7 +83,8 @@ Table of Contents
      3.2.  "Operational Considerations" Section Boilerplate When No
            New Considerations Exist
      3.3.  Placement of the "Operational Considerations" Section
-     3.4.  Update to RFC 2360
+     3.4.  Changes Since RFC 5706
+     3.5.  Update to RFC 2360
    4.  How Will the New Protocol or Protocol Extension Fit into the
            Current Environment?
      4.1.  Installation and Initial Setup
@@ -130,7 +131,6 @@ Table of Contents
      A.7.  Performance Management
      A.8.  Security Management
      A.9.  Operational and Management Tooling
-   Appendix B.  Changes Since RFC 5706
    Acknowledgements
    Contributors
    Authors' Addresses
@@ -163,10 +163,10 @@ Table of Contents
    on "Guide for Internet Standards Writers" to obsolete references to
    mandatory MIBs and instead focus on documenting holistic
    manageability and operational considerations as described in
-   Section 3.  The update is provided in Section 3.4.  Further, this
+   Section 3.  The update is provided in Section 3.5.  Further, this
    document removes outdated references and aligns with current
    practices, protocols, and technologies used in operating and managing
-   devices, networks, and services.  Refer to Appendix B for more
+   devices, networks, and services.  Refer to Section 3.4 for more
    details.
 
 1.1.  This Document
@@ -283,6 +283,11 @@ Table of Contents
    and documentation address common operations and management needs, is
    provided in [CHECKLIST].
 
+   Similarly, the Performance Metrics Directorate (PERFMETRDIR)
+   [PERFMETRDIR] can use this document, together with the guidelines in
+   [RFC6390], to inform reviews of the performance management aspects of
+   a New Protocol or Protocol Extension.
+
    This document is also of interest to the broader community, who wants
    to understand, contribute to, and review Internet-Drafts, taking
    operational considerations into account.
@@ -379,6 +384,8 @@ explained in {{RFC6291}}.
    administrators.  The term "operator" is used throughout this
    document in this broad sense unless the context explicitly
    requires a narrower scope.
+
+*  Performance Metrics: See [RFC7799].
 
 *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].
 
@@ -505,7 +512,41 @@ explained in {{RFC6291}}.
    section will find it easily, and this placement could simplify the
    development of tools to detect its presence.
 
-3.4.  Update to RFC 2360
+3.4.  Changes Since RFC 5706
+
+   The following changes have been made to the guidelines published in
+   [RFC5706]:
+
+   *  Change intended status from Informational to Best Current Practice
+
+   *  Indicate that this document updates RFC 2360 and add the relevant
+      updated text
+
+   *  Move the "Operational Considerations" checklist in Appendix A of
+      [RFC5706] to a Checklist [CHECKLIST] maintained in GitHub
+
+   *  Add a concise "Operational Considerations Checklist" appendix
+      (Appendix A) with key questions that should be addressed in
+      protocol specifications
+
+   *  Add a requirement for an "Operational Considerations" section in
+      all new RFCs that document a technical specification for a New
+      Protocol or Protocol Extension or describe their use in the IETF
+      Stream, along with specific guidance on its content.
+
+   *  Update the operational and manageability-related technologies to
+      reflect over 15 years of advancements
+
+      -  Provide focus and details on YANG-based standards,
+         deprioritizing MIB Modules.
+
+      -  Add a "YANG Data Model Considerations" section
+
+      -  Update the "Available Management Technologies" landscape
+
+   *  Add an "Operational and Management Tooling Considerations" section
+
+3.5.  Update to RFC 2360
 
    This document replaces this text from Section 2.14 of RFC 2360
    [BCP22]:
@@ -638,7 +679,10 @@ explained in {{RFC6291}}.
    infrastructure, particularly the network.  If so, the protocol
    specification should describe the nature of those changes, where they
    are required, and how they can be introduced in a manner that
-   facilitates deployment.
+   facilitates deployment.  Where possible, backward-compatible
+   approaches should be preferred over non-backward-compatible ones,
+   since they typically provide a smoother migration path with lower
+   cost and impact on existing deployments.
 
    Security operations (Section 4.5) are important to ensure the
    stability and security of networks.  Good security operation
@@ -966,6 +1010,10 @@ explained in {{RFC6291}}.
    the server end of a protocol than the client end, since the
    performance of the server might impact more nodes than the
    performance of a specific client.
+
+   The subsections from Section 5.4 through Section 5.8 are organized
+   following the Fault, Configuration, Accounting, Performance, and
+   Security (FCAPS) network management framework.
 
 5.1.  Available Management Technologies
 
@@ -1445,28 +1493,33 @@ explained in {{RFC6291}}.
    recommendations for the measurement of the performance
    characteristics of various internetworking technologies in a
    laboratory environment, including the systems or services that are
-   built from these technologies.  Each benchmarking recommendation
-   describes the class of equipment, system, or service being addressed;
-   discusses the performance characteristics that are pertinent to that
-   class; clearly identifies a set of metrics that aid in the
-   description of those characteristics; specifies the methodologies
-   required to collect said metrics; and lastly, presents the
-   requirements for the common, unambiguous reporting of benchmarking
-   results.  Search for "benchmark" in the RFC search tool.
+   built from these technologies, building on the foundational
+   methodology in [RFC2544].  Each benchmarking recommendation describes
+   the class of equipment, system, or service being addressed; discusses
+   the performance characteristics that are pertinent to that class;
+   clearly identifies a set of metrics that aid in the description of
+   those characteristics; specifies the methodologies required to
+   collect said metrics; and lastly, presents the requirements for the
+   common, unambiguous reporting of benchmarking results.  Search for
+   "benchmark" in the RFC search tool.
 
    Performance metrics may be useful in multiple environments and for
    different protocols.  The IETF, via the IP Performance Measurement
-   (IPPM) WG, has developed a set of standard metrics that can be
-   applied to the quality, performance, and reliability of Internet data
-   delivery services.  These metrics are designed such that they can be
-   performed by network operators, end users, or independent testing
-   groups.  The existing metrics might be applicable to the new
-   protocol.  Search for "metric" in the RFC search tool.  In some
-   cases, new metrics need to be defined.  It would be useful if the
-   protocol documentation identified the need for such new metrics.  For
-   performance management, it is often more important to report the time
-   spent in a state rather than just the current state.  Snapshots alone
-   are typically of less value.
+   (IPPM) WG, has developed a set of standard metrics, building on the
+   framework defined in [RFC2330], that can be applied to the quality,
+   performance, and reliability of Internet data delivery services.
+   These metrics are designed such that they can be performed by network
+   operators, end users, or independent testing groups.  The existing
+   metrics might be applicable to the new protocol.  Search for "metric"
+   in the RFC search tool.  In some cases, new metrics need to be
+   defined.  It would be useful if the protocol documentation identified
+   the need for such new metrics.  For performance management, it is
+   often more important to report the time spent in a state rather than
+   just the current state.  Snapshots alone are typically of less value.
+   [RFC7799] classifies measurement methods as active, passive, or
+   hybrid.  This classification is relevant to the protocol, device,
+   network, and service monitoring approaches discussed in
+   Section 5.7.1, Section 5.7.2, Section 5.7.3, and Section 5.7.4.
 
    There are several parts of performance management to consider:
    protocol monitoring, device monitoring (the impact of new
@@ -1902,6 +1955,10 @@ explained in {{RFC6291}}.
               (NEMOPS)", RFC 9968, DOI 10.17487/RFC9968, May 2026,
               <https://www.rfc-editor.org/rfc/rfc9968>.
 
+   [PERFMETRDIR]
+              "Performance Metrics Directorate (perfmetrdir)", 2026,
+              <<https://datatracker.ietf.org/group/perfmetrdir/about/>>.
+
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
               <https://www.rfc-editor.org/rfc/rfc1034>.
@@ -1919,9 +1976,19 @@ explained in {{RFC6291}}.
               Functional Specification", RFC 2205, DOI 10.17487/RFC2205,
               September 1997, <https://www.rfc-editor.org/rfc/rfc2205>.
 
+   [RFC2330]  Paxson, V., Almes, G., Mahdavi, J., and M. Mathis,
+              "Framework for IP Performance Metrics", RFC 2330,
+              DOI 10.17487/RFC2330, May 1998,
+              <https://www.rfc-editor.org/rfc/rfc2330>.
+
    [RFC2439]  Villamizar, C., Chandra, R., and R. Govindan, "BGP Route
               Flap Damping", RFC 2439, DOI 10.17487/RFC2439, November
               1998, <https://www.rfc-editor.org/rfc/rfc2439>.
+
+   [RFC2544]  Bradner, S. and J. McQuaid, "Benchmarking Methodology for
+              Network Interconnect Devices", RFC 2544,
+              DOI 10.17487/RFC2544, March 1999,
+              <https://www.rfc-editor.org/rfc/rfc2544>.
 
    [RFC2711]  Partridge, C. and A. Jackson, "IPv6 Router Alert Option",
               RFC 2711, DOI 10.17487/RFC2711, October 1999,
@@ -2038,6 +2105,10 @@ explained in {{RFC6291}}.
               Peer Streaming Peer Protocol (PPSPP)", RFC 7574,
               DOI 10.17487/RFC7574, July 2015,
               <https://www.rfc-editor.org/rfc/rfc7574>.
+
+   [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
+              Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
+              May 2016, <https://www.rfc-editor.org/rfc/rfc7799>.
 
    [RFC7950]  Bjorklund, M., Ed., "The YANG 1.1 Data Modeling Language",
               RFC 7950, DOI 10.17487/RFC7950, August 2016,
@@ -2375,40 +2446,6 @@ A.9.  Operational and Management Tooling
          high-frequency automated query patterns, including those from
          AI-driven tools?  (Section 6.1)
 
-Appendix B.  Changes Since RFC 5706
-
-   The following changes have been made to the guidelines published in
-   [RFC5706]:
-
-   *  Change intended status from Informational to Best Current Practice
-
-   *  Indicate that this document updates RFC 2360 and add the relevant
-      updated text
-
-   *  Move the "Operational Considerations" checklist in Appendix A of
-      [RFC5706] to a Checklist [CHECKLIST] maintained in GitHub
-
-   *  Add a concise "Operational Considerations Checklist" appendix
-      (Appendix A) with key questions that should be addressed in
-      protocol specifications
-
-   *  Add a requirement for an "Operational Considerations" section in
-      all new RFCs that document a technical specification for a New
-      Protocol or Protocol Extension or describe their use in the IETF
-      Stream, along with specific guidance on its content.
-
-   *  Update the operational and manageability-related technologies to
-      reflect over 15 years of advancements
-
-      -  Provide focus and details on YANG-based standards,
-         deprioritizing MIB Modules.
-
-      -  Add a "YANG Data Model Considerations" section
-
-      -  Update the "Available Management Technologies" landscape
-
-   *  Add an "Operational and Management Tooling Considerations" section
-
 Acknowledgements
 
    The authors thank the following individuals and groups, whose efforts
@@ -2429,7 +2466,8 @@ Acknowledgements
       Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang,
       Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan
       Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco
-      Tiloca, Jacqueline McCall, Tim Winters, and Eliot Lear.
+      Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, and Giuseppe
+      Fioccola.
 
    The document shepherd who has gone beyond normal shepherding
    duties to improve this document:  Alvaro Retana
