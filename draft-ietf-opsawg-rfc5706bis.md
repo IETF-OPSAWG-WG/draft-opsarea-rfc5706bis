@@ -376,7 +376,8 @@ This document does not describe interoperability requirements. As such, it does 
    should be included as well. A concise checklist of key questions is
    provided in {{sec-checklist}}.
 
-  Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
+  For New Protocol or Protocol Extension specifications that contain
+  Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.), such artifacts
   may be consumed out of the RFCs that specify them. As such, it is recommended
   that operational aspects for a Data Model (and similar artifacts) are
   documented as part of the model itself. Such considerations should not be
@@ -1047,16 +1048,32 @@ DM         DM        DM     --> concrete/detailed model
   distributed constructs can be reflected based on parameters available
   in the network.
 
-  For example, the status of a service may depend on the operational state
+  The status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
   cases, the YANG Data Model (and its accompanying documentation) should
   clearly describe how service-level status is derived from underlying
-  device-level information. Similarly, it is beneficial to define
-  events (and relevant triggered notifications) that indicate changes in an underlying state,
-  enabling reliable detection and correlation of service-affecting
-  conditions. Including such mechanisms improves the robustness of
+  network-level abstractions and device-level information. Similarly, it is beneficial to define
+  events (and relevant triggered notifications) at the device, network, and
+  service levels that indicate changes in an underlying state, enabling
+  reliable detection and correlation of service-affecting conditions across
+  these levels. Including such mechanisms improves the robustness of
   integrations and helps ensure consistent behavior across
   implementations.
+
+  For example:
+
+  > A device YANG module may define a notification indicating that a
+  hardware component, such as a line card, has failed. An implementation
+  (e.g., a network controller that is aware of device inventory) can
+  correlate such a device-level notification with the interfaces hosted
+  on the affected line card and their subsequent down status to determine
+  that a link supporting the network is no longer operational, and expose
+  a corresponding network-level notification using a Network Model such
+  as L3NM {{?RFC9182}}. Likewise, an implementation managing the service layer can
+  correlate that network-level notification with the affected service and
+  use a Service Model such as L3SM {{?RFC8299}} to report a
+  service-degraded event to the customer, without requiring the
+  service-facing model to expose device-level detail.
 
   Specific guidelines to consider when authoring any type of YANG
   modules are described in {{?RFC9907}}.
