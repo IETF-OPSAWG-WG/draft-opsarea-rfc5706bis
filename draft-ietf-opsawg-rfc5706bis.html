@@ -1670,7 +1670,8 @@ explained in {{RFC6291}}.
    Of course, additional relevant operational and manageability topics
    should be included as well. A concise checklist of key questions is
    provided in <a href="#sec-checklist" class="auto internal xref">Appendix A</a>.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-<p id="section-3.1-5">Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.)
+<p id="section-3.1-5">For New Protocol or Protocol Extension specifications that contain
+  Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.), such artifacts
   may be consumed out of the RFCs that specify them. As such, it is recommended
   that operational aspects for a Data Model (and similar artifacts) are
   documented as part of the model itself. Such considerations should not be
@@ -2428,18 +2429,36 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
   YANG modules, consider how the status and relationships of abstract or
   distributed constructs can be reflected based on parameters available
   in the network.<a href="#section-5.3.2-3" class="pilcrow">¶</a></p>
-<p id="section-5.3.2-4">For example, the status of a service may depend on the operational state
+<p id="section-5.3.2-4">The status of a service may depend on the operational state
   of multiple network elements to which the service is attached. In such
   cases, the YANG Data Model (and its accompanying documentation) should
   clearly describe how service-level status is derived from underlying
-  device-level information. Similarly, it is beneficial to define
-  events (and relevant triggered notifications) that indicate changes in an underlying state,
-  enabling reliable detection and correlation of service-affecting
-  conditions. Including such mechanisms improves the robustness of
+  network-level abstractions and device-level information. Similarly, it is beneficial to define
+  events (and relevant triggered notifications) at the device, network, and
+  service levels that indicate changes in an underlying state, enabling
+  reliable detection and correlation of service-affecting conditions across
+  these levels. Including such mechanisms improves the robustness of
   integrations and helps ensure consistent behavior across
   implementations.<a href="#section-5.3.2-4" class="pilcrow">¶</a></p>
-<p id="section-5.3.2-5">Specific guidelines to consider when authoring any type of YANG
-  modules are described in <span>[<a href="#RFC9907" class="cite xref">RFC9907</a>]</span>.<a href="#section-5.3.2-5" class="pilcrow">¶</a></p>
+<p id="section-5.3.2-5">For example:<a href="#section-5.3.2-5" class="pilcrow">¶</a></p>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="section-5.3.2-6.1">
+              <p id="section-5.3.2-6.1.1">A device YANG module may define a notification indicating that a
+  hardware component, such as a line card, has failed. An implementation
+  (e.g., a network controller that is aware of device inventory) can
+  correlate such a device-level notification with the interfaces hosted
+  on the affected line card and their subsequent down status to determine
+  that a link supporting the network is no longer operational, and expose
+  a corresponding network-level notification using a Network Model such
+  as L3NM <span>[<a href="#RFC9182" class="cite xref">RFC9182</a>]</span>. Likewise, an implementation managing the service layer can
+  correlate that network-level notification with the affected service and
+  use a Service Model such as L3SM <span>[<a href="#RFC8299" class="cite xref">RFC8299</a>]</span> to report a
+  service-degraded event to the customer, without requiring the
+  service-facing model to expose device-level detail.<a href="#section-5.3.2-6.1.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-5.3.2-7">Specific guidelines to consider when authoring any type of YANG
+  modules are described in <span>[<a href="#RFC9907" class="cite xref">RFC9907</a>]</span>.<a href="#section-5.3.2-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
