@@ -734,7 +734,7 @@ For further information on the security operations considerations discussed in t
    end-to-end operation of the New Protocol or Protocol Extension can be tested
    actively and passively, and how the correct data- or forwarding-plane
    function of each involved element can be verified to be working
-   correctly with the New Protocol or Protocol Extension. Which metrics are of interest?
+   correctly with the New Protocol or Protocol Extension.
 
    Protocol Designers should consider how to test the correct end-to-end
    operation of the service or network, how to verify correct
@@ -1310,7 +1310,7 @@ DM         DM        DM     --> concrete/detailed model
    description of those characteristics; specifies the methodologies
    required to collect said metrics; and lastly, presents the
    requirements for the common, unambiguous reporting of benchmarking
-   results. Search for "benchmark" in the RFC search tool.
+   results.
 
    Performance metrics may be useful in multiple environments and for
    different protocols. The IETF, via the IP Performance Measurement
