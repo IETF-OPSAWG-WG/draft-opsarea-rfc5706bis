@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-04T01:19:34.317985+00:00",
+  "timestamp": "2026-08-06T01:21:08.848125+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3768,15 +3768,15 @@
       "id": "I_kwDOOWPBqs8AAAABKuWEfw",
       "title": "RFC 9940 downref",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/258",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Does it need to be reclassified as informative?\n\nArgument: Cause/Fault/Problem are terminology-only citations, and the parallel \"Probable Root Cause\" entry is already informative \u2014 so the normative marking looks incidental.",
       "createdAt": "2026-07-30T00:06:31Z",
-      "updatedAt": "2026-07-31T13:37:38Z",
-      "closedAt": null,
+      "updatedAt": "2026-08-04T09:18:38Z",
+      "closedAt": "2026-08-04T09:18:38Z",
       "comments": [
         {
           "author": "xorrkaz",
@@ -18476,24 +18476,26 @@
       "id": "PR_kwDOOWPBqs73izPm",
       "title": "chore: Address feedback from Qin Wu",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/254",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "* Clarify language around Data Models\r\n* Indicate more explicitly that network-level models are in scope\r\n* Provide a concrete example tying together device, network, and service level interactions",
       "createdAt": "2026-07-28T16:02:57Z",
-      "updatedAt": "2026-08-04T01:16:12Z",
+      "updatedAt": "2026-08-05T18:59:31Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "qinwu-review",
-      "headRefOid": "9824dd0c2b9d70e7127ec38b202fa82ce236ee78",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "4e6c389f5180ce2d9b9e4f35dbeec2a574160a94",
+      "closedAt": "2026-08-05T18:59:29Z",
+      "mergedAt": "2026-08-05T18:59:29Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "cdc0293f05da2c63a42358a96136f3e5aa8d58a1"
+      },
       "comments": [],
       "reviews": [
         {
@@ -18574,6 +18576,92 @@
               "updatedAt": "2026-08-04T01:16:12Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIXt-Nw",
+          "commit": {
+            "abbreviatedOid": "9824dd0"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-04T16:24:06Z",
+          "updatedAt": "2026-08-04T16:24:06Z",
+          "comments": [
+            {
+              "originalPosition": 32,
+              "body": "Good point.  I reworded this.",
+              "createdAt": "2026-08-04T16:24:06Z",
+              "updatedAt": "2026-08-04T16:24:06Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIXuYTQ",
+          "commit": {
+            "abbreviatedOid": "9824dd0"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-04T16:24:53Z",
+          "updatedAt": "2026-08-04T16:24:54Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "Thanks!  I wasn't too keen on the \"to infer\" bit, so I reworded this some.  What do you think?",
+              "createdAt": "2026-08-04T16:24:53Z",
+              "updatedAt": "2026-08-04T16:24:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIX5xkw",
+          "commit": {
+            "abbreviatedOid": "4e6c389"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-04T16:48:28Z",
+          "updatedAt": "2026-08-04T16:48:28Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIaUpzw",
+          "commit": {
+            "abbreviatedOid": "4e6c389"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-04T22:19:32Z",
+          "updatedAt": "2026-08-04T22:19:32Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIaUvlg",
+          "commit": {
+            "abbreviatedOid": "9824dd0"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-04T22:19:50Z",
+          "updatedAt": "2026-08-04T22:19:50Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "Thanks Joe! ",
+              "createdAt": "2026-08-04T22:19:50Z",
+              "updatedAt": "2026-08-04T22:19:51Z"
+            }
+          ]
         }
       ]
     },
@@ -18638,24 +18726,26 @@
       "id": "PR_kwDOOWPBqs74QNUX",
       "title": "chore: Normalize defined-term capitalization and follow the document's own boilerplate",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/257",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "## Summary\n\nFault, Probable Root Cause, and Data Model are defined terms but were\ninconsistently lowercased. The adjective \"faulty\" is left lowercase and anchor names are unchanged.\n\nSection 3.2 also requires the no-new-considerations statement to be followed\nby an explanation labelled `Explanation:`; this document's own Operational\nConsiderations section now follows that template.\n",
       "createdAt": "2026-07-29T23:53:16Z",
-      "updatedAt": "2026-08-04T01:16:45Z",
+      "updatedAt": "2026-08-04T09:18:00Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e5cd978df3fd990f720d0858ae1cf7e586958f4a",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-defined-terms-and-boilerplate",
       "headRefOid": "cb8e65b55ee946e0fd31eb18666647784ba6b794",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-04T09:17:58Z",
+      "mergedAt": "2026-08-04T09:17:58Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "40b6a17ba4ee633f9332db8923ac8229c8050fd3"
+      },
       "comments": [],
       "reviews": [
         {
@@ -18731,24 +18821,26 @@
       "id": "PR_kwDOOWPBqs75J7nI",
       "title": "chore: Make the RFC 9940 reference informative",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/260",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "## Summary\n\nRFC 9940 is cited only for terminology (Cause, Fault, Problem), and the\nparallel Probable Root Cause entry is already informative. Moving it to\ninformative removes the downref flagged by idnits.\n\nCloses #258.\n",
       "createdAt": "2026-07-31T18:44:50Z",
-      "updatedAt": "2026-08-04T01:18:12Z",
+      "updatedAt": "2026-08-04T09:18:39Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "2242db5501a0e18fa0983b239aef1f097eb613c3",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-rfc9940-informative",
       "headRefOid": "82823a0974afd9b9047d4988d55d39736d9609c6",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-04T09:18:37Z",
+      "mergedAt": "2026-08-04T09:18:37Z",
+      "mergedBy": "cpignata",
+      "mergeCommit": {
+        "oid": "76fe961d8daad3c0b09b32931299df5fd65a2582"
+      },
       "comments": [],
       "reviews": [
         {
@@ -18775,6 +18867,61 @@
           "body": "",
           "createdAt": "2026-08-04T01:18:12Z",
           "updatedAt": "2026-08-04T01:18:12Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 261,
+      "id": "PR_kwDOOWPBqs76toNW",
+      "title": "Giuseppe comments",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/261",
+      "state": "MERGED",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-08-04T18:53:40Z",
+      "updatedAt": "2026-08-05T12:57:20Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "76fe961d8daad3c0b09b32931299df5fd65a2582",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "giuseppe-comments",
+      "headRefOid": "489026c5435c627cfc4ab2a454430a3f7ec87817",
+      "closedAt": "2026-08-05T12:57:18Z",
+      "mergedAt": "2026-08-05T12:57:18Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "c052fa40998aa77ab75cf7101a7409a6c7830f3c"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIbGxyw",
+          "commit": {
+            "abbreviatedOid": "489026c"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-05T01:30:31Z",
+          "updatedAt": "2026-08-05T01:30:31Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIej2yA",
+          "commit": {
+            "abbreviatedOid": "489026c"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "LGTM!",
+          "createdAt": "2026-08-05T11:31:43Z",
+          "updatedAt": "2026-08-05T11:31:43Z",
           "comments": []
         }
       ]
