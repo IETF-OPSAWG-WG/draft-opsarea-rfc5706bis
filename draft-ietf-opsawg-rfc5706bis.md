@@ -8,10 +8,11 @@ ipr: trust200902
 area: "Operations and Management"
 wg: Operations and Management Area Working Group
 kw:
-  - management
-  - operations
-  - operations and management
-  - ops considerations
+
+- management
+- operations
+- operations and management
+- ops considerations
 cat: bcp
 obsoletes: 5706
 updates: 2360
@@ -29,12 +30,12 @@ informative:
   CHECKLIST:
     title: Operations and Management Review Checklist
     date: 2025
-    target: https://github.com/IETF-OPS-DIR/Review-Template/tree/main
+    target: <https://github.com/IETF-OPS-DIR/Review-Template/tree/main>
 
   IETF-OPS-Dir:
     title: Ops Directorate (opsdir)
     date: 2025
-    target: https://datatracker.ietf.org/group/opsdir/about/
+    target: <https://datatracker.ietf.org/group/opsdir/about/>
 
   PERFMETRDIR:
     title: Performance Metrics Directorate (perfmetrdir)
@@ -42,37 +43,42 @@ informative:
     target: <https://datatracker.ietf.org/group/perfmetrdir/about/>
 
   IETF-HACKATHONS:
-    target: https://www.ietf.org/meeting/hackathons/
+    target: <https://www.ietf.org/meeting/hackathons/>
     title: IETF Hackathons
     author:
     - org: IETF
     date: 2025-05-01
 
   SECOPS:
-    target: https://niccs.cisa.gov/resources/glossary
+    target: <https://niccs.cisa.gov/resources/glossary>
     title: NICCS Glossary
     date: 2025-08
 
   BCP186:
 
-author:
+author
  -
+
     fullname: Benoit Claise
     organization: Everything OPS
     email: benoit@everything-ops.net
- -
+
+-
     fullname: Joe Clarke
     organization: Cisco
-    email: jclarke@cisco.com
+    email: <jclarke@cisco.com>
  -
+
     fullname: Adrian Farrel
     organization: Old Dog Consulting
     email: adrian@olddog.co.uk
- -
+
+-
     fullname: Samier Barguil
     organization: Nokia
-    email: samier.barguil_giraldo@nokia.com
+    email: <samier.barguil_giraldo@nokia.com>
  -
+
     fullname: Carlos Pignataro
     organization: Blue Fern Consulting
     email:
@@ -82,10 +88,11 @@ author:
  -
     fullname: Ran Chen
     organization: ZTE
-    email: chen.ran@zte.com.cn
+    email: <chen.ran@zte.com.cn>
 
-contributor:
+contributor
  -
+
     fullname: Thomas Graf
     organization: Swisscom
     email: thomas.graf@swisscom.com
@@ -499,7 +506,7 @@ For example:
 
    > BGP flap damping {{?RFC2439}} was designed to block high-frequency route flaps. Some BGP implementations were memory-constrained and elected not to support this function. Others found a conflict where path exploration caused false flap damping resulting in loss of reachability. As a result, flap damping was often not enabled network-wide, contrary to the intentions of the original designers. This behavior emerged only from operational experience at scale, and little text written at design time would have changed the outcome.
 
-##  Installation and Initial Setup {#sec-install}
+## Installation and Initial Setup {#sec-install}
 
    Anything that can be configured can be misconfigured.
    {{Section 3.8 of ?RFC1958}} ("Architectural Principles of the Internet")
@@ -554,7 +561,7 @@ For example:
    data retention, restoration limits, and cryptographic module
    interoperability when importing/exporting private key material. Refer to {{?RFC9881}} for an example of how such considerations are incorporated.
 
-##  Migration Path {#sec-migration}
+## Migration Path {#sec-migration}
 
    If the New Protocol or Protocol Extension is a new version of an existing one, or if it is
    replacing another technology, the Protocol Designer should consider
@@ -583,7 +590,7 @@ For example:
 state during the transition.
    Refer to {{?RFC8170}} for a detailed discussion on transition versus coexistence.
 
-##  Requirements on Other Protocols and Functional Components {#sec-other}
+## Requirements on Other Protocols and Functional Components {#sec-other}
 
    Protocol Designers should consider the requirements that the New
    Protocol might put on other protocols and functional components and
@@ -617,7 +624,7 @@ state during the transition.
    deprecation of the IPv6 Router Alert Option for New Protocols and
    {{Section 4.8 of RFC7126@BCP186}} for threats and advice related to IPv4 Router Alert.
 
-##  Impact on Network Operation {#sec-impact}
+## Impact on Network Operation {#sec-impact}
 
    The introduction of a New Protocol or Protocol Extension may
    have an impact on the operation of existing networks, as well as on the
@@ -717,8 +724,7 @@ Tooling needed by security operators should be considered when designing and dep
 
 For further information on the security operations considerations discussed in this section, refer to {{?I-D.parsons-opsawg-security-operations}}.
 
-
-##  Verifying Correct Operation {#sec-oper-verify}
+## Verifying Correct Operation {#sec-oper-verify}
 
    An important function that should be provided is guidance on how to
    verify the correct operation of a protocol. A Protocol Designer
@@ -752,7 +758,7 @@ Where protocol specifications result in messages (such as errors or warnings) be
 
 Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
-#  How Will the Protocol Be Managed? {#sec-mgmt-consid}
+# How Will the Protocol Be Managed? {#sec-mgmt-consid}
 
    The considerations of manageability should start from identifying the
    entities to be managed, as well as how the managed protocol is
@@ -769,18 +775,18 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
 
    The management model should take into account factors such as:
 
-   *  What type of management entities will be involved (agents, network
+- What type of management entities will be involved (agents, network
       management systems)?
 
-   *  What is the possible architecture (client-server, manager-agent,
+- What is the possible architecture (client-server, manager-agent,
       poll-driven or event-driven, auto-configuration, two-levels or
       hierarchical)?
 
-   *  What are the management operations (initial configuration, dynamic
+- What are the management operations (initial configuration, dynamic
       configuration, alarm and exception reporting, logging, performance
       monitoring, performance reporting, debugging)?
 
-   *  How are these operations performed (locally, remotely, atomic
+- How are these operations performed (locally, remotely, atomic
       operation, scripts)? Are they performed immediately or are they
       time scheduled, or event triggered?
 
@@ -831,7 +837,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    the Fault, Configuration, Accounting, Performance, and Security (FCAPS) network management
    framework.
 
-##  Available Management Technologies {#sec-mgmt-tech}
+## Available Management Technologies {#sec-mgmt-tech}
 
    The IETF provides several standardized management protocols suitable for
    various operational purposes, for example as outlined in {{?RFC6632}}.
@@ -845,7 +851,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    Readers seeking more in-depth definitions or explanations should consult
    the referenced materials.
 
-##  Interoperability {#sec-interop}
+## Interoperability {#sec-interop}
 
    Management interoperability is critical for enabling information exchange
    and operations across diverse network devices and management applications,
@@ -892,7 +898,6 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    IM serves as a conceptual blueprint for designers and operators, from which concrete DMs are derived
    for implementers. {{?RFC3444}} provides further guidance on distinguishing IMs from DMs.
 
-
 ~~~~ aasvg
            IM               --> conceptual/abstract model
            |                    for designers & operators
@@ -902,6 +907,7 @@ DM         DM        DM     --> concrete/detailed model
                                    for implementers
 
 ~~~~
+
 {: #fig-im-dm title="Information Models (IMs) and Data Models (DMs)" artwork-align="center"}
 
    Protocol Designers must identify the essential operational, configuration, state, and statistical
@@ -912,7 +918,7 @@ DM         DM        DM     --> concrete/detailed model
    To ensure interoperability, management protocol and Data Model standards should incorporate clear
    compliance clauses, specifying the expected level of support.
 
-##  Management Information {#sec-mgmt-info}
+## Management Information {#sec-mgmt-info}
 
    Languages used to describe an Information Model can influence the
    nature of the model. Using a particular data modeling language, such
@@ -972,12 +978,12 @@ DM         DM        DM     --> concrete/detailed model
    objects have an impact on fate sharing? YANG's relationships and
    constraints can help express and enforce these relationships.
 
-###  Information Model Design {#sec-im-design}
+### Information Model Design {#sec-im-design}
 
    This document recommends keeping the Information Model as simple as
    possible by applying the following criteria:
 
-   1.  Start with a small set of essential objects and make additions only as
+   1. Start with a small set of essential objects and make additions only as
        further objects are needed, with the objective of keeping the absolute
        number of objects as small as possible while still delivering the
        required function. Essential objects are those needed to answer the
@@ -988,24 +994,24 @@ DM         DM        DM     --> concrete/detailed model
        other pieces of information, it should not itself be represented as an
        object.
 
-   2.  Verify that each object serves a distinct management purpose and cannot
+   2. Verify that each object serves a distinct management purpose and cannot
        be derived from other objects already in the model. Objects that are
        redundant or that conflate multiple concerns should be split or
        eliminated.
 
-   3.  Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the Information Model.
+   3. Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the Information Model.
 
-   4.  Exclude objects that can be derived from others in this or
+   4. Exclude objects that can be derived from others in this or
        other information models.
 
-   5.  Avoid heavy instrumentation of performance-critical code paths or
+   5. Avoid heavy instrumentation of performance-critical code paths or
        state that is expensive to query or compute. A guideline is to limit
        instrumentation to one counter per significant processing stage or
        operational boundary per layer.
 
-   6.  When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?RFC9907}}.
+   6. When expressing an Information Model using YANG Data Structure Extensions {{RFC8791}} (thereby keeping it abstract and implementation-agnostic per {{?RFC3444}}), ensure that the Information Model remains simple, modular, and clear by following the authoring guidelines in {{?RFC9907}}.
 
-   7.  When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
+   7. When illustrating the abstract Information Model, use YANG Tree Diagrams {{RFC8340}} to provide a simple, standardized, and implementation-neutral model structure.
 
 ### YANG Data Model Considerations {#sec-yang-dm}
 
@@ -1015,7 +1021,7 @@ DM         DM        DM     --> concrete/detailed model
   {{Section 3.5.1 of ?RFC9907}}. A new specification
   may require or benefit from one or more of these YANG Data Model types.
 
-  *  Device Models - Also called Network Element Models,
+- Device Models - Also called Network Element Models,
      represent the configuration, operational state, and notifications of
      individual devices. These models are designed to distinguish
      between these types of data and support querying and updating
@@ -1023,7 +1029,7 @@ DM         DM        DM     --> concrete/detailed model
      how device-level models might fit with broader network and
      service Data Models.
 
-  *  Network Models - Also called Network Service Models, define abstractions
+- Network Models - Also called Network Service Models, define abstractions
      for managing the behavior and relationships of multiple devices
      and device subsystems within a network. As described in {{?RFC8199}},
      these models are used to manage network-wide. These abstractions are
@@ -1031,7 +1037,7 @@ DM         DM        DM     --> concrete/detailed model
      controllers. Examples of network models include the L3VPN Network Model
      (L3NM) {{?RFC9182}} and the L2VPN Network Model (L2VPN) {{?RFC9291}}.
 
-  *  Service Models - Also called Customer Service Models,
+- Service Models - Also called Customer Service Models,
      defined in {{?RFC8309}}, are designed to abstract the customer interface
      into a service. They consider customer-centric parameters such as
      Service Level Agreement (SLA) and high-level policy (e.g., network intent).
@@ -1080,7 +1086,6 @@ DM         DM        DM     --> concrete/detailed model
 
 ## Fault Management {#sec-fm-mgmt}
 
-
    Protocol Designers should identify and document
    essential Faults, health indicators, alarms, and events that must be
    propagated to management applications or exposed through a Data
@@ -1109,7 +1114,7 @@ DM         DM        DM     --> concrete/detailed model
    the event information within a given (high) margin of confidence?
    Can the latest events in the box be polled?
 
-###  Liveness Detection and Monitoring {#sec-monitor}
+### Liveness Detection and Monitoring {#sec-monitor}
 
    Protocol Designers should build in basic testing features
    (e.g., ICMP echo, UDP
@@ -1154,7 +1159,7 @@ DM         DM        DM     --> concrete/detailed model
 
    > Remote Monitoring (RMON) events/alarms provide a threshold-based mechanism.
 
-###  Probable Root Cause Analysis {#sec-cause-analysis}
+### Probable Root Cause Analysis {#sec-cause-analysis}
 
    Probable Root Cause analysis is about working out where the foundational
    Fault or Problem might be. Since one Fault may give rise to another Fault or
@@ -1168,7 +1173,7 @@ DM         DM        DM     --> concrete/detailed model
    notification), Probable Root Cause analysis can help find the failed link
    or node, or mis-configuration, within the end-to-end path.
 
-###  Fault Isolation {#sec-fault-isol}
+### Fault Isolation {#sec-fault-isol}
 
    It might be useful to isolate or quarantine Faults. Protocol Designers
    should consider Fault isolation mechanisms appropriate to the deployment
@@ -1182,7 +1187,7 @@ DM         DM        DM     --> concrete/detailed model
    device. The range of appropriate isolation mechanisms will depend on
    where the protocol is deployed and the nature of the Fault.
 
-##  Configuration Management {#sec-config-mgmt}
+## Configuration Management {#sec-config-mgmt}
 
    Configuration management applies to a broad range of deployment
    environments, including conventional network devices, IoT device fleets,
@@ -1275,7 +1280,7 @@ DM         DM        DM     --> concrete/detailed model
    should have default values suggested in the protocol specification
    and may not need to be otherwise configurable.
 
-##  Accounting Management {#sec-acc-mgmt}
+## Accounting Management {#sec-acc-mgmt}
 
    A Protocol Designer should consider whether it would be appropriate
    to collect usage information related to this protocol and, if so,
@@ -1289,7 +1294,7 @@ DM         DM        DM     --> concrete/detailed model
    designing a protocol whose usage might need to be monitored or when
    recommending a protocol to do usage accounting.
 
-##  Performance Management {#sec-perf-mgmt}
+## Performance Management {#sec-perf-mgmt}
 
    From a manageability point of view, it is important to determine how
    well a network deploying the protocol or technology defined in the
@@ -1342,7 +1347,7 @@ DM         DM        DM     --> concrete/detailed model
    conditions under which they may occur and possible mitigation
    strategies.
 
-###  Monitoring the Protocol {#sec-monitor-proto}
+### Monitoring the Protocol {#sec-monitor-proto}
 
    Certain properties of protocols are useful to monitor. The number of
    protocol packets received, the number of packets sent, and the number
@@ -1384,7 +1389,7 @@ DM         DM        DM     --> concrete/detailed model
    Therefore, a YANG "vlan-id" definition representing the
    12-bit VLAN ID used in the VLAN Tag header uses a range of "1..4094".
 
-###  Monitoring the Device {#sec-monitor-dev}
+### Monitoring the Device {#sec-monitor-dev}
 
    Consider whether device performance will be affected by the number of
    protocol entities being instantiated on the device. Designers of an
@@ -1394,7 +1399,7 @@ DM         DM        DM     --> concrete/detailed model
    current instances exceed the capacity of the implementation or the
    capacity of the device.
 
-###  Monitoring the Network {#sec-monitor-net}
+### Monitoring the Network {#sec-monitor-net}
 
    Consider whether network performance will be affected by the number
    of protocol entities being deployed.
@@ -1409,7 +1414,7 @@ DM         DM        DM     --> concrete/detailed model
    the protocol? Is it important to measure setup times, end-to-end
    connectivity, hop-by-hop connectivity, or network throughput?
 
-###  Monitoring the Service {#sec-monitor-svc}
+### Monitoring the Service {#sec-monitor-svc}
 
    What are the principal performance factors that need to be considered
    when measuring the performance of a service using the protocol? Is
@@ -1421,7 +1426,7 @@ DM         DM        DM     --> concrete/detailed model
    This includes responsiveness, smoothness (absence of jitter), throughput,
    and other "quality of experience" factors.
 
-##  Security Management {#sec-security-mgmt}
+## Security Management {#sec-security-mgmt}
 
    Protocol Designers should consider how to monitor and manage security
    aspects and vulnerabilities of the New Protocol or Protocol Extension.
@@ -1487,7 +1492,7 @@ DM         DM        DM     --> concrete/detailed model
 
    For example:
 
-   >    All commands entered by operators can be logged via syslog to provide
+   > All commands entered by operators can be logged via syslog to provide
    an audit trail.  Authentication events, including logins, logouts, and
    failed login attempts, can be recorded using the Secure Shell (SSH)
    Protocol {{?RFC4251}}, capturing the source of each connection.
@@ -1526,42 +1531,42 @@ DM         DM        DM     --> concrete/detailed model
    Specifically, the following tooling-related aspects should be considered in the operational considerations section,
    prioritizing the adaptation of existing tools:
 
-   *  Leveraging Existing Tooling: Before considering new tools, assess whether
+- Leveraging Existing Tooling: Before considering new tools, assess whether
       existing tooling, such as monitoring systems, logging platforms,
       configuration management systems, and/or orchestration frameworks, can be
       adapted to support the new specification. This may involve developing
       plugins, modules, or drivers that enable these tools to interact with
       the new specification.
 
-  *  Extending Existing Tools: Identify areas where existing tools can be
+- Extending Existing Tools: Identify areas where existing tools can be
      extended to provide the necessary visibility and control over the new
      specification. For example, if a new transport protocol is introduced,
      consider whether existing network monitoring tools can be extended to
      track its performance metrics or whether existing security tools can be
      adapted to analyze its traffic patterns.
 
-  *  New Tools: Only when existing tools are demonstrably
+- New Tools: Only when existing tools are demonstrably
      inadequate for managing and operating the elements of the new specification
      should the development of new tools be considered. In such cases,
      carefully define the specific requirements for these new tools, focusing
      on the functionalities that cannot be achieved through adaptation or
      extension of existing solutions.
 
-  *  IETF Hackathons for Manageability Testing:
+- IETF Hackathons for Manageability Testing:
      IETF Hackathons {{IETF-HACKATHONS}}
      provide an opportunity to test the functionality, interoperability,
      and manageability of New Protocols or Protocol Extensions. These events can be specifically
      leveraged to assess the operational (including manageability) implications
      of a New Protocol or Protocol Extension by focusing tasks on:
 
-     *  Adapting existing tools to interact with the new specification.
-     *  Developing example management scripts or modules for existing management
+  - Adapting existing tools to interact with the new specification.
+  - Developing example management scripts or modules for existing management
         platforms.
-     *  Testing the specification's behavior under various operational conditions.
-     *  Identifying potential tooling gaps and areas for improvement.
-     *  Creating example flows and use cases for manageability.
+  - Testing the specification's behavior under various operational conditions.
+  - Identifying potential tooling gaps and areas for improvement.
+  - Creating example flows and use cases for manageability.
 
-  *  Open Source for Tooling: If new tools are deemed necessary, or if significant
+- Open Source for Tooling: If new tools are deemed necessary, or if significant
      adaptations to existing tools are required, prioritize open source development
      with community involvement. Open source tools lower the barrier to entry,
      encourage collaboration, and provide operators with the flexibility to customize
@@ -1586,7 +1591,7 @@ DM         DM        DM     --> concrete/detailed model
    are also relevant to Performance Management (Section {{<sec-perf-mgmt}})
    and Security Management (Section {{<sec-security-mgmt}}).
 
-#  IANA Considerations {#sec-iana}
+# IANA Considerations {#sec-iana}
 
    This document does not have any IANA actions required.
 
@@ -1597,8 +1602,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Although this document focuses on operations and manageability guidance, it does not define a New Protocol, a Protocol Extension, or an architecture.
 
-
-#  Security Considerations {#sec-security}
+# Security Considerations {#sec-security}
 
    This document provides guidelines for Protocol Designers for
    considering manageability and operations. It introduces no new
@@ -1724,7 +1728,8 @@ The decision to incorporate all or part of these items into their work remains w
   - Where new tooling is required, are its requirements limited to functions that adaptation or extension cannot provide? ({{sec-oper-mgmt-tooling}})
   - Is the management interface designed to remain stable under high-frequency automated query patterns, including those from AI-driven tools? ({{sec-ai-tooling}})
 
-#  Acknowledgements {#sec-ack}
+# Acknowledgements {#sec-ack}
+
 {:numbered="false"}
 
 The authors thank the following individuals and groups,
@@ -1737,7 +1742,7 @@ The Area Director (AD) championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document, in roughly chronological order:
-: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, and Giuseppe Fioccola.
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, and Bo Wu.
 
 The document shepherd who has gone beyond normal shepherding duties to improve this document:
 : Alvaro Retana
