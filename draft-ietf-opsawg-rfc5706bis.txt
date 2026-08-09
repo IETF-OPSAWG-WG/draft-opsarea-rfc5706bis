@@ -7,14 +7,14 @@ Internet-Draft                                            Everything OPS
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 6 February 2027                              Old Dog Consulting
+Expires: 10 February 2027                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                           5 August 2026
+                                                           9 August 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 February 2027.
+   This Internet-Draft will expire on 10 February 2027.
 
 Copyright Notice
 
@@ -908,8 +908,7 @@ explained in {{RFC6291}}.
    operation of the New Protocol or Protocol Extension can be tested
    actively and passively, and how the correct data- or forwarding-plane
    function of each involved element can be verified to be working
-   correctly with the New Protocol or Protocol Extension.  Which metrics
-   are of interest?
+   correctly with the New Protocol or Protocol Extension.
 
    Protocol Designers should consider how to test the correct end-to-end
    operation of the service or network, how to verify correct protocol
@@ -1519,8 +1518,7 @@ explained in {{RFC6291}}.
    clearly identifies a set of metrics that aid in the description of
    those characteristics; specifies the methodologies required to
    collect said metrics; and lastly, presents the requirements for the
-   common, unambiguous reporting of benchmarking results.  Search for
-   "benchmark" in the RFC search tool.
+   common, unambiguous reporting of benchmarking results.
 
    Performance metrics may be useful in multiple environments and for
    different protocols.  The IETF, via the IP Performance Measurement
@@ -2485,8 +2483,8 @@ Acknowledgements
       Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang,
       Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan
       Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco
-      Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, and Giuseppe
-      Fioccola.
+      Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe
+      Fioccola, and Bo Wu.
 
    The document shepherd who has gone beyond normal shepherding
    duties to improve this document:  Alvaro Retana
