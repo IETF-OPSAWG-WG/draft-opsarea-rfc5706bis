@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-06T01:21:08.848125+00:00",
+  "timestamp": "2026-08-09T00:47:13.782453+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -18922,6 +18922,46 @@
           "body": "LGTM!",
           "createdAt": "2026-08-05T11:31:43Z",
           "updatedAt": "2026-08-05T11:31:43Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 262,
+      "id": "PR_kwDOOWPBqs77m6LW",
+      "title": "fix: Address some comments by Bo",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/262",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "While Bo called out several things, most had been done already.  The hyphen issues she reported don't seem to exist.  This change reviews some errant text we wanted to get rid of anyway.\r\n\r\nI think this may also close #259.",
+      "createdAt": "2026-08-06T13:29:05Z",
+      "updatedAt": "2026-08-08T15:43:46Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "cdc0293f05da2c63a42358a96136f3e5aa8d58a1",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "wubo-comments",
+      "headRefOid": "34edbe91fa7f900047c99df34dad9ab17bdfa022",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABIr9UnQ",
+          "commit": {
+            "abbreviatedOid": "cf66e96"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-06T20:11:54Z",
+          "updatedAt": "2026-08-08T15:42:44Z",
           "comments": []
         }
       ]
