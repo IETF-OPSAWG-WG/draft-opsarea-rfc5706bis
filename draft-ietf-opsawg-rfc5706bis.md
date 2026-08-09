@@ -734,7 +734,7 @@ For further information on the security operations considerations discussed in t
    end-to-end operation of the New Protocol or Protocol Extension can be tested
    actively and passively, and how the correct data- or forwarding-plane
    function of each involved element can be verified to be working
-   correctly with the New Protocol or Protocol Extension. Which metrics are of interest?
+   correctly with the New Protocol or Protocol Extension.
 
    Protocol Designers should consider how to test the correct end-to-end
    operation of the service or network, how to verify correct
@@ -1310,7 +1310,7 @@ DM         DM        DM     --> concrete/detailed model
    description of those characteristics; specifies the methodologies
    required to collect said metrics; and lastly, presents the
    requirements for the common, unambiguous reporting of benchmarking
-   results. Search for "benchmark" in the RFC search tool.
+   results.
 
    Performance metrics may be useful in multiple environments and for
    different protocols. The IETF, via the IP Performance Measurement
@@ -1737,7 +1737,7 @@ The Area Director (AD) championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document, in roughly chronological order:
-: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, and Giuseppe Fioccola.
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, and Bo Wu.
 
 The document shepherd who has gone beyond normal shepherding duties to improve this document:
 : Alvaro Retana
