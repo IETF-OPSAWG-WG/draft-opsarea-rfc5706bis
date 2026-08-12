@@ -2187,8 +2187,14 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
 <blockquote id="section-5.1-2">
           <p id="section-5.1-2.1">a MIB must be defined within the standard or in a companion document.<a href="#section-5.1-2.1" class="pilcrow">¶</a></p>
 </blockquote>
-<p id="section-5.1-3">Readers seeking more in-depth definitions or explanations should consult
-   the referenced materials.<a href="#section-5.1-3" class="pilcrow">¶</a></p>
+<p id="section-5.1-3">Data collection practice has evolved substantially since <span>[<a href="#RFC6632" class="cite xref">RFC6632</a>]</span> was
+   published. Designers should also consider mechanisms developed since,
+   including the BGP Monitoring Protocol (BMP) <span>[<a href="#RFC7854" class="cite xref">RFC7854</a>]</span>, subscription to
+   YANG notifications <span>[<a href="#RFC8639" class="cite xref">RFC8639</a>]</span> <span>[<a href="#RFC8641" class="cite xref">RFC8641</a>]</span>, and the alarm management
+   model <span>[<a href="#RFC8632" class="cite xref">RFC8632</a>]</span>; <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> provides a framework relating these to
+   one another.<a href="#section-5.1-3" class="pilcrow">¶</a></p>
+<p id="section-5.1-4">Readers seeking more in-depth definitions or explanations should consult
+   the referenced materials.<a href="#section-5.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-interop">
@@ -2486,12 +2492,18 @@ the L3VPN Service Model (L3SM) <span>[<a href="#RFC8299" class="cite xref">RFC82
    the lowest Fault be reported and the higher levels be suppressed?
    Should there be aggregated status indicators based on concatenation
    of propagated Faults from a given domain or device?<a href="#section-5.4-3" class="pilcrow">¶</a></p>
-<p id="section-5.4-4">Notifications (e.g., SNMP traps and informs, syslog, or protocol-specific mechanisms) can alert an operator when an
+<p id="section-5.4-4">The alarm management model <span>[<a href="#RFC8632" class="cite xref">RFC8632</a>]</span> already addresses many of these
+   questions, including alarm identification, severity, root cause and
+   impacted resource, and shelving for suppression; it also distinguishes
+   alarm state from the notifications that report it. Protocol Designers
+   should consider reusing it rather than defining new notification
+   structures.<a href="#section-5.4-4" class="pilcrow">¶</a></p>
+<p id="section-5.4-5">Notifications (e.g., SNMP traps and informs, syslog, or protocol-specific mechanisms) can alert an operator when an
    aspect of the New Protocol or Protocol Extension fails or encounters an error or failure
    condition.
    Should the event reporting provide guaranteed accurate delivery of
    the event information within a given (high) margin of confidence?
-   Can the latest events in the box be polled?<a href="#section-5.4-4" class="pilcrow">¶</a></p>
+   Can the latest events in the box be polled?<a href="#section-5.4-5" class="pilcrow">¶</a></p>
 <div id="sec-monitor">
 <section id="section-5.4.1">
           <h4 id="name-liveness-detection-and-moni">
@@ -3008,7 +3020,9 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
    frequent and potentially aggressive querying patterns on network
    devices and controllers. Therefore, protocols should be designed with Data
    Models and mechanisms intended to prevent overload from automated
-   interactions, while also accounting for AI-specific security
+   interactions, such as subscription to YANG notifications <span>[<a href="#RFC8639" class="cite xref">RFC8639</a>]</span>
+          <span>[<a href="#RFC8641" class="cite xref">RFC8641</a>]</span>, which bounds that load and provides change semantics rather
+   than repeated snapshots, while also accounting for AI-specific security
    considerations such as data integrity and protection against
    adversarial attacks on management interfaces. These considerations
    are also relevant to Performance Management (Section <a href="#sec-perf-mgmt" class="auto internal xref">5.7</a>)
@@ -3303,6 +3317,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
         <dd>
 <span class="refAuthor">Morton, A.</span>, <span class="refTitle">"Active and Passive Metrics and Methods (with Hybrid Types In-Between)"</span>, <span class="seriesInfo">RFC 7799</span>, <span class="seriesInfo">DOI 10.17487/RFC7799</span>, <time datetime="2016-05" class="refDate">May 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7799">https://www.rfc-editor.org/rfc/rfc7799</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC7854">[RFC7854]</dt>
+        <dd>
+<span class="refAuthor">Scudder, J., Ed.</span>, <span class="refAuthor">Fernando, R.</span>, and <span class="refAuthor">S. Stuart</span>, <span class="refTitle">"BGP Monitoring Protocol (BMP)"</span>, <span class="seriesInfo">RFC 7854</span>, <span class="seriesInfo">DOI 10.17487/RFC7854</span>, <time datetime="2016-06" class="refDate">June 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7854">https://www.rfc-editor.org/rfc/rfc7854</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC7950">[RFC7950]</dt>
         <dd>
 <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"The YANG 1.1 Data Modeling Language"</span>, <span class="seriesInfo">RFC 7950</span>, <span class="seriesInfo">DOI 10.17487/RFC7950</span>, <time datetime="2016-08" class="refDate">August 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7950">https://www.rfc-editor.org/rfc/rfc7950</a>&gt;</span>. </dd>
@@ -3335,6 +3353,18 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
         <dd>
 <span class="refAuthor">Wen, B.</span>, <span class="refAuthor">Fioccola, G., Ed.</span>, <span class="refAuthor">Xie, C.</span>, and <span class="refAuthor">L. Jalil</span>, <span class="refTitle">"A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service Delivery"</span>, <span class="seriesInfo">RFC 8466</span>, <span class="seriesInfo">DOI 10.17487/RFC8466</span>, <time datetime="2018-10" class="refDate">October 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8466">https://www.rfc-editor.org/rfc/rfc8466</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC8632">[RFC8632]</dt>
+        <dd>
+<span class="refAuthor">Vallin, S.</span> and <span class="refAuthor">M. Bjorklund</span>, <span class="refTitle">"A YANG Data Model for Alarm Management"</span>, <span class="seriesInfo">RFC 8632</span>, <span class="seriesInfo">DOI 10.17487/RFC8632</span>, <time datetime="2019-09" class="refDate">September 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8632">https://www.rfc-editor.org/rfc/rfc8632</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8639">[RFC8639]</dt>
+        <dd>
+<span class="refAuthor">Voit, E.</span>, <span class="refAuthor">Clemm, A.</span>, <span class="refAuthor">Gonzalez Prieto, A.</span>, <span class="refAuthor">Nilsen-Nygaard, E.</span>, and <span class="refAuthor">A. Tripathy</span>, <span class="refTitle">"Subscription to YANG Notifications"</span>, <span class="seriesInfo">RFC 8639</span>, <span class="seriesInfo">DOI 10.17487/RFC8639</span>, <time datetime="2019-09" class="refDate">September 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8639">https://www.rfc-editor.org/rfc/rfc8639</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8641">[RFC8641]</dt>
+        <dd>
+<span class="refAuthor">Clemm, A.</span> and <span class="refAuthor">E. Voit</span>, <span class="refTitle">"Subscription to YANG Notifications for Datastore Updates"</span>, <span class="seriesInfo">RFC 8641</span>, <span class="seriesInfo">DOI 10.17487/RFC8641</span>, <time datetime="2019-09" class="refDate">September 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8641">https://www.rfc-editor.org/rfc/rfc8641</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC8799">[RFC8799]</dt>
         <dd>
 <span class="refAuthor">Carpenter, B.</span> and <span class="refAuthor">B. Liu</span>, <span class="refTitle">"Limited Domains and Internet Protocols"</span>, <span class="seriesInfo">RFC 8799</span>, <span class="seriesInfo">DOI 10.17487/RFC8799</span>, <time datetime="2020-07" class="refDate">July 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8799">https://www.rfc-editor.org/rfc/rfc8799</a>&gt;</span>. </dd>
@@ -3350,6 +3380,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC9182">[RFC9182]</dt>
         <dd>
 <span class="refAuthor">Barguil, S.</span>, <span class="refAuthor">Gonzalez de Dios, O., Ed.</span>, <span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Munoz, L.</span>, and <span class="refAuthor">A. Aguado</span>, <span class="refTitle">"A YANG Network Data Model for Layer 3 VPNs"</span>, <span class="seriesInfo">RFC 9182</span>, <span class="seriesInfo">DOI 10.17487/RFC9182</span>, <time datetime="2022-02" class="refDate">February 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9182">https://www.rfc-editor.org/rfc/rfc9182</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9232">[RFC9232]</dt>
+        <dd>
+<span class="refAuthor">Song, H.</span>, <span class="refAuthor">Qin, F.</span>, <span class="refAuthor">Martinez-Julia, P.</span>, <span class="refAuthor">Ciavaglia, L.</span>, and <span class="refAuthor">A. Wang</span>, <span class="refTitle">"Network Telemetry Framework"</span>, <span class="seriesInfo">RFC 9232</span>, <span class="seriesInfo">DOI 10.17487/RFC9232</span>, <time datetime="2022-05" class="refDate">May 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9232">https://www.rfc-editor.org/rfc/rfc9232</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9291">[RFC9291]</dt>
         <dd>
@@ -3752,7 +3786,7 @@ whose efforts have helped to improve this document:<a href="#appendix-B-1" class
         <dd class="break"></dd>
 <dt id="appendix-B-2.5">Reviewers of this document, in roughly chronological order:</dt>
         <dd style="margin-left: 1.5em" id="appendix-B-2.6">
-          <p id="appendix-B-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, and Bo Wu.<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, Bo Wu, Qin Wu, and Saumya Dikshit.<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="appendix-B-2.7">The document shepherd who has gone beyond normal shepherding duties to improve this document:</dt>
