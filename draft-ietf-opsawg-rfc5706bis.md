@@ -58,7 +58,7 @@ informative:
 author:
  -
     fullname: Benoit Claise
-    organization: Everything OPS
+    organization: Everything OPS & Arrcus
     email: benoit@everything-ops.net
  -
     fullname: Joe Clarke
