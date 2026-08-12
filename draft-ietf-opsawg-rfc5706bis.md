@@ -842,6 +842,13 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    {: quote}
    > a MIB must be defined within the standard or in a companion document.
 
+   Data collection practice has evolved substantially since {{?RFC6632}} was
+   published. Designers should also consider mechanisms developed since,
+   including the BGP Monitoring Protocol (BMP) {{?RFC7854}}, subscription to
+   YANG notifications {{?RFC8639}} {{?RFC8641}}, and the alarm management
+   model {{?RFC8632}}; {{?RFC9232}} provides a framework relating these to
+   one another.
+
    Readers seeking more in-depth definitions or explanations should consult
    the referenced materials.
 
@@ -1101,6 +1108,13 @@ DM         DM        DM     --> concrete/detailed model
    the lowest Fault be reported and the higher levels be suppressed?
    Should there be aggregated status indicators based on concatenation
    of propagated Faults from a given domain or device?
+
+   The alarm management model {{?RFC8632}} already addresses many of these
+   questions, including alarm identification, severity, root cause and
+   impacted resource, and shelving for suppression; it also distinguishes
+   alarm state from the notifications that report it. Protocol Designers
+   should consider reusing it rather than defining new notification
+   structures.
 
    Notifications (e.g., SNMP traps and informs, syslog, or protocol-specific mechanisms) can alert an operator when an
    aspect of the New Protocol or Protocol Extension fails or encounters an error or failure
@@ -1580,7 +1594,9 @@ DM         DM        DM     --> concrete/detailed model
    frequent and potentially aggressive querying patterns on network
    devices and controllers. Therefore, protocols should be designed with Data
    Models and mechanisms intended to prevent overload from automated
-   interactions, while also accounting for AI-specific security
+   interactions, such as subscription to YANG notifications {{?RFC8639}}
+   {{?RFC8641}}, which bounds that load and provides change semantics rather
+   than repeated snapshots, while also accounting for AI-specific security
    considerations such as data integrity and protection against
    adversarial attacks on management interfaces. These considerations
    are also relevant to Performance Management (Section {{<sec-perf-mgmt}})
@@ -1737,7 +1753,7 @@ The Area Director (AD) championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document, in roughly chronological order:
-: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, and Bo Wu.
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, Bo Wu, Qin Wu, and Saumya Dikshit.
 
 The document shepherd who has gone beyond normal shepherding duties to improve this document:
 : Alvaro Retana
