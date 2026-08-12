@@ -2584,7 +2584,7 @@ Authors' Addresses
 
    Carlos Pignataro
    Blue Fern Consulting
-   Email: carlos@bluefern.consulting, cpignata@gmail.com
+   Email: carlos@bluefern.consulting
    URI:   https://bluefern.consulting
 
 
