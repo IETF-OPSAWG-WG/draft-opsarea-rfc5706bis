@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-11T00:49:33.297797+00:00",
+  "timestamp": "2026-08-13T00:57:52.117777+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3623,7 +3623,7 @@
       ],
       "body": "From Eliot Lear:\n\nI am not entirely certain that you are looking for an \"Operational\n    Considerations\" section so much as the answer within the IETF prior\n    to publication to the question, \u201cDid you consider how this\n    specification would be used in the field?\u201d  That is, in general, the\n    question I would expect ops directorate reviewers to ask, and\n    there's a lot of good discussion in this document on how to help\n    them evaluate answers, not to mention for the authors to know what\n    they should be thinking about.  RFC 1958\u2019s advice on avoiding\n    options was and remains *excellent*.",
       "createdAt": "2026-04-02T13:26:06Z",
-      "updatedAt": "2026-07-29T21:24:11Z",
+      "updatedAt": "2026-08-12T20:27:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -3660,6 +3660,13 @@
           "body": "On Adrian's point about making Operational Considerations optional when the material is already distributed through the document: I don't think the Security Considerations analogy holds. In practice that section isn't optional even when security is well-distributed \u2014 RFC 3552 and IESG review still require it, even as just a short pointer (\"covered in \u00a74.2/\u00a76; no additional considerations\"). It's mandatory because it's the canonical place reviewers check first, and distributed-but-unsummarized isn't a substitute.\n\nSame logic applies here: keep the section mandatory, but allow it to be brief \u2014 e.g., \"operational considerations are addressed throughout, specifically in \u00a7xyz, covering foo and bar.\" Since Eliot's original comment doesn't have a concrete actionable change attached, I'd suggest closing with a reply along these lines.",
           "createdAt": "2026-07-29T21:24:11Z",
           "updatedAt": "2026-07-29T21:24:11Z"
+        },
+        {
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Adrian's point about not forcing the section when the material is already\ndistributed through the document: PR #265 takes the middle path. The section\nstays mandatory, but where the considerations are already described elsewhere\nin the same document, it can summarize them and point to those sections\nrather than repeat the material or not include the section at all.\n\nWhile writing that, the other cases turned out to be scattered across\nSections 1.1, 3.1 and 3.2, so 3.1 now lists all five in one place, and the\nchecklist in Appendix A.1 matches.\n\nOn Eliot's original question I don't think there is anything further to\nchange: the reviewer crib sheet lives on the wiki, and the intent of the\nsection is to make authors give operations serious thought. Closing on that\nbasis once the PR merges.",
+          "createdAt": "2026-08-12T20:27:11Z",
+          "updatedAt": "2026-08-12T20:27:11Z"
         }
       ]
     },
@@ -6102,7 +6109,7 @@
       "labels": [],
       "body": "As we progress in evolving and editing the document, it is important to start capturing  particular \"meta-data\" sections, specifically:\r\n- Changes since RFC 5706\r\n- Acknowledgements\r\n\r\nMove the TODO to a subsection so as not to shift the whole numbering scheme for sections.\r\n\r\nFixes #41 ",
       "createdAt": "2025-05-15T14:33:30Z",
-      "updatedAt": "2025-05-15T18:28:30Z",
+      "updatedAt": "2026-08-12T12:11:14Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e0467db423d211559ac3f6eaa66781e439030734",
@@ -19014,6 +19021,157 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 263,
+      "id": "PR_kwDOOWPBqs7-Al--",
+      "title": "Update author organization for Benoit Claise",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/263",
+      "state": "MERGED",
+      "author": "bclaise",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "minor edition to my affiliation",
+      "createdAt": "2026-08-12T10:54:25Z",
+      "updatedAt": "2026-08-12T13:19:51Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "fe6c4dbcdf3f8bc08261ce476cb6a6551afccfbb",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "bclaise-patch-4",
+      "headRefOid": "0bf2c61f29cc510179b8ce62eb396be1688f34bc",
+      "closedAt": "2026-08-12T13:19:49Z",
+      "mergedAt": "2026-08-12T13:19:49Z",
+      "mergedBy": "AdrianFarrel",
+      "mergeCommit": {
+        "oid": "9c54adf6cba4a65d9681cef6538ae846090f8653"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJRJTdg",
+          "commit": {
+            "abbreviatedOid": "0bf2c61"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Fine",
+          "createdAt": "2026-08-12T13:19:29Z",
+          "updatedAt": "2026-08-12T13:19:29Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 264,
+      "id": "PR_kwDOOWPBqs7-CP9T",
+      "title": "Add telemetry pointers raised in WGLC",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/264",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nSaumya's WGLC review pointed out that the draft never mentions BMP,\nYANG-Push, the alarm model, or RFC 9232 anywhere.\n\nThree additions, all pointers, no new normative text:\n\n- 5.1: notes that practice has moved on since RFC 6632, and names BMP,\n  YANG-Push, the alarm model, and the RFC 9232 framework.\n- 5.4: RFC 8632 already covers the alarm hierarchy, aggregation, and\n  suppression questions we ask there, so point at it.\n- 6.1: the overload sentence now names subscription as the way to avoid the\n  polling, rather than only asking designers to withstand it.\n\nAlso adds Saumya to the acknowledgments, and Qin Wu, whose review was\naddressed in #254 but who was not added at the time.\n\nLeaving out the icon-requirements pointer he suggested, since that is an\nindividual draft. The incident-yang version he flagged updates itself at\nbuild time.\n",
+      "createdAt": "2026-08-12T11:54:09Z",
+      "updatedAt": "2026-08-12T13:27:12Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "fe6c4dbcdf3f8bc08261ce476cb6a6551afccfbb",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-telemetry-pointers",
+      "headRefOid": "7db99794dd4cc2766e61af399c12adfca9f1eae8",
+      "closedAt": "2026-08-12T13:27:09Z",
+      "mergedAt": "2026-08-12T13:27:09Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "efedf2e489f9e66db03c80d0130ce10fd4159d67"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJRGZOw",
+          "commit": {
+            "abbreviatedOid": "7db9979"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-12T13:14:02Z",
+          "updatedAt": "2026-08-12T13:14:02Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJRLGDA",
+          "commit": {
+            "abbreviatedOid": "7db9979"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "All looks good",
+          "createdAt": "2026-08-12T13:22:47Z",
+          "updatedAt": "2026-08-12T13:22:47Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 265,
+      "id": "PR_kwDOOWPBqs7-QlbJ",
+      "title": "Summarize the Operational Considerations cases",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/265",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nIssue #237 asked whether we should still require an \"Operational\nConsiderations\" section when the considerations are already described\nthroughout the document. This says yes, but the section can be a summary with\npointers rather than a repeat.\n\nWhile adding that, the other cases turned out to be scattered across Sections\n1.1, 3.1 and 3.2, so Section 3.1 now lists all five in one place: normal,\ntopic not relevant, nothing new, described elsewhere in the same document, and\ncarried in a separate document.\n\nAppendix A.1 gets the same five, so the checklist and the body agree.\n\nThe list is descriptive. The requirements themselves stay where they were.\n\nCloses #237.\n",
+      "createdAt": "2026-08-12T20:27:03Z",
+      "updatedAt": "2026-08-12T20:27:34Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "efedf2e489f9e66db03c80d0130ce10fd4159d67",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-opcons-cases",
+      "headRefOid": "73bcd55136af19aaf1a0d201ce3c92b669e009ba",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 266,
+      "id": "PR_kwDOOWPBqs7-QwS8",
+      "title": "Remove secondary email address from author block",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/266",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nDrops cpignata@gmail.com from my author entry, leaving\ncarlos@bluefern.consulting.\n",
+      "createdAt": "2026-08-12T20:34:08Z",
+      "updatedAt": "2026-08-12T20:53:00Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "efedf2e489f9e66db03c80d0130ce10fd4159d67",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-drop-gmail",
+      "headRefOid": "a1b26eafcf9c28d327f962e0ca4e06907ae2f8c7",
+      "closedAt": "2026-08-12T20:52:58Z",
+      "mergedAt": "2026-08-12T20:52:58Z",
+      "mergedBy": "AdrianFarrel",
+      "mergeCommit": {
+        "oid": "d660363569cc374d2a427334f712941ab1a8c8c7"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
