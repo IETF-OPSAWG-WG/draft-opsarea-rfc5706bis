@@ -39,7 +39,7 @@ informative:
   PERFMETRDIR:
     title: Performance Metrics Directorate (perfmetrdir)
     date: 2026
-    target: <https://datatracker.ietf.org/group/perfmetrdir/about/>
+    target: https://datatracker.ietf.org/group/perfmetrdir/about/
 
   IETF-HACKATHONS:
     target: https://www.ietf.org/meeting/hackathons/
@@ -228,7 +228,7 @@ contributor:
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in {{CHECKLIST}}.
 
-   Similarly, the Performance Metrics Directorate (PERFMETRDIR) {{PERFMETRDIR}} can use this document,
+   Similarly, the Performance Metrics Directorate {{PERFMETRDIR}} can use this document,
    together with the guidelines in {{?RFC6390}}, to inform reviews of the performance management aspects
    of a New Protocol or Protocol Extension.
 
@@ -241,9 +241,9 @@ This document does not describe interoperability requirements. As such, it does 
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
-- Cause: See {{?RFC9940}}.
+* Cause: See {{?RFC9940}}.
 
-- CLI: Command Line Interface. A human-oriented interface, typically
+* CLI: Command Line Interface. A human-oriented interface, typically
       a Proprietary Interface, to hardware or software devices
       (e.g., hosts, routers, or operating systems). The commands, their syntax,
       and the precise semantics of the parameters may vary considerably
@@ -251,7 +251,7 @@ This document does not describe interoperability requirements. As such, it does 
       vendor, and even between different versions or releases of a single
       product. No attempt at standardizing CLIs has been made by the IETF.
 
-- Data Model: A set of mechanisms for representing, organizing, storing,
+* Data Model: A set of mechanisms for representing, organizing, storing,
       and handling data within a particular type of data store or repository.
       This usually comprises a collection of data structures such as lists, tables,
       relations, etc., a collection of operations that can be applied to the
@@ -262,20 +262,20 @@ This document does not describe interoperability requirements. As such, it does 
       discussion of Data Models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgmt-info}}.
 
-- Fault: See {{?RFC9940}}.
+* Fault: See {{?RFC9940}}.
 
-- Fault Management: The process of interpreting Fault notifications and other alerts
+* Fault Management: The process of interpreting Fault notifications and other alerts
       and alarms, isolating Faults, correlating them, and deducing underlying
       Causes. See {{sec-fm-mgmt}} for more information.
 
-- Information Model: An abstraction and representation of the
+* Information Model: An abstraction and representation of the
       entities in a managed environment, their properties, attributes
       and operations, and the way that they relate to each other. The model is
       independent of any specific software usage, protocol,
       or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for
       further discussion of Information Models.
 
-- Network Device: A device that implements one or more network
+* Network Device: A device that implements one or more network
       protocols and participates in network operations. This term
       encompasses a broad range of implementations, including conventional
       network infrastructure equipment (e.g., routers and switches), end
@@ -283,35 +283,35 @@ This document does not describe interoperability requirements. As such, it does 
       workloads. In this document, the term is used generically to mean
       any managed entity implementing the protocol under consideration.
 
-- New Protocol and Protocol Extension: These terms are used in this document
+* New Protocol and Protocol Extension: These terms are used in this document
       to identify entirely new protocols, new versions of existing
       protocols, and extensions to protocols.
       The application of New Protocols and Protocol Extensions to different
       scenarios, and their use in delivering services, procedures, mechanisms,
       or applications, falls within the scope of this definition.
 
-- OAM: Operations, Administration, and Maintenance {{?RFC6291}}
+* OAM: Operations, Administration, and Maintenance {{?RFC6291}}
       {{?RFC10014}} is the term given to the
       combination of:
 
-      1. Operation activities that are undertaken to keep the
-         network running as intended. They include monitoring of the network.
+   1. Operation activities that are undertaken to keep the
+      network running as intended. They include monitoring of the network.
 
-      2. Administration activities that keep track of resources in the
-         network and how they are used. They include the bookkeeping necessary
-         to track networking resources.
+   2. Administration activities that keep track of resources in the
+      network and how they are used. They include the bookkeeping necessary
+      to track networking resources.
 
-      3. Maintenance activities focused on facilitating repairs and upgrades.
-         They also involve corrective and preventive measures to make the
-         managed network run more effectively.
+   3. Maintenance activities focused on facilitating repairs and upgrades.
+      They also involve corrective and preventive measures to make the
+      managed network run more effectively.
 
-      The broader concept of "operations and management" that is the
-      subject of this document encompasses OAM, in addition to other
-      management and provisioning tools and concepts. This is
-      sometimes known as "OAM and Management" or "O&M" as
-      explained in {{?RFC6291}}.
+   The broader concept of "operations and management" that is the
+   subject of this document encompasses OAM, in addition to other
+   management and provisioning tools and concepts. This is
+   sometimes known as "OAM and Management" or "O&M" as
+   explained in {{?RFC6291}}.
 
-- Operator: A person or organization responsible for deploying and managing
+* Operator: A person or organization responsible for deploying and managing
       systems, services, or networks that run or rely on a protocol implementation.
       This includes, but is not limited to,
       network operators, cloud service administrators, IoT device fleet
@@ -320,13 +320,13 @@ This document does not describe interoperability requirements. As such, it does 
       in this broad sense unless the context explicitly requires a narrower
       scope.
 
-- Performance Metrics: See {{?RFC7799}}.
+* Performance Metrics: See {{?RFC7799}}.
 
-- Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
+* Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
 
-- Problem: See {{?RFC9940}}.
+* Problem: See {{?RFC9940}}.
 
-- Proprietary Interface: An interface to manage a network element
+* Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
       semantics typically vary significantly between implementations.
       Examples of proprietary interfaces include CLI,
@@ -334,11 +334,11 @@ This document does not describe interoperability requirements. As such, it does 
       Graphical User Interface (GUI), and vendor-specific application
       programming interface (API).
 
-- Protocol Designer: An individual, a group of
+* Protocol Designer: An individual, a group of
       people, or an IETF WG involved in the development and specification
       of New Protocols or Protocol Extensions.
 
-- Technical Document:
+* Technical Document:
       This includes any document that describes the
       design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.
 
@@ -710,6 +710,8 @@ Protocol Designers should account for MTU constraints when designing protocols t
 
    Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of a New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their networks, systems, and devices consistently.
 Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging.
+
+An increasing number of New Protocols and Protocol Extensions encrypt metadata that was previously available to passive inspection, such as QUIC {{?RFC9000}}, TLS 1.3 {{?RFC8446}}, Encrypted Client Hello {{?RFC9849}}, and DNS over HTTPS (DoH) {{?RFC8484}}. This creates a tension between the privacy goals of such protocols and the visibility that security operators have historically relied upon. Protocol Designers should acknowledge this tension and, where passive visibility is reduced, consider alternative diagnostic mechanisms, such as endpoint-based telemetry or logging, that preserve operators' ability to detect and respond to threats without undermining the protocol's privacy objectives.
 
 Tooling needed by security operators should be considered when designing and deploying a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. The absence of such tooling is not, by itself, a reason to delay publication of the specification. Indicators of compromise, and the means to detect exploitation, tend to evolve only as operational experience accumulates and as attacks emerge.  Detailed forensic and tooling guidance may therefore be developed after the protocol is specified and is expected to be refined over time (see also {{sec-oper-mgmt-tooling}}).
 
@@ -1616,7 +1618,10 @@ DM         DM        DM     --> concrete/detailed model
 
    This document provides guidelines for Protocol Designers for
    considering manageability and operations. It introduces no new
-   security concerns.
+   security concerns. Protocol Designers seeking guidance on security-related
+   management considerations for New Protocols or Protocol Extensions,
+   such as monitoring, access control, and secure transport, should
+   refer to {{sec-security-mgmt}}.
 
 --- back
 
@@ -1751,7 +1756,7 @@ The Area Director (AD) championing the update:
 : Med Boucadair, who initiated and championed the effort to refresh RFC 5706, 15 years after its publication, building on an idea originally suggested by Carlos Pignataro.
 
 Reviewers of this document, in roughly chronological order:
-: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, Bo Wu, Qin Wu, and Saumya Dikshit.
+: Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammell, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, Bo Wu, Qin Wu, Saumya Dikshit, and Paul Aitken.
 
 The document shepherd who has gone beyond normal shepherding duties to improve this document:
 : Alvaro Retana
