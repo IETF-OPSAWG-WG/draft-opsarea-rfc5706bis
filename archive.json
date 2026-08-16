@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-13T00:57:52.117777+00:00",
+  "timestamp": "2026-08-16T00:34:46.954712+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -102,6 +102,11 @@
       "name": "Authors-Experience",
       "description": "Feedback from authors following guidance",
       "color": "1ef215"
+    },
+    {
+      "name": "OPSAWG-WGLC",
+      "description": null,
+      "color": "aaaaaa"
     }
   ],
   "issues": [
@@ -3822,6 +3827,39 @@
           "body": "Leveraging directorates instead of the current text has my support!",
           "createdAt": "2026-07-31T18:39:44Z",
           "updatedAt": "2026-07-31T18:39:44Z"
+        }
+      ]
+    },
+    {
+      "number": 267,
+      "id": "I_kwDOOWPBqs8AAAABMvRGeg",
+      "title": "Use of BCP 14 keywords",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/267",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [
+        "OPSAWG-WGLC"
+      ],
+      "body": "From Paul Aitken:\n\nSection 2 / Section 3.1 -- Normative language\n \nSection 2 states the document does not use BCP 14 keywords. Section 3.1 then says Internet-Drafts \"are required to include\" an Operational Considerations section, and Section 3.2 says the section \"must contain\" specific boilerplate.\n \nSince this is a BCP introducing a new process requirement, could the authors clarify the intended strength?  The lowercase \"are required\" and \"must\" are ambiguous without the BCP 14 framework. One approach: use BCP 14 keywords only in Section 3, which establishes the requirement, while leaving the rest of the document in descriptive language.",
+      "createdAt": "2026-08-14T08:33:14Z",
+      "updatedAt": "2026-08-14T17:28:58Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I like Paul's suggestion here to use the normative keywords only to set the requirement for the Ops Consideration section.",
+          "createdAt": "2026-08-14T08:33:57Z",
+          "updatedAt": "2026-08-14T08:33:57Z"
+        },
+        {
+          "author": "aretana",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Take a look at https://datatracker.ietf.org/doc/statement-iesg-statement-on-clarifying-the-use-of-bcp-14-key-words/\n\nAccording to this IESG Statement, the BCP 14 keywords should be used only when \u201cactually required for interoperation or to limit behavior which has potential for causing harm.\u201d It also says that keywords are not required for normative guidance.",
+          "createdAt": "2026-08-14T17:28:58Z",
+          "updatedAt": "2026-08-14T17:28:58Z"
         }
       ]
     }
@@ -19131,7 +19169,7 @@
       "labels": [],
       "body": "## Summary\n\nIssue #237 asked whether we should still require an \"Operational\nConsiderations\" section when the considerations are already described\nthroughout the document. This says yes, but the section can be a summary with\npointers rather than a repeat.\n\nWhile adding that, the other cases turned out to be scattered across Sections\n1.1, 3.1 and 3.2, so Section 3.1 now lists all five in one place: normal,\ntopic not relevant, nothing new, described elsewhere in the same document, and\ncarried in a separate document.\n\nAppendix A.1 gets the same five, so the checklist and the body agree.\n\nThe list is descriptive. The requirements themselves stay where they were.\n\nCloses #237.\n",
       "createdAt": "2026-08-12T20:27:03Z",
-      "updatedAt": "2026-08-12T20:27:34Z",
+      "updatedAt": "2026-08-14T10:33:08Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "efedf2e489f9e66db03c80d0130ce10fd4159d67",
@@ -19143,7 +19181,21 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJjqVaw",
+          "commit": {
+            "abbreviatedOid": "73bcd55"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "Looks good.",
+          "createdAt": "2026-08-14T10:33:08Z",
+          "updatedAt": "2026-08-14T10:33:08Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 266,
@@ -19172,6 +19224,59 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 268,
+      "id": "PR_kwDOOWPBqs7_BBHc",
+      "title": "chore: Address comments from Paul Aitken",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/268",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "* Fix formatting issues introduced by my markdown linter (bad Joe)\r\n* Add a statement about the tension between privacy and passive visibility\r\n* Fix Brian Trammell's name spelling\r\n* Point to our own security guidelines for protocols",
+      "createdAt": "2026-08-14T09:02:30Z",
+      "updatedAt": "2026-08-14T10:51:14Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d660363569cc374d2a427334f712941ab1a8c8c7",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "aitken-comments",
+      "headRefOid": "1d6fe67789bcca107322a13102629bc7735894db",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJjOI0A",
+          "commit": {
+            "abbreviatedOid": "1d6fe67"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Looks excellent!",
+          "createdAt": "2026-08-14T09:27:31Z",
+          "updatedAt": "2026-08-14T09:27:31Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJjyDBQ",
+          "commit": {
+            "abbreviatedOid": "1d6fe67"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-14T10:51:14Z",
+          "updatedAt": "2026-08-14T10:51:14Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
