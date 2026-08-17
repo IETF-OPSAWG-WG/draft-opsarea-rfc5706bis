@@ -440,6 +440,28 @@ Table of Contents
    included as well.  A concise checklist of key questions is provided
    in Appendix A.
 
+   The section is always present.  What it contains depends on the case:
+
+   *  Where the New Protocol or Protocol Extension raises operational
+      and manageability considerations, the section discusses the
+      relevant topics raised in this document.
+
+   *  Where one or more of those topics is not relevant, the section
+      briefly explains why.
+
+   *  Where there are no new operations or manageability requirements at
+      all, the section contains the statement in Section 3.2, followed
+      by a brief rationale.
+
+   *  Where the considerations are already described in other parts of
+      the same document, the section summarizes them and points to the
+      relevant sections rather than repeating the material.
+
+   *  Where the considerations require significant text and are
+      presented in a separate document, the section contains a short
+      overview and a normative reference to that document, as described
+      in Section 1.1.
+
    For New Protocol or Protocol Extension specifications that contain
    Data Models (e.g., YANG) and other schema artifacts (JSON schema,
    YAML, CDDL, etc.), such artifacts may be consumed out of the RFCs
@@ -2332,9 +2354,20 @@ A.1.  Documentation Requirements
       section, placed immediately before the Security Considerations
       section?  (Section 3.1, Section 3.3)
 
+   *  If one or more of the topics raised in this document is not
+      relevant, does the section briefly explain why?  (Section 3.1)
+
    *  If there are no new operational considerations, does the section
       include the appropriate boilerplate with explanation?
       (Section 3.2)
+
+   *  If the considerations are described elsewhere in the same
+      document, does the section summarize them and point to those
+      sections?  (Section 3.1)
+
+   *  If the considerations are documented separately, does the section
+      give a short overview and a normative reference to that document?
+      (Section 1.1)
 
 A.2.  Operational Fit
 

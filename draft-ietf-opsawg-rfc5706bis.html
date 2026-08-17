@@ -1672,25 +1672,53 @@ The broader concept of "operations and management" that is the
    Of course, additional relevant operational and manageability topics
    should be included as well. A concise checklist of key questions is
    provided in <a href="#sec-checklist" class="auto internal xref">Appendix A</a>.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-<p id="section-3.1-5">For New Protocol or Protocol Extension specifications that contain
+<p id="section-3.1-5">The section is always present. What it contains depends on the case:<a href="#section-3.1-5" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.1-6.1">
+            <p id="section-3.1-6.1.1">Where the New Protocol or Protocol Extension raises operational and
+manageability considerations, the section discusses the relevant
+topics raised in this document.<a href="#section-3.1-6.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-6.2">
+            <p id="section-3.1-6.2.1">Where one or more of those topics is not relevant, the section
+briefly explains why.<a href="#section-3.1-6.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-6.3">
+            <p id="section-3.1-6.3.1">Where there are no new operations or manageability requirements at
+all, the section contains the statement in <a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>, followed
+by a brief rationale.<a href="#section-3.1-6.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-6.4">
+            <p id="section-3.1-6.4.1">Where the considerations are already described in other parts of the
+same document, the section summarizes them and points to the relevant
+sections rather than repeating the material.<a href="#section-3.1-6.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-6.5">
+            <p id="section-3.1-6.5.1">Where the considerations require significant text and are presented in
+a separate document, the section contains a short overview and a
+normative reference to that document, as described in
+<a href="#sec-this-doc" class="auto internal xref">Section 1.1</a>.<a href="#section-3.1-6.5.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-3.1-7">For New Protocol or Protocol Extension specifications that contain
   Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.), such artifacts
   may be consumed out of the RFCs that specify them. As such, it is recommended
   that operational aspects for a Data Model (and similar artifacts) are
   documented as part of the model itself. Such considerations should not be
-  duplicated in the narrative part of a specification that includes such artifacts.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
-<p id="section-3.1-6">For example:<a href="#section-3.1-6" class="pilcrow">¶</a></p>
+  duplicated in the narrative part of a specification that includes such artifacts.<a href="#section-3.1-7" class="pilcrow">¶</a></p>
+<p id="section-3.1-8">For example:<a href="#section-3.1-8" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-3.1-7.1">
-            <p id="section-3.1-7.1.1">Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
+<li class="normal ulEmpty" id="section-3.1-9.1">
+            <p id="section-3.1-9.1.1">Readers may refer to the following non-exhaustive list for examples of specifications, covering various areas,
 with adequate documentation of operational considerations, including manageability: <span>[<a href="#RFC9953" class="cite xref">RFC9953</a>]</span>,
 <span>[<a href="#I-D.ietf-suit-mti" class="cite xref">I-D.ietf-suit-mti</a>]</span>, <span>[<a href="#RFC9937" class="cite xref">RFC9937</a>]</span>, <span>[<a href="#RFC7574" class="cite xref">RFC7574</a>]</span>, <span>[<a href="#RFC9877" class="cite xref">RFC9877</a>]</span>, and <span>[<a href="#RFC9552" class="cite xref">RFC9552</a>]</span>.
 Given the various available transport alternatives, <span>[<a href="#RFC9953" class="cite xref">RFC9953</a>]</span> discusses co-existence with
 those and clarifies some key deployment aspects such as redirection, forwarding loop prevention, and error handling.
 Also, <span>[<a href="#I-D.ietf-ippm-ioam-integrity-yang" class="cite xref">I-D.ietf-ippm-ioam-integrity-yang</a>]</span> is an example of a document that follows
-the above guidance by documenting operational aspects as part of the YANG module itself.<a href="#section-3.1-7.1.1" class="pilcrow">¶</a></p>
+the above guidance by documenting operational aspects as part of the YANG module itself.<a href="#section-3.1-9.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-3.1-8">For architecture documents, an "Operational Considerations" section is expected only where the architecture introduces new operational considerations with normative implications for downstream protocol designs. When included, it should focus on describing the intended deployment environment, assumptions about network operations, potential impacts on existing operational practices, and any high-level requirements that future protocol designs should address. It is not expected to detail specific configuration parameters or management interfaces unless they are integral to the architecture itself. If the architecture document does not introduce new operational considerations, the exemption statement in <a href="#sec-null-sec" class="auto internal xref">Section 3.2</a> applies.<a href="#section-3.1-8" class="pilcrow">¶</a></p>
+<p id="section-3.1-10">For architecture documents, an "Operational Considerations" section is expected only where the architecture introduces new operational considerations with normative implications for downstream protocol designs. When included, it should focus on describing the intended deployment environment, assumptions about network operations, potential impacts on existing operational practices, and any high-level requirements that future protocol designs should address. It is not expected to detail specific configuration parameters or management interfaces unless they are integral to the architecture itself. If the architecture document does not introduce new operational considerations, the exemption statement in <a href="#sec-null-sec" class="auto internal xref">Section 3.2</a> applies.<a href="#section-3.1-10" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-null-sec">
@@ -3480,7 +3508,16 @@ operations and management needs is provided in <span>[<a href="#CHECKLIST" class
             <p id="appendix-A.1-1.1.1">Does the specification include an "Operational Considerations" section, placed immediately before the Security Considerations section? (<a href="#sec-oper-manag-considerations" class="auto internal xref">Section 3.1</a>, <a href="#sec-placement-sec" class="auto internal xref">Section 3.3</a>)<a href="#appendix-A.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="appendix-A.1-1.2">
-            <p id="appendix-A.1-1.2.1">If there are no new operational considerations, does the section include the appropriate boilerplate with explanation? (<a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>)<a href="#appendix-A.1-1.2.1" class="pilcrow">¶</a></p>
+            <p id="appendix-A.1-1.2.1">If one or more of the topics raised in this document is not relevant, does the section briefly explain why? (<a href="#sec-oper-manag-considerations" class="auto internal xref">Section 3.1</a>)<a href="#appendix-A.1-1.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="appendix-A.1-1.3">
+            <p id="appendix-A.1-1.3.1">If there are no new operational considerations, does the section include the appropriate boilerplate with explanation? (<a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>)<a href="#appendix-A.1-1.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="appendix-A.1-1.4">
+            <p id="appendix-A.1-1.4.1">If the considerations are described elsewhere in the same document, does the section summarize them and point to those sections? (<a href="#sec-oper-manag-considerations" class="auto internal xref">Section 3.1</a>)<a href="#appendix-A.1-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="appendix-A.1-1.5">
+            <p id="appendix-A.1-1.5.1">If the considerations are documented separately, does the section give a short overview and a normative reference to that document? (<a href="#sec-this-doc" class="auto internal xref">Section 1.1</a>)<a href="#appendix-A.1-1.5.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
