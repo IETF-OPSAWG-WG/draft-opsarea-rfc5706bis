@@ -374,6 +374,28 @@ This document does not describe interoperability requirements. As such, it does 
    should be included as well. A concise checklist of key questions is
    provided in {{sec-checklist}}.
 
+   The section is always present. What it contains depends on the case:
+
+   *  Where the New Protocol or Protocol Extension raises operational and
+      manageability considerations, the section discusses the relevant
+      topics raised in this document.
+
+   *  Where one or more of those topics is not relevant, the section
+      briefly explains why.
+
+   *  Where there are no new operations or manageability requirements at
+      all, the section contains the statement in {{sec-null-sec}}, followed
+      by a brief rationale.
+
+   *  Where the considerations are already described in other parts of the
+      same document, the section summarizes them and points to the relevant
+      sections rather than repeating the material.
+
+   *  Where the considerations require significant text and are presented in
+      a separate document, the section contains a short overview and a
+      normative reference to that document, as described in
+      {{sec-this-doc}}.
+
   For New Protocol or Protocol Extension specifications that contain
   Data Models (e.g., YANG) and other schema artifacts (JSON schema, YAML, CDDL, etc.), such artifacts
   may be consumed out of the RFCs that specify them. As such, it is recommended
@@ -1638,7 +1660,10 @@ The decision to incorporate all or part of these items into their work remains w
 ## Documentation Requirements
 
 - Does the specification include an "Operational Considerations" section, placed immediately before the Security Considerations section? ({{sec-oper-manag-considerations}}, {{sec-placement-sec}})
+- If one or more of the topics raised in this document is not relevant, does the section briefly explain why? ({{sec-oper-manag-considerations}})
 - If there are no new operational considerations, does the section include the appropriate boilerplate with explanation? ({{sec-null-sec}})
+- If the considerations are described elsewhere in the same document, does the section summarize them and point to those sections? ({{sec-oper-manag-considerations}})
+- If the considerations are documented separately, does the section give a short overview and a normative reference to that document? ({{sec-this-doc}})
 
 ## Operational Fit
 
