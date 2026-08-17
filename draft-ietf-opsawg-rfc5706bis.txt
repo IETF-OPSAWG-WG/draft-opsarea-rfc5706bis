@@ -7,14 +7,14 @@ Internet-Draft                                   Everything OPS & Arrcus
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 15 February 2027                             Old Dog Consulting
+Expires: 18 February 2027                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                          14 August 2026
+                                                          17 August 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 February 2027.
+   This Internet-Draft will expire on 18 February 2027.
 
 Copyright Notice
 
@@ -283,10 +283,10 @@ Table of Contents
    and documentation address common operations and management needs, is
    provided in [CHECKLIST].
 
-   Similarly, the Performance Metrics Directorate (PERFMETRDIR)
-   [PERFMETRDIR] can use this document, together with the guidelines in
-   [RFC6390], to inform reviews of the performance management aspects of
-   a New Protocol or Protocol Extension.
+   Similarly, the Performance Metrics Directorate [PERFMETRDIR] can use
+   this document, together with the guidelines in [RFC6390], to inform
+   reviews of the performance management aspects of a New Protocol or
+   Protocol Extension.
 
    This document is also of interest to the broader community, who wants
    to understand, contribute to, and review Internet-Drafts, taking
@@ -303,109 +303,108 @@ Table of Contents
    of this document.  Where appropriate, references are provided for
    further reading or authoritative definitions.
 
-*  Cause: See [RFC9940].
+   *  Cause: See [RFC9940].
 
-*  CLI: Command Line Interface.  A human-oriented interface,
-   typically a Proprietary Interface, to hardware or software devices
-   (e.g., hosts, routers, or operating systems).  The commands, their
-   syntax, and the precise semantics of the parameters may vary
-   considerably between different vendors, between products from the
-   same vendor, and even between different versions or releases of a
-   single product.  No attempt at standardizing CLIs has been made by
-   the IETF.
+   *  CLI: Command Line Interface.  A human-oriented interface,
+      typically a Proprietary Interface, to hardware or software devices
+      (e.g., hosts, routers, or operating systems).  The commands, their
+      syntax, and the precise semantics of the parameters may vary
+      considerably between different vendors, between products from the
+      same vendor, and even between different versions or releases of a
+      single product.  No attempt at standardizing CLIs has been made by
+      the IETF.
 
-*  Data Model: A set of mechanisms for representing, organizing,
-   storing, and handling data within a particular type of data store
-   or repository.  This usually comprises a collection of data
-   structures such as lists, tables, relations, etc., a collection of
-   operations that can be applied to the structures such as
-   retrieval, update, summation, etc., and a collection of integrity
-   rules that define the legal states (set of values) or changes of
-   state (operations on values).  A Data Model may be derived by
-   mapping the contents of an Information Model or may be developed
-   ab initio.  Further discussion of Data Models can be found in
-   [RFC3444], Section 5.2, and Section 5.3.
+   *  Data Model: A set of mechanisms for representing, organizing,
+      storing, and handling data within a particular type of data store
+      or repository.  This usually comprises a collection of data
+      structures such as lists, tables, relations, etc., a collection of
+      operations that can be applied to the structures such as
+      retrieval, update, summation, etc., and a collection of integrity
+      rules that define the legal states (set of values) or changes of
+      state (operations on values).  A Data Model may be derived by
+      mapping the contents of an Information Model or may be developed
+      ab initio.  Further discussion of Data Models can be found in
+      [RFC3444], Section 5.2, and Section 5.3.
 
-*  Fault: See [RFC9940].
+   *  Fault: See [RFC9940].
 
-*  Fault Management: The process of interpreting Fault notifications
-   and other alerts and alarms, isolating Faults, correlating them,
-   and deducing underlying Causes.  See Section 5.4 for more
-   information.
+   *  Fault Management: The process of interpreting Fault notifications
+      and other alerts and alarms, isolating Faults, correlating them,
+      and deducing underlying Causes.  See Section 5.4 for more
+      information.
 
-*  Information Model: An abstraction and representation of the
-   entities in a managed environment, their properties, attributes
-   and operations, and the way that they relate to each other.  The
-   model is independent of any specific software usage, protocol, or
-   platform [RFC3444].  See Sections 5.2 and 5.3.1 for further
-   discussion of Information Models.
+   *  Information Model: An abstraction and representation of the
+      entities in a managed environment, their properties, attributes
+      and operations, and the way that they relate to each other.  The
+      model is independent of any specific software usage, protocol, or
+      platform [RFC3444].  See Sections 5.2 and 5.3.1 for further
+      discussion of Information Models.
 
-*  Network Device: A device that implements one or more network
-   protocols and participates in network operations.  This term
-   encompasses a broad range of implementations, including
-   conventional network infrastructure equipment (e.g., routers and
-   switches), end hosts, Internet of Things (IoT) devices, virtual
-   network functions, and containerized workloads.  In this document,
-   the term is used generically to mean any managed entity
-   implementing the protocol under consideration.
+   *  Network Device: A device that implements one or more network
+      protocols and participates in network operations.  This term
+      encompasses a broad range of implementations, including
+      conventional network infrastructure equipment (e.g., routers and
+      switches), end hosts, Internet of Things (IoT) devices, virtual
+      network functions, and containerized workloads.  In this document,
+      the term is used generically to mean any managed entity
+      implementing the protocol under consideration.
 
-*  New Protocol and Protocol Extension: These terms are used in this
-   document to identify entirely new protocols, new versions of
-   existing protocols, and extensions to protocols.  The application
-   of New Protocols and Protocol Extensions to different scenarios,
-   and their use in delivering services, procedures, mechanisms, or
-   applications, falls within the scope of this definition.
+   *  New Protocol and Protocol Extension: These terms are used in this
+      document to identify entirely new protocols, new versions of
+      existing protocols, and extensions to protocols.  The application
+      of New Protocols and Protocol Extensions to different scenarios,
+      and their use in delivering services, procedures, mechanisms, or
+      applications, falls within the scope of this definition.
 
-*  OAM: Operations, Administration, and Maintenance [RFC6291]
-   [RFC10014] is the term given to the combination of:
+   *  OAM: Operations, Administration, and Maintenance [RFC6291]
+      [RFC10014] is the term given to the combination of:
 
-1. Operation activities that are undertaken to keep the
-   network running as intended. They include monitoring of the network.
+      1.  Operation activities that are undertaken to keep the network
+          running as intended.  They include monitoring of the network.
 
-2. Administration activities that keep track of resources in the
-   network and how they are used. They include the bookkeeping necessary
-   to track networking resources.
+      2.  Administration activities that keep track of resources in the
+          network and how they are used.  They include the bookkeeping
+          necessary to track networking resources.
 
-3. Maintenance activities focused on facilitating repairs and upgrades.
-   They also involve corrective and preventive measures to make the
-   managed network run more effectively.
+      3.  Maintenance activities focused on facilitating repairs and
+          upgrades.  They also involve corrective and preventive
+          measures to make the managed network run more effectively.
 
-The broader concept of "operations and management" that is the
-subject of this document encompasses OAM, in addition to other
-management and provisioning tools and concepts. This is
-sometimes known as "OAM and Management" or "O&M" as
-explained in {{RFC6291}}.
+      The broader concept of "operations and management" that is the
+      subject of this document encompasses OAM, in addition to other
+      management and provisioning tools and concepts.  This is sometimes
+      known as "OAM and Management" or "O&M" as explained in [RFC6291].
 
-*  Operator: A person or organization responsible for deploying and
-   managing systems, services, or networks that run or rely on a
-   protocol implementation.  This includes, but is not limited to,
-   network operators, cloud service administrators, IoT device fleet
-   managers, home network administrators, and DNS/NTP server
-   administrators.  The term "operator" is used throughout this
-   document in this broad sense unless the context explicitly
-   requires a narrower scope.
+   *  Operator: A person or organization responsible for deploying and
+      managing systems, services, or networks that run or rely on a
+      protocol implementation.  This includes, but is not limited to,
+      network operators, cloud service administrators, IoT device fleet
+      managers, home network administrators, and DNS/NTP server
+      administrators.  The term "operator" is used throughout this
+      document in this broad sense unless the context explicitly
+      requires a narrower scope.
 
-*  Performance Metrics: See [RFC7799].
+   *  Performance Metrics: See [RFC7799].
 
-*  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].
+   *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].
 
-*  Problem: See [RFC9940].
+   *  Problem: See [RFC9940].
 
-*  Proprietary Interface: An interface to manage a network element
-   that is not standardized.  As such, the user interface, syntax,
-   and semantics typically vary significantly between
-   implementations.  Examples of proprietary interfaces include CLI,
-   management web portal and Browser User Interface (BUI), Graphical
-   User Interface (GUI), and vendor-specific application programming
-   interface (API).
+   *  Proprietary Interface: An interface to manage a network element
+      that is not standardized.  As such, the user interface, syntax,
+      and semantics typically vary significantly between
+      implementations.  Examples of proprietary interfaces include CLI,
+      management web portal and Browser User Interface (BUI), Graphical
+      User Interface (GUI), and vendor-specific application programming
+      interface (API).
 
-*  Protocol Designer: An individual, a group of people, or an IETF WG
-   involved in the development and specification of New Protocols or
-   Protocol Extensions.
+   *  Protocol Designer: An individual, a group of people, or an IETF WG
+      involved in the development and specification of New Protocols or
+      Protocol Extensions.
 
-*  Technical Document: This includes any document that describes the
-   design, specification, implementation, or deployment of a new
-   Protocol or Protocol Extensions.
+   *  Technical Document: This includes any document that describes the
+      design, specification, implementation, or deployment of a new
+      Protocol or Protocol Extensions.
 
 3.  Documentation Requirements for IETF Specifications
 
@@ -870,6 +869,18 @@ explained in {{RFC6291}}.
    Extension to ensure operators have the information they need.
    [I-D.ietf-quic-qlog-main-schema] is an example of extensible
    structured logging.
+
+   An increasing number of New Protocols and Protocol Extensions encrypt
+   metadata that was previously available to passive inspection, such as
+   QUIC [RFC9000], TLS 1.3 [RFC8446], Encrypted Client Hello [RFC9849],
+   and DNS over HTTPS (DoH) [RFC8484].  This creates a tension between
+   the privacy goals of such protocols and the visibility that security
+   operators have historically relied upon.  Protocol Designers should
+   acknowledge this tension and, where passive visibility is reduced,
+   consider alternative diagnostic mechanisms, such as endpoint-based
+   telemetry or logging, that preserve operators' ability to detect and
+   respond to threats without undermining the protocol's privacy
+   objectives.
 
    Tooling needed by security operators should be considered when
    designing and deploying a New Protocol or Protocol Extension.
@@ -1841,7 +1852,10 @@ explained in {{RFC6291}}.
 
    This document provides guidelines for Protocol Designers for
    considering manageability and operations.  It introduces no new
-   security concerns.
+   security concerns.  Protocol Designers seeking guidance on security-
+   related management considerations for New Protocols or Protocol
+   Extensions, such as monitoring, access control, and secure transport,
+   should refer to Section 5.8.
 
 10.  References
 
@@ -1990,7 +2004,7 @@ explained in {{RFC6291}}.
 
    [PERFMETRDIR]
               "Performance Metrics Directorate (perfmetrdir)", 2026,
-              <<https://datatracker.ietf.org/group/perfmetrdir/about/>>.
+              <https://datatracker.ietf.org/group/perfmetrdir/about/>.
 
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
@@ -2178,10 +2192,18 @@ explained in {{RFC6291}}.
               DOI 10.17487/RFC8341, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8341>.
 
+   [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
+              Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
+              <https://www.rfc-editor.org/rfc/rfc8446>.
+
    [RFC8466]  Wen, B., Fioccola, G., Ed., Xie, C., and L. Jalil, "A YANG
               Data Model for Layer 2 Virtual Private Network (L2VPN)
               Service Delivery", RFC 8466, DOI 10.17487/RFC8466, October
               2018, <https://www.rfc-editor.org/rfc/rfc8466>.
+
+   [RFC8484]  Hoffman, P. and P. McManus, "DNS Queries over HTTPS
+              (DoH)", RFC 8484, DOI 10.17487/RFC8484, October 2018,
+              <https://www.rfc-editor.org/rfc/rfc8484>.
 
    [RFC8632]  Vallin, S. and M. Bjorklund, "A YANG Data Model for Alarm
               Management", RFC 8632, DOI 10.17487/RFC8632, September
@@ -2209,6 +2231,11 @@ explained in {{RFC6291}}.
               and F. Gont, "IP Fragmentation Considered Fragile",
               BCP 230, RFC 8900, DOI 10.17487/RFC8900, September 2020,
               <https://www.rfc-editor.org/rfc/rfc8900>.
+
+   [RFC9000]  Iyengar, J., Ed. and M. Thomson, Ed., "QUIC: A UDP-Based
+              Multiplexed and Secure Transport", RFC 9000,
+              DOI 10.17487/RFC9000, May 2021,
+              <https://www.rfc-editor.org/rfc/rfc9000>.
 
    [RFC9182]  Barguil, S., Gonzalez de Dios, O., Ed., Boucadair, M.,
               Ed., Munoz, L., and A. Aguado, "A YANG Network Data Model
@@ -2238,6 +2265,10 @@ explained in {{RFC6291}}.
    [RFC9805]  Bonica, R., "Deprecation of the IPv6 Router Alert Option
               for New Protocols", RFC 9805, DOI 10.17487/RFC9805, June
               2025, <https://www.rfc-editor.org/rfc/rfc9805>.
+
+   [RFC9849]  Rescorla, E., Oku, K., Sullivan, N., and C. A. Wood, "TLS
+              Encrypted Client Hello", RFC 9849, DOI 10.17487/RFC9849,
+              March 2026, <https://www.rfc-editor.org/rfc/rfc9849>.
 
    [RFC9877]  Singh, J. and T. Harrison, "Registration Data Access
               Protocol (RDAP) Extension for Geofeed Data", RFC 9877,
@@ -2519,11 +2550,11 @@ Acknowledgements
 
    Reviewers of this document, in roughly chronological order:  Mahesh
       Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott
-      Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang,
+      Hollenbeck, Ron Bonica, Italo Busi, Brian Trammell, Aijun Wang,
       Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan
       Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco
       Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe
-      Fioccola, Bo Wu, Qin Wu, and Saumya Dikshit.
+      Fioccola, Bo Wu, Qin Wu, Saumya Dikshit, and Paul Aitken.
 
    The document shepherd who has gone beyond normal shepherding
    duties to improve this document:  Alvaro Retana
