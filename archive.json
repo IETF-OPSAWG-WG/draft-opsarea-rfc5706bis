@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-16T00:34:46.954712+00:00",
+  "timestamp": "2026-08-18T00:32:45.535110+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3617,7 +3617,7 @@
       "id": "I_kwDOOWPBqs76BIlv",
       "title": "Is This Really About an Operational Considerations Section?",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/237",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -3628,8 +3628,8 @@
       ],
       "body": "From Eliot Lear:\n\nI am not entirely certain that you are looking for an \"Operational\n    Considerations\" section so much as the answer within the IETF prior\n    to publication to the question, \u201cDid you consider how this\n    specification would be used in the field?\u201d  That is, in general, the\n    question I would expect ops directorate reviewers to ask, and\n    there's a lot of good discussion in this document on how to help\n    them evaluate answers, not to mention for the authors to know what\n    they should be thinking about.  RFC 1958\u2019s advice on avoiding\n    options was and remains *excellent*.",
       "createdAt": "2026-04-02T13:26:06Z",
-      "updatedAt": "2026-08-12T20:27:11Z",
-      "closedAt": null,
+      "updatedAt": "2026-08-17T08:25:26Z",
+      "closedAt": "2026-08-17T08:25:26Z",
       "comments": [
         {
           "author": "AdrianFarrel",
@@ -3844,7 +3844,7 @@
       ],
       "body": "From Paul Aitken:\n\nSection 2 / Section 3.1 -- Normative language\n \nSection 2 states the document does not use BCP 14 keywords. Section 3.1 then says Internet-Drafts \"are required to include\" an Operational Considerations section, and Section 3.2 says the section \"must contain\" specific boilerplate.\n \nSince this is a BCP introducing a new process requirement, could the authors clarify the intended strength?  The lowercase \"are required\" and \"must\" are ambiguous without the BCP 14 framework. One approach: use BCP 14 keywords only in Section 3, which establishes the requirement, while leaving the rest of the document in descriptive language.",
       "createdAt": "2026-08-14T08:33:14Z",
-      "updatedAt": "2026-08-14T17:28:58Z",
+      "updatedAt": "2026-08-17T17:53:51Z",
       "closedAt": null,
       "comments": [
         {
@@ -3860,6 +3860,20 @@
           "body": "Take a look at https://datatracker.ietf.org/doc/statement-iesg-statement-on-clarifying-the-use-of-bcp-14-key-words/\n\nAccording to this IESG Statement, the BCP 14 keywords should be used only when \u201cactually required for interoperation or to limit behavior which has potential for causing harm.\u201d It also says that keywords are not required for normative guidance.",
           "createdAt": "2026-08-14T17:28:58Z",
           "updatedAt": "2026-08-14T17:28:58Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Alvaro gave us the right answer with the IESG statement. BCP 14 is not required for interop, so we don't need it.\n\nOn top of that, what would this buy us to go from, except more discussions?\nOLD:\n   All Internet-Drafts that document a technical specification for a New\n   Protocol or Protocol Extension or describe their use are required to\n   include an \"Operational Considerations\" section if it is the\n   intention that they will be advanced for publication as IETF RFCs.\n\nNEW:  \n   All Internet-Drafts that document a technical specification for a New\n   Protocol or Protocol Extension or describe their use MUST\n   include an \"Operational Considerations\" section if it is the\n   intention that they will be advanced for publication as IETF RFCs.\n\nThis document achieves a specific purpose, and is on the right track to be successful (based on Med's IESG ballots stats). Let's leave the document as it is!",
+          "createdAt": "2026-08-17T08:50:14Z",
+          "updatedAt": "2026-08-17T08:50:14Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "If you don't think the language as it is will trip up IESG reviews, I'm okay without adding more text.  But if they do complain, I like Paul's suggestion to try and limit the normative guidance to our section only.",
+          "createdAt": "2026-08-17T17:53:51Z",
+          "updatedAt": "2026-08-17T17:53:51Z"
         }
       ]
     }
@@ -19162,24 +19176,26 @@
       "id": "PR_kwDOOWPBqs7-QlbJ",
       "title": "Summarize the Operational Considerations cases",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/265",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "## Summary\n\nIssue #237 asked whether we should still require an \"Operational\nConsiderations\" section when the considerations are already described\nthroughout the document. This says yes, but the section can be a summary with\npointers rather than a repeat.\n\nWhile adding that, the other cases turned out to be scattered across Sections\n1.1, 3.1 and 3.2, so Section 3.1 now lists all five in one place: normal,\ntopic not relevant, nothing new, described elsewhere in the same document, and\ncarried in a separate document.\n\nAppendix A.1 gets the same five, so the checklist and the body agree.\n\nThe list is descriptive. The requirements themselves stay where they were.\n\nCloses #237.\n",
       "createdAt": "2026-08-12T20:27:03Z",
-      "updatedAt": "2026-08-14T10:33:08Z",
+      "updatedAt": "2026-08-17T08:25:27Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "efedf2e489f9e66db03c80d0130ce10fd4159d67",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-opcons-cases",
       "headRefOid": "73bcd55136af19aaf1a0d201ce3c92b669e009ba",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-17T08:25:25Z",
+      "mergedAt": "2026-08-17T08:25:25Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "d4ed17fd5376b63cc88f6619faf9b6518fc87e5c"
+      },
       "comments": [],
       "reviews": [
         {
@@ -19193,6 +19209,32 @@
           "body": "Looks good.",
           "createdAt": "2026-08-14T10:33:08Z",
           "updatedAt": "2026-08-14T10:33:08Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJsWhcQ",
+          "commit": {
+            "abbreviatedOid": "73bcd55"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-16T05:10:59Z",
+          "updatedAt": "2026-08-16T05:10:59Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJwbCZw",
+          "commit": {
+            "abbreviatedOid": "73bcd55"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-17T08:25:17Z",
+          "updatedAt": "2026-08-17T08:25:17Z",
           "comments": []
         }
       ]
@@ -19230,24 +19272,26 @@
       "id": "PR_kwDOOWPBqs7_BBHc",
       "title": "chore: Address comments from Paul Aitken",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/268",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "* Fix formatting issues introduced by my markdown linter (bad Joe)\r\n* Add a statement about the tension between privacy and passive visibility\r\n* Fix Brian Trammell's name spelling\r\n* Point to our own security guidelines for protocols",
       "createdAt": "2026-08-14T09:02:30Z",
-      "updatedAt": "2026-08-14T10:51:14Z",
+      "updatedAt": "2026-08-17T08:24:13Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "d660363569cc374d2a427334f712941ab1a8c8c7",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "aitken-comments",
       "headRefOid": "1d6fe67789bcca107322a13102629bc7735894db",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-17T08:24:11Z",
+      "mergedAt": "2026-08-17T08:24:11Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "809f6598084ae74a774c71569af5689668f2edde"
+      },
       "comments": [],
       "reviews": [
         {
@@ -19274,6 +19318,19 @@
           "body": "",
           "createdAt": "2026-08-14T10:51:14Z",
           "updatedAt": "2026-08-14T10:51:14Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJsWc-A",
+          "commit": {
+            "abbreviatedOid": "1d6fe67"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-16T05:10:10Z",
+          "updatedAt": "2026-08-16T05:10:10Z",
           "comments": []
         }
       ]
