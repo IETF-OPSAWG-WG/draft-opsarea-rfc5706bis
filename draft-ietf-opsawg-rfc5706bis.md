@@ -241,7 +241,7 @@ This document does not describe interoperability requirements. As such, it does 
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
-* Cause: See {{?RFC9940}}.
+* Cause: See {{!RFC9940}}.
 
 * CLI: Command Line Interface. A human-oriented interface, typically
       a Proprietary Interface, to hardware or software devices
@@ -262,7 +262,7 @@ This document does not describe interoperability requirements. As such, it does 
       discussion of Data Models can be found in {{?RFC3444}}, {{sec-interop}},
       and {{sec-mgmt-info}}.
 
-* Fault: See {{?RFC9940}}.
+* Fault: See {{!RFC9940}}.
 
 * Fault Management: The process of interpreting Fault notifications and other alerts
       and alarms, isolating Faults, correlating them, and deducing underlying
@@ -320,11 +320,14 @@ This document does not describe interoperability requirements. As such, it does 
       in this broad sense unless the context explicitly requires a narrower
       scope.
 
-* Performance Metrics: See {{?RFC7799}}.
+* Performance Metrics: See {{!RFC7799}}.
 
-* Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
+* Probable Root Cause: If removing a fault condition completely
+      resolves an ongoing incident and prevents the problem from recurring,
+      then such fault condition is considered as a Probable Root Cause
+      of a problem. See also {{?I-D.ietf-nmop-network-incident-yang}}.
 
-* Problem: See {{?RFC9940}}.
+* Problem: See {{!RFC9940}}.
 
 * Proprietary Interface: An interface to manage a network element
       that is not standardized. As such, the user interface, syntax, and
@@ -733,7 +736,7 @@ Protocol Designers should account for MTU constraints when designing protocols t
    Security operators extensively rely upon Indicators of Compromise (IoCs) {{?RFC9424}}. The deployment of a New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their networks, systems, and devices consistently.
 Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure operators have the information they need. {{?I-D.ietf-quic-qlog-main-schema}} is an example of extensible structured logging.
 
-An increasing number of New Protocols and Protocol Extensions encrypt metadata that was previously available to passive inspection, such as QUIC {{?RFC9000}}, TLS 1.3 {{?RFC8446}}, Encrypted Client Hello {{?RFC9849}}, and DNS over HTTPS (DoH) {{?RFC8484}}. This creates a tension between the privacy goals of such protocols and the visibility that security operators have historically relied upon. Protocol Designers should acknowledge this tension and, where passive visibility is reduced, consider alternative diagnostic mechanisms, such as endpoint-based telemetry or logging, that preserve operators' ability to detect and respond to threats without undermining the protocol's privacy objectives.
+An increasing number of New Protocols and Protocol Extensions encrypt metadata that was previously available to passive inspection, such as QUIC {{?RFC9000}}, TLS 1.3 {{?RFC9846}}, Encrypted Client Hello {{?RFC9849}}, and DNS over HTTPS (DoH) {{?RFC8484}}. This creates a tension between the privacy goals of such protocols and the visibility that security operators have historically relied upon. Protocol Designers should acknowledge this tension and, where passive visibility is reduced, consider alternative diagnostic mechanisms, such as endpoint-based telemetry or logging, that preserve operators' ability to detect and respond to threats without undermining the protocol's privacy objectives.
 
 Tooling needed by security operators should be considered when designing and deploying a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. The absence of such tooling is not, by itself, a reason to delay publication of the specification. Indicators of compromise, and the means to detect exploitation, tend to evolve only as operational experience accumulates and as attacks emerge.  Detailed forensic and tooling guidance may therefore be developed after the protocol is specified and is expected to be refined over time (see also {{sec-oper-mgmt-tooling}}).
 
