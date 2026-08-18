@@ -127,7 +127,7 @@ contributor:
    introduces a requirement to include an "Operational Considerations"
    section in new RFCs in the IETF Stream that define New Protocols or
    Protocol Extensions or describe their use (including relevant YANG
-   data models). This section must cover both operational and management considerations.
+   Data Models). This section must cover both operational and management considerations.
 
    Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on "Guide for Internet Standards Writers"
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
@@ -911,7 +911,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    Information Models (IMs) enable and provide the foundation for semantic interoperability. An IM defines the
    conceptual understanding of managed information, independent of specific protocols or vendor
    implementations. This allows for consistent interpretation and correlation of data across different
-   data models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same
+   Data Models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same
    event. For instance, an IM can standardize how error conditions are counted, ensuring that a counter
    has the same meaning whether collected via NETCONF or exported via IPFIX.
 
@@ -1025,7 +1025,7 @@ DM         DM        DM     --> concrete/detailed model
    3.  Consider evidence of current use of the managed protocol, and the perceived utility of objects added to the Information Model.
 
    4.  Exclude objects that can be derived from others in this or
-       other information models.
+       other Information Models.
 
    5.  Avoid heavy instrumentation of performance-critical code paths or
        state that is expensive to query or compute. A guideline is to limit
