@@ -155,8 +155,8 @@ Table of Contents
    operational and management considerations.  It also introduces a
    requirement to include an "Operational Considerations" section in new
    RFCs in the IETF Stream that define New Protocols or Protocol
-   Extensions or describe their use (including relevant YANG data
-   models).  This section must cover both operational and management
+   Extensions or describe their use (including relevant YANG Data
+   Models).  This section must cover both operational and management
    considerations.
 
    Additionally, this document updates Section 2.14 of RFC 2360 [BCP22]
@@ -1118,7 +1118,7 @@ Table of Contents
    semantic interoperability.  An IM defines the conceptual
    understanding of managed information, independent of specific
    protocols or vendor implementations.  This allows for consistent
-   interpretation and correlation of data across different data models
+   interpretation and correlation of data across different Data Models
    (and hence management protocols), such as a YANG Data Model and IPFIX
    Information Elements concerning the same event.  For instance, an IM
    can standardize how error conditions are counted, ensuring that a
@@ -1239,7 +1239,7 @@ Table of Contents
        perceived utility of objects added to the Information Model.
 
    4.  Exclude objects that can be derived from others in this or other
-       information models.
+       Information Models.
 
    5.  Avoid heavy instrumentation of performance-critical code paths or
        state that is expensive to query or compute.  A guideline is to
