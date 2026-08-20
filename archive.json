@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-18T00:32:45.535110+00:00",
+  "timestamp": "2026-08-20T00:32:55.376093+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -3835,7 +3835,7 @@
       "id": "I_kwDOOWPBqs8AAAABMvRGeg",
       "title": "Use of BCP 14 keywords",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/267",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
@@ -3844,8 +3844,8 @@
       ],
       "body": "From Paul Aitken:\n\nSection 2 / Section 3.1 -- Normative language\n \nSection 2 states the document does not use BCP 14 keywords. Section 3.1 then says Internet-Drafts \"are required to include\" an Operational Considerations section, and Section 3.2 says the section \"must contain\" specific boilerplate.\n \nSince this is a BCP introducing a new process requirement, could the authors clarify the intended strength?  The lowercase \"are required\" and \"must\" are ambiguous without the BCP 14 framework. One approach: use BCP 14 keywords only in Section 3, which establishes the requirement, while leaving the rest of the document in descriptive language.",
       "createdAt": "2026-08-14T08:33:14Z",
-      "updatedAt": "2026-08-17T17:53:51Z",
-      "closedAt": null,
+      "updatedAt": "2026-08-18T20:49:26Z",
+      "closedAt": "2026-08-18T05:22:58Z",
       "comments": [
         {
           "author": "xorrkaz",
@@ -3874,6 +3874,27 @@
           "body": "If you don't think the language as it is will trip up IESG reviews, I'm okay without adding more text.  But if they do complain, I like Paul's suggestion to try and limit the normative guidance to our section only.",
           "createdAt": "2026-08-17T17:53:51Z",
           "updatedAt": "2026-08-17T17:53:51Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "FWIW, this point was already discussed in [#73](https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/issues/73)",
+          "createdAt": "2026-08-18T04:56:51Z",
+          "updatedAt": "2026-08-18T04:56:51Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Good memory Med.\nClosing this issue",
+          "createdAt": "2026-08-18T05:22:58Z",
+          "updatedAt": "2026-08-18T05:22:58Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Yeah, this was sounding familiar to me, too.  Hopefully, two such arguments means there won't be a third.",
+          "createdAt": "2026-08-18T20:49:26Z",
+          "updatedAt": "2026-08-18T20:49:26Z"
         }
       ]
     }
@@ -19331,6 +19352,153 @@
           "body": "",
           "createdAt": "2026-08-16T05:10:10Z",
           "updatedAt": "2026-08-16T05:10:10Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 269,
+      "id": "PR_kwDOOWPBqs8AAAABAGuEkw",
+      "title": "Some reference fixes",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/269",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "ADReview"
+      ],
+      "body": "* update to use latest TLS RFC\r\n* avoid normative dependency on an NMOP I-D\r\n* fix classification of some references that are needed to digest some of the terms used in the doc. Please refer to https://datatracker.ietf.org/doc/statement-iesg-iesg-statement-normative-and-informative-references-20060419/, specifically: \"Normative references specify documents that must be read to understand or ....\"",
+      "createdAt": "2026-08-18T06:19:31Z",
+      "updatedAt": "2026-08-19T07:43:23Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d4ed17fd5376b63cc88f6619faf9b6518fc87e5c",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "references-check",
+      "headRefOid": "c16e14f8f8c7cfd87e18af9d03fcc7d9e849b919",
+      "closedAt": "2026-08-19T07:43:21Z",
+      "mergedAt": "2026-08-19T07:43:21Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "5017d2eb965f4ac5c1c0a716b709119b40d93344"
+      },
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Is there a reason why the Probable Root Cause is not an exact cut/paste from\r\n\r\nThe reason is that I feel like the text with \"specifically, ..\" is specific to network services (which OK for an NMOP doc), but OPS guidance is more general. \r\n\r\nFeel free to adjust as needed, though.",
+          "createdAt": "2026-08-18T11:38:34Z",
+          "updatedAt": "2026-08-18T11:38:34Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@boucadair \r\nAh, this is not an oversight.\r\nFine with me.\r\n\r\nRegards, B.",
+          "createdAt": "2026-08-18T11:54:58Z",
+          "updatedAt": "2026-08-18T11:54:58Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJ6i-9A",
+          "commit": {
+            "abbreviatedOid": "c16e14f"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Is there a reason why the Probable Root Cause is not an exact cut/paste from https://github.com/ietf-wg-nmop/draft-ietf-nmop-network-incident-yang/blob/main/draft-ietf-nmop-network-incident-yang.md ?\n\nProbable Root Cause: : If removing a fault condition completely resolves the ongoing incident (specifically, regarding network outage or service impairments and their associated subsequent failures and symptoms) and prevents the problem from recurring, then such fault condition is considered as a Probable Root Cause of a problem.",
+          "createdAt": "2026-08-18T11:11:37Z",
+          "updatedAt": "2026-08-18T11:11:37Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJ6414Q",
+          "commit": {
+            "abbreviatedOid": "c16e14f"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-18T11:56:08Z",
+          "updatedAt": "2026-08-18T11:56:08Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJ_nDWA",
+          "commit": {
+            "abbreviatedOid": "c16e14f"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T20:50:55Z",
+          "updatedAt": "2026-08-18T20:50:55Z",
+          "comments": [
+            {
+              "originalPosition": 41,
+              "body": "Thanks.  I missed that one in my searches.",
+              "createdAt": "2026-08-18T20:50:55Z",
+              "updatedAt": "2026-08-18T20:50:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABJ_nTxg",
+          "commit": {
+            "abbreviatedOid": "c16e14f"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-18T20:51:27Z",
+          "updatedAt": "2026-08-18T20:51:27Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 270,
+      "id": "PR_kwDOOWPBqs8AAAABANlRYA",
+      "title": "Update the TLS 1.3 reference and fix remaining defined-term capitalization",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/270",
+      "state": "MERGED",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nUpdates the TLS 1.3 reference to RFC 9846 -- RFC 9846 obsoletes RFC 8446.\n\nAlso capitalizes the last three lowercase uses of the defined terms Data Model and Information Model, in the Introduction, Section 5.2, and the Information Model design criteria.\n",
+      "createdAt": "2026-08-18T23:14:13Z",
+      "updatedAt": "2026-08-19T07:44:56Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "d4ed17fd5376b63cc88f6619faf9b6518fc87e5c",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-tls-and-terms",
+      "headRefOid": "646897d7863167da679bfe874c893293f36fc90b",
+      "closedAt": "2026-08-19T07:44:55Z",
+      "mergedAt": "2026-08-19T07:44:55Z",
+      "mergedBy": "bclaise",
+      "mergeCommit": {
+        "oid": "a44206f28c668b85461bafb84d9747fa9e0fdf0c"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABKDZELw",
+          "commit": {
+            "abbreviatedOid": "646897d"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-19T07:44:46Z",
+          "updatedAt": "2026-08-19T07:44:46Z",
           "comments": []
         }
       ]
