@@ -7,14 +7,14 @@ Internet-Draft                                   Everything OPS & Arrcus
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 20 February 2027                             Old Dog Consulting
+Expires: 21 February 2027                             Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                          19 August 2026
+                                                          20 August 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 February 2027.
+   This Internet-Draft will expire on 21 February 2027.
 
 Copyright Notice
 
@@ -1275,10 +1275,10 @@ Table of Contents
       abstractions for managing the behavior and relationships of
       multiple devices and device subsystems within a network.  As
       described in [RFC8199], these models are used to manage network-
-      wide.  These abstractions are useful to network operators and
-      applications that interface with network controllers.  Examples of
-      network models include the L3VPN Network Model (L3NM) [RFC9182]
-      and the L2VPN Network Model (L2VPN) [RFC9291].
+      wide services.  These abstractions are useful to network operators
+      and applications that interface with network controllers.
+      Examples of network models include the L3VPN Network Model (L3NM)
+      [RFC9182] and the L2VPN Network Model (L2VPN) [RFC9291].
 
    *  Service Models - Also called Customer Service Models, defined in
       [RFC8309], are designed to abstract the customer interface into a
