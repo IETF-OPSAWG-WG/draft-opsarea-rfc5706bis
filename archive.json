@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-20T00:32:55.376093+00:00",
+  "timestamp": "2026-08-23T00:35:52.658898+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -19499,6 +19499,137 @@
           "body": "",
           "createdAt": "2026-08-19T07:44:46Z",
           "updatedAt": "2026-08-19T07:44:46Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 271,
+      "id": "PR_kwDOOWPBqs8AAAABAXBD0w",
+      "title": "Incomplete sentence",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/271",
+      "state": "MERGED",
+      "author": "sbarguil",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-08-20T02:23:02Z",
+      "updatedAt": "2026-08-20T12:53:57Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "a44206f28c668b85461bafb84d9747fa9e0fdf0c",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "minor-editorial",
+      "headRefOid": "1929666787a9ead13a4af22c21e77577be3a7e6d",
+      "closedAt": "2026-08-20T12:53:55Z",
+      "mergedAt": "2026-08-20T12:53:55Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "e49c86f77f51e21d3d0e420120655c7fb81eadf6"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABKOCllQ",
+          "commit": {
+            "abbreviatedOid": "1929666"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-20T08:49:08Z",
+          "updatedAt": "2026-08-20T08:49:08Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABKQEUxA",
+          "commit": {
+            "abbreviatedOid": "1929666"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-20T12:53:47Z",
+          "updatedAt": "2026-08-20T12:53:47Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 272,
+      "id": "PR_kwDOOWPBqs8AAAABAoqxLw",
+      "title": "Fix capitalization in Probable Root Cause definition",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/272",
+      "state": "OPEN",
+      "author": "cpignata",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "## Summary\n\nFault and Problem are defined terms but were lowercase in this definition.\n",
+      "createdAt": "2026-08-22T08:51:01Z",
+      "updatedAt": "2026-08-22T14:39:17Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "e49c86f77f51e21d3d0e420120655c7fb81eadf6",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "carlos-fault-problem-caps",
+      "headRefOid": "b34836f6969de643cd3657ede448714d19117a61",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I don't understand why \"Problem\" and \"Fault\" are simple references (to 9940) but \"Probable Root Cause\" needs text *and* a reference to I-D.ietf-nmop-network-incident-yang.\r\n\r\nIs it because that I-D is only in WGLC at the moment and might be a few months behind this I-D in the pipe?",
+          "createdAt": "2026-08-22T13:33:30Z",
+          "updatedAt": "2026-08-22T13:33:30Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "@AdrianFarrel see the discussion in https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/269",
+          "createdAt": "2026-08-22T13:46:00Z",
+          "updatedAt": "2026-08-22T13:46:00Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks for the pointer. I guess I disagree with Med on this.\r\nI understand why it is undesirable to be stuck waiting for a document that is a long way off publication, but in this case the reference is only a month or so behind us.\r\nBut I really hate a double definition. What happens if the definitions diverge? Which one is to be believed?\r\nOf course, another solution would be to have the NMOP I-D reference our definition. But that seems a bit odd.",
+          "createdAt": "2026-08-22T13:59:53Z",
+          "updatedAt": "2026-08-22T13:59:53Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "So, I re-read ietf-nmop-network-incident-yang and our use of Probable Root Cause, and I agree with you, @AdrianFarrel.  The \"specifically\" bit doesn't seem hurtful.  That bit talks about a network or service outage.  We're talking about Protocols and Protocol Extensions that may be in both the network an application/service space.  Seems cleaner and I don't think dramatic to just point the reference.",
+          "createdAt": "2026-08-22T14:31:30Z",
+          "updatedAt": "2026-08-22T14:31:30Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Probably should rope you back into this one @boucadair .",
+          "createdAt": "2026-08-22T14:39:17Z",
+          "updatedAt": "2026-08-22T14:39:17Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABKgp8_w",
+          "commit": {
+            "abbreviatedOid": "b34836f"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-22T13:48:38Z",
+          "updatedAt": "2026-08-22T13:48:38Z",
           "comments": []
         }
       ]
