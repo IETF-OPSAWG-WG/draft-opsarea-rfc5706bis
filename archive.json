@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-23T00:35:52.658898+00:00",
+  "timestamp": "2026-08-25T00:33:51.334336+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -19570,7 +19570,7 @@
       "labels": [],
       "body": "## Summary\n\nFault and Problem are defined terms but were lowercase in this definition.\n",
       "createdAt": "2026-08-22T08:51:01Z",
-      "updatedAt": "2026-08-22T14:39:17Z",
+      "updatedAt": "2026-08-24T10:21:52Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e49c86f77f51e21d3d0e420120655c7fb81eadf6",
@@ -19616,6 +19616,20 @@
           "body": "Probably should rope you back into this one @boucadair .",
           "createdAt": "2026-08-22T14:39:17Z",
           "updatedAt": "2026-08-22T14:39:17Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The initial goal of #269 was to fix the broken classification of references (including 9940) and avoid normative dependency on a document that is not advanced in the process. I see that since the PR was implemented that nmop draft is in nmop WGLC but I also see that Adrian's review there asks to have more implementations before progressing that doc (which I'm not sure there are any).\r\n\r\nI hear Adrian's comment about aligning definitions, but in the meantime I do think that incorporating that single definition into the doc makes also things convenient for readers. No need to ping pong between docs for one single reference entry, especially that this bcp doc targets a wide audience.\r\n\r\nThat's said, if you strill pefer to have the definition in one single place, maybe consider to use 5706bsi as the authoritative  refernce and that the nmop doc points to it?\r\n\r\n\r\n\r\n",
+          "createdAt": "2026-08-24T05:43:48Z",
+          "updatedAt": "2026-08-24T05:43:48Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Actually, last Friday i started to type an issue around those exact two points, mentioned above:\r\n- Why does \"Probable Root Cause\" need text and a reference to I-D.ietf-nmop-network-incident-yang.\r\n- But I really hate a double definition. What happens if the definitions diverge? Which one is to be believed?\r\n\r\nAnd then I erased my text. Why? A certain fatigue with this document. And I was able to convince my OCD that it doesn't matter that much, just leading to more energy devoted to this document.\r\n\r\nI believe we should revert back Med's change.",
+          "createdAt": "2026-08-24T10:21:52Z",
+          "updatedAt": "2026-08-24T10:21:52Z"
         }
       ],
       "reviews": [
