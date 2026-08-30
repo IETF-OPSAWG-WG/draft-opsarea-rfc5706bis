@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-25T00:33:51.334336+00:00",
+  "timestamp": "2026-08-30T02:07:44.682908+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -19570,7 +19570,7 @@
       "labels": [],
       "body": "## Summary\n\nFault and Problem are defined terms but were lowercase in this definition.\n",
       "createdAt": "2026-08-22T08:51:01Z",
-      "updatedAt": "2026-08-24T10:21:52Z",
+      "updatedAt": "2026-08-29T14:51:22Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e49c86f77f51e21d3d0e420120655c7fb81eadf6",
@@ -19630,6 +19630,27 @@
           "body": "Actually, last Friday i started to type an issue around those exact two points, mentioned above:\r\n- Why does \"Probable Root Cause\" need text and a reference to I-D.ietf-nmop-network-incident-yang.\r\n- But I really hate a double definition. What happens if the definitions diverge? Which one is to be believed?\r\n\r\nAnd then I erased my text. Why? A certain fatigue with this document. And I was able to convince my OCD that it doesn't matter that much, just leading to more energy devoted to this document.\r\n\r\nI believe we should revert back Med's change.",
           "createdAt": "2026-08-24T10:21:52Z",
           "updatedAt": "2026-08-24T10:21:52Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "I want to close on this.  I'm not sure where everyone stands.  I'm in favor of pointing 5706bis to the Probable Root Cause definition in I-D.ietf-nmop-network-incident-yang.  I don't think it makes sense to leave other definitions in that draft but define Probable Root Cause in 5706bis.  I also don't see a strong reason to alter the definition in I-D.ietf-nmop-network-incident-yang.  It sounds like @AdrianFarrel might be in agreement with me.\r\n\r\nIt sounds like @bclaise also agrees, but I'm unclear what the \"revert\" in his comments mean.\r\n\r\n@boucadair wants to either use a modified definition in 5706bis and/or redefine Probable Root Cause in 5706bis.  This approach seems like in the rough to me.",
+          "createdAt": "2026-08-28T19:57:29Z",
+          "updatedAt": "2026-08-28T19:57:29Z"
+        },
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I want to close on this. I'm not sure where everyone stands. I'm in favor of pointing 5706bis to the Probable Root Cause definition in I-D.ietf-nmop-network-incident-yang. I don't think it makes sense to leave other definitions in that draft but define Probable Root Cause in 5706bis. I also don't see a strong reason to alter the definition in I-D.ietf-nmop-network-incident-yang. It sounds like @AdrianFarrel <https://github.com/AdrianFarrel>  might be in agreement with me.\r\n\r\n[AF] I am. I don\u2019t care if we have a dependency on the NMOP draft \u2013 it will be along in good time.\r\n\r\n \r\n\r\n",
+          "createdAt": "2026-08-29T13:48:29Z",
+          "updatedAt": "2026-08-29T13:48:29Z"
+        },
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@xorrkaz by \"revert\", I mean that we should go back the text in draft-ietf-opsawg-rfc5706bis-06\r\nThat is:\r\n*  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].\r\n\r\nThis is confusing to have a Probable Root Cause definition,\r\n  which is proper to this document, \r\n  similar but not exactly the same as NMOP term,\r\n  and a \"see also the NMOP document\" extra note.\r\n\r\n\r\n\r\n",
+          "createdAt": "2026-08-29T14:51:22Z",
+          "updatedAt": "2026-08-29T14:51:22Z"
         }
       ],
       "reviews": [
