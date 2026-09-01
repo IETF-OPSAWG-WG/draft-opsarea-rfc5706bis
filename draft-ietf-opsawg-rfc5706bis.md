@@ -322,10 +322,7 @@ This document does not describe interoperability requirements. As such, it does 
 
 * Performance Metrics: See {{!RFC7799}}.
 
-* Probable Root Cause: If removing a fault condition completely
-      resolves an ongoing incident and prevents the problem from recurring,
-      then such fault condition is considered as a Probable Root Cause
-      of a problem. See also {{?I-D.ietf-nmop-network-incident-yang}}.
+* Probable Root Cause: See {{?I-D.ietf-nmop-network-incident-yang}}.
 
 * Problem: See {{!RFC9940}}.
 
