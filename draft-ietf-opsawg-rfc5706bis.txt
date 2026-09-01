@@ -7,14 +7,14 @@ Internet-Draft                                   Everything OPS & Arrcus
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 21 February 2027                             Old Dog Consulting
+Expires: 5 March 2027                                 Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                          20 August 2026
+                                                        1 September 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 February 2027.
+   This Internet-Draft will expire on 5 March 2027.
 
 Copyright Notice
 
@@ -386,11 +386,7 @@ Table of Contents
 
    *  Performance Metrics: See [RFC7799].
 
-   *  Probable Root Cause: If removing a fault condition completely
-      resolves an ongoing incident and prevents the problem from
-      recurring, then such fault condition is considered as a Probable
-      Root Cause of a problem.  See also
-      [I-D.ietf-nmop-network-incident-yang].
+   *  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].
 
    *  Problem: See [RFC9940].
 
