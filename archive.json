@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-30T02:07:44.682908+00:00",
+  "timestamp": "2026-09-03T01:51:24.925786+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -19563,21 +19563,21 @@
       "id": "PR_kwDOOWPBqs8AAAABAoqxLw",
       "title": "Fix capitalization in Probable Root Cause definition",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/272",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cpignata",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "## Summary\n\nFault and Problem are defined terms but were lowercase in this definition.\n",
       "createdAt": "2026-08-22T08:51:01Z",
-      "updatedAt": "2026-08-29T14:51:22Z",
+      "updatedAt": "2026-09-01T19:23:10Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "e49c86f77f51e21d3d0e420120655c7fb81eadf6",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "carlos-fault-problem-caps",
       "headRefOid": "b34836f6969de643cd3657ede448714d19117a61",
-      "closedAt": null,
+      "closedAt": "2026-09-01T19:23:09Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -19651,6 +19651,13 @@
           "body": "@xorrkaz by \"revert\", I mean that we should go back the text in draft-ietf-opsawg-rfc5706bis-06\r\nThat is:\r\n*  Probable Root Cause: See [I-D.ietf-nmop-network-incident-yang].\r\n\r\nThis is confusing to have a Probable Root Cause definition,\r\n  which is proper to this document, \r\n  similar but not exactly the same as NMOP term,\r\n  and a \"see also the NMOP document\" extra note.\r\n\r\n\r\n\r\n",
           "createdAt": "2026-08-29T14:51:22Z",
           "updatedAt": "2026-08-29T14:51:22Z"
+        },
+        {
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "body": "Okay, I'm calling consensus here with Med in the rough (sorry, Med).  I'm going to close this and revert the text in main.",
+          "createdAt": "2026-09-01T19:23:09Z",
+          "updatedAt": "2026-09-01T19:23:09Z"
         }
       ],
       "reviews": [
