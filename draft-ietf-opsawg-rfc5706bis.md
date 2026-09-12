@@ -348,7 +348,7 @@ This document does not describe interoperability requirements, and, except in {{
    NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED",
    "MAY", and "OPTIONAL" in this section are to be interpreted as
    described in BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they
-   appear in all capitals, as shown here
+   appear in all capitals, as shown here.
 
 ## "Operational Considerations" Section {#sec-oper-manag-considerations}
 
