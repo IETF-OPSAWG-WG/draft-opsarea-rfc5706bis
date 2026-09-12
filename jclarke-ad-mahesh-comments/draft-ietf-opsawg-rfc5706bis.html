@@ -33,18 +33,18 @@
 <meta content="draft-ietf-opsawg-rfc5706bis-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.34.0
-    Python 3.14.5
+    Python 3.14.7
     ConfigArgParse 1.7.5
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.11.0
+    platformdirs 4.11.7
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.2
+    wcwidth 0.8.3
 -->
 <link href="draft-ietf-opsawg-rfc5706bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1060,11 +1060,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Operations &amp; Management Considerations</td>
-<td class="right">August 2026</td>
+<td class="right">September 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 13 February 2027</td>
+<td class="center">Expires 16 March 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1083,12 +1083,12 @@ svg {
 <a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-08-12" class="published">12 August 2026</time>
+<time datetime="2026-09-12" class="published">12 September 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-02-13">13 February 2027</time></dd>
+<dd class="expires"><time datetime="2027-03-16">16 March 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1153,7 +1153,7 @@ svg {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 13 February 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 16 March 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1402,7 +1402,7 @@ svg {
    introduces a requirement to include an "Operational Considerations"
    section in new RFCs in the IETF Stream that define New Protocols or
    Protocol Extensions or describe their use (including relevant YANG
-   data models). This section must cover both operational and management considerations.<a href="#section-1-3" class="pilcrow">¶</a></p>
+   Data Models). This section must cover both operational and management considerations.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">Additionally, this document updates Section <a href="https://rfc-editor.org/rfc/rfc2360#section-2.14" class="relref">2.14</a> of RFC 2360 <span>[<a href="#BCP22" class="cite xref">BCP22</a>]</span> on "Guide for Internet Standards Writers"
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
    considerations as described in <a href="#sec-doc-req-ietf-spec" class="auto internal xref">Section 3</a>. The update is provided in <a href="#sec-2360-update" class="auto internal xref">Section 3.5</a>.
@@ -1496,7 +1496,7 @@ svg {
 <p id="section-1.2-7">The Ops Directorate (OpsDir) can use this document to inform their reviews. A list of guidelines and a
    checklist of questions to consider, which a reviewer can use to evaluate whether the protocol and
    documentation address common operations and management needs, is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#section-1.2-7" class="pilcrow">¶</a></p>
-<p id="section-1.2-8">Similarly, the Performance Metrics Directorate (PERFMETRDIR) <span>[<a href="#PERFMETRDIR" class="cite xref">PERFMETRDIR</a>]</span> can use this document,
+<p id="section-1.2-8">Similarly, the Performance Metrics Directorate <span>[<a href="#PERFMETRDIR" class="cite xref">PERFMETRDIR</a>]</span> can use this document,
    together with the guidelines in <span>[<a href="#RFC6390" class="cite xref">RFC6390</a>]</span>, to inform reviews of the performance management aspects
    of a New Protocol or Protocol Extension.<a href="#section-1.2-8" class="pilcrow">¶</a></p>
 <p id="section-1.2-9">This document is also of interest to the broader community, who wants to understand, contribute to,
@@ -1510,7 +1510,7 @@ svg {
       <h2 id="name-terminology">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-terminology" class="section-name selfRef">Terminology</a>
       </h2>
-<p id="section-2-1">This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in <span>[<a href="#BCP14" class="cite xref">BCP14</a>]</span>.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-1">This document does not describe interoperability requirements, and, except in <a href="#sec-doc-req-ietf-spec" class="auto internal xref">Section 3</a>, does not use the capitalized keywords defined in BCP 14.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2-3.1">
@@ -1574,26 +1574,28 @@ svg {
           <p id="section-2-3.9.1">OAM: Operations, Administration, and Maintenance <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>
             <span>[<a href="#RFC10014" class="cite xref">RFC10014</a>]</span> is the term given to the
     combination of:<a href="#section-2-3.9.1" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-2-3.9.2">
-<pre>
-1. Operation activities that are undertaken to keep the
-   network running as intended. They include monitoring of the network.
-
-2. Administration activities that keep track of resources in the
-   network and how they are used. They include the bookkeeping necessary
-   to track networking resources.
-
-3. Maintenance activities focused on facilitating repairs and upgrades.
-   They also involve corrective and preventive measures to make the
-   managed network run more effectively.
-
+<ol start="1" type="1" class="normal type-1" id="section-2-3.9.2">
+<li id="section-2-3.9.2.1">
+              <p id="section-2-3.9.2.1.1">Operation activities that are undertaken to keep the
+network running as intended. They include monitoring of the network.<a href="#section-2-3.9.2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-2-3.9.2.2">
+              <p id="section-2-3.9.2.2.1">Administration activities that keep track of resources in the
+network and how they are used. They include the bookkeeping necessary
+to track networking resources.<a href="#section-2-3.9.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-2-3.9.2.3">
+              <p id="section-2-3.9.2.3.1">Maintenance activities focused on facilitating repairs and upgrades.
+They also involve corrective and preventive measures to make the
+managed network run more effectively.<a href="#section-2-3.9.2.3.1" class="pilcrow">¶</a></p>
+</li>
+          </ol>
+<p id="section-2-3.9.3">
 The broader concept of "operations and management" that is the
-subject of this document encompasses OAM, in addition to other
-management and provisioning tools and concepts. This is
-sometimes known as "OAM and Management" or "O&amp;M" as
-explained in {{RFC6291}}.
-</pre><a href="#section-2-3.9.2" class="pilcrow">¶</a>
-</div>
+ subject of this document encompasses OAM, in addition to other
+ management and provisioning tools and concepts. This is
+ sometimes known as "OAM and Management" or "O&amp;M" as
+ explained in <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>.<a href="#section-2-3.9.3" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.10">
           <p id="section-2-3.10.1">Operator: A person or organization responsible for deploying and managing
@@ -1641,13 +1643,18 @@ explained in {{RFC6291}}.
       <h2 id="name-documentation-requirements-">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-documentation-requirements-" class="section-name selfRef">Documentation Requirements for IETF Specifications</a>
       </h2>
+<p id="section-3-1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+   NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED",
+   "MAY", and "OPTIONAL" in this section are to be interpreted as
+   described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
+   appear in all capitals, as shown here<a href="#section-3-1" class="pilcrow">¶</a></p>
 <div id="sec-oper-manag-considerations">
 <section id="section-3.1">
         <h3 id="name-operational-considerations-">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-operational-considerations-" class="section-name selfRef">"Operational Considerations" Section</a>
         </h3>
 <p id="section-3.1-1">All Internet-Drafts that document a technical specification for a New Protocol
-   or Protocol Extension or describe their use are required to include an "Operational Considerations" section
+   or Protocol Extension or describe their use MUST include an "Operational Considerations" section
    if it is the intention that they will be advanced for publication as IETF RFCs.
    Internet-Drafts that do not document technical specifications, such as process, policy, or administrative
    Internet-Drafts, are not required to include such a section.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
@@ -1733,7 +1740,7 @@ the above guidance by documenting operational aspects as part of the YANG module
    for the decisions on the protocol's manageability at the
    time of its design.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <p id="section-3.2-2">If there are no new manageability or deployment considerations, the "Operational Considerations" section
-   must contain the following simple statement, followed by a brief explanation of
+   MUST contain the following simple statement, followed by a brief explanation of
    why that is the case.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-3.2-3">
 <pre>
@@ -1931,8 +1938,8 @@ considerations.<a href="#section-3.5-4.1" class="pilcrow">¶</a></p>
    Are older protocols or versions disabled, or do they coexist
    with the New Protocol or Protocol Extension in the network?<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.2-2">Many protocols benefit from being incrementally deployable --
-   operators may deploy some aspects of a protocol before deploying
-   it fully, or may deploy to only some nodes in a network before applying to all nodes in the network. In those cases, the operational considerations should
+   operators may deploy to only some nodes in a network before applying
+   to all nodes in the network. In those cases, the operational considerations should
    also specify whether the New Protocol or Protocol Extension requires any changes to
    the existing infrastructure, particularly the network.
    If so, the protocol specification should describe the nature of those
@@ -2032,7 +2039,7 @@ state during the transition.
 <p id="section-4.4-6">For example:<a href="#section-4.4-6" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-4.4-7.1">
-            <p id="section-4.4-7.1.1">SMTP <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
+            <p id="section-4.4-7.1.1">Some SMTP <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> server deployments use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.<a href="#section-4.4-7.1.1" class="pilcrow">¶</a></p>
@@ -2079,8 +2086,9 @@ they may impose on the hardware forwarding path for traffic.<a href="#section-4.
 <p id="section-4.5-2">Protocol Designers should consider the impacts of a New Protocol or Protocol Extension on Security Operations in networks that the protocol will be deployed in.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
 <p id="section-4.5-3">Security operators extensively rely upon Indicators of Compromise (IoCs) <span>[<a href="#RFC9424" class="cite xref">RFC9424</a>]</span>. The deployment of a New Protocol or Protocol Extension may change the type, locations, or availability of IoCs. Protocol Designers should outline such changes to ensure operators can manage and defend their networks, systems, and devices consistently.
 Consider the operators' requirement for digital forensics from the network or endpoints with critical information found in logs. Logging events schema and guidance for operators should be considered when designing a New Protocol or Protocol Extension to ensure operators have the information they need. <span>[<a href="#I-D.ietf-quic-qlog-main-schema" class="cite xref">I-D.ietf-quic-qlog-main-schema</a>]</span> is an example of extensible structured logging.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
-<p id="section-4.5-4">Tooling needed by security operators should be considered when designing and deploying a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. The absence of such tooling is not, by itself, a reason to delay publication of the specification. Indicators of compromise, and the means to detect exploitation, tend to evolve only as operational experience accumulates and as attacks emerge.  Detailed forensic and tooling guidance may therefore be developed after the protocol is specified and is expected to be refined over time (see also <a href="#sec-oper-mgmt-tooling" class="auto internal xref">Section 6</a>).<a href="#section-4.5-4" class="pilcrow">¶</a></p>
-<p id="section-4.5-5">For further information on the security operations considerations discussed in this section, refer to <span>[<a href="#I-D.parsons-opsawg-security-operations" class="cite xref">I-D.parsons-opsawg-security-operations</a>]</span>.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
+<p id="section-4.5-4">An increasing number of New Protocols and Protocol Extensions encrypt metadata that was previously available to passive inspection, such as QUIC <span>[<a href="#RFC9000" class="cite xref">RFC9000</a>]</span>, TLS 1.3 <span>[<a href="#RFC9846" class="cite xref">RFC9846</a>]</span>, Encrypted Client Hello <span>[<a href="#RFC9849" class="cite xref">RFC9849</a>]</span>, and DNS over HTTPS (DoH) <span>[<a href="#RFC8484" class="cite xref">RFC8484</a>]</span>. This creates a tension between the privacy goals of such protocols and the visibility that security operators have historically relied upon. Protocol Designers should acknowledge this tension and, where passive visibility is reduced, consider alternative diagnostic mechanisms, such as endpoint-based telemetry or logging, that preserve operators' ability to detect and respond to threats without undermining the protocol's privacy objectives.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
+<p id="section-4.5-5">Tooling needed by security operators should be considered when designing and deploying a New Protocol or Protocol Extension. Operators may require new tooling or methods for managing network traffic in response to protocol changes to ensure consistent availability and performance of networks. Similarly, updating and augmenting existing forensic tools such as protocol dissectors is expected when a New Protocol is deployed, but having to completely rebuild such tooling would greatly reduce the effectiveness of security operators, so protocol extensibility should be considered. The absence of such tooling is not, by itself, a reason to delay publication of the specification. Indicators of compromise, and the means to detect exploitation, tend to evolve only as operational experience accumulates and as attacks emerge.  Detailed forensic and tooling guidance may therefore be developed after the protocol is specified and is expected to be refined over time (see also <a href="#sec-oper-mgmt-tooling" class="auto internal xref">Section 6</a>).<a href="#section-4.5-5" class="pilcrow">¶</a></p>
+<p id="section-4.5-6">For further information on the security operations considerations discussed in this section, refer to <span>[<a href="#I-D.parsons-opsawg-security-operations" class="cite xref">I-D.parsons-opsawg-security-operations</a>]</span>.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-oper-verify">
@@ -2199,7 +2207,18 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    the server end of a protocol than the client end, since the
    performance of the server might impact more nodes than the
    performance of a specific client.<a href="#section-5-9" class="pilcrow">¶</a></p>
-<p id="section-5-10">The subsections from <a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a> through <a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a> are organized following
+<p id="section-5-10">A model of manageable objects, whether a MIB module or a YANG
+   Device, Network, or Service Model (<a href="#sec-yang-dm" class="auto internal xref">Section 5.3.2</a>), describes what
+   can be managed. It does not describe how to manage it. The 2002 IAB
+   Network Management Workshop observed that MIB modules could often
+   be characterized as a list of ingredients without a recipe
+   <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span>. A YANG module invites the same criticism when it is
+   developed without regard for how it will be used operationally, and
+   even a full set of Device, Network, and Service Models remains a
+   list of ingredients until it is paired with guidance for how the
+   protocol is monitored, configured, accounted for, measured, and
+   secured. The subsections from <a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a> through <a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>
+   provide that guidance, organized following
    the Fault, Configuration, Accounting, Performance, and Security (FCAPS) network management
    framework.<a href="#section-5-10" class="pilcrow">¶</a></p>
 <div id="sec-mgmt-tech">
@@ -2261,7 +2280,7 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
 <p id="section-5.2-5">Information Models (IMs) enable and provide the foundation for semantic interoperability. An IM defines the
    conceptual understanding of managed information, independent of specific protocols or vendor
    implementations. This allows for consistent interpretation and correlation of data across different
-   data models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same
+   Data Models (and hence management protocols), such as a YANG Data Model and IPFIX Information Elements concerning the same
    event. For instance, an IM can standardize how error conditions are counted, ensuring that a counter
    has the same meaning whether collected via NETCONF or exported via IPFIX.<a href="#section-5.2-5" class="pilcrow">¶</a></p>
 <p id="section-5.2-6">Protocol Designers should consider developing an IM, when multiple Data Model (DM)
@@ -2399,7 +2418,7 @@ eliminated.<a href="#section-5.3.1-2.2.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-5.3.1-2.4">
               <p id="section-5.3.1-2.4.1">Exclude objects that can be derived from others in this or
-other information models.<a href="#section-5.3.1-2.4.1" class="pilcrow">¶</a></p>
+other Information Models.<a href="#section-5.3.1-2.4.1" class="pilcrow">¶</a></p>
 </li>
             <li id="section-5.3.1-2.5">
               <p id="section-5.3.1-2.5.1">Avoid heavy instrumentation of performance-critical code paths or
@@ -2439,8 +2458,8 @@ service Data Models.<a href="#section-5.3.2-2.1.1" class="pilcrow">¶</a></p>
             <li class="normal" id="section-5.3.2-2.2">
               <p id="section-5.3.2-2.2.1">Network Models - Also called Network Service Models, define abstractions
 for managing the behavior and relationships of multiple devices
-and device subsystems within a network. As described in <span>[<a href="#RFC8199" class="cite xref">RFC8199</a>]</span>,
-these models are used to manage network-wide. These abstractions are
+and device subsystems within a network. As described in <span><a href="https://rfc-editor.org/rfc/rfc9907#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#RFC9907" class="cite xref">RFC9907</a>]</span>
+and <span>[<a href="#RFC8199" class="cite xref">RFC8199</a>]</span>, these models are used to manage network-wide services. These abstractions are
 useful to network operators and applications that interface with network
 controllers. Examples of network models include the L3VPN Network Model
 (L3NM) <span>[<a href="#RFC9182" class="cite xref">RFC9182</a>]</span> and the L2VPN Network Model (L2VPN) <span>[<a href="#RFC9291" class="cite xref">RFC9291</a>]</span>.<a href="#section-5.3.2-2.2.1" class="pilcrow">¶</a></p>
@@ -3084,7 +3103,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
       </h2>
 <p id="section-9-1">This document provides guidelines for Protocol Designers for
    considering manageability and operations. It introduces no new
-   security concerns.<a href="#section-9-1" class="pilcrow">¶</a></p>
+   security concerns. Protocol Designers seeking guidance on security-related
+   management considerations for New Protocols or Protocol Extensions,
+   such as monitoring, access control, and secure transport, should
+   refer to <a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>.<a href="#section-9-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-combined-references">
@@ -3106,13 +3128,29 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
             <span class="refAuthor">Scott, G.</span>, <span class="refTitle">"Guide for Internet Standards Writers"</span>, <span class="seriesInfo">BCP 22</span>, <span class="seriesInfo">RFC 2360</span>, <span class="seriesInfo">DOI 10.17487/RFC2360</span>, <time datetime="1998-06" class="refDate">June 1998</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2360">https://www.rfc-editor.org/info/rfc2360</a>&gt;</span>. </div>
 </dd>
 <dd class="break"></dd>
+<dt id="RFC2119">[RFC2119]</dt>
+        <dd>
+<span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7799">[RFC7799]</dt>
+        <dd>
+<span class="refAuthor">Morton, A.</span>, <span class="refTitle">"Active and Passive Metrics and Methods (with Hybrid Types In-Between)"</span>, <span class="seriesInfo">RFC 7799</span>, <span class="seriesInfo">DOI 10.17487/RFC7799</span>, <time datetime="2016-05" class="refDate">May 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7799">https://www.rfc-editor.org/rfc/rfc7799</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8174">[RFC8174]</dt>
+        <dd>
+<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC8340">[RFC8340]</dt>
         <dd>
 <span class="refAuthor">Bjorklund, M.</span> and <span class="refAuthor">L. Berger, Ed.</span>, <span class="refTitle">"YANG Tree Diagrams"</span>, <span class="seriesInfo">BCP 215</span>, <span class="seriesInfo">RFC 8340</span>, <span class="seriesInfo">DOI 10.17487/RFC8340</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8340">https://www.rfc-editor.org/rfc/rfc8340</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8791">[RFC8791]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Björklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"YANG Data Structure Extensions"</span>, <span class="seriesInfo">RFC 8791</span>, <span class="seriesInfo">DOI 10.17487/RFC8791</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8791">https://www.rfc-editor.org/rfc/rfc8791</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9940">[RFC9940]</dt>
+      <dd>
+<span class="refAuthor">Davis, N., Ed.</span>, <span class="refAuthor">Farrel, A., Ed.</span>, <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Wu, Q.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"Some Key Terms for Network Fault and Problem Management"</span>, <span class="seriesInfo">RFC 9940</span>, <span class="seriesInfo">DOI 10.17487/RFC9940</span>, <time datetime="2026-04" class="refDate">April 2026</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9940">https://www.rfc-editor.org/rfc/rfc9940</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -3123,16 +3161,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <a href="#section-10.2" class="section-number selfRef">10.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
-<dt id="BCP14">[BCP14]</dt>
-        <dd>
-<div class="refInstance">Best Current Practice 14, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp14">https://www.rfc-editor.org/info/bcp14</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
-</div>
-<div class="refInstance" id="RFC2119">
-            <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>&gt;</span>. </div>
-<div class="refInstance" id="RFC8174">
-            <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8174">https://www.rfc-editor.org/info/rfc8174</a>&gt;</span>. </div>
-</dd>
-<dd class="break"></dd>
 <dt id="BCP47">[BCP47]</dt>
         <dd>
 <div class="refInstance">Best Current Practice 47, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp47">https://www.rfc-editor.org/info/bcp47</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
@@ -3187,7 +3215,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-nmop-network-incident-yang">[I-D.ietf-nmop-network-incident-yang]</dt>
         <dd>
-<span class="refAuthor">Hu, T.</span>, <span class="refAuthor">Contreras, L. M.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Davis, N.</span>, and <span class="refAuthor">C. Feng</span>, <span class="refTitle">"A YANG Data Model for Network Incident Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-network-incident-yang-13</span>, <time datetime="2026-07-29" class="refDate">29 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-13">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-13</a>&gt;</span>. </dd>
+<span class="refAuthor">Hu, T.</span>, <span class="refAuthor">Contreras, L. M.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Davis, N.</span>, and <span class="refAuthor">C. Feng</span>, <span class="refTitle">"A YANG Data Model for Network Incident Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-network-incident-yang-14</span>, <time datetime="2026-08-18" class="refDate">18 August 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-14">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-14</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-quic-qlog-main-schema">[I-D.ietf-quic-qlog-main-schema]</dt>
         <dd>
@@ -3199,7 +3227,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.parsons-opsawg-security-operations">[I-D.parsons-opsawg-security-operations]</dt>
         <dd>
-<span class="refAuthor">P, M.</span> and <span class="refAuthor">F. D</span>, <span class="refTitle">"Security Operations Fundamentals and Guidance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-parsons-opsawg-security-operations-01</span>, <time datetime="2026-05-20" class="refDate">20 May 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-01">https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-01</a>&gt;</span>. </dd>
+<span class="refAuthor">P, M.</span> and <span class="refAuthor">F. D</span>, <span class="refTitle">"Security Operations Fundamentals and Guidance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-parsons-opsawg-security-operations-02</span>, <time datetime="2026-09-09" class="refDate">9 September 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-02">https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-02</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IETF-HACKATHONS">[IETF-HACKATHONS]</dt>
         <dd>
@@ -3215,7 +3243,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="PERFMETRDIR">[PERFMETRDIR]</dt>
         <dd>
-<span class="refTitle">"Performance Metrics Directorate (perfmetrdir)"</span>, <time datetime="2026" class="refDate">2026</time>, <span>&lt;<a href="&lt;https://datatracker.ietf.org/group/perfmetrdir/about/&gt;">&lt;https://datatracker.ietf.org/group/perfmetrdir/about/&gt;</a>&gt;</span>. </dd>
+<span class="refTitle">"Performance Metrics Directorate (perfmetrdir)"</span>, <time datetime="2026" class="refDate">2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/group/perfmetrdir/about/">https://datatracker.ietf.org/group/perfmetrdir/about/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC1034">[RFC1034]</dt>
         <dd>
@@ -3341,10 +3369,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
         <dd>
 <span class="refAuthor">Bakker, A.</span>, <span class="refAuthor">Petrocco, R.</span>, and <span class="refAuthor">V. Grishchenko</span>, <span class="refTitle">"Peer-to-Peer Streaming Peer Protocol (PPSPP)"</span>, <span class="seriesInfo">RFC 7574</span>, <span class="seriesInfo">DOI 10.17487/RFC7574</span>, <time datetime="2015-07" class="refDate">July 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7574">https://www.rfc-editor.org/rfc/rfc7574</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC7799">[RFC7799]</dt>
-        <dd>
-<span class="refAuthor">Morton, A.</span>, <span class="refTitle">"Active and Passive Metrics and Methods (with Hybrid Types In-Between)"</span>, <span class="seriesInfo">RFC 7799</span>, <span class="seriesInfo">DOI 10.17487/RFC7799</span>, <time datetime="2016-05" class="refDate">May 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7799">https://www.rfc-editor.org/rfc/rfc7799</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC7854">[RFC7854]</dt>
         <dd>
 <span class="refAuthor">Scudder, J., Ed.</span>, <span class="refAuthor">Fernando, R.</span>, and <span class="refAuthor">S. Stuart</span>, <span class="refTitle">"BGP Monitoring Protocol (BMP)"</span>, <span class="seriesInfo">RFC 7854</span>, <span class="seriesInfo">DOI 10.17487/RFC7854</span>, <time datetime="2016-06" class="refDate">June 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7854">https://www.rfc-editor.org/rfc/rfc7854</a>&gt;</span>. </dd>
@@ -3381,6 +3405,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
         <dd>
 <span class="refAuthor">Wen, B.</span>, <span class="refAuthor">Fioccola, G., Ed.</span>, <span class="refAuthor">Xie, C.</span>, and <span class="refAuthor">L. Jalil</span>, <span class="refTitle">"A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service Delivery"</span>, <span class="seriesInfo">RFC 8466</span>, <span class="seriesInfo">DOI 10.17487/RFC8466</span>, <time datetime="2018-10" class="refDate">October 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8466">https://www.rfc-editor.org/rfc/rfc8466</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC8484">[RFC8484]</dt>
+        <dd>
+<span class="refAuthor">Hoffman, P.</span> and <span class="refAuthor">P. McManus</span>, <span class="refTitle">"DNS Queries over HTTPS (DoH)"</span>, <span class="seriesInfo">RFC 8484</span>, <span class="seriesInfo">DOI 10.17487/RFC8484</span>, <time datetime="2018-10" class="refDate">October 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8484">https://www.rfc-editor.org/rfc/rfc8484</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC8632">[RFC8632]</dt>
         <dd>
 <span class="refAuthor">Vallin, S.</span> and <span class="refAuthor">M. Bjorklund</span>, <span class="refTitle">"A YANG Data Model for Alarm Management"</span>, <span class="seriesInfo">RFC 8632</span>, <span class="seriesInfo">DOI 10.17487/RFC8632</span>, <time datetime="2019-09" class="refDate">September 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8632">https://www.rfc-editor.org/rfc/rfc8632</a>&gt;</span>. </dd>
@@ -3404,6 +3432,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC8900">[RFC8900]</dt>
         <dd>
 <span class="refAuthor">Bonica, R.</span>, <span class="refAuthor">Baker, F.</span>, <span class="refAuthor">Huston, G.</span>, <span class="refAuthor">Hinden, R.</span>, <span class="refAuthor">Troan, O.</span>, and <span class="refAuthor">F. Gont</span>, <span class="refTitle">"IP Fragmentation Considered Fragile"</span>, <span class="seriesInfo">BCP 230</span>, <span class="seriesInfo">RFC 8900</span>, <span class="seriesInfo">DOI 10.17487/RFC8900</span>, <time datetime="2020-09" class="refDate">September 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8900">https://www.rfc-editor.org/rfc/rfc8900</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9000">[RFC9000]</dt>
+        <dd>
+<span class="refAuthor">Iyengar, J., Ed.</span> and <span class="refAuthor">M. Thomson, Ed.</span>, <span class="refTitle">"QUIC: A UDP-Based Multiplexed and Secure Transport"</span>, <span class="seriesInfo">RFC 9000</span>, <span class="seriesInfo">DOI 10.17487/RFC9000</span>, <time datetime="2021-05" class="refDate">May 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9000">https://www.rfc-editor.org/rfc/rfc9000</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9182">[RFC9182]</dt>
         <dd>
@@ -3429,6 +3461,14 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
         <dd>
 <span class="refAuthor">Bonica, R.</span>, <span class="refTitle">"Deprecation of the IPv6 Router Alert Option for New Protocols"</span>, <span class="seriesInfo">RFC 9805</span>, <span class="seriesInfo">DOI 10.17487/RFC9805</span>, <time datetime="2025-06" class="refDate">June 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9805">https://www.rfc-editor.org/rfc/rfc9805</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC9846">[RFC9846]</dt>
+        <dd>
+<span class="refAuthor">Rescorla, E.</span>, <span class="refTitle">"The Transport Layer Security (TLS) Protocol Version 1.3"</span>, <span class="seriesInfo">RFC 9846</span>, <span class="seriesInfo">DOI 10.17487/RFC9846</span>, <time datetime="2026-07" class="refDate">July 2026</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9846">https://www.rfc-editor.org/rfc/rfc9846</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9849">[RFC9849]</dt>
+        <dd>
+<span class="refAuthor">Rescorla, E.</span>, <span class="refAuthor">Oku, K.</span>, <span class="refAuthor">Sullivan, N.</span>, and <span class="refAuthor">C. A. Wood</span>, <span class="refTitle">"TLS Encrypted Client Hello"</span>, <span class="seriesInfo">RFC 9849</span>, <span class="seriesInfo">DOI 10.17487/RFC9849</span>, <time datetime="2026-03" class="refDate">March 2026</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9849">https://www.rfc-editor.org/rfc/rfc9849</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC9877">[RFC9877]</dt>
         <dd>
 <span class="refAuthor">Singh, J.</span> and <span class="refAuthor">T. Harrison</span>, <span class="refTitle">"Registration Data Access Protocol (RDAP) Extension for Geofeed Data"</span>, <span class="seriesInfo">RFC 9877</span>, <span class="seriesInfo">DOI 10.17487/RFC9877</span>, <time datetime="2025-10" class="refDate">October 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9877">https://www.rfc-editor.org/rfc/rfc9877</a>&gt;</span>. </dd>
@@ -3444,10 +3484,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dt id="RFC9937">[RFC9937]</dt>
         <dd>
 <span class="refAuthor">Mathis, M.</span>, <span class="refAuthor">Cardwell, N.</span>, <span class="refAuthor">Cheng, Y.</span>, and <span class="refAuthor">N. Dukkipati</span>, <span class="refTitle">"Proportional Rate Reduction (PRR)"</span>, <span class="seriesInfo">RFC 9937</span>, <span class="seriesInfo">DOI 10.17487/RFC9937</span>, <time datetime="2025-12" class="refDate">December 2025</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9937">https://www.rfc-editor.org/rfc/rfc9937</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC9940">[RFC9940]</dt>
-        <dd>
-<span class="refAuthor">Davis, N., Ed.</span>, <span class="refAuthor">Farrel, A., Ed.</span>, <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Wu, Q.</span>, and <span class="refAuthor">C. Yu</span>, <span class="refTitle">"Some Key Terms for Network Fault and Problem Management"</span>, <span class="seriesInfo">RFC 9940</span>, <span class="seriesInfo">DOI 10.17487/RFC9940</span>, <time datetime="2026-04" class="refDate">April 2026</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9940">https://www.rfc-editor.org/rfc/rfc9940</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9953">[RFC9953]</dt>
         <dd>
@@ -3823,7 +3859,7 @@ whose efforts have helped to improve this document:<a href="#appendix-B-1" class
         <dd class="break"></dd>
 <dt id="appendix-B-2.5">Reviewers of this document, in roughly chronological order:</dt>
         <dd style="margin-left: 1.5em" id="appendix-B-2.6">
-          <p id="appendix-B-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammel, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, Bo Wu, Qin Wu, and Saumya Dikshit.<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-2.6.1">Mahesh Jethanandani, Chongfeng Xie, Alvaro Retana, Michael P., Scott Hollenbeck, Ron Bonica, Italo Busi, Brian Trammell, Aijun Wang, Richard Shockey, Tina Tsou, Lars Eggert, Joel Halpern, Johan Stenstam, Dave Thaler, Harald Alvestrand, Greg Mirsky, Marco Tiloca, Jacqueline McCall, Tim Winters, Eliot Lear, Giuseppe Fioccola, Bo Wu, Qin Wu, Saumya Dikshit, and Paul Aitken.<a href="#appendix-B-2.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="appendix-B-2.7">The document shepherd who has gone beyond normal shepherding duties to improve this document:</dt>
@@ -3927,7 +3963,7 @@ Farrel, David Kessens, Dan Romascanu, Pekka Savola, Jürgen Schönwälder, Bert 
 <div dir="auto" class="left"><span class="org">Blue Fern Consulting</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:carlos@bluefern.consulting" class="email">carlos@bluefern.consulting</a>, <a href="mailto:cpignata@gmail.com" class="email">cpignata@gmail.com</a>
+<a href="mailto:carlos@bluefern.consulting" class="email">carlos@bluefern.consulting</a>
 </div>
 <div class="url">
 <span>URI:</span>
