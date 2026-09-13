@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-03T01:51:24.925786+00:00",
+  "timestamp": "2026-09-13T01:48:35.511399+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -19672,6 +19672,133 @@
           "body": "",
           "createdAt": "2026-08-22T13:48:38Z",
           "updatedAt": "2026-08-22T13:48:38Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 273,
+      "id": "PR_kwDOOWPBqs8AAAABDQ7Kow",
+      "title": "chore: Address comments from Mahesh",
+      "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/273",
+      "state": "OPEN",
+      "author": "xorrkaz",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "* Add Section 3-specific BCP 14 boilerplate text\r\n* Remove reference to BCP14 directly and use the boilerplate syntax instead\r\n* Restore the \"write a MIB\" text, but modernize to include YANG\r\n* Adjust some text from previous ART reviews",
+      "createdAt": "2026-09-12T15:42:12Z",
+      "updatedAt": "2026-09-12T19:38:59Z",
+      "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "baseRefName": "main",
+      "baseRefOid": "4ce4eede413b0e2c06835c734171e8a743b8a68f",
+      "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
+      "headRefName": "jclarke-ad-mahesh-comments",
+      "headRefOid": "380617bf49b54d9126dd1f69b1c7bfd3a64854d4",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Ain't no chore. Always a delight to make Mahesh happy.",
+          "createdAt": "2026-09-12T19:09:47Z",
+          "updatedAt": "2026-09-12T19:09:47Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABNTYQ1A",
+          "commit": {
+            "abbreviatedOid": "7bd4d54"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "I'm OK with the changes, but have two suggestions for making them better.",
+          "createdAt": "2026-09-12T19:16:14Z",
+          "updatedAt": "2026-09-12T19:21:59Z",
+          "comments": [
+            {
+              "originalPosition": 42,
+              "body": "I do not understand why the \"some aspects of a protocol\" has been removed. I believe that very many initial implementations (and therefore early deployments) do not include every detail of a protocol spec.\n\nThis is not a hill I will die on, but I find it to be an odd change.",
+              "createdAt": "2026-09-12T19:16:14Z",
+              "updatedAt": "2026-09-12T19:21:59Z"
+            },
+            {
+              "originalPosition": 13,
+              "body": "If I were on the IESG, I would bounce this because it is not a protocol spec. I think we need to write this as...\n\nAlthough this document is not a protocol specification, the key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" are used for emphasis in this section and are to be interpreted as described in BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they appear in all capitals, as shown here.",
+              "createdAt": "2026-09-12T19:21:30Z",
+              "updatedAt": "2026-09-12T19:21:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABNTZNIg",
+          "commit": {
+            "abbreviatedOid": "7bd4d54"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-09-12T19:22:38Z",
+          "updatedAt": "2026-09-12T19:22:38Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABNTaSQg",
+          "commit": {
+            "abbreviatedOid": "d2cbbba"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-09-12T19:31:08Z",
+          "updatedAt": "2026-09-12T19:31:08Z",
+          "comments": [
+            {
+              "originalPosition": 42,
+              "body": "These were Mahesh's comments based on the ART review:\r\n\r\n671 >    Many protocols benefit from being incrementally deployable --\r\n672 >    operators may deploy some aspects of a protocol before deploying\r\n673 >    it fully, or may deploy to only some nodes in a network before\r\n674 >    applying to all nodes in the network.\r\n\r\nARTART (Harald Alvestrand) flagged \"some aspects of a protocol\" against\r\n-01 as a misuse of \"incrementally deployable\" (which is normally about\r\npartial-network rollout, not partial-feature support). A second, correct\r\nclause was appended alongside it in a later revision, but the original\r\nphrase was never removed. Consider dropping the \"some aspects of a\r\nprotocol\" clause and keeping just the node-rollout framing, or splitting\r\nfeature-incrementality out as its own, separately-labeled point.\r\n\r\nI agree with you that \"partial\" _could_ also refer to partial capabilities, but is a less common usage.  For example, if I say I'm doing a partial rollout of BGP, the typical thinking would be a functional rollout to a portion of my network (maybe core, maybe just eBGP).\r\n\r\nLike you say, this felt like an easy change and not one to fight over.",
+              "createdAt": "2026-09-12T19:31:08Z",
+              "updatedAt": "2026-09-12T19:31:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABNTabXw",
+          "commit": {
+            "abbreviatedOid": "d2cbbba"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-09-12T19:32:20Z",
+          "updatedAt": "2026-09-12T19:32:21Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "Thanks!  Pushed.",
+              "createdAt": "2026-09-12T19:32:20Z",
+              "updatedAt": "2026-09-12T19:32:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABNTbRLw",
+          "commit": {
+            "abbreviatedOid": "380617b"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-09-12T19:38:59Z",
+          "updatedAt": "2026-09-12T19:38:59Z",
           "comments": []
         }
       ]
