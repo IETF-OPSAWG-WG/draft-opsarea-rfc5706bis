@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-13T01:48:35.511399+00:00",
+  "timestamp": "2026-09-20T02:05:49.648545+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -19688,13 +19688,13 @@
       "labels": [],
       "body": "* Add Section 3-specific BCP 14 boilerplate text\r\n* Remove reference to BCP14 directly and use the boilerplate syntax instead\r\n* Restore the \"write a MIB\" text, but modernize to include YANG\r\n* Adjust some text from previous ART reviews",
       "createdAt": "2026-09-12T15:42:12Z",
-      "updatedAt": "2026-09-12T19:38:59Z",
+      "updatedAt": "2026-09-18T18:44:58Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "4ce4eede413b0e2c06835c734171e8a743b8a68f",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "jclarke-ad-mahesh-comments",
-      "headRefOid": "380617bf49b54d9126dd1f69b1c7bfd3a64854d4",
+      "headRefOid": "91080f0ef5c0ab16e08ccc84487a3ce32cf12c1a",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -19800,6 +19800,72 @@
           "createdAt": "2026-09-12T19:38:59Z",
           "updatedAt": "2026-09-12T19:38:59Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABOGG4aQ",
+          "commit": {
+            "abbreviatedOid": "d2cbbba"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-09-17T20:06:53Z",
+          "updatedAt": "2026-09-17T20:06:54Z",
+          "comments": [
+            {
+              "originalPosition": 42,
+              "body": "I'd prefer to restore the previous text. The review says \"(which is normally about partial-network rollout, not partial-feature support)\", but \"normally\" is too low of a bar. Further, frankly, I think it is not that uncommon or abnormal to do partial feature roll-out. I'd push back and restore this.",
+              "createdAt": "2026-09-17T20:06:53Z",
+              "updatedAt": "2026-09-17T20:06:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABOGHqoA",
+          "commit": {
+            "abbreviatedOid": "380617b"
+          },
+          "author": "cpignata",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-09-17T20:08:02Z",
+          "updatedAt": "2026-09-17T20:10:34Z",
+          "comments": [
+            {
+              "originalPosition": 35,
+              "body": "```suggestion\n   Many protocols benefit from being incrementally deployable, either from topology, temporal, or feature-set perspectives --\n```",
+              "createdAt": "2026-09-17T20:08:02Z",
+              "updatedAt": "2026-09-17T20:10:34Z"
+            },
+            {
+              "originalPosition": 38,
+              "body": "```suggestion\n   operators may deploy some aspects of a protocol before deploying\n   it fully, or may deploy to only some nodes in a network before applying\n```",
+              "createdAt": "2026-09-17T20:09:11Z",
+              "updatedAt": "2026-09-17T20:10:34Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABOQGPaw",
+          "commit": {
+            "abbreviatedOid": "d2cbbba"
+          },
+          "author": "xorrkaz",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-09-18T18:44:58Z",
+          "updatedAt": "2026-09-18T18:44:58Z",
+          "comments": [
+            {
+              "originalPosition": 42,
+              "body": "Given there is some contention here, what do other authors think?  I think partial rollout evokes more of a node-level rollout, but I am not strongly opposed to either direction.  You and Adrian support the previous text.  @bclaise , @sbarguil , @Ranchen666 ?",
+              "createdAt": "2026-09-18T18:44:58Z",
+              "updatedAt": "2026-09-18T18:44:59Z"
+            }
+          ]
         }
       ]
     }
