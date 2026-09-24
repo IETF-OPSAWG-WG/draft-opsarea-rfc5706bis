@@ -237,7 +237,7 @@ contributor:
 
 # Terminology {#sec-terms}
 
-This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in {{?BCP14}}.
+This document does not describe interoperability requirements, and, except in {{sec-doc-req-ietf-spec}}, does not use the capitalized keywords defined in BCP 14.
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
@@ -344,10 +344,12 @@ This document does not describe interoperability requirements. As such, it does 
 
 # Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
 
+   Although this document is not a protocol specification, the key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" are used for emphasis in this section and are to be interpreted as described in BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they appear in all capitals, as shown here.
+
 ## "Operational Considerations" Section {#sec-oper-manag-considerations}
 
    All Internet-Drafts that document a technical specification for a New Protocol
-   or Protocol Extension or describe their use are required to include an "Operational Considerations" section
+   or Protocol Extension or describe their use MUST include an "Operational Considerations" section
    if it is the intention that they will be advanced for publication as IETF RFCs.
    Internet-Drafts that do not document technical specifications, such as process, policy, or administrative
    Internet-Drafts, are not required to include such a section.
@@ -427,7 +429,7 @@ For example:
    time of its design.
 
    If there are no new manageability or deployment considerations, the "Operational Considerations" section
-   must contain the following simple statement, followed by a brief explanation of
+   MUST contain the following simple statement, followed by a brief explanation of
    why that is the case.
 
 ~~~~
@@ -586,9 +588,10 @@ For example:
    Are older protocols or versions disabled, or do they coexist
    with the New Protocol or Protocol Extension in the network?
 
-   Many protocols benefit from being incrementally deployable --
+   Many protocols benefit from being incrementally deployable, either from topology, temporal, or feature-set perspectives --
    operators may deploy some aspects of a protocol before deploying
-   it fully, or may deploy to only some nodes in a network before applying to all nodes in the network. In those cases, the operational considerations should
+   it fully, or may deploy to only some nodes in a network before applying
+   to all nodes in the network. In those cases, the operational considerations should
    also specify whether the New Protocol or Protocol Extension requires any changes to
    the existing infrastructure, particularly the network.
    If so, the protocol specification should describe the nature of those
@@ -686,7 +689,7 @@ state during the transition.
 
    For example:
 
-   > SMTP {{?RFC5321}} servers use a reverse DNS lookup to filter
+   > Some SMTP {{?RFC5321}} server deployments use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.
@@ -849,7 +852,18 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    performance of the server might impact more nodes than the
    performance of a specific client.
 
-   The subsections from {{sec-fm-mgmt}} through {{sec-security-mgmt}} are organized following
+   A model of manageable objects, whether a MIB module or a YANG
+   Device, Network, or Service Model ({{sec-yang-dm}}), describes what
+   can be managed. It does not describe how to manage it. The 2002 IAB
+   Network Management Workshop observed that MIB modules could often
+   be characterized as a list of ingredients without a recipe
+   {{?RFC3535}}. A YANG module invites the same criticism when it is
+   developed without regard for how it will be used operationally, and
+   even a full set of Device, Network, and Service Models remains a
+   list of ingredients until it is paired with guidance for how the
+   protocol is monitored, configured, accounted for, measured, and
+   secured. The subsections from {{sec-fm-mgmt}} through {{sec-security-mgmt}}
+   provide that guidance, organized following
    the Fault, Configuration, Accounting, Performance, and Security (FCAPS) network management
    framework.
 
@@ -1054,8 +1068,8 @@ DM         DM        DM     --> concrete/detailed model
 
   *  Network Models - Also called Network Service Models, define abstractions
      for managing the behavior and relationships of multiple devices
-     and device subsystems within a network. As described in {{?RFC8199}},
-     these models are used to manage network-wide services. These abstractions are
+     and device subsystems within a network. As described in {{Section 3.5.1 of ?RFC9907}}
+     and {{?RFC8199}}, these models are used to manage network-wide services. These abstractions are
      useful to network operators and applications that interface with network
      controllers. Examples of network models include the L3VPN Network Model
      (L3NM) {{?RFC9182}} and the L2VPN Network Model (L2VPN) {{?RFC9291}}.
