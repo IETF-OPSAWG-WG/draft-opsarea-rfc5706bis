@@ -589,7 +589,8 @@ For example:
    with the New Protocol or Protocol Extension in the network?
 
    Many protocols benefit from being incrementally deployable, either from topology, temporal, or feature-set perspectives --
-   operators may deploy to only some nodes in a network before applying
+   operators may deploy some aspects of a protocol before deploying
+   it fully, or may deploy to only some nodes in a network before applying
    to all nodes in the network. In those cases, the operational considerations should
    also specify whether the New Protocol or Protocol Extension requires any changes to
    the existing infrastructure, particularly the network.
