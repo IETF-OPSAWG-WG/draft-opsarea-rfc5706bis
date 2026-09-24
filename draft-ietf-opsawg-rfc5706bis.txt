@@ -7,14 +7,14 @@ Internet-Draft                                   Everything OPS & Arrcus
 Obsoletes: 5706 (if approved)                                  J. Clarke
 Updates: 2360 (if approved)                                        Cisco
 Intended status: Best Current Practice                         A. Farrel
-Expires: 5 March 2027                                 Old Dog Consulting
+Expires: 28 March 2027                                Old Dog Consulting
                                                               S. Barguil
                                                                    Nokia
                                                             C. Pignataro
                                                     Blue Fern Consulting
                                                                  R. Chen
                                                                      ZTE
-                                                        1 September 2026
+                                                       24 September 2026
 
 
       Guidelines for Considering Operations and Management in IETF
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 March 2027.
+   This Internet-Draft will expire on 28 March 2027.
 
 Copyright Notice
 
@@ -294,8 +294,9 @@ Table of Contents
 
 2.  Terminology
 
-   This document does not describe interoperability requirements.  As
-   such, it does not use the capitalized keywords defined in [BCP14].
+   This document does not describe interoperability requirements, and,
+   except in Section 3, does not use the capitalized keywords defined in
+   BCP 14.
 
    This section defines key terms used throughout the document to ensure
    clarity and consistency.  Some terms are drawn from existing RFCs and
@@ -408,15 +409,22 @@ Table of Contents
 
 3.  Documentation Requirements for IETF Specifications
 
+   Although this document is not a protocol specification, the key words
+   "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+   "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL"
+   are used for emphasis in this section and are to be interpreted as
+   described in BCP 14 [RFC2119] [RFC8174] when, and only when, they
+   appear in all capitals, as shown here.
+
 3.1.  "Operational Considerations" Section
 
    All Internet-Drafts that document a technical specification for a New
-   Protocol or Protocol Extension or describe their use are required to
-   include an "Operational Considerations" section if it is the
-   intention that they will be advanced for publication as IETF RFCs.
-   Internet-Drafts that do not document technical specifications, such
-   as process, policy, or administrative Internet-Drafts, are not
-   required to include such a section.
+   Protocol or Protocol Extension or describe their use MUST include an
+   "Operational Considerations" section if it is the intention that they
+   will be advanced for publication as IETF RFCs.  Internet-Drafts that
+   do not document technical specifications, such as process, policy, or
+   administrative Internet-Drafts, are not required to include such a
+   section.
 
    After evaluating the operational (Section 4) and manageability
    (Section 5) aspects of a New Protocol or Protocol Extension, the
@@ -511,7 +519,7 @@ Table of Contents
    time of its design.
 
    If there are no new manageability or deployment considerations, the
-   "Operational Considerations" section must contain the following
+   "Operational Considerations" section MUST contain the following
    simple statement, followed by a brief explanation of why that is the
    case.
 
@@ -693,19 +701,19 @@ Table of Contents
    disabled, or do they coexist with the New Protocol or Protocol
    Extension in the network?
 
-   Many protocols benefit from being incrementally deployable --
-   operators may deploy some aspects of a protocol before deploying it
-   fully, or may deploy to only some nodes in a network before applying
-   to all nodes in the network.  In those cases, the operational
-   considerations should also specify whether the New Protocol or
-   Protocol Extension requires any changes to the existing
-   infrastructure, particularly the network.  If so, the protocol
-   specification should describe the nature of those changes, where they
-   are required, and how they can be introduced in a manner that
-   facilitates deployment.  Where possible, backward-compatible
-   approaches should be preferred over non-backward-compatible ones,
-   since they typically provide a smoother migration path with lower
-   cost and impact on existing deployments.
+   Many protocols benefit from being incrementally deployable, either
+   from topology, temporal, or feature-set perspectives -- operators may
+   deploy some aspects of a protocol before deploying it fully, or may
+   deploy to only some nodes in a network before applying to all nodes
+   in the network.  In those cases, the operational considerations
+   should also specify whether the New Protocol or Protocol Extension
+   requires any changes to the existing infrastructure, particularly the
+   network.  If so, the protocol specification should describe the
+   nature of those changes, where they are required, and how they can be
+   introduced in a manner that facilitates deployment.  Where possible,
+   backward-compatible approaches should be preferred over non-backward-
+   compatible ones, since they typically provide a smoother migration
+   path with lower cost and impact on existing deployments.
 
    Security operations (Section 4.5) are important to ensure the
    stability and security of networks.  Good security operation
@@ -818,10 +826,10 @@ Table of Contents
 
    For example:
 
-      SMTP [RFC5321] servers use a reverse DNS lookup to filter out
-      incoming connection requests: when Berkeley installed a new spam
-      filter that used reverse DNS lookup, their mail server stopped
-      functioning because of overload of the DNS cache resolver.
+      Some SMTP [RFC5321] server deployments use a reverse DNS lookup to
+      filter out incoming connection requests: when Berkeley installed a
+      new spam filter that used reverse DNS lookup, their mail server
+      stopped functioning because of overload of the DNS cache resolver.
 
    The impact of New Protocols or Protocol Extensions, and the results
    of new OAM tools developed for them, must be considered with respect
@@ -1045,7 +1053,17 @@ Table of Contents
    performance of the server might impact more nodes than the
    performance of a specific client.
 
-   The subsections from Section 5.4 through Section 5.8 are organized
+   A model of manageable objects, whether a MIB module or a YANG Device,
+   Network, or Service Model (Section 5.3.2), describes what can be
+   managed.  It does not describe how to manage it.  The 2002 IAB
+   Network Management Workshop observed that MIB modules could often be
+   characterized as a list of ingredients without a recipe [RFC3535].  A
+   YANG module invites the same criticism when it is developed without
+   regard for how it will be used operationally, and even a full set of
+   Device, Network, and Service Models remains a list of ingredients
+   until it is paired with guidance for how the protocol is monitored,
+   configured, accounted for, measured, and secured.  The subsections
+   from Section 5.4 through Section 5.8 provide that guidance, organized
    following the Fault, Configuration, Accounting, Performance, and
    Security (FCAPS) network management framework.
 
@@ -1270,11 +1288,12 @@ Table of Contents
    *  Network Models - Also called Network Service Models, define
       abstractions for managing the behavior and relationships of
       multiple devices and device subsystems within a network.  As
-      described in [RFC8199], these models are used to manage network-
-      wide services.  These abstractions are useful to network operators
-      and applications that interface with network controllers.
-      Examples of network models include the L3VPN Network Model (L3NM)
-      [RFC9182] and the L2VPN Network Model (L2VPN) [RFC9291].
+      described in Section 3.5.1 of [RFC9907] and [RFC8199], these
+      models are used to manage network-wide services.  These
+      abstractions are useful to network operators and applications that
+      interface with network controllers.  Examples of network models
+      include the L3VPN Network Model (L3NM) [RFC9182] and the L2VPN
+      Network Model (L2VPN) [RFC9291].
 
    *  Service Models - Also called Customer Service Models, defined in
       [RFC8309], are designed to abstract the customer interface into a
@@ -1891,9 +1910,18 @@ Table of Contents
               RFC 2360, DOI 10.17487/RFC2360, June 1998,
               <https://www.rfc-editor.org/info/rfc2360>.
 
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
    [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
               Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
               May 2016, <https://www.rfc-editor.org/rfc/rfc7799>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
    [RFC8340]  Bjorklund, M. and L. Berger, Ed., "YANG Tree Diagrams",
               BCP 215, RFC 8340, DOI 10.17487/RFC8340, March 2018,
@@ -1909,19 +1937,6 @@ Table of Contents
               <https://www.rfc-editor.org/rfc/rfc9940>.
 
 10.2.  Informative References
-
-   [BCP14]    Best Current Practice 14,
-              <https://www.rfc-editor.org/info/bcp14>.
-              At the time of writing, this BCP comprises the following:
-
-              Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997,
-              <https://www.rfc-editor.org/info/rfc2119>.
-
-              Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
    [BCP47]    Best Current Practice 47,
               <https://www.rfc-editor.org/info/bcp47>.
@@ -1993,9 +2008,9 @@ Table of Contents
               Hu, T., Contreras, L. M., Wu, Q., Davis, N., and C. Feng,
               "A YANG Data Model for Network Incident Management", Work
               in Progress, Internet-Draft, draft-ietf-nmop-network-
-              incident-yang-14, 18 August 2026,
+              incident-yang-17, 24 September 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-nmop-
-              network-incident-yang-14>.
+              network-incident-yang-17>.
 
    [I-D.ietf-quic-qlog-main-schema]
               Marx, R., Niccolini, L., Seemann, M., and L. Pardue,
@@ -2016,9 +2031,9 @@ Table of Contents
    [I-D.parsons-opsawg-security-operations]
               P, M. and F. D, "Security Operations Fundamentals and
               Guidance", Work in Progress, Internet-Draft, draft-
-              parsons-opsawg-security-operations-01, 20 May 2026,
+              parsons-opsawg-security-operations-02, 9 September 2026,
               <https://datatracker.ietf.org/doc/html/draft-parsons-
-              opsawg-security-operations-01>.
+              opsawg-security-operations-02>.
 
    [IETF-HACKATHONS]
               IETF, "IETF Hackathons", 1 May 2025,
