@@ -12,7 +12,7 @@ kw:
   - operations
   - operations and management
   - ops considerations
-cat: bcp
+cat: info
 obsoletes: 5706
 updates: 2360
 submissiontype: IETF
@@ -99,10 +99,11 @@ contributor:
 
    This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
-   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a
-   requirement to include an "Operational Considerations" section in new RFCs in
-   the IETF Stream that define New Protocols or Protocol Extensions or describe their use (including relevant YANG
-   Models), while providing an escape clause if no new considerations are identified.
+   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it recommends
+   that new RFCs in the IETF Stream that define New Protocols or Protocol
+   Extensions or describe their use (including relevant YANG Models) include
+   an "Operational Considerations" section, while clarifying that no such
+   section is needed when there are no new considerations to document.
 
 --- middle
 
@@ -124,10 +125,10 @@ contributor:
 
    This document obsoletes {{?RFC5706}} and updates its content
    with new operational and management considerations. It also
-   introduces a requirement to include an "Operational Considerations"
-   section in new RFCs in the IETF Stream that define New Protocols or
+   recommends that new RFCs in the IETF Stream that define New Protocols or
    Protocol Extensions or describe their use (including relevant YANG
-   Data Models). This section must cover both operational and management considerations.
+   Data Models) include an "Operational Considerations" section covering
+   both operational and management considerations.
 
    Additionally, this document updates {{Section 2.14 of RFC2360@BCP22}} on "Guide for Internet Standards Writers"
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
@@ -165,7 +166,8 @@ contributor:
 
    This document recognizes a distinction between management and operational
    considerations, although the two are closely related. However, for New
-   Protocols or Protocol Extensions only an "Operational Considerations" section is required.
+   Protocols or Protocol Extensions a single "Operational Considerations" section
+   is recommended rather than separate sections.
    This section is intended to address both management and operational aspects.
    Operational considerations pertain to the deployment and functioning of protocols
    within a network, regardless of whether a management protocol is in active use.
@@ -236,8 +238,6 @@ contributor:
    and review Internet-Drafts, taking operational considerations into account.
 
 # Terminology {#sec-terms}
-
-This document does not describe interoperability requirements, and, except in {{sec-doc-req-ietf-spec}}, does not use the capitalized keywords defined in BCP 14.
 
    This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.
 
@@ -342,17 +342,17 @@ This document does not describe interoperability requirements, and, except in {{
       This includes any document that describes the
       design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.
 
-# Documentation Requirements for IETF Specifications {#sec-doc-req-ietf-spec}
-
-   Although this document is not a protocol specification, the key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" are used in this section and are to be interpreted as described in BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they appear in all capitals, as shown here.
+# Documenting Operational Considerations in IETF Specifications {#sec-doc-req-ietf-spec}
 
 ## "Operational Considerations" Section {#sec-oper-manag-considerations}
 
-   All Internet-Drafts that document a technical specification for a New Protocol
-   or Protocol Extension or describe their use MUST include an "Operational Considerations" section
-   if it is the intention that they will be advanced for publication as IETF RFCs.
-   Internet-Drafts that do not document technical specifications, such as process, policy, or administrative
-   Internet-Drafts, are not required to include such a section.
+   Authors of Internet-Drafts that document a technical specification for a New
+   Protocol or Protocol Extension or describe their use are strongly encouraged
+   to include an "Operational Considerations" section, particularly if it is
+   the intention that the document will be advanced for publication as an IETF
+   RFC. This is a recommended practice rather than a mandatory document
+   structure: WGs and authors retain discretion over whether, and how, to
+   present this material, as discussed further below.
 
    After evaluating the operational ({{sec-oper-consid}}) and manageability ({{sec-mgmt-consid}}) aspects of a New
    Protocol or Protocol Extension, the resulting practices and
@@ -360,14 +360,14 @@ This document does not describe interoperability requirements, and, except in {{
    in an "Operational Considerations" section within the
    specification. Since protocols are intended for operational deployment and
    management within real networks, it is expected that such considerations
-   will be present.
+   will be relevant in most cases.
 
    It is also recommended that operational and manageability considerations
    be addressed early in the protocol design process. Consequently, early
-   revisions of Internet-Drafts are highly encouraged to include an "Operational
+   revisions of Internet-Drafts are encouraged to include an "Operational
    Considerations" section.
 
-   An "Operational Considerations" section should include a discussion of
+   Where an "Operational Considerations" section is included, it should discuss
    the management and operations topics raised in this document.
    When one or more of these topics is not relevant, it would be helpful
    to include a brief statement explaining why it is not
@@ -376,7 +376,7 @@ This document does not describe interoperability requirements, and, except in {{
    should be included as well. A concise checklist of key questions is
    provided in {{sec-checklist}}.
 
-   The section is always present. What it contains depends on the case:
+   What such a section contains depends on the case:
 
    *  Where the New Protocol or Protocol Extension raises operational and
       manageability considerations, the section discusses the relevant
@@ -386,7 +386,7 @@ This document does not describe interoperability requirements, and, except in {{
       briefly explains why.
 
    *  Where there are no new operations or manageability requirements at
-      all, the section contains the statement in {{sec-null-sec}}, followed
+      all, the section can contain the statement in {{sec-null-sec}}, followed
       by a brief rationale.
 
    *  Where the considerations are already described in other parts of the
@@ -415,7 +415,7 @@ For example:
 > Also, {{?I-D.ietf-ippm-ioam-integrity-yang}} is an example of a document that follows
 > the above guidance by documenting operational aspects as part of the YANG module itself.
 
-  For architecture documents, an "Operational Considerations" section is expected only where the architecture introduces new operational considerations with normative implications for downstream protocol designs. When included, it should focus on describing the intended deployment environment, assumptions about network operations, potential impacts on existing operational practices, and any high-level requirements that future protocol designs should address. It is not expected to detail specific configuration parameters or management interfaces unless they are integral to the architecture itself. If the architecture document does not introduce new operational considerations, the exemption statement in {{sec-null-sec}} applies.
+  For architecture documents, a dedicated "Operational Considerations" section is particularly useful where the architecture introduces new operational considerations with normative implications for downstream protocol designs. When included, it should focus on describing the intended deployment environment, assumptions about network operations, potential impacts on existing operational practices, and any high-level requirements that future protocol designs should address. It is not expected to detail specific configuration parameters or management interfaces unless they are integral to the architecture itself. If the architecture document does not introduce new operational considerations, the boilerplate statement in {{sec-null-sec}} can be used.
 
 ## "Operational Considerations" Section Boilerplate When No New Considerations Exist {#sec-null-sec}
 
@@ -428,8 +428,9 @@ For example:
    for the decisions on the protocol's manageability at the
    time of its design.
 
-   If there are no new manageability or deployment considerations, the "Operational Considerations" section
-   MUST contain the following simple statement, followed by a brief explanation of
+   Where an "Operational Considerations" section is included and there are no new
+   manageability or deployment considerations, it is recommended that the section
+   contain the following simple statement, followed by a brief explanation of
    why that is the case.
 
 ~~~~
@@ -460,13 +461,12 @@ For example:
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
-- Change intended status from Informational to Best Current Practice
 - Indicate that this document updates RFC 2360 and add the relevant updated text
 - Move the "Operational Considerations" checklist in {{Appendix A of ?RFC5706}} to a Checklist {{CHECKLIST}} maintained in GitHub
 
 - Add a concise "Operational Considerations Checklist" appendix ({{sec-checklist}}) with key questions that should be addressed in protocol specifications
 
-- Add a requirement for an "Operational Considerations" section in all new RFCs that document a technical specification for a New Protocol or Protocol Extension or describe their use in the IETF Stream, along with specific guidance on its content.
+- Add a recommendation to include an "Operational Considerations" section in new RFCs that document a technical specification for a New Protocol or Protocol Extension or describe their use in the IETF Stream, along with specific guidance on its content.
 
 - Update the operational and manageability-related technologies to reflect over 15 years of advancements
 
@@ -1671,7 +1671,7 @@ operations and management needs is provided in {{CHECKLIST}}.
 
 The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.
 
-## Documentation Requirements
+## "Operational Considerations" Section
 
 - Does the specification include an "Operational Considerations" section, placed immediately before the Security Considerations section? ({{sec-oper-manag-considerations}}, {{sec-placement-sec}})
 - If one or more of the topics raised in this document is not relevant, does the section briefly explain why? ({{sec-oper-manag-considerations}})
