@@ -20,31 +20,32 @@
    addressed when writing documents in the IETF Stream that document a specification for New Protocols or Protocol Extensions or describe their use. 
        This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
-   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a
-   requirement to include an "Operational Considerations" section in new RFCs in
-   the IETF Stream that define New Protocols or Protocol Extensions or describe their use (including relevant YANG
-   Models), while providing an escape clause if no new considerations are identified. 
+   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it recommends
+   that new RFCs in the IETF Stream that define New Protocols or Protocol
+   Extensions or describe their use (including relevant YANG Models) include
+   an "Operational Considerations" section, while clarifying that no such
+   section is needed when there are no new considerations to document. 
     ' name="description">
-<meta content="xml2rfc 3.34.0" name="generator">
+<meta content="xml2rfc 3.34.1" name="generator">
 <meta content="management" name="keyword">
 <meta content="operations" name="keyword">
 <meta content="operations and management" name="keyword">
 <meta content="ops considerations" name="keyword">
 <meta content="draft-ietf-opsawg-rfc5706bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.34.0
-    Python 3.14.7
-    ConfigArgParse 1.7.5
+  xml2rfc 3.34.1
+    Python 3.14.8
+    ConfigArgParse 1.8.0
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.11.7
+    platformdirs 4.12.2
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.3
+    wcwidth 0.9.1
 -->
 <link href="draft-ietf-opsawg-rfc5706bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1060,11 +1061,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Operations &amp; Management Considerations</td>
-<td class="right">September 2026</td>
+<td class="right">October 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Claise, et al.</td>
-<td class="center">Expires 11 March 2027</td>
+<td class="center">Expires 13 April 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1083,12 +1084,12 @@ svg {
 <a href="https://www.rfc-editor.org/rfc/rfc2360" class="eref">2360</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-09-07" class="published">7 September 2026</time>
+<time datetime="2026-10-10" class="published">10 October 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
-<dd class="intended-status">Best Current Practice</dd>
+<dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-03-11">11 March 2027</time></dd>
+<dd class="expires"><time datetime="2027-04-13">13 April 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1129,10 +1130,11 @@ svg {
    addressed when writing documents in the IETF Stream that document a specification for New Protocols or Protocol Extensions or describe their use.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">This document obsoletes RFC 5706, replacing it completely and updating
    it with new operational and management techniques and mechanisms. It also
-   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it introduces a
-   requirement to include an "Operational Considerations" section in new RFCs in
-   the IETF Stream that define New Protocols or Protocol Extensions or describe their use (including relevant YANG
-   Models), while providing an escape clause if no new considerations are identified.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+   updates RFC 2360 to obsolete mandatory MIB creation. Finally, it recommends
+   that new RFCs in the IETF Stream that define New Protocols or Protocol
+   Extensions or describe their use (including relevant YANG Models) include
+   an "Operational Considerations" section, while clarifying that no such
+   section is needed when there are no new considerations to document.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1153,7 +1155,7 @@ svg {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 11 March 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 13 April 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1197,7 +1199,7 @@ svg {
             <p id="section-toc.1-1.2.1"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-terminology" class="internal xref">Terminology</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-documentation-requirements-" class="internal xref">Documentation Requirements for IETF Specifications</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-documenting-operational-con" class="internal xref">Documenting Operational Considerations in IETF Specifications</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
                 <p id="section-toc.1-1.3.2.1.1"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-operational-considerations-" class="internal xref">"Operational Considerations" Section</a></p>
@@ -1339,7 +1341,7 @@ svg {
             <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-operational-considerations-c" class="internal xref">Operational Considerations Checklist</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.1">
-                <p id="section-toc.1-1.11.2.1.1"><a href="#appendix-A.1" class="auto internal xref">A.1</a>.  <a href="#name-documentation-requirements" class="internal xref">Documentation Requirements</a></p>
+                <p id="section-toc.1-1.11.2.1.1"><a href="#appendix-A.1" class="auto internal xref">A.1</a>.  <a href="#name-operational-considerations-se" class="internal xref">"Operational Considerations" Section</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11.2.2">
                 <p id="section-toc.1-1.11.2.2.1"><a href="#appendix-A.2" class="auto internal xref">A.2</a>.  <a href="#name-operational-fit" class="internal xref">Operational Fit</a></p>
@@ -1399,10 +1401,10 @@ svg {
    process.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">This document obsoletes <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> and updates its content
    with new operational and management considerations. It also
-   introduces a requirement to include an "Operational Considerations"
-   section in new RFCs in the IETF Stream that define New Protocols or
+   recommends that new RFCs in the IETF Stream that define New Protocols or
    Protocol Extensions or describe their use (including relevant YANG
-   Data Models). This section must cover both operational and management considerations.<a href="#section-1-3" class="pilcrow">¶</a></p>
+   Data Models) include an "Operational Considerations" section covering
+   both operational and management considerations.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">Additionally, this document updates Section <a href="https://rfc-editor.org/rfc/rfc2360#section-2.14" class="relref">2.14</a> of RFC 2360 <span>[<a href="#BCP22" class="cite xref">BCP22</a>]</span> on "Guide for Internet Standards Writers"
    to obsolete references to mandatory MIBs and instead focus on documenting holistic manageability and operational
    considerations as described in <a href="#sec-doc-req-ietf-spec" class="auto internal xref">Section 3</a>. The update is provided in <a href="#sec-2360-update" class="auto internal xref">Section 3.5</a>.
@@ -1437,7 +1439,8 @@ svg {
    provides some guidelines for those considerations.<a href="#section-1.1-4" class="pilcrow">¶</a></p>
 <p id="section-1.1-5">This document recognizes a distinction between management and operational
    considerations, although the two are closely related. However, for New
-   Protocols or Protocol Extensions only an "Operational Considerations" section is required.
+   Protocols or Protocol Extensions a single "Operational Considerations" section
+   is recommended rather than separate sections.
    This section is intended to address both management and operational aspects.
    Operational considerations pertain to the deployment and functioning of protocols
    within a network, regardless of whether a management protocol is in active use.
@@ -1510,23 +1513,22 @@ svg {
       <h2 id="name-terminology">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-terminology" class="section-name selfRef">Terminology</a>
       </h2>
-<p id="section-2-1">This document does not describe interoperability requirements. As such, it does not use the capitalized keywords defined in <span>[<a href="#BCP14" class="cite xref">BCP14</a>]</span>.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-1">This section defines key terms used throughout the document to ensure clarity and consistency. Some terms are drawn from existing RFCs and IETF Internet-Drafts, while others are defined here for the purposes of this document. Where appropriate, references are provided for further reading or authoritative definitions.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-3.1">
-          <p id="section-2-3.1.1">Cause: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-3.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-2-2.1">
+          <p id="section-2-2.1.1">Cause: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.2">
-          <p id="section-2-3.2.1">CLI: Command Line Interface. A human-oriented interface, typically
+        <li class="normal" id="section-2-2.2">
+          <p id="section-2-2.2.1">CLI: Command Line Interface. A human-oriented interface, typically
     a Proprietary Interface, to hardware or software devices
     (e.g., hosts, routers, or operating systems). The commands, their syntax,
     and the precise semantics of the parameters may vary considerably
     between different vendors, between products from the same
     vendor, and even between different versions or releases of a single
-    product. No attempt at standardizing CLIs has been made by the IETF.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
+    product. No attempt at standardizing CLIs has been made by the IETF.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.3">
-          <p id="section-2-3.3.1">Data Model: A set of mechanisms for representing, organizing, storing,
+        <li class="normal" id="section-2-2.3">
+          <p id="section-2-2.3.1">Data Model: A set of mechanisms for representing, organizing, storing,
     and handling data within a particular type of data store or repository.
     This usually comprises a collection of data structures such as lists, tables,
     relations, etc., a collection of operations that can be applied to the
@@ -1535,136 +1537,138 @@ svg {
     state (operations on values). A Data Model may be derived by mapping the
     contents of an Information Model or may be developed ab initio. Further
     discussion of Data Models can be found in <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>, <a href="#sec-interop" class="auto internal xref">Section 5.2</a>,
-    and <a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>.<a href="#section-2-3.3.1" class="pilcrow">¶</a></p>
+    and <a href="#sec-mgmt-info" class="auto internal xref">Section 5.3</a>.<a href="#section-2-2.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.4">
-          <p id="section-2-3.4.1">Fault: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-2.4">
+          <p id="section-2-2.4.1">Fault: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.5">
-          <p id="section-2-3.5.1">Fault Management: The process of interpreting Fault notifications and other alerts
+        <li class="normal" id="section-2-2.5">
+          <p id="section-2-2.5.1">Fault Management: The process of interpreting Fault notifications and other alerts
     and alarms, isolating Faults, correlating them, and deducing underlying
-    Causes. See <a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a> for more information.<a href="#section-2-3.5.1" class="pilcrow">¶</a></p>
+    Causes. See <a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a> for more information.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.6">
-          <p id="section-2-3.6.1">Information Model: An abstraction and representation of the
+        <li class="normal" id="section-2-2.6">
+          <p id="section-2-2.6.1">Information Model: An abstraction and representation of the
     entities in a managed environment, their properties, attributes
     and operations, and the way that they relate to each other. The model is
     independent of any specific software usage, protocol,
     or platform <span>[<a href="#RFC3444" class="cite xref">RFC3444</a>]</span>. See Sections <a href="#sec-interop" class="auto internal xref">5.2</a> and <a href="#sec-im-design" class="auto internal xref">5.3.1</a> for
-    further discussion of Information Models.<a href="#section-2-3.6.1" class="pilcrow">¶</a></p>
+    further discussion of Information Models.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.7">
-          <p id="section-2-3.7.1">Network Device: A device that implements one or more network
+        <li class="normal" id="section-2-2.7">
+          <p id="section-2-2.7.1">Network Device: A device that implements one or more network
     protocols and participates in network operations. This term
     encompasses a broad range of implementations, including conventional
     network infrastructure equipment (e.g., routers and switches), end
     hosts, Internet of Things (IoT) devices, virtual network functions, and containerized
     workloads. In this document, the term is used generically to mean
-    any managed entity implementing the protocol under consideration.<a href="#section-2-3.7.1" class="pilcrow">¶</a></p>
+    any managed entity implementing the protocol under consideration.<a href="#section-2-2.7.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.8">
-          <p id="section-2-3.8.1">New Protocol and Protocol Extension: These terms are used in this document
+        <li class="normal" id="section-2-2.8">
+          <p id="section-2-2.8.1">New Protocol and Protocol Extension: These terms are used in this document
     to identify entirely new protocols, new versions of existing
     protocols, and extensions to protocols.
     The application of New Protocols and Protocol Extensions to different
     scenarios, and their use in delivering services, procedures, mechanisms,
-    or applications, falls within the scope of this definition.<a href="#section-2-3.8.1" class="pilcrow">¶</a></p>
+    or applications, falls within the scope of this definition.<a href="#section-2-2.8.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.9">
-          <p id="section-2-3.9.1">OAM: Operations, Administration, and Maintenance <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>
+        <li class="normal" id="section-2-2.9">
+          <p id="section-2-2.9.1">OAM: Operations, Administration, and Maintenance <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>
             <span>[<a href="#RFC10014" class="cite xref">RFC10014</a>]</span> is the term given to the
-    combination of:<a href="#section-2-3.9.1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-2-3.9.2">
-<li id="section-2-3.9.2.1">
-              <p id="section-2-3.9.2.1.1">Operation activities that are undertaken to keep the
-network running as intended. They include monitoring of the network.<a href="#section-2-3.9.2.1.1" class="pilcrow">¶</a></p>
+    combination of:<a href="#section-2-2.9.1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-2-2.9.2">
+<li id="section-2-2.9.2.1">
+              <p id="section-2-2.9.2.1.1">Operation activities that are undertaken to keep the
+network running as intended. They include monitoring of the network.<a href="#section-2-2.9.2.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li id="section-2-3.9.2.2">
-              <p id="section-2-3.9.2.2.1">Administration activities that keep track of resources in the
+            <li id="section-2-2.9.2.2">
+              <p id="section-2-2.9.2.2.1">Administration activities that keep track of resources in the
 network and how they are used. They include the bookkeeping necessary
-to track networking resources.<a href="#section-2-3.9.2.2.1" class="pilcrow">¶</a></p>
+to track networking resources.<a href="#section-2-2.9.2.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li id="section-2-3.9.2.3">
-              <p id="section-2-3.9.2.3.1">Maintenance activities focused on facilitating repairs and upgrades.
+            <li id="section-2-2.9.2.3">
+              <p id="section-2-2.9.2.3.1">Maintenance activities focused on facilitating repairs and upgrades.
 They also involve corrective and preventive measures to make the
-managed network run more effectively.<a href="#section-2-3.9.2.3.1" class="pilcrow">¶</a></p>
+managed network run more effectively.<a href="#section-2-2.9.2.3.1" class="pilcrow">¶</a></p>
 </li>
           </ol>
-<p id="section-2-3.9.3">
+<p id="section-2-2.9.3">
 The broader concept of "operations and management" that is the
  subject of this document encompasses OAM, in addition to other
  management and provisioning tools and concepts. This is
  sometimes known as "OAM and Management" or "O&amp;M" as
- explained in <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>.<a href="#section-2-3.9.3" class="pilcrow">¶</a></p>
+ explained in <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>.<a href="#section-2-2.9.3" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.10">
-          <p id="section-2-3.10.1">Operator: A person or organization responsible for deploying and managing
+        <li class="normal" id="section-2-2.10">
+          <p id="section-2-2.10.1">Operator: A person or organization responsible for deploying and managing
     systems, services, or networks that run or rely on a protocol implementation.
     This includes, but is not limited to,
     network operators, cloud service administrators, IoT device fleet
     managers, home network administrators, and DNS/NTP server
     administrators. The term "operator" is used throughout this document
     in this broad sense unless the context explicitly requires a narrower
-    scope.<a href="#section-2-3.10.1" class="pilcrow">¶</a></p>
+    scope.<a href="#section-2-2.10.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.11">
-          <p id="section-2-3.11.1">Performance Metrics: See <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>.<a href="#section-2-3.11.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-2.11">
+          <p id="section-2-2.11.1">Performance Metrics: See <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>.<a href="#section-2-2.11.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.12">
-          <p id="section-2-3.12.1">Probable Root Cause: See <span>[<a href="#I-D.ietf-nmop-network-incident-yang" class="cite xref">I-D.ietf-nmop-network-incident-yang</a>]</span>.<a href="#section-2-3.12.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-2.12">
+          <p id="section-2-2.12.1">Probable Root Cause: See <span>[<a href="#I-D.ietf-nmop-network-incident-yang" class="cite xref">I-D.ietf-nmop-network-incident-yang</a>]</span>.<a href="#section-2-2.12.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.13">
-          <p id="section-2-3.13.1">Problem: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-3.13.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-2.13">
+          <p id="section-2-2.13.1">Problem: See <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>.<a href="#section-2-2.13.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.14">
-          <p id="section-2-3.14.1">Proprietary Interface: An interface to manage a network element
+        <li class="normal" id="section-2-2.14">
+          <p id="section-2-2.14.1">Proprietary Interface: An interface to manage a network element
     that is not standardized. As such, the user interface, syntax, and
     semantics typically vary significantly between implementations.
     Examples of proprietary interfaces include CLI,
     management web portal and Browser User Interface (BUI),
     Graphical User Interface (GUI), and vendor-specific application
-    programming interface (API).<a href="#section-2-3.14.1" class="pilcrow">¶</a></p>
+    programming interface (API).<a href="#section-2-2.14.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.15">
-          <p id="section-2-3.15.1">Protocol Designer: An individual, a group of
+        <li class="normal" id="section-2-2.15">
+          <p id="section-2-2.15.1">Protocol Designer: An individual, a group of
     people, or an IETF WG involved in the development and specification
-    of New Protocols or Protocol Extensions.<a href="#section-2-3.15.1" class="pilcrow">¶</a></p>
+    of New Protocols or Protocol Extensions.<a href="#section-2-2.15.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-3.16">
-          <p id="section-2-3.16.1">Technical Document:
+        <li class="normal" id="section-2-2.16">
+          <p id="section-2-2.16.1">Technical Document:
     This includes any document that describes the
-    design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.<a href="#section-2-3.16.1" class="pilcrow">¶</a></p>
+    design, specification, implementation, or deployment of a new Protocol or Protocol Extensions.<a href="#section-2-2.16.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
 </div>
 <div id="sec-doc-req-ietf-spec">
 <section id="section-3">
-      <h2 id="name-documentation-requirements-">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-documentation-requirements-" class="section-name selfRef">Documentation Requirements for IETF Specifications</a>
+      <h2 id="name-documenting-operational-con">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-documenting-operational-con" class="section-name selfRef">Documenting Operational Considerations in IETF Specifications</a>
       </h2>
 <div id="sec-oper-manag-considerations">
 <section id="section-3.1">
         <h3 id="name-operational-considerations-">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-operational-considerations-" class="section-name selfRef">"Operational Considerations" Section</a>
         </h3>
-<p id="section-3.1-1">All Internet-Drafts that document a technical specification for a New Protocol
-   or Protocol Extension or describe their use are required to include an "Operational Considerations" section
-   if it is the intention that they will be advanced for publication as IETF RFCs.
-   Internet-Drafts that do not document technical specifications, such as process, policy, or administrative
-   Internet-Drafts, are not required to include such a section.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-1">Authors of Internet-Drafts that document a technical specification for a New
+   Protocol or Protocol Extension or describe their use are strongly encouraged
+   to include an "Operational Considerations" section, particularly if it is
+   the intention that the document will be advanced for publication as an IETF
+   RFC. This is a recommended practice rather than a mandatory document
+   structure: WGs and authors retain discretion over whether, and how, to
+   present this material, as discussed further below.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.1-2">After evaluating the operational (<a href="#sec-oper-consid" class="auto internal xref">Section 4</a>) and manageability (<a href="#sec-mgmt-consid" class="auto internal xref">Section 5</a>) aspects of a New
    Protocol or Protocol Extension, the resulting practices and
    requirements should be documented
    in an "Operational Considerations" section within the
    specification. Since protocols are intended for operational deployment and
    management within real networks, it is expected that such considerations
-   will be present.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+   will be relevant in most cases.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
 <p id="section-3.1-3">It is also recommended that operational and manageability considerations
    be addressed early in the protocol design process. Consequently, early
-   revisions of Internet-Drafts are highly encouraged to include an "Operational
+   revisions of Internet-Drafts are encouraged to include an "Operational
    Considerations" section.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
-<p id="section-3.1-4">An "Operational Considerations" section should include a discussion of
+<p id="section-3.1-4">Where an "Operational Considerations" section is included, it should discuss
    the management and operations topics raised in this document.
    When one or more of these topics is not relevant, it would be helpful
    to include a brief statement explaining why it is not
@@ -1672,7 +1676,7 @@ The broader concept of "operations and management" that is the
    Of course, additional relevant operational and manageability topics
    should be included as well. A concise checklist of key questions is
    provided in <a href="#sec-checklist" class="auto internal xref">Appendix A</a>.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-<p id="section-3.1-5">The section is always present. What it contains depends on the case:<a href="#section-3.1-5" class="pilcrow">¶</a></p>
+<p id="section-3.1-5">What such a section contains depends on the case:<a href="#section-3.1-5" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.1-6.1">
             <p id="section-3.1-6.1.1">Where the New Protocol or Protocol Extension raises operational and
@@ -1685,7 +1689,7 @@ briefly explains why.<a href="#section-3.1-6.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.1-6.3">
             <p id="section-3.1-6.3.1">Where there are no new operations or manageability requirements at
-all, the section contains the statement in <a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>, followed
+all, the section can contain the statement in <a href="#sec-null-sec" class="auto internal xref">Section 3.2</a>, followed
 by a brief rationale.<a href="#section-3.1-6.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.1-6.4">
@@ -1718,7 +1722,7 @@ Also, <span>[<a href="#I-D.ietf-ippm-ioam-integrity-yang" class="cite xref">I-D.
 the above guidance by documenting operational aspects as part of the YANG module itself.<a href="#section-3.1-9.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-3.1-10">For architecture documents, an "Operational Considerations" section is expected only where the architecture introduces new operational considerations with normative implications for downstream protocol designs. When included, it should focus on describing the intended deployment environment, assumptions about network operations, potential impacts on existing operational practices, and any high-level requirements that future protocol designs should address. It is not expected to detail specific configuration parameters or management interfaces unless they are integral to the architecture itself. If the architecture document does not introduce new operational considerations, the exemption statement in <a href="#sec-null-sec" class="auto internal xref">Section 3.2</a> applies.<a href="#section-3.1-10" class="pilcrow">¶</a></p>
+<p id="section-3.1-10">For architecture documents, a dedicated "Operational Considerations" section is particularly useful where the architecture introduces new operational considerations with normative implications for downstream protocol designs. When included, it should focus on describing the intended deployment environment, assumptions about network operations, potential impacts on existing operational practices, and any high-level requirements that future protocol designs should address. It is not expected to detail specific configuration parameters or management interfaces unless they are integral to the architecture itself. If the architecture document does not introduce new operational considerations, the boilerplate statement in <a href="#sec-null-sec" class="auto internal xref">Section 3.2</a> can be used.<a href="#section-3.1-10" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-null-sec">
@@ -1734,8 +1738,9 @@ the above guidance by documenting operational aspects as part of the YANG module
    future, and those deploying the protocol, to know the rationale
    for the decisions on the protocol's manageability at the
    time of its design.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.2-2">If there are no new manageability or deployment considerations, the "Operational Considerations" section
-   must contain the following simple statement, followed by a brief explanation of
+<p id="section-3.2-2">Where an "Operational Considerations" section is included and there are no new
+   manageability or deployment considerations, it is recommended that the section
+   contain the following simple statement, followed by a brief explanation of
    why that is the case.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-3.2-3">
 <pre>
@@ -1774,36 +1779,33 @@ the above guidance by documenting operational aspects as part of the YANG module
 <p id="section-3.4-1">The following changes have been made to the guidelines published in  <span>[<a href="#RFC5706" class="cite xref">RFC5706</a>]</span>:<a href="#section-3.4-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.4-2.1">
-            <p id="section-3.4-2.1.1">Change intended status from Informational to Best Current Practice<a href="#section-3.4-2.1.1" class="pilcrow">¶</a></p>
+            <p id="section-3.4-2.1.1">Indicate that this document updates RFC 2360 and add the relevant updated text<a href="#section-3.4-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.4-2.2">
-            <p id="section-3.4-2.2.1">Indicate that this document updates RFC 2360 and add the relevant updated text<a href="#section-3.4-2.2.1" class="pilcrow">¶</a></p>
+            <p id="section-3.4-2.2.1">Move the "Operational Considerations" checklist in <span><a href="https://rfc-editor.org/rfc/rfc5706#appendix-A" class="relref">Appendix A</a> of [<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> to a Checklist <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span> maintained in GitHub<a href="#section-3.4-2.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.4-2.3">
-            <p id="section-3.4-2.3.1">Move the "Operational Considerations" checklist in <span><a href="https://rfc-editor.org/rfc/rfc5706#appendix-A" class="relref">Appendix A</a> of [<a href="#RFC5706" class="cite xref">RFC5706</a>]</span> to a Checklist <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span> maintained in GitHub<a href="#section-3.4-2.3.1" class="pilcrow">¶</a></p>
+            <p id="section-3.4-2.3.1">Add a concise "Operational Considerations Checklist" appendix (<a href="#sec-checklist" class="auto internal xref">Appendix A</a>) with key questions that should be addressed in protocol specifications<a href="#section-3.4-2.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.4-2.4">
-            <p id="section-3.4-2.4.1">Add a concise "Operational Considerations Checklist" appendix (<a href="#sec-checklist" class="auto internal xref">Appendix A</a>) with key questions that should be addressed in protocol specifications<a href="#section-3.4-2.4.1" class="pilcrow">¶</a></p>
+            <p id="section-3.4-2.4.1">Add a recommendation to include an "Operational Considerations" section in new RFCs that document a technical specification for a New Protocol or Protocol Extension or describe their use in the IETF Stream, along with specific guidance on its content.<a href="#section-3.4-2.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.4-2.5">
-            <p id="section-3.4-2.5.1">Add a requirement for an "Operational Considerations" section in all new RFCs that document a technical specification for a New Protocol or Protocol Extension or describe their use in the IETF Stream, along with specific guidance on its content.<a href="#section-3.4-2.5.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-3.4-2.6">
-            <p id="section-3.4-2.6.1">Update the operational and manageability-related technologies to reflect over 15 years of advancements<a href="#section-3.4-2.6.1" class="pilcrow">¶</a></p>
+            <p id="section-3.4-2.5.1">Update the operational and manageability-related technologies to reflect over 15 years of advancements<a href="#section-3.4-2.5.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3.4-2.6.2.1">
-                <p id="section-3.4-2.6.2.1.1">Provide focus and details on YANG-based standards, deprioritizing MIB Modules.<a href="#section-3.4-2.6.2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-3.4-2.5.2.1">
+                <p id="section-3.4-2.5.2.1.1">Provide focus and details on YANG-based standards, deprioritizing MIB Modules.<a href="#section-3.4-2.5.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="section-3.4-2.6.2.2">
-                <p id="section-3.4-2.6.2.2.1">Add a "YANG Data Model Considerations" section<a href="#section-3.4-2.6.2.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="section-3.4-2.5.2.2">
+                <p id="section-3.4-2.5.2.2.1">Add a "YANG Data Model Considerations" section<a href="#section-3.4-2.5.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="normal" id="section-3.4-2.6.2.3">
-                <p id="section-3.4-2.6.2.3.1">Update the "Available Management Technologies" landscape<a href="#section-3.4-2.6.2.3.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="section-3.4-2.5.2.3">
+                <p id="section-3.4-2.5.2.3.1">Update the "Available Management Technologies" landscape<a href="#section-3.4-2.5.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="normal" id="section-3.4-2.7">
-            <p id="section-3.4-2.7.1">Add an "Operational and Management Tooling Considerations" section<a href="#section-3.4-2.7.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-3.4-2.6">
+            <p id="section-3.4-2.6.1">Add an "Operational and Management Tooling Considerations" section<a href="#section-3.4-2.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -1932,9 +1934,10 @@ considerations.<a href="#section-3.5-4.1" class="pilcrow">¶</a></p>
    and consideration of potential side effects. A key question is:
    Are older protocols or versions disabled, or do they coexist
    with the New Protocol or Protocol Extension in the network?<a href="#section-4.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.2-2">Many protocols benefit from being incrementally deployable --
+<p id="section-4.2-2">Many protocols benefit from being incrementally deployable, either from topology, temporal, or feature-set perspectives --
    operators may deploy some aspects of a protocol before deploying
-   it fully, or may deploy to only some nodes in a network before applying to all nodes in the network. In those cases, the operational considerations should
+   it fully, or may deploy to only some nodes in a network before applying
+   to all nodes in the network. In those cases, the operational considerations should
    also specify whether the New Protocol or Protocol Extension requires any changes to
    the existing infrastructure, particularly the network.
    If so, the protocol specification should describe the nature of those
@@ -2034,7 +2037,7 @@ state during the transition.
 <p id="section-4.4-6">For example:<a href="#section-4.4-6" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-4.4-7.1">
-            <p id="section-4.4-7.1.1">SMTP <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> servers use a reverse DNS lookup to filter
+            <p id="section-4.4-7.1.1">Some SMTP <span>[<a href="#RFC5321" class="cite xref">RFC5321</a>]</span> server deployments use a reverse DNS lookup to filter
    out incoming connection requests: when Berkeley installed a new spam filter that used reverse DNS lookup,
    their mail server stopped functioning because of overload of the DNS
    cache resolver.<a href="#section-4.4-7.1.1" class="pilcrow">¶</a></p>
@@ -2202,7 +2205,18 @@ time scheduled, or event triggered?<a href="#section-5-4.4.1" class="pilcrow">¶
    the server end of a protocol than the client end, since the
    performance of the server might impact more nodes than the
    performance of a specific client.<a href="#section-5-9" class="pilcrow">¶</a></p>
-<p id="section-5-10">The subsections from <a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a> through <a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a> are organized following
+<p id="section-5-10">A model of manageable objects, whether a MIB module or a YANG
+   Device, Network, or Service Model (<a href="#sec-yang-dm" class="auto internal xref">Section 5.3.2</a>), describes what
+   can be managed. It does not describe how to manage it. The 2002 IAB
+   Network Management Workshop observed that MIB modules could often
+   be characterized as a list of ingredients without a recipe
+   <span>[<a href="#RFC3535" class="cite xref">RFC3535</a>]</span>. A YANG module invites the same criticism when it is
+   developed without regard for how it will be used operationally, and
+   even a full set of Device, Network, and Service Models remains a
+   list of ingredients until it is paired with guidance for how the
+   protocol is monitored, configured, accounted for, measured, and
+   secured. The subsections from <a href="#sec-fm-mgmt" class="auto internal xref">Section 5.4</a> through <a href="#sec-security-mgmt" class="auto internal xref">Section 5.8</a>
+   provide that guidance, organized following
    the Fault, Configuration, Accounting, Performance, and Security (FCAPS) network management
    framework.<a href="#section-5-10" class="pilcrow">¶</a></p>
 <div id="sec-mgmt-tech">
@@ -2442,8 +2456,8 @@ service Data Models.<a href="#section-5.3.2-2.1.1" class="pilcrow">¶</a></p>
             <li class="normal" id="section-5.3.2-2.2">
               <p id="section-5.3.2-2.2.1">Network Models - Also called Network Service Models, define abstractions
 for managing the behavior and relationships of multiple devices
-and device subsystems within a network. As described in <span>[<a href="#RFC8199" class="cite xref">RFC8199</a>]</span>,
-these models are used to manage network-wide services. These abstractions are
+and device subsystems within a network. As described in <span><a href="https://rfc-editor.org/rfc/rfc9907#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#RFC9907" class="cite xref">RFC9907</a>]</span>
+and <span>[<a href="#RFC8199" class="cite xref">RFC8199</a>]</span>, these models are used to manage network-wide services. These abstractions are
 useful to network operators and applications that interface with network
 controllers. Examples of network models include the L3VPN Network Model
 (L3NM) <span>[<a href="#RFC9182" class="cite xref">RFC9182</a>]</span> and the L2VPN Network Model (L2VPN) <span>[<a href="#RFC9291" class="cite xref">RFC9291</a>]</span>.<a href="#section-5.3.2-2.2.1" class="pilcrow">¶</a></p>
@@ -3137,16 +3151,6 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <a href="#section-10.2" class="section-number selfRef">10.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
-<dt id="BCP14">[BCP14]</dt>
-        <dd>
-<div class="refInstance">Best Current Practice 14, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp14">https://www.rfc-editor.org/info/bcp14</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
-</div>
-<div class="refInstance" id="RFC2119">
-            <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>&gt;</span>. </div>
-<div class="refInstance" id="RFC8174">
-            <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8174">https://www.rfc-editor.org/info/rfc8174</a>&gt;</span>. </div>
-</dd>
-<dd class="break"></dd>
 <dt id="BCP47">[BCP47]</dt>
         <dd>
 <div class="refInstance">Best Current Practice 47, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp47">https://www.rfc-editor.org/info/bcp47</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
@@ -3201,7 +3205,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.ietf-nmop-network-incident-yang">[I-D.ietf-nmop-network-incident-yang]</dt>
         <dd>
-<span class="refAuthor">Hu, T.</span>, <span class="refAuthor">Contreras, L. M.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Davis, N.</span>, and <span class="refAuthor">C. Feng</span>, <span class="refTitle">"A YANG Data Model for Network Incident Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-network-incident-yang-14</span>, <time datetime="2026-08-18" class="refDate">18 August 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-14">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-14</a>&gt;</span>. </dd>
+<span class="refAuthor">Hu, T.</span>, <span class="refAuthor">Contreras, L. M.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Davis, N.</span>, and <span class="refAuthor">C. Feng</span>, <span class="refTitle">"A YANG Data Model for Network Incident Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-network-incident-yang-19</span>, <time datetime="2026-10-07" class="refDate">7 October 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-19">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-incident-yang-19</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-quic-qlog-main-schema">[I-D.ietf-quic-qlog-main-schema]</dt>
         <dd>
@@ -3213,7 +3217,7 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 <dd class="break"></dd>
 <dt id="I-D.parsons-opsawg-security-operations">[I-D.parsons-opsawg-security-operations]</dt>
         <dd>
-<span class="refAuthor">P, M.</span> and <span class="refAuthor">F. D</span>, <span class="refTitle">"Security Operations Fundamentals and Guidance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-parsons-opsawg-security-operations-01</span>, <time datetime="2026-05-20" class="refDate">20 May 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-01">https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-01</a>&gt;</span>. </dd>
+<span class="refAuthor">P, M.</span> and <span class="refAuthor">F. D</span>, <span class="refTitle">"Security Operations Fundamentals and Guidance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-parsons-opsawg-security-operations-02</span>, <time datetime="2026-09-09" class="refDate">9 September 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-02">https://datatracker.ietf.org/doc/html/draft-parsons-opsawg-security-operations-02</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IETF-HACKATHONS">[IETF-HACKATHONS]</dt>
         <dd>
@@ -3498,10 +3502,10 @@ and extend the tools to meet their specific needs.<a href="#section-6-4.5.1" cla
 of guidelines and a checklist of questions to consider when reviewing a document to evaluate whether the document address common
 operations and management needs is provided in <span>[<a href="#CHECKLIST" class="cite xref">CHECKLIST</a>]</span>.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
 <p id="appendix-A-3">The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.<a href="#appendix-A-3" class="pilcrow">¶</a></p>
-<div id="documentation-requirements">
+<div id="operational-considerations-section">
 <section id="appendix-A.1">
-        <h3 id="name-documentation-requirements">
-<a href="#appendix-A.1" class="section-number selfRef">A.1. </a><a href="#name-documentation-requirements" class="section-name selfRef">Documentation Requirements</a>
+        <h3 id="name-operational-considerations-se">
+<a href="#appendix-A.1" class="section-number selfRef">A.1. </a><a href="#name-operational-considerations-se" class="section-name selfRef">"Operational Considerations" Section</a>
         </h3>
 <ul class="normal">
 <li class="normal" id="appendix-A.1-1.1">
