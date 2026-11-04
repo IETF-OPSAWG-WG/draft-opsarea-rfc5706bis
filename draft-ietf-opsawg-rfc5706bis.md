@@ -275,6 +275,10 @@ This document does not describe interoperability requirements, and, except in {{
       or platform {{?RFC3444}}. See Sections {{<sec-interop}} and {{<sec-im-design}} for
       further discussion of Information Models.
 
+   * Management Considerations: Considerations concerning the use of
+      management technologies, including management protocols and the design
+      of management Data Models, to manage a protocol or its implementation.
+
 * Network Device: A device that implements one or more network
       protocols and participates in network operations. This term
       encompasses a broad range of implementations, including conventional
@@ -310,6 +314,11 @@ This document does not describe interoperability requirements, and, except in {{
    management and provisioning tools and concepts. This is
    sometimes known as "OAM and Management" or "O&M" as
    explained in {{?RFC6291}}.
+
+* Operational Considerations: Considerations concerning the deployment
+      and functioning of a protocol in its intended environment, whether or
+      not a management protocol is used. The section titled "Operational
+      Considerations" addresses both operational and management considerations.
 
 * Operator: A person or organization responsible for deploying and managing
       systems, services, or networks that run or rely on a protocol implementation.
@@ -560,7 +569,7 @@ For example:
    variable to reduce the
    risk of problems caused by technology advancement.
 
-   It must always be possible for an operator to retrieve the actual value in use,
+   It must always be possible for an appropriately authorized operator to retrieve the actual value in use,
    to determine that the element is running at a known
    default. This is important for troubleshooting, auditing, and ensuring
    consistent behavior across implementations.
@@ -680,7 +689,7 @@ state during the transition.
    and traffic patterns that might change, including specific types of
    traffic, such as multicast. Also, consider the need to install new
    components that are added to the network as a result of changes in
-   the configuration, such as servers performing auto-configuration
+   the configuration, such as servers performing autoconfiguration
    operations.
 
    Protocol Designers should also consider the impact on infrastructure
@@ -798,7 +807,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
       management systems)?
 
    *  What is the possible architecture (client-server, manager-agent,
-      poll-driven or event-driven, auto-configuration, two-levels or
+      poll-driven or event-driven, autoconfiguration, two-levels or
       hierarchical)?
 
    *  What are the management operations (initial configuration, dynamic
@@ -814,7 +823,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    a local management interface to manage the New Protocol or Protocol Extension on a single
    device, but in a large network, remote management using a centralized
    server and/or using distributed management functionality might make
-   more sense. Auto-configuration and default parameters might be
+   more sense. Autoconfiguration and default parameters might be
    possible for some New Protocols or Protocol Extensions.
 
    Management needs to be considered not only from the perspective of a
@@ -930,7 +939,7 @@ Further discussion of Internationalization issues may be found in {{?BCP166}}.
    has the same meaning whether collected via NETCONF or exported via IPFIX.
 
    Protocol Designers should consider developing an IM, when multiple Data Model (DM)
-   representations (e.g., YANG and/or IPFIX) are required, to ensure lossless
+   representations (e.g., YANG and/or IPFIX) are required, to facilitate lossless
    semantic mapping. IMs are also beneficial for complex or numerous DMs. As illustrated in {{fig-im-dm}}, an
    IM serves as a conceptual blueprint for designers and operators, from which concrete DMs are derived
    for implementers. {{?RFC3444}} provides further guidance on distinguishing IMs from DMs.
@@ -1066,13 +1075,17 @@ DM         DM        DM     --> concrete/detailed model
      how device-level models might fit with broader network and
      service Data Models.
 
-  *  Network Models - Also called Network Service Models, define abstractions
-     for managing the behavior and relationships of multiple devices
-     and device subsystems within a network. As described in {{Section 3.5.1 of ?RFC9907}}
-     and {{?RFC8199}}, these models are used to manage network-wide services. These abstractions are
-     useful to network operators and applications that interface with network
-     controllers. Examples of network models include the L3VPN Network Model
-     (L3NM) {{?RFC9182}} and the L2VPN Network Model (L2VPN) {{?RFC9291}}.
+  *  Network Models - As classified in {{Section 3.5.1 of ?RFC9907}}, describe
+     network-level abstractions, including devices, their subsystems, and
+     protocols across multiple devices. They correspond to the network
+     configuration models discussed in {{?RFC8309}} and can be used to
+     allocate or schedule network resources to meet service requirements.
+     Examples include the L3VPN Network Model (L3NM) {{?RFC9182}} and the
+     L2VPN Network Model (L2NM) {{?RFC9291}}. The term "Network Service YANG
+     Modules" is used in the classification in {{?RFC8199}}; its relationship
+     to service delivery and customer service models is discussed in
+     {{Section 6.1 of ?RFC8309}}. Those classifications should not be treated
+     as interchangeable names for the three model types used here.
 
   *  Service Models - Also called Customer Service Models,
      defined in {{?RFC8309}}, are designed to abstract the customer interface
@@ -1142,7 +1155,7 @@ DM         DM        DM     --> concrete/detailed model
    notifications. Will there be a hierarchy of Faults, and will the
    Fault reporting be done by each Fault in the hierarchy, or will only
    the lowest Fault be reported and the higher levels be suppressed?
-   Should there be aggregated status indicators based on concatenation
+   Should there be aggregated status indicators based on the aggregation
    of propagated Faults from a given domain or device?
 
    The alarm management model {{?RFC8632}} already addresses many of these
@@ -1165,7 +1178,8 @@ DM         DM        DM     --> concrete/detailed model
    (e.g., ICMP echo, UDP
    or TCP echo services, and null Remote Procedure Calls
    (RPCs)) that can be used to test for liveness, with the option to
-   enable or disable them.
+   enable or disable them, taking into account security and
+   resource-consumption considerations.
 
    Mechanisms for monitoring the liveness of the protocol and for
    detecting Faults in protocol connectivity are usually built into
@@ -1260,8 +1274,8 @@ DM         DM        DM     --> concrete/detailed model
     It also involves ensuring that the configurations being pushed are
     semantically compatible across devices and that the resulting behavior of
     all involved devices corresponds to the intended behavior. Is the
-    attachment between them configured compatibly on both ends? Is the
-    IS-IS metric the same?
+   attachment between them configured compatibly on both ends? Are the
+   IS-IS metrics configured as intended in each direction?
     Answering those questions for a network with one thousand devices is not that easy.
 
    Several efforts have existed in the IETF to develop policy-based
@@ -1407,7 +1421,7 @@ DM         DM        DM     --> concrete/detailed model
 
    Consider the expected behaviors for counters -- what is a reasonable
    maximum value for expected usage? Should they stop counting at the
-   maximum value and retain it, or should they rollover?
+   maximum value and retain it, or should they roll over?
    Guidance should explain how rollovers are detected, including multiple
    occurrences.
 
@@ -1424,9 +1438,11 @@ DM         DM        DM     --> concrete/detailed model
    are exceeded. These considerations should be made independently
    of any specific management protocol or data modeling language.
    In other words, focus on what makes sense for the protocol being
-   managed, not the protocol used for management. If a constraint
-   is not specific to a management protocol, then it should be left
-   to Data Model designers of that protocol to determine how to handle it.
+   managed, not the protocol used for management. Constraints inherent to
+   the managed protocol should be specified independently of the management
+   protocol. Data Model designers should preserve these constraints in each
+   representation. Choices specific to a management interface or data modeling
+   language remain with the designers of that representation.
 
    For example:
 
@@ -1467,9 +1483,13 @@ DM         DM        DM     --> concrete/detailed model
    associations, end-to-end application quality, service interruptions,
    or user experience (UX)?
 
-   Note that monitoring a service must consider the utility to the user.
-   This includes responsiveness, smoothness (absence of jitter), throughput,
-   and other "quality of experience" factors.
+   Monitoring a service should first establish whether it delivers its
+   intended function to the user. For example, monitoring a mail service
+   should check whether mail is delivered, not only whether connections
+   succeed or throughput is adequate. Depending on the service, additional
+   measures include responsiveness, smoothness (absence of jitter),
+   throughput, and other quality-of-experience factors. See also
+   {{sec-oper-verify}}.
 
 ##  Security Management {#sec-security-mgmt}
 
@@ -1628,13 +1648,15 @@ DM         DM        DM     --> concrete/detailed model
    for telemetry, logging, and state information collection. Protocol Designers
    should anticipate that AI-powered management tools may generate
    frequent and potentially aggressive querying patterns on network
-   devices and controllers. Therefore, protocols should be designed with Data
-   Models and mechanisms intended to prevent overload from automated
-   interactions, such as subscription to YANG notifications {{?RFC8639}}
-   {{?RFC8641}}, which bounds that load and provides change semantics rather
-   than repeated snapshots, while also accounting for AI-specific security
-   considerations such as data integrity and protection against
-   adversarial attacks on management interfaces. These considerations
+   devices and controllers. Protocols should provide Data Models and mechanisms
+   that help control load from automated interactions. Subscription-based
+   mechanisms {{?RFC8639}} {{?RFC8641}} can reduce repeated polling, but do not by
+   themselves bound aggregate workload. Updates may be periodic or on-change.
+   Designers should consider subscription admission limits, suitable update
+   intervals or dampening, and behavior under overload, as discussed in
+   {{sec-impact}} and {{Section 8 of ?RFC8639}}. These mechanisms should also
+   account for data integrity and protection against adversarial attacks on
+   management interfaces, including interactions with AI-based tools. These considerations
    are also relevant to Performance Management (Section {{<sec-perf-mgmt}})
    and Security Management (Section {{<sec-security-mgmt}}).
 
@@ -1666,7 +1688,7 @@ DM         DM        DM     --> concrete/detailed model
 This appendix provides a concise checklist of key questions that Protocol Designers should address in the "Operational Considerations" section of their specifications. Each item references the relevant section of this document for detailed guidance.
 
 This checklist is intended for use by document authors and the working groups that develop protocol documents. A separate list
-of guidelines and a checklist of questions to consider when reviewing a document to evaluate whether the document address common
+of guidelines and a checklist of questions to consider when reviewing a document to evaluate whether the document addresses common
 operations and management needs is provided in {{CHECKLIST}}.
 
 The decision to incorporate all or part of these items into their work remains with Protocol Designers and WGs themselves.
