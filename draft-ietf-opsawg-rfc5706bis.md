@@ -1082,7 +1082,7 @@ DM         DM        DM     --> concrete/detailed model
      allocate or schedule network resources to meet service requirements.
      Examples include the L3VPN Network Model (L3NM) {{?RFC9182}} and the
      L2VPN Network Model (L2NM) {{?RFC9291}}. The term "Network Service YANG
-     Modules" is used in the classification in {{?RFC8199}}; its relationship
+   Modules" is used in the classification in {{?RFC8199}}. Its relationship
      to service delivery and customer service models is discussed in
      {{Section 6.1 of ?RFC8309}}. Those classifications should not be treated
      as interchangeable names for the three model types used here.
