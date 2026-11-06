@@ -71,7 +71,7 @@ author:
  -
     fullname: Samier Barguil
     organization: Nokia
-    email: samier.barguil_giraldo@nokia.com
+    email: samier.barguil@nokia.com
  -
     fullname: Carlos Pignataro
     organization: Blue Fern Consulting
