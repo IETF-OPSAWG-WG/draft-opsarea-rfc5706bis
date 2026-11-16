@@ -101,7 +101,7 @@ contributor:
    it with new operational and management techniques and mechanisms. It also
    updates RFC 2360 to obsolete mandatory MIB creation. Finally, it recommends
    that new RFCs in the IETF Stream that define New Protocols or Protocol
-   Extensions or describe their use (including relevant YANG Models) include
+   Extensions or describe their use (including relevant YANG Data Models) include
    an "Operational Considerations" section, while clarifying that no such
    section is needed when there are no new considerations to document.
 
@@ -461,6 +461,7 @@ For example:
 
    The following changes have been made to the guidelines published in  {{?RFC5706}}:
 
+- Change intended status from Informational to Best Current Practice
 - Indicate that this document updates RFC 2360 and add the relevant updated text
 - Move the "Operational Considerations" checklist in {{Appendix A of ?RFC5706}} to a Checklist {{CHECKLIST}} maintained in GitHub
 
