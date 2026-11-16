@@ -12,7 +12,7 @@ kw:
   - operations
   - operations and management
   - ops considerations
-cat: info
+cat: bcp
 obsoletes: 5706
 updates: 2360
 submissiontype: IETF
