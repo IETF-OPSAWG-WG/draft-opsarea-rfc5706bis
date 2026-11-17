@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-10-11T02:38:32.085942+00:00",
+  "timestamp": "2026-11-17T05:31:20.244030+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -19883,19 +19883,80 @@
       "labels": [],
       "body": "I've started a Plan B based on the compounding feedback that this draft should not be published as an RFC with the mandatory Operational Considerations section.  I'd say I made the least possible changes, but I think I went a bit more by reverting BCP to Informational since I think without the mandatory requirement, it doesn't meet the bar for BCP.\n\nI've added everyone to this as reviewers since I assume this will generate much discussion whether this is merged or not.\n\n* Revert to Informational instead of BCP to match 5706\n* Remove all BCP 14 language\n* Soften text to \"recommend\" an Operational Considerations section\n* Retain the \"null\" section as a way to show operations and management were considered",
       "createdAt": "2026-10-10T18:20:55Z",
-      "updatedAt": "2026-10-10T18:20:56Z",
+      "updatedAt": "2026-11-16T22:57:27Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "7b781031b7aa66bc4f216974faa6918515b417d0",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "plan-b-remove-bcp14",
-      "headRefOid": "fc6f413dea7c8415d2285b303a0dd66b6e756fc2",
+      "headRefOid": "9043123070ab61f5bf13b9d0a0279a803e426fb4",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "body": "From the edits only (many thanks Joe), all make sense.\r\nI agree with Adrian, we should read the draft for consistency one last time. I could dedicate some time end of next week. \r\n",
+          "createdAt": "2026-11-16T22:57:27Z",
+          "updatedAt": "2026-11-16T22:57:27Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABYWaYYw",
+          "commit": {
+            "abbreviatedOid": "a1deb58"
+          },
+          "author": "AdrianFarrel",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Really nice changes. Well done.\n\nI think that a whole-doc read-through may be needed before we post.",
+          "createdAt": "2026-11-16T22:36:12Z",
+          "updatedAt": "2026-11-16T22:36:12Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABYWmd0w",
+          "commit": {
+            "abbreviatedOid": "a1deb58"
+          },
+          "author": "bclaise",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-11-16T22:49:41Z",
+          "updatedAt": "2026-11-16T22:49:41Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABYWhf8g",
+          "commit": {
+            "abbreviatedOid": "a1deb58"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-11-16T22:43:54Z",
+          "updatedAt": "2026-11-16T22:49:48Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "```suggestion\n   Extensions or describe their use (including relevant YANG Data Models) include\n```",
+              "createdAt": "2026-11-16T22:43:54Z",
+              "updatedAt": "2026-11-16T22:49:48Z"
+            },
+            {
+              "originalPosition": 136,
+              "body": "This one should be restored",
+              "createdAt": "2026-11-16T22:48:44Z",
+              "updatedAt": "2026-11-16T22:49:48Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
