@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-17T05:31:20.244030+00:00",
+  "timestamp": "2026-11-19T04:51:25.882756+00:00",
   "repo": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
   "labels": [
     {
@@ -19876,24 +19876,26 @@
       "id": "PR_kwDOOWPBqs8AAAABHudQrg",
       "title": "refactor: Drop all mention of a mandatory Ops Consideration section",
       "url": "https://github.com/IETF-OPSAWG-WG/draft-opsarea-rfc5706bis/pull/274",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "xorrkaz",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "I've started a Plan B based on the compounding feedback that this draft should not be published as an RFC with the mandatory Operational Considerations section.  I'd say I made the least possible changes, but I think I went a bit more by reverting BCP to Informational since I think without the mandatory requirement, it doesn't meet the bar for BCP.\n\nI've added everyone to this as reviewers since I assume this will generate much discussion whether this is merged or not.\n\n* Revert to Informational instead of BCP to match 5706\n* Remove all BCP 14 language\n* Soften text to \"recommend\" an Operational Considerations section\n* Retain the \"null\" section as a way to show operations and management were considered",
       "createdAt": "2026-10-10T18:20:55Z",
-      "updatedAt": "2026-11-16T22:57:27Z",
+      "updatedAt": "2026-11-18T21:22:12Z",
       "baseRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "baseRefName": "main",
       "baseRefOid": "7b781031b7aa66bc4f216974faa6918515b417d0",
       "headRepository": "IETF-OPSAWG-WG/draft-opsarea-rfc5706bis",
       "headRefName": "plan-b-remove-bcp14",
       "headRefOid": "9043123070ab61f5bf13b9d0a0279a803e426fb4",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-11-18T21:22:09Z",
+      "mergedAt": "2026-11-18T21:22:09Z",
+      "mergedBy": "xorrkaz",
+      "mergeCommit": {
+        "oid": "4a539e5c00a7b8be75ba885276b10d16ac044f88"
+      },
       "comments": [
         {
           "author": "bclaise",
@@ -19955,6 +19957,32 @@
               "updatedAt": "2026-11-16T22:49:48Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABYbLAHg",
+          "commit": {
+            "abbreviatedOid": "9043123"
+          },
+          "author": "sbarguil",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Looks good to me, thanks for imlementing the changes! ",
+          "createdAt": "2026-11-17T06:38:16Z",
+          "updatedAt": "2026-11-17T06:38:16Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWPBqs8AAAABYnmwPw",
+          "commit": {
+            "abbreviatedOid": "9043123"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-11-17T21:43:58Z",
+          "updatedAt": "2026-11-17T21:43:58Z",
+          "comments": []
         }
       ]
     }
